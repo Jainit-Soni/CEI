@@ -1,4 +1,4 @@
-﻿const express = require("express");
+const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
 const rateLimit = require("express-rate-limit");
@@ -72,12 +72,22 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
 });
 
+app.get("/", (req, res) => {
+  res.send("<h1>CMAT Backend is Running</h1><p>Status: Active</p>");
+});
+
 app.use("/api", collegesRoutes);
 app.use("/api", examsRoutes);
 app.use("/api", searchLimiter, searchRoutes); // Stricter limit for search
 app.use("/api/stats", statsRoutes);
 
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
-  console.log(`CEI backend running on ${PORT}`);
-});
+
+// Only listen if not running on Vercel (Vercel exports the app)
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`CEI backend running on ${PORT}`);
+  });
+}
+
+module.exports = app;
