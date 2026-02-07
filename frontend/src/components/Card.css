@@ -1,0 +1,128 @@
+﻿.card {
+  position: relative;
+  padding: var(--space-5);
+  border-radius: var(--radius-l);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-border-strong);
+}
+
+/* Compare button */
+.card-compare-btn {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-4);
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(8px);
+  background: var(--color-accent);
+  color: var(--color-ink-inverse);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-s);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.card:hover .card-compare-btn,
+.card-compare-btn.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card-compare-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Typography */
+.card h3 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+  padding-right: 60px;
+  /* Prevent text overlap with buttons */
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: 0.9rem;
+}
+
+/* Tags & Meta */
+.card-tags,
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.card-tags span,
+.card-meta span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-ink-secondary);
+  transition: all var(--transition-fast);
+}
+
+.card:hover .card-tags span,
+.card:hover .card-meta span {
+  background: rgba(79, 70, 229, 0.06);
+  border-color: rgba(79, 70, 229, 0.15);
+  color: var(--color-accent);
+}
+
+/* Type-specific accents */
+.card-college:hover {
+  border-color: rgba(79, 70, 229, 0.3);
+}
+
+.card-exam:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+
+/* Tablet & Mobile Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card-tags span,
+  .card-meta span {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}

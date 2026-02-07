@@ -1,0 +1,25 @@
+﻿.list-hero--exams .hero-orb--1 {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(44, 185, 194, 0.4) 0%, transparent 70%);
+  top: -20%;
+  right: -10%;
+  filter: blur(60px);
+  animation: orbFloat1 18s ease-in-out infinite;
+}
+
+.list-hero--exams .hero-orb--2 {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(95, 140, 255, 0.3) 0%, transparent 70%);
+  bottom: -10%;
+  left: 10%;
+  filter: blur(50px);
+  animation: orbFloat2 22s ease-in-out infinite;
+}
+
+.list-hero--exams .list-hero-kicker {
+  color: var(--color-accent-teal);
+}

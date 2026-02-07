@@ -1,0 +1,224 @@
+.compare-page {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+
+.compare-empty {
+    padding-top: 120px;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.empty-panel {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.compare-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.compare-header h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-ink);
+    margin: 0;
+}
+
+.back-link {
+    color: var(--color-accent);
+    font-weight: 600;
+    transition: opacity var(--transition-fast);
+}
+
+.back-link:hover {
+    opacity: 0.8;
+}
+
+.compare-grid-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-l);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+}
+
+.compare-cell {
+    padding: 24px;
+    border-bottom: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    color: var(--color-ink-secondary);
+}
+
+.label-cell {
+    font-weight: 600;
+    color: var(--color-ink);
+    background: var(--color-bg-subtle);
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    border-right: 1px solid var(--color-border-strong);
+}
+
+.header-row .data-cell {
+    background: var(--color-bg-subtle);
+}
+
+.college-header {
+    position: relative;
+}
+
+.college-header h3 {
+    margin: 10px 0 4px;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--color-ink);
+}
+
+.college-header p {
+    margin: 0;
+    color: var(--color-ink-muted);
+    font-size: 0.9rem;
+}
+
+.remove-btn {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    background: var(--color-bg-subtle);
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    border: 1px solid var(--color-border);
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    color: var(--color-ink-muted);
+}
+
+.highlight {
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 1.1rem;
+}
+
+.sub-text {
+    font-size: 0.8rem;
+    color: var(--color-ink-muted);
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.recruiters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.recruiter-tag {
+    background: var(--color-bg-subtle);
+    padding: 3px 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-ink-secondary);
+}
+
+.recruiter-more {
+    font-size: 0.75rem;
+    color: var(--color-ink-muted);
+    align-self: center;
+}
+
+.text-muted {
+    color: var(--color-ink-muted);
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.text-muted {
+    color: var(--color-ink-muted);
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.placement-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--color-ink-muted);
+    font-weight: 500;
+    min-width: 60px;
+}
+
+.stat-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-ink);
+}
+
+.stat-value.highlight {
+    color: var(--color-accent);
+    font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+    .compare-grid {
+        grid-template-columns: 140px repeat(var(--cols), minmax(220px, 1fr));
+    }
+
+    .compare-cell {
+        padding: 16px;
+        font-size: 0.9rem;
+    }
+
+    .college-header h3 {
+        font-size: 1rem;
+    }
+}

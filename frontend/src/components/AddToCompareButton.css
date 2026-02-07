@@ -1,0 +1,30 @@
+.compare-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    border: 1px solid var(--color-stroke);
+    color: var(--color-ink-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.compare-btn:hover {
+    background: var(--color-surface-strong);
+    color: var(--color-accent-blue);
+    box-shadow: 0 4px 12px rgba(95, 140, 255, 0.15);
+}
+
+.compare-btn.active {
+    background: var(--color-accent-blue);
+    border-color: var(--color-accent-blue);
+    color: white;
+}
+
+.compare-btn svg {
+    width: 18px;
+    height: 18px;
+}

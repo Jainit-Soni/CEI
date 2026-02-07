@@ -1,0 +1,115 @@
+.card-skeleton {
+    height: 220px;
+    border-radius: var(--radius-xl);
+    background: var(--color-surface);
+    border: 1px solid var(--color-glass-border);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeleton-line {
+    border-radius: var(--radius-s);
+    background: rgba(200, 210, 230, 0.5);
+}
+
+.skeleton-title {
+    width: 70%;
+    height: 24px;
+}
+
+.skeleton-subtitle {
+    width: 50%;
+    height: 16px;
+}
+
+.skeleton-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.skeleton-tag {
+    width: 60px;
+    height: 28px;
+    border-radius: var(--radius-pill);
+    background: rgba(200, 210, 230, 0.4);
+}
+
+.skeleton-meta {
+    width: 40%;
+    height: 14px;
+}
+
+/* Detail page skeleton */
+.detail-skeleton {
+    padding: var(--space-8) var(--space-4);
+}
+
+.detail-skeleton-hero {
+    border-radius: var(--radius-l);
+    padding: var(--space-7);
+    margin-bottom: var(--space-6);
+}
+
+.skeleton-kicker {
+    width: 80px;
+    height: 12px;
+    margin-bottom: var(--space-3);
+}
+
+.skeleton-heading {
+    width: 60%;
+    height: 32px;
+    margin-bottom: var(--space-2);
+}
+
+.skeleton-subheading {
+    width: 40%;
+    height: 18px;
+}
+
+.skeleton-stats {
+    display: flex;
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+}
+
+.skeleton-stat {
+    width: 80px;
+    height: 48px;
+    border-radius: var(--radius-m);
+    background: rgba(200, 210, 230, 0.3);
+}
+
+.detail-skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-6);
+}
+
+.detail-skeleton-panel {
+    height: 200px;
+    border-radius: var(--radius-l);
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0.4) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+}
