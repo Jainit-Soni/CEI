@@ -1,0 +1,1654 @@
+[
+  {
+    "id": "nit-arunachal-pradesh",
+    "name": "National Institute of Technology Arunachal Pradesh",
+    "shortName": "NIT AP",
+    "location": "Jote, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance established in 2010, focusing on engineering and technology education.",
+    "campus": "Jote, Papum Pare",
+    "officialUrl": "https://www.nitap.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EE, ME, Civil, BioTech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "Ph.D",
+        "degree": "Ph.D",
+        "duration": "3-5 years",
+        "exams": [
+          "gate",
+          "net"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: AIR ~25000 (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Cognizant",
+      "L&T Infotech",
+      "Capgemini"
+    ],
+    "tuition": "Standard NIT Fees",
+    "sources": [
+      "https://www.nitap.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2010",
+      "district": "Papum Pare",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nerist-itanagar",
+    "name": "North Eastern Regional Institute of Science and Technology",
+    "shortName": "NERIST",
+    "location": "Nirjuli, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "A unique deemed university funded by the Ministry of Education, offering modular technical education.",
+    "campus": "Nirjuli, Itanagar",
+    "officialUrl": "https://nerist.ac.in",
+    "acceptedExams": [
+      "nee",
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Agri, Civil, CSE, ECE, EE, ME)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "nee",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Sc (Forestry)",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "nee"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate",
+          "nee"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "nee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Power Grid",
+      "Oil India",
+      "NHPC"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://nerist.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University (Central Govt)",
+      "establishedYear": "1984",
+      "district": "Papum Pare",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "rajiv-gandhi-university",
+    "name": "Rajiv Gandhi University",
+    "shortName": "RGU",
+    "location": "Rono Hills, Doimukh, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "The premier central university of Arunachal Pradesh (formerly Arunachal University).",
+    "campus": "Rono Hills, Doimukh",
+    "officialUrl": "https://rgu.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A. / M.Sc / M.Com",
+        "degree": "PG",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "B.Ed",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://rgu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "1984",
+      "district": "Papum Pare",
+      "naacGrade": "B",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "arunachal-university-studies",
+    "name": "Arunachal University of Studies",
+    "shortName": "AUS",
+    "location": "Namsai, Namsai District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Private university offering a wide range of vocational, technical, and general degree programs.",
+    "campus": "NH-52, Namsai",
+    "officialUrl": "https://www.arunachaluniversity.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Agri, Nursing, MLT)",
+        "degree": "B.Sc",
+        "duration": "3/4 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "BA-LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Ed",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.arunachaluniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2012",
+      "district": "Namsai",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "himalayan-university-itanagar",
+    "name": "Himalayan University",
+    "shortName": "Himalayan Uni",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Private university established to promote higher education in the North East region.",
+    "campus": "Chimpu, Itanagar",
+    "officialUrl": "https://www.himalayanuniversity.com",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Com / B.Sc",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Tech (Civil, CSE, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.himalayanuniversity.com"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Papum Pare",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "apex-professional-university",
+    "name": "Apex Professional University",
+    "shortName": "APU Pasighat",
+    "location": "Pasighat, East Siang District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Private university focusing on Indian Knowledge Systems and vocational skills.",
+    "campus": "Pasighat Smart City",
+    "officialUrl": "https://www.apexuniversity.edu.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Forensic Science)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.apexuniversity.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "East Siang",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "nftu-alo",
+    "name": "North East Frontier Technical University",
+    "shortName": "NFTU",
+    "location": "Aalo, West Siang District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Private technical university catering to the West Siang region.",
+    "campus": "Sipu Puyi, Aalo",
+    "officialUrl": "https://www.neftu.edu.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.neftu.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2014",
+      "district": "West Siang",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "igta-msu-ziro",
+    "name": "Indira Gandhi Technological and Medical Sciences University",
+    "shortName": "IGTAMSU",
+    "location": "Ziro, Lower Subansiri District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Private university focused on technical, medical, and paramedical education.",
+    "campus": "SSB Gate, Ziro",
+    "officialUrl": "https://igtamsu.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "BPT (Physiotherapy)",
+        "degree": "BPT",
+        "duration": "4.5 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://igtamsu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2012",
+      "district": "Lower Subansiri",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "jn-college-pasighat",
+    "name": "Jawaharlal Nehru College",
+    "shortName": "JNC Pasighat",
+    "location": "Pasighat, East Siang District, Arunachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "The oldest and premier government college in Arunachal Pradesh (est. 1964).",
+    "campus": "Hill Top, Pasighat",
+    "officialUrl": "https://www.jncpasighat.edu.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (History, Pol Science, Geography, English)",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Physics, Chemistry, Maths, Zoology, Botany)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.jncpasighat.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1964",
+      "district": "East Siang",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dngc-itanagar",
+    "name": "Dera Natung Government College",
+    "shortName": "DNGC Itanagar",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Premier government college in the capital city, Itanagar.",
+    "campus": "Itanagar",
+    "officialUrl": "https://www.dngc.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Honours)",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Honours)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.dngc.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1979",
+      "district": "Papum Pare",
+      "naacGrade": "B+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "iggc-tezu",
+    "name": "Indira Gandhi Government College",
+    "shortName": "IGGC Tezu",
+    "location": "Tezu, Lohit District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Major government college serving the Lohit district.",
+    "campus": "Tezu",
+    "officialUrl": "https://iggctezu.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://iggctezu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1986",
+      "district": "Lohit",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-college-bomdila",
+    "name": "Government College Bomdila",
+    "shortName": "GC Bomdila",
+    "location": "Bomdila, West Kameng District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Government college serving the West Kameng region.",
+    "campus": "Bomdila",
+    "officialUrl": "https://gcbomdila.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gcbomdila.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1988",
+      "district": "West Kameng",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "saint-claret-college-ziro",
+    "name": "Saint Claret College",
+    "shortName": "SCC Ziro",
+    "location": "Ziro, Lower Subansiri District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Reputed private catholic college affiliated to RGU, NAAC 'A' accredited.",
+    "campus": "Salaya, Ziro",
+    "officialUrl": "https://sccz.edu.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Mass Comm, English, Pol Science)",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://sccz.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Private (Catholic)",
+      "establishedYear": "2003",
+      "district": "Lower Subansiri",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "don-bosco-college-itanagar",
+    "name": "Don Bosco College",
+    "shortName": "DBC Itanagar",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Private college run by the Salesians of Don Bosco.",
+    "campus": "Jollang, Itanagar",
+    "officialUrl": "https://dbcitanagar.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "BSW",
+        "degree": "BSW",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://dbcitanagar.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2002",
+      "district": "Papum Pare",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "arunachal-law-academy",
+    "name": "Arunachal Law Academy",
+    "shortName": "ALA Itanagar",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Unranked",
+    "overview": "Private law college offering legal education in the state.",
+    "campus": "Lekhi, Naharlagun",
+    "officialUrl": "http://arunachallawacademy.org",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.A. LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://arunachallawacademy.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University",
+        "BCI Approved"
+      ],
+      "ownership": "Private",
+      "district": "Papum Pare",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "hills-college-teacher-education",
+    "name": "Hills College of Teacher Education",
+    "shortName": "HCTE",
+    "location": "Naharlagun, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Unranked",
+    "overview": "Premier teacher training institute in the state.",
+    "campus": "Lekhi, Naharlagun",
+    "officialUrl": "https://hcte.org",
+    "acceptedExams": [
+      "merit-based",
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Ed",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://hcte.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University",
+        "NCTE Approved"
+      ],
+      "ownership": "Private",
+      "district": "Papum Pare",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "rg-govt-polytechnic",
+    "name": "Rajiv Gandhi Government Polytechnic",
+    "shortName": "RGGP Itanagar",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Unranked",
+    "overview": "Oldest polytechnic institute in the state offering diploma engineering.",
+    "campus": "Vivek Vihar, Itanagar",
+    "officialUrl": "https://rggp.ac.in",
+    "acceptedExams": [
+      "apjee-diploma"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "apjee-diploma"
+        ]
+      },
+      {
+        "name": "Diploma in Computer Science",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "apjee-diploma"
+        ]
+      },
+      {
+        "name": "Diploma in Electrical Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "apjee-diploma"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "apjee-diploma",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://rggp.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "APDHTE",
+        "AICTE Approved"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2002",
+      "district": "Papum Pare",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "tomi-polytechnic",
+    "name": "Tomi Polytechnic College",
+    "shortName": "Tomi Polytechnic",
+    "location": "Basar, Leparada District, Arunachal Pradesh",
+    "rankingTier": "Unranked",
+    "overview": "First private polytechnic in Arunachal Pradesh.",
+    "campus": "Basar",
+    "officialUrl": "http://tomipolytechnic.org",
+    "acceptedExams": [
+      "apjee-diploma",
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "apjee-diploma"
+        ]
+      },
+      {
+        "name": "Diploma in Electrical & Electronics",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "apjee-diploma"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "apjee-diploma",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://tomipolytechnic.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "APDHTE",
+        "AICTE Approved"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2006",
+      "district": "Leparada",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "wr-govt-college-deomali",
+    "name": "Wangcha Rajkumar Government College",
+    "shortName": "WRGC Deomali",
+    "location": "Deomali, Tirap District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Government college serving the Tirap district.",
+    "campus": "Deomali",
+    "officialUrl": "https://wrgc.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://wrgc.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1997",
+      "district": "Tirap",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "rf-govt-college-changlang",
+    "name": "Rang Frah Government College",
+    "shortName": "RFGC Changlang",
+    "location": "Changlang, Changlang District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Government college serving the Changlang district.",
+    "campus": "Changlang",
+    "officialUrl": "https://rfgc.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://rfgc.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1996",
+      "district": "Changlang",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-model-college-basar",
+    "name": "Government Model College Basar",
+    "shortName": "GMC Basar",
+    "location": "Basar, Leparada District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Model degree college established by the government.",
+    "campus": "Basar",
+    "officialUrl": "https://gmcbasar.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gmcbasar.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2009",
+      "district": "Leparada",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-college-doimukh",
+    "name": "Government College Doimukh",
+    "shortName": "GC Doimukh",
+    "location": "Doimukh, Papum Pare District, Arunachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Government college located near the RGU campus.",
+    "campus": "Doimukh",
+    "officialUrl": "https://gcdoimukh.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gcdoimukh.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Rajiv Gandhi University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2012",
+      "district": "Papum Pare",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-yupia",
+    "name": "National Institute of Technology Arunachal Pradesh",
+    "shortName": "National Institute of Technology Arunachal Pradesh",
+    "location": "Yupia, Yupia District, Arunachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Yupia",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Yupia",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

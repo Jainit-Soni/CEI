@@ -1,0 +1,1669 @@
+[
+  {
+    "id": "nit-agartala",
+    "name": "National Institute of Technology Agartala",
+    "shortName": "NIT Agartala",
+    "location": "Jirania, West Tripura, Tripura",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance and one of the premier engineering colleges in Northeast India. It offers B.Tech, M.Tech, MCA, and PhD programs.",
+    "campus": "Barjala, Jirania",
+    "officialUrl": "https://www.nita.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "jam",
+      "nimcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EE, ME, CE, Chemical, Bio)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "3 years",
+        "exams": [
+          "nimcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~18000-25000 Rank (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Oracle",
+      "BPCL",
+      "L&T"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://www.nita.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1965",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "tripura-university",
+    "name": "Tripura University",
+    "shortName": "TU",
+    "location": "Suryamaninagar, West Tripura, Tripura",
+    "rankingTier": "Tier 1",
+    "overview": "A Central University serving as the main affiliating body for the state. It offers a wide range of postgraduate and integrated courses.",
+    "campus": "Suryamaninagar",
+    "officialUrl": "https://tripurauniv.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "IMD (Integrated Master's Degree)",
+        "degree": "Integrated Master",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg",
+          "cat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://tripurauniv.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1987",
+      "district": "West Tripura",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-agartala",
+    "name": "Indian Institute of Information Technology Agartala",
+    "shortName": "IIIT Agartala",
+    "location": "Jirania, West Tripura, Tripura",
+    "rankingTier": "Tier 2",
+    "overview": "An Institute of National Importance operating under PPP mode. Currently mentored by NIT Agartala and sharing its campus.",
+    "campus": "NIT Agartala Campus (Temporary)",
+    "officialUrl": "https://iiitagartala.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Computer Science & Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE ~30000 Rank"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Deloitte",
+      "Capgemini"
+    ],
+    "tuition": "₹2,00,000 per annum approx",
+    "sources": [
+      "https://iiitagartala.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "PPP (Central + State + Industry)",
+      "establishedYear": "2018",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "maharaja-bir-bikram-university",
+    "name": "Maharaja Bir Bikram University",
+    "shortName": "MBB University",
+    "location": "Agartala, Tripura",
+    "rankingTier": "Tier 2",
+    "overview": "A state university established to upgrade the historic MBB College and nearby institutions into a university cluster.",
+    "campus": "College Tilla",
+    "officialUrl": "https://mbbuniversity.ac.in",
+    "acceptedExams": [
+      "merit",
+      "university-entrance"
+    ],
+    "courses": [
+      {
+        "name": "M.A. (Public Admin, English, History)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "M.Sc (Applied Math)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://mbbuniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2015",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "icfai-university-tripura",
+    "name": "The ICFAI University, Tripura",
+    "shortName": "ICFAI Tripura",
+    "location": "Kamalghat, West Tripura, Tripura",
+    "rankingTier": "Tier 2",
+    "overview": "A prominent private university offering a wide array of courses in engineering, law, management, and paramedical sciences.",
+    "campus": "Kamalghat, Mohanpur",
+    "officialUrl": "https://www.iutripura.edu.in",
+    "acceptedExams": [
+      "tbjee",
+      "jee-main",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "tbjee",
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Ed",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "LLB",
+        "degree": "LLB",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "tbjee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "HDFC Bank",
+      "Il&FS"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.iutripura.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "NCTE",
+        "BCI"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2004",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "agartala-government-medical-college",
+    "name": "Agartala Government Medical College",
+    "shortName": "AGMC",
+    "location": "Agartala, Tripura",
+    "rankingTier": "Tier 1",
+    "overview": "The premier government medical college in the state, attached to the G.B. Pant Hospital.",
+    "campus": "Kunjaban",
+    "officialUrl": "https://agmc.nic.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~450+ Score"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://agmc.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2005",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "tripura-medical-college",
+    "name": "Tripura Medical College & Dr. B.R. Ambedkar Memorial Teaching Hospital",
+    "shortName": "TMC",
+    "location": "Hapania, West Tripura, Tripura",
+    "rankingTier": "Tier 2",
+    "overview": "A society-run medical college providing healthcare and medical education.",
+    "campus": "Hapania",
+    "officialUrl": "https://tmc.nic.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate (Society Run)",
+    "sources": [
+      "https://tmc.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University",
+        "NMC"
+      ],
+      "ownership": "Society (Govt Aided)",
+      "establishedYear": "2006",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "tripura-institute-of-technology",
+    "name": "Tripura Institute of Technology",
+    "shortName": "TIT Narsingarh",
+    "location": "Narsingarh, West Tripura, Tripura",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly a polytechnic, now a degree engineering college offering both B.Tech and Diploma courses. It is a key technical institute in the state.",
+    "campus": "Narsingarh",
+    "officialUrl": "https://tit.tripura.gov.in",
+    "acceptedExams": [
+      "tbjee",
+      "lateral-entry"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, CSE, ECE, EE, ME)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "tbjee"
+        ]
+      },
+      {
+        "name": "Diploma in Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "tbjee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "lateral-entry",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://tit.tripura.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University",
+        "AICTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1958",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "national-forensic-sciences-university-tripura",
+    "name": "National Forensic Sciences University, Tripura Campus",
+    "shortName": "NFSU Tripura",
+    "location": "Agartala, Tripura",
+    "rankingTier": "Tier 2",
+    "overview": "A campus of the NFSU (an Institute of National Importance), dedicated to forensic science education.",
+    "campus": "Radhanagar/Srinagar",
+    "officialUrl": "https://tripura.nfsu.ac.in",
+    "acceptedExams": [
+      "nfat"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc Forensic Science",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "nfat"
+        ]
+      },
+      {
+        "name": "B.Sc-M.Sc Forensic Science",
+        "degree": "Integrated Master",
+        "duration": "5 years",
+        "exams": [
+          "nfat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nfat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Forensic Labs",
+      "Police Depts"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://tripura.nfsu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2021",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "college-of-fisheries-tripura",
+    "name": "College of Fisheries, Lembucherra",
+    "shortName": "COF Tripura",
+    "location": "Lembucherra, West Tripura, Tripura",
+    "rankingTier": "Tier 2",
+    "overview": "A constituent college of the Central Agricultural University (Imphal), specializing in fisheries science.",
+    "campus": "Lembucherra",
+    "officialUrl": "https://cofcau.nic.in",
+    "acceptedExams": [
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.F.Sc",
+        "degree": "Bachelor of Fisheries Science",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://cofcau.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "Central University Constituent",
+      "establishedYear": "1998",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "college-of-agriculture-tripura",
+    "name": "College of Agriculture, Tripura",
+    "shortName": "CAT",
+    "location": "Lembucherra, West Tripura, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "A state government college providing agricultural education.",
+    "campus": "Lembucherra",
+    "officialUrl": "https://agri.tripura.gov.in",
+    "acceptedExams": [
+      "icar-aieea",
+      "state-nomination"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "state-nomination",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://agri.tripura.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2007",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "college-of-veterinary-sciences-tripura",
+    "name": "College of Veterinary Sciences and Animal Husbandry",
+    "shortName": "CVSc Tripura",
+    "location": "R.K. Nagar, West Tripura, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "A state government college under the Department of ARDD, affiliated to Tripura University.",
+    "campus": "R.K. Nagar",
+    "officialUrl": "https://ardd.tripura.gov.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "Bachelor of Veterinary Science",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://ardd.tripura.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University",
+        "VCI"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2009",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "techno-college-of-engineering-agartala",
+    "name": "Techno College of Engineering Agartala",
+    "shortName": "TCEA",
+    "location": "Maheshkhola, West Tripura, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "A private engineering college under the Techno India Group.",
+    "campus": "Maheshkhola",
+    "officialUrl": "https://tia.edu.in",
+    "acceptedExams": [
+      "tbjee",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "tbjee",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "tbjee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://tia.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University",
+        "AICTE"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2014",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "maharaja-bir-bikram-college",
+    "name": "Maharaja Bir Bikram College",
+    "shortName": "MBB College",
+    "location": "Agartala, Tripura",
+    "rankingTier": "Tier 2",
+    "overview": "The oldest and most prestigious general degree college in Tripura, established in 1947. Now a constituent of MBB University.",
+    "campus": "College Tilla",
+    "officialUrl": "https://mbbcollege.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mbbcollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "MBB University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1947",
+      "district": "West Tripura",
+      "naacGrade": "B+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "womens-college-agartala",
+    "name": "Women's College, Agartala",
+    "shortName": "Women's College",
+    "location": "Agartala, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "A premier government college for women's education in the state.",
+    "campus": "B.K. Road",
+    "officialUrl": "https://womenscollege.nic.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://womenscollege.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1965",
+      "district": "West Tripura",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "ramthakur-college",
+    "name": "Ramthakur College",
+    "shortName": "Ramthakur College",
+    "location": "Agartala, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "A government-aided college offering undergraduate courses in Arts and Science.",
+    "campus": "Badharghat",
+    "officialUrl": "https://ramthakurcollege.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government Aided)",
+    "sources": [
+      "https://ramthakurcollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University"
+      ],
+      "ownership": "Government Aided",
+      "establishedYear": "1967",
+      "district": "West Tripura",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "holy-cross-college-agartala",
+    "name": "Holy Cross College",
+    "shortName": "Holy Cross",
+    "location": "Jubatara, West Tripura, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "A private Catholic minority college known for quality education and discipline.",
+    "campus": "Jubatara, Lembucherra",
+    "officialUrl": "https://holycrosscollege.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Ed",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://holycrosscollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University"
+      ],
+      "ownership": "Private (Minority)",
+      "establishedYear": "2009",
+      "district": "West Tripura",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "ripsat-agartala",
+    "name": "Regional Institute of Pharmaceutical Science and Technology",
+    "shortName": "RIPSAT",
+    "location": "Agartala, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest pharmacy institute in the state, offering diploma and degree courses.",
+    "campus": "Abhoynagar",
+    "officialUrl": "https://ripsat.tripura.gov.in",
+    "acceptedExams": [
+      "tbjee"
+    ],
+    "courses": [
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "tbjee"
+        ]
+      },
+      {
+        "name": "D.Pharm",
+        "degree": "Diploma",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "tbjee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://ripsat.tripura.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University",
+        "PCI"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1979",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "tripura-government-law-college",
+    "name": "Tripura Government Law College",
+    "shortName": "TGLC",
+    "location": "Agartala, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "The premier government law college in the state.",
+    "campus": "College Tilla",
+    "officialUrl": "https://tglc.tripura.gov.in",
+    "acceptedExams": [
+      "law-entrance"
+    ],
+    "courses": [
+      {
+        "name": "BA LLB",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "law-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://tglc.tripura.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University",
+        "BCI"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1986",
+      "district": "West Tripura",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "netaji-subhash-mahavidyalaya-udaipur",
+    "name": "Netaji Subhash Mahavidyalaya (Govt Degree College, Udaipur)",
+    "shortName": "NSM Udaipur",
+    "location": "Udaipur, Gomati, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "A major government college in the Gomati district.",
+    "campus": "Udaipur",
+    "officialUrl": "https://nsmudaipur.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://nsmudaipur.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1979",
+      "district": "Gomati",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "ishwar-chandra-vidyasagar-college-belonia",
+    "name": "Ishwar Chandra Vidyasagar College (Govt Degree College, Belonia)",
+    "shortName": "ICVC Belonia",
+    "location": "Belonia, South Tripura, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "A prominent government college in South Tripura.",
+    "campus": "Belonia",
+    "officialUrl": "https://icvc.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://icvc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1964",
+      "district": "South Tripura",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "ramkrishna-mahavidyalaya-kailashahar",
+    "name": "Ramkrishna Mahavidyalaya (Govt Degree College, Kailashahar)",
+    "shortName": "RKM Kailashahar",
+    "location": "Kailashahar, Unakoti, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest college in the Unakoti district.",
+    "campus": "Kailashahar",
+    "officialUrl": "https://rkmkailashahar.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://rkmkailashahar.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1950",
+      "district": "Unakoti",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-degree-college-dharmanagar",
+    "name": "Government Degree College, Dharmanagar",
+    "shortName": "GDC Dharmanagar",
+    "location": "Dharmanagar, North Tripura, Tripura",
+    "rankingTier": "Tier 3",
+    "overview": "A government college serving North Tripura district.",
+    "campus": "Dharmanagar",
+    "officialUrl": "https://gdcdharmanagar.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gdcdharmanagar.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Tripura University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1979",
+      "district": "North Tripura",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-agartala",
+    "name": "National Institute of Technology Agartala",
+    "shortName": "National Institute of Technology Agartala",
+    "location": "Agartala, Agartala District, Tripura",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Agartala",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Agartala",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

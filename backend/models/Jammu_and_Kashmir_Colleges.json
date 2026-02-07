@@ -1,0 +1,87 @@
+[
+  {
+    "id": "national-institute-of-technolo-srinagar",
+    "name": "National Institute of Technology Srinagar",
+    "shortName": "National Institute of Technology Srinagar",
+    "location": "Srinagar, Srinagar District, Jammu and Kashmir",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Srinagar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Srinagar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

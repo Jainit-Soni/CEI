@@ -1,0 +1,2069 @@
+[
+  {
+    "id": "iit-kharagpur",
+    "name": "Indian Institute of Technology Kharagpur",
+    "shortName": "IIT KGP",
+    "location": "Kharagpur, Paschim Medinipur, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "The first IIT to be established (1951) and recognized as an Institute of National Importance. It has the largest campus among IITs and offers a vast array of courses.",
+    "campus": "Kharagpur",
+    "officialUrl": "http://www.iitkgp.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-advanced-aat"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "LLB (Hons) in IP Law",
+        "degree": "LLB",
+        "duration": "3 years",
+        "exams": [
+          "institute-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: 414 | ECE: 1132 | Mech: 3300",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Apple",
+      "Microsoft",
+      "Goldman Sachs",
+      "Schlumberger"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "http://www.iitkgp.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1951",
+      "district": "Paschim Medinipur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹24.0 LPA",
+      "medianPackage": "₹19.76 LPA",
+      "highestPackage": "₹2.14 CPA"
+    }
+  },
+  {
+    "id": "iim-calcutta",
+    "name": "Indian Institute of Management Calcutta",
+    "shortName": "IIM Calcutta",
+    "location": "Joka, Kolkata, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "The first IIM to be established, known for its expertise in finance and quantitative management. It is a triple-accredited business school (AACSB, AMBA, EQUIS).",
+    "campus": "Diamond Harbour Road, Joka",
+    "officialUrl": "https://www.iimcal.ac.in",
+    "acceptedExams": [
+      "cat",
+      "gmat"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "MBAEx",
+        "degree": "MBA (Executive)",
+        "duration": "1 year",
+        "exams": [
+          "gmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "Overall: 99.4+ | Sectional: 85+",
+        "source": "IIM C Admission"
+      }
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "BCG",
+      "Bain",
+      "Bank of America",
+      "Morgan Stanley"
+    ],
+    "tuition": "₹27,00,000 (Approx)",
+    "placements": {
+      "averagePackage": "₹32.68 LPA",
+      "medianPackage": "₹32.27 LPA",
+      "highestPackage": "₹1.15 CPA"
+    },
+    "sources": [
+      "https://www.iimcal.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1961",
+      "district": "Kolkata",
+      "naacGrade": "NA"
+    }
+  },
+  {
+    "id": "jadavpur-university",
+    "name": "Jadavpur University",
+    "shortName": "JU",
+    "location": "Jadavpur, Kolkata, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "A premier state university known for its high-impact research, exceptionally low tuition fees, and strong engineering and arts faculties.",
+    "campus": "Jadavpur (Main) / Salt Lake",
+    "officialUrl": "http://www.jaduniv.edu.in",
+    "acceptedExams": [
+      "wbjee",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (CSE, ETCE, ME, EE, Civil, etc.)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "wbjee"
+        ]
+      },
+      {
+        "name": "B.A. (English, Comp Lit, etc.)",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "merit",
+          "entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "wbjee",
+        "year": "2024",
+        "cutoff": "CSE Rank ~10-15 (General)"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Amazon",
+      "Texas Instruments",
+      "Samsung"
+    ],
+    "tuition": "Very Low (State Govt)",
+    "sources": [
+      "http://www.jaduniv.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1955",
+      "district": "Kolkata",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15.5 LPA",
+      "medianPackage": "₹12.0 LPA",
+      "highestPackage": "₹85.0 LPA"
+    }
+  },
+  {
+    "id": "university-of-calcutta",
+    "name": "University of Calcutta",
+    "shortName": "CU",
+    "location": "Kolkata, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest and most prestigious universities in India. It has multiple campuses (College Street, Rajabazar, Alipore) and affiliates many top colleges.",
+    "campus": "College Street (Asutosh Siksha Prangan)",
+    "officialUrl": "https://www.caluniv.ac.in",
+    "acceptedExams": [
+      "wbjee",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Optics, Chemical, Polymer, etc.)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "wbjee"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit",
+          "entrance"
+        ]
+      },
+      {
+        "name": "B.A. LL.B.",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "wbjee",
+        "year": "2024",
+        "cutoff": "CSE Rank ~600"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Cognizant",
+      "Haldia Petrochemicals"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://www.caluniv.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1857",
+      "district": "Kolkata",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "indian-statistical-institute-kolkata",
+    "name": "Indian Statistical Institute",
+    "shortName": "ISI Kolkata",
+    "location": "Baranagar, Kolkata, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance worldwide known for research in statistics, mathematics, and computer science.",
+    "campus": "Baranagar",
+    "officialUrl": "https://www.isical.ac.in",
+    "acceptedExams": [
+      "isi-admission-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Stat (Hons)",
+        "degree": "Bachelor of Statistics",
+        "duration": "3 years",
+        "exams": [
+          "isi-admission-test"
+        ]
+      },
+      {
+        "name": "M.Stat",
+        "degree": "Master of Statistics",
+        "duration": "2 years",
+        "exams": [
+          "isi-admission-test"
+        ]
+      },
+      {
+        "name": "M.Tech (CS)",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "isi-admission-test",
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "isi-admission-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Goldman Sachs",
+      "BlackRock"
+    ],
+    "tuition": "No Tuition (Stipend provided)",
+    "sources": [
+      "https://www.isical.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1931",
+      "district": "Kolkata",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiest-shibpur",
+    "name": "Indian Institute of Engineering Science and Technology, Shibpur",
+    "shortName": "IIEST Shibpur",
+    "location": "Shibpur, Howrah, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "Formerly BESU and BE College, it is the second oldest engineering college in India (1856). Upgraded to an Institute of National Importance in 2014.",
+    "campus": "Botanic Garden",
+    "officialUrl": "https://www.iiests.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Aero, Civil, Mech, etc.)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-main-paper-2"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~12000 Rank (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "PwC",
+      "Tata Steel",
+      "CESC"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://www.iiests.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1856",
+      "district": "Howrah",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-durgapur",
+    "name": "National Institute of Technology Durgapur",
+    "shortName": "NIT Durgapur",
+    "location": "Durgapur, Paschim Bardhaman, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "One of the first 8 RECs established in India, situated in the industrial hub of Durgapur. It is an Institute of National Importance.",
+    "campus": "Mahatma Gandhi Avenue",
+    "officialUrl": "https://nitdgp.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "nimcet",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~10000 Rank (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Uber",
+      "Qualcomm",
+      "Wells Fargo"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://nitdgp.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1960",
+      "district": "Paschim Bardhaman",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹13.62 LPA",
+      "medianPackage": "₹11.50 LPA",
+      "highestPackage": "₹70.0 LPA"
+    }
+  },
+  {
+    "id": "iiser-kolkata",
+    "name": "Indian Institute of Science Education and Research Kolkata",
+    "shortName": "IISER Kolkata",
+    "location": "Mohanpur, Nadia, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "A premier institute for basic sciences research and education, established by the Ministry of Education, GoI.",
+    "campus": "Mohanpur",
+    "officialUrl": "https://www.iiserkol.ac.in",
+    "acceptedExams": [
+      "iiser-aptitude-test",
+      "jee-advanced"
+    ],
+    "courses": [
+      {
+        "name": "BS-MS Dual Degree",
+        "degree": "Integrated Master",
+        "duration": "5 years",
+        "exams": [
+          "iiser-aptitude-test",
+          "jee-advanced"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "iiser-aptitude-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Research Labs",
+      "Academia",
+      "Pharma R&D"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.iiserkol.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2006",
+      "district": "Nadia",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "visva-bharati-university",
+    "name": "Visva-Bharati University",
+    "shortName": "Visva-Bharati",
+    "location": "Santiniketan, Birbhum, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "Founded by Rabindranath Tagore, it is a Central University and an Institution of National Importance known for its unique pedagogy and focus on arts, music, and humanities.",
+    "campus": "Santiniketan",
+    "officialUrl": "https://visvabharati.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Mus/BFA",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://visvabharati.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1921",
+      "district": "Birbhum",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nujs-kolkata",
+    "name": "West Bengal National University of Juridical Sciences",
+    "shortName": "WBNUJS",
+    "location": "Kolkata, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "One of the premier National Law Universities in India, known for its rigorous legal education and strong placement in top law firms.",
+    "campus": "Salt Lake",
+    "officialUrl": "https://www.nujs.edu",
+    "acceptedExams": [
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "BA LLB (Hons)",
+        "degree": "Integrated LLB",
+        "duration": "5 years",
+        "exams": [
+          "clat"
+        ]
+      },
+      {
+        "name": "LLM",
+        "degree": "LLM",
+        "duration": "1 year",
+        "exams": [
+          "clat-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat",
+        "year": "2023",
+        "cutoff": "AIR ~250"
+      }
+    ],
+    "topRecruiters": [
+      "Khaitan & Co",
+      "SAM",
+      "CAM",
+      "Trilegal"
+    ],
+    "tuition": "High (NLU Standard)",
+    "sources": [
+      "https://www.nujs.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Bar Council of India"
+      ],
+      "ownership": "State University (NLU)",
+      "establishedYear": "1999",
+      "district": "Kolkata",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "presidency-university-kolkata",
+    "name": "Presidency University",
+    "shortName": "Presidency",
+    "location": "Kolkata, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "Formerly Presidency College, a historic institution instrumental in the Bengal Renaissance. Upgraded to a unitary university in 2010.",
+    "campus": "College Street",
+    "officialUrl": "https://www.presiuniv.ac.in",
+    "acceptedExams": [
+      "pubdet",
+      "pumdet"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "pubdet"
+        ]
+      },
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "pumdet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "pubdet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "pumdet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://www.presiuniv.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1817",
+      "district": "Kolkata",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "st-xaviers-college-kolkata",
+    "name": "St. Xavier's College (Autonomous)",
+    "shortName": "SXC Kolkata",
+    "location": "Kolkata, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "A prestigious autonomous college affiliated with the University of Calcutta, run by the Jesuit society. Known for Commerce and Arts.",
+    "campus": "Park Street",
+    "officialUrl": "https://www.sxccal.edu",
+    "acceptedExams": [
+      "merit",
+      "college-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.Com (Hons)",
+        "degree": "B.Com",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BMS",
+        "degree": "Management",
+        "duration": "3 years",
+        "exams": [
+          "entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2023",
+        "cutoff": "B.Com ~95%+"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "EY",
+      "Google",
+      "Reckitt"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.sxccal.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Calcutta (Autonomous)"
+      ],
+      "ownership": "Private (Minority)",
+      "establishedYear": "1860",
+      "district": "Kolkata",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "medical-college-kolkata",
+    "name": "Medical College and Hospital, Kolkata",
+    "shortName": "MCK (Calcutta Medical College)",
+    "location": "Kolkata, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "The oldest medical college in Asia (established 1835). It is the most sought-after medical institute in West Bengal.",
+    "campus": "College Street",
+    "officialUrl": "https://www.medicalcollegekolkata.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Rank Top 100"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Government)",
+    "sources": [
+      "https://www.medicalcollegekolkata.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "WBUHS",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1835",
+      "district": "Kolkata",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "ipgmer-sskm-hospital",
+    "name": "Institute of Post Graduate Medical Education and Research",
+    "shortName": "IPGMER (SSKM)",
+    "location": "Kolkata, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "A premier super-specialty hospital and medical research institute. It offers undergraduate, postgraduate, and postdoctoral courses.",
+    "campus": "A.J.C. Bose Road",
+    "officialUrl": "http://www.ipgmer.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Government)",
+    "sources": [
+      "http://www.ipgmer.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "WBUHS",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1957",
+      "district": "Kolkata",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "makaut-kolkata",
+    "name": "Maulana Abul Kalam Azad University of Technology",
+    "shortName": "MAKAUT (WBUT)",
+    "location": "Haringhata, Nadia, West Bengal",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly West Bengal University of Technology (WBUT). It is the state affiliating university for engineering, management, and pharmacy colleges.",
+    "campus": "Haringhata (Main) / Salt Lake",
+    "officialUrl": "https://makautwb.ac.in",
+    "acceptedExams": [
+      "wbjee",
+      "jemat",
+      "pget"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (In-House)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "wbjee"
+        ]
+      },
+      {
+        "name": "B.Tech (Affiliated Colleges)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "wbjee",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "wbjee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jemat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies (Low for In-house)",
+    "sources": [
+      "https://makautwb.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2001",
+      "district": "Nadia",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "iem-kolkata",
+    "name": "Institute of Engineering and Management",
+    "shortName": "IEM Kolkata",
+    "location": "Salt Lake, Kolkata, West Bengal",
+    "rankingTier": "Tier 2",
+    "overview": "One of the top private engineering and management colleges in West Bengal, affiliated with MAKAUT. Known for strict discipline and placements.",
+    "campus": "Salt Lake, Sector V",
+    "officialUrl": "https://iem.edu.in",
+    "acceptedExams": [
+      "wbjee",
+      "jee-main",
+      "iemjee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "wbjee",
+          "jee-main",
+          "iemjee"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "jemat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "wbjee",
+        "year": "2023",
+        "cutoff": "CSE Rank ~3000"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Cognizant",
+      "Infosys",
+      "Wipro",
+      "SAP"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://iem.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "MAKAUT",
+        "AICTE"
+      ],
+      "ownership": "Private",
+      "establishedYear": "1989",
+      "district": "Kolkata",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "heritage-institute-of-technology",
+    "name": "Heritage Institute of Technology",
+    "shortName": "HIT Kolkata",
+    "location": "Kolkata, West Bengal",
+    "rankingTier": "Tier 2",
+    "overview": "A premier private autonomous engineering college affiliated with MAKAUT. It is a top choice for WBJEE aspirants after Jadavpur and CU.",
+    "campus": "Chowbaga Road, Anandapur",
+    "officialUrl": "https://www.heritageit.edu",
+    "acceptedExams": [
+      "wbjee",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "wbjee",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "wbjee",
+        "year": "2023",
+        "cutoff": "CSE Rank ~3500"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Wipro",
+      "IBM",
+      "Cerner"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.heritageit.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "MAKAUT (Autonomous)",
+        "AICTE"
+      ],
+      "ownership": "Private (Trust)",
+      "establishedYear": "2001",
+      "district": "Kolkata",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bidhan-chandra-krishi-viswavidyalaya",
+    "name": "Bidhan Chandra Krishi Viswavidyalaya",
+    "shortName": "BCKV",
+    "location": "Mohanpur, Nadia, West Bengal",
+    "rankingTier": "Tier 2",
+    "overview": "The premier agricultural university of West Bengal, responsible for agricultural education and research.",
+    "campus": "Mohanpur",
+    "officialUrl": "https://www.bckv.edu.in",
+    "acceptedExams": [
+      "wbjee-agri",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "wbjee",
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "B.Tech (Agri Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "wbjee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "wbjee-agri",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Agro-Industry",
+      "Banking"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.bckv.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1974",
+      "district": "Nadia",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "st-xaviers-university-kolkata",
+    "name": "St. Xavier's University",
+    "shortName": "SXUK",
+    "location": "New Town, Kolkata, West Bengal",
+    "rankingTier": "Tier 2",
+    "overview": "A private Jesuit university established in New Town, inheriting the legacy of St. Xavier's College. Offers Management, Law, and Commerce.",
+    "campus": "New Town",
+    "officialUrl": "https://www.sxuk.edu.in",
+    "acceptedExams": [
+      "xat",
+      "cat",
+      "gmat",
+      "xlaw"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "xat",
+          "cat",
+          "mat"
+        ]
+      },
+      {
+        "name": "B.Com LL.B. (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "xlaw"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "xat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "PwC",
+      "KPMG"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.sxuk.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2017",
+      "district": "North 24 Parganas",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ramakrishna-mission-vidyamandira",
+    "name": "Ramakrishna Mission Vidyamandira",
+    "shortName": "RKM Belur",
+    "location": "Belur Math, Howrah, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "A residential autonomous college for men affiliated with Calcutta University. Known for academic excellence and values-based education.",
+    "campus": "Belur Math",
+    "officialUrl": "https://vidyamandira.ac.in",
+    "acceptedExams": [
+      "college-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc (Hons)",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "entrance",
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "college-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low to Moderate",
+    "sources": [
+      "https://vidyamandira.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Calcutta (Autonomous)"
+      ],
+      "ownership": "Private (Trust)",
+      "establishedYear": "1941",
+      "district": "Howrah",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-kharagpur",
+    "name": "Indian Institute of Technology Kharagpur",
+    "shortName": "Indian Institute of Technology Kharagpur",
+    "location": "Kharagpur, Kharagpur District, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Kharagpur",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Kharagpur",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "jadavpur-university-kolkata",
+    "name": "Jadavpur University",
+    "shortName": "Jadavpur University",
+    "location": "Kolkata, Kolkata District, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Kolkata",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Kolkata",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-durgapur",
+    "name": "National Institute of Technology Durgapur",
+    "shortName": "National Institute of Technology Durgapur",
+    "location": "Durgapur, Durgapur District, West Bengal",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Durgapur",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Durgapur",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "maulana-abul-kalam-azad-univer-nadia",
+    "name": "Maulana Abul Kalam Azad University of Technology",
+    "shortName": "Maulana Abul Kalam Azad University of Technology",
+    "location": "Nadia, Nadia District, West Bengal",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Nadia",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Nadia",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jalpaiguri-government-engineer-jalpaiguri",
+    "name": "Jalpaiguri Government Engineering College",
+    "shortName": "Jalpaiguri Government Engineering College",
+    "location": "Jalpaiguri, Jalpaiguri District, West Bengal",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Jalpaiguri",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Jalpaiguri",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "indian-institute-of-engineerin-shibpur",
+    "name": "Indian Institute of Engineering Science and Technology",
+    "shortName": "Indian Institute of Engineering Science and Techno",
+    "location": "Shibpur, Shibpur District, West Bengal",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Shibpur",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Shibpur",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "haldia-institute-of-technology-haldia",
+    "name": "Haldia Institute of Technology",
+    "shortName": "Haldia Institute of Technology",
+    "location": "Haldia, Haldia District, West Bengal",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Haldia",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Haldia",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

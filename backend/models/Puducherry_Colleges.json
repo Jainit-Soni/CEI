@@ -1,0 +1,1583 @@
+[
+  {
+    "id": "pondicherry-university",
+    "name": "Pondicherry University",
+    "shortName": "PU",
+    "location": "Kalapet, Puducherry",
+    "rankingTier": "Tier 1",
+    "overview": "A Central University established in 1985, offering a wide range of postgraduate and doctoral programs. It serves as the affiliating university for colleges in Puducherry, Karaikal, Mahe, Yanam, and Andaman & Nicobar Islands.",
+    "campus": "Kalapet",
+    "officialUrl": "https://www.pondiuni.edu.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "Integrated M.Sc/M.A.",
+        "degree": "Integrated Master",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.Sc/M.A./M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "HDFC Bank"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://www.pondiuni.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1985",
+      "district": "Puducherry",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "jipmer-puducherry",
+    "name": "Jawaharlal Institute of Postgraduate Medical Education and Research",
+    "shortName": "JIPMER",
+    "location": "Puducherry",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance under the Ministry of Health and Family Welfare, Govt. of India. It is one of the premier medical institutions in the country.",
+    "campus": "Dhanvantri Nagar",
+    "officialUrl": "https://jipmer.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS/DM/MCh",
+        "degree": "PG/Super Specialty",
+        "duration": "3 years",
+        "exams": [
+          "ini-cet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "General Rank ~270"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals",
+      "Research Institutes"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://jipmer.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1823",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "puducherry-technological-university",
+    "name": "Puducherry Technological University",
+    "shortName": "PTU",
+    "location": "Pillaichavady, Puducherry",
+    "rankingTier": "Tier 1",
+    "overview": "Formerly Pondicherry Engineering College (PEC), upgraded to a state technological university. It is the premier engineering institute in the UT.",
+    "campus": "Pillaichavady",
+    "officialUrl": "https://ptuniv.edu.in",
+    "acceptedExams": [
+      "centac",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, ME, CE, IT, EIE, Chemical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "centac",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate",
+          "centac"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "centac"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "centac",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Zoho",
+      "Kaar Technologies"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://ptuniv.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1984",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "indira-gandhi-medical-college-research-institute",
+    "name": "Indira Gandhi Medical College and Research Institute",
+    "shortName": "IGMCRI",
+    "location": "Kathirkamam, Puducherry",
+    "rankingTier": "Tier 2",
+    "overview": "A government medical college established by the Govt of Puducherry to provide affordable medical education and healthcare.",
+    "campus": "Kathirkamam",
+    "officialUrl": "http://igmcri.com",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~500 Score"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://igmcri.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2010",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mahatma-gandhi-postgraduate-institute-dental-sciences",
+    "name": "Mahatma Gandhi Postgraduate Institute of Dental Sciences",
+    "shortName": "MGPGI",
+    "location": "Puducherry",
+    "rankingTier": "Tier 2",
+    "overview": "The only government dental college in the UT, known for high-quality dental education and patient care.",
+    "campus": "Gorimedu",
+    "officialUrl": "https://mgpgi.py.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-mds"
+    ],
+    "courses": [
+      {
+        "name": "BDS",
+        "degree": "BDS",
+        "duration": "5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MDS",
+        "degree": "MDS",
+        "duration": "3 years",
+        "exams": [
+          "neet-mds"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-mds",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mgpgi.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University",
+        "DCI"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1990",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rajiv-gandhi-institute-of-veterinary-education-and-research",
+    "name": "Rajiv Gandhi Institute of Veterinary Education and Research",
+    "shortName": "RIVER",
+    "location": "Kurumbapet, Puducherry",
+    "rankingTier": "Tier 2",
+    "overview": "A premier veterinary college fully funded by the Govt of Puducherry, providing education in veterinary sciences and animal husbandry.",
+    "campus": "Kurumbapet",
+    "officialUrl": "https://river.py.gov.in",
+    "acceptedExams": [
+      "centac",
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "Bachelor of Veterinary Science",
+        "duration": "5.5 years",
+        "exams": [
+          "centac"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "centac",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://river.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University",
+        "VCI"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1994",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mother-theresa-post-graduate-and-research-institute-of-health-sciences",
+    "name": "Mother Theresa Post Graduate and Research Institute of Health Sciences",
+    "shortName": "MTPG & RIHS",
+    "location": "Puducherry",
+    "rankingTier": "Tier 2",
+    "overview": "A government institute offering nursing, pharmacy, physiotherapy, and medical lab technology courses.",
+    "campus": "Gorimedu",
+    "officialUrl": "https://mtpgrihs.py.gov.in",
+    "acceptedExams": [
+      "centac"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "centac"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "centac"
+        ]
+      },
+      {
+        "name": "BPT",
+        "degree": "Physiotherapy",
+        "duration": "4.5 years",
+        "exams": [
+          "centac"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "centac",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mtpgrihs.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University",
+        "PCI",
+        "INC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1991",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sri-balaji-vidyapeeth",
+    "name": "Sri Balaji Vidyapeeth",
+    "shortName": "SBV",
+    "location": "Pillaiyarkuppam, Puducherry",
+    "rankingTier": "Tier 2",
+    "overview": "A Deemed-to-be University comprising Mahatma Gandhi Medical College and Research Institute (MGMCRI) and Shri Sathya Sai Medical College.",
+    "campus": "Pillaiyarkuppam",
+    "officialUrl": "https://sbvu.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "sbv-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High (Private Deemed)",
+    "sources": [
+      "https://sbvu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "2008",
+      "district": "Puducherry",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vinayaka-missions-medical-college-karaikal",
+    "name": "Vinayaka Mission's Medical College and Hospital",
+    "shortName": "VMMC Karaikal",
+    "location": "Karaikal, Puducherry",
+    "rankingTier": "Tier 2",
+    "overview": "A constituent college of Vinayaka Mission's Research Foundation (Deemed University), located in Karaikal.",
+    "campus": "Keezhakasakudimedu",
+    "officialUrl": "https://vmmckkl.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High (Private Deemed)",
+    "sources": [
+      "https://vmmckkl.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "VMRF (Deemed University)"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "1996",
+      "district": "Karaikal",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sri-manakula-vinayagar-engineering-college",
+    "name": "Sri Manakula Vinayagar Engineering College",
+    "shortName": "SMVEC",
+    "location": "Madagadipet, Puducherry",
+    "rankingTier": "Tier 2",
+    "overview": "An autonomous engineering college offering a wide range of UG and PG courses. Known for good placements in the region.",
+    "campus": "Madagadipet",
+    "officialUrl": "https://smvec.ac.in",
+    "acceptedExams": [
+      "centac"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "centac"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "centac"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "centac",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Zoho",
+      "Cognizant"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://smvec.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University (Autonomous)",
+        "AICTE"
+      ],
+      "ownership": "Private (Trust)",
+      "establishedYear": "1999",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kanchi-mamunivar-govt-institute-for-postgraduate-studies",
+    "name": "Kanchi Mamunivar Government Institute for Postgraduate Studies and Research",
+    "shortName": "KMGIPSR",
+    "location": "Lawspet, Puducherry",
+    "rankingTier": "Tier 2",
+    "overview": "A premier autonomous government institute dedicated to postgraduate education and research in Arts, Science, and Commerce.",
+    "campus": "Lawspet",
+    "officialUrl": "https://kmgipsr.py.gov.in",
+    "acceptedExams": [
+      "cuet-pg",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://kmgipsr.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University (Autonomous)"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1989",
+      "district": "Puducherry",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bharathidasan-govt-college-for-women",
+    "name": "Bharathidasan Government College for Women",
+    "shortName": "BGCW",
+    "location": "Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "An autonomous government college exclusively for women, offering a variety of undergraduate and postgraduate courses.",
+    "campus": "Muthialpet",
+    "officialUrl": "https://bgcw.py.gov.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://bgcw.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University (Autonomous)"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1968",
+      "district": "Puducherry",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "tagore-government-arts-and-science-college",
+    "name": "Tagore Government Arts and Science College",
+    "shortName": "TAC",
+    "location": "Lawspet, Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "One of the oldest and most prominent government colleges in Puducherry, named after Rabindranath Tagore.",
+    "campus": "Lawspet",
+    "officialUrl": "https://tac.py.gov.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://tac.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1961",
+      "district": "Puducherry",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "dr-ambedkar-govt-law-college-puducherry",
+    "name": "Dr. Ambedkar Government Law College",
+    "shortName": "AGLC Puducherry",
+    "location": "Kalapet, Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "Established to provide legal education in the UT, offering LLB, BA LLB, and LLM programs.",
+    "campus": "Kalapet",
+    "officialUrl": "https://aglc.py.gov.in",
+    "acceptedExams": [
+      "centac",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "LL.B.",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.A. LL.B.",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "LL.M.",
+        "degree": "LL.M",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "centac",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://aglc.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University",
+        "BCI"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1972",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "perunthalaivar-kamarajar-arts-college",
+    "name": "Perunthalaivar Kamarajar Arts College",
+    "shortName": "PKAC",
+    "location": "Kalitheerthalkuppam, Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "A government arts and science college situated in the rural area of Puducherry.",
+    "campus": "Kalitheerthalkuppam",
+    "officialUrl": "https://pkac.py.gov.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://pkac.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1998",
+      "district": "Puducherry",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "arignar-anna-government-arts-and-science-college-karaikal",
+    "name": "Arignar Anna Government Arts and Science College",
+    "shortName": "AAGASC Karaikal",
+    "location": "Karaikal, Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "The premier government college in the Karaikal region, catering to the higher education needs of the district.",
+    "campus": "Nehru Nagar",
+    "officialUrl": "https://aagasc.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://aagasc.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1967",
+      "district": "Karaikal",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "avvaiyar-government-college-for-women-karaikal",
+    "name": "Avvaiyar Government College for Women",
+    "shortName": "AGCW Karaikal",
+    "location": "Karaikal, Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "A government college exclusively for women in Karaikal.",
+    "campus": "Dr. Ambedkar Street",
+    "officialUrl": "https://agcw.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://agcw.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1972",
+      "district": "Karaikal",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "mahatma-gandhi-govt-arts-college-mahe",
+    "name": "Mahatma Gandhi Government Arts College",
+    "shortName": "MGGAC Mahe",
+    "location": "Mahe, Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "Located in the Mahe region (enclave in Kerala), offering courses in Arts and Science.",
+    "campus": "Chalakkara",
+    "officialUrl": "https://mggac.py.gov.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mggac.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1970",
+      "district": "Mahe",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "dr-srv-government-arts-science-college-yanam",
+    "name": "Dr. S.R.K. Government Arts College",
+    "shortName": "SRK Yanam",
+    "location": "Yanam, Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "Serving the Yanam region (enclave in Andhra Pradesh), offering undergraduate and postgraduate courses.",
+    "campus": "Yanam",
+    "officialUrl": "https://drsrkgacyanam.puducherry.gov.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://drsrkgacyanam.puducherry.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1973",
+      "district": "Yanam",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "motilal-nehru-govt-polytechnic-college",
+    "name": "Motilal Nehru Government Polytechnic College",
+    "shortName": "MNGPC",
+    "location": "Lawspet, Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest government polytechnic in Puducherry offering diploma courses in engineering.",
+    "campus": "Lawspet",
+    "officialUrl": "https://mngpc.py.gov.in",
+    "acceptedExams": [
+      "centac"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/Mech/EEE/ECE",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "centac"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "centac",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mngpc.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "DTE Puducherry"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1961",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "women-polytechnic-college-puducherry",
+    "name": "Women's Polytechnic College",
+    "shortName": "WPC Puducherry",
+    "location": "Lawspet, Puducherry",
+    "rankingTier": "Tier 3",
+    "overview": "A government polytechnic exclusively for women, offering diploma courses.",
+    "campus": "Lawspet",
+    "officialUrl": "https://wpc.py.gov.in",
+    "acceptedExams": [
+      "centac"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Architectural Assistantship/Computer Engg",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "centac"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "centac",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://wpc.py.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "DTE Puducherry"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1988",
+      "district": "Puducherry",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-karaikal",
+    "name": "National Institute of Technology Puducherry",
+    "shortName": "National Institute of Technology Puducherry",
+    "location": "Karaikal, Karaikal District, Puducherry",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Karaikal",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Karaikal",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

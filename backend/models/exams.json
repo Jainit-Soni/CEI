@@ -1,0 +1,1606 @@
+[
+  {
+    "id": "jee-main",
+    "name": "Joint Entrance Examination (Main)",
+    "shortName": "JEE Main",
+    "type": "Engineering UG",
+    "conductingBody": "National Testing Agency (NTA)",
+    "courses": [
+      "B.E./B.Tech",
+      "B.Arch",
+      "B.Planning"
+    ],
+    "pattern": [
+      "Paper 1: Physics, Chemistry, Mathematics (MCQ + Numerical)",
+      "Paper 2A: Mathematics, Aptitude, Drawing",
+      "Paper 2B: Mathematics, Aptitude, Planning"
+    ],
+    "totalMarks": "300 (B.Tech)",
+    "dates": {
+      "registration": "Session 1: Nov-Dec 2025; Session 2: Feb-Mar 2026",
+      "examWindow": "Session 1: Jan 2026; Session 2: Apr 2026",
+      "result": "Feb 2026 / May 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Official Question Papers",
+        "url": "https://jeemain.nta.ac.in/archive"
+      }
+    ],
+    "officialUrl": "https://jeemain.nta.ac.in",
+    "collegesAccepting": [
+      "nit-trichy",
+      "nit-warangal",
+      "iiit-hyderabad",
+      "delhi-technological-university",
+      "netaji-subhas-university-of-technology",
+      "ict-mumbai"
+    ]
+  },
+  {
+    "id": "jee-advanced",
+    "name": "Joint Entrance Examination (Advanced)",
+    "shortName": "JEE Advanced",
+    "type": "Engineering UG",
+    "conductingBody": "IITs (Rotational)",
+    "courses": [
+      "B.Tech",
+      "BS",
+      "Dual Degree (B.Tech + M.Tech)"
+    ],
+    "pattern": [
+      "Paper 1 & 2: Physics, Chemistry, Mathematics (Mixed types: MCQ, Numerical, Matrix Match)"
+    ],
+    "totalMarks": "Varies yearly (typically 360 or 306)",
+    "dates": {
+      "registration": "April-May 2026",
+      "examWindow": "May 2026 (Last Sunday)",
+      "result": "June 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Past Question Papers",
+        "url": "https://jeeadv.ac.in/archive.html"
+      }
+    ],
+    "officialUrl": "https://jeeadv.ac.in",
+    "collegesAccepting": [
+      "iit-bombay",
+      "iit-delhi",
+      "iit-madras",
+      "iit-kanpur",
+      "iit-kharagpur",
+      "iit-roorkee",
+      "iisc-bengaluru",
+      "iiser-pune"
+    ]
+  },
+  {
+    "id": "neet-ug",
+    "name": "National Eligibility cum Entrance Test (Undergraduate)",
+    "shortName": "NEET UG",
+    "type": "Medical UG",
+    "conductingBody": "National Testing Agency (NTA)",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS",
+      "B.Sc Nursing (selected institutes)"
+    ],
+    "pattern": [
+      "Physics (45 Q)",
+      "Chemistry (45 Q)",
+      "Biology (Botany+Zoology 90 Q)"
+    ],
+    "totalMarks": "720",
+    "dates": {
+      "registration": "March-April 2026",
+      "examWindow": "May 2026 (First Sunday)",
+      "result": "June 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Archive",
+        "url": "https://exams.nta.ac.in/NEET/"
+      }
+    ],
+    "officialUrl": "https://exams.nta.ac.in/NEET/",
+    "collegesAccepting": [
+      "aiims-new-delhi",
+      "cmc-vellore",
+      "jipmer-puducherry",
+      "kgmu-lucknow",
+      "mmc-chennai",
+      "afmc-pune"
+    ]
+  },
+  {
+    "id": "cuet-ug",
+    "name": "Common University Entrance Test (Undergraduate)",
+    "shortName": "CUET-UG",
+    "type": "General UG",
+    "conductingBody": "National Testing Agency (NTA)",
+    "courses": [
+      "B.A.",
+      "B.Sc",
+      "B.Com",
+      "BBA",
+      "Integrated Programs"
+    ],
+    "pattern": [
+      "Section IA/IB: Languages",
+      "Section II: Domain Subjects",
+      "Section III: General Test"
+    ],
+    "totalMarks": "Varies based on subject combination",
+    "dates": {
+      "registration": "Feb-March 2026",
+      "examWindow": "May 2026",
+      "result": "July 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Mock Tests",
+        "url": "https://exams.nta.ac.in/CUET-UG/"
+      }
+    ],
+    "officialUrl": "https://exams.nta.ac.in/CUET-UG/",
+    "collegesAccepting": [
+      "delhi-university",
+      "jnu-delhi",
+      "bhu-varanasi",
+      "uoh-hyderabad",
+      "tiss-mumbai"
+    ]
+  },
+  {
+    "id": "gate",
+    "name": "Graduate Aptitude Test in Engineering",
+    "shortName": "GATE",
+    "type": "Engineering PG",
+    "conductingBody": "IISc & IITs (Rotational)",
+    "courses": [
+      "M.Tech",
+      "Ph.D",
+      "PSU Recruitment"
+    ],
+    "pattern": [
+      "General Aptitude (15 marks)",
+      "Subject Questions (85 marks)"
+    ],
+    "totalMarks": "100",
+    "dates": {
+      "registration": "Aug-Sept 2025",
+      "examWindow": "Feb 2026 (First two weekends)",
+      "result": "March 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Previous Papers",
+        "url": "https://gate.iitk.ac.in"
+      }
+    ],
+    "officialUrl": "https://gate.iitk.ac.in",
+    "collegesAccepting": [
+      "iit-bombay",
+      "iisc-bengaluru",
+      "nit-trichy",
+      "jadavpur-university",
+      "delhi-technological-university"
+    ]
+  },
+  {
+    "id": "cat",
+    "name": "Common Admission Test",
+    "shortName": "CAT",
+    "type": "Management",
+    "conductingBody": "IIMs (Rotational)",
+    "courses": [
+      "MBA",
+      "PGDM",
+      "Fellow Programs"
+    ],
+    "pattern": [
+      "VARC",
+      "DILR",
+      "QA"
+    ],
+    "totalMarks": "198 (approx)",
+    "dates": {
+      "registration": "Aug-Sept 2025",
+      "examWindow": "Nov 2025 (Last Sunday)",
+      "result": "Dec 2025 / Jan 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Mock Test",
+        "url": "https://iimcat.ac.in"
+      }
+    ],
+    "officialUrl": "https://iimcat.ac.in",
+    "collegesAccepting": [
+      "iim-ahmedabad",
+      "iim-bangalore",
+      "iim-calcutta",
+      "fms-delhi",
+      "spjimr-mumbai",
+      "iit-delhi-dms"
+    ]
+  },
+  {
+    "id": "clat",
+    "name": "Common Law Admission Test",
+    "shortName": "CLAT",
+    "type": "Law",
+    "conductingBody": "Consortium of NLUs",
+    "courses": [
+      "B.A. LL.B.",
+      "B.B.A. LL.B.",
+      "LL.M."
+    ],
+    "pattern": [
+      "English",
+      "Current Affairs",
+      "Legal Reasoning",
+      "Logical Reasoning",
+      "Quant"
+    ],
+    "totalMarks": "120",
+    "dates": {
+      "registration": "July-Oct 2025",
+      "examWindow": "Dec 2025",
+      "result": "Dec 2025"
+    },
+    "pastPapers": [
+      {
+        "label": "Sample Papers",
+        "url": "https://consortiumofnlus.ac.in"
+      }
+    ],
+    "officialUrl": "https://consortiumofnlus.ac.in",
+    "collegesAccepting": [
+      "nlsiu-bengaluru",
+      "nalsar-hyderabad",
+      "nujs-kolkata",
+      "nliu-bhopal",
+      "gnlu-gandhinagar"
+    ]
+  },
+  {
+    "id": "bitsat",
+    "name": "Birla Institute of Technology and Science Admission Test",
+    "shortName": "BITSAT",
+    "type": "Engineering UG",
+    "conductingBody": "BITS Pilani",
+    "courses": [
+      "B.E. (Hons)",
+      "B.Pharm",
+      "M.Sc (Hons)"
+    ],
+    "pattern": [
+      "Physics, Chemistry, English, Logical Reasoning, Mathematics/Biology"
+    ],
+    "totalMarks": "390",
+    "dates": {
+      "registration": "Jan-April 2026",
+      "examWindow": "May-June 2026",
+      "result": "June 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://www.bitsadmission.com",
+    "collegesAccepting": [
+      "bits-pilani",
+      "bits-goa",
+      "bits-hyderabad"
+    ]
+  },
+  {
+    "id": "vit-eee",
+    "name": "VIT Engineering Entrance Examination",
+    "shortName": "VITEEE",
+    "type": "Engineering UG",
+    "conductingBody": "Vellore Institute of Technology",
+    "courses": [
+      "B.Tech"
+    ],
+    "pattern": [
+      "Maths/Biology, Physics, Chemistry, English, Aptitude"
+    ],
+    "totalMarks": "125",
+    "dates": {
+      "registration": "Nov 2025 - Mar 2026",
+      "examWindow": "April 2026",
+      "result": "May 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://vit.ac.in",
+    "collegesAccepting": [
+      "vit-vellore",
+      "vit-chennai",
+      "vit-ap",
+      "vit-bhopal"
+    ]
+  },
+  {
+    "id": "wbjee",
+    "name": "West Bengal Joint Entrance Examination",
+    "shortName": "WBJEE",
+    "type": "Engineering UG",
+    "conductingBody": "WBJEEB",
+    "courses": [
+      "B.E./B.Tech",
+      "B.Pharm",
+      "B.Arch"
+    ],
+    "pattern": [
+      "Mathematics (100 marks)",
+      "Physics & Chemistry (100 marks)"
+    ],
+    "totalMarks": "200",
+    "dates": {
+      "registration": "Dec 2025 - Jan 2026",
+      "examWindow": "April 2026",
+      "result": "May 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Old Papers",
+        "url": "https://wbjeeb.nic.in"
+      }
+    ],
+    "officialUrl": "https://wbjeeb.nic.in",
+    "collegesAccepting": [
+      "jadavpur-university",
+      "calcutta-university",
+      "kalyani-government-engineering-college",
+      "iem-kolkata",
+      "heritage-institute-technology"
+    ]
+  },
+  {
+    "id": "mht-cet",
+    "name": "Maharashtra Common Entrance Test",
+    "shortName": "MHT CET",
+    "type": "Engineering/Pharmacy",
+    "conductingBody": "State Common Entrance Test Cell, Maharashtra",
+    "courses": [
+      "B.E./B.Tech",
+      "B.Pharm",
+      "Pharm.D",
+      "B.Sc Agriculture"
+    ],
+    "pattern": [
+      "PCM or PCB Group (Maths/Bio 100 marks, Phy+Chem 100 marks)"
+    ],
+    "totalMarks": "200",
+    "dates": {
+      "registration": "Feb-March 2026",
+      "examWindow": "May 2026",
+      "result": "June 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://cetcell.mahacet.org",
+    "collegesAccepting": [
+      "coep-pune",
+      "vjti-mumbai",
+      "ict-mumbai",
+      "spit-mumbai",
+      "walchand-sangli"
+    ]
+  },
+  {
+    "id": "kcet",
+    "name": "Karnataka Common Entrance Test",
+    "shortName": "KCET",
+    "type": "State Entrance",
+    "conductingBody": "Karnataka Examinations Authority (KEA)",
+    "courses": [
+      "B.E./B.Tech",
+      "B.Pharm",
+      "B.Sc Agriculture",
+      "B.V.Sc"
+    ],
+    "pattern": [
+      "Physics, Chemistry, Mathematics/Biology (60 marks each)"
+    ],
+    "totalMarks": "180 (PCM)",
+    "dates": {
+      "registration": "Feb-March 2026",
+      "examWindow": "April 2026",
+      "result": "May 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Previous Papers",
+        "url": "https://cetonline.karnataka.gov.in/kea/"
+      }
+    ],
+    "officialUrl": "https://cetonline.karnataka.gov.in/kea/",
+    "collegesAccepting": [
+      "rvce-bengaluru",
+      "bmsce-bengaluru",
+      "msrit-bengaluru",
+      "pes-university",
+      "uvce-bengaluru"
+    ]
+  },
+  {
+    "id": "comedk-uget",
+    "name": "Consortium of Medical, Engineering and Dental Colleges of Karnataka UGET",
+    "shortName": "COMEDK UGET",
+    "type": "Engineering UG",
+    "conductingBody": "COMEDK",
+    "courses": [
+      "B.E./B.Tech"
+    ],
+    "pattern": [
+      "Physics (60), Chemistry (60), Mathematics (60)"
+    ],
+    "totalMarks": "180",
+    "dates": {
+      "registration": "Feb-April 2026",
+      "examWindow": "May 2026",
+      "result": "May 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://www.comedk.org",
+    "collegesAccepting": [
+      "nift-bengaluru",
+      "nift-bengaluru",
+      "nift-bengaluru",
+      "siddaganga-institute-of-technology",
+      "nit-mizoram"
+    ]
+  },
+  {
+    "id": "ts-eamcet",
+    "name": "Telangana State Engineering, Agriculture & Medical Common Entrance Test",
+    "shortName": "TS EAPCET",
+    "type": "State Entrance",
+    "conductingBody": "JNTU Hyderabad (on behalf of TSCHE)",
+    "courses": [
+      "B.Tech",
+      "B.Sc Agriculture",
+      "B.Pharm"
+    ],
+    "pattern": [
+      "Mathematics (80), Physics (40), Chemistry (40)"
+    ],
+    "totalMarks": "160",
+    "dates": {
+      "registration": "Feb-April 2026",
+      "examWindow": "May 2026",
+      "result": "May 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://eapcet.tsche.ac.in",
+    "collegesAccepting": [
+      "jntu-hyderabad",
+      "osmania-university",
+      "iiit-hyderabad",
+      "vnr-vignana-jyothi-institute-of-engineering-and-technology",
+      "aditya-engineering-college"
+    ]
+  },
+  {
+    "id": "ap-eamcet",
+    "name": "Andhra Pradesh Engineering, Agriculture and Pharmacy Common Entrance Test",
+    "shortName": "AP EAPCET",
+    "type": "State Entrance",
+    "conductingBody": "JNTU Kakinada (on behalf of APSCHE)",
+    "courses": [
+      "B.Tech",
+      "B.Sc Agriculture",
+      "B.Pharm"
+    ],
+    "pattern": [
+      "Mathematics (80), Physics (40), Chemistry (40)"
+    ],
+    "totalMarks": "160",
+    "dates": {
+      "registration": "March-April 2026",
+      "examWindow": "May 2026",
+      "result": "June 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://cets.apsche.ap.gov.in",
+    "collegesAccepting": [
+      "gitam-visakhapatnam",
+      "svu-tirupati",
+      "jntu-kakinada",
+      "jntu-anantapur",
+      "gayatri-vidya-parishad"
+    ]
+  },
+  {
+    "id": "keam",
+    "name": "Kerala Engineering Architecture Medical",
+    "shortName": "KEAM",
+    "type": "State Entrance",
+    "conductingBody": "CEE Kerala",
+    "courses": [
+      "B.Tech",
+      "B.Pharm",
+      "B.Arch (Score used)",
+      "MBBS (Score used)"
+    ],
+    "pattern": [
+      "Paper 1: Physics & Chemistry",
+      "Paper 2: Mathematics"
+    ],
+    "totalMarks": "960",
+    "dates": {
+      "registration": "March-April 2026",
+      "examWindow": "May 2026",
+      "result": "June 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Previous Question Papers",
+        "url": "https://cee.kerala.gov.in"
+      }
+    ],
+    "officialUrl": "https://cee.kerala.gov.in",
+    "collegesAccepting": [
+      "sctimst-trivandrum",
+      "model-engineering-college-thrikkakara",
+      "kerala-university-of-health-sciences",
+      "tkm-college-of-engineering",
+      "mahatma-gandhi-university-kerala"
+    ]
+  },
+  {
+    "id": "nata",
+    "name": "National Aptitude Test in Architecture",
+    "shortName": "NATA",
+    "type": "Architecture",
+    "conductingBody": "Council of Architecture (CoA)",
+    "courses": [
+      "B.Arch"
+    ],
+    "pattern": [
+      "Drawing and Observation",
+      "PCM",
+      "General Aptitude"
+    ],
+    "totalMarks": "200",
+    "dates": {
+      "registration": "March 2026 onwards (Multiple attempts)",
+      "examWindow": "April - July 2026 (Weekends)",
+      "result": "Within a week of test"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://www.nata.in",
+    "collegesAccepting": [
+      "au-ahmedabad",
+      "nm-college-mumbai",
+      "sir-jj-architecture",
+      "sushant-school-architecture",
+      "chandigarh-college-of-architecture"
+    ]
+  },
+  {
+    "id": "uceed",
+    "name": "Undergraduate Common Entrance Examination for Design",
+    "shortName": "UCEED",
+    "type": "Design",
+    "conductingBody": "IIT Bombay",
+    "courses": [
+      "B.Des"
+    ],
+    "pattern": [
+      "Part A (Computer Based): Visualization, Spatial Ability",
+      "Part B (Pen & Paper): Drawing"
+    ],
+    "totalMarks": "300",
+    "dates": {
+      "registration": "Oct-Nov 2025",
+      "examWindow": "Jan 2026",
+      "result": "March 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Past Papers",
+        "url": "https://www.uceed.iitb.ac.in"
+      }
+    ],
+    "officialUrl": "https://www.uceed.iitb.ac.in",
+    "collegesAccepting": [
+      "iit-bombay",
+      "iit-delhi",
+      "iit-guwahati",
+      "iit-hyderabad",
+      "iiit-bhagalpur",
+      "iiit-delhi"
+    ]
+  },
+  {
+    "id": "nift-entrance",
+    "name": "NIFT Entrance Examination",
+    "shortName": "NIFT EE",
+    "type": "Design",
+    "conductingBody": "National Testing Agency (NTA) / NIFT",
+    "courses": [
+      "B.Des",
+      "B.F.Tech",
+      "M.Des",
+      "M.F.M"
+    ],
+    "pattern": [
+      "GAT (General Ability Test)",
+      "CAT (Creative Ability Test)",
+      "Situation Test"
+    ],
+    "totalMarks": "Weighted Score",
+    "dates": {
+      "registration": "Dec 2025 - Jan 2026",
+      "examWindow": "Feb 2026",
+      "result": "March 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://nift.ac.in/admission",
+    "collegesAccepting": [
+      "iiit-delhi",
+      "ict-mumbai",
+      "nift-bengaluru",
+      "nift-bengaluru",
+      "iit-gandhinagar"
+    ]
+  },
+  {
+    "id": "xat",
+    "name": "Xavier Aptitude Test",
+    "shortName": "XAT",
+    "type": "Management",
+    "conductingBody": "XLRI Jamshedpur",
+    "courses": [
+      "MBA",
+      "PGDM"
+    ],
+    "pattern": [
+      "Verbal & Logical Ability",
+      "Decision Making",
+      "QA & DI",
+      "GK & Essay"
+    ],
+    "totalMarks": "100 (approx)",
+    "dates": {
+      "registration": "Aug-Nov 2025",
+      "examWindow": "Jan 2026 (First Sunday)",
+      "result": "Jan 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://xatonline.in",
+    "collegesAccepting": [
+      "xlri-jamshedpur",
+      "aiims-bhubaneswar",
+      "goa-institute-of-management",
+      "sikkim-manipal-university",
+      "kiet-ghaziabad"
+    ]
+  },
+  {
+    "id": "mat",
+    "name": "Management Aptitude Test",
+    "shortName": "MAT",
+    "type": "Management",
+    "conductingBody": "AIMA",
+    "courses": [
+      "MBA",
+      "PGDM"
+    ],
+    "pattern": [
+      "Language Comprehension",
+      "Mathematical Skills",
+      "Data Analysis",
+      "Intelligence",
+      "Indian Global Environment"
+    ],
+    "totalMarks": "200",
+    "dates": {
+      "registration": "Feb, May, Sept, Dec (Multiple Sessions)",
+      "examWindow": "Feb, May, Sept, Dec",
+      "result": "End of respective month"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://mat.aima.in",
+    "collegesAccepting": [
+      "jiit-noida",
+      "christ-university-bengaluru",
+      "pgims-rohtak",
+      "iiit-hyderabad"
+    ]
+  },
+  {
+    "id": "cmat",
+    "name": "Common Management Admission Test",
+    "shortName": "CMAT",
+    "type": "Management",
+    "conductingBody": "National Testing Agency (NTA)",
+    "courses": [
+      "MBA",
+      "PGDM"
+    ],
+    "pattern": [
+      "QA & DI",
+      "Logical Reasoning",
+      "Language Comprehension",
+      "GK",
+      "Innovation & Entrepreneurship"
+    ],
+    "totalMarks": "400",
+    "dates": {
+      "registration": "Feb-March 2026",
+      "examWindow": "April/May 2026",
+      "result": "May 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://cmat.nta.nic.in",
+    "collegesAccepting": [
+      "iim-mumbai",
+      "simsree-mumbai",
+      "great-lakes-gurgaon",
+      "kj-somaiya-mumbai",
+      "pumba-pune"
+    ]
+  },
+  {
+    "id": "snap",
+    "name": "Symbiosis National Aptitude Test",
+    "shortName": "SNAP",
+    "type": "Management",
+    "conductingBody": "Symbiosis International (Deemed University)",
+    "courses": [
+      "MBA"
+    ],
+    "pattern": [
+      "General English",
+      "Analytical & Logical Reasoning",
+      "QA, DI & DS"
+    ],
+    "totalMarks": "60",
+    "dates": {
+      "registration": "Aug-Nov 2025",
+      "examWindow": "Dec 2025 (Three dates)",
+      "result": "Jan 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://www.snaptest.org",
+    "collegesAccepting": [
+      "symbiosis-pune",
+      "iiser-pune",
+      "iit-pune",
+      "nift-bengaluru"
+    ]
+  },
+  {
+    "id": "nmat",
+    "name": "NMAT by GMAC",
+    "shortName": "NMAT",
+    "type": "Management",
+    "conductingBody": "Graduate Management Admission Council",
+    "courses": [
+      "MBA",
+      "PGDM"
+    ],
+    "pattern": [
+      "Language Skills",
+      "Quantitative Skills",
+      "Logical Reasoning"
+    ],
+    "totalMarks": "360 (Scaled)",
+    "dates": {
+      "registration": "Aug-Oct 2025",
+      "examWindow": "Oct-Dec 2025 (Adaptive window)",
+      "result": "Within 48 hours of exam"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://www.nmat.org",
+    "collegesAccepting": [
+      "nmims-mumbai",
+      "kj-somaiya-mumbai",
+      "aiims-bhubaneswar",
+      "sdaf-bocconi-mumbai"
+    ]
+  },
+  {
+    "id": "gpat",
+    "name": "Graduate Pharmacy Aptitude Test",
+    "shortName": "GPAT",
+    "type": "Pharmacy PG",
+    "conductingBody": "NBEMS (National Board of Examinations in Medical Sciences)",
+    "courses": [
+      "M.Pharm"
+    ],
+    "pattern": [
+      "Pharmaceutics",
+      "Pharmacology",
+      "Pharmaceutical Chemistry",
+      "Pharmacognosy",
+      "Other subjects"
+    ],
+    "totalMarks": "500",
+    "dates": {
+      "registration": "Feb-March 2026",
+      "examWindow": "April 2026",
+      "result": "May 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://natboard.edu.in",
+    "collegesAccepting": [
+      "iiser-mohali",
+      "ict-mumbai",
+      "jamia-hamdard-delhi",
+      "bits-pilani"
+    ]
+  },
+  {
+    "id": "icar-aieea-pg",
+    "name": "ICAR All India Entrance Examination for Admission (PG)",
+    "shortName": "ICAR AIEEA PG",
+    "type": "Agriculture PG",
+    "conductingBody": "National Testing Agency (NTA)",
+    "courses": [
+      "M.Sc Agriculture",
+      "M.V.Sc",
+      "M.Tech (Agri Engg)"
+    ],
+    "pattern": [
+      "120 MCQs based on specific stream"
+    ],
+    "totalMarks": "480",
+    "dates": {
+      "registration": "April-May 2026",
+      "examWindow": "June 2026",
+      "result": "July 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://icar.nta.nic.in",
+    "collegesAccepting": [
+      "iiit-delhi",
+      "nit-karnataka-surathkal",
+      "college-of-technology-pantnagar",
+      "christian-medical-college-ludhiana",
+      "amrita-vishwa-vidyapeetham-coimbatore"
+    ]
+  },
+  {
+    "id": "nchmct-jee",
+    "name": "National Council for Hotel Management Joint Entrance Examination",
+    "shortName": "NCHMCT JEE",
+    "type": "Hotel Management",
+    "conductingBody": "National Testing Agency (NTA)",
+    "courses": [
+      "B.Sc (Hospitality & Hotel Administration)"
+    ],
+    "pattern": [
+      "Numerical Ability",
+      "Reasoning",
+      "GK",
+      "English",
+      "Service Aptitude"
+    ],
+    "totalMarks": "800",
+    "dates": {
+      "registration": "Feb-April 2026",
+      "examWindow": "May 2026",
+      "result": "June 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://nchmjee.nta.nic.in",
+    "collegesAccepting": [
+      "ihm-pusa-delhi",
+      "iim-mumbai",
+      "iim-bangalore",
+      "iem-kolkata",
+      "anna-university-chennai"
+    ]
+  },
+  {
+    "id": "ailet",
+    "name": "All India Law Entrance Test",
+    "shortName": "AILET",
+    "type": "Law",
+    "conductingBody": "National Law University, Delhi",
+    "courses": [
+      "B.A. LL.B. (Hons)",
+      "LL.M."
+    ],
+    "pattern": [
+      "English",
+      "Current Affairs & GK",
+      "Logical Reasoning"
+    ],
+    "totalMarks": "150",
+    "dates": {
+      "registration": "Aug-Nov 2025",
+      "examWindow": "Dec 2025",
+      "result": "Dec 2025"
+    },
+    "pastPapers": [
+      {
+        "label": "Previous Papers",
+        "url": "https://nationallawuniversitydelhi.in"
+      }
+    ],
+    "officialUrl": "https://nationallawuniversitydelhi.in",
+    "collegesAccepting": [
+      "iiit-delhi"
+    ]
+  },
+  {
+    "id": "iiser-aptitude-test",
+    "name": "IISER Aptitude Test",
+    "shortName": "IAT",
+    "type": "Science/Research",
+    "conductingBody": "IISERs (Joint Admission Committee)",
+    "courses": [
+      "BS-MS Dual Degree",
+      "BS"
+    ],
+    "pattern": [
+      "Biology, Chemistry, Mathematics, Physics (15 Q each)"
+    ],
+    "totalMarks": "240",
+    "dates": {
+      "registration": "April-May 2026",
+      "examWindow": "June 2026",
+      "result": "July 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Past Papers",
+        "url": "https://iiseradmission.in"
+      }
+    ],
+    "officialUrl": "https://iiseradmission.in",
+    "collegesAccepting": [
+      "iiser-pune",
+      "iiser-kolkata",
+      "iiser-mohali",
+      "iiser-mohali",
+      "iiser-thiruvananthapuram",
+      "iit-tirupati",
+      "iiser-berhampur",
+      "iisc-bengaluru"
+    ]
+  },
+  {
+    "id": "nest",
+    "name": "National Entrance Screening Test",
+    "shortName": "NEST",
+    "type": "Science/Research",
+    "conductingBody": "NISER & UM-DAE CEBS",
+    "courses": [
+      "Integrated M.Sc"
+    ],
+    "pattern": [
+      "Biology, Chemistry, Mathematics, Physics (Best 3 considered)"
+    ],
+    "totalMarks": "Variable",
+    "dates": {
+      "registration": "Feb-May 2026",
+      "examWindow": "June 2026",
+      "result": "July 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Previous Years",
+        "url": "https://www.nestexam.in"
+      }
+    ],
+    "officialUrl": "https://www.nestexam.in",
+    "collegesAccepting": [
+      "niser-bhubaneswar",
+      "st-xaviers-mumbai"
+    ]
+  },
+  {
+    "id": "srmjeee",
+    "name": "SRM Joint Engineering Entrance Examination",
+    "shortName": "SRMJEEE",
+    "type": "Engineering UG",
+    "conductingBody": "SRM Institute of Science and Technology",
+    "courses": [
+      "B.Tech"
+    ],
+    "pattern": [
+      "Physics",
+      "Chemistry",
+      "Mathematics/Biology",
+      "English",
+      "Aptitude"
+    ],
+    "totalMarks": "125",
+    "dates": {
+      "registration": "Oct 2025 - May 2026",
+      "examWindow": "April-July 2026 (Multiple Phases)",
+      "result": "Within 3 days of exam"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://www.srmist.edu.in",
+    "collegesAccepting": [
+      "sri-krishnadevaraya-university",
+      "srm-ramapuram",
+      "srm-vadapalani",
+      "srm-ap",
+      "nid-haryana"
+    ]
+  },
+  {
+    "id": "met",
+    "name": "Manipal Entrance Test",
+    "shortName": "MET",
+    "type": "Engineering UG",
+    "conductingBody": "Manipal Academy of Higher Education (MAHE)",
+    "courses": [
+      "B.Tech",
+      "BPharm",
+      "PharmD"
+    ],
+    "pattern": [
+      "Physics",
+      "Chemistry",
+      "Mathematics",
+      "English",
+      "General Aptitude"
+    ],
+    "totalMarks": "200",
+    "dates": {
+      "registration": "Oct 2025 - April 2026",
+      "examWindow": "April-May 2026",
+      "result": "May 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://manipal.edu/mu/admissions.html",
+    "collegesAccepting": [
+      "manipal-academy-of-higher-education",
+      "nift-bengaluru",
+      "mnlu-mumbai",
+      "mnit-jaipur"
+    ]
+  },
+  {
+    "id": "kiitee",
+    "name": "KIIT Entrance Examination",
+    "shortName": "KIITEE",
+    "type": "Engineering UG",
+    "conductingBody": "Kalinga Institute of Industrial Technology",
+    "courses": [
+      "B.Tech",
+      "BBA",
+      "BCA",
+      "Law"
+    ],
+    "pattern": [
+      "Physics",
+      "Chemistry",
+      "Mathematics"
+    ],
+    "totalMarks": "120",
+    "dates": {
+      "registration": "Nov 2025 - April 2026",
+      "examWindow": "April-June 2026",
+      "result": "Within a week"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://kiitee.kiit.ac.in",
+    "collegesAccepting": [
+      "iiit-bhubaneswar"
+    ]
+  },
+  {
+    "id": "gujcet",
+    "name": "Gujarat Common Entrance Test",
+    "shortName": "GUJCET",
+    "type": "State Entrance",
+    "conductingBody": "Gujarat Secondary and Higher Secondary Education Board",
+    "courses": [
+      "B.E./B.Tech",
+      "B.Pharm",
+      "D.Pharm"
+    ],
+    "pattern": [
+      "Physics (40)",
+      "Chemistry (40)",
+      "Mathematics/Biology (40)"
+    ],
+    "totalMarks": "120",
+    "dates": {
+      "registration": "Jan-Feb 2026",
+      "examWindow": "March 2026",
+      "result": "April 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Previous Papers",
+        "url": "https://gujcet.gseb.org"
+      }
+    ],
+    "officialUrl": "https://gujcet.gseb.org",
+    "collegesAccepting": [
+      "ldce-ahmedabad",
+      "ddu-nadiad",
+      "svnit-surat",
+      "au-ahmedabad",
+      "pdeu-gandhinagar"
+    ]
+  },
+  {
+    "id": "neet-pg",
+    "name": "National Eligibility cum Entrance Test (Postgraduate)",
+    "shortName": "NEET PG",
+    "type": "Medical PG",
+    "conductingBody": "National Board of Examinations (NBEMS)",
+    "courses": [
+      "MD",
+      "MS",
+      "Diploma"
+    ],
+    "pattern": [
+      "200 MCQs from all clinical and pre-clinical subjects"
+    ],
+    "totalMarks": "800",
+    "dates": {
+      "registration": "Feb-March 2026",
+      "examWindow": "March 2026",
+      "result": "April 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://natboard.edu.in",
+    "collegesAccepting": [
+      "aiims-new-delhi",
+      "pgimer-chandigarh",
+      "jipmer-puducherry",
+      "vellore-institute-of-technology",
+      "kem-mumbai"
+    ]
+  },
+  {
+    "id": "ini-cet",
+    "name": "Institute of National Importance Combined Entrance Test",
+    "shortName": "INI CET",
+    "type": "Medical PG",
+    "conductingBody": "AIIMS Delhi",
+    "courses": [
+      "MD",
+      "MS",
+      "DM",
+      "MCh",
+      "MDS"
+    ],
+    "pattern": [
+      "200 MCQs from all medical subjects"
+    ],
+    "totalMarks": "800",
+    "dates": {
+      "registration": "Sept-Oct 2025",
+      "examWindow": "November 2025",
+      "result": "December 2025"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://aiimsexams.ac.in",
+    "collegesAccepting": [
+      "aiims-new-delhi",
+      "aiims-jodhpur",
+      "aiims-rishikesh",
+      "jipmer-puducherry",
+      "pgimer-chandigarh",
+      "nift-bengaluru",
+      "sctimst-trivandrum"
+    ]
+  },
+  {
+    "id": "atma",
+    "name": "AIMS Test for Management Admissions",
+    "shortName": "ATMA",
+    "type": "Management",
+    "conductingBody": "Association of Indian Management Schools (AIMS)",
+    "courses": [
+      "MBA",
+      "PGDM",
+      "MCA",
+      "MMS"
+    ],
+    "pattern": [
+      "Analytical Reasoning",
+      "Verbal Skills",
+      "Quantitative Ability"
+    ],
+    "totalMarks": "300",
+    "dates": {
+      "registration": "Multiple windows throughout 2026",
+      "examWindow": "Feb, May, July, Dec 2026",
+      "result": "Within 2 weeks"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://atmaaims.com",
+    "collegesAccepting": [
+      "mithibai-mumbai",
+      "kj-somaiya-mumbai",
+      "welingkar-mumbai",
+      "iiser-pune"
+    ]
+  },
+  {
+    "id": "micat",
+    "name": "MICA Admission Test",
+    "shortName": "MICAT",
+    "type": "Management",
+    "conductingBody": "MICA Ahmedabad",
+    "courses": [
+      "PGDM-C (Communications)"
+    ],
+    "pattern": [
+      "Psychometric Test",
+      "Descriptive Test",
+      "Verbal Ability",
+      "Quantitative Ability",
+      "General Awareness"
+    ],
+    "totalMarks": "Composite Score",
+    "dates": {
+      "registration": "Sept-Nov 2025",
+      "examWindow": "Dec 2025 / Feb 2026",
+      "result": "Jan 2026 / March 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://www.mica.ac.in",
+    "collegesAccepting": [
+      "au-ahmedabad"
+    ]
+  },
+  {
+    "id": "iift",
+    "name": "Indian Institute of Foreign Trade MBA Entrance",
+    "shortName": "IIFT",
+    "type": "Management",
+    "conductingBody": "National Testing Agency (NTA)",
+    "courses": [
+      "MBA (International Business)"
+    ],
+    "pattern": [
+      "English Comprehension",
+      "General Knowledge",
+      "Logical Reasoning",
+      "Quantitative Analysis"
+    ],
+    "totalMarks": "300",
+    "dates": {
+      "registration": "Aug-Oct 2025",
+      "examWindow": "Dec 2025",
+      "result": "Jan 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://iift.nta.nic.in",
+    "collegesAccepting": [
+      "iiit-delhi",
+      "iiser-kolkata",
+      "jntu-kakinada"
+    ]
+  },
+  {
+    "id": "tissnet",
+    "name": "Tata Institute of Social Sciences National Entrance Test",
+    "shortName": "TISSNET",
+    "type": "Management/Social Sciences",
+    "conductingBody": "Tata Institute of Social Sciences",
+    "courses": [
+      "MA",
+      "M.Sc",
+      "MPhil",
+      "PhD"
+    ],
+    "pattern": [
+      "GK & Current Affairs",
+      "English Proficiency",
+      "Logical Reasoning"
+    ],
+    "totalMarks": "100",
+    "dates": {
+      "registration": "Nov 2025 - Jan 2026",
+      "examWindow": "Feb 2026",
+      "result": "March 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://admissions.tiss.edu",
+    "collegesAccepting": [
+      "tiss-mumbai",
+      "iiit-hyderabad",
+      "iit-guwahati",
+      "tiss-tuljapur"
+    ]
+  },
+  {
+    "id": "ibsat",
+    "name": "ICFAI Business School Aptitude Test",
+    "shortName": "IBSAT",
+    "type": "Management",
+    "conductingBody": "ICFAI Foundation for Higher Education",
+    "courses": [
+      "MBA"
+    ],
+    "pattern": [
+      "Verbal Ability",
+      "Reading Comprehension",
+      "Quantitative Ability",
+      "Data Adequacy"
+    ],
+    "totalMarks": "140",
+    "dates": {
+      "registration": "July-Dec 2025",
+      "examWindow": "Dec 2025",
+      "result": "Jan 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://ibsindia.org",
+    "collegesAccepting": [
+      "iiit-hyderabad",
+      "tiss-mumbai",
+      "nift-bengaluru",
+      "ils-pune",
+      "mdi-gurgaon"
+    ]
+  },
+  {
+    "id": "lsat-india",
+    "name": "Law School Admission Test India",
+    "shortName": "LSAT India",
+    "type": "Law",
+    "conductingBody": "Law School Admission Council (LSAC)",
+    "courses": [
+      "B.A. LL.B.",
+      "LL.M."
+    ],
+    "pattern": [
+      "Analytical Reasoning",
+      "Logical Reasoning (2 sections)",
+      "Reading Comprehension"
+    ],
+    "totalMarks": "Scaled Score (120-180)",
+    "dates": {
+      "registration": "Oct 2025 - May 2026",
+      "examWindow": "Jan, May 2026",
+      "result": "Within 3 weeks"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://www.lsac.org/lsat-india",
+    "collegesAccepting": [
+      "op-jindal-global-uni",
+      "op-jindal-uni",
+      "nmims-kpmsol",
+      "iisc-bengaluru",
+      "nift-bengaluru"
+    ]
+  },
+  {
+    "id": "mh-cet-law",
+    "name": "Maharashtra Common Entrance Test for Law",
+    "shortName": "MH CET Law",
+    "type": "Law",
+    "conductingBody": "State Common Entrance Test Cell, Maharashtra",
+    "courses": [
+      "LL.B. (3-year)",
+      "B.A. LL.B. (5-year)"
+    ],
+    "pattern": [
+      "Legal Aptitude",
+      "Logical Reasoning",
+      "English",
+      "General Knowledge"
+    ],
+    "totalMarks": "150",
+    "dates": {
+      "registration": "Feb-April 2026",
+      "examWindow": "May 2026",
+      "result": "June 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://cetcell.mahacet.org",
+    "collegesAccepting": [
+      "glc-mumbai",
+      "ils-pune",
+      "gmc-nagpur",
+      "nmims-mumbai"
+    ]
+  },
+  {
+    "id": "du-llb",
+    "name": "Delhi University LLB Entrance Test",
+    "shortName": "DU LLB",
+    "type": "Law",
+    "conductingBody": "National Testing Agency (NTA) via CUET",
+    "courses": [
+      "LL.B. (3-year)"
+    ],
+    "pattern": [
+      "English",
+      "Current Affairs",
+      "Legal Reasoning",
+      "Analytical Abilities"
+    ],
+    "totalMarks": "Based on CUET Score",
+    "dates": {
+      "registration": "Feb-March 2026",
+      "examWindow": "May 2026",
+      "result": "June 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://www.du.ac.in",
+    "collegesAccepting": [
+      "faculty-of-law-du",
+      "law-centre-1-du",
+      "law-centre-2-du",
+      "clj-du"
+    ]
+  },
+  {
+    "id": "nid-dat",
+    "name": "National Institute of Design Design Aptitude Test",
+    "shortName": "NID DAT",
+    "type": "Design",
+    "conductingBody": "National Institute of Design",
+    "courses": [
+      "B.Des",
+      "M.Des"
+    ],
+    "pattern": [
+      "Prelims: Objective + Subjective (3 hours)",
+      "Mains: Studio Test + Interview"
+    ],
+    "totalMarks": "Composite Score",
+    "dates": {
+      "registration": "Oct-Dec 2025",
+      "examWindow": "Prelims: Jan 2026; Mains: April-May 2026",
+      "result": "May-June 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Sample Papers",
+        "url": "https://admissions.nid.edu"
+      }
+    ],
+    "officialUrl": "https://admissions.nid.edu",
+    "collegesAccepting": [
+      "au-ahmedabad",
+      "iit-gandhinagar",
+      "nift-bengaluru",
+      "nid-haryana",
+      "nit-kurukshetra"
+    ]
+  },
+  {
+    "id": "ceed",
+    "name": "Common Entrance Examination for Design",
+    "shortName": "CEED",
+    "type": "Design PG",
+    "conductingBody": "IIT Bombay",
+    "courses": [
+      "M.Des",
+      "Ph.D. in Design"
+    ],
+    "pattern": [
+      "Part A: Computer based (Aptitude, Visualization)",
+      "Part B: Drawing & Design"
+    ],
+    "totalMarks": "100",
+    "dates": {
+      "registration": "Sept-Oct 2025",
+      "examWindow": "Jan 2026",
+      "result": "March 2026"
+    },
+    "pastPapers": [
+      {
+        "label": "Past Papers",
+        "url": "https://www.ceed.iitb.ac.in"
+      }
+    ],
+    "officialUrl": "https://www.ceed.iitb.ac.in",
+    "collegesAccepting": [
+      "iit-bombay",
+      "iit-delhi",
+      "iit-guwahati",
+      "iit-hyderabad",
+      "iit-kanpur",
+      "iisc-bengaluru"
+    ]
+  },
+  {
+    "id": "cuet-pg",
+    "name": "Common University Entrance Test (Postgraduate)",
+    "shortName": "CUET PG",
+    "type": "General PG",
+    "conductingBody": "National Testing Agency (NTA)",
+    "courses": [
+      "M.A.",
+      "M.Sc",
+      "M.Com",
+      "MBA",
+      "MCA"
+    ],
+    "pattern": [
+      "Domain Knowledge (100 marks)",
+      "Language Comprehension (25 marks)",
+      "General Test (25 marks)"
+    ],
+    "totalMarks": "Varies by subject",
+    "dates": {
+      "registration": "Feb-March 2026",
+      "examWindow": "March-April 2026",
+      "result": "May 2026"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://cuet.nta.nic.in",
+    "collegesAccepting": [
+      "dav-university-jalandhar",
+      "iiit-delhi",
+      "bhu-varanasi",
+      "iiit-hyderabad",
+      "tezpur-university",
+      "pondicherry-university"
+    ]
+  },
+  {
+    "id": "clat-pg",
+    "name": "Common Law Admission Test (Postgraduate)",
+    "shortName": "CLAT PG",
+    "type": "Law PG",
+    "conductingBody": "Consortium of NLUs",
+    "courses": [
+      "LL.M."
+    ],
+    "pattern": [
+      "Constitutional Law",
+      "Jurisprudence",
+      "Other Law Subjects"
+    ],
+    "totalMarks": "120",
+    "dates": {
+      "registration": "July-Oct 2025",
+      "examWindow": "Dec 2025",
+      "result": "Dec 2025"
+    },
+    "pastPapers": [
+      {
+        "label": "Sample Papers",
+        "url": "https://consortiumofnlus.ac.in"
+      }
+    ],
+    "officialUrl": "https://consortiumofnlus.ac.in",
+    "collegesAccepting": [
+      "nift-bengaluru",
+      "eflu-hyderabad",
+      "nujs-kolkata",
+      "nlsiu-bengaluru",
+      "iiit-delhi"
+    ]
+  },
+  {
+    "id": "pearl",
+    "name": "Physical, Emotional, Artistic, Rational, Logical Aptitude Test",
+    "shortName": "PEARL",
+    "type": "Design",
+    "conductingBody": "MIT Institute of Design, Pune",
+    "courses": [
+      "B.Des"
+    ],
+    "pattern": [
+      "Visual Perception",
+      "Logical Reasoning",
+      "Creativity",
+      "Communication"
+    ],
+    "totalMarks": "Composite Score",
+    "dates": {
+      "registration": "Oct 2025 - April 2026",
+      "examWindow": "Multiple slots (Jan-May 2026)",
+      "result": "Within 2 weeks"
+    },
+    "pastPapers": [],
+    "officialUrl": "https://mitid.edu.in",
+    "collegesAccepting": [
+      "vit-pune"
+    ]
+  }
+]

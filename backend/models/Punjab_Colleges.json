@@ -1,0 +1,1999 @@
+[
+  {
+    "id": "iit-ropar",
+    "name": "Indian Institute of Technology Ropar",
+    "shortName": "IIT Ropar",
+    "location": "Rupnagar, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "A second-generation IIT established in 2008, known for its cutting-edge research in AI, water management, and core engineering. It operates from a permanent campus on the banks of the Satluj river.",
+    "campus": "Bara Phool, Rupnagar",
+    "officialUrl": "https://www.iitrpr.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE Rank ~2500"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Goldman Sachs",
+      "Amazon"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iitrpr.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2008",
+      "district": "Rupnagar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iim-amritsar",
+    "name": "Indian Institute of Management Amritsar",
+    "shortName": "IIM Amritsar",
+    "location": "Amritsar, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "A premier management institute established in 2015. It is currently operating from the Punjab Institute of Technology building while its permanent campus comes up at Manawala.",
+    "campus": "Polytechnic Road, Amritsar",
+    "officialUrl": "https://iimamritsar.ac.in",
+    "acceptedExams": [
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "MBA-HRM",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "95+ percentile"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "KPMG",
+      "ICICI Bank",
+      "Accenture"
+    ],
+    "tuition": "₹16,00,000 (Approx)",
+    "sources": [
+      "https://iimamritsar.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2015",
+      "district": "Amritsar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹19.73 LPA",
+      "medianPackage": "₹15.0 LPA",
+      "highestPackage": "₹28.0 LPA"
+    }
+  },
+  {
+    "id": "nit-jalandhar",
+    "name": "Dr. B. R. Ambedkar National Institute of Technology Jalandhar",
+    "shortName": "NIT Jalandhar",
+    "location": "Jalandhar, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance formerly known as REC Jalandhar. It is a leading engineering school in North India.",
+    "campus": "Grand Trunk Road, Jalandhar",
+    "officialUrl": "https://www.nitj.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "ccmt"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~10000 Rank (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Samsung",
+      "BPCL",
+      "Honda"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://www.nitj.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1987",
+      "district": "Jalandhar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiser-mohali",
+    "name": "Indian Institute of Science Education and Research Mohali",
+    "shortName": "IISER Mohali",
+    "location": "Mohali, SAS Nagar, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "A premier research institution dedicated to basic sciences. It is known for its strong interdisciplinary research environment.",
+    "campus": "Knowledge City, Sector 81",
+    "officialUrl": "https://www.iisermohali.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "iiser-aptitude-test",
+      "kvpy"
+    ],
+    "courses": [
+      {
+        "name": "BS-MS Dual Degree",
+        "degree": "Integrated Master of Science",
+        "duration": "5 years",
+        "exams": [
+          "jee-advanced",
+          "iiser-aptitude-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "iiser-aptitude-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Research Labs",
+      "Academia"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.iisermohali.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2007",
+      "district": "SAS Nagar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "thapar-institute",
+    "name": "Thapar Institute of Engineering and Technology",
+    "shortName": "TIET",
+    "location": "Patiala, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "One of India's oldest and most prestigious private deemed universities. It has a high NIRF ranking and strong industry connections.",
+    "campus": "Bhadson Road, Patiala",
+    "officialUrl": "https://www.thapar.edu",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E./B.Tech",
+        "degree": "Bachelor of Engineering",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE ~96 percentile"
+      }
+    ],
+    "topRecruiters": [
+      "Apple",
+      "BlackRock",
+      "JP Morgan",
+      "Maruti Suzuki"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.thapar.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "1956",
+      "district": "Patiala",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "central-university-of-punjab",
+    "name": "Central University of Punjab",
+    "shortName": "CUP Bathinda",
+    "location": "Bathinda, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "A central university established by the Act of Parliament. It offers PG and PhD programs and is consistently ranked among the top central universities.",
+    "campus": "Ghudda",
+    "officialUrl": "http://cup.edu.in",
+    "acceptedExams": [
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc/M.A./M.Pharm/M.Ed",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://cup.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "2009",
+      "district": "Bathinda",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "guru-nanak-dev-university",
+    "name": "Guru Nanak Dev University",
+    "shortName": "GNDU",
+    "location": "Amritsar, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "A state university with 'Category-I' status by UGC and NAAC A++ accreditation. It affiliates colleges in the Majha and Doaba regions.",
+    "campus": "Grand Trunk Road, Amritsar",
+    "officialUrl": "https://online.gndu.ac.in",
+    "acceptedExams": [
+      "gndu-entrance",
+      "jee-main",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "LLB",
+        "degree": "LLB",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gndu-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Capgemini",
+      "Amdocs"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://online.gndu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1969",
+      "district": "Amritsar",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "punjabi-university-patiala",
+    "name": "Punjabi University",
+    "shortName": "PUP",
+    "location": "Patiala, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "Established for the advancement of Punjabi language, literature, and culture. It is a major affiliating university for the Malwa region.",
+    "campus": "Urban Estate Phase II",
+    "officialUrl": "http://www.punjabiuniversity.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Infosys",
+      "Tech Mahindra"
+    ],
+    "tuition": "Low to Moderate",
+    "sources": [
+      "http://www.punjabiuniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1962",
+      "district": "Patiala",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "lovely-professional-university",
+    "name": "Lovely Professional University",
+    "shortName": "LPU",
+    "location": "Phagwara, Kapurthala, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "One of India's largest single-campus private universities, known for its massive infrastructure, diverse student body, and aggressive placement drives.",
+    "campus": "Jalandhar-Delhi GT Road",
+    "officialUrl": "https://www.lpu.in",
+    "acceptedExams": [
+      "lpunest",
+      "jee-main",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "lpunest"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "lpunest",
+          "cat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "lpunest",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Google",
+      "Amazon",
+      "Cognizant"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.lpu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "ICAR",
+        "ACBSP"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2005",
+      "district": "Kapurthala",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "chandigarh-university-mohali",
+    "name": "Chandigarh University",
+    "shortName": "CU",
+    "location": "Gharuan, Mohali, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "A rapidly growing private university known for its high NIRF ranking and QS World University rankings debut. Located near Chandigarh.",
+    "campus": "Gharuan, NH-95",
+    "officialUrl": "https://www.cuchd.in",
+    "acceptedExams": [
+      "cucet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E.",
+        "degree": "Bachelor of Engineering",
+        "duration": "4 years",
+        "exams": [
+          "cucet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cucet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cucet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Amazon",
+      "Walt Disney",
+      "IBM"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.cuchd.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "ABET"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2012",
+      "district": "SAS Nagar",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "chitkara-university-punjab",
+    "name": "Chitkara University",
+    "shortName": "Chitkara Punjab",
+    "location": "Rajpura, Patiala, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "A leading private university in North India known for its strict academic discipline and strong placements in engineering and healthcare.",
+    "campus": "Chandigarh-Patiala National Highway",
+    "officialUrl": "https://www.chitkara.edu.in",
+    "acceptedExams": [
+      "jee-main",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.E.",
+        "degree": "Bachelor of Engineering",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Infosys",
+      "Wipro",
+      "Cipla",
+      "Fortis"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.chitkara.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2010",
+      "district": "Patiala",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "aiims-bathinda",
+    "name": "All India Institute of Medical Sciences Bathinda",
+    "shortName": "AIIMS Bathinda",
+    "location": "Bathinda, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance established under PMSSY to provide tertiary healthcare and medical education.",
+    "campus": "Mandi Dabwali Road",
+    "officialUrl": "https://aiimsbathinda.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "General Rank ~1500"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://aiimsbathinda.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2019",
+      "district": "Bathinda",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "sliet-longowal",
+    "name": "Sant Longowal Institute of Engineering and Technology",
+    "shortName": "SLIET",
+    "location": "Longowal, Sangrur, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "A Centrally Funded Technical Institute (CFTI) with Deemed University status, offering modular technical education from certificate to PhD levels.",
+    "campus": "Longowal",
+    "officialUrl": "http://sliet.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "set-sliet"
+    ],
+    "courses": [
+      {
+        "name": "B.E.",
+        "degree": "Bachelor of Engineering",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Diploma",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "set-sliet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "set-sliet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Tech Mahindra"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "http://sliet.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Central Govt (Deemed)",
+      "establishedYear": "1989",
+      "district": "Sangrur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "punjab-agricultural-university",
+    "name": "Punjab Agricultural University",
+    "shortName": "PAU",
+    "location": "Ludhiana, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "One of the world's most prominent agricultural universities, instrumental in India's Green Revolution.",
+    "campus": "Ferozepur Road",
+    "officialUrl": "https://www.pau.edu",
+    "acceptedExams": [
+      "pau-cet",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "pau-cet",
+          "icar-aieea"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "pau-cet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Agro-Industry",
+      "Banking",
+      "Govt Agencies"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.pau.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1962",
+      "district": "Ludhiana",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "ik-gujral-punjab-technical-university",
+    "name": "I.K. Gujral Punjab Technical University",
+    "shortName": "IKGPTU",
+    "location": "Kapurthala, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "The primary affiliating technical university for Punjab, managing engineering, management, and pharmacy colleges.",
+    "campus": "Jalandhar-Kapurthala Highway",
+    "officialUrl": "https://ptu.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by affiliated college",
+    "sources": [
+      "https://ptu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1997",
+      "district": "Kapurthala",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "baba-farid-university-health-sciences",
+    "name": "Baba Farid University of Health Sciences",
+    "shortName": "BFUHS",
+    "location": "Faridkot, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "The affiliating university for medical, dental, nursing, and physiotherapy colleges in Punjab.",
+    "campus": "Sadiq Road",
+    "officialUrl": "https://bfuhs.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "ppmet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by affiliated college",
+    "sources": [
+      "https://bfuhs.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NMC",
+        "DCI",
+        "INC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1998",
+      "district": "Faridkot",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "govt-medical-college-patiala",
+    "name": "Government Medical College, Patiala",
+    "shortName": "GMC Patiala",
+    "location": "Patiala, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest and most prestigious medical colleges in Punjab, affiliated to BFUHS.",
+    "campus": "Sangrur Road",
+    "officialUrl": "http://gmcpatiala.com",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~580+ Score"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://gmcpatiala.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "BFUHS",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1953",
+      "district": "Patiala",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "govt-medical-college-amritsar",
+    "name": "Government Medical College, Amritsar",
+    "shortName": "GMC Amritsar",
+    "location": "Amritsar, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "A historic medical college established in 1920, serving the Majha region.",
+    "campus": "Circular Road",
+    "officialUrl": "http://gmc.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://gmc.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "BFUHS",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1920",
+      "district": "Amritsar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "christian-medical-college-ludhiana",
+    "name": "Christian Medical College",
+    "shortName": "CMC Ludhiana",
+    "location": "Ludhiana, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "A premier minority medical institution known for its excellence in healthcare and education.",
+    "campus": "Brown Road",
+    "officialUrl": "https://www.cmcludhiana.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.cmcludhiana.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "BFUHS",
+        "NMC"
+      ],
+      "ownership": "Private (Minority)",
+      "establishedYear": "1894",
+      "district": "Ludhiana",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "dayanand-medical-college",
+    "name": "Dayanand Medical College and Hospital",
+    "shortName": "DMC Ludhiana",
+    "location": "Ludhiana, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "A top-ranked private medical college in North India with a tertiary care hospital.",
+    "campus": "Civil Lines",
+    "officialUrl": "https://www.dmch.edu",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.dmch.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "BFUHS",
+        "NMC"
+      ],
+      "ownership": "Private (Trust)",
+      "establishedYear": "1964",
+      "district": "Ludhiana",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "guru-nanak-dev-engineering-college",
+    "name": "Guru Nanak Dev Engineering College",
+    "shortName": "GNDEC",
+    "location": "Ludhiana, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "One of the oldest engineering colleges in Punjab (established 1956), known for strong mechanical and civil engineering departments.",
+    "campus": "Gill Park",
+    "officialUrl": "https://gndec.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Maruti Suzuki",
+      "TCS",
+      "Sonalika"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://gndec.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "IKGPTU (Autonomous)",
+        "AICTE"
+      ],
+      "ownership": "Private (Aided)",
+      "establishedYear": "1956",
+      "district": "Ludhiana",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dav-university-jalandhar",
+    "name": "DAV University",
+    "shortName": "DAV University",
+    "location": "Jalandhar, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "A private university established by the DAV College Managing Committee.",
+    "campus": "Sarmastpur",
+    "officialUrl": "https://www.davuniversity.org",
+    "acceptedExams": [
+      "cuet-ug",
+      "dav-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "dav-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.davuniversity.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Jalandhar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rajiv-gandhi-national-university-of-law",
+    "name": "Rajiv Gandhi National University of Law",
+    "shortName": "RGNUL",
+    "location": "Patiala, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "A National Law University (NLU) offering integrated legal education.",
+    "campus": "Sidhuwal",
+    "officialUrl": "https://www.rgnul.ac.in",
+    "acceptedExams": [
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "BA LLB (Hons)",
+        "degree": "Integrated LLB",
+        "duration": "5 years",
+        "exams": [
+          "clat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat",
+        "year": "2023",
+        "cutoff": "AIR ~1200"
+      }
+    ],
+    "topRecruiters": [
+      "Law Firms",
+      "Corporate Legal"
+    ],
+    "tuition": "High (NLU Standard)",
+    "sources": [
+      "https://www.rgnul.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Bar Council of India"
+      ],
+      "ownership": "State University (NLU)",
+      "establishedYear": "2006",
+      "district": "Patiala",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "plaksha-university",
+    "name": "Plaksha University",
+    "shortName": "Plaksha",
+    "location": "Mohali, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "A new-age technology university founded by global business leaders and tech entrepreneurs, focusing on interdisciplinary tech education.",
+    "campus": "Sector 101 A, IT City",
+    "officialUrl": "https://plaksha.edu.in",
+    "acceptedExams": [
+      "jee-main",
+      "sat",
+      "act"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CS & AI, Robotics, Bio Systems)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "sat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "sat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Tech Giants"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://plaksha.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2021",
+      "district": "SAS Nagar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-rupnagar",
+    "name": "Indian Institute of Technology Ropar",
+    "shortName": "Indian Institute of Technology Ropar",
+    "location": "Rupnagar, Rupnagar District, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Rupnagar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Rupnagar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "thapar-institute-of-engineerin-patiala",
+    "name": "Thapar Institute of Engineering and Technology",
+    "shortName": "Thapar Institute of Engineering and Technology",
+    "location": "Patiala, Patiala District, Punjab",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Patiala",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Patiala",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-jalandhar",
+    "name": "National Institute of Technology Jalandhar",
+    "shortName": "National Institute of Technology Jalandhar",
+    "location": "Jalandhar, Jalandhar District, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Jalandhar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Jalandhar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "chandigarh-engineering-college-sahibzada-ajit-",
+    "name": "Chandigarh Engineering College Jhanjeri",
+    "shortName": "Chandigarh Engineering College Jhanjeri",
+    "location": "Sahibzada Ajit Singh Nagar, Sahibzada Ajit Singh Nagar District, Punjab",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Sahibzada Ajit Singh Nagar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Sahibzada Ajit Singh Nagar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

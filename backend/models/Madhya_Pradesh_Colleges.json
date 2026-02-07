@@ -1,0 +1,2963 @@
+[
+  {
+    "id": "iit-indore",
+    "name": "Indian Institute of Technology Indore",
+    "shortName": "IIT Indore",
+    "location": "Simrol, Indore District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance known for its cutting-edge research and world-class infrastructure.",
+    "campus": "Khandwa Road, Simrol, Indore",
+    "officialUrl": "https://www.iiti.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Electrical, Mechanical, Civil, Metallurgy)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc (Astronomy, Chemistry, Physics, Maths, Biotech)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: AIR ~1200"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "DE Shaw",
+      "Qualcomm",
+      "ISRO"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iiti.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2009",
+      "district": "Indore",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iim-indore",
+    "name": "Indian Institute of Management Indore",
+    "shortName": "IIM Indore",
+    "location": "Indore, Indore District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "A top-tier business school with the prestigious 'Triple Crown' accreditation (AACSB, AMBA, EQUIS).",
+    "campus": "Prabandh Shikhar, Rau-Pithampur Road, Indore",
+    "officialUrl": "https://www.iimidr.ac.in",
+    "acceptedExams": [
+      "cat",
+      "ipmat",
+      "gmat"
+    ],
+    "courses": [
+      {
+        "name": "Post Graduate Programme in Management (PGP)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "Integrated Programme in Management (IPM)",
+        "degree": "BBA+MBA",
+        "duration": "5 years",
+        "exams": [
+          "ipmat"
+        ]
+      },
+      {
+        "name": "Executive PGP (EPGP)",
+        "degree": "MBA",
+        "duration": "1 year",
+        "exams": [
+          "gmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "Overall: 90+ (Actual Call: ~97+)",
+        "source": "IIM I Admission"
+      },
+      {
+        "examId": "ipmat",
+        "year": "2024",
+        "cutoff": "AT (SA): 12 | AT (MCQ): 39 | VA: 98",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Boston Consulting Group",
+      "Deloitte",
+      "HUL",
+      "JPMorgan Chase"
+    ],
+    "tuition": "~INR 21 Lakhs (PGP)",
+    "sources": [
+      "https://www.iimidr.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Autonomous / INI",
+      "establishedYear": "1996",
+      "district": "Indore",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹30.21 LPA",
+      "medianPackage": "₹28.09 LPA",
+      "highestPackage": "₹1.14 CPA"
+    }
+  },
+  {
+    "id": "manit-bhopal",
+    "name": "Maulana Azad National Institute of Technology",
+    "shortName": "MANIT Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance (NIT) offering engineering, architecture, and management programs.",
+    "campus": "Link Road Number 3, Bhopal",
+    "officialUrl": "https://www.manit.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "nimcet",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mechanical, Electrical, Civil, Chemical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "nimcet"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Goldman Sachs",
+      "JP Morgan",
+      "Oracle"
+    ],
+    "tuition": "Standard NIT Fees",
+    "sources": [
+      "https://www.manit.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1960",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiitdm-jabalpur",
+    "name": "Pandit Dwarka Prasad Mishra Indian Institute of Information Technology, Design and Manufacturing",
+    "shortName": "IIITDM Jabalpur",
+    "location": "Jabalpur, Jabalpur District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance focusing on IT, Design, and Manufacturing.",
+    "campus": "Dumna Airport Road, Jabalpur",
+    "officialUrl": "https://www.iiitdmj.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "uceed",
+      "ceed"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mechanical, Smart Manufacturing)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Des",
+        "degree": "B.Des",
+        "duration": "4 years",
+        "exams": [
+          "uceed"
+        ]
+      },
+      {
+        "name": "M.Des",
+        "degree": "M.Des",
+        "duration": "2 years",
+        "exams": [
+          "ceed"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "American Express",
+      "Oracle",
+      "Gameskraft"
+    ],
+    "tuition": "Standard IIIT Fees",
+    "sources": [
+      "https://www.iiitdmj.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2005",
+      "district": "Jabalpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "abv-iiitm-gwalior",
+    "name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management",
+    "shortName": "ABV-IIITM Gwalior",
+    "location": "Gwalior, Gwalior District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance known for its integrated dual degree programs in IT and Management.",
+    "campus": "Morena Link Road, Gwalior",
+    "officialUrl": "https://www.iiitm.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "Integrated B.Tech (IT) + M.Tech (IT)",
+        "degree": "Dual Degree",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Integrated B.Tech (IT) + MBA",
+        "degree": "Dual Degree",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Directi",
+      "Goldman Sachs",
+      "Samsung"
+    ],
+    "tuition": "Standard IIIT Fees",
+    "sources": [
+      "https://www.iiitm.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1997",
+      "district": "Gwalior",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-bhopal",
+    "name": "Indian Institute of Information Technology Bhopal",
+    "shortName": "IIIT Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Institute of National Importance operating under PPP mode, currently mentored by MANIT Bhopal.",
+    "campus": "MANIT Campus, Bhopal",
+    "officialUrl": "https://iiitbhopal.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Tekion",
+      "GEP",
+      "Cisco",
+      "Amazon"
+    ],
+    "tuition": "Standard IIIT Fees",
+    "sources": [
+      "https://iiitbhopal.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "PPP Model / INI",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "iiser-bhopal",
+    "name": "Indian Institute of Science Education and Research Bhopal",
+    "shortName": "IISER Bhopal",
+    "location": "Bhauri, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Premier autonomous institute for basic sciences education and research.",
+    "campus": "Bhauri Bypass Road, Bhopal",
+    "officialUrl": "https://www.iiserb.ac.in",
+    "acceptedExams": [
+      "iat",
+      "jee-advanced"
+    ],
+    "courses": [
+      {
+        "name": "BS-MS Dual Degree (Biological, Chemical, Data, Earth, Math, Physical Sciences)",
+        "degree": "BS-MS",
+        "duration": "5 years",
+        "exams": [
+          "iat",
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "BS (Engineering Sciences)",
+        "degree": "BS",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced",
+          "iat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "iat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Academic & Research Institutions"
+    ],
+    "tuition": "Standard IISER Fees",
+    "sources": [
+      "https://www.iiserb.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2008",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "aiims-bhopal",
+    "name": "All India Institute of Medical Sciences Bhopal",
+    "shortName": "AIIMS Bhopal",
+    "location": "Saket Nagar, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the seven AIIMS established by the Ministry of Health and Family Welfare.",
+    "campus": "Saket Nagar, Bhopal",
+    "officialUrl": "https://www.aiimsbhopal.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "ini-cet"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons) Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ini-cet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://www.aiimsbhopal.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2012",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nliu-bhopal",
+    "name": "National Law Institute University",
+    "shortName": "NLIU Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest and most prestigious National Law Universities in India.",
+    "campus": "Kerwa Dam Road, Bhopal",
+    "officialUrl": "https://nliu.ac.in",
+    "acceptedExams": [
+      "clat-ug",
+      "clat-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat-ug"
+        ]
+      },
+      {
+        "name": "LL.M",
+        "degree": "LL.M",
+        "duration": "1 year",
+        "exams": [
+          "clat-pg"
+        ]
+      },
+      {
+        "name": "B.Sc. LL.B (Hons) [Cyber Security]",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat-ug",
+        "year": "2024",
+        "cutoff": "AIR ~400-450 (General)"
+      }
+    ],
+    "topRecruiters": [
+      "Cyril Amarchand Mangaldas",
+      "Trilegal",
+      "Khaitan & Co"
+    ],
+    "tuition": "~INR 2.5 Lakhs/year",
+    "sources": [
+      "https://nliu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Legislature / NLU",
+      "establishedYear": "1997",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "spa-bhopal",
+    "name": "School of Planning and Architecture Bhopal",
+    "shortName": "SPA Bhopal",
+    "location": "Bhauri, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance dedicated to architecture, planning, and design.",
+    "campus": "Bhauri, Bhopal",
+    "officialUrl": "http://spabhopal.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "ceed"
+    ],
+    "courses": [
+      {
+        "name": "Bachelor of Architecture (B.Arch)",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Bachelor of Planning (B.Plan)",
+        "degree": "B.Plan",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Master of Design (M.Des)",
+        "degree": "M.Des",
+        "duration": "2 years",
+        "exams": [
+          "ceed"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "L&T",
+      "Deloitte",
+      "WSP"
+    ],
+    "tuition": "Standard SPA Fees",
+    "sources": [
+      "http://spabhopal.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2008",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "rgpv-bhopal",
+    "name": "Rajiv Gandhi Proudyogiki Vishwavidyalaya",
+    "shortName": "RGPV",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "The state technological university of MP, affiliating hundreds of engineering colleges.",
+    "campus": "Airport Road, Gandhi Nagar, Bhopal",
+    "officialUrl": "https://www.rgpv.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (UIT-RGPV: CSE, ECE, Mech, Civil, Auto)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Wipro",
+      "Infosys"
+    ],
+    "tuition": "State Govt Fees",
+    "sources": [
+      "https://www.rgpv.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Technological University",
+      "establishedYear": "1998",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "davv-indore",
+    "name": "Devi Ahilya Vishwavidyalaya",
+    "shortName": "DAVV",
+    "location": "Indore, Indore District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "A premier state university in Indore (formerly University of Indore), NAAC A+ accredited.",
+    "campus": "RNT Marg (Main) / Khandwa Road (Takshashila), Indore",
+    "officialUrl": "https://www.dauniv.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (IET-DAVV: CSE, ECE, Mech, Civil, IT, EI)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA (IMS-DAVV: Financial Admin, Marketing, HR, E-Com)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "Integrated MBA",
+        "degree": "MBA",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.Tech (Data Science, IoT)",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Accenture",
+      "ZS Associates",
+      "FICO"
+    ],
+    "tuition": "Low to Moderate",
+    "sources": [
+      "https://www.dauniv.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1964",
+      "district": "Indore",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sgsits-indore",
+    "name": "Shri Govindram Seksaria Institute of Technology and Science",
+    "shortName": "SGSITS",
+    "location": "Indore, Indore District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "One of the oldest and most prestigious autonomous engineering colleges in Central India.",
+    "campus": "Park Road, Indore",
+    "officialUrl": "https://www.sgsits.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT, ECE, Mech, Civil, Electrical, Bio-Med)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE: Top 1-2% in State Quota"
+      }
+    ],
+    "topRecruiters": [
+      "Goldman Sachs",
+      "Amazon",
+      "Asian Paints",
+      "Mastercard"
+    ],
+    "tuition": "Govt Aided Fees",
+    "sources": [
+      "https://www.sgsits.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "RGPV Bhopal"
+      ],
+      "ownership": "Government Aided / Autonomous",
+      "establishedYear": "1952",
+      "district": "Indore",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jec-jabalpur",
+    "name": "Jabalpur Engineering College",
+    "shortName": "JEC Jabalpur",
+    "location": "Jabalpur, Jabalpur District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "First engineering college of Central India (formerly Government Engineering College, Jabalpur).",
+    "campus": "Gokulpur, Jabalpur",
+    "officialUrl": "https://www.jecjabalpur.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, Electrical, ECE, CSE, IT, IP)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.E.",
+        "degree": "M.E.",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Wipro",
+      "L&T",
+      "Reliance Jio"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.jecjabalpur.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "RGPV Bhopal"
+      ],
+      "ownership": "Government Autonomous",
+      "establishedYear": "1947",
+      "district": "Jabalpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mits-gwalior",
+    "name": "Madhav Institute of Technology and Science",
+    "shortName": "MITS Gwalior",
+    "location": "Gwalior, Gwalior District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Premier autonomous government-aided engineering institute in the Gwalior region.",
+    "campus": "Race Course Road, Gwalior",
+    "officialUrl": "https://mitsgwalior.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT, ECE, EE, Civil, Mech, Chemical, Auto)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Accenture",
+      "TCS",
+      "L&T Infotech"
+    ],
+    "tuition": "Govt Aided Fees",
+    "sources": [
+      "https://mitsgwalior.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "RGPV Bhopal"
+      ],
+      "ownership": "Government Aided / Autonomous",
+      "establishedYear": "1957",
+      "district": "Gwalior",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mgm-medical-college-indore",
+    "name": "Mahatma Gandhi Memorial Medical College",
+    "shortName": "MGM Indore",
+    "location": "Indore, Indore District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest and most prestigious government medical colleges in MP.",
+    "campus": "AB Road, Indore",
+    "officialUrl": "http://www.mgmmcindore.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "State Quota Top 50"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.mgmmcindore.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "MPMSU Jabalpur"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1948",
+      "district": "Indore",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "gmc-bhopal",
+    "name": "Gandhi Medical College",
+    "shortName": "GMC Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Premier government medical college located in the capital city.",
+    "campus": "Sultania Road, Bhopal",
+    "officialUrl": "http://www.gmcbhopal.net",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.gmcbhopal.net"
+    ],
+    "meta": {
+      "affiliations": [
+        "MPMSU Jabalpur"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1955",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "gajra-raja-gwalior",
+    "name": "Gajra Raja Medical College",
+    "shortName": "GRMC Gwalior",
+    "location": "Gwalior, Gwalior District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "First medical college of MP, established in 1946.",
+    "campus": "Veer Savarkar Marg, Gwalior",
+    "officialUrl": "http://www.grmcgwalior.org",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.grmcgwalior.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "MPMSU Jabalpur"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1946",
+      "district": "Gwalior",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nscb-medical-college-jabalpur",
+    "name": "Netaji Subhash Chandra Bose Medical College",
+    "shortName": "NSCBMC Jabalpur",
+    "location": "Jabalpur, Jabalpur District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Major government medical college serving the Mahakoshal region.",
+    "campus": "Tilwara Road, Jabalpur",
+    "officialUrl": "http://www.nscbmc.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.nscbmc.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "MPMSU Jabalpur"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1955",
+      "district": "Jabalpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "lnct-bhopal",
+    "name": "Lakshmi Narain College of Technology",
+    "shortName": "LNCT Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "First private engineering college of MP, known for high placement numbers.",
+    "campus": "Raisen Road, Kalchuri Nagar, Bhopal",
+    "officialUrl": "https://lnct.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, IT, AI/ML)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Cognizant",
+      "Wipro",
+      "TCS",
+      "Infosys",
+      "Accenture"
+    ],
+    "tuition": "Moderate Private Fees",
+    "sources": [
+      "https://lnct.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "RGPV Bhopal"
+      ],
+      "ownership": "Private",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "oriental-bhopal",
+    "name": "Oriental Institute of Science and Technology",
+    "shortName": "OIST Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "A leading private engineering college in Bhopal established in 1995.",
+    "campus": "Raisen Road, Bhopal",
+    "officialUrl": "https://oistbpl.com",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT, ECE, Mech, Civil, Auto)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Capgemini",
+      "Hexaware"
+    ],
+    "tuition": "Moderate Private Fees",
+    "sources": [
+      "https://oistbpl.com"
+    ],
+    "meta": {
+      "affiliations": [
+        "RGPV Bhopal"
+      ],
+      "ownership": "Private",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ips-academy-indore",
+    "name": "IPS Academy",
+    "shortName": "IPS Indore",
+    "location": "Indore, Indore District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "A massive educational campus offering courses from Engineering to Hotel Management.",
+    "campus": "Rajendra Nagar, AB Road, Indore",
+    "officialUrl": "https://www.ipsacademy.org",
+    "acceptedExams": [
+      "jee-main",
+      "cmat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Fire Tech, Civil, Mech, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cmat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "GAIL",
+      "ONGC (for Fire Tech)"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.ipsacademy.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "RGPV Bhopal",
+        "DAVV Indore"
+      ],
+      "ownership": "Private / Autonomous",
+      "district": "Indore",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "medicaps-uni",
+    "name": "Medi-Caps University",
+    "shortName": "Medi-Caps",
+    "location": "Indore, Indore District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Renowned private university in Indore, formerly an engineering college, known for discipline and placements.",
+    "campus": "AB Road, Pigdamber, Rau, Indore",
+    "officialUrl": "https://www.medicaps.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, EC, IT, Mech, Civil, Auto)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "DXC Technology",
+      "Eicher",
+      "Yash Technologies"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.medicaps.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "district": "Indore",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "avantika-uni",
+    "name": "Avantika University",
+    "shortName": "Avantika Uni",
+    "location": "Ujjain, Ujjain District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "India's first design-centered university, promoted by MIT Pune.",
+    "campus": "Lekoda, Ujjain",
+    "officialUrl": "https://www.avantikauniversity.edu.in",
+    "acceptedExams": [
+      "dat",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Des (Product, Comm, Spatial, UX)",
+        "degree": "B.Des",
+        "duration": "4 years",
+        "exams": [
+          "dat"
+        ]
+      },
+      {
+        "name": "B.Tech (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "dat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Design Studios",
+      "Tech Firms"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.avantikauniversity.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "district": "Ujjain",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jagran-lakecity-uni",
+    "name": "Jagran Lakecity University",
+    "shortName": "JLU Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Global university known for its media, law, and liberal arts programs.",
+    "campus": "Mugaliya Kot, Bhopal",
+    "officialUrl": "https://jlu.edu.in",
+    "acceptedExams": [
+      "jluet",
+      "clat",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Journalism & Mass Comm)",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "jluet"
+        ]
+      },
+      {
+        "name": "B.B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat",
+          "lsat-india"
+        ]
+      },
+      {
+        "name": "B.Des",
+        "degree": "B.Des",
+        "duration": "4 years",
+        "exams": [
+          "jluet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jluet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "clat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "NDTV",
+      "Dainik Jagran",
+      "HDFC Bank"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://jlu.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sage-uni-indore",
+    "name": "SAGE University",
+    "shortName": "SAGE Indore",
+    "location": "Indore, Indore District, Madhya Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Private university with a focus on technology and management.",
+    "campus": "Kailod Kartal, Rau, Indore",
+    "officialUrl": "https://sageuniversity.in",
+    "acceptedExams": [
+      "see"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "see"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "see"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "see",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://sageuniversity.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "district": "Indore",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "amity-gwalior",
+    "name": "Amity University Gwalior",
+    "shortName": "Amity Gwalior",
+    "location": "Gwalior, Gwalior District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Part of the Amity group, offering a wide range of courses in a sprawling campus.",
+    "campus": "Maharajpura, Gwalior",
+    "officialUrl": "https://www.amity.edu/gwalior",
+    "acceptedExams": [
+      "amity-jee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Civil, Mech, BioTech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "amity-jee"
+        ]
+      },
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "amity-jee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.amity.edu/gwalior"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "district": "Gwalior",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "barkatullah-uni",
+    "name": "Barkatullah University",
+    "shortName": "BU Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Major state university in Bhopal, formerly known as Bhopal University.",
+    "campus": "Hoshangabad Road, Bhopal",
+    "officialUrl": "http://www.bubhopal.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (UIT-BU: CSE, ECE, Mech, Civil)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State University)",
+    "sources": [
+      "http://www.bubhopal.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1970",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jiwaji-uni",
+    "name": "Jiwaji University",
+    "shortName": "Jiwaji",
+    "location": "Gwalior, Gwalior District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Prominent state university in Gwalior, NAAC 'A' accredited.",
+    "campus": "City Centre, Gwalior",
+    "officialUrl": "http://www.jiwaji.edu",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (Institute of Engineering)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.A. LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.jiwaji.edu"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1964",
+      "district": "Gwalior",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dhsgsu-sagar",
+    "name": "Dr. Harisingh Gour Vishwavidyalaya",
+    "shortName": "DHSGSU Sagar",
+    "location": "Sagar, Sagar District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "A Central University (formerly University of Saugar), the oldest university in MP.",
+    "campus": "University Road, Sagar",
+    "officialUrl": "http://dhsgsu.edu.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "http://dhsgsu.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "1946",
+      "district": "Sagar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ign-tribal-uni",
+    "name": "Indira Gandhi National Tribal University",
+    "shortName": "IGNTU",
+    "location": "Amarkantak, Anuppur District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Central university established to promote education in tribal areas.",
+    "campus": "Lalpur, Amarkantak",
+    "officialUrl": "http://www.igntu.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MBA (Tourism)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.igntu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "2008",
+      "district": "Anuppur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rdvv-jabalpur",
+    "name": "Rani Durgavati Vishwavidyalaya",
+    "shortName": "RDVV",
+    "location": "Jabalpur, Jabalpur District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "State university serving the Jabalpur region (formerly University of Jabalpur).",
+    "campus": "Saraswati Vihar, Pachpedi, Jabalpur",
+    "officialUrl": "http://www.rdunijbpin.org",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.rdunijbpin.org"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1956",
+      "district": "Jabalpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vikram-uni-ujjain",
+    "name": "Vikram University",
+    "shortName": "Vikram Uni",
+    "location": "Ujjain, Ujjain District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Historic state university in the holy city of Ujjain.",
+    "campus": "University Road, Ujjain",
+    "officialUrl": "http://vikramuniv.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://vikramuniv.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1957",
+      "district": "Ujjain",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mcu-bhopal",
+    "name": "Makhanlal Chaturvedi National University of Journalism and Communication",
+    "shortName": "MCU Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "A specialized university for journalism, mass communication, and computer applications.",
+    "campus": "Bishan Khedi, Bhopal",
+    "officialUrl": "https://www.mcu.ac.in",
+    "acceptedExams": [
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Mass Communication)",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "M.A. (Journalism)",
+        "degree": "M.A.",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Media Houses",
+      "IT Companies"
+    ],
+    "tuition": "Low to Moderate",
+    "sources": [
+      "https://www.mcu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University",
+      "establishedYear": "1990",
+      "district": "Bhopal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mpmsu-jabalpur",
+    "name": "Madhya Pradesh Medical Science University",
+    "shortName": "MPMSU",
+    "location": "Jabalpur, Jabalpur District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "The state university for all medical, dental, nursing, and ayush colleges in MP.",
+    "campus": "NSCB Medical College Campus, Jabalpur",
+    "officialUrl": "https://www.mpmsu.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS (Affiliated Colleges)",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by college",
+    "sources": [
+      "https://www.mpmsu.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "2011",
+      "district": "Jabalpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-indore",
+    "name": "Indian Institute of Technology Indore",
+    "shortName": "Indian Institute of Technology Indore",
+    "location": "Indore, Indore District, Madhya Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Indore",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Indore",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-bhopal",
+    "name": "National Institute of Technology Bhopal",
+    "shortName": "National Institute of Technology Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhopal",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Bhopal",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "amity-university-gwalior-gwalior",
+    "name": "Amity University Gwalior",
+    "shortName": "Amity University Gwalior",
+    "location": "Gwalior, Gwalior District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Gwalior",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Gwalior",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ies-college-of-technology-bhop-bhopal",
+    "name": "IES College of Technology Bhopal",
+    "shortName": "IES College of Technology Bhopal",
+    "location": "Bhopal, Bhopal District, Madhya Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhopal",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Bhopal",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

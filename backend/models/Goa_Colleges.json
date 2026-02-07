@@ -1,0 +1,2056 @@
+[
+  {
+    "id": "iit-goa",
+    "name": "Indian Institute of Technology Goa",
+    "shortName": "IIT Goa",
+    "location": "Ponda, North Goa, Goa",
+    "rankingTier": "Tier 1",
+    "overview": "Institute of National Importance established in 2016, currently operating from a temporary campus in GEC Farmagudi.",
+    "campus": "GEC Campus, Farmagudi, Ponda",
+    "officialUrl": "https://www.iitgoa.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, EE, ME, MnC)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "Ph.D",
+        "degree": "Ph.D",
+        "duration": "3-5 years",
+        "exams": [
+          "gate",
+          "net"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: AIR ~4000"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Google",
+      "Intel",
+      "Qualcomm"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iitgoa.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2016",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-goa",
+    "name": "National Institute of Technology Goa",
+    "shortName": "NIT Goa",
+    "location": "Cuncolim, South Goa, Goa",
+    "rankingTier": "Tier 1",
+    "overview": "Institute of National Importance established in 2010, moved to its permanent campus in Cuncolim.",
+    "campus": "Cuncolim, Salcete",
+    "officialUrl": "https://www.nitgoa.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Mech, Civil)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "Ph.D",
+        "degree": "Ph.D",
+        "duration": "3-5 years",
+        "exams": [
+          "gate",
+          "net"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Samsung",
+      "Oracle",
+      "L&T"
+    ],
+    "tuition": "Standard NIT Fees",
+    "sources": [
+      "https://www.nitgoa.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2010",
+      "district": "South Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "goa-university",
+    "name": "Goa University",
+    "shortName": "GU",
+    "location": "Taleigao, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "The only state university in Goa, affiliating most colleges in the state.",
+    "campus": "Taleigao Plateau",
+    "officialUrl": "https://www.unigoa.ac.in",
+    "acceptedExams": [
+      "gu-art",
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc (Marine Science, Biotech, Chemistry, Physics)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "gu-art"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "gu-art",
+          "cmat"
+        ]
+      },
+      {
+        "name": "M.A. (Konkani, Portuguese, English, History)",
+        "degree": "M.A.",
+        "duration": "2 years",
+        "exams": [
+          "gu-art"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gu-art",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Univ)",
+    "sources": [
+      "https://www.unigoa.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1985",
+      "district": "North Goa",
+      "naacGrade": "B++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "goa-medical-college",
+    "name": "Goa Medical College",
+    "shortName": "GMC Goa",
+    "location": "Bambolim, North Goa, Goa",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest medical colleges in Asia, premier institute for medical education in Goa.",
+    "campus": "Bambolim",
+    "officialUrl": "https://gmc.goa.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      },
+      {
+        "name": "B.Sc (Allied Health Sciences)",
+        "degree": "B.Sc",
+        "duration": "3-4 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "State Rank Top 50"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://gmc.goa.gov.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1842",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "goa-engineering-college",
+    "name": "Goa College of Engineering",
+    "shortName": "GEC Farmagudi",
+    "location": "Ponda, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "Oldest engineering college in Goa, run by the state government.",
+    "campus": "Farmagudi, Ponda",
+    "officialUrl": "https://gec.ac.in",
+    "acceptedExams": [
+      "gcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (Civil, Mech, Electrical, ETC, Comp, IT, Mining)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "gcet"
+        ]
+      },
+      {
+        "name": "M.E.",
+        "degree": "M.E.",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Vedanta"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://gec.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1967",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "don-bosco-college-engineering",
+    "name": "Don Bosco College of Engineering",
+    "shortName": "DBCE Fatorda",
+    "location": "Fatorda, South Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "Prominent private engineering college managed by the Salesians of Don Bosco.",
+    "campus": "Fatorda, Margao",
+    "officialUrl": "https://dbcegoa.ac.in",
+    "acceptedExams": [
+      "gcet"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (Civil, Mech, ETC, Comp)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "gcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Persistent",
+      "IBM"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://dbcegoa.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private (Salesian Society)",
+      "district": "South Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "pcce-verna",
+    "name": "Padre Conceicao College of Engineering",
+    "shortName": "PCCE Verna",
+    "location": "Verna, South Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "First private engineering college in Goa, located near the Verna Industrial Estate.",
+    "campus": "Verna",
+    "officialUrl": "https://pccegoa.edu.in",
+    "acceptedExams": [
+      "gcet"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (Mech, ETC, Comp, IT)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "gcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Tech Mahindra",
+      "CommScope",
+      "Visteon"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://pccegoa.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private (Agnel Fathers)",
+      "district": "South Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "agnel-institute-assagao",
+    "name": "Agnel Institute of Technology and Design",
+    "shortName": "AITD Assagao",
+    "location": "Assagao, North Goa, Goa",
+    "rankingTier": "Tier 3",
+    "overview": "Engineering college in North Goa managed by the Agnel Technical Education Society.",
+    "campus": "Assagao, Bardez",
+    "officialUrl": "https://aitdgoa.edu.in",
+    "acceptedExams": [
+      "gcet"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (Mech, ECE, Comp)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "gcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://aitdgoa.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "shree-rayeshwar-institute",
+    "name": "Shree Rayeshwar Institute of Engineering and Information Technology",
+    "shortName": "RIT Shiroda",
+    "location": "Shiroda, North Goa, Goa",
+    "rankingTier": "Tier 3",
+    "overview": "Private engineering college situated in Shiroda.",
+    "campus": "Shivshail, Shiroda",
+    "officialUrl": "https://ritgoa.ac.in",
+    "acceptedExams": [
+      "gcet"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (ETC, Comp, IT, Mech)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "gcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://ritgoa.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "bits-pilani-goa",
+    "name": "Birla Institute of Technology and Science, Pilani - Goa Campus",
+    "shortName": "BITS Goa",
+    "location": "Zuarinagar, South Goa, Goa",
+    "rankingTier": "Tier 1",
+    "overview": "Campus of the prestigious BITS Pilani, offering top-tier engineering and science education.",
+    "campus": "NH-17B, Zuarinagar",
+    "officialUrl": "https://www.bits-pilani.ac.in/goa",
+    "acceptedExams": [
+      "bitsat"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (CSE, EEE, ECE, Mech, Chemical)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "bitsat"
+        ]
+      },
+      {
+        "name": "M.Sc. (Integrated) Bio/Chem/Eco/Maths/Physics",
+        "degree": "M.Sc.",
+        "duration": "4 years",
+        "exams": [
+          "bitsat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "bitsat",
+        "year": "2024",
+        "cutoff": "CSE: ~295/390"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Uber",
+      "Microsoft",
+      "Goldman Sachs"
+    ],
+    "tuition": "~INR 6 Lakhs/year",
+    "sources": [
+      "https://www.bits-pilani.ac.in/goa"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University (Private)",
+      "establishedYear": "2004",
+      "district": "South Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "goa-institute-of-management",
+    "name": "Goa Institute of Management",
+    "shortName": "GIM Goa",
+    "location": "Sanquelim, North Goa, Goa",
+    "rankingTier": "Tier 1",
+    "overview": "One of India's top private B-Schools, known for its rigorous PGDM program.",
+    "campus": "Sanquelim, Poriem",
+    "officialUrl": "https://gim.ac.in",
+    "acceptedExams": [
+      "cat",
+      "xat",
+      "gmat",
+      "cmat"
+    ],
+    "courses": [
+      {
+        "name": "PGDM",
+        "degree": "PGDM",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "xat",
+          "cmat"
+        ]
+      },
+      {
+        "name": "PGDM (Healthcare Management)",
+        "degree": "PGDM",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "xat",
+          "cmat"
+        ]
+      },
+      {
+        "name": "PGDM (Big Data Analytics)",
+        "degree": "PGDM",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "xat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "85-90 percentile"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Cognizant",
+      "Arcesium",
+      "Asian Paints"
+    ],
+    "tuition": "~INR 18-19 Lakhs",
+    "sources": [
+      "https://gim.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private / Autonomous",
+      "establishedYear": "1993",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "ihm-goa",
+    "name": "Institute of Hotel Management, Catering Technology and Applied Nutrition",
+    "shortName": "IHM Goa",
+    "location": "Porvorim, North Goa, Goa",
+    "rankingTier": "Tier 1",
+    "overview": "A premier hospitality institute under the Ministry of Tourism, Govt. of India.",
+    "campus": "Alto Porvorim, Bardez",
+    "officialUrl": "https://ihmgoa.gov.in",
+    "acceptedExams": [
+      "nchmct-jee"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc. (Hospitality & Hotel Administration)",
+        "degree": "B.Sc.",
+        "duration": "3 years",
+        "exams": [
+          "nchmct-jee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nchmct-jee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Taj Group",
+      "Oberoi",
+      "Marriott"
+    ],
+    "tuition": "Standard IHM Fees",
+    "sources": [
+      "https://ihmgoa.gov.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "NCHMCT"
+      ],
+      "ownership": "Central Govt (Autonomous)",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "goa-college-of-architecture",
+    "name": "Goa College of Architecture",
+    "shortName": "GCA",
+    "location": "Panaji, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "The only government college for architecture in Goa.",
+    "campus": "Altinho, Panaji",
+    "officialUrl": "https://gcarch.goa.gov.in",
+    "acceptedExams": [
+      "nata"
+    ],
+    "courses": [
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      },
+      {
+        "name": "M.Arch",
+        "degree": "M.Arch",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nata",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Architectural Firms"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://gcarch.goa.gov.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Government",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "goa-college-of-pharmacy",
+    "name": "Goa College of Pharmacy",
+    "shortName": "GCP",
+    "location": "Panaji, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "Premier government pharmacy institute in the state.",
+    "campus": "18th June Road, Panaji",
+    "officialUrl": "https://gcp.goa.gov.in",
+    "acceptedExams": [
+      "gcet",
+      "gpat"
+    ],
+    "courses": [
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "gcet"
+        ]
+      },
+      {
+        "name": "M.Pharm",
+        "degree": "M.Pharm",
+        "duration": "2 years",
+        "exams": [
+          "gpat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gpat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Pharma MNCs"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://gcp.goa.gov.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Government",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vm-salgaocar-law-college",
+    "name": "V.M. Salgaocar College of Law",
+    "shortName": "Salgaocar Law",
+    "location": "Miramar, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "Leading law college in Goa, offering UG and PG legal education.",
+    "campus": "Miramar, Panaji",
+    "officialUrl": "https://vmslaw.edu.in",
+    "acceptedExams": [
+      "merit-based",
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "LL.M",
+        "degree": "LL.M",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Aided)",
+    "sources": [
+      "https://vmslaw.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private Aided",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gr-kare-law-college",
+    "name": "Govind Ramnath Kare College of Law",
+    "shortName": "GR Kare Law",
+    "location": "Margao, South Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "Prominent law college serving South Goa.",
+    "campus": "Tansor, Comba, Margao",
+    "officialUrl": "https://grkarelaw.edu.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Aided)",
+    "sources": [
+      "https://grkarelaw.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private Aided",
+      "district": "South Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "goa-dental-college",
+    "name": "Goa Dental College and Hospital",
+    "shortName": "GDC Goa",
+    "location": "Bambolim, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "The sole dental college in the state of Goa.",
+    "campus": "Bambolim",
+    "officialUrl": "https://gdch.goa.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-mdf"
+    ],
+    "courses": [
+      {
+        "name": "BDS",
+        "degree": "BDS",
+        "duration": "5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MDS",
+        "degree": "MDS",
+        "duration": "3 years",
+        "exams": [
+          "neet-mds"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-mdf",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://gdch.goa.gov.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Government",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "chowgule-college",
+    "name": "Parvatibai Chowgule College of Arts and Science (Autonomous)",
+    "shortName": "Chowgule College",
+    "location": "Margao, South Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "A premier autonomous college known for liberal arts and sciences, NAAC 'A+' accredited.",
+    "campus": "Gogol, Margao",
+    "officialUrl": "https://chowgules.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.A. / M.Sc",
+        "degree": "PG",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Aided)",
+    "sources": [
+      "https://chowgules.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private Aided / Autonomous",
+      "district": "South Goa",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "st-xaviers-college-mapusa",
+    "name": "St. Xavier's College",
+    "shortName": "St Xavier's Mapusa",
+    "location": "Mapusa, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "Renowned college in North Goa for Arts, Science, and Commerce.",
+    "campus": "Xaviernagar, Mapusa",
+    "officialUrl": "https://www.xavierscollege-goa.com",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Aided)",
+    "sources": [
+      "https://www.xavierscollege-goa.com"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private Aided",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dhempe-college",
+    "name": "Dhempe College of Arts and Science",
+    "shortName": "Dhempe College",
+    "location": "Panaji, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "Prestigious college in Miramar, Panaji, known for its academic history.",
+    "campus": "Miramar, Panaji",
+    "officialUrl": "https://www.dhempecollege.edu.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Aided)",
+    "sources": [
+      "https://www.dhempecollege.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private Aided",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "damodar-college",
+    "name": "V.V.M.'s Shree Damodar College of Commerce & Economics",
+    "shortName": "Damodar College",
+    "location": "Margao, South Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "Leading commerce college in South Goa.",
+    "campus": "Tansor, Comba, Margao",
+    "officialUrl": "https://www.damodarcollege.edu.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.Com",
+        "degree": "M.Com",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Aided)",
+    "sources": [
+      "https://www.damodarcollege.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private Aided",
+      "district": "South Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "govt-college-sanquelim",
+    "name": "Government College of Arts, Science and Commerce, Sanquelim",
+    "shortName": "GC Sanquelim",
+    "location": "Sanquelim, North Goa, Goa",
+    "rankingTier": "Tier 3",
+    "overview": "Major government college serving the hinterland of North Goa.",
+    "campus": "Sanquelim",
+    "officialUrl": "https://gcascs.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gcascs.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Government",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-college-quepem",
+    "name": "Government College of Arts, Science and Commerce, Quepem",
+    "shortName": "GC Quepem",
+    "location": "Quepem, South Goa, Goa",
+    "rankingTier": "Tier 3",
+    "overview": "Key government college in South Goa.",
+    "campus": "Quepem",
+    "officialUrl": "https://gcq.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gcq.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Government",
+      "district": "South Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "goa-college-of-art",
+    "name": "Goa College of Art",
+    "shortName": "Goa Art College",
+    "location": "Panaji, North Goa, Goa",
+    "rankingTier": "Unranked",
+    "overview": "Premier institute for fine arts and applied arts in Goa.",
+    "campus": "Altinho, Panaji",
+    "officialUrl": "https://goacollegeofart.com",
+    "acceptedExams": [
+      "aptitude-test"
+    ],
+    "courses": [
+      {
+        "name": "BFA (Painting)",
+        "degree": "BFA",
+        "duration": "4 years",
+        "exams": [
+          "aptitude-test"
+        ]
+      },
+      {
+        "name": "BFA (Applied Art)",
+        "degree": "BFA",
+        "duration": "4 years",
+        "exams": [
+          "aptitude-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "aptitude-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Advertising Agencies",
+      "Design Studios"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://goacollegeofart.com"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Government",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "gomantak-ayurveda-mahavidyalaya",
+    "name": "Gomantak Ayurveda Mahavidyalaya and Research Centre",
+    "shortName": "GAMRC",
+    "location": "Shiroda, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "The only Ayurveda college in Goa.",
+    "campus": "Vazem, Shiroda",
+    "officialUrl": "http://gamrc.org",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "BAMS",
+        "degree": "BAMS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://gamrc.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Private Aided",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "institute-nursing-education-goa",
+    "name": "Institute of Nursing Education",
+    "shortName": "INE Goa",
+    "location": "Bambolim, North Goa, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "Government nursing institute attached to Goa Medical College.",
+    "campus": "Bambolim",
+    "officialUrl": "https://gmc.goa.gov.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://gmc.goa.gov.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Goa University"
+      ],
+      "ownership": "Government",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nusi-maritime-academy",
+    "name": "NUSI Maritime Academy",
+    "shortName": "NUSI Goa",
+    "location": "Salcete, South Goa, Goa",
+    "rankingTier": "Unranked",
+    "overview": "Renowned maritime training academy in Goa.",
+    "campus": "Sucaldem, Chinchinim, Salcete",
+    "officialUrl": "https://nusiacademy.edu.in",
+    "acceptedExams": [
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "General Purpose Rating (GP Rating)",
+        "degree": "Certificate",
+        "duration": "6 months",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Shipping Companies"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://nusiacademy.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "DG Shipping Approved"
+      ],
+      "ownership": "Private Trust",
+      "district": "South Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-polytechnic-panaji",
+    "name": "Government Polytechnic Panaji",
+    "shortName": "GPP Panaji",
+    "location": "Panaji, North Goa, Goa",
+    "rankingTier": "Unranked",
+    "overview": "Premier polytechnic institute in the capital city.",
+    "campus": "Altinho, Panaji",
+    "officialUrl": "https://gpp.goa.gov.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "Diploma (Civil, Mech, Elect, Comp, Food Tech)",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://gpp.goa.gov.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "BTE Goa"
+      ],
+      "ownership": "Government",
+      "district": "North Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "agnel-polytechnic-verna",
+    "name": "Agnel Polytechnic",
+    "shortName": "Agnel Poly Verna",
+    "location": "Verna, South Goa, Goa",
+    "rankingTier": "Unranked",
+    "overview": "Reputed polytechnic located in the Verna educational hub.",
+    "campus": "Verna",
+    "officialUrl": "https://agnelpolytechnic.com",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "Diploma (Auto, Mech, E&C, Comp)",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://agnelpolytechnic.com"
+    ],
+    "meta": {
+      "affiliations": [
+        "BTE Goa"
+      ],
+      "ownership": "Private Aided",
+      "district": "South Goa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-farmagudi",
+    "name": "National Institute of Technology Goa",
+    "shortName": "National Institute of Technology Goa",
+    "location": "Farmagudi, Farmagudi District, Goa",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Farmagudi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Farmagudi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

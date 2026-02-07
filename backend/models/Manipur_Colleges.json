@@ -1,0 +1,2229 @@
+[
+  {
+    "id": "manipur-university",
+    "name": "Manipur University",
+    "shortName": "MU",
+    "location": "Canchipur, Imphal West, Manipur",
+    "rankingTier": "Tier 1",
+    "overview": "A Central University serving as the primary node of higher education in the state. It affiliates nearly all general degree colleges in Manipur and offers a wide range of postgraduate and doctoral programs.",
+    "campus": "Canchipur",
+    "officialUrl": "https://www.manipuruniv.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "ugc-net"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Banks",
+      "State Govt Services",
+      "NGOs"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://www.manipuruniv.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1980",
+      "district": "Imphal West",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-manipur",
+    "name": "National Institute of Technology Manipur",
+    "shortName": "NIT Manipur",
+    "location": "Langol, Imphal West, Manipur",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance established in 2010. It is the premier technical institution in the state, offering engineering degrees at undergraduate, postgraduate, and doctoral levels.",
+    "campus": "Langol",
+    "officialUrl": "https://www.nitmanipur.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EE, Civil, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~30000-40000 Rank (HS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "L&T",
+      "Infosys",
+      "Wipro",
+      "Capgemini",
+      "PowerGrid"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://www.nitmanipur.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2010",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "rims-imphal",
+    "name": "Regional Institute of Medical Sciences",
+    "shortName": "RIMS Imphal",
+    "location": "Lamphelpat, Imphal West, Manipur",
+    "rankingTier": "Tier 1",
+    "overview": "An autonomous institute under the Ministry of Health & Family Welfare, Govt. of India. It serves as a premier medical college and hospital for the entire North Eastern Region.",
+    "campus": "Lamphelpat",
+    "officialUrl": "https://www.rims.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "Master of Surgery/Medicine",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "AIQ Rank ~6000"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals",
+      "Health Services"
+    ],
+    "tuition": "Very Low (Govt Subsidized)",
+    "sources": [
+      "https://www.rims.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Manipur University",
+        "NMC",
+        "INC"
+      ],
+      "ownership": "Central Govt (Autonomous)",
+      "establishedYear": "1972",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "central-agricultural-university-imphal",
+    "name": "Central Agricultural University",
+    "shortName": "CAU Imphal",
+    "location": "Iroisemba, Imphal West, Manipur",
+    "rankingTier": "Tier 1",
+    "overview": "A Central University dedicated to agriculture and allied sciences, with its headquarters and College of Agriculture located in Imphal. It has jurisdiction across multiple NE states.",
+    "campus": "Iroisemba",
+    "officialUrl": "https://cau.ac.in",
+    "acceptedExams": [
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "M.Sc Agriculture",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "icar-aieea-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Agro-Industry",
+      "Banking",
+      "Research"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://cau.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1993",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-manipur",
+    "name": "Indian Institute of Information Technology Manipur",
+    "shortName": "IIIT Manipur",
+    "location": "Mantripukhri, Imphal East, Manipur",
+    "rankingTier": "Tier 2",
+    "overview": "An Institute of National Importance established under PPP mode, focusing on IT and Computer Science education.",
+    "campus": "Mantripukhri (Temporary)",
+    "officialUrl": "http://www.iiitmanipur.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Jio",
+      "Publicis Sapient"
+    ],
+    "tuition": "₹2,00,000 per annum approx",
+    "sources": [
+      "http://www.iiitmanipur.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "PPP (Central + State + Industry)",
+      "establishedYear": "2015",
+      "district": "Imphal East",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dhanamanjuri-university",
+    "name": "Dhanamanjuri University",
+    "shortName": "DMU",
+    "location": "Imphal, Manipur",
+    "rankingTier": "Tier 2",
+    "overview": "A state cluster university established by upgrading premier colleges: D.M. College of Science, D.M. College of Arts, D.M. College of Commerce, G.P. Women's College, and LMS Law College.",
+    "campus": "DM College Campus",
+    "officialUrl": "https://dmu.ac.in",
+    "acceptedExams": [
+      "university-entrance",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc/B.A./B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "university-entrance",
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "LLB",
+        "degree": "LLB",
+        "duration": "3 years",
+        "exams": [
+          "university-entrance"
+        ]
+      },
+      {
+        "name": "M.Sc/M.A./M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://dmu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2018",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "national-sports-university",
+    "name": "National Sports University",
+    "shortName": "NSU",
+    "location": "Koutruk, Imphal West, Manipur",
+    "rankingTier": "Tier 2",
+    "overview": "The first central university in India dedicated to sports education, training, and research.",
+    "campus": "Koutruk (Permanent)/Khuman Lampak (Temporary)",
+    "officialUrl": "https://www.nsu.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "nsu-entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Sports Coaching)",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "BPES",
+        "degree": "Bachelor of Physical Education & Sports",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "nsu-entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Sports Authority of India",
+      "Sports Clubs"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.nsu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "2018",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jnims-imphal",
+    "name": "Jawaharlal Nehru Institute of Medical Sciences",
+    "shortName": "JNIMS",
+    "location": "Porompat, Imphal East, Manipur",
+    "rankingTier": "Tier 2",
+    "overview": "A state government medical college and hospital providing tertiary healthcare and medical education.",
+    "campus": "Porompat",
+    "officialUrl": "http://jnims.nic.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~500 Score"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "http://jnims.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Manipur University",
+        "NMC"
+      ],
+      "ownership": "State Government",
+      "establishedYear": "1989",
+      "district": "Imphal East",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "manipur-technical-university",
+    "name": "Manipur Technical University",
+    "shortName": "MTU",
+    "location": "Takyelpat, Imphal West, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "The first state technical university of Manipur, established to oversee technical education and offer B.Tech programs.",
+    "campus": "Government Polytechnic Campus, Takyelpat",
+    "officialUrl": "https://mtu.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, CSE, ECE, EE, ME)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate (State Govt)",
+    "sources": [
+      "https://mtu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2016",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "manipur-university-of-culture",
+    "name": "Manipur University of Culture",
+    "shortName": "MUC",
+    "location": "Palace Compound, Imphal East, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A state university dedicated to promoting and preserving the rich cultural heritage, performing arts, and visual arts of Manipur.",
+    "campus": "Palace Compound",
+    "officialUrl": "http://muc.ac.in",
+    "acceptedExams": [
+      "university-entrance"
+    ],
+    "courses": [
+      {
+        "name": "BA (Dance, Music, Thang-Ta, Theatre)",
+        "degree": "BA",
+        "duration": "3 years",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://muc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2015",
+      "district": "Imphal East",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "manipur-institute-of-technology",
+    "name": "Manipur Institute of Technology",
+    "shortName": "MIT Manipur",
+    "location": "Takyelpat, Imphal West, Manipur",
+    "rankingTier": "Tier 2",
+    "overview": "A constituent college of Manipur University, formerly known as Government College of Technology. It is a key engineering institute in the state.",
+    "campus": "Takyelpat",
+    "officialUrl": "https://mitimphal.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (Civil, CSE, ECE, EEE, Mech)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://mitimphal.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University",
+        "AICTE"
+      ],
+      "ownership": "Government (Constituent)",
+      "establishedYear": "1998",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "shija-academy-health-sciences",
+    "name": "Shija Academy of Health Sciences",
+    "shortName": "SAHS",
+    "location": "Langol, Imphal West, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "The first private medical college in Manipur, established by the Shija Hospitals group.",
+    "campus": "Health City, Langol",
+    "officialUrl": "https://www.shijaacademy.com",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "High (Private)",
+    "sources": [
+      "https://www.shijaacademy.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University",
+        "NMC"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2021",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "don-bosco-college-maram",
+    "name": "Don Bosco College, Maram",
+    "shortName": "DBC Maram",
+    "location": "Maram, Senapati, Manipur",
+    "rankingTier": "Tier 2",
+    "overview": "A premier NAAC 'A' grade accredited college in the hill district of Senapati, affiliated to Manipur University. Known for discipline and academic excellence.",
+    "campus": "Maram Centre",
+    "officialUrl": "https://www.dbcmaram.org",
+    "acceptedExams": [
+      "cuet-ug",
+      "college-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com/BCA",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MSW",
+        "degree": "Master of Social Work",
+        "duration": "2 years",
+        "exams": [
+          "college-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "college-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.dbcmaram.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Private (Catholic Minority)",
+      "establishedYear": "2000",
+      "district": "Senapati",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "s-kula-womens-college",
+    "name": "S. Kula Women's College",
+    "shortName": "SKWC",
+    "location": "Nambol, Bishnupur, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A prominent women's college in Bishnupur district, offering arts, science, and commerce streams with NAAC 'A' grade accreditation.",
+    "campus": "Kongkhampat, Nambol",
+    "officialUrl": "https://skwomenscollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Govt Aided)",
+    "sources": [
+      "https://skwomenscollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government Aided",
+      "establishedYear": "1981",
+      "district": "Bishnupur",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "imphal-college",
+    "name": "Imphal College",
+    "shortName": "Imphal College",
+    "location": "Imphal West, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "One of the oldest government colleges in the state, offering courses in science and arts.",
+    "campus": "Airport Road",
+    "officialUrl": "https://www.imphalcollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.imphalcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1952",
+      "district": "Imphal West",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "manipur-college",
+    "name": "Manipur College",
+    "shortName": "Manipur College",
+    "location": "Singjamei, Imphal West, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A co-educational government college located in Singjamei, affiliated to Manipur University.",
+    "campus": "Singjamei",
+    "officialUrl": "https://www.manipurcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.manipurcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1958",
+      "district": "Imphal West",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "oriental-college-imphal",
+    "name": "Oriental College",
+    "shortName": "Oriental College",
+    "location": "Takyel, Imphal West, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "An autonomous government college offering undergraduate courses in arts and science.",
+    "campus": "Takyel",
+    "officialUrl": "https://www.orientalcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.orientalcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University (Autonomous)"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1963",
+      "district": "Imphal West",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "modern-college-imphal",
+    "name": "Modern College",
+    "shortName": "Modern College",
+    "location": "Porompat, Imphal East, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A government college situated in Imphal East, providing higher education in arts and science.",
+    "campus": "Porompat",
+    "officialUrl": "https://moderncollegeimphal.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://moderncollegeimphal.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1963",
+      "district": "Imphal East",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "standard-college-kongba",
+    "name": "Standard College",
+    "shortName": "Standard College",
+    "location": "Kongba, Imphal East, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A government college in Imphal East known for its arts and science programs.",
+    "campus": "Kongba",
+    "officialUrl": "https://standardcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://standardcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1964",
+      "district": "Imphal East",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "churachandpur-college",
+    "name": "Churachandpur College",
+    "shortName": "CC College",
+    "location": "Churachandpur, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest college in the Churachandpur district, serving a large tribal student population.",
+    "campus": "Hiangtam Lamka",
+    "officialUrl": "https://churachandpurcollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://churachandpurcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1964",
+      "district": "Churachandpur",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "rayburn-college",
+    "name": "Rayburn College",
+    "shortName": "Rayburn College",
+    "location": "Churachandpur, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A prominent private Christian college in Churachandpur, offering arts, science, and commerce streams.",
+    "campus": "Gangpimual",
+    "officialUrl": "https://rayburncollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://rayburncollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "1994",
+      "district": "Churachandpur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "united-college-chandel",
+    "name": "United College, Chandel",
+    "shortName": "United College",
+    "location": "Chandel, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "The only higher education institution in the remote Chandel district, playing a vital role in tribal education.",
+    "campus": "Lambung",
+    "officialUrl": "https://www.unitedcollegechandel.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.unitedcollegechandel.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1980",
+      "district": "Chandel",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "pettigrew-college-ukhrul",
+    "name": "Pettigrew College",
+    "shortName": "Pettigrew College",
+    "location": "Ukhrul, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A government college located in the hill district of Ukhrul, named after the pioneer missionary William Pettigrew.",
+    "campus": "Meizailung",
+    "officialUrl": "https://pettigrewcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://pettigrewcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1965",
+      "district": "Ukhrul",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "lilong-haoreibi-college",
+    "name": "Lilong Haoreibi College",
+    "shortName": "LHC",
+    "location": "Lilong, Thoubal, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A government college situated in a minority-concentrated area of Thoubal district.",
+    "campus": "Lilong Ushoipokpi",
+    "officialUrl": "https://www.lilonghaoreibicollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.lilonghaoreibicollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1976",
+      "district": "Thoubal",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "thoubal-college",
+    "name": "Thoubal College",
+    "shortName": "Thoubal College",
+    "location": "Thoubal, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A premier government college in Thoubal district offering undergraduate education.",
+    "campus": "Thoubal",
+    "officialUrl": "https://thoubalcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://thoubalcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1963",
+      "district": "Thoubal",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "moirang-college",
+    "name": "Moirang College",
+    "shortName": "Moirang College",
+    "location": "Moirang, Bishnupur, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A government college located near the historical INA complex and Loktak Lake.",
+    "campus": "Moirang",
+    "officialUrl": "https://moirangcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://moirangcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1963",
+      "district": "Bishnupur",
+      "naacGrade": "B+"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "bir-tikendrajit-university",
+    "name": "Bir Tikendrajit University",
+    "shortName": "BTU",
+    "location": "Canchipur, Imphal West, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A private university established by the Manipur State Legislature, offering various technical and non-technical courses.",
+    "campus": "Canchipur",
+    "officialUrl": "https://www.birtikendrajituniversity.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech/MBA/BBA",
+        "degree": "Bachelor/Master",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.birtikendrajituniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2020",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sangai-international-university",
+    "name": "Sangai International University",
+    "shortName": "SIU",
+    "location": "Churachandpur, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A private university in Churachandpur district, offering diverse courses.",
+    "campus": "Rengkai",
+    "officialUrl": "https://sangaiinternationaluniversity.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://sangaiinternationaluniversity.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2015",
+      "district": "Churachandpur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "manipur-international-university",
+    "name": "Manipur International University",
+    "shortName": "MIU",
+    "location": "Imphal, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "An autonomous state statutory international university.",
+    "campus": "Ghari",
+    "officialUrl": "https://www.miu.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "Management/Law/Science",
+        "degree": "Bachelor/Master",
+        "duration": "Var",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.miu.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private/Statutory",
+      "establishedYear": "2018",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-polytechnic-imphal",
+    "name": "Government Polytechnic Imphal",
+    "shortName": "GP Imphal",
+    "location": "Takyelpat, Imphal West, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest polytechnic institute in the state, offering diploma courses in engineering.",
+    "campus": "Takyelpat",
+    "officialUrl": "https://gpimphal.ac.in",
+    "acceptedExams": [
+      "state-polytechnic-entrance"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Engineering (Civil, EE, ME, ECE)",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "state-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "state-polytechnic-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Govt)",
+    "sources": [
+      "https://gpimphal.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "State Tech Council"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1956",
+      "district": "Imphal West",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "nielit-imphal",
+    "name": "National Institute of Electronics & Information Technology Imphal",
+    "shortName": "NIELIT Imphal",
+    "location": "Akampat, Imphal East, Manipur",
+    "rankingTier": "Tier 2",
+    "overview": "A premier institute for electronics and IT education, affiliated to Manipur University for BCA/MCA/M.Sc degrees.",
+    "campus": "Akampat",
+    "officialUrl": "https://nielit.gov.in/imphal",
+    "acceptedExams": [
+      "merit",
+      "institute-entrance"
+    ],
+    "courses": [
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "institute-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "institute-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "IT Companies"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://nielit.gov.in/imphal"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University",
+        "MeitY"
+      ],
+      "ownership": "Central Govt (Autonomous)",
+      "establishedYear": "1988",
+      "district": "Imphal East",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ci-college-bishnupur",
+    "name": "C.I. College",
+    "shortName": "CI College",
+    "location": "Bishnupur, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A government college in Bishnupur district offering arts and science education.",
+    "campus": "Bishnupur",
+    "officialUrl": "https://cicollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://cicollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1965",
+      "district": "Bishnupur",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "ng-college-imphal",
+    "name": "N.G. College",
+    "shortName": "NG College",
+    "location": "Lamphelpat, Imphal West, Manipur",
+    "rankingTier": "Tier 3",
+    "overview": "A government college affiliated to Manipur University, situated in Lamphelpat.",
+    "campus": "Lamphelpat",
+    "officialUrl": "https://ngcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://ngcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Manipur University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1970",
+      "district": "Imphal West",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-imphal",
+    "name": "National Institute of Technology Manipur",
+    "shortName": "National Institute of Technology Manipur",
+    "location": "Imphal, Imphal District, Manipur",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Imphal",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Imphal",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

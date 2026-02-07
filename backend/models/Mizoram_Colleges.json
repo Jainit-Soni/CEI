@@ -1,0 +1,2163 @@
+[
+  {
+    "id": "mizoram-university",
+    "name": "Mizoram University",
+    "shortName": "MZU",
+    "location": "Tanhril, Aizawl, Mizoram",
+    "rankingTier": "Tier 1",
+    "overview": "A Central University accredited with NAAC 'A' Grade, serving as the primary affiliating body for colleges in the state. It offers a wide array of UG, PG, and doctoral programs.",
+    "campus": "Tanhril",
+    "officialUrl": "https://mzu.edu.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EE, CE, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A./M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "mat",
+          "cat",
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "Infosys",
+      "PowerGrid"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://mzu.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "2001",
+      "district": "Aizawl",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-mizoram",
+    "name": "National Institute of Technology Mizoram",
+    "shortName": "NIT Mizoram",
+    "location": "Aizawl, Mizoram",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance established in 2010. It currently operates from a temporary campus in Chaltlang while its permanent campus comes up in Lengpui.",
+    "campus": "Chaltlang (Temporary)",
+    "officialUrl": "https://www.nitmz.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, ME, CE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "Ph.D",
+        "degree": "Ph.D",
+        "duration": "3-5 years",
+        "exams": [
+          "gate",
+          "net"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~35000-45000 Rank (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "L&T",
+      "Capgemini",
+      "IBM",
+      "Cognizant",
+      "TCS"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://www.nitmz.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2010",
+      "district": "Aizawl",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "zoram-medical-college",
+    "name": "Zoram Medical College",
+    "shortName": "ZMC",
+    "location": "Falkawn, Aizawl, Mizoram",
+    "rankingTier": "Tier 1",
+    "overview": "The first and only medical college in Mizoram, formerly known as MIMER. It is a state government institution attached to the State Referral Hospital.",
+    "campus": "Falkawn",
+    "officialUrl": "https://zmc.edu.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~450 Score"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals",
+      "Health Services"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://zmc.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Mizoram University",
+        "NMC"
+      ],
+      "ownership": "State Government",
+      "establishedYear": "2018",
+      "district": "Aizawl",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "ripans-aizawl",
+    "name": "Regional Institute of Paramedical and Nursing Sciences",
+    "shortName": "RIPANS",
+    "location": "Zemabawk, Aizawl, Mizoram",
+    "rankingTier": "Tier 2",
+    "overview": "An autonomous institute under the Ministry of Health & Family Welfare, Govt. of India, set up to provide paramedical and nursing education to the North East region.",
+    "campus": "Zemabawk",
+    "officialUrl": "https://ripans.ac.in",
+    "acceptedExams": [
+      "ripans-entrance-test",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Sc MLT",
+        "degree": "B.Sc",
+        "duration": "3.5 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ripans-entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Apollo Hospitals",
+      "Fortis",
+      "Max Healthcare"
+    ],
+    "tuition": "Low (Central Govt Subsidized)",
+    "sources": [
+      "https://ripans.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University",
+        "INC",
+        "PCI"
+      ],
+      "ownership": "Central Govt (Autonomous)",
+      "establishedYear": "1996",
+      "district": "Aizawl",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "pachhunga-university-college",
+    "name": "Pachhunga University College",
+    "shortName": "PUC",
+    "location": "College Veng, Aizawl, Mizoram",
+    "rankingTier": "Tier 2",
+    "overview": "The only constituent college of Mizoram University and the oldest college in the state. It is NAAC 'A+' accredited and serves as a model undergraduate institution.",
+    "campus": "College Veng",
+    "officialUrl": "https://pucollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://pucollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Central Govt (Constituent)",
+      "establishedYear": "1958",
+      "district": "Aizawl",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "college-of-veterinary-sciences-ah-selesih",
+    "name": "College of Veterinary Sciences & Animal Husbandry, Selesih",
+    "shortName": "CVSc & AH Mizoram",
+    "location": "Selesih, Aizawl, Mizoram",
+    "rankingTier": "Tier 2",
+    "overview": "A constituent college of the Central Agricultural University (Imphal), dedicated to veterinary education and research.",
+    "campus": "Selesih",
+    "officialUrl": "https://cvsccauaizawl.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "Bachelor of Veterinary Science",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug",
+          "icar-aieea"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://cvsccauaizawl.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Central Agricultural University",
+        "VCI"
+      ],
+      "ownership": "Central University Constituent",
+      "establishedYear": "1997",
+      "district": "Aizawl",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "icfai-university-mizoram",
+    "name": "The ICFAI University, Mizoram",
+    "shortName": "ICFAI Mizoram",
+    "location": "Durtlang North, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A private university established under the Mizoram State Act, offering management, commerce, and arts programs.",
+    "campus": "Durtlang North",
+    "officialUrl": "https://www.iumizoram.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.iumizoram.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2006",
+      "district": "Aizawl",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-zirtiri-residential-science-college",
+    "name": "Government Zirtiri Residential Science College",
+    "shortName": "GZRSC",
+    "location": "Ramhmun, Aizawl, Mizoram",
+    "rankingTier": "Tier 2",
+    "overview": "A premier government science college in Aizawl, offering undergraduate science degrees.",
+    "campus": "Ramhmun",
+    "officialUrl": "https://www.gzrsc.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Physics, Chem, Math, Botany, Zoology, Home Science)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.gzrsc.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1980",
+      "district": "Aizawl",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "govt-hrangbana-college",
+    "name": "Government Hrangbana College",
+    "shortName": "GHBC",
+    "location": "Chanmari, Aizawl, Mizoram",
+    "rankingTier": "Tier 2",
+    "overview": "A leading government college in Aizawl, particularly strong in Commerce and Arts. Accredited with NAAC 'A' grade.",
+    "campus": "Chanmari",
+    "officialUrl": "https://www.ghbc.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.ghbc.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1980",
+      "district": "Aizawl",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "govt-t-romana-college",
+    "name": "Government T. Romana College",
+    "shortName": "GTRC",
+    "location": "Republic Veng, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A prominent government college affiliated to Mizoram University, offering arts courses.",
+    "campus": "Republic Veng",
+    "officialUrl": "https://trcollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://trcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1992",
+      "district": "Aizawl",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-aizawl-north-college",
+    "name": "Government Aizawl North College",
+    "shortName": "GANC",
+    "location": "Ramhlun North, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college offering undergraduate courses in arts and humanities.",
+    "campus": "Ramhlun North",
+    "officialUrl": "https://ganc.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://ganc.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1988",
+      "district": "Aizawl",
+      "naacGrade": "B+"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-aizawl-west-college",
+    "name": "Government Aizawl West College",
+    "shortName": "GAWC",
+    "location": "Dawrpui Veng, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "Located in the western part of Aizawl, providing arts education to a large number of students.",
+    "campus": "Dawrpui Veng",
+    "officialUrl": "https://gawc.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gawc.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1990",
+      "district": "Aizawl",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-johnson-college",
+    "name": "Government Johnson College",
+    "shortName": "Johnson College",
+    "location": "Shivaji Tillah, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college in Aizawl, known for its history and arts programs.",
+    "campus": "Shivaji Tillah",
+    "officialUrl": "https://johnsoncollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://johnsoncollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1993",
+      "district": "Aizawl",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-j-thankima-college",
+    "name": "Government J. Thankima College",
+    "shortName": "GJTC",
+    "location": "Bawngkawn, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college serving the Bawngkawn area, affiliated with Mizoram University.",
+    "campus": "Bawngkawn",
+    "officialUrl": "https://gjtc.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gjtc.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1992",
+      "district": "Aizawl",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-lunglei-college",
+    "name": "Lunglei Government College",
+    "shortName": "LGC",
+    "location": "Lunglei, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "The premier higher education institution in the southern district of Lunglei.",
+    "campus": "Lunglei",
+    "officialUrl": "https://lgc.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://lgc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1964",
+      "district": "Lunglei",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-champhai-college",
+    "name": "Government Champhai College",
+    "shortName": "GCC",
+    "location": "Champhai, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college located near the Myanmar border, offering arts, science, and commerce streams.",
+    "campus": "Vengsang",
+    "officialUrl": "https://gcc.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gcc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1971",
+      "district": "Champhai",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-serchhip-college",
+    "name": "Government Serchhip College",
+    "shortName": "Serchhip College",
+    "location": "Serchhip, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college serving the Serchhip district, offering undergraduate courses.",
+    "campus": "Serchhip",
+    "officialUrl": "https://serchhipcollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://serchhipcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1973",
+      "district": "Serchhip",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-saiha-college",
+    "name": "Government Saiha College",
+    "shortName": "Saiha College",
+    "location": "Saiha, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "Situated in the southern tip of Mizoram, serving the Mara Autonomous District Council area.",
+    "campus": "Saiha",
+    "officialUrl": "https://saihacollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://saihacollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1978",
+      "district": "Saiha",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-lawngtlai-college",
+    "name": "Government Lawngtlai College",
+    "shortName": "Lawngtlai College",
+    "location": "Lawngtlai, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college serving the Lai Autonomous District Council area.",
+    "campus": "Lawngtlai",
+    "officialUrl": "https://lawngtlaicollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://lawngtlaicollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1981",
+      "district": "Lawngtlai",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-mamit-college",
+    "name": "Government Mamit College",
+    "shortName": "Mamit College",
+    "location": "Mamit, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "The primary higher education institution in the western district of Mamit.",
+    "campus": "Mamit",
+    "officialUrl": "https://mamitcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mamitcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1983",
+      "district": "Mamit",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-kolasib-college",
+    "name": "Government Kolasib College",
+    "shortName": "Kolasib College",
+    "location": "Kolasib, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college in the northern district of Kolasib.",
+    "campus": "Kolasib",
+    "officialUrl": "https://kolasibcollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://kolasibcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1978",
+      "district": "Kolasib",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-saitual-college",
+    "name": "Government Saitual College",
+    "shortName": "Saitual College",
+    "location": "Saitual, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college in the newly created Saitual district.",
+    "campus": "Saitual",
+    "officialUrl": "https://saitualcollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://saitualcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1984",
+      "district": "Saitual",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-khawzawl-college",
+    "name": "Government Khawzawl College",
+    "shortName": "Khawzawl College",
+    "location": "Khawzawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "Providing higher education to students in the Khawzawl district.",
+    "campus": "Khawzawl",
+    "officialUrl": "https://khawzawlcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://khawzawlcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1985",
+      "district": "Khawzawl",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-hnahthial-college",
+    "name": "Government Hnahthial College",
+    "shortName": "Hnahthial College",
+    "location": "Hnahthial, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college in Hnahthial district.",
+    "campus": "Hnahthial",
+    "officialUrl": "https://hnahthialcollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://hnahthialcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1979",
+      "district": "Hnahthial",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-zawlnuam-college",
+    "name": "Government Zawlnuam College",
+    "shortName": "Zawlnuam College",
+    "location": "Zawlnuam, Mamit, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government college serving the western border areas of Mizoram.",
+    "campus": "Zawlnuam",
+    "officialUrl": "https://zawlnuamcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://zawlnuamcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1986",
+      "district": "Mamit",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "hatim-lunglei",
+    "name": "Higher and Technical Institute of Mizoram",
+    "shortName": "HATIM",
+    "location": "Lunglei, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A private Christian college run by the Baptist Church of Mizoram, offering professional and general courses.",
+    "campus": "Kawmzawl, Lunglei",
+    "officialUrl": "https://hatim.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BSW",
+        "degree": "Bachelor of Social Work",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://hatim.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2007",
+      "district": "Lunglei",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "mizoram-law-college",
+    "name": "Government Mizoram Law College",
+    "shortName": "Mizoram Law College",
+    "location": "Luangmual, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "The premier government law college in the state, offering LL.B. degree.",
+    "campus": "Luangmual",
+    "officialUrl": "https://mlc.edu.in",
+    "acceptedExams": [
+      "state-entrance"
+    ],
+    "courses": [
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "merit",
+          "entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "state-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mlc.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University",
+        "BCI"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1983",
+      "district": "Aizawl",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "iase-mizoram",
+    "name": "Institute of Advanced Study in Education",
+    "shortName": "IASE Mizoram",
+    "location": "Republic Veng, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government teacher education institute offering B.Ed and M.Ed programs.",
+    "campus": "Republic Veng",
+    "officialUrl": "https://iasemizoram.edu.in",
+    "acceptedExams": [
+      "cuet-pg",
+      "state-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.Ed",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "state-entrance"
+        ]
+      },
+      {
+        "name": "M.Ed",
+        "degree": "M.Ed",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "state-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Schools",
+      "Colleges"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://iasemizoram.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University",
+        "NCTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1975",
+      "district": "Aizawl",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "nielit-aizawl",
+    "name": "National Institute of Electronics & Information Technology Aizawl",
+    "shortName": "NIELIT Aizawl",
+    "location": "Zuangtui, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A central government institute offering IT and electronics courses, affiliated to Mizoram University for BCA/MCA.",
+    "campus": "Industrial Estate, Zuangtui",
+    "officialUrl": "https://nielit.gov.in/aizawl",
+    "acceptedExams": [
+      "merit",
+      "institute-entrance"
+    ],
+    "courses": [
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "institute-entrance"
+        ]
+      },
+      {
+        "name": "Diploma in Electronics (DE&CE)",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "institute-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "IT Companies"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://nielit.gov.in/aizawl"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Mizoram University",
+        "AICTE"
+      ],
+      "ownership": "Central Govt (Autonomous)",
+      "establishedYear": "2001",
+      "district": "Aizawl",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "mizoram-polytechnic-lunglei",
+    "name": "Mizoram Polytechnic Lunglei",
+    "shortName": "MPL",
+    "location": "Lunglei, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest government polytechnic in Mizoram offering diploma engineering courses.",
+    "campus": "Hrangchalang",
+    "officialUrl": "https://mpl.edu.in",
+    "acceptedExams": [
+      "mizoram-technical-entrance-exam"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/Electrical/Mechanical/CSE",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "mzee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "mizoram-technical-entrance-exam",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mpl.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "Mizoram State Council for Technical Education"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1981",
+      "district": "Lunglei",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "womens-polytechnic-aizawl",
+    "name": "Women's Polytechnic Aizawl",
+    "shortName": "WPA",
+    "location": "Durtlang, Aizawl, Mizoram",
+    "rankingTier": "Tier 3",
+    "overview": "A government polytechnic institute exclusively for women, offering diploma courses in modern office practice, electronics, and beauty culture.",
+    "campus": "Durtlang",
+    "officialUrl": "https://womenspolytechnic.mizoram.gov.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Electronics & Telecommunication",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "Diploma in Modern Office Practice",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://womenspolytechnic.mizoram.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "Mizoram State Council for Technical Education"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1998",
+      "district": "Aizawl",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-aizawl",
+    "name": "National Institute of Technology Mizoram",
+    "shortName": "National Institute of Technology Mizoram",
+    "location": "Aizawl, Aizawl District, Mizoram",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Aizawl",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Aizawl",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

@@ -1,0 +1,760 @@
+[
+  {
+    "id": "university-of-ladakh",
+    "name": "University of Ladakh",
+    "shortName": "UoL",
+    "location": "Leh/Kargil, Ladakh",
+    "rankingTier": "Tier 2",
+    "overview": "The first and only state university in the UT, established in 2019. It functions as a cluster university with administrative hubs in both Leh and Kargil, affiliating all degree colleges in the region.",
+    "campus": "Melongthang, Leh (HQ) / Silkote, Kargil",
+    "officialUrl": "https://uol.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "Integrated B.Sc-M.Sc",
+        "degree": "Integrated Master",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://uol.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2019",
+      "district": "Leh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "central-institute-of-buddhist-studies",
+    "name": "Central Institute of Buddhist Studies",
+    "shortName": "CIBS",
+    "location": "Choglamsar, Leh, Ladakh",
+    "rankingTier": "Tier 1",
+    "overview": "A Deemed-to-be University under the Ministry of Culture, Govt. of India. It is a premier institute for Buddhist philosophy, literature, and art.",
+    "campus": "Choglamsar",
+    "officialUrl": "https://cibs.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "institute-entrance"
+    ],
+    "courses": [
+      {
+        "name": "Shastri (B.A.)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "Acharya (M.A.)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.A. in Bhot Bodhi",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "institute-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Academic Institutions",
+      "Research Centers"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://cibs.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Central Govt (Ministry of Culture)",
+      "establishedYear": "1959",
+      "district": "Leh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-sowa-rigpa",
+    "name": "National Institute of Sowa Rigpa",
+    "shortName": "NISR",
+    "location": "Leh, Ladakh",
+    "rankingTier": "Tier 2",
+    "overview": "An autonomous institute under the Ministry of AYUSH, dedicated to the preservation and promotion of Sowa-Rigpa (Tibetan Medicine) system.",
+    "campus": "Skalzangling",
+    "officialUrl": "https://nisr.kvs.ac.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.S.R.M.S (Bachelor of Sowa Rigpa Medicine and Surgery)",
+        "degree": "Bachelor",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "AYUSH Hospitals"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://nisr.kvs.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Ladakh",
+        "Ministry of AYUSH"
+      ],
+      "ownership": "Central Govt (Autonomous)",
+      "establishedYear": "2010",
+      "district": "Leh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "government-medical-college-leh",
+    "name": "Government Medical College, Leh",
+    "shortName": "GMC Leh",
+    "location": "Leh, Ladakh",
+    "rankingTier": "Tier 2",
+    "overview": "The first medical college in the Union Territory, established to improve healthcare infrastructure and education in the high-altitude region.",
+    "campus": "SNM Hospital Campus",
+    "officialUrl": "https://gmc.ladakh.gov.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "AIQ Rank ~18000"
+      }
+    ],
+    "topRecruiters": [
+      "Government Health Services"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gmc.ladakh.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "University of Ladakh",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2022",
+      "district": "Leh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "eliezer-joldan-memorial-college-leh",
+    "name": "Eliezer Joldan Memorial College",
+    "shortName": "EJM College",
+    "location": "Leh, Ladakh",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest and premier general degree college in Leh district, offering Arts, Science, and Commerce streams.",
+    "campus": "Leh",
+    "officialUrl": "https://ejmcollege.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://ejmcollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Ladakh"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1994",
+      "district": "Leh",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-degree-college-kargil",
+    "name": "Government Degree College, Kargil",
+    "shortName": "GDC Kargil",
+    "location": "Kargil, Ladakh",
+    "rankingTier": "Tier 3",
+    "overview": "The premier higher education institution in Kargil district, situated on the banks of the Suru river.",
+    "campus": "Khumbathang",
+    "officialUrl": "https://gdckargil.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gdckargil.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Ladakh"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1995",
+      "district": "Kargil",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-degree-college-nubra",
+    "name": "Government Degree College, Nubra",
+    "shortName": "GDC Nubra",
+    "location": "Diskit, Nubra, Ladakh",
+    "rankingTier": "Tier 3",
+    "overview": "Serving the remote Nubra Valley, this college provides access to higher education for students in the northernmost part of Ladakh.",
+    "campus": "Diskit",
+    "officialUrl": "https://gdcnubra.org",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gdcnubra.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Ladakh"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2011",
+      "district": "Leh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-degree-college-zanskar",
+    "name": "Government Degree College, Zanskar",
+    "shortName": "GDC Zanskar",
+    "location": "Padum, Zanskar, Ladakh",
+    "rankingTier": "Tier 3",
+    "overview": "Located in the remote Zanskar sub-division, this college is crucial for the educational needs of the local tribal population.",
+    "campus": "Padum",
+    "officialUrl": "https://gdczanskar.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gdczanskar.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Ladakh"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2011",
+      "district": "Kargil",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-degree-college-drass",
+    "name": "Government Degree College, Drass",
+    "shortName": "GDC Drass",
+    "location": "Drass, Kargil, Ladakh",
+    "rankingTier": "Tier 3",
+    "overview": "Located in the second coldest inhabited place in the world, this college serves the student community of Drass.",
+    "campus": "Drass",
+    "officialUrl": "https://gdcdrass.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gdcdrass.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Ladakh"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2018",
+      "district": "Kargil",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-degree-college-khaltsi",
+    "name": "Government Degree College, Khaltsi",
+    "shortName": "GDC Khaltsi",
+    "location": "Khaltsi, Leh, Ladakh",
+    "rankingTier": "Tier 3",
+    "overview": "A newly established government college serving the Sham region of Leh district.",
+    "campus": "Khaltsi",
+    "officialUrl": "https://gdckhaltsi.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gdckhaltsi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Ladakh"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2019",
+      "district": "Leh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-polytechnic-leh",
+    "name": "Government Polytechnic, Leh",
+    "shortName": "GP Leh",
+    "location": "Leh, Ladakh",
+    "rankingTier": "Tier 3",
+    "overview": "The premier technical institute in Leh offering diploma courses in engineering disciplines.",
+    "campus": "Leh",
+    "officialUrl": "https://gpleh.org",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/Electrical/Computer Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gpleh.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "J&K Board of Technical Education"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1987",
+      "district": "Leh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-polytechnic-kargil",
+    "name": "Government Polytechnic, Kargil",
+    "shortName": "GP Kargil",
+    "location": "Kargil, Ladakh",
+    "rankingTier": "Tier 3",
+    "overview": "A technical institute in Kargil providing diploma education to local youth.",
+    "campus": "Kargil",
+    "officialUrl": "https://gpkargil.org",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/Electrical/Computer Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gpkargil.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "J&K Board of Technical Education"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2012",
+      "district": "Kargil",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  }
+]

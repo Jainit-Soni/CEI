@@ -1,0 +1,1870 @@
+[
+  {
+    "id": "iim-shillong",
+    "name": "Indian Institute of Management Shillong",
+    "shortName": "IIM Shillong",
+    "location": "Umsawli, East Khasi Hills, Meghalaya",
+    "rankingTier": "Tier 1",
+    "overview": "The seventh IIM established in India, known for its picturesque campus in the 'Scotland of the East' and a strong focus on sustainability and management education.",
+    "campus": "Umsawli",
+    "officialUrl": "https://www.iimshillong.ac.in",
+    "acceptedExams": [
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "PGP (MBA)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "PGPEx",
+        "degree": "MBA (Executive)",
+        "duration": "1 year",
+        "exams": [
+          "cat",
+          "gmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "92+ percentile"
+      }
+    ],
+    "topRecruiters": [
+      "Goldman Sachs",
+      "Deloitte",
+      "Mahindra",
+      "ITC"
+    ],
+    "tuition": "₹15,00,000 - ₹20,00,000 (Approx)",
+    "sources": [
+      "https://www.iimshillong.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2007",
+      "district": "East Khasi Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-meghalaya",
+    "name": "National Institute of Technology Meghalaya",
+    "shortName": "NIT Meghalaya",
+    "location": "Sohra (Cherrapunji) / Shillong, Meghalaya",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance offering advanced engineering education. While operating from Shillong, it is moving to its permanent campus in Sohra.",
+    "campus": "Bijni Complex, Laitumkhrah (Transit)",
+    "officialUrl": "https://www.nitm.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, ME, CE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~20000 Rank (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Amazon",
+      "Capgemini",
+      "Infosys"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://www.nitm.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2010",
+      "district": "East Khasi Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "north-eastern-hill-university",
+    "name": "North-Eastern Hill University",
+    "shortName": "NEHU",
+    "location": "Shillong, Meghalaya",
+    "rankingTier": "Tier 1",
+    "overview": "A Central University established to improve the social and economic conditions of the hill areas. It is the primary affiliating university for Meghalaya.",
+    "campus": "Umshing Mawkynroh",
+    "officialUrl": "https://nehu.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (IT, ECE, BME, EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "mat",
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://nehu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1973",
+      "district": "East Khasi Hills",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "neigrihms-shillong",
+    "name": "North Eastern Indira Gandhi Regional Institute of Health and Medical Sciences",
+    "shortName": "NEIGRIHMS",
+    "location": "Mawdiangdiang, Shillong, Meghalaya",
+    "rankingTier": "Tier 1",
+    "overview": "An autonomous institute under the Ministry of Health and Family Welfare, Govt. of India. It is the premier medical institute and tertiary care centre in the Northeast.",
+    "campus": "Mawdiangdiang",
+    "officialUrl": "https://neigrihms.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "AIQ Rank ~5000"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals",
+      "Healthcare Services"
+    ],
+    "tuition": "Very Low (Govt Subsidized)",
+    "sources": [
+      "https://neigrihms.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "NEHU",
+        "NMC",
+        "INC"
+      ],
+      "ownership": "Central Govt (Autonomous)",
+      "establishedYear": "1987",
+      "district": "East Khasi Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nift-shillong",
+    "name": "National Institute of Fashion Technology Shillong",
+    "shortName": "NIFT Shillong",
+    "location": "Umsawli, Shillong, Meghalaya",
+    "rankingTier": "Tier 1",
+    "overview": "A premier institute for fashion education, offering degrees in fashion design and accessories, located in the New Shillong Township.",
+    "campus": "Umsawli",
+    "officialUrl": "https://nift.ac.in/shillong",
+    "acceptedExams": [
+      "nift-entrance-exam"
+    ],
+    "courses": [
+      {
+        "name": "B.Des (Fashion Design, Accessory Design, Fashion Comm)",
+        "degree": "Bachelor of Design",
+        "duration": "4 years",
+        "exams": [
+          "nift-entrance-exam"
+        ]
+      },
+      {
+        "name": "MFM",
+        "degree": "Master of Fashion Management",
+        "duration": "2 years",
+        "exams": [
+          "nift-entrance-exam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nift-entrance-exam",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Arvind",
+      "Benetton",
+      "Madura Garments"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://nift.ac.in/shillong"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Ministry of Textiles"
+      ],
+      "ownership": "Central Govt (Statutory)",
+      "establishedYear": "2008",
+      "district": "East Khasi Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "ihm-shillong",
+    "name": "Institute of Hotel Management Catering Technology & Applied Nutrition",
+    "shortName": "IHM Shillong",
+    "location": "Mawkasiang, Shillong, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "A central government institute under the Ministry of Tourism, providing top-tier hospitality education.",
+    "campus": "Mawkasiang",
+    "officialUrl": "http://www.ihmshillong.nic.in",
+    "acceptedExams": [
+      "nchmct-jee"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hospitality & Hotel Administration)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "nchmct-jee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nchmct-jee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Taj Group",
+      "Oberoi",
+      "Marriott"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://www.ihmshillong.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NCHMCT",
+        "IGNOU"
+      ],
+      "ownership": "Central Govt",
+      "establishedYear": "2002",
+      "district": "East Khasi Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "eflu-shillong",
+    "name": "English and Foreign Languages University, Shillong Campus",
+    "shortName": "EFLU Shillong",
+    "location": "Shillong, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "A campus of the Hyderabad-based Central University, specializing in English and foreign languages education.",
+    "campus": "NEHU Campus",
+    "officialUrl": "https://www.efluniversity.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (English/Mass Comm)",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A. (English/Linguistics)",
+        "degree": "M.A.",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.efluniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1973",
+      "district": "East Khasi Hills",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "st-anthonys-college-shillong",
+    "name": "St. Anthony's College",
+    "shortName": "St. Anthony's",
+    "location": "Laitumkhrah, Shillong, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "One of the most prestigious colleges in the Northeast, established by the Salesians of Don Bosco. It was the first in the region to be accredited with 'A' grade by NAAC.",
+    "campus": "Bomfyle Road",
+    "officialUrl": "https://anthonys.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "college-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "college-entrance"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "college-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "college-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Wipro",
+      "Infosys"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://anthonys.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU"
+      ],
+      "ownership": "Private (Minority/Aided)",
+      "establishedYear": "1934",
+      "district": "East Khasi Hills",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "st-edmunds-college-shillong",
+    "name": "St. Edmund's College",
+    "shortName": "St. Edmund's",
+    "location": "Laitumkhrah, Shillong, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "A premier Catholic institution run by the Congregation of Christian Brothers, offering diverse courses in arts, science, and social work.",
+    "campus": "Laitumkhrah",
+    "officialUrl": "http://sec.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MSW",
+        "degree": "Master of Social Work",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "http://sec.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU"
+      ],
+      "ownership": "Private (Minority/Aided)",
+      "establishedYear": "1923",
+      "district": "East Khasi Hills",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "lady-keane-college",
+    "name": "Lady Keane College",
+    "shortName": "Lady Keane",
+    "location": "Shillong, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "A pioneer in women's education in Northeast India, offering undergraduate courses in liberal arts and sciences.",
+    "campus": "Cantonment Area",
+    "officialUrl": "https://www.ladykeanecollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Bachelor of Tourism and Travel Management)",
+        "degree": "BTTM",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.ladykeanecollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU"
+      ],
+      "ownership": "Private (Aided)",
+      "establishedYear": "1935",
+      "district": "East Khasi Hills",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "university-of-science-and-technology-meghalaya",
+    "name": "University of Science and Technology Meghalaya",
+    "shortName": "USTM",
+    "location": "Baridua, Ri-Bhoi, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "A prominent private university located near the Assam-Meghalaya border, offering a wide range of technical and professional courses.",
+    "campus": "Techno City, Baridua",
+    "officialUrl": "https://www.ustm.ac.in",
+    "acceptedExams": [
+      "ustm-entrance",
+      "cuet-ug",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "ustm-entrance"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ustm-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.ustm.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "PCI",
+        "BCI"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2008",
+      "district": "Ri Bhoi",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "martin-luther-christian-university",
+    "name": "Martin Luther Christian University",
+    "shortName": "MLCU",
+    "location": "Nongrah, Shillong, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "A private Christian university focusing on experiential learning and community-oriented programs like social work, counseling, and allied health.",
+    "campus": "Dongktieh, Nongrah",
+    "officialUrl": "https://www.mlcuniv.in",
+    "acceptedExams": [
+      "university-entrance"
+    ],
+    "courses": [
+      {
+        "name": "BSW/MSW",
+        "degree": "Social Work",
+        "duration": "3/2 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Sc (Medical Laboratory Technology)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "NGOs",
+      "Hospitals"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.mlcuniv.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2006",
+      "district": "East Khasi Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "william-carey-university-meghalaya",
+    "name": "William Carey University",
+    "shortName": "WCU",
+    "location": "Umsning, Ri-Bhoi, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "A private university established to provide higher education with a focus on environmental and social sciences.",
+    "campus": "Umsning",
+    "officialUrl": "https://williamcareyuniversity.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://williamcareyuniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2005",
+      "district": "Ri Bhoi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "icfai-university-meghalaya",
+    "name": "The ICFAI University, Meghalaya",
+    "shortName": "ICFAI Meghalaya",
+    "location": "Shillong, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "Part of the ICFAI group, focusing on management and computer application studies.",
+    "campus": "Dhankheti",
+    "officialUrl": "https://www.iumeghalaya.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.iumeghalaya.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2005",
+      "district": "East Khasi Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "mahatma-gandhi-university-meghalaya",
+    "name": "Mahatma Gandhi University",
+    "shortName": "MGU Meghalaya",
+    "location": "Khanapara, Ri-Bhoi, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "A private university located near the Guwahati border, offering various degree programs.",
+    "campus": "Khanapara",
+    "officialUrl": "https://www.mgu.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc/BBA",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.mgu.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2010",
+      "district": "Ri Bhoi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "shillong-college",
+    "name": "Shillong College",
+    "shortName": "Shillong College",
+    "location": "Laitumkhrah, Shillong, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "A prominent co-educational college in Shillong, offering courses in arts, science, commerce, and management.",
+    "campus": "Laitumkhrah",
+    "officialUrl": "http://shillongcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "http://shillongcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU"
+      ],
+      "ownership": "Private (Aided)",
+      "establishedYear": "1956",
+      "district": "East Khasi Hills",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sankardev-college-shillong",
+    "name": "Sankardev College",
+    "shortName": "Sankardev College",
+    "location": "Bishnupur, Shillong, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "A well-established college in Shillong offering undergraduate courses in Arts and Science.",
+    "campus": "Bishnupur",
+    "officialUrl": "https://sankardevcollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://sankardevcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU"
+      ],
+      "ownership": "Private (Aided)",
+      "establishedYear": "1962",
+      "district": "East Khasi Hills",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "union-christian-college-meghalaya",
+    "name": "Union Christian College",
+    "shortName": "UCC",
+    "location": "Umiam, Ri-Bhoi, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "Located near the picturesque Umiam Lake, UCC is a residential college offering arts and science programs.",
+    "campus": "Umiam Khwan",
+    "officialUrl": "https://uccollegemeghalaya.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://uccollegemeghalaya.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU"
+      ],
+      "ownership": "Private (Aided)",
+      "establishedYear": "1952",
+      "district": "Ri Bhoi",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "don-bosco-college-tura",
+    "name": "Don Bosco College, Tura",
+    "shortName": "DBC Tura",
+    "location": "Tura, West Garo Hills, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "A premier institution in the Garo Hills region, known for its academic discipline and science stream.",
+    "campus": "Sampalgre",
+    "officialUrl": "https://donboscocollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://donboscocollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU"
+      ],
+      "ownership": "Private (Minority/Aided)",
+      "establishedYear": "1987",
+      "district": "West Garo Hills",
+      "naacGrade": "B+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "tura-government-college",
+    "name": "Tura Government College",
+    "shortName": "Tura Govt College",
+    "location": "Tura, West Garo Hills, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "One of the oldest government colleges in the state, serving the student population of Garo Hills.",
+    "campus": "Tura",
+    "officialUrl": "https://tgc.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://tgc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1958",
+      "district": "West Garo Hills",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "kiang-nangbah-government-college",
+    "name": "Kiang Nangbah Government College",
+    "shortName": "KNGC Jowai",
+    "location": "Jowai, West Jaintia Hills, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "The premier government college in Jaintia Hills, offering education in arts, science, and commerce.",
+    "campus": "Jowai",
+    "officialUrl": "https://kngc.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://kngc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1967",
+      "district": "West Jaintia Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "shillong-polytechnic",
+    "name": "Shillong Polytechnic",
+    "shortName": "Shillong Polytechnic",
+    "location": "Mawlai, Shillong, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest government polytechnic in the state, offering diploma courses in various engineering disciplines.",
+    "campus": "Mawlai",
+    "officialUrl": "http://shillongpolytechnic.com",
+    "acceptedExams": [
+      "state-entrance"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/EE/ME/ECE/CSE",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "state-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://shillongpolytechnic.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "State Council"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1965",
+      "district": "East Khasi Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "jowai-polytechnic",
+    "name": "Jowai Polytechnic",
+    "shortName": "Jowai Polytechnic",
+    "location": "Jowai, West Jaintia Hills, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "A government technical institute in Jaintia Hills offering diploma engineering courses.",
+    "campus": "Ladthadlaboh",
+    "officialUrl": "http://jowaipolytechnic.in",
+    "acceptedExams": [
+      "state-entrance"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Automobile/Architectural Assistantship/Costume Design",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "state-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://jowaipolytechnic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "State Council"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2001",
+      "district": "West Jaintia Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "tura-polytechnic",
+    "name": "Tura Polytechnic",
+    "shortName": "Tura Polytechnic",
+    "location": "Tura, West Garo Hills, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "A government polytechnic college located in Tura, serving the Garo Hills region.",
+    "campus": "Cherangre, Tura",
+    "officialUrl": "http://turapolytechnic.in",
+    "acceptedExams": [
+      "state-entrance"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Medical Electronics/Computer Application/Food Processing",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "state-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://turapolytechnic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "State Council"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2001",
+      "district": "West Garo Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "college-of-community-science-central-agricultural-university",
+    "name": "College of Community Science, Tura",
+    "shortName": "CCS Tura",
+    "location": "Tura, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "A constituent college of Central Agricultural University (Imphal), specializing in community science and home science.",
+    "campus": "Sangsanggre, Tura",
+    "officialUrl": "https://cau.ac.in/college-of-community-science-tura-meghalaya",
+    "acceptedExams": [
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Community Science)",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://cau.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "Central University Constituent",
+      "establishedYear": "2004",
+      "district": "West Garo Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "shillong-law-college",
+    "name": "Shillong Law College",
+    "shortName": "Shillong Law College",
+    "location": "Dhankheti, Shillong, Meghalaya",
+    "rankingTier": "Tier 3",
+    "overview": "One of the premier legal education institutes in the state, affiliated to NEHU.",
+    "campus": "Dhankheti",
+    "officialUrl": "http://shillonglawcollege.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "LL.B.",
+        "degree": "LLB",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://shillonglawcollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NEHU",
+        "BCI"
+      ],
+      "ownership": "Private (Aided)",
+      "establishedYear": "1964",
+      "district": "East Khasi Hills",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-shillong",
+    "name": "National Institute of Technology Meghalaya",
+    "shortName": "National Institute of Technology Meghalaya",
+    "location": "Shillong, Shillong District, Meghalaya",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Shillong",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Shillong",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

@@ -1,0 +1,1697 @@
+[
+  {
+    "id": "panjab-university-chandigarh",
+    "name": "Panjab University",
+    "shortName": "PU",
+    "location": "Sector 14, Chandigarh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest and most prestigious universities in India, funded by both the Central and State Governments. It has a massive campus spread over Sectors 14 and 25 and affiliates colleges across Chandigarh and Punjab.",
+    "campus": "Sector 14 & 25",
+    "officialUrl": "https://puchd.ac.in",
+    "acceptedExams": [
+      "pucet-ug",
+      "pucet-pg",
+      "jee-main",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (UIET)",
+        "degree": "Bachelor of Engineering",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons)",
+        "degree": "Bachelor of Science",
+        "duration": "3/4 years",
+        "exams": [
+          "pucet-ug"
+        ]
+      },
+      {
+        "name": "MBA (UBS)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "pucet-law"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "UIET CSE Rank ~45000 (General)"
+      }
+    ],
+    "topRecruiters": [
+      "Samsung",
+      "Amazon",
+      "KPMG",
+      "Infosys"
+    ],
+    "tuition": "Low to Moderate",
+    "sources": [
+      "https://puchd.ac.in",
+      "https://uiet.puchd.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AIU"
+      ],
+      "ownership": "State/Central Funded",
+      "establishedYear": "1882",
+      "district": "Chandigarh",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "pgimer-chandigarh",
+    "name": "Postgraduate Institute of Medical Education and Research",
+    "shortName": "PGIMER",
+    "location": "Sector 12, Chandigarh",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance offering premier medical education and tertiary care. It is consistently ranked as the second-best medical institute in India after AIIMS Delhi.",
+    "campus": "Sector 12",
+    "officialUrl": "https://pgimer.edu.in",
+    "acceptedExams": [
+      "ini-cet",
+      "ini-ss"
+    ],
+    "courses": [
+      {
+        "name": "MD/MS",
+        "degree": "Postgraduate Medical",
+        "duration": "3 years",
+        "exams": [
+          "ini-cet"
+        ]
+      },
+      {
+        "name": "DM/MCh",
+        "degree": "Super Specialty",
+        "duration": "3 years",
+        "exams": [
+          "ini-ss"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "institute-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ini-cet",
+        "year": "2023",
+        "cutoff": "Top 100 Ranks"
+      }
+    ],
+    "topRecruiters": [
+      "AIIMS",
+      "Apollo Hospitals",
+      "Fortis"
+    ],
+    "tuition": "Very Low",
+    "sources": [
+      "https://pgimer.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1962",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "punjab-engineering-college",
+    "name": "Punjab Engineering College (Deemed to be University)",
+    "shortName": "PEC Chandigarh",
+    "location": "Sector 12, Chandigarh",
+    "rankingTier": "Tier 1",
+    "overview": "Formerly Maclagan Engineering College (Lahore), PEC is a prestigious deemed university known for its strong alumni network (including Kalpana Chawla) and aerospace engineering program.",
+    "campus": "Sector 12",
+    "officialUrl": "https://pec.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "dasa"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Aerospace, ECE, Mech, Civil)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "PhD",
+        "degree": "Doctorate",
+        "duration": "3-5 years",
+        "exams": [
+          "gate",
+          "net"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE Rank ~12000 (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "American Express",
+      "JP Morgan",
+      "Airbus"
+    ],
+    "tuition": "₹2,00,000 per annum approx",
+    "sources": [
+      "https://pec.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Chandigarh Administration (Deemed)",
+      "establishedYear": "1921",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "govt-medical-college-hospital-chandigarh",
+    "name": "Government Medical College and Hospital, Chandigarh",
+    "shortName": "GMCH 32",
+    "location": "Sector 32, Chandigarh",
+    "rankingTier": "Tier 1",
+    "overview": "A premier medical college administered by the UT Administration, affiliated with Panjab University. It is highly sought after for its MBBS program.",
+    "campus": "Sector 32",
+    "officialUrl": "https://gmch.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "Postgraduate Medical",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      },
+      {
+        "name": "B.Sc (Paramedical)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "gcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "AIQ Rank ~500"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gmch.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University",
+        "NMC"
+      ],
+      "ownership": "UT Administration",
+      "establishedYear": "1991",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "chandigarh-college-of-engineering-technology-degree",
+    "name": "Chandigarh College of Engineering and Technology (Degree Wing)",
+    "shortName": "CCET Degree",
+    "location": "Sector 26, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "The degree wing of CCET, affiliated to Panjab University. It admits students via JAC Chandigarh based on JEE Main scores.",
+    "campus": "Sector 26",
+    "officialUrl": "https://www.ccet.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (CSE, ECE, Mech, Civil)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE Rank ~55000 (All India)"
+      }
+    ],
+    "topRecruiters": [
+      "Infosys",
+      "Quark",
+      "Godrej",
+      "SML Isuzu"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.ccet.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University",
+        "AICTE"
+      ],
+      "ownership": "UT Administration",
+      "establishedYear": "2002",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "chandigarh-college-of-architecture",
+    "name": "Chandigarh College of Architecture",
+    "shortName": "CCA",
+    "location": "Sector 12, Chandigarh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the foremost schools of architecture in India, established in 1961. It is affiliated to Panjab University and admissions are through JAC Chandigarh.",
+    "campus": "Sector 12",
+    "officialUrl": "http://cca.edu.in",
+    "acceptedExams": [
+      "jee-main-paper-2",
+      "nata"
+    ],
+    "courses": [
+      {
+        "name": "B.Arch",
+        "degree": "Bachelor of Architecture",
+        "duration": "5 years",
+        "exams": [
+          "jee-main-paper-2",
+          "nata"
+        ]
+      },
+      {
+        "name": "M.Arch",
+        "degree": "Master of Architecture",
+        "duration": "2 years",
+        "exams": [
+          "gate",
+          "pucet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main-paper-2",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "nata",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Architecture Firms",
+      "Urban Planning Bodies"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://cca.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University",
+        "COA"
+      ],
+      "ownership": "UT Administration",
+      "establishedYear": "1961",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "dav-college-sector-10",
+    "name": "DAV College, Sector 10",
+    "shortName": "DAV 10",
+    "location": "Sector 10, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "A premier co-educational institution in North India, affiliated with Panjab University. Known for its sports achievements and academic excellence.",
+    "campus": "Sector 10",
+    "officialUrl": "https://davchd.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BBA/BCA",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2023",
+        "cutoff": "B.Com ~94%"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "EY",
+      "Wipro"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://davchd.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Private Aided",
+      "establishedYear": "1958",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "goswami-ganesh-dutta-sd-college",
+    "name": "Goswami Ganesh Dutta Sanatan Dharma College",
+    "shortName": "GGDSD College",
+    "location": "Sector 32, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "A highly rated private aided college affiliated with Panjab University, known particularly for its Commerce and BBA programs.",
+    "campus": "Sector 32-C",
+    "officialUrl": "https://ggdsd.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Com (Hons)",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2023",
+        "cutoff": "B.Com ~96% (UT Pool)"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Deloitte",
+      "E&Y",
+      "Amazon"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://ggdsd.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Private Aided",
+      "establishedYear": "1973",
+      "district": "Chandigarh",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mcm-dav-college-for-women",
+    "name": "Mehr Chand Mahajan DAV College for Women",
+    "shortName": "MCM DAV",
+    "location": "Sector 36, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "A premier women's college in North India, affiliated with Panjab University. Known for its discipline and holistic education.",
+    "campus": "Sector 36-A",
+    "officialUrl": "https://mcmdavcwchd.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "Infosys",
+      "Concentrix"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://mcmdavcwchd.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Private Aided",
+      "establishedYear": "1968",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "post-graduate-government-college-sector-11",
+    "name": "Post Graduate Government College, Sector 11",
+    "shortName": "PGGC 11",
+    "location": "Sector 11, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "A prestigious government college for men (co-ed in PG) affiliated with Panjab University. It is a center of excellence in higher education.",
+    "campus": "Sector 11",
+    "officialUrl": "https://gc11.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gc11.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1953",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "post-graduate-government-college-for-girls-sector-11",
+    "name": "Post Graduate Government College for Girls, Sector 11",
+    "shortName": "PGGCG 11",
+    "location": "Sector 11, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "A leading government women's college affiliated with Panjab University, offering a wide array of courses.",
+    "campus": "Sector 11",
+    "officialUrl": "https://gcg11.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gcg11.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1956",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "post-graduate-government-college-for-girls-sector-42",
+    "name": "Post Graduate Government College for Girls, Sector 42",
+    "shortName": "PGGCG 42",
+    "location": "Sector 42, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "A premier government institution for women's education in the southern sectors of Chandigarh.",
+    "campus": "Sector 42",
+    "officialUrl": "https://gcg42.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gcg42.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1982",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "post-graduate-government-college-sector-46",
+    "name": "Post Graduate Government College, Sector 46",
+    "shortName": "PGGC 46",
+    "location": "Sector 46, Chandigarh",
+    "rankingTier": "Tier 3",
+    "overview": "A government co-educational college offering undergraduate and postgraduate degrees.",
+    "campus": "Sector 46",
+    "officialUrl": "https://pggc46.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Com/BCA",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://pggc46.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1982",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-college-commerce-business-administration",
+    "name": "Government College of Commerce and Business Administration",
+    "shortName": "GCCBA 50",
+    "location": "Sector 50, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "The only government college in Chandigarh exclusively dedicated to Commerce and Management education.",
+    "campus": "Sector 50",
+    "officialUrl": "https://gccbachd.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "EY",
+      "Genpact"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gccbachd.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2006",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "government-college-of-art-chandigarh",
+    "name": "Government College of Art",
+    "shortName": "GCA Chandigarh",
+    "location": "Sector 10, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "A premier art institution designed by Le Corbusier, offering specialized courses in visual and applied arts.",
+    "campus": "Sector 10",
+    "officialUrl": "http://artcollegechandigarh.org",
+    "acceptedExams": [
+      "college-entrance"
+    ],
+    "courses": [
+      {
+        "name": "BFA (Painting, Sculpture, Applied Art, Graphics)",
+        "degree": "Bachelor of Fine Arts",
+        "duration": "4 years",
+        "exams": [
+          "college-entrance"
+        ]
+      },
+      {
+        "name": "MFA",
+        "degree": "Master of Fine Arts",
+        "duration": "2 years",
+        "exams": [
+          "college-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "college-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Advertising Agencies",
+      "Design Studios"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://artcollegechandigarh.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1951",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ihm-chandigarh",
+    "name": "Dr. Ambedkar Institute of Hotel Management Catering and Nutrition",
+    "shortName": "IHM Chandigarh",
+    "location": "Sector 42, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "A central government institute affiliated to NCHMCT, offering top-tier hospitality education.",
+    "campus": "Sector 42-D",
+    "officialUrl": "https://www.ihmchandigarh.org",
+    "acceptedExams": [
+      "nchmct-jee"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hospitality & Hotel Administration)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "nchmct-jee"
+        ]
+      },
+      {
+        "name": "M.Sc (Hospitality Administration)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "nchmct-jee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nchmct-jee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Taj",
+      "Oberoi",
+      "Marriott",
+      "Hyatt"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.ihmchandigarh.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NCHMCT"
+      ],
+      "ownership": "Central Govt (Autonomous)",
+      "establishedYear": "1990",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "government-home-science-college-chandigarh",
+    "name": "Government Home Science College",
+    "shortName": "Home Science College",
+    "location": "Sector 10, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "A premier professional institution for women, offering courses in Home Science, Fashion Designing, and Dietetics.",
+    "campus": "Sector 10",
+    "officialUrl": "https://homescience10.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Home Science",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Sc Fashion Designing",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://homescience10.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1961",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nitttr-chandigarh",
+    "name": "National Institute of Technical Teachers Training and Research",
+    "shortName": "NITTTR Chandigarh",
+    "location": "Sector 26, Chandigarh",
+    "rankingTier": "Tier 2",
+    "overview": "An autonomous institute under the Ministry of Education, Govt. of India, focused on technical teacher training and postgraduate education.",
+    "campus": "Sector 26",
+    "officialUrl": "https://www.nitttrchd.ac.in",
+    "acceptedExams": [
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "M.Tech",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "PhD",
+        "degree": "Doctorate",
+        "duration": "3-5 years",
+        "exams": [
+          "net",
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.nitttrchd.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Deemed University"
+      ],
+      "ownership": "Central Govt (Autonomous)",
+      "establishedYear": "1967",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sri-guru-gobind-singh-college",
+    "name": "Sri Guru Gobind Singh College",
+    "shortName": "SGGS College",
+    "location": "Sector 26, Chandigarh",
+    "rankingTier": "Tier 3",
+    "overview": "A Sikh minority educational institution affiliated with Panjab University, offering arts, science, and commerce courses.",
+    "campus": "Sector 26",
+    "officialUrl": "https://www.sggscollege.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://www.sggscollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Private (Minority/Aided)",
+      "establishedYear": "1966",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "guru-gobind-singh-college-for-women",
+    "name": "Guru Gobind Singh College for Women",
+    "shortName": "GGSCW",
+    "location": "Sector 26, Chandigarh",
+    "rankingTier": "Tier 3",
+    "overview": "A premier women's college managed by the Sikh Educational Society, located in Sector 26.",
+    "campus": "Sector 26",
+    "officialUrl": "https://ggscw.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Com/B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://ggscw.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Private (Minority/Aided)",
+      "establishedYear": "1973",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "dev-samaj-college-for-women-45",
+    "name": "Dev Samaj College for Women",
+    "shortName": "Dev Samaj 45",
+    "location": "Sector 45, Chandigarh",
+    "rankingTier": "Tier 3",
+    "overview": "A private women's college affiliated with Panjab University, offering courses in arts, commerce, and computer applications.",
+    "campus": "Sector 45-B",
+    "officialUrl": "https://dscw45.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Com/B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://dscw45.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "1982",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-college-of-education-chandigarh",
+    "name": "Government College of Education",
+    "shortName": "GCE Chandigarh",
+    "location": "Sector 20, Chandigarh",
+    "rankingTier": "Tier 3",
+    "overview": "A dedicated government institution for teacher education, offering B.Ed and M.Ed programs.",
+    "campus": "Sector 20",
+    "officialUrl": "https://gce20.ac.in",
+    "acceptedExams": [
+      "merit",
+      "teaching-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.Ed",
+        "degree": "Bachelor of Education",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "M.Ed",
+        "degree": "Master of Education",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "teaching-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Schools",
+      "Colleges"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gce20.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Panjab University",
+        "NCTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1954",
+      "district": "Chandigarh",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "chandigarh-college-engineering-technology-diploma",
+    "name": "Chandigarh College of Engineering and Technology (Diploma Wing)",
+    "shortName": "CCET Diploma",
+    "location": "Sector 26, Chandigarh",
+    "rankingTier": "Tier 3",
+    "overview": "The diploma wing of CCET, formerly Central Polytechnic Chandigarh. It offers various diploma courses in engineering.",
+    "campus": "Sector 26",
+    "officialUrl": "https://www.ccetdiploma.edu.in",
+    "acceptedExams": [
+      "jet-chandigarh"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/Electrical/Mech/ECE/CSE",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "jet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jet-chandigarh",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.ccetdiploma.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "PSBTE & IT"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1959",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-polytechnic-for-women-chandigarh",
+    "name": "Government Polytechnic for Women",
+    "shortName": "GPW Chandigarh",
+    "location": "Sector 10, Chandigarh",
+    "rankingTier": "Tier 3",
+    "overview": "A premier technical institution for women offering diploma courses in modern trades like pharmacy, interior design, and computer engineering.",
+    "campus": "Sector 10",
+    "officialUrl": "https://gpwchandigarh.org",
+    "acceptedExams": [
+      "jet-chandigarh"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Pharmacy",
+        "degree": "Diploma",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "Diploma in Interior Design",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "jet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jet-chandigarh",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gpwchandigarh.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "PSBTE & IT",
+        "PCI"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1962",
+      "district": "Chandigarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  }
+]

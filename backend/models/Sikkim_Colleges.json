@@ -1,0 +1,1486 @@
+[
+  {
+    "id": "nit-sikkim",
+    "name": "National Institute of Technology Sikkim",
+    "shortName": "NIT Sikkim",
+    "location": "Ravangla, Namchi District, Sikkim",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance established in 2010, currently operating from a temporary campus in Ravangla. It offers B.Tech, M.Tech, and PhD programs in engineering and sciences.",
+    "campus": "Ravangla",
+    "officialUrl": "https://nitsikkim.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "net"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Civil, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc (Chemistry)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "iit-jam",
+          "ccmn"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~30000-40000 Rank (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Intel",
+      "Nvidia",
+      "Deloitte",
+      "L&T",
+      "Bosch"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://nitsikkim.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2010",
+      "district": "Namchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "sikkim-university",
+    "name": "Sikkim University",
+    "shortName": "SU",
+    "location": "Gangtok, Gangtok District, Sikkim",
+    "rankingTier": "Tier 1",
+    "overview": "A Central University established by an Act of Parliament in 2007. It is the primary affiliating university in the state and offers a wide range of traditional and professional courses.",
+    "campus": "Samadur, Tadong",
+    "officialUrl": "https://cus.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg",
+          "cat",
+          "mat"
+        ]
+      },
+      {
+        "name": "B.A./B.Sc (Psychology/Geology)",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://cus.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "2007",
+      "district": "Gangtok",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "sikkim-manipal-university",
+    "name": "Sikkim Manipal University",
+    "shortName": "SMU",
+    "location": "Gangtok/Majitar, Sikkim",
+    "rankingTier": "Tier 2",
+    "overview": "A pioneering public-private partnership between the Govt of Sikkim and the Manipal Pai Foundation. It houses the prestigious SMIT (Engineering) and SMIMS (Medical) institutes.",
+    "campus": "Gangtok (Medical) / Majitar (Tech)",
+    "officialUrl": "https://smu.edu.in",
+    "acceptedExams": [
+      "smit-online-test",
+      "jee-main",
+      "neet-ug",
+      "met"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT, ECE, AI&DS)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "smit-online-test",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "mat",
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "smit-online-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Dell",
+      "Boston Scientific",
+      "Shell"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://smu.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "NMC",
+        "AICTE"
+      ],
+      "ownership": "Private (PPP)",
+      "establishedYear": "1995",
+      "district": "Pakyong",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "caepht-sikkim",
+    "name": "College of Agricultural Engineering and Post Harvest Technology",
+    "shortName": "CAEPHT",
+    "location": "Ranipool, Gangtok District, Sikkim",
+    "rankingTier": "Tier 2",
+    "overview": "A constituent college of the Central Agricultural University (Imphal), specializing in agricultural engineering and food processing technology.",
+    "campus": "Ranipool",
+    "officialUrl": "https://caepht.cau.ac.in",
+    "acceptedExams": [
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Agricultural Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "B.Tech (Food Technology)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Nestle",
+      "Amul",
+      "ITC",
+      "Tractors India"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://caepht.cau.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "Central University Constituent",
+      "establishedYear": "2006",
+      "district": "Gangtok",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nar-bahadur-bhandari-government-college",
+    "name": "Nar Bahadur Bhandari Government College",
+    "shortName": "NBBGC (SGC Tadong)",
+    "location": "Tadong, Gangtok District, Sikkim",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly Sikkim Government College, Tadong. It is the premier government college in the state, offering diverse UG and PG courses.",
+    "campus": "Tadong",
+    "officialUrl": "https://nbbgc.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://nbbgc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Sikkim University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1977",
+      "district": "Gangtok",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "srm-university-sikkim",
+    "name": "SRM University Sikkim",
+    "shortName": "SRM Sikkim",
+    "location": "Tadong, Gangtok District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A private university established by the SRM Group, offering courses in management, IT, and hospitality.",
+    "campus": "5th Mile, Tadong",
+    "officialUrl": "https://srmus.ac.in",
+    "acceptedExams": [
+      "srmjeee",
+      "cuet-ug",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "srmjeee",
+          "merit"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit",
+          "cat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "srmjeee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "Genpact",
+      "Indigo"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://srmus.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Gangtok",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "icfai-university-sikkim",
+    "name": "The ICFAI University, Sikkim",
+    "shortName": "ICFAI Sikkim",
+    "location": "Gangtok, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A private university belonging to the ICFAI Group, focusing on management, law, and humanities.",
+    "campus": "Lower Siche",
+    "officialUrl": "https://iusikkim.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BBA-LLB",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://iusikkim.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "BCI"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2004",
+      "district": "Gangtok",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sikkim-government-college-namchi",
+    "name": "Sikkim Government College, Namchi",
+    "shortName": "SGC Namchi",
+    "location": "Kamrang, Namchi District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A major government college in South Sikkim, offering arts, science, and commerce streams.",
+    "campus": "Kamrang",
+    "officialUrl": "https://sgcn.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://sgcn.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Sikkim University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1995",
+      "district": "Namchi",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sikkim-government-college-burtuk",
+    "name": "Sikkim Government College, Burtuk",
+    "shortName": "SGC Burtuk",
+    "location": "Burtuk, Gangtok District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "Established to cater to the growing student population in East Sikkim, offering mainly humanities and commerce courses.",
+    "campus": "Burtuk",
+    "officialUrl": "https://sgcburtuk.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://sgcburtuk.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Sikkim University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2012",
+      "district": "Gangtok",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sikkim-government-college-rhenock",
+    "name": "Sikkim Government College, Rhenock",
+    "shortName": "SGC Rhenock",
+    "location": "Rhenock, Pakyong District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A government college serving the Rhenock and Rongli subdivisions, offering undergraduate degrees.",
+    "campus": "Rhenock",
+    "officialUrl": "https://sgcrhenock.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://sgcrhenock.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Sikkim University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2005",
+      "district": "Pakyong",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sikkim-government-college-gyalshing",
+    "name": "Sikkim Government College, Gyalshing",
+    "shortName": "SGC Gyalshing",
+    "location": "Gyalshing, Gyalshing District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "The primary higher education institution in West Sikkim, offering arts and science education.",
+    "campus": "Kyongsa",
+    "officialUrl": "https://sgcgyalshing.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://sgcgyalshing.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Sikkim University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2011",
+      "district": "Gyalshing",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sikkim-government-law-college",
+    "name": "Sikkim Government Law College",
+    "shortName": "SGLC",
+    "location": "Burtuk, Gangtok District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "The only government law college in the state, offering integrated and 3-year law degrees.",
+    "campus": "Burtuk",
+    "officialUrl": "https://sglc.in",
+    "acceptedExams": [
+      "merit",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "BA-LLB",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit",
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "LLB",
+        "degree": "LLB",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://sglc.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Sikkim University",
+        "BCI"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1980",
+      "district": "Gangtok",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "himalayan-pharmacy-institute",
+    "name": "Himalayan Pharmacy Institute",
+    "shortName": "HPI",
+    "location": "Majhitar, Pakyong District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A premier private pharmacy college situated in Majhitar, known for its pharmaceutical education.",
+    "campus": "Majhitar",
+    "officialUrl": "https://hpi.ac.in",
+    "acceptedExams": [
+      "merit",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "M.Pharm",
+        "degree": "M.Pharm",
+        "duration": "2 years",
+        "exams": [
+          "merit",
+          "gpat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Sun Pharma",
+      "Cipla",
+      "Alkem"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://hpi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Sikkim University",
+        "PCI",
+        "AICTE"
+      ],
+      "ownership": "Private",
+      "establishedYear": "1990",
+      "district": "Pakyong",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "advanced-technical-training-centre",
+    "name": "Advanced Technical Training Centre",
+    "shortName": "ATTC",
+    "location": "Bardang, Pakyong District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A government polytechnic offering diploma courses in engineering with a focus on practical skills.",
+    "campus": "Bardang",
+    "officialUrl": "http://attc.skmpoly.edu.in",
+    "acceptedExams": [
+      "state-entrance"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Mechanical/Mechatronics/Tool & Die",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "state-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Maruti Suzuki",
+      "Anand Group"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://attc.skmpoly.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "SBTE Sikkim"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1999",
+      "district": "Pakyong",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "centre-for-computers-and-communication-technology",
+    "name": "Centre for Computers and Communication Technology",
+    "shortName": "CCCT",
+    "location": "Chisopani, Namchi District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A leading government polytechnic in South Sikkim offering diploma courses in computer and electrical streams.",
+    "campus": "Chisopani",
+    "officialUrl": "http://ccct.skmpoly.edu.in",
+    "acceptedExams": [
+      "state-entrance"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in CSE/Electrical/Electronics/Civil",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "state-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://ccct.skmpoly.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "SBTE Sikkim"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1999",
+      "district": "Namchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "vinayaka-missions-sikkim-university",
+    "name": "Vinayaka Missions Sikkim University",
+    "shortName": "VMSU",
+    "location": "Tadong, Gangtok District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A private university part of the Vinayaka Missions Group, offering courses in paramedical, arts, and management.",
+    "campus": "Tadong",
+    "officialUrl": "https://vmsualumni.com",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (MLT)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://vmsualumni.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2008",
+      "district": "Gangtok",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "pakim-palatine-college",
+    "name": "Pakim Palatine College",
+    "shortName": "PPC",
+    "location": "Pakyong, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A private college in Pakyong offering undergraduate courses in Arts and Science.",
+    "campus": "Pakyong",
+    "officialUrl": "https://pakimpalatinecollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://pakimpalatinecollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Sikkim University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2004",
+      "district": "Pakyong",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "medhavi-skills-university",
+    "name": "Medhavi Skills University",
+    "shortName": "MSU",
+    "location": "Singtam, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A skills-focused private university established to promote vocational and skill-based higher education.",
+    "campus": "Topakhani, Singtam",
+    "officialUrl": "https://www.msu.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Voc",
+        "degree": "Bachelor of Vocation",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.msu.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2021",
+      "district": "Pakyong",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sikkim-professional-university",
+    "name": "Sikkim Professional University",
+    "shortName": "SPU",
+    "location": "Gangtok, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "Formerly Vinayaka Missions Sikkim University (campus split/rename), now operating as a separate private university offering nursing and allied health sciences.",
+    "campus": "Metro Point, Tadong",
+    "officialUrl": "https://spu.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BPT",
+        "degree": "Physiotherapy",
+        "duration": "4.5 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://spu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "INC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2008",
+      "district": "Gangtok",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sikkim-alpine-university",
+    "name": "Sikkim Alpine University",
+    "shortName": "SAU",
+    "location": "Kamrang, Namchi District, Sikkim",
+    "rankingTier": "Tier 3",
+    "overview": "A private university in South Sikkim offering various undergraduate and postgraduate programs.",
+    "campus": "Kamrang",
+    "officialUrl": "https://sikkimalpineuniversity.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://sikkimalpineuniversity.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2021",
+      "district": "Namchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-ravangla",
+    "name": "National Institute of Technology Sikkim",
+    "shortName": "National Institute of Technology Sikkim",
+    "location": "Ravangla, Ravangla District, Sikkim",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Ravangla",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Ravangla",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

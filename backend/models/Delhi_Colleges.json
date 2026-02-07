@@ -1,0 +1,2143 @@
+[
+  {
+    "id": "iit-delhi",
+    "name": "Indian Institute of Technology Delhi",
+    "shortName": "IIT Delhi",
+    "location": "Hauz Khas, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance and one of the top engineering institutes in India. Known for its research, innovation, and vibrant campus life in South Delhi.",
+    "campus": "Hauz Khas",
+    "officialUrl": "https://home.iitd.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam",
+      "uceed"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      },
+      {
+        "name": "B.Des",
+        "degree": "Bachelor of Design",
+        "duration": "4 years",
+        "exams": [
+          "uceed"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: 116 | MnC: 303 | Electrical: 586",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Goldman Sachs",
+      "Jane Street"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://home.iitd.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1961",
+      "district": "South Delhi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹25.82 LPA",
+      "medianPackage": "₹22.05 LPA",
+      "highestPackage": "₹41.13 LPA"
+    }
+  },
+  {
+    "id": "aiims-new-delhi",
+    "name": "All India Institute of Medical Sciences, New Delhi",
+    "shortName": "AIIMS Delhi",
+    "location": "Ansari Nagar, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "The premier medical institute in India, established as an Institute of National Importance. It sets the benchmark for medical education and research in the country.",
+    "campus": "Ansari Nagar",
+    "officialUrl": "https://www.aiims.edu",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet",
+      "ini-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons) Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing-entrance"
+        ]
+      },
+      {
+        "name": "MD/MS/MDS",
+        "degree": "Postgraduate Medical",
+        "duration": "3 years",
+        "exams": [
+          "ini-cet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "General Rank ~50"
+      }
+    ],
+    "topRecruiters": [
+      "Top Global Hospitals",
+      "Research Institutes"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://www.aiims.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1956",
+      "district": "South Delhi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "university-of-delhi",
+    "name": "University of Delhi",
+    "shortName": "DU",
+    "location": "Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "A premier central university known for its high standards in teaching and research. It has North and South Campuses and affiliates some of the best colleges in India.",
+    "campus": "North Campus / South Campus",
+    "officialUrl": "https://www.du.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "duet"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Hons)",
+        "degree": "Bachelor of Arts",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons)",
+        "degree": "Bachelor of Science",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Com (Hons)",
+        "degree": "Bachelor of Commerce",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "LL.B.",
+        "degree": "Bachelor of Laws",
+        "duration": "3 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2023",
+        "cutoff": "SRCC B.Com (Hons) ~780/800"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "KPMG",
+      "Google",
+      "McKinsky"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://www.du.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1922",
+      "district": "North Delhi",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "jawaharlal-nehru-university",
+    "name": "Jawaharlal Nehru University",
+    "shortName": "JNU",
+    "location": "New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "A world-renowned central university known for its research in social sciences, international relations, and applied sciences. It is a postgraduate-intensive university.",
+    "campus": "New Mehrauli Road",
+    "officialUrl": "https://www.jnu.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jnuee"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Hons) Foreign Languages",
+        "degree": "Bachelor of Arts",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A.",
+        "degree": "Master of Arts",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "Master of Science",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Think Tanks",
+      "Media",
+      "NGOs",
+      "Research"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://www.jnu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1969",
+      "district": "South West Delhi",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "delhi-technological-university",
+    "name": "Delhi Technological University",
+    "shortName": "DTU (DCE)",
+    "location": "Rohini, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "Formerly Delhi College of Engineering (DCE), it is one of the oldest and most prestigious engineering institutions in India, now a state university.",
+    "campus": "Shahbad Daulatpur, Bawana Road",
+    "officialUrl": "http://dtu.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "B.Des",
+        "degree": "Bachelor of Design",
+        "duration": "4 years",
+        "exams": [
+          "uceed"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE ~6000 Rank (Delhi Region)"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Uber",
+      "Apple"
+    ],
+    "tuition": "Moderate (State Govt)",
+    "sources": [
+      "http://dtu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1941",
+      "district": "North West Delhi",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹23.70 LPA",
+      "medianPackage": "₹17.50 LPA",
+      "highestPackage": "₹82.05 LPA"
+    }
+  },
+  {
+    "id": "jamia-millia-islamia",
+    "name": "Jamia Millia Islamia",
+    "shortName": "JMI",
+    "location": "Jamia Nagar, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "A central university with NAAC A++ accreditation. It offers a wide range of courses from school to doctoral level, including engineering, law, and mass communication.",
+    "campus": "Jamia Nagar",
+    "officialUrl": "https://www.jmi.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jee-main",
+      "jmi-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.A. LL.B.",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "jmi-entrance"
+        ]
+      },
+      {
+        "name": "M.A. (Mass Communication)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "jmi-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Accenture",
+      "Zee Media",
+      "Samsung"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://www.jmi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1920",
+      "district": "South East Delhi",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "guru-gobind-singh-indraprastha-university",
+    "name": "Guru Gobind Singh Indraprastha University",
+    "shortName": "GGSIPU (IP University)",
+    "location": "Dwarka, New Delhi, Delhi",
+    "rankingTier": "Tier 2",
+    "overview": "A state university established by the Govt of NCT of Delhi. It affiliates numerous professional colleges in Delhi-NCR.",
+    "campus": "Dwarka Sector 16-C / East Delhi (Surajmal Vihar)",
+    "officialUrl": "http://www.ipu.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "neet-ug",
+      "clat",
+      "ipucet",
+      "nimcet",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (USICT/Affiliated)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "ipucet",
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "cmat",
+          "ipucet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "USICT CSE ~15000 Rank (Delhi)"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Adobe",
+      "Amazon"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://www.ipu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1998",
+      "district": "South West Delhi",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "national-law-university-delhi",
+    "name": "National Law University, Delhi",
+    "shortName": "NLU Delhi",
+    "location": "Dwarka, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "One of the most prestigious law schools in India, consistently ranked 2nd in NIRF Law rankings. It conducts its own entrance exam, AILET.",
+    "campus": "Dwarka Sector 14",
+    "officialUrl": "https://nludelhi.ac.in",
+    "acceptedExams": [
+      "ailet"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B. (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "ailet"
+        ]
+      },
+      {
+        "name": "LL.M.",
+        "degree": "Master of Laws",
+        "duration": "1 year",
+        "exams": [
+          "ailet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ailet",
+        "year": "2024",
+        "cutoff": "General Rank ~70"
+      }
+    ],
+    "topRecruiters": [
+      "Magic Circle Firms",
+      "Tier 1 Law Firms"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://nludelhi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Bar Council of India"
+      ],
+      "ownership": "State University (NLU)",
+      "establishedYear": "2008",
+      "district": "South West Delhi",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "maulana-azad-medical-college",
+    "name": "Maulana Azad Medical College",
+    "shortName": "MAMC",
+    "location": "Bahadur Shah Zafar Marg, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "A premier government medical college affiliated to University of Delhi. Attached to Lok Nayak Hospital, G.B. Pant Hospital, and Guru Nanak Eye Centre.",
+    "campus": "Bahadur Shah Zafar Marg",
+    "officialUrl": "https://mamc.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "General Rank ~85"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Government)",
+    "sources": [
+      "https://mamc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Delhi",
+        "NMC"
+      ],
+      "ownership": "Government (GNCTD)",
+      "establishedYear": "1959",
+      "district": "Central Delhi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "lady-hardinge-medical-college",
+    "name": "Lady Hardinge Medical College",
+    "shortName": "LHMC",
+    "location": "Connaught Place, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "A historic medical college for women (PG is co-ed), associated with Sucheta Kriplani Hospital and Kalawati Saran Children's Hospital.",
+    "campus": "Shaheed Bhagat Singh Marg",
+    "officialUrl": "http://lhmc-hosp.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "General Rank ~500"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "http://lhmc-hosp.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Delhi",
+        "NMC"
+      ],
+      "ownership": "Central Govt",
+      "establishedYear": "1916",
+      "district": "New Delhi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "vardhman-mahavir-medical-college",
+    "name": "Vardhman Mahavir Medical College & Safdarjung Hospital",
+    "shortName": "VMMC",
+    "location": "Ansari Nagar, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "Attached to the famous Safdarjung Hospital, it is one of the most prominent medical colleges in India, affiliated with GGSIPU.",
+    "campus": "Safdarjung Hospital",
+    "officialUrl": "http://www.vmmc-sjh.nic.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "General Rank ~130"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "http://www.vmmc-sjh.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "GGSIPU",
+        "NMC"
+      ],
+      "ownership": "Central Govt",
+      "establishedYear": "2001",
+      "district": "South West Delhi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "netaji-subhas-university-of-technology",
+    "name": "Netaji Subhas University of Technology",
+    "shortName": "NSUT (NSIT)",
+    "location": "Dwarka, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "Formerly NSIT (Netaji Subhas Institute of Technology) under DU, it is now a state university. It is a top-tier engineering institute known for its placements.",
+    "campus": "Dwarka Sector 3",
+    "officialUrl": "http://nsut.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE ~3500 Rank (Delhi)"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Facebook",
+      "Adobe",
+      "Microsoft"
+    ],
+    "tuition": "Moderate (State Govt)",
+    "sources": [
+      "http://nsut.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1983",
+      "district": "South West Delhi",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹18.0 LPA",
+      "medianPackage": "₹16.0 LPA",
+      "highestPackage": "₹1.06 CPA"
+    }
+  },
+  {
+    "id": "iiit-delhi",
+    "name": "Indraprastha Institute of Information Technology Delhi",
+    "shortName": "IIIT-Delhi",
+    "location": "Okhla, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "A state university created by an act of Delhi Govt. It is a research-led institute known for its CS and AI programs.",
+    "campus": "Okhla Industrial Estate, Phase III",
+    "officialUrl": "https://www.iiitd.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "uceed"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSAI, CSE, ECE, CSD, CSSS, CSB)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "uceed"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE ~10000 Rank (Delhi)"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Qualcomm",
+      "Tower Research",
+      "Goldman Sachs"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.iiitd.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2008",
+      "district": "South East Delhi",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹23.72 LPA",
+      "medianPackage": "₹18.50 LPA",
+      "highestPackage": "₹51.03 LPA"
+    }
+  },
+  {
+    "id": "shri-ram-college-of-commerce",
+    "name": "Shri Ram College of Commerce",
+    "shortName": "SRCC",
+    "location": "North Campus, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "The most prestigious college for Commerce and Economics in India, affiliated with the University of Delhi.",
+    "campus": "Maurice Nagar, North Campus",
+    "officialUrl": "https://srcc.edu",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Com (Hons)",
+        "degree": "B.Com",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.A. (Hons) Economics",
+        "degree": "B.A.",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "PGDGBO",
+        "degree": "PG Diploma",
+        "duration": "2 years",
+        "exams": [
+          "srcc-gbo"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2023",
+        "cutoff": "B.Com (Hons) ~780/800"
+      }
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "BCG",
+      "Deutsche Bank",
+      "HUL"
+    ],
+    "tuition": "Low to Moderate",
+    "sources": [
+      "https://srcc.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Delhi"
+      ],
+      "ownership": "Private (Trust) / Govt Aided",
+      "establishedYear": "1926",
+      "district": "North Delhi",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "st-stephens-college-delhi",
+    "name": "St. Stephen's College",
+    "shortName": "St. Stephen's",
+    "location": "North Campus, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest and most distinguished colleges in India, known for its liberal arts and science programs. Affiliated with DU.",
+    "campus": "North Campus",
+    "officialUrl": "https://www.ststephens.edu",
+    "acceptedExams": [
+      "cuet-ug",
+      "interview"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Hons) Economics/English/History",
+        "degree": "B.A.",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug",
+          "interview"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons) Physics/Chem/Maths",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug",
+          "interview"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "interview",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Bain",
+      "Dalberg",
+      "Morgan Stanley"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.ststephens.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Delhi"
+      ],
+      "ownership": "Private (Minority)",
+      "establishedYear": "1881",
+      "district": "North Delhi",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "miranda-house",
+    "name": "Miranda House",
+    "shortName": "Miranda House",
+    "location": "North Campus, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "Consistently ranked #1 in NIRF College rankings. A premier women's college affiliated with the University of Delhi.",
+    "campus": "North Campus",
+    "officialUrl": "https://www.mirandahouse.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Hons)",
+        "degree": "B.A.",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons)",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Accenture",
+      "DE Shaw",
+      "ICICI"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.mirandahouse.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Delhi"
+      ],
+      "ownership": "Government (UGC Maintained)",
+      "establishedYear": "1948",
+      "district": "North Delhi",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "hindu-college-delhi",
+    "name": "Hindu College",
+    "shortName": "Hindu College",
+    "location": "North Campus, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "One of the most highly regarded science and arts colleges in India, affiliated with DU. Known for its vibrant political and cultural life.",
+    "campus": "North Campus",
+    "officialUrl": "https://hinducollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Hons) Pol Sc/History/Eco/Eng",
+        "degree": "B.A.",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons) Physics/Chem/Stats",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Deloitte",
+      "EY",
+      "KPMG"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://hinducollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Delhi"
+      ],
+      "ownership": "Private (Trust) / Govt Aided",
+      "establishedYear": "1899",
+      "district": "North Delhi",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "indira-gandhi-delhi-technical-university-for-women",
+    "name": "Indira Gandhi Delhi Technical University for Women",
+    "shortName": "IGDTUW",
+    "location": "Kashmere Gate, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "A specialized technical university for women, formerly IGIT. It is known for excellent placements in tech companies.",
+    "campus": "Kashmere Gate",
+    "officialUrl": "https://www.igdtuw.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-main-paper-2"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "nimcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Uber",
+      "Intuit"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.igdtuw.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1998",
+      "district": "Central Delhi",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "ambedkar-university-delhi",
+    "name": "Dr. B.R. Ambedkar University Delhi",
+    "shortName": "AUD",
+    "location": "Kashmere Gate, Delhi",
+    "rankingTier": "Tier 2",
+    "overview": "A state university established by the Govt of NCT of Delhi, focusing on humanities and social sciences. It has campuses in Kashmere Gate, Karampura, and Lodhi Road.",
+    "campus": "Kashmere Gate",
+    "officialUrl": "https://aud.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Hons)",
+        "degree": "Bachelor of Arts",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg",
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://aud.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2007",
+      "district": "Central Delhi",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "school-of-planning-and-architecture-delhi",
+    "name": "School of Planning and Architecture, New Delhi",
+    "shortName": "SPA Delhi",
+    "location": "IP Estate, New Delhi, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance specialized in education and research in planning and architecture.",
+    "campus": "IP Estate",
+    "officialUrl": "http://spa.ac.in",
+    "acceptedExams": [
+      "jee-main-paper-2",
+      "gate",
+      "ceed"
+    ],
+    "courses": [
+      {
+        "name": "B.Arch",
+        "degree": "Bachelor of Architecture",
+        "duration": "5 years",
+        "exams": [
+          "jee-main-paper-2"
+        ]
+      },
+      {
+        "name": "B.Plan",
+        "degree": "Bachelor of Planning",
+        "duration": "4 years",
+        "exams": [
+          "jee-main-paper-2"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main-paper-2",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Urban Planning Bodies",
+      "Architectural Firms"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "http://spa.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1941",
+      "district": "Central Delhi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-new-delhi",
+    "name": "Indian Institute of Technology Delhi",
+    "shortName": "Indian Institute of Technology Delhi",
+    "location": "New Delhi, New Delhi District, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "New Delhi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "New Delhi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "jamia-millia-islamia-new-delhi",
+    "name": "Jamia Millia Islamia",
+    "shortName": "Jamia Millia Islamia",
+    "location": "New Delhi, New Delhi District, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "New Delhi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "New Delhi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "delhi-technological-university-new-delhi",
+    "name": "Delhi Technological University",
+    "shortName": "Delhi Technological University",
+    "location": "New Delhi, New Delhi District, Delhi",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "New Delhi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "New Delhi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "netaji-subhas-university-of-te-new-delhi",
+    "name": "Netaji Subhas University of Technology",
+    "shortName": "Netaji Subhas University of Technology",
+    "location": "New Delhi, New Delhi District, Delhi",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "New Delhi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "New Delhi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-new-delhi",
+    "name": "National Institute of Technology Delhi",
+    "shortName": "National Institute of Technology Delhi",
+    "location": "New Delhi, New Delhi District, Delhi",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "New Delhi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "New Delhi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "guru-gobind-singh-indraprastha-new-delhi",
+    "name": "Guru Gobind Singh Indraprastha University",
+    "shortName": "Guru Gobind Singh Indraprastha University",
+    "location": "New Delhi, New Delhi District, Delhi",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "New Delhi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "New Delhi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bharati-vidyapeeths-college-of-new-delhi",
+    "name": "Bharati Vidyapeeth's College of Engineering",
+    "shortName": "Bharati Vidyapeeth's College of Engineering",
+    "location": "New Delhi, New Delhi District, Delhi",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "New Delhi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "New Delhi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

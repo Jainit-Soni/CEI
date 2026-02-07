@@ -1,0 +1,2078 @@
+[
+  {
+    "id": "iit-hyderabad",
+    "name": "Indian Institute of Technology Hyderabad",
+    "shortName": "IIT Hyderabad",
+    "location": "Kandi, Sangareddy, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "A second-generation IIT known for its strong research focus, vibrant innovation ecosystem, and Japanese architectural collaboration. It consistently ranks among the top engineering institutes in India.",
+    "campus": "Kandi",
+    "officialUrl": "https://www.iith.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam",
+      "uceed"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, AI, EE, ME, Civil, etc.)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "B.Des",
+        "degree": "Bachelor of Design",
+        "duration": "4 years",
+        "exams": [
+          "uceed"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE ~600 Rank"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Goldman Sachs",
+      "Rakuten",
+      "TSMC"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iith.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2008",
+      "district": "Sangareddy",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "university-of-hyderabad",
+    "name": "University of Hyderabad",
+    "shortName": "UoH (HCU)",
+    "location": "Gachibowli, Hyderabad, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of Eminence (IoE) and a premier central university focused on postgraduate and doctoral studies in sciences, humanities, and social sciences.",
+    "campus": "Gachibowli",
+    "officialUrl": "https://uohyd.ac.in",
+    "acceptedExams": [
+      "cuet-pg",
+      "cuet-ug",
+      "gate",
+      "nimcet"
+    ],
+    "courses": [
+      {
+        "name": "Integrated M.Sc/M.A.",
+        "degree": "Integrated Master",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "nimcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Deloitte",
+      "Oracle",
+      "HSBC"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://uohyd.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1974",
+      "district": "Hyderabad",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-warangal",
+    "name": "National Institute of Technology Warangal",
+    "shortName": "NIT Warangal",
+    "location": "Warangal, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "The first REC to be established in India (1959), now an Institute of National Importance. It is a top-tier engineering school with a rich legacy.",
+    "campus": "Kazipet",
+    "officialUrl": "https://www.nitw.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "jam",
+      "nimcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "3 years",
+        "exams": [
+          "nimcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: 2900 | ECE: 6500 | Biotech: 35000",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Oracle",
+      "DE Shaw",
+      "Qualcomm"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://www.nitw.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1959",
+      "district": "Warangal",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹29.94 LPA",
+      "medianPackage": "₹18.0 LPA",
+      "highestPackage": "₹88.0 LPA"
+    }
+  },
+  {
+    "id": "iiit-hyderabad",
+    "name": "International Institute of Information Technology Hyderabad",
+    "shortName": "IIIT Hyderabad",
+    "location": "Gachibowli, Hyderabad, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "A premier autonomous university founded as a not-for-profit public-private partnership. It is renowned globally for its computer science research and coding culture.",
+    "campus": "Gachibowli",
+    "officialUrl": "https://www.iiit.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "ugee",
+      "pgee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Dual Degree (B.Tech + MS by Research)",
+        "degree": "Dual Degree",
+        "duration": "5 years",
+        "exams": [
+          "ugee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE ~99.9 percentile"
+      }
+    ],
+    "topRecruiters": [
+      "Apple",
+      "Google",
+      "Facebook",
+      "Tower Research"
+    ],
+    "tuition": "High (~₹3-4 Lakhs/Year)",
+    "sources": [
+      "https://www.iiit.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "PPP / Private Deemed",
+      "establishedYear": "1998",
+      "district": "Hyderabad",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹30.0 LPA",
+      "medianPackage": "₹28.0 LPA",
+      "highestPackage": "₹69.0 LPA"
+    }
+  },
+  {
+    "id": "osmania-university",
+    "name": "Osmania University",
+    "shortName": "OU",
+    "location": "Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "One of the oldest universities in India, established in 1918. It is a state university with a massive affiliation network and a historic campus.",
+    "campus": "Amberpet",
+    "officialUrl": "https://www.osmania.ac.in",
+    "acceptedExams": [
+      "ts-eamcet",
+      "ts-icet",
+      "ts-pgecet",
+      "cpget"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (University College of Engineering)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "ts-eamcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ts-icet"
+        ]
+      },
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cpget"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ts-eamcet",
+        "year": "2023",
+        "cutoff": "CSE Rank ~500-1000"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "Accenture"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://www.osmania.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1918",
+      "district": "Hyderabad",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6.5 LPA",
+      "medianPackage": "₹5.0 LPA",
+      "highestPackage": "₹24.0 LPA"
+    }
+  },
+  {
+    "id": "jntu-hyderabad",
+    "name": "Jawaharlal Nehru Technological University Hyderabad",
+    "shortName": "JNTUH",
+    "location": "Kukatpally, Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "The primary technological university of Telangana, affiliating hundreds of engineering and pharmacy colleges. Its constituent college (JNTUH CEH) is highly prestigious.",
+    "campus": "Kukatpally",
+    "officialUrl": "https://jntuh.ac.in",
+    "acceptedExams": [
+      "ts-eamcet",
+      "ts-ecet",
+      "ts-pgecet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ts-eamcet"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "ts-pgecet",
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ts-eamcet",
+        "year": "2023",
+        "cutoff": "CSE Rank ~500"
+      }
+    ],
+    "topRecruiters": [
+      "Oracle",
+      "Honeywell",
+      "TCS",
+      "Wipro"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://jntuh.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1972",
+      "district": "Medchal-Malkajgiri",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bits-pilani-hyderabad",
+    "name": "Birla Institute of Technology and Science, Pilani - Hyderabad Campus",
+    "shortName": "BITS Hyderabad",
+    "location": "Jawaharnagar, Shameerpet, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "A campus of the prestigious BITS Pilani (IoE). It offers top-tier engineering and science education with a flexible academic structure.",
+    "campus": "Jawaharnagar",
+    "officialUrl": "https://www.bits-pilani.ac.in/hyderabad",
+    "acceptedExams": [
+      "bitsat"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (Hons)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "bitsat"
+        ]
+      },
+      {
+        "name": "M.Sc (Hons)",
+        "degree": "Integrated M.Sc",
+        "duration": "4 years",
+        "exams": [
+          "bitsat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "bitsat",
+        "year": "2023",
+        "cutoff": "CSE ~280+ Score"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Uber",
+      "Nvidia"
+    ],
+    "tuition": "High (~₹5-6 Lakhs/Year)",
+    "sources": [
+      "https://www.bits-pilani.ac.in/hyderabad"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "2008",
+      "district": "Medchal-Malkajgiri",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹19.7 LPA",
+      "medianPackage": "₹16.0 LPA",
+      "highestPackage": "₹60.0 LPA"
+    }
+  },
+  {
+    "id": "nalsar-university-of-law",
+    "name": "NALSAR University of Law",
+    "shortName": "NALSAR",
+    "location": "Shameerpet, Hyderabad, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "One of India's top National Law Universities, consistently ranked among the best for legal education.",
+    "campus": "Justice City, Shameerpet",
+    "officialUrl": "https://www.nalsar.ac.in",
+    "acceptedExams": [
+      "clat",
+      "ipm-at"
+    ],
+    "courses": [
+      {
+        "name": "BA LLB (Hons)",
+        "degree": "Integrated LLB",
+        "duration": "5 years",
+        "exams": [
+          "clat"
+        ]
+      },
+      {
+        "name": "IPM (BBA+MBA)",
+        "degree": "Integrated Management",
+        "duration": "5 years",
+        "exams": [
+          "ipm-at",
+          "clat",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat",
+        "year": "2023",
+        "cutoff": "AIR Top 150"
+      }
+    ],
+    "topRecruiters": [
+      "Trilegal",
+      "Khaitan & Co",
+      "CAM",
+      "SAM"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.nalsar.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Bar Council of India"
+      ],
+      "ownership": "State University (NLU)",
+      "establishedYear": "1998",
+      "district": "Medchal-Malkajgiri",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "eflu-hyderabad",
+    "name": "The English and Foreign Languages University",
+    "shortName": "EFLU",
+    "location": "Tarnaka, Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "A central university dedicated to the study of English and foreign languages. It is unique in its specialization.",
+    "campus": "Tarnaka",
+    "officialUrl": "https://www.efluniversity.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Hons) English/Foreign Languages",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Publishing Houses",
+      "Translation Services",
+      "Embassies"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://www.efluniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1958",
+      "district": "Hyderabad",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mahendra-university",
+    "name": "Mahindra University",
+    "shortName": "MU Hyderabad",
+    "location": "Bahadurpally, Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "A private university by the Mahindra Group, formerly Ecole Centrale School of Engineering. It focuses on interdisciplinary technical education.",
+    "campus": "Bahadurpally",
+    "officialUrl": "https://www.mahindrauniversity.edu.in",
+    "acceptedExams": [
+      "jee-main",
+      "sat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "sat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "sat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Tech Mahindra",
+      "Capgemini",
+      "Dell"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.mahindrauniversity.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2020",
+      "district": "Medchal-Malkajgiri",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "chaitanya-bharathi-institute-of-technology",
+    "name": "Chaitanya Bharathi Institute of Technology",
+    "shortName": "CBIT",
+    "location": "Gandipet, Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "One of the most prestigious private autonomous engineering colleges in Telangana, affiliated to Osmania University.",
+    "campus": "Gandipet",
+    "officialUrl": "https://www.cbit.ac.in",
+    "acceptedExams": [
+      "ts-eamcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E./B.Tech",
+        "degree": "Bachelor of Engineering",
+        "duration": "4 years",
+        "exams": [
+          "ts-eamcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ts-eamcet",
+        "year": "2023",
+        "cutoff": "CSE Rank ~1500"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "JP Morgan",
+      "Oracle",
+      "ITC"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.cbit.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Osmania University (Autonomous)",
+        "AICTE"
+      ],
+      "ownership": "Private (Autonomous)",
+      "establishedYear": "1979",
+      "district": "Rangareddy",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vasavi-college-of-engineering",
+    "name": "Vasavi College of Engineering",
+    "shortName": "Vasavi",
+    "location": "Ibrahimbagh, Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "A premier private autonomous engineering college affiliated with Osmania University, known for high academic standards.",
+    "campus": "Ibrahimbagh",
+    "officialUrl": "https://www.vce.ac.in",
+    "acceptedExams": [
+      "ts-eamcet"
+    ],
+    "courses": [
+      {
+        "name": "B.E.",
+        "degree": "Bachelor of Engineering",
+        "duration": "4 years",
+        "exams": [
+          "ts-eamcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ts-eamcet",
+        "year": "2023",
+        "cutoff": "CSE Rank ~2000"
+      }
+    ],
+    "topRecruiters": [
+      "ServiceNow",
+      "Oracle",
+      "Accenture"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.vce.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Osmania University (Autonomous)",
+        "AICTE"
+      ],
+      "ownership": "Private (Autonomous)",
+      "establishedYear": "1981",
+      "district": "Hyderabad",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vnr-vignana-jyothi-institute-of-engineering-and-technology",
+    "name": "VNR Vignana Jyothi Institute of Engineering and Technology",
+    "shortName": "VNR VJIET",
+    "location": "Bachupally, Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "A top-tier private autonomous college affiliated to JNTUH, known for its excellent infrastructure and placements.",
+    "campus": "Bachupally",
+    "officialUrl": "https://vnrvjiet.ac.in",
+    "acceptedExams": [
+      "ts-eamcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ts-eamcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ts-eamcet",
+        "year": "2023",
+        "cutoff": "CSE Rank ~2500"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "TCS",
+      "Deloitte"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://vnrvjiet.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "JNTUH (Autonomous)",
+        "AICTE"
+      ],
+      "ownership": "Private (Autonomous)",
+      "establishedYear": "1995",
+      "district": "Medchal-Malkajgiri",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kakatiya-university",
+    "name": "Kakatiya University",
+    "shortName": "KU Warangal",
+    "location": "Warangal, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "A major state university serving Northern Telangana. It offers a wide range of programs in arts, science, commerce, and engineering.",
+    "campus": "Vidyaranyapuri",
+    "officialUrl": "https://kakatiya.ac.in",
+    "acceptedExams": [
+      "ts-icet",
+      "cpget",
+      "ts-eamcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (KU College of Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ts-eamcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ts-icet"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cpget"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ts-icet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cpget",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://kakatiya.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1976",
+      "district": "Warangal",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "osmania-medical-college",
+    "name": "Osmania Medical College",
+    "shortName": "OMC",
+    "location": "Koti, Hyderabad, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest and most prestigious medical colleges in India, affiliated with KNRUHS and attached to Osmania General Hospital.",
+    "campus": "Koti",
+    "officialUrl": "http://osmaniamedicalcollege.org",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Rank Top 100"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Government)",
+    "sources": [
+      "http://osmaniamedicalcollege.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "KNRUHS",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1846",
+      "district": "Hyderabad",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "woxsen-university",
+    "name": "Woxsen University",
+    "shortName": "Woxsen",
+    "location": "Kamkole, Sangareddy, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "A modern private university known for its design, architecture, and business programs, with state-of-the-art infrastructure.",
+    "campus": "Kamkole",
+    "officialUrl": "https://woxsen.edu.in",
+    "acceptedExams": [
+      "jee-main",
+      "nmat",
+      "cat",
+      "woxsen-aptitude-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Des",
+        "degree": "Bachelor of Design",
+        "duration": "4 years",
+        "exams": [
+          "woxsen-aptitude-test"
+        ]
+      },
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "woxsen-aptitude-test"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "nmat",
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "nmat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Dell",
+      "KPMG",
+      "Standard Chartered"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://woxsen.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "COA"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2014",
+      "district": "Sangareddy",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "anurag-university",
+    "name": "Anurag University",
+    "shortName": "Anurag University",
+    "location": "Venkatapur, Medchal, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly Anurag Group of Institutions, it is a private university offering diverse courses in engineering, pharmacy, and management.",
+    "campus": "Venkatapur",
+    "officialUrl": "https://anurag.edu.in",
+    "acceptedExams": [
+      "anurag-cet",
+      "ts-eamcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "anurag-cet",
+          "ts-eamcet"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "anurag-cet",
+          "ts-eamcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "anurag-cet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ts-eamcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Capgemini"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://anurag.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE",
+        "PCI"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2002",
+      "district": "Medchal-Malkajgiri",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nizam-college-hyderabad",
+    "name": "Nizam College",
+    "shortName": "Nizam College",
+    "location": "Basheerbagh, Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "A prestigious autonomous constituent college of Osmania University, known for its arts, science, and commerce programs.",
+    "campus": "Basheerbagh",
+    "officialUrl": "https://www.nizamcollege.ac.in",
+    "acceptedExams": [
+      "dost-telangana",
+      "cpget"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "dost-merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "dost-merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "dost-telangana",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cpget",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "Infosys",
+      "Genpact"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.nizamcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Osmania University (Autonomous)"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1887",
+      "district": "Hyderabad",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "telangana-mahila-viswavidyalayam",
+    "name": "Telangana Mahila Viswavidyalayam (Telangana Women's University)",
+    "shortName": "TMV",
+    "location": "Koti, Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly Osmania University College for Women, it was upgraded to a state women's university. It is a historic institution for women's education.",
+    "campus": "Koti",
+    "officialUrl": "https://tmv.ac.in",
+    "acceptedExams": [
+      "dost-telangana",
+      "cpget"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "dost-merit"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cpget"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "dost-telangana",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cpget",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://tmv.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1924",
+      "district": "Hyderabad",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "icfai-foundation-for-higher-education",
+    "name": "ICFAI Foundation for Higher Education",
+    "shortName": "IFHE (ICFAI Hyderabad)",
+    "location": "Shankarpally Road, Hyderabad, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "A Deemed-to-be University known for IBS Hyderabad (Business School) and its law/tech schools. IBS is one of the largest b-schools in India.",
+    "campus": "Dontanapally",
+    "officialUrl": "https://www.ifheindia.org",
+    "acceptedExams": [
+      "ibs-at",
+      "cat",
+      "clat",
+      "itsat"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ibs-at"
+        ]
+      },
+      {
+        "name": "BBA-LLB",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat",
+          "lsat"
+        ]
+      },
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "itsat",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ibs-at",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "HDFC Bank",
+      "Deloitte",
+      "ICICI Bank"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.ifheindia.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University",
+        "AACSB"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "2008",
+      "district": "Rangareddy",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-hyderabad",
+    "name": "Indian Institute of Technology Hyderabad",
+    "shortName": "Indian Institute of Technology Hyderabad",
+    "location": "Hyderabad, Hyderabad District, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Hyderabad",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Hyderabad",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-warangal",
+    "name": "National Institute of Technology Warangal",
+    "shortName": "National Institute of Technology Warangal",
+    "location": "Warangal, Warangal District, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Warangal",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Warangal",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "international-institute-of-inf-hyderabad",
+    "name": "International Institute of Information Technology Hyderabad",
+    "shortName": "International Institute of Information Technology ",
+    "location": "Hyderabad, Hyderabad District, Telangana",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Hyderabad",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Hyderabad",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "university-college-of-engineer-hyderabad",
+    "name": "University College of Engineering",
+    "shortName": "University College of Engineering",
+    "location": "Hyderabad, Hyderabad District, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Hyderabad",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Hyderabad",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cmr-college-of-engineering-tec-hyderabad",
+    "name": "CMR College of Engineering & Technology",
+    "shortName": "CMR College of Engineering & Technology",
+    "location": "Hyderabad, Hyderabad District, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Hyderabad",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Hyderabad",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cmr-engineering-college-rangareddy",
+    "name": "CMR Engineering College",
+    "shortName": "CMR Engineering College",
+    "location": "Rangareddy, Rangareddy District, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Rangareddy",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Rangareddy",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cmr-institute-of-technology-hyderabad",
+    "name": "CMR Institute of Technology",
+    "shortName": "CMR Institute of Technology",
+    "location": "Hyderabad, Hyderabad District, Telangana",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Hyderabad",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Hyderabad",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

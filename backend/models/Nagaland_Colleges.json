@@ -1,0 +1,1970 @@
+[
+  {
+    "id": "nagaland-university",
+    "name": "Nagaland University",
+    "shortName": "NU",
+    "location": "Lumami, Zunheboto, Nagaland",
+    "rankingTier": "Tier 1",
+    "overview": "A Central University headquartered at Lumami with campuses in Kohima (Meriema), Medziphema (SASRD), and Dimapur (SET). It is the primary affiliating body for colleges in the state.",
+    "campus": "Lumami (HQ) / Kohima / Medziphema / Dimapur",
+    "officialUrl": "https://nagalanduniversity.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "B.Tech (IT, CSE, ECE, Agri Engg)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Agriculture)",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://nagalanduniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1994",
+      "district": "Zunheboto",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-nagaland",
+    "name": "National Institute of Technology Nagaland",
+    "shortName": "NIT Nagaland",
+    "location": "Chumukedima, Dimapur, Nagaland",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance offering technical education. It is located in Chumukedima and focuses on engineering disciplines.",
+    "campus": "Chumukedima",
+    "officialUrl": "https://nitnagaland.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, EEE, ECE, CE, ME, EIE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc (Physics)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~35000-45000 Rank (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Capgemini",
+      "Cognizant",
+      "Infosys",
+      "IBM"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://nitnagaland.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2010",
+      "district": "Chumukedima",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nimsr-kohima",
+    "name": "Nagaland Institute of Medical Sciences and Research",
+    "shortName": "NIMSR",
+    "location": "Phriebagei, Kohima, Nagaland",
+    "rankingTier": "Tier 1",
+    "overview": "The first medical college in Nagaland, established by the state government to address the shortage of medical professionals in the region.",
+    "campus": "Phriebagei",
+    "officialUrl": "https://nimsr.nagaland.gov.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~400 Score"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals",
+      "Health Services"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://nimsr.nagaland.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Nagaland University",
+        "NMC"
+      ],
+      "ownership": "State Government",
+      "establishedYear": "2023",
+      "district": "Kohima",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "kohima-science-college",
+    "name": "Kohima Science College (Autonomous)",
+    "shortName": "KSCJ",
+    "location": "Jotsoma, Kohima, Nagaland",
+    "rankingTier": "Tier 2",
+    "overview": "A premier autonomous government college dedicated to science education. It is one of the most prestigious colleges in the state with NAAC 'A' grade accreditation.",
+    "campus": "Jotsoma",
+    "officialUrl": "https://kscj.ac.in",
+    "acceptedExams": [
+      "college-entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Physics, Chem, Math, Botany, Zoology, Geology)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit",
+          "entrance"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "college-entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://kscj.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University (Autonomous)"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1961",
+      "district": "Kohima",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "patkai-christian-college",
+    "name": "Patkai Christian College (Autonomous)",
+    "shortName": "Patkai",
+    "location": "Chumukedima, Dimapur, Nagaland",
+    "rankingTier": "Tier 2",
+    "overview": "The first autonomous college in the North East, sponsored by the Nagaland Baptist Church Council. Known for its music department and liberal arts.",
+    "campus": "Seithekema",
+    "officialUrl": "https://patkaicollege.com",
+    "acceptedExams": [
+      "cuet-ug",
+      "college-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Mus (Music)",
+        "degree": "Bachelor of Music",
+        "duration": "3 years",
+        "exams": [
+          "audition"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "college-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://patkaicollege.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University (Autonomous)"
+      ],
+      "ownership": "Private (Minority)",
+      "establishedYear": "1974",
+      "district": "Chumukedima",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "st-josephs-college-jakhama",
+    "name": "St. Joseph's College (Autonomous), Jakhama",
+    "shortName": "SJC Jakhama",
+    "location": "Jakhama, Kohima, Nagaland",
+    "rankingTier": "Tier 2",
+    "overview": "A premier Catholic institution offering undergraduate and postgraduate courses. It is the second college in Nagaland to be granted autonomous status.",
+    "campus": "Jakhama",
+    "officialUrl": "https://stjosephjakhama.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://stjosephjakhama.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University (Autonomous)"
+      ],
+      "ownership": "Private (Catholic)",
+      "establishedYear": "1985",
+      "district": "Kohima",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "st-joseph-university-nagaland",
+    "name": "St. Joseph University",
+    "shortName": "SJU Nagaland",
+    "location": "Chumukedima, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A private university established by the DMI Sisters and MMI Fathers, offering diverse courses in engineering, management, and arts.",
+    "campus": "Virgin Town, Ikishe Model Village",
+    "officialUrl": "https://stjosephuniv.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://stjosephuniv.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2016",
+      "district": "Chumukedima",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "icfai-university-nagaland",
+    "name": "The ICFAI University, Nagaland",
+    "shortName": "ICFAI Nagaland",
+    "location": "Sovima, Dimapur, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A private university established under the Nagaland State Act, focusing on management and humanities.",
+    "campus": "Sovima",
+    "officialUrl": "https://www.iunagaland.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.iunagaland.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2006",
+      "district": "Dimapur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "the-global-open-university-nagaland",
+    "name": "The Global Open University",
+    "shortName": "TGOU",
+    "location": "Dimapur, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A private university focusing on vocational and distance education programs.",
+    "campus": "Sodzulhou Village",
+    "officialUrl": "https://nagaland.net.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/BBA",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://nagaland.net.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2006",
+      "district": "Dimapur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "north-east-christian-university",
+    "name": "North East Christian University",
+    "shortName": "NECU",
+    "location": "Dimapur, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A private university established by the Council of Baptist Churches in North East India.",
+    "campus": "Anchor Complex, Burma Camp",
+    "officialUrl": "https://necu.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://necu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Dimapur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "dimapur-government-college",
+    "name": "Dimapur Government College",
+    "shortName": "DGC",
+    "location": "Dimapur, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A prominent government college in the commercial hub of Nagaland, accredited with NAAC 'B' grade.",
+    "campus": "Oriental Colony",
+    "officialUrl": "https://dimapurgovernmentcollege.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://dimapurgovernmentcollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1966",
+      "district": "Dimapur",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "kohima-college",
+    "name": "Kohima College",
+    "shortName": "Kohima College",
+    "location": "Kruoliezou, Kohima, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A government co-educational college located in the state capital, offering arts and commerce courses.",
+    "campus": "Kruoliezou",
+    "officialUrl": "https://kohimacollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://kohimacollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1967",
+      "district": "Kohima",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "fazl-ali-college",
+    "name": "Fazl Ali College",
+    "shortName": "FAC",
+    "location": "Chuchuyimlang, Mokokchung, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest college in Nagaland, situated in Mokokchung district. It offers both arts and science streams.",
+    "campus": "Chuchuyimlang",
+    "officialUrl": "https://fazlalicollege.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://fazlalicollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1959",
+      "district": "Mokokchung",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "tetso-college",
+    "name": "Tetso College",
+    "shortName": "Tetso",
+    "location": "Sovima, Dimapur, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A leading private college sponsored by the Council of Rengma Baptist Churches. Known for its modern infrastructure and student activities.",
+    "campus": "Sovima",
+    "officialUrl": "https://tetsocollege.org",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Com/BBA/BCA",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MA",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://tetsocollege.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "1994",
+      "district": "Dimapur",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "model-christian-college",
+    "name": "Model Christian College",
+    "shortName": "Model Christian",
+    "location": "Kohima, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A private college affiliated to Nagaland University, focusing on science and arts.",
+    "campus": "Tsiepfe, A.G. Colony",
+    "officialUrl": "https://modelchristiancollege.org",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://modelchristiancollege.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2007",
+      "district": "Kohima",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "japfu-christian-college",
+    "name": "Japfu Christian College",
+    "shortName": "JCC",
+    "location": "Kigwema, Kohima, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "Located at the foothills of Mt. Japfu, this college offers arts courses in a serene environment.",
+    "campus": "Kigwema",
+    "officialUrl": "https://japfuchristiancollege.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://japfuchristiancollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "1996",
+      "district": "Kohima",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "phek-government-college",
+    "name": "Phek Government College",
+    "shortName": "PGC",
+    "location": "Phek, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A government college serving the Phek district, offering arts and science programs.",
+    "campus": "Phek",
+    "officialUrl": "https://phekgovernmentcollege.com",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://phekgovernmentcollege.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1981",
+      "district": "Phek",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "yingli-college",
+    "name": "Yingli College",
+    "shortName": "Yingli College",
+    "location": "Longleng, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A government college located in Longleng district, providing higher education to the Phom community and others.",
+    "campus": "Longleng",
+    "officialUrl": "https://yinglicollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://yinglicollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1992",
+      "district": "Longleng",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "zisaji-presidency-college",
+    "name": "Zisaji Presidency College",
+    "shortName": "ZPC",
+    "location": "Kiphire, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A government college serving the remote district of Kiphire.",
+    "campus": "Kiphire",
+    "officialUrl": "https://zisajipresidencycollege.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://zisajipresidencycollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1997",
+      "district": "Kiphire",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "wangkhao-government-college",
+    "name": "Wangkhao Government College",
+    "shortName": "WGC",
+    "location": "Mon, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "The premier higher education institution in Mon district, serving the Konyak region.",
+    "campus": "Mon",
+    "officialUrl": "https://wangkhaocollege.edu.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://wangkhaocollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1983",
+      "district": "Mon",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "peren-government-college",
+    "name": "Peren Government College",
+    "shortName": "PGC Peren",
+    "location": "Peren, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A government college located in Peren district.",
+    "campus": "Peren",
+    "officialUrl": "https://perengovernmentcollege.com",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://perengovernmentcollege.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1987",
+      "district": "Peren",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "mount-tiyi-college",
+    "name": "Mount Tiyi College",
+    "shortName": "MTC",
+    "location": "Wokha, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A government college in Wokha district, offering undergraduate arts courses.",
+    "campus": "Wokha",
+    "officialUrl": "https://mounttiyicollege.com",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mounttiyicollege.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1974",
+      "district": "Wokha",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sao-chang-college",
+    "name": "Sao Chang College",
+    "shortName": "SCC",
+    "location": "Tuensang, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A government college situated in Tuensang district, catering to students from the eastern part of Nagaland.",
+    "campus": "Tuensang",
+    "officialUrl": "https://saochangcollege.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://saochangcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1973",
+      "district": "Tuensang",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "unity-college-dimapur",
+    "name": "Unity College",
+    "shortName": "Unity College",
+    "location": "Dimapur, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A private college in Dimapur offering arts and commerce streams.",
+    "campus": "Residency Colony",
+    "officialUrl": "https://unitycollegedimapur.com",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A. (Pol Science/History)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://unitycollegedimapur.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2007",
+      "district": "Dimapur",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "c-edge-college",
+    "name": "C-Edge College",
+    "shortName": "C-Edge",
+    "location": "Niuland, Dimapur, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A private college focusing on management and arts, located in Naga United Village.",
+    "campus": "Naga United Village",
+    "officialUrl": "https://cedgecollege.com",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./BBA",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://cedgecollege.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2012",
+      "district": "Niuland",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "kohima-law-college",
+    "name": "Kohima Law College",
+    "shortName": "Kohima Law",
+    "location": "Kohima, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "The premier law college in the state capital, offering LL.B. degree.",
+    "campus": "Kohima",
+    "officialUrl": "https://kohimalawcollege.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://kohimalawcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Nagaland University",
+        "BCI"
+      ],
+      "ownership": "Private",
+      "establishedYear": "1975",
+      "district": "Kohima",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-polytechnic-kohima",
+    "name": "Government Polytechnic Kohima",
+    "shortName": "GP Kohima",
+    "location": "Kohima, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "The oldest government polytechnic in Nagaland, offering diploma engineering courses.",
+    "campus": "Kohima",
+    "officialUrl": "https://gpkohima.edu.in",
+    "acceptedExams": [
+      "dee-nagaland"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/CSE/Fashion Tech/MOP",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "dee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "dee-nagaland",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gpkohima.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "SCTE Nagaland"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1994",
+      "district": "Kohima",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "institute-of-communication-information-technology-mokokchung",
+    "name": "Institute of Communication & Information Technology",
+    "shortName": "ICIT Mokokchung",
+    "location": "Mokokchung, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A government technical institute in Mokokchung offering diploma courses in IT and electronics.",
+    "campus": "Mokokchung",
+    "officialUrl": "https://icitmokokchung.ac.in",
+    "acceptedExams": [
+      "dee-nagaland"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Computer Engg/Electronics/IT",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "dee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "dee-nagaland",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://icitmokokchung.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "SCTE Nagaland"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2003",
+      "district": "Mokokchung",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "khelhoshe-polytechnic-atoizu",
+    "name": "Khelhoshe Polytechnic Atoizu",
+    "shortName": "KPA",
+    "location": "Atoizu, Zunheboto, Nagaland",
+    "rankingTier": "Tier 3",
+    "overview": "A government polytechnic located in Zunheboto district.",
+    "campus": "Atoizu",
+    "officialUrl": "https://kpa.ac.in",
+    "acceptedExams": [
+      "dee-nagaland"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/Electrical/Mechanical/Automobile",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "dee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "dee-nagaland",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://kpa.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE",
+        "SCTE Nagaland"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1972",
+      "district": "Zunheboto",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-chumukedima",
+    "name": "National Institute of Technology Nagaland",
+    "shortName": "National Institute of Technology Nagaland",
+    "location": "Chumukedima, Chumukedima District, Nagaland",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Chumukedima",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Chumukedima",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

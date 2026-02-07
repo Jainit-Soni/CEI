@@ -1,0 +1,2407 @@
+[
+  {
+    "id": "iit-palakkad",
+    "name": "Indian Institute of Technology Palakkad",
+    "shortName": "IIT Palakkad",
+    "location": "Kanjikode, Palakkad, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "One of the newer IITs established in 2015, rapidly growing its permanent campus near the Western Ghats. It focuses on interdisciplinary research and core engineering.",
+    "campus": "Kanjikode",
+    "officialUrl": "https://iitpkd.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, EE, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE Closing Rank ~5000 (General)"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Texas Instruments",
+      "Arista Networks",
+      "MathWorks"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://iitpkd.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2015",
+      "district": "Palakkad",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iim-kozhikode",
+    "name": "Indian Institute of Management Kozhikode",
+    "shortName": "IIMK",
+    "location": "Kozhikode, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "A premier management institute situated on two hillocks in the Kunnamangalam area. It is one of the fastest-growing IIMs, known for its Globalizing Indian Thought mission.",
+    "campus": "Kunnamangalam",
+    "officialUrl": "https://www.iimk.ac.in",
+    "acceptedExams": [
+      "cat",
+      "gmat",
+      "gre"
+    ],
+    "courses": [
+      {
+        "name": "PGP (MBA)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "PGP-LSM (Liberal Studies & Management)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "Overall: 85+ (Actual Call: ~97+)",
+        "source": "IIM K Admission"
+      }
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "BCG",
+      "Amazon",
+      "Goldman Sachs",
+      "HUL"
+    ],
+    "tuition": "₹22,50,000 (Approx Total)",
+    "sources": [
+      "https://www.iimk.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1996",
+      "district": "Kozhikode",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹31.02 LPA",
+      "medianPackage": "₹29.5 LPA",
+      "highestPackage": "₹67.0 LPA"
+    }
+  },
+  {
+    "id": "nit-calicut",
+    "name": "National Institute of Technology Calicut",
+    "shortName": "NITC",
+    "location": "Kozhikode, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "Formerly REC Calicut, this is one of the top NITs in India. It hosts a dedicated School of Management Studies and a School of Architecture alongside engineering.",
+    "campus": "Chathamangalam",
+    "officialUrl": "https://nitc.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "nimcet",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-main-paper-2"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: 4500 | ECE: 9000 | EEE: 16000",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "topRecruiters": [
+      "Oracle",
+      "Cisco",
+      "Qualcomm",
+      "Intel"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://nitc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1961",
+      "district": "Kozhikode",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹12.41 LPA",
+      "medianPackage": "₹9.0 LPA",
+      "highestPackage": "₹51.0 LPA"
+    }
+  },
+  {
+    "id": "iiser-thiruvananthapuram",
+    "name": "Indian Institute of Science Education and Research Thiruvananthapuram",
+    "shortName": "IISER TVM",
+    "location": "Vithura, Thiruvananthapuram, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "A premier institute dedicated to basic sciences research and education, located in the foothills of the Western Ghats.",
+    "campus": "Vithura",
+    "officialUrl": "https://www.iisertvm.ac.in",
+    "acceptedExams": [
+      "iiser-aptitude-test",
+      "jee-advanced"
+    ],
+    "courses": [
+      {
+        "name": "BS-MS Dual Degree",
+        "degree": "Integrated Master of Science",
+        "duration": "5 years",
+        "exams": [
+          "iiser-aptitude-test",
+          "jee-advanced"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "iiser-aptitude-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Research Labs",
+      "Pharma R&D"
+    ],
+    "tuition": "Moderate (Central Govt)",
+    "sources": [
+      "https://www.iisertvm.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2008",
+      "district": "Thiruvananthapuram",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iist-thiruvananthapuram",
+    "name": "Indian Institute of Space Science and Technology",
+    "shortName": "IIST",
+    "location": "Valiamala, Thiruvananthapuram, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "Asia's first Space University established by the Department of Space, Govt. of India. It functions as an autonomous body under DOS and is closely linked with ISRO.",
+    "campus": "Valiamala",
+    "officialUrl": "https://www.iist.ac.in",
+    "acceptedExams": [
+      "jee-advanced"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Aerospace, Avionics)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "Dual Degree (B.Tech + M.Tech/M.S.)",
+        "degree": "Integrated Degree",
+        "duration": "5 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2023",
+        "cutoff": "Approx 20-30% Aggregate Marks"
+      }
+    ],
+    "topRecruiters": [
+      "ISRO (Direct absorption subject to cutoff)",
+      "Private Aerospace"
+    ],
+    "tuition": "Zero (Fully funded upon meeting GPA criteria)",
+    "sources": [
+      "https://www.iist.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Central Govt (Dept of Space)",
+      "establishedYear": "2007",
+      "district": "Thiruvananthapuram",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "sctimst-trivandrum",
+    "name": "Sree Chitra Tirunal Institute for Medical Sciences and Technology",
+    "shortName": "SCTIMST",
+    "location": "Thiruvananthapuram, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance offering super-specialty medical training and biomedical engineering research.",
+    "campus": "Medical College Campus",
+    "officialUrl": "https://www.sctimst.ac.in",
+    "acceptedExams": [
+      "ini-ss",
+      "institute-entrance"
+    ],
+    "courses": [
+      {
+        "name": "DM/MCh",
+        "degree": "Super Specialty",
+        "duration": "3 years",
+        "exams": [
+          "ini-ss"
+        ]
+      },
+      {
+        "name": "MPH",
+        "degree": "Master of Public Health",
+        "duration": "2 years",
+        "exams": [
+          "institute-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ini-ss",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "institute-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.sctimst.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1973",
+      "district": "Thiruvananthapuram",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "central-university-of-kerala",
+    "name": "Central University of Kerala",
+    "shortName": "CUK",
+    "location": "Kasaragod, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "Established to improve access to quality higher education in Northern Kerala. It operates from a scenic campus in Tejaswini Hills.",
+    "campus": "Tejaswini Hills, Periye",
+    "officialUrl": "https://www.cukerala.ac.in",
+    "acceptedExams": [
+      "cuet-pg",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.cukerala.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "2009",
+      "district": "Kasaragod",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "university-of-kerala",
+    "name": "University of Kerala",
+    "shortName": "Kerala University",
+    "location": "Thiruvananthapuram, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "One of the first 16 universities in India. It affiliates colleges in Thiruvananthapuram, Kollam, Alappuzha, and Pathanamthitta districts.",
+    "campus": "Kariavattom",
+    "officialUrl": "https://www.keralauniversity.ac.in",
+    "acceptedExams": [
+      "university-entrance",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.keralauniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1937",
+      "district": "Thiruvananthapuram",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cusat-kochi",
+    "name": "Cochin University of Science and Technology",
+    "shortName": "CUSAT",
+    "location": "Kochi, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "A government-owned autonomous science and technology university known for its B.Tech (School of Engineering), Marine Sciences, and Law programs.",
+    "campus": "Kalamassery",
+    "officialUrl": "https://cusat.ac.in",
+    "acceptedExams": [
+      "cusat-cat",
+      "gate",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cusat-cat"
+        ]
+      },
+      {
+        "name": "Integrated M.Sc (Photonics/Science)",
+        "degree": "M.Sc",
+        "duration": "5 years",
+        "exams": [
+          "cusat-cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cusat-cat",
+        "year": "2023",
+        "cutoff": "CSE ~500 Rank"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "IBM",
+      "CISCO"
+    ],
+    "tuition": "Moderate (State Govt)",
+    "sources": [
+      "https://cusat.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1971",
+      "district": "Ernakulam",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mahatma-gandhi-university-kerala",
+    "name": "Mahatma Gandhi University",
+    "shortName": "MGU Kerala",
+    "location": "Kottayam, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "A major affiliating university in Central Kerala known for its strong research output in polymer science and environmental studies.",
+    "campus": "Priyadarsini Hills, Kottayam",
+    "officialUrl": "https://www.mgu.ac.in",
+    "acceptedExams": [
+      "cat-mgu",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cat-mgu"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat-mgu",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.mgu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1983",
+      "district": "Kottayam",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "university-of-calicut",
+    "name": "University of Calicut",
+    "shortName": "Calicut University",
+    "location": "Tenhipalam, Malappuram, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "The largest university in Kerala in terms of affiliated colleges and student intake, serving the northern districts.",
+    "campus": "Tenhipalam",
+    "officialUrl": "https://uoc.ac.in",
+    "acceptedExams": [
+      "cucat",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cucat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cucat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://uoc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1968",
+      "district": "Malappuram",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kannur-university",
+    "name": "Kannur University",
+    "shortName": "Kannur University",
+    "location": "Kannur, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "A multi-campus university serving the Kannur, Kasaragod, and Wayanad districts.",
+    "campus": "Thavakkara",
+    "officialUrl": "https://www.kannuruniversity.ac.in",
+    "acceptedExams": [
+      "university-entrance",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.kannuruniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1996",
+      "district": "Kannur",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "apj-abdul-kalam-technological-university",
+    "name": "APJ Abdul Kalam Technological University",
+    "shortName": "KTU",
+    "location": "Thiruvananthapuram, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "The affiliating university for nearly all engineering, architecture, and management colleges in Kerala.",
+    "campus": "CET Campus Area",
+    "officialUrl": "https://ktu.edu.in",
+    "acceptedExams": [
+      "keam",
+      "nata",
+      "cmat",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "keam"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "keam",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "nata",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by Affiliated College",
+    "sources": [
+      "https://ktu.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "regulatory"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2014",
+      "district": "Thiruvananthapuram",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kerala-university-of-health-sciences",
+    "name": "Kerala University of Health Sciences",
+    "shortName": "KUHS",
+    "location": "Thrissur, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "A dedicated state university for medical, dental, nursing, pharmacy, and paramedical education in Kerala.",
+    "campus": "Medical College Campus, Thrissur",
+    "officialUrl": "http://www.kuhs.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "keam-pharmacy"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by Affiliated College",
+    "sources": [
+      "http://www.kuhs.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "regulatory"
+      ],
+      "affiliations": [
+        "NMC",
+        "DCI",
+        "PCI",
+        "INC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2010",
+      "district": "Thrissur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kerala-agricultural-university",
+    "name": "Kerala Agricultural University",
+    "shortName": "KAU",
+    "location": "Vellanikkara, Thrissur, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "The primary state university for agriculture, forestry, and agricultural engineering.",
+    "campus": "Vellanikkara",
+    "officialUrl": "https://www.kau.in",
+    "acceptedExams": [
+      "keam-agri",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "keam-agri"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "keam-agri",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.kau.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1971",
+      "district": "Thrissur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nuals-kochi",
+    "name": "National University of Advanced Legal Studies",
+    "shortName": "NUALS",
+    "location": "Kochi, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "The only National Law University (NLU) in Kerala, providing integrated legal education.",
+    "campus": "Kalamassery",
+    "officialUrl": "https://www.nuals.ac.in",
+    "acceptedExams": [
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "BA LLB (Hons)",
+        "degree": "Integrated LLB",
+        "duration": "5 years",
+        "exams": [
+          "clat"
+        ]
+      },
+      {
+        "name": "LLM",
+        "degree": "LLM",
+        "duration": "1 year",
+        "exams": [
+          "clat-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat",
+        "year": "2023",
+        "cutoff": "AIR ~1200 (General)"
+      }
+    ],
+    "topRecruiters": [
+      "Law Firms",
+      "LPOs"
+    ],
+    "tuition": "High (NLU Standard)",
+    "sources": [
+      "https://www.nuals.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Bar Council of India"
+      ],
+      "ownership": "State University (NLU)",
+      "establishedYear": "2005",
+      "district": "Ernakulam",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "college-of-engineering-trivandrum",
+    "name": "College of Engineering Trivandrum",
+    "shortName": "CET",
+    "location": "Thiruvananthapuram, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "The first engineering college in Kerala, established in 1939. It is the most sought-after college under KEAM counselling.",
+    "campus": "Kulathoor",
+    "officialUrl": "https://www.cet.ac.in",
+    "acceptedExams": [
+      "keam",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "keam"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "keam",
+        "year": "2023",
+        "cutoff": "CSE Rank ~250 (State Merit)"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Oracle",
+      "L&T",
+      "Bosch"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.cet.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "KTU",
+        "AICTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1939",
+      "district": "Thiruvananthapuram",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "govt-medical-college-thiruvananthapuram",
+    "name": "Government Medical College, Thiruvananthapuram",
+    "shortName": "Trivandrum Medical College",
+    "location": "Thiruvananthapuram, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "The oldest and most prestigious medical college in Kerala, attached to a tertiary care hospital.",
+    "campus": "Ulloor",
+    "officialUrl": "https://www.tmc.kerala.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~650 Score"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Government)",
+    "sources": [
+      "https://www.tmc.kerala.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "KUHS",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1951",
+      "district": "Thiruvananthapuram",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "govt-medical-college-kozhikode",
+    "name": "Government Medical College, Kozhikode",
+    "shortName": "Calicut Medical College",
+    "location": "Kozhikode, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "A premier government medical institution serving the northern districts of Kerala.",
+    "campus": "Chevayur",
+    "officialUrl": "https://www.govtmedicalcollegekozhikode.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Government)",
+    "sources": [
+      "https://www.govtmedicalcollegekozhikode.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "KUHS",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1957",
+      "district": "Kozhikode",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "amrita-vishwa-vidyapeetham-amritapuri",
+    "name": "Amrita Vishwa Vidyapeetham",
+    "shortName": "Amrita University",
+    "location": "Amritapuri (Kollam) / Kochi, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "A multi-campus, multi-disciplinary Institute of Eminence (IoE) and Deemed University. The Kochi campus houses the famous Amrita Institute of Medical Sciences (AIMS).",
+    "campus": "Amritapuri/Kochi",
+    "officialUrl": "https://www.amrita.edu",
+    "acceptedExams": [
+      "aeee",
+      "neet-ug",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "aeee",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBBS (Kochi)",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "aeee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Cisco",
+      "Microsoft",
+      "Intel",
+      "Mayo Clinic"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.amrita.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "2003",
+      "district": "Kollam",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "university-college-thiruvananthapuram",
+    "name": "University College, Thiruvananthapuram",
+    "shortName": "University College",
+    "location": "Thiruvananthapuram, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "A heritage institution and constituent college of the University of Kerala, consistently ranked high in NIRF for colleges.",
+    "campus": "Palayam",
+    "officialUrl": "http://www.universitycollege.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Very Low (Govt)",
+    "sources": [
+      "http://www.universitycollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "University of Kerala"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1866",
+      "district": "Thiruvananthapuram",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sacred-heart-college-thevara",
+    "name": "Sacred Heart College, Thevara",
+    "shortName": "SH College",
+    "location": "Kochi, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "A premier autonomous arts and science college in Kochi, affiliated with MG University, known for its scenic backwater campus.",
+    "campus": "Thevara",
+    "officialUrl": "http://www.shcollege.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Com/B.A./B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Wipro",
+      "Federal Bank"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "http://www.shcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "MG University (Autonomous)"
+      ],
+      "ownership": "Private (Aided)",
+      "establishedYear": "1944",
+      "district": "Ernakulam",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rajagiri-school-of-engineering-and-technology",
+    "name": "Rajagiri School of Engineering & Technology",
+    "shortName": "RSET",
+    "location": "Kochi, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "A leading private autonomous engineering college in Kochi, located in the Rajagiri Valley near InfoPark.",
+    "campus": "Kakkanad",
+    "officialUrl": "https://www.rajagiritech.ac.in",
+    "acceptedExams": [
+      "keam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "keam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "keam",
+        "year": "2023",
+        "cutoff": "CSE ~2000-3000 Rank"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "Cognizant"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.rajagiritech.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "KTU (Autonomous)"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2001",
+      "district": "Ernakulam",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "tkm-college-of-engineering",
+    "name": "Thangal Kunju Musaliar College of Engineering",
+    "shortName": "TKMCE",
+    "location": "Kollam, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "The first government-aided engineering college in Kerala. It is highly prestigious and operates with academic autonomy.",
+    "campus": "Karicode",
+    "officialUrl": "https://www.tkmce.ac.in",
+    "acceptedExams": [
+      "keam",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, EEE, ECE, CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "keam"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "keam",
+        "year": "2023",
+        "cutoff": "CSE ~1000 Rank"
+      }
+    ],
+    "topRecruiters": [
+      "MRF",
+      "L&T",
+      "TCS",
+      "Oracle"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://www.tkmce.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "KTU (Autonomous)",
+        "AICTE"
+      ],
+      "ownership": "Private (Govt Aided)",
+      "establishedYear": "1958",
+      "district": "Kollam",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "kerala-kalamandalam",
+    "name": "Kerala Kalamandalam",
+    "shortName": "Kalamandalam",
+    "location": "Cheruthuruthy, Thrissur, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "A Deemed University for Art and Culture, founded by Vallathol Narayana Menon to preserve Kathakali and other classical arts.",
+    "campus": "Cheruthuruthy",
+    "officialUrl": "https://www.kalamandalam.org",
+    "acceptedExams": [
+      "aptitude-test"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Performing Arts)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "aptitude-test"
+        ]
+      },
+      {
+        "name": "M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "aptitude-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "aptitude-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.kalamandalam.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "State Govt (Deemed)",
+      "establishedYear": "1930",
+      "district": "Thrissur",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "thunchath-ezhuthachan-malayalam-university",
+    "name": "Thunchath Ezhuthachan Malayalam University",
+    "shortName": "Malayalam University",
+    "location": "Tirur, Malappuram, Kerala",
+    "rankingTier": "Tier 3",
+    "overview": "Dedicated to the study and research of Malayalam language, literature, and culture.",
+    "campus": "Vakkad",
+    "officialUrl": "https://malayalamuniversity.edu.in",
+    "acceptedExams": [
+      "university-entrance"
+    ],
+    "courses": [
+      {
+        "name": "M.A. Malayalam",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://malayalamuniversity.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2012",
+      "district": "Malappuram",
+      "naacGrade": "B+"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "chinmaya-vishwavidyapeeth",
+    "name": "Chinmaya Vishwavidyapeeth",
+    "shortName": "CVV",
+    "location": "Ernakulam, Kerala",
+    "rankingTier": "Tier 3",
+    "overview": "A deemed university integrating Indian knowledge systems with contemporary education.",
+    "campus": "Veliyanad",
+    "officialUrl": "https://www.cvv.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc/B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.cvv.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "2016",
+      "district": "Ernakulam",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "model-engineering-college-thrikkakara",
+    "name": "Government Model Engineering College",
+    "shortName": "MEC Kochi",
+    "location": "Thrikkakara, Kochi, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "Run by IHRD, this is one of the top engineering colleges in the state, famous for its high placement records.",
+    "campus": "Thrikkakara",
+    "officialUrl": "https://www.mec.ac.in",
+    "acceptedExams": [
+      "keam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Biomedical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "keam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "keam",
+        "year": "2023",
+        "cutoff": "CSE ~500-1000 Rank"
+      }
+    ],
+    "topRecruiters": [
+      "Nvidia",
+      "Synopsys",
+      "Oracle",
+      "Yahoo"
+    ],
+    "tuition": "Moderate (Government Controlled)",
+    "sources": [
+      "https://www.mec.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "KTU",
+        "AICTE"
+      ],
+      "ownership": "Government (IHRD)",
+      "establishedYear": "1989",
+      "district": "Ernakulam",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "st-teresa-college-ernakulam",
+    "name": "St. Teresa's College",
+    "shortName": "St. Teresa's",
+    "location": "Ernakulam, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "A prestigious autonomous women's college in Kochi, affiliated with MG University.",
+    "campus": "Park Avenue Road",
+    "officialUrl": "https://teresas.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "KPMG",
+      "McKinsey"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://teresas.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "MG University (Autonomous)"
+      ],
+      "ownership": "Private (Aided)",
+      "establishedYear": "1925",
+      "district": "Ernakulam",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "farook-college-calicut",
+    "name": "Farook College",
+    "shortName": "Farook College",
+    "location": "Kozhikode, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "The largest autonomous postgraduate institution under the University of Calicut, with a strong history of minority education.",
+    "campus": "Feroke",
+    "officialUrl": "https://farookcollege.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate (Aided)",
+    "sources": [
+      "https://farookcollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Calicut University (Autonomous)"
+      ],
+      "ownership": "Private (Aided/Minority)",
+      "establishedYear": "1948",
+      "district": "Kozhikode",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kufos-kochi",
+    "name": "Kerala University of Fisheries and Ocean Studies",
+    "shortName": "KUFOS",
+    "location": "Panangad, Kochi, Kerala",
+    "rankingTier": "Tier 3",
+    "overview": "The first fisheries university in India, dedicated to studies in fisheries and ocean sciences.",
+    "campus": "Panangad",
+    "officialUrl": "http://kufos.ac.in",
+    "acceptedExams": [
+      "keam",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.F.Sc",
+        "degree": "Bachelor of Fisheries Science",
+        "duration": "4 years",
+        "exams": [
+          "keam",
+          "icar-aieea"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "keam",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://kufos.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2010",
+      "district": "Ernakulam",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "kvasu-wayanad",
+    "name": "Kerala Veterinary and Animal Sciences University",
+    "shortName": "KVASU",
+    "location": "Pookode, Wayanad, Kerala",
+    "rankingTier": "Tier 3",
+    "overview": "A state university established to promote education and research in veterinary and animal sciences.",
+    "campus": "Pookode",
+    "officialUrl": "https://www.kvasu.ac.in",
+    "acceptedExams": [
+      "keam-medical",
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "Bachelor of Veterinary Science",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "keam-medical",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.kvasu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "VCI"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2010",
+      "district": "Wayanad",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-kozhikode",
+    "name": "National Institute of Technology Calicut",
+    "shortName": "National Institute of Technology Calicut",
+    "location": "Kozhikode, Kozhikode District, Kerala",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Kozhikode",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Kozhikode",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "government-engineering-college-thrissur",
+    "name": "Government Engineering College Thrissur",
+    "shortName": "Government Engineering College Thrissur",
+    "location": "Thrissur, Thrissur District, Kerala",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Thrissur",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Thrissur",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

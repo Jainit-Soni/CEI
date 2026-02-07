@@ -1,0 +1,3494 @@
+[
+  {
+    "id": "iit-ism-dhanbad",
+    "name": "Indian Institute of Technology (Indian School of Mines), Dhanbad",
+    "shortName": "IIT (ISM) Dhanbad",
+    "location": "Dhanbad, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance and one of India's oldest premier technical institutions, originally established in 1926. It is renowned globally for Mining, Petroleum, and Earth Sciences, now expanding into CSE and Electronics.",
+    "campus": "Sardar Patel Nagar, Dhanbad",
+    "officialUrl": "https://www.iitism.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "cat",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "Integrated M.Tech",
+        "degree": "M.Tech",
+        "duration": "5 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE Closing Rank ~3000 (General)"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Goldman Sachs",
+      "Schlumberger",
+      "ONGC",
+      "Coal India"
+    ],
+    "tuition": "₹2,00,000 - ₹2,50,000 per annum approx",
+    "sources": [
+      "https://www.iitism.ac.in",
+      "https://josaa.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1926",
+      "district": "Dhanbad",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹17.01 LPA",
+      "medianPackage": "₹15.0 LPA",
+      "highestPackage": "₹51.0 LPA"
+    }
+  },
+  {
+    "id": "nit-jamshedpur",
+    "name": "National Institute of Technology Jamshedpur",
+    "shortName": "NIT Jamshedpur",
+    "location": "Adityapur, Jamshedpur, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance located in the industrial hub of Adityapur. It is one of the older RECs converted to NITs, known for strong placements in core engineering sectors.",
+    "campus": "Adityapur",
+    "officialUrl": "https://www.nitjsr.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "nimcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, ME, Civil, Met, Prod)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "3 years",
+        "exams": [
+          "nimcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Tata Steel",
+      "Tata Motors",
+      "Amazon",
+      "L&T",
+      "Vedanta"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://www.nitjsr.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1960",
+      "district": "Seraikela Kharsawan",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iim-ranchi",
+    "name": "Indian Institute of Management Ranchi",
+    "shortName": "IIM Ranchi",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "A ninth-generation IIM established in 2009, operating from a permanent campus in Prabandhan Nagar. Known for its focus on Neuro-management and HR.",
+    "campus": "Prabandhan Nagar, Nayasarai Road",
+    "officialUrl": "https://www.iimranchi.ac.in",
+    "acceptedExams": [
+      "cat",
+      "ipmat"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "Integrated Programme in Management (IPM)",
+        "degree": "BBA+MBA",
+        "duration": "5 years",
+        "exams": [
+          "ipmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ipmat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "JP Morgan",
+      "Capgemini",
+      "TATA Steel"
+    ],
+    "tuition": "₹17,50,000 (Approx for 2 years)",
+    "sources": [
+      "https://www.iimranchi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2009",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹18.69 LPA",
+      "medianPackage": "₹18.0 LPA",
+      "highestPackage": "₹37.8 LPA"
+    }
+  },
+  {
+    "id": "iiit-ranchi",
+    "name": "Indian Institute of Information Technology Ranchi",
+    "shortName": "IIIT Ranchi",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "An Institute of National Importance established under PPP mode. It focuses on IT and Electronics education to support the digital needs of the region.",
+    "campus": "Science & Technology Campus, Namkum (Temporary)",
+    "officialUrl": "https://iiitranchi.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "MPL",
+      "TCS",
+      "InfoEdge"
+    ],
+    "tuition": "₹2,00,000 per annum approx",
+    "sources": [
+      "https://iiitranchi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "PPP (Central + State + Industry)",
+      "establishedYear": "2016",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "aiims-deoghar",
+    "name": "All India Institute of Medical Sciences Deoghar",
+    "shortName": "AIIMS Deoghar",
+    "location": "Deoghar, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "An apex healthcare institute established under the PMSSY to address regional healthcare imbalances. It offers undergraduate medical education and tertiary care.",
+    "campus": "Devipur, Deoghar",
+    "officialUrl": "https://www.aiimsdeoghar.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "General Closing Rank: ~4000"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals",
+      "Healthcare Research"
+    ],
+    "tuition": "Nominal (Central Govt norms)",
+    "sources": [
+      "https://www.aiimsdeoghar.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2019",
+      "district": "Deoghar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "central-university-jharkhand",
+    "name": "Central University of Jharkhand",
+    "shortName": "CUJ",
+    "location": "Brambe/Cheri-Manatu, Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "A central university known for its 5-year integrated programs in sciences, engineering, and humanities. It focuses on sustainable development and tribal studies.",
+    "campus": "Cheri-Manatu (Permanent)",
+    "officialUrl": "http://cuj.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "Integrated B.Tech-M.Tech",
+        "degree": "Integrated Degree",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "Integrated M.Sc",
+        "degree": "Integrated Degree",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://cuj.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "2009",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nusrl-ranchi",
+    "name": "National University of Study and Research in Law",
+    "shortName": "NUSRL",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "The premier National Law University (NLU) in Jharkhand, established by a legislative act to provide advanced legal education.",
+    "campus": "Nagri, Ranchi",
+    "officialUrl": "http://www.nusrlranchi.ac.in",
+    "acceptedExams": [
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "BA LLB (Hons)",
+        "degree": "Integrated LLB",
+        "duration": "5 years",
+        "exams": [
+          "clat"
+        ]
+      },
+      {
+        "name": "LLM",
+        "degree": "LLM",
+        "duration": "1 year",
+        "exams": [
+          "clat-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Law Firms",
+      "Corporate Legal Departments"
+    ],
+    "tuition": "High",
+    "sources": [
+      "http://www.nusrlranchi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Bar Council of India"
+      ],
+      "ownership": "State University (NLU)",
+      "establishedYear": "2010",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "bit-sindri",
+    "name": "Birsa Institute of Technology, Sindri",
+    "shortName": "BIT Sindri",
+    "location": "Sindri, Dhanbad, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "The premier state government engineering college of Jharkhand, formerly affiliated to VBU/RU, now under JUT. Known for its vast campus, alumni network, and low tuition fees.",
+    "campus": "Sindri",
+    "officialUrl": "https://www.bitsindri.ac.in",
+    "acceptedExams": [
+      "jcece",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Mechanical, Electrical, Civil, Mining, Met, Chemical, CSE, IT, ECE, Prod)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jcece"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jcece",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Tata Steel",
+      "JSW",
+      "Vedanta",
+      "Aditya Birla Group",
+      "TCS"
+    ],
+    "tuition": "₹30,000 per annum approx (Highly Subsidized)",
+    "sources": [
+      "https://www.bitsindri.ac.in",
+      "http://jceceb.jharkhand.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Jharkhand University of Technology",
+        "AICTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1949",
+      "district": "Dhanbad",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "ranchi-university",
+    "name": "Ranchi University",
+    "shortName": "RU",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "The oldest and largest university in the state, serving as the parent institution for many colleges in the South Chotanagpur division. It offers a wide range of traditional and vocational courses.",
+    "campus": "Ranchi",
+    "officialUrl": "https://www.ranchiuniversity.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "BA/B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug",
+          "merit"
+        ]
+      },
+      {
+        "name": "MA/M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.ranchiuniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1960",
+      "district": "Ranchi",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "st-xaviers-college-ranchi",
+    "name": "St. Xavier's College, Ranchi",
+    "shortName": "SXC Ranchi",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "An Autonomous College under Ranchi University, and a minority educational institution. It is one of the most prestigious colleges in the state for Arts, Science, and Commerce.",
+    "campus": "Purulia Road, Ranchi",
+    "officialUrl": "https://www.sxcran.org",
+    "acceptedExams": [
+      "college-entrance-test",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc./B.Com (Hons)",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "college-entrance-test"
+        ]
+      },
+      {
+        "name": "BBA/BCA",
+        "degree": "Vocational",
+        "duration": "3 years",
+        "exams": [
+          "college-entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "college-entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "TCS",
+      "SAP",
+      "Deloitte"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.sxcran.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Ranchi University (Autonomous)"
+      ],
+      "ownership": "Private (Minority/Aided)",
+      "establishedYear": "1944",
+      "district": "Ranchi",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rims-ranchi",
+    "name": "Rajendra Institute of Medical Sciences",
+    "shortName": "RIMS Ranchi",
+    "location": "Bariatu, Ranchi, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "An autonomous institute under the Government of Jharkhand, RIMS is the premier medical college and hospital in the state.",
+    "campus": "Bariatu",
+    "officialUrl": "https://www.rimsranchi.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~580+ Score"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.rimsranchi.ac.in",
+      "http://jceceb.jharkhand.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Ranchi University (for degree award)",
+        "NMC"
+      ],
+      "ownership": "Government (Autonomous)",
+      "establishedYear": "1960",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "jharkhand-university-of-technology",
+    "name": "Jharkhand University of Technology",
+    "shortName": "JUT",
+    "location": "Namkum, Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "The affiliating university for all polytechnic and engineering colleges in Jharkhand, established to standardize technical education.",
+    "campus": "Namkum",
+    "officialUrl": "https://jutranchi.ac.in",
+    "acceptedExams": [
+      "jcece",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jcece"
+        ]
+      },
+      {
+        "name": "Diploma in Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "jcece-polytechnic"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jcece",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by affiliated college",
+    "sources": [
+      "https://jutranchi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2015",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vinoba-bhave-university",
+    "name": "Vinoba Bhave University",
+    "shortName": "VBU",
+    "location": "Hazaribagh, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "Headquartered in Hazaribagh, VBU manages colleges across the North Chotanagpur division, offering a broad spectrum of general and professional courses.",
+    "campus": "Sindoor, Hazaribagh",
+    "officialUrl": "https://www.vbu.ac.in",
+    "acceptedExams": [
+      "chancellor-portal-merit",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "BA/B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Ed",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "jcece-bed"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.vbu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1992",
+      "district": "Hazaribagh",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bbmku-dhanbad",
+    "name": "Binod Bihari Mahto Koyalanchal University",
+    "shortName": "BBMKU",
+    "location": "Dhanbad, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "Carved out of VBU, this university serves the Coal Belt region (Dhanbad and Bokaro districts).",
+    "campus": "Bhelatand, Dhanbad",
+    "officialUrl": "https://bbmku.ac.in",
+    "acceptedExams": [
+      "chancellor-portal-merit",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "BA/B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://bbmku.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2017",
+      "district": "Dhanbad",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kolhan-university",
+    "name": "Kolhan University",
+    "shortName": "KU",
+    "location": "Chaibasa, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "Serves the Kolhan division (East & West Singhbhum, Seraikela-Kharsawan). It caters to a large tribal population and industrial workforce.",
+    "campus": "Chaibasa",
+    "officialUrl": "https://www.kolhanuniversity.ac.in",
+    "acceptedExams": [
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "BA/B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.kolhanuniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2009",
+      "district": "West Singhbhum",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "skmu-dumka",
+    "name": "Sido Kanhu Murmu University",
+    "shortName": "SKMU",
+    "location": "Dumka, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "Located in the Santhal Pargana division, this university focuses on providing higher education in a predominantly tribal region.",
+    "campus": "Dumka",
+    "officialUrl": "http://skmu.ac.in",
+    "acceptedExams": [
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "BA/B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://skmu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1992",
+      "district": "Dumka",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "npu-palamu",
+    "name": "Nilamber-Pitamber University",
+    "shortName": "NPU",
+    "location": "Medininagar, Palamu, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "Established to serve the Palamu, Garhwa, and Latehar districts.",
+    "campus": "Medininagar",
+    "officialUrl": "http://npu.ac.in",
+    "acceptedExams": [
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "BA/B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://npu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2009",
+      "district": "Palamu",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dr-shyama-prasad-mukherjee-university",
+    "name": "Dr. Shyama Prasad Mukherjee University",
+    "shortName": "DSPMU",
+    "location": "Morabadi, Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly Ranchi College, it was upgraded to a unitary state university. It is a single-campus university with a focus on vocational and traditional courses.",
+    "campus": "Morabadi",
+    "officialUrl": "http://www.dspmuranchi.ac.in",
+    "acceptedExams": [
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "BA/B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "Microbiology/BBA",
+        "degree": "Vocational",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.dspmuranchi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2017",
+      "district": "Ranchi",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "xlri-jamshedpur",
+    "name": "XLRI - Xavier School of Management",
+    "shortName": "XLRI",
+    "location": "Jamshedpur, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "India's oldest business school, established in 1949. While technically a private institute offering PGDM (AICTE approved), it is widely regarded as a university-level institution for management education.",
+    "campus": "Circuit House Area, Jamshedpur",
+    "officialUrl": "https://www.xlri.ac.in",
+    "acceptedExams": [
+      "xat",
+      "gmat"
+    ],
+    "courses": [
+      {
+        "name": "PGDM (BM)",
+        "degree": "PG Diploma (MBA equivalent)",
+        "duration": "2 years",
+        "exams": [
+          "xat"
+        ]
+      },
+      {
+        "name": "PGDM (HRM)",
+        "degree": "PG Diploma (MBA equivalent)",
+        "duration": "2 years",
+        "exams": [
+          "xat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "xat",
+        "year": "2024",
+        "cutoff": "BM: 96 percentile"
+      }
+    ],
+    "topRecruiters": [
+      "BCG",
+      "McKinsey",
+      "HUL",
+      "TAS",
+      "P&G"
+    ],
+    "tuition": "₹28,00,000 approx (2 years)",
+    "sources": [
+      "https://www.xlri.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "AICTE",
+        "AACSB Accredited"
+      ],
+      "ownership": "Private (Jesuit)",
+      "establishedYear": "1949",
+      "district": "East Singhbhum",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹29.89 LPA",
+      "medianPackage": "₹28.0 LPA",
+      "highestPackage": "₹75.0 LPA"
+    }
+  },
+  {
+    "id": "jamshedpur-womens-university",
+    "name": "Jamshedpur Women's University",
+    "shortName": "JWU",
+    "location": "Jamshedpur, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "The first women's university in Jharkhand, upgraded from Jamshedpur Women's College. It aims to empower women through higher education.",
+    "campus": "Bistupur, Jamshedpur",
+    "officialUrl": "https://www.jwu.ac.in",
+    "acceptedExams": [
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "BA/B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.jwu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2019",
+      "district": "East Singhbhum",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "birsa-agricultural-university",
+    "name": "Birsa Agricultural University",
+    "shortName": "BAU",
+    "location": "Kanke, Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "A state agricultural university responsible for education and research in agriculture, veterinary science, and forestry.",
+    "campus": "Kanke",
+    "officialUrl": "https://www.baujharkhand.org",
+    "acceptedExams": [
+      "jcece-agri",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Agriculture",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "jcece-agri"
+        ]
+      },
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "Bachelor of Veterinary Science",
+        "duration": "5.5 years",
+        "exams": [
+          "jcece-agri"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jcece-agri",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.baujharkhand.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR",
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1981",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jharkhand-raksha-shakti-university",
+    "name": "Jharkhand Raksha Shakti University",
+    "shortName": "JRSU",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A specialized state university focusing on police science, criminology, and internal security.",
+    "campus": "Ranchi",
+    "officialUrl": "http://www.jrsu.ac.in",
+    "acceptedExams": [
+      "university-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Forensic Science",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "university-entrance"
+        ]
+      },
+      {
+        "name": "Diploma in Police Science",
+        "degree": "Diploma",
+        "duration": "1 year",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://www.jrsu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2016",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "amity-university-jharkhand",
+    "name": "Amity University Jharkhand",
+    "shortName": "Amity Ranchi",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "Part of the Amity education group, this private university offers a wide range of industry-oriented courses.",
+    "campus": "Main Road, Ranchi",
+    "officialUrl": "https://www.amity.edu/ranchi",
+    "acceptedExams": [
+      "amity-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "amity-entrance"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "amity-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "amity-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "TCS",
+      "Byju's"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.amity.edu/ranchi"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2016",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "icfai-university-jharkhand",
+    "name": "ICFAI University Jharkhand",
+    "shortName": "ICFAI Ranchi",
+    "location": "Daladali, Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "A private university established under the ICFAI University Act, focusing on management, engineering, and law.",
+    "campus": "Daladali",
+    "officialUrl": "https://www.iujharkhand.edu.in",
+    "acceptedExams": [
+      "merit",
+      "interview"
+    ],
+    "courses": [
+      {
+        "name": "BBA-LLB",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "interview",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.iujharkhand.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2008",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sarala-birla-university",
+    "name": "Sarala Birla University",
+    "shortName": "SBU",
+    "location": "Mahilong, Ranchi, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A private university established by the Birla family, offering courses in engineering, commerce, and humanities.",
+    "campus": "Birla Knowledge City, Mahilong",
+    "officialUrl": "https://sbu.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://sbu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2017",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "usha-martin-university",
+    "name": "Usha Martin University",
+    "shortName": "UMU",
+    "location": "Angara, Ranchi, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A private university offering courses in computer applications, management, and agriculture.",
+    "campus": "Angara",
+    "officialUrl": "https://www.umu.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.umu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2012",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "jharkhand-rai-university",
+    "name": "Jharkhand Rai University",
+    "shortName": "JRU",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A private university known for its focus on mining engineering and agriculture.",
+    "campus": "Kamre, Ranchi",
+    "officialUrl": "https://www.jru.edu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Mining",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Sc Agriculture",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.jru.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "NAAC Accredited"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2011",
+      "district": "Ranchi",
+      "naacGrade": "C"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "ybn-university",
+    "name": "YBN University",
+    "shortName": "YBN",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A private university offering a broad spectrum of courses including medical, nursing, and technical education.",
+    "campus": "Rajaulatu, Ranchi",
+    "officialUrl": "https://www.ybnu.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.ybnu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2017",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "arka-jain-university",
+    "name": "Arka Jain University",
+    "shortName": "AJU",
+    "location": "Jamshedpur, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "The first private university in the Kolhan region, offering polytechnic, engineering, and management courses.",
+    "campus": "Gamharia, Jamshedpur",
+    "officialUrl": "https://arkajainuniversity.ac.in",
+    "acceptedExams": [
+      "merit",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://arkajainuniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2017",
+      "district": "Seraikela Kharsawan",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sai-nath-university",
+    "name": "Sai Nath University",
+    "shortName": "SNU",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A private university established by the Jharkhand State Legislature.",
+    "campus": "Ormanjhi, Ranchi",
+    "officialUrl": "https://www.sainathuniversity.com",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Ed",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.sainathuniversity.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2012",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "mgm-medical-college-jamshedpur",
+    "name": "Mahatma Gandhi Memorial Medical College",
+    "shortName": "MGM Jamshedpur",
+    "location": "Jamshedpur, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "A government medical college affiliated with Kolhan University, attached to the MGM Medical College Hospital.",
+    "campus": "Dimna Road, Jamshedpur",
+    "officialUrl": "http://www.mgmmcjamshedpur.org",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://www.mgmmcjamshedpur.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Kolhan University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1961",
+      "district": "East Singhbhum",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "snmmch-dhanbad",
+    "name": "Shaheed Nirmal Mahto Medical College",
+    "shortName": "SNMMCH (PMCH)",
+    "location": "Dhanbad, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly Patliputra Medical College and Hospital (PMCH), it is a major government medical institute in the coal belt.",
+    "campus": "Saraidhela, Dhanbad",
+    "officialUrl": "https://www.snmmchdhanbad.nic.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://www.snmmchdhanbad.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "BBMKU",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1971",
+      "district": "Dhanbad",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "palamu-medical-college",
+    "name": "Medinirai Medical College (Palamu Medical College)",
+    "shortName": "MMCH Palamu",
+    "location": "Medininagar, Palamu, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "One of the three new government medical colleges established in Jharkhand to improve rural healthcare.",
+    "campus": "Pokhraha, Palamu",
+    "officialUrl": "http://mmchpalamu.org",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://mmchpalamu.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Nilamber-Pitamber University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2019",
+      "district": "Palamu",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "hazaribagh-medical-college",
+    "name": "Sheikh Bhikhari Medical College (Hazaribagh Medical College)",
+    "shortName": "SBMC Hazaribagh",
+    "location": "Hazaribagh, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A newly established government medical college associated with Hazaribagh Sadar Hospital.",
+    "campus": "Hazaribagh",
+    "officialUrl": "http://sbmch.org",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://sbmch.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Vinoba Bhave University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2019",
+      "district": "Hazaribagh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "dumka-medical-college",
+    "name": "Phulo Jhano Medical College (Dumka Medical College)",
+    "shortName": "PJMCH Dumka",
+    "location": "Dumka, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "Government medical college serving the Santhal Pargana division.",
+    "campus": "Dumka",
+    "officialUrl": "http://pjmchdumka.org",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://pjmchdumka.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Sido Kanhu Murmu University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2019",
+      "district": "Dumka",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "manipal-tata-medical-college",
+    "name": "Manipal Tata Medical College",
+    "shortName": "MTMC",
+    "location": "Jamshedpur, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "A premium medical college established under a partnership between Tata Steel and Manipal Academy of Higher Education (MAHE).",
+    "campus": "Baridih, Jamshedpur",
+    "officialUrl": "https://manipal.edu/mtmc-jamshedpur.html",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://manipal.edu/mtmc-jamshedpur.html"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "MAHE (Deemed University)"
+      ],
+      "ownership": "Private (PPP Model)",
+      "establishedYear": "2020",
+      "district": "East Singhbhum",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "niamt-hatia",
+    "name": "National Institute of Advanced Manufacturing Technology (formerly NIFFT)",
+    "shortName": "NIAMT (NIFFT)",
+    "location": "Hatia, Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "A centrally funded technical institute focusing on foundry and forge technology, now rebranded to emphasize advanced manufacturing.",
+    "campus": "Hatia",
+    "officialUrl": "https://www.niamt.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Maruti Suzuki",
+      "Tata Motors",
+      "JSW"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.niamt.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Deemed University"
+      ],
+      "ownership": "Central Govt",
+      "establishedYear": "1966",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cip-ranchi",
+    "name": "Central Institute of Psychiatry",
+    "shortName": "CIP Ranchi",
+    "location": "Kanke, Ranchi, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "A premier central government institution for psychiatry and mental health, founded during the British Raj. It offers postgraduate degrees.",
+    "campus": "Kanke",
+    "officialUrl": "https://cipranchi.nic.in",
+    "acceptedExams": [
+      "neet-pg",
+      "cip-entrance"
+    ],
+    "courses": [
+      {
+        "name": "MD Psychiatry",
+        "degree": "MD",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      },
+      {
+        "name": "M.Phil Clinical Psychology",
+        "degree": "M.Phil",
+        "duration": "2 years",
+        "exams": [
+          "cip-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cip-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://cipranchi.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Ranchi University"
+      ],
+      "ownership": "Central Govt",
+      "establishedYear": "1918",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "rinpas-ranchi",
+    "name": "Ranchi Institute of Neuro-Psychiatry and Allied Sciences",
+    "shortName": "RINPAS",
+    "location": "Kanke, Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "A state government run premier institute for mental health, often paired with CIP for its historical significance.",
+    "campus": "Kanke",
+    "officialUrl": "http://www.rinpas.nic.in",
+    "acceptedExams": [
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MD Psychiatry",
+        "degree": "MD",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.rinpas.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Ranchi University"
+      ],
+      "ownership": "State Government",
+      "establishedYear": "1925",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "st-columbas-college-hazaribagh",
+    "name": "St. Columba's College",
+    "shortName": "St. Columba's",
+    "location": "Hazaribagh, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "Established in 1899 by the Dublin University Mission, it is one of the oldest and most heritage-rich colleges in Eastern India.",
+    "campus": "Hazaribagh",
+    "officialUrl": "http://scchazaribag.org",
+    "acceptedExams": [
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc.",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://scchazaribag.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Vinoba Bhave University"
+      ],
+      "ownership": "Private (Aided/Minority)",
+      "establishedYear": "1899",
+      "district": "Hazaribagh",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "karim-city-college-jamshedpur",
+    "name": "Karim City College",
+    "shortName": "KCC",
+    "location": "Jamshedpur, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "A premier minority institution in Jamshedpur known for its arts, science, and vocational courses.",
+    "campus": "Sakchi, Jamshedpur",
+    "officialUrl": "https://karimcitycollege.org",
+    "acceptedExams": [
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc./B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://karimcitycollege.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Kolhan University"
+      ],
+      "ownership": "Private (Minority)",
+      "establishedYear": "1961",
+      "district": "East Singhbhum",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jamshedpur-cooperative-college",
+    "name": "Jamshedpur Co-operative College",
+    "shortName": "JCC",
+    "location": "Jamshedpur, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A constituent college of Kolhan University, offering degree and law courses.",
+    "campus": "Circuit House Area, Jamshedpur",
+    "officialUrl": "https://cooperativecollegejsr.ac.in",
+    "acceptedExams": [
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc./B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "LLB",
+        "degree": "LLB",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://cooperativecollegejsr.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Kolhan University"
+      ],
+      "ownership": "Government (Constituent)",
+      "establishedYear": "1954",
+      "district": "East Singhbhum",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "marwari-college-ranchi",
+    "name": "Marwari College, Ranchi",
+    "shortName": "Marwari College",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "An autonomous constituent college of Ranchi University, famous for its vocational and job-oriented courses.",
+    "campus": "Hindpiri, Ranchi",
+    "officialUrl": "http://www.marwaricollegeranchi.ac.in",
+    "acceptedExams": [
+      "chancellor-portal-merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "Fashion Designing",
+        "degree": "Vocational",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "chancellor-portal-merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.marwaricollegeranchi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Ranchi University (Autonomous)"
+      ],
+      "ownership": "Government (Constituent)",
+      "establishedYear": "1963",
+      "district": "Ranchi",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gossner-college-ranchi",
+    "name": "Gossner College",
+    "shortName": "Gossner",
+    "location": "Ranchi, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "A minority institution affiliated with Ranchi University, managed by the Gossner Evangelical Lutheran Church.",
+    "campus": "Club Road, Ranchi",
+    "officialUrl": "http://www.gossnercollege.org",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc./B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://www.gossnercollege.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Ranchi University"
+      ],
+      "ownership": "Private (Minority)",
+      "establishedYear": "1971",
+      "district": "Ranchi",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cambridge-institute-technology-ranchi",
+    "name": "Cambridge Institute of Technology",
+    "shortName": "CIT Ranchi",
+    "location": "Tatisilwai, Ranchi, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A prominent private engineering college in Ranchi affiliated to JUT.",
+    "campus": "Tatisilwai",
+    "officialUrl": "https://www.citranchi.ac.in",
+    "acceptedExams": [
+      "jcece",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jcece"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jcece",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.citranchi.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Jharkhand University of Technology",
+        "AICTE"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2001",
+      "district": "Ranchi",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "rvs-college-engineering-technology",
+    "name": "R.V.S. College of Engineering and Technology",
+    "shortName": "RVSCET",
+    "location": "Jamshedpur, Jharkhand",
+    "rankingTier": "Tier 3",
+    "overview": "A private engineering college in Jamshedpur offering B.Tech and M.Tech programs.",
+    "campus": "Edalbera, Jamshedpur",
+    "officialUrl": "https://www.rvscet.com",
+    "acceptedExams": [
+      "jcece",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jcece"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jcece",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.rvscet.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Jharkhand University of Technology",
+        "AICTE"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2004",
+      "district": "East Singhbhum",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-dhanbad",
+    "name": "Indian Institute of Technology (ISM) Dhanbad",
+    "shortName": "Indian Institute of Technology (ISM) Dhanbad",
+    "location": "Dhanbad, Dhanbad District, Jharkhand",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Dhanbad",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Dhanbad",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-jamshedpur",
+    "name": "National Institute of Technology Jamshedpur",
+    "shortName": "National Institute of Technology Jamshedpur",
+    "location": "Jamshedpur, Jamshedpur District, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Jamshedpur",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Jamshedpur",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bit-sindri-dhanbad",
+    "name": "BIT Sindri",
+    "shortName": "BIT Sindri",
+    "location": "Dhanbad, Dhanbad District, Jharkhand",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Dhanbad",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Dhanbad",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

@@ -1,0 +1,2392 @@
+[
+  {
+    "id": "iit-mandi",
+    "name": "Indian Institute of Technology Mandi",
+    "shortName": "IIT Mandi",
+    "location": "Mandi, Mandi District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "A second-generation IIT situated in the serene Himalayas, focusing on sustainable development and mountain region technologies.",
+    "campus": "Kamand, Mandi",
+    "officialUrl": "https://www.iitmandi.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, EE, ME, Civil, Data Science, Engg Physics)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc (Chemistry, Physics, Applied Maths)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: AIR ~2800"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Adobe",
+      "Goldman Sachs"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iitmandi.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2009",
+      "district": "Mandi",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-hamirpur",
+    "name": "National Institute of Technology Hamirpur",
+    "shortName": "NIT Hamirpur",
+    "location": "Hamirpur, Hamirpur District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the top NITs in India, known for its beautiful campus and strong engineering curriculum.",
+    "campus": "Anu, Hamirpur",
+    "officialUrl": "https://nith.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "ccmt",
+      "ccmn"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EE, ME, Civil, Chemical, Material Sci)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Samsung",
+      "Oracle",
+      "Bloomreach",
+      "Capgemini"
+    ],
+    "tuition": "Standard NIT Fees",
+    "sources": [
+      "https://nith.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1986",
+      "district": "Hamirpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iim-sirmaur",
+    "name": "Indian Institute of Management Sirmaur",
+    "shortName": "IIM Sirmaur",
+    "location": "Paonta Sahib, Sirmaur District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "A newer IIM focusing on management education with a special emphasis on tourism and hospitality.",
+    "campus": "Rampur Ghat Road, Paonta Sahib",
+    "officialUrl": "https://www.iimsirmaur.ac.in",
+    "acceptedExams": [
+      "cat",
+      "gmat"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "MBA in Tourism and Hospitality Management",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "92+ percentile (General)"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "HDFC Bank",
+      "ICICI Bank",
+      "EY"
+    ],
+    "tuition": "~INR 16 Lakhs",
+    "sources": [
+      "https://www.iimsirmaur.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Autonomous / INI",
+      "establishedYear": "2015",
+      "district": "Sirmaur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-una",
+    "name": "Indian Institute of Information Technology Una",
+    "shortName": "IIIT Una",
+    "location": "Una, Una District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Institute of National Importance operating under PPP mode, focused on IT education.",
+    "campus": "Saloh, Una",
+    "officialUrl": "https://iiitu.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "LinkedIn",
+      "Media.net",
+      "C-DOT"
+    ],
+    "tuition": "Standard IIIT Fees",
+    "sources": [
+      "https://iiitu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "PPP Model / INI",
+      "establishedYear": "2014",
+      "district": "Una",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "aiims-bilaspur",
+    "name": "All India Institute of Medical Sciences Bilaspur",
+    "shortName": "AIIMS Bilaspur",
+    "location": "Bilaspur, Bilaspur District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Premier medical institute established under PMSSY to provide tertiary healthcare and education.",
+    "campus": "Kothipura, Bilaspur",
+    "officialUrl": "https://www.aiimsbilaspur.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "ini-cet"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons) Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ini-cet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://www.aiimsbilaspur.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2020",
+      "district": "Bilaspur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "hpu-shimla",
+    "name": "Himachal Pradesh University",
+    "shortName": "HPU Shimla",
+    "location": "Shimla, Shimla District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "The oldest state university in HP, located at Summer Hill, affiliating most general degree colleges.",
+    "campus": "Summer Hill, Shimla",
+    "officialUrl": "https://hpuniv.ac.in",
+    "acceptedExams": [
+      "hpu-mat",
+      "hpu-cet",
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (UIIT: CSE, IT, Civil, Electrical, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "hpu-cet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "hpu-mat"
+        ]
+      },
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "hpu-mat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "hpu-cet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Univ)",
+    "sources": [
+      "https://hpuniv.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1970",
+      "district": "Shimla",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "central-uni-himachal",
+    "name": "Central University of Himachal Pradesh",
+    "shortName": "CUHP",
+    "location": "Dharamshala, Kangra District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Central university operating from multiple campuses in Kangra district.",
+    "campus": "Dharamshala / Dehra / Shahpur",
+    "officialUrl": "http://www.cuhimachal.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc / B.A.",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MBA (Travel & Tourism)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "M.Sc (Physics, Chem, Env Science)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "http://www.cuhimachal.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "2009",
+      "district": "Kangra",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ys-parmar-horticulture-uni",
+    "name": "Dr. Yashwant Singh Parmar University of Horticulture and Forestry",
+    "shortName": "YSP UHF Nauni",
+    "location": "Nauni, Solan District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Asia's first university dedicated to forestry and horticulture.",
+    "campus": "Nauni, Solan",
+    "officialUrl": "http://www.yspuniversity.ac.in",
+    "acceptedExams": [
+      "icar-aieea",
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Horticulture",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "entrance-test",
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons) Forestry",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "entrance-test",
+          "icar-aieea"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Agro-Chemical Companies",
+      "Plantations"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.yspuniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University",
+      "establishedYear": "1985",
+      "district": "Solan",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "csk-hpkv-palampur",
+    "name": "Chaudhary Sarwan Kumar Himachal Pradesh Krishi Vishvavidyalaya",
+    "shortName": "CSK HPKV Palampur",
+    "location": "Palampur, Kangra District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Major agricultural university serving the hill state's farming needs.",
+    "campus": "Palampur",
+    "officialUrl": "http://hillagric.ac.in",
+    "acceptedExams": [
+      "icar-aieea",
+      "neet-ug",
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "entrance-test",
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "B.V.Sc",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://hillagric.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Agricultural University",
+      "establishedYear": "1978",
+      "district": "Kangra",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "hptu-hamirpur",
+    "name": "Himachal Pradesh Technical University",
+    "shortName": "HPTU",
+    "location": "Hamirpur, Hamirpur District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "The affiliating university for technical education (engineering, pharmacy, management) in HP.",
+    "campus": "Daruhi, Hamirpur",
+    "officialUrl": "https://www.himtu.ac.in",
+    "acceptedExams": [
+      "hpcet",
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Affiliated Colleges)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "hpcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "hpcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "hpcet",
+          "cat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "hpcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by college",
+    "sources": [
+      "https://www.himtu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Technical University",
+      "establishedYear": "2010",
+      "district": "Hamirpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "atal-medical-university",
+    "name": "Atal Medical and Research University",
+    "shortName": "AMRU HP",
+    "location": "Mandi, Mandi District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "The central affiliating university for all medical and health sciences colleges in HP.",
+    "campus": "Nerchowk, Mandi",
+    "officialUrl": "https://amruhp.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-mds"
+    ],
+    "courses": [
+      {
+        "name": "MBBS (Affiliated Colleges)",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies",
+    "sources": [
+      "https://amruhp.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Medical University",
+      "establishedYear": "2018",
+      "district": "Mandi",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "igmc-shimla",
+    "name": "Indira Gandhi Medical College",
+    "shortName": "IGMC Shimla",
+    "location": "Shimla, Shimla District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Oldest and most prestigious medical college in Himachal Pradesh (formerly Snowdon Medical College).",
+    "campus": "Snowdon, Shimla",
+    "officialUrl": "http://www.igmcshimla.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      },
+      {
+        "name": "DM/M.Ch",
+        "degree": "Super Specialty",
+        "duration": "3 years",
+        "exams": [
+          "neet-ss"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "State Quota Top Rankers"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.igmcshimla.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "AMRU HP"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1966",
+      "district": "Shimla",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "rpgmc-tanda",
+    "name": "Dr. Rajendra Prasad Government Medical College",
+    "shortName": "RPGMC Tanda",
+    "location": "Tanda, Kangra District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "A major government medical college serving the Kangra region.",
+    "campus": "Tanda, Kangra",
+    "officialUrl": "http://www.rpgmc.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.rpgmc.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "AMRU HP"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1996",
+      "district": "Kangra",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "slbsgmc-mandi",
+    "name": "Shri Lal Bahadur Shastri Government Medical College",
+    "shortName": "SLBSGMC Mandi",
+    "location": "Mandi, Mandi District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Government medical college located in Nerchowk, Mandi.",
+    "campus": "Nerchowk, Mandi",
+    "officialUrl": "http://www.slbsgmcm.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.slbsgmcm.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "AMRU HP"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2017",
+      "district": "Mandi",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ys-parmar-gmc-nahan",
+    "name": "Dr. Y.S. Parmar Government Medical College",
+    "shortName": "GMC Nahan",
+    "location": "Nahan, Sirmaur District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Government medical college in Sirmaur district.",
+    "campus": "Nahan",
+    "officialUrl": "http://www.yspgmc.org",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.yspgmc.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "AMRU HP"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2016",
+      "district": "Sirmaur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jln-gmc-chamba",
+    "name": "Pt. Jawaharlal Nehru Government Medical College",
+    "shortName": "GMC Chamba",
+    "location": "Chamba, Chamba District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Government medical college serving the remote Chamba region.",
+    "campus": "Sarol, Chamba",
+    "officialUrl": "http://www.gmcchamba.edu.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.gmcchamba.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "AMRU HP"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2016",
+      "district": "Chamba",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rkgmc-hamirpur",
+    "name": "Dr. Radhakrishnan Government Medical College",
+    "shortName": "GMC Hamirpur",
+    "location": "Hamirpur, Hamirpur District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Government medical college in Hamirpur.",
+    "campus": "Hamirpur",
+    "officialUrl": "http://www.rkgmc.ac.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.rkgmc.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "AMRU HP"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2018",
+      "district": "Hamirpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jngec-sundernagar",
+    "name": "Jawaharlal Nehru Government Engineering College",
+    "shortName": "JNGEC",
+    "location": "Sundernagar, Mandi District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Premier state government engineering college.",
+    "campus": "Sundernagar, Mandi",
+    "officialUrl": "http://www.jngec.ac.in",
+    "acceptedExams": [
+      "hpcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, Textile, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "hpcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "hpcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Vardhman",
+      "Swaraj Mazda"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.jngec.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "HPTU Hamirpur"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2006",
+      "district": "Mandi",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rggec-kangra",
+    "name": "Rajiv Gandhi Government Engineering College",
+    "shortName": "RGGEC Kangra",
+    "location": "Nagrota Bagwan, Kangra District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Government engineering college in Kangra district.",
+    "campus": "Massal, Nagrota Bagwan",
+    "officialUrl": "http://www.rggec.ac.in",
+    "acceptedExams": [
+      "hpcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, Electrical, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "hpcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "hpcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.rggec.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "HPTU Hamirpur"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2014",
+      "district": "Kangra",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "abv-giet-pragatinagar",
+    "name": "Atal Bihari Vajpayee Government Institute of Engineering and Technology",
+    "shortName": "ABVGIET",
+    "location": "Pragatinagar, Shimla District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Government engineering institute in Shimla district.",
+    "campus": "Pragatinagar, Shimla",
+    "officialUrl": "http://www.abvgiet.ac.in",
+    "acceptedExams": [
+      "hpcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "hpcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "hpcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.abvgiet.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "HPTU Hamirpur"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2011",
+      "district": "Shimla",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "shoolini-university",
+    "name": "Shoolini University of Biotechnology and Management Sciences",
+    "shortName": "Shoolini Uni",
+    "location": "Solan, Solan District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "A top-ranked private university known for research and innovation, especially in biotechnology.",
+    "campus": "Bajhol, Solan",
+    "officialUrl": "https://shooliniuniversity.com",
+    "acceptedExams": [
+      "jee-main",
+      "sat",
+      "neet-ug",
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Biotech, CSE, Food Tech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat"
+        ]
+      },
+      {
+        "name": "B.Pharmacy",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "hpcet",
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "sat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Biocon",
+      "Nestle",
+      "Genpact",
+      "HUL"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://shooliniuniversity.com"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2009",
+      "district": "Solan",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jaypee-university-waknaghat",
+    "name": "Jaypee University of Information Technology",
+    "shortName": "JUIT Waknaghat",
+    "location": "Waknaghat, Solan District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Premier private university focusing on IT and Biotechnology.",
+    "campus": "Waknaghat, Solan",
+    "officialUrl": "https://www.juit.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Civil, Biotech, Bioinf)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "ZS Associates",
+      "Infosys"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://www.juit.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2002",
+      "district": "Solan",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "chitkara-university-hp",
+    "name": "Chitkara University Himachal Pradesh",
+    "shortName": "Chitkara HP",
+    "location": "Baddi, Solan District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Known for its strong placement record and industry-aligned curriculum.",
+    "campus": "Atal Shiksha Kunj, Baddi",
+    "officialUrl": "https://www.chitkara.edu.in/himachal-pradesh",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. (CSE, Civil, ECE)",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Infosys",
+      "Capgemini",
+      "Wipro"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.chitkara.edu.in/himachal-pradesh"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2008",
+      "district": "Solan",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bahra-university",
+    "name": "Bahra University",
+    "shortName": "Bahra Uni",
+    "location": "Waknaghat, Solan District, Himachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Private university located in the Shimla hills offering diverse courses.",
+    "campus": "Waknaghat, Solan",
+    "officialUrl": "https://www.bahrauniversity.edu.in",
+    "acceptedExams": [
+      "jee-main",
+      "hpcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Pharmacy",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "hpcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "hpcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.bahrauniversity.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2011",
+      "district": "Solan",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "eternal-university",
+    "name": "Eternal University",
+    "shortName": "Eternal Uni",
+    "location": "Baru Sahib, Sirmaur District, Himachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Value-based private university located in the divine valley of Baru Sahib.",
+    "campus": "Baru Sahib, Sirmaur",
+    "officialUrl": "https://eternaluniversity.edu.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Food Tech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "B.Sc Agriculture",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://eternaluniversity.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2008",
+      "district": "Sirmaur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "maharishi-markandeshwar-solan",
+    "name": "Maharishi Markandeshwar University",
+    "shortName": "MMU Solan",
+    "location": "Solan, Solan District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Private university with a medical college and hospital.",
+    "campus": "Kumarhatti, Solan",
+    "officialUrl": "https://mmusolan.org",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High (Medical)",
+    "sources": [
+      "https://mmusolan.org"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2010",
+      "district": "Solan",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "hp-national-law-university",
+    "name": "Himachal Pradesh National Law University",
+    "shortName": "HPNLU",
+    "location": "Shimla, Shimla District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "The National Law University of Himachal Pradesh.",
+    "campus": "Ghandal, Shimla",
+    "officialUrl": "https://hpnlu.ac.in",
+    "acceptedExams": [
+      "clat-ug",
+      "clat-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat-ug"
+        ]
+      },
+      {
+        "name": "B.B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat-ug"
+        ]
+      },
+      {
+        "name": "LL.M",
+        "degree": "LL.M",
+        "duration": "1 year",
+        "exams": [
+          "clat-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat-ug",
+        "year": "2024",
+        "cutoff": "AIR ~1800-2000"
+      }
+    ],
+    "topRecruiters": [
+      "Law Firms"
+    ],
+    "tuition": "State NLU Fees",
+    "sources": [
+      "https://hpnlu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Legislature / NLU",
+      "establishedYear": "2016",
+      "district": "Shimla",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "st-bedes-shimla",
+    "name": "St. Bede's College",
+    "shortName": "St. Bede's",
+    "location": "Shimla, Shimla District, Himachal Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Prestigious women's college in Shimla, known for its history and academic excellence.",
+    "campus": "Navbahar, Shimla",
+    "officialUrl": "https://www.stbedescollege.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Sc (Honours) Biotech / Microbiology",
+        "degree": "B.Sc Hons",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "B.Com",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.stbedescollege.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "HPU Shimla"
+      ],
+      "ownership": "Private (Minority - Christian)",
+      "district": "Shimla",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "govt-college-dharamshala",
+    "name": "Government Post Graduate College Dharamshala",
+    "shortName": "GC Dharamshala",
+    "location": "Dharamshala, Kangra District, Himachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Major government college serving the Kangra region.",
+    "campus": "Dharamshala",
+    "officialUrl": "http://www.gcdharamshala.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "hpcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://www.gcdharamshala.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "HPU Shimla"
+      ],
+      "ownership": "Government",
+      "district": "Kangra",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "govt-college-mandi",
+    "name": "Vallabh Government College Mandi",
+    "shortName": "GC Mandi",
+    "location": "Mandi, Mandi District, Himachal Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Prominent government college in Mandi town.",
+    "campus": "Mandi",
+    "officialUrl": "http://www.vgcmandi.co.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://www.vgcmandi.co.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Sardar Patel University Mandi"
+      ],
+      "ownership": "Government",
+      "district": "Mandi",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-mandi",
+    "name": "Indian Institute of Technology Mandi",
+    "shortName": "Indian Institute of Technology Mandi",
+    "location": "Mandi, Mandi District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Mandi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Mandi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-hamirpur",
+    "name": "National Institute of Technology Hamirpur",
+    "shortName": "National Institute of Technology Hamirpur",
+    "location": "Hamirpur, Hamirpur District, Himachal Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Hamirpur",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Hamirpur",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  }
+]

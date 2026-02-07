@@ -1,0 +1,1783 @@
+[
+  {
+    "id": "iit-roorkee",
+    "name": "Indian Institute of Technology Roorkee",
+    "shortName": "IIT Roorkee",
+    "location": "Roorkee, Haridwar, Uttarakhand",
+    "rankingTier": "Tier 1",
+    "overview": "The oldest engineering institution in India (formerly University of Roorkee), established in 1847. It is renowned for its civil engineering department and historical significance.",
+    "campus": "Roorkee",
+    "officialUrl": "https://www.iitr.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-advanced-aat"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: 481 | ECE: 1420 | Data Science: 715",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Uber",
+      "Goldman Sachs",
+      "Schlumberger"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iitr.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1847",
+      "district": "Haridwar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹18.34 LPA",
+      "medianPackage": "₹17.0 LPA",
+      "highestPackage": "₹2.0 CPA"
+    }
+  },
+  {
+    "id": "aiims-rishikesh",
+    "name": "All India Institute of Medical Sciences Rishikesh",
+    "shortName": "AIIMS Rishikesh",
+    "location": "Rishikesh, Dehradun, Uttarakhand",
+    "rankingTier": "Tier 1",
+    "overview": "A premier medical institute located on the banks of the Ganges. It is one of the six AIIMS established under PMSSY and is a hub for advanced medical education.",
+    "campus": "Virbhadra Road",
+    "officialUrl": "https://aiimsrishikesh.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "General Rank ~900"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals",
+      "Research Centers"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://aiimsrishikesh.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2012",
+      "district": "Dehradun",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-uttarakhand",
+    "name": "National Institute of Technology Uttarakhand",
+    "shortName": "NIT Uttarakhand",
+    "location": "Srinagar, Pauri Garhwal, Uttarakhand",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance situated in the scenic Garhwal hills. It offers undergraduate, postgraduate, and doctoral programs in engineering.",
+    "campus": "Srinagar (Temporary) / Sumari (Permanent)",
+    "officialUrl": "https://nituk.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~25000 Rank (OS Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Adobe",
+      "Samsung",
+      "L&T",
+      "Capgemini"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://nituk.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2010",
+      "district": "Pauri Garhwal",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "gb-pant-university-agriculture-technology",
+    "name": "Govind Ballabh Pant University of Agriculture and Technology",
+    "shortName": "GBPUAT",
+    "location": "Pantnagar, Udham Singh Nagar, Uttarakhand",
+    "rankingTier": "Tier 1",
+    "overview": "The first agricultural university of India, inaugurated by Jawaharlal Nehru. It played a pivotal role in the Green Revolution.",
+    "campus": "Pantnagar",
+    "officialUrl": "https://www.gbpuat.ac.in",
+    "acceptedExams": [
+      "gbpuat-entrance",
+      "icar-aieea",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "gbpuat-entrance",
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "B.Tech (Agricultural Engg, Food Tech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gbpuat-entrance",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gbpuat-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Nestle",
+      "Amul",
+      "ITC",
+      "Mahindra"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://www.gbpuat.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1960",
+      "district": "Udham Singh Nagar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "hnb-garhwal-university",
+    "name": "Hemvati Nandan Bahuguna Garhwal University",
+    "shortName": "HNBGU",
+    "location": "Srinagar, Pauri Garhwal, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A Central University with campuses in Srinagar, Pauri, and Tehri. It is a major affiliating university for the Garhwal region.",
+    "campus": "Srinagar (Birla Campus)",
+    "officialUrl": "https://www.hnbgu.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc/B.A./B.Com",
+        "degree": "Bachelor",
+        "duration": "3/4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://www.hnbgu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "1973",
+      "district": "Pauri Garhwal",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kumaun-university",
+    "name": "Kumaun University",
+    "shortName": "KU Nainital",
+    "location": "Nainital, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A state university headquartered in Nainital, affiliating colleges across the Kumaon region. Known for its research in Himalayan ecology.",
+    "campus": "Sleepy Hollow, Nainital",
+    "officialUrl": "https://www.kunainital.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc/B.A.",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "M.Sc/M.A.",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "entrance",
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://www.kunainital.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1973",
+      "district": "Nainital",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "university-of-petroleum-energy-studies",
+    "name": "University of Petroleum and Energy Studies",
+    "shortName": "UPES",
+    "location": "Dehradun, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A premier private university known for its specialized programs in Energy, Oil & Gas, Power, and Infrastructure.",
+    "campus": "Bidholi / Kandoli",
+    "officialUrl": "https://www.upes.ac.in",
+    "acceptedExams": [
+      "upeseat",
+      "jee-main",
+      "clat",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "upeseat",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA (Energy Trading, Oil & Gas)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "upesmet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "upeseat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Reliance Industries",
+      "Shell",
+      "Halliburton",
+      "Adani Group"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.upes.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2003",
+      "district": "Dehradun",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "graphic-era-university",
+    "name": "Graphic Era (Deemed to be University)",
+    "shortName": "GEU",
+    "location": "Dehradun, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A top-ranked private deemed university in Dehradun, known for its engineering and management programs.",
+    "campus": "Clement Town",
+    "officialUrl": "https://www.geu.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "merit"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Adobe",
+      "Amazon",
+      "Infosys",
+      "Wipro"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.geu.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "2008",
+      "district": "Dehradun",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "doon-university",
+    "name": "Doon University",
+    "shortName": "Doon University",
+    "location": "Dehradun, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A unitary state university offering integrated masters programs and language courses.",
+    "campus": "Mothrowala Road, Kedarpur",
+    "officialUrl": "https://www.doonuniversity.ac.in",
+    "acceptedExams": [
+      "university-entrance"
+    ],
+    "courses": [
+      {
+        "name": "Integrated M.A. (Languages/Media)",
+        "degree": "Integrated Master",
+        "duration": "5 years",
+        "exams": [
+          "entrance"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.doonuniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2005",
+      "district": "Dehradun",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "uttarakhand-technical-university",
+    "name": "Veer Madho Singh Bhandari Uttarakhand Technical University",
+    "shortName": "UTU",
+    "location": "Dehradun, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "The affiliating technical university for engineering, management, and pharmacy colleges in Uttarakhand.",
+    "campus": "Sudhowala",
+    "officialUrl": "https://uktech.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "uksee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "uksee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "uksee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by affiliated college",
+    "sources": [
+      "https://uktech.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2005",
+      "district": "Dehradun",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "govt-medical-college-haldwani",
+    "name": "Government Medical College, Haldwani",
+    "shortName": "GMC Haldwani",
+    "location": "Haldwani, Nainital, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A prominent government medical college in the Kumaon region, attached to Dr. Susheela Tiwari Government Hospital.",
+    "campus": "Rampur Road",
+    "officialUrl": "http://www.gmchld.org",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~550+ Score"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://www.gmchld.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Hemwati Nandan Bahuguna Uttarakhand Medical Education University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1997",
+      "district": "Nainital",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "govt-doon-medical-college",
+    "name": "Government Doon Medical College",
+    "shortName": "GDMC Dehradun",
+    "location": "Dehradun, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A government medical college in the state capital, associated with the Doon Hospital.",
+    "campus": "Patel Nagar",
+    "officialUrl": "https://gdmcuk.com",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://gdmcuk.com"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "HNB Uttarakhand Medical Education University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2016",
+      "district": "Dehradun",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "shri-guru-ram-rai-university",
+    "name": "Shri Guru Ram Rai University",
+    "shortName": "SGRR University",
+    "location": "Dehradun, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A private university established by the SGRR Education Mission, comprising a medical college, paramedical college, and other schools.",
+    "campus": "Patel Nagar",
+    "officialUrl": "https://sgrru.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High (Private)",
+    "sources": [
+      "https://sgrru.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "NMC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2017",
+      "district": "Dehradun",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "uttaranchal-university",
+    "name": "Uttaranchal University",
+    "shortName": "Uttaranchal University",
+    "location": "Dehradun, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A private university known for its law college (Law College Dehradun) and engineering institute (UIT).",
+    "campus": "Arcadia Grant, Premnagar",
+    "officialUrl": "https://uttaranchaluniversity.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "clat",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "BA LLB (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit",
+          "clat"
+        ]
+      },
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "clat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "Infosys",
+      "Mindtree"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://uttaranchaluniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Dehradun",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "swami-rama-himalayan-university",
+    "name": "Swami Rama Himalayan University",
+    "shortName": "SRHU",
+    "location": "Jolly Grant, Dehradun, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A private university best known for the Himalayan Institute of Medical Sciences (HIMS), the first private medical college in the state.",
+    "campus": "Jolly Grant",
+    "officialUrl": "https://srhu.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://srhu.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "NMC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Dehradun",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "college-of-technology-pantnagar",
+    "name": "College of Technology, Pantnagar",
+    "shortName": "COT Pantnagar",
+    "location": "Pantnagar, Udham Singh Nagar, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "A constituent college of GBPUAT, offering engineering degrees. It is highly regarded for agricultural engineering.",
+    "campus": "Pantnagar",
+    "officialUrl": "https://www.gbpuat.ac.in/academics/colleges/college_of_technology",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, ME, CE, Ag Engg)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Hero MotoCorp",
+      "John Deere"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://www.gbpuat.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE"
+      ],
+      "ownership": "State University Constituent",
+      "establishedYear": "1966",
+      "district": "Udham Singh Nagar",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bipin-tripathi-kumaon-institute-of-technology",
+    "name": "Bipin Tripathi Kumaon Institute of Technology",
+    "shortName": "BTKIT Dwarahat",
+    "location": "Dwarahat, Almora, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "An autonomous government engineering college located in the Kumaon hills, formerly KEC.",
+    "campus": "Dwarahat",
+    "officialUrl": "http://www.kecua.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, ME, CE, EE, Chemical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://www.kecua.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Uttarakhand Technical University",
+        "AICTE"
+      ],
+      "ownership": "Government (Autonomous)",
+      "establishedYear": "1986",
+      "district": "Almora",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "thdc-institute-of-hydropower-engineering-and-technology",
+    "name": "THDC Institute of Hydropower Engineering and Technology",
+    "shortName": "THDC-IHET",
+    "location": "Tehri, Uttarakhand",
+    "rankingTier": "Tier 3",
+    "overview": "A government engineering college established by THDC India Ltd and the Govt of Uttarakhand.",
+    "campus": "Bhagirathipuram, Tehri",
+    "officialUrl": "https://thdcihet.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://thdcihet.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Uttarakhand Technical University",
+        "AICTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2011",
+      "district": "Tehri Garhwal",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "women-institute-of-technology-dehradun",
+    "name": "Women Institute of Technology",
+    "shortName": "WIT Dehradun",
+    "location": "Dehradun, Uttarakhand",
+    "rankingTier": "Tier 3",
+    "overview": "A constituent institute of UTU, exclusively for women offering engineering education.",
+    "campus": "Sudhowala",
+    "officialUrl": "https://wit.uktech.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://wit.uktech.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Uttarakhand Technical University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2012",
+      "district": "Dehradun",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "nanhi-pari-seemant-engineering-institute",
+    "name": "Nanhi Pari Seemant Engineering Institute",
+    "shortName": "NPSEI Pithoragarh",
+    "location": "Pithoragarh, Uttarakhand",
+    "rankingTier": "Tier 3",
+    "overview": "Formerly Seemant Institute of Technology, a constituent college of UTU in the border district of Pithoragarh.",
+    "campus": "Garkha",
+    "officialUrl": "https://sitp.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://sitp.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Uttarakhand Technical University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2011",
+      "district": "Pithoragarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-roorkee",
+    "name": "Indian Institute of Technology Roorkee",
+    "shortName": "Indian Institute of Technology Roorkee",
+    "location": "Roorkee, Roorkee District, Uttarakhand",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Roorkee",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Roorkee",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "upes-dehradun",
+    "name": "UPES",
+    "shortName": "UPES",
+    "location": "Dehradun, Dehradun District, Uttarakhand",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Dehradun",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Dehradun",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-srinagar",
+    "name": "National Institute of Technology Uttarakhand",
+    "shortName": "National Institute of Technology Uttarakhand",
+    "location": "Srinagar, Srinagar District, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Srinagar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Srinagar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dit-university-dehradun",
+    "name": "DIT University",
+    "shortName": "DIT University",
+    "location": "Dehradun, Dehradun District, Uttarakhand",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Dehradun",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Dehradun",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

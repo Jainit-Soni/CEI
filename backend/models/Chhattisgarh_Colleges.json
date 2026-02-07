@@ -1,0 +1,2402 @@
+[
+  {
+    "id": "iit-bhilai",
+    "name": "Indian Institute of Technology Bhilai",
+    "shortName": "IIT Bhilai",
+    "location": "Bhilai, Durg District, Chhattisgarh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the newer IITs established in 2016, rapidly developing its permanent campus and research facilities.",
+    "campus": "Kutelabhata, Bhilai",
+    "officialUrl": "https://www.iitbhilai.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, EE, ME, Data Science, Mechatronics)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc (Maths, Physics, Chemistry)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: AIR ~5000"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Amazon",
+      "Commvault",
+      "Arista Networks"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iitbhilai.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2016",
+      "district": "Durg",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-raipur",
+    "name": "National Institute of Technology Raipur",
+    "shortName": "NIT Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest engineering institutes in India (formerly GEC Raipur), now a premier NIT.",
+    "campus": "GE Road, Raipur",
+    "officialUrl": "http://www.nitrr.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "nimcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT, ECE, Mech, Civil, Mining, BioTech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "3 years",
+        "exams": [
+          "nimcet"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Oracle",
+      "Samsung",
+      "Deloitte",
+      "Adobe"
+    ],
+    "tuition": "Standard NIT Fees",
+    "sources": [
+      "http://www.nitrr.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1956",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-naya-raipur",
+    "name": "Dr. Shyama Prasad Mukherjee International Institute of Information Technology Naya Raipur",
+    "shortName": "IIIT Naya Raipur",
+    "location": "Naya Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 1",
+    "overview": "A state university recognized as an institute of excellence, focused on IT and related fields.",
+    "campus": "Naya Raipur",
+    "officialUrl": "https://www.iiitnr.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Data Science & AI)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Goldman Sachs",
+      "Amazon"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.iiitnr.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University (Autonomous)",
+      "establishedYear": "2013",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "aiims-raipur",
+    "name": "All India Institute of Medical Sciences Raipur",
+    "shortName": "AIIMS Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 1",
+    "overview": "Premier medical institute established under PMSSY to provide high-quality healthcare.",
+    "campus": "Tatibandh, GE Road, Raipur",
+    "officialUrl": "https://www.aiimsraipur.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "ini-cet"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons) Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ini-cet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://www.aiimsraipur.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2012",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "hnlu-raipur",
+    "name": "Hidayatullah National Law University",
+    "shortName": "HNLU",
+    "location": "Naya Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the premier National Law Universities in India.",
+    "campus": "Naya Raipur",
+    "officialUrl": "https://hnlu.ac.in",
+    "acceptedExams": [
+      "clat-ug",
+      "clat-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat-ug"
+        ]
+      },
+      {
+        "name": "LL.M",
+        "degree": "LL.M",
+        "duration": "1 year",
+        "exams": [
+          "clat-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat-ug",
+        "year": "2024",
+        "cutoff": "AIR ~700-800"
+      }
+    ],
+    "topRecruiters": [
+      "Trilegal",
+      "Khaitan & Co",
+      "Shardul Amarchand Mangaldas"
+    ],
+    "tuition": "State NLU Fees",
+    "sources": [
+      "https://hnlu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Legislature / NLU",
+      "establishedYear": "2003",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "guru-ghasidas-vishwavidyalaya",
+    "name": "Guru Ghasidas Vishwavidyalaya",
+    "shortName": "GGU Bilaspur",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Central University offering a wide range of undergraduate, postgraduate, and doctoral programs.",
+    "campus": "Koni, Bilaspur",
+    "officialUrl": "http://www.ggu.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, Chemical, IPE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "http://www.ggu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "1983",
+      "district": "Bilaspur",
+      "naacGrade": "B+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "pt-ravishankar-shukla-uni",
+    "name": "Pt. Ravishankar Shukla University",
+    "shortName": "PRSU Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Oldest and largest higher education institution in Chhattisgarh.",
+    "campus": "Amanaka, Raipur",
+    "officialUrl": "http://www.prsu.ac.in",
+    "acceptedExams": [
+      "merit-based",
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.prsu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1964",
+      "district": "Raipur",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "csvtu-bhilai",
+    "name": "Chhattisgarh Swami Vivekanand Technical University",
+    "shortName": "CSVTU",
+    "location": "Bhilai, Durg District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "The state technical university affiliating all engineering and pharmacy colleges in Chhattisgarh.",
+    "campus": "Newai, Bhilai",
+    "officialUrl": "https://csvtu.ac.in",
+    "acceptedExams": [
+      "cg-pet",
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Affiliated Colleges)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cg-pet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "Diploma Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "cg-ppt"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cg-pet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "State Govt Fees",
+    "sources": [
+      "https://csvtu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Technical University",
+      "establishedYear": "2005",
+      "district": "Durg",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "igkv-raipur",
+    "name": "Indira Gandhi Krishi Vishwavidyalaya",
+    "shortName": "IGKV",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Leading agricultural university in the region, known for rice research.",
+    "campus": "Krishak Nagar, Raipur",
+    "officialUrl": "https://igkv.ac.in",
+    "acceptedExams": [
+      "cg-pat",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "cg-pat"
+        ]
+      },
+      {
+        "name": "B.Tech (Agricultural Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cg-pat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cg-pat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://igkv.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Agricultural University",
+      "establishedYear": "1987",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ayush-uni-raipur",
+    "name": "Pt. Deendayal Upadhyay Memorial Health Sciences and Ayush University",
+    "shortName": "Ayush University",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "The affiliating university for medical, dental, nursing, and Ayush colleges in Chhattisgarh.",
+    "campus": "Uparwara, Naya Raipur",
+    "officialUrl": "https://cghealthuniv.com",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS (Affiliated Colleges)",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies",
+    "sources": [
+      "https://cghealthuniv.com"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "2008",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "pt-jnm-medical-college",
+    "name": "Pt. Jawahar Lal Nehru Memorial Medical College",
+    "shortName": "Pt JNM Medical College",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 1",
+    "overview": "The oldest and most prestigious government medical college in the state.",
+    "campus": "Jail Road, Raipur",
+    "officialUrl": "http://www.ptjnmcraipur.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.ptjnmcraipur.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Ayush University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1963",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "cims-bilaspur",
+    "name": "Chhattisgarh Institute of Medical Sciences",
+    "shortName": "CIMS Bilaspur",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Major government medical college serving the Bilaspur division.",
+    "campus": "Sardar Vallabh Bhai Patel Hospital, Bilaspur",
+    "officialUrl": "http://www.cimsbilaspur.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.cimsbilaspur.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Ayush University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2001",
+      "district": "Bilaspur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gmc-jagdalpur",
+    "name": "Late Baliram Kashyap Memorial Government Medical College",
+    "shortName": "GMC Jagdalpur",
+    "location": "Jagdalpur, Bastar District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Government medical college located in the tribal heartland of Bastar.",
+    "campus": "Dimrapal, Jagdalpur",
+    "officialUrl": "http://www.gmcjagdalpur.ac.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.gmcjagdalpur.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Ayush University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2006",
+      "district": "Bastar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gec-raipur",
+    "name": "Government Engineering College Raipur",
+    "shortName": "GEC Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Premier government engineering college affiliated with CSVTU.",
+    "campus": "Sejbahar, Raipur",
+    "officialUrl": "http://www.gecraipur.ac.in",
+    "acceptedExams": [
+      "cg-pet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, EEE, Mech, Civil, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cg-pet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cg-pet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.gecraipur.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "CSVTU Bhilai"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2006",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gec-bilaspur",
+    "name": "Government Engineering College Bilaspur",
+    "shortName": "GEC Bilaspur",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Major government engineering institute in Bilaspur.",
+    "campus": "Koni, Bilaspur",
+    "officialUrl": "http://www.gecbsp.ac.in",
+    "acceptedExams": [
+      "cg-pet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Mech, Civil, Elect, Mining, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cg-pet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cg-pet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.gecbsp.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "CSVTU Bhilai"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1964",
+      "district": "Bilaspur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gec-jagdalpur",
+    "name": "Government Engineering College Jagdalpur",
+    "shortName": "GEC Jagdalpur",
+    "location": "Jagdalpur, Bastar District, Chhattisgarh",
+    "rankingTier": "Tier 3",
+    "overview": "Key technical institute serving the Bastar region.",
+    "campus": "Dharampura, Jagdalpur",
+    "officialUrl": "http://www.gecjdp.ac.in",
+    "acceptedExams": [
+      "cg-pet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, Elect, ECE, Mining, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cg-pet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cg-pet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.gecjdp.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "CSVTU Bhilai"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1983",
+      "district": "Bastar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "bit-durg",
+    "name": "Bhilai Institute of Technology",
+    "shortName": "BIT Durg",
+    "location": "Durg, Durg District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "First self-financed engineering college in Central India, highly reputed.",
+    "campus": "Bhilai House, Durg",
+    "officialUrl": "https://bitdurg.ac.in",
+    "acceptedExams": [
+      "cg-pet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Mech, Civil, Electrical, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cg-pet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cmat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cg-pet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Cognizant",
+      "Infosys"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://bitdurg.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "CSVTU Bhilai"
+      ],
+      "ownership": "Private Trust",
+      "establishedYear": "1986",
+      "district": "Durg",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ssipmt-raipur",
+    "name": "Shri Shankaracharya Institute of Professional Management and Technology",
+    "shortName": "SSIPMT",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "A leading private engineering and management college in Raipur.",
+    "campus": "Mujgahan, Raipur",
+    "officialUrl": "https://www.ssipmt.com",
+    "acceptedExams": [
+      "cg-pet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Mech, ECE, AI/ML)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cg-pet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cmat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cg-pet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Capgemini",
+      "TCS",
+      "Wipro"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.ssipmt.com"
+    ],
+    "meta": {
+      "affiliations": [
+        "CSVTU Bhilai"
+      ],
+      "ownership": "Private",
+      "district": "Raipur",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rcet-bhilai",
+    "name": "Rungta College of Engineering and Technology",
+    "shortName": "RCET Bhilai",
+    "location": "Bhilai, Durg District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Flagship college of the Rungta Group, known for massive campus placements.",
+    "campus": "Kohka-Kurud Road, Bhilai",
+    "officialUrl": "https://rungta.ac.in",
+    "acceptedExams": [
+      "cg-pet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Mech, Civil, Electrical, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cg-pet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cmat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cg-pet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Accenture",
+      "TCS",
+      "Wipro",
+      "Tech Mahindra"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://rungta.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "CSVTU Bhilai"
+      ],
+      "ownership": "Private",
+      "district": "Durg",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "op-jindal-uni",
+    "name": "OP Jindal University",
+    "shortName": "OPJU",
+    "location": "Raigarh, Raigarh District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Private university backed by the Jindal Group, focusing on engineering and management.",
+    "campus": "Punjipathra, Raigarh",
+    "officialUrl": "https://www.opju.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "cg-pet",
+      "opjuet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Metallurgy, Mech, CSE, Civil, Electrical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "opjuet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "xat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cg-pet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Jindal Steel & Power",
+      "JSW",
+      "TCS"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.opju.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2014",
+      "district": "Raigarh",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "icfai-raipur",
+    "name": "ICFAI University Raipur",
+    "shortName": "ICFAI Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Part of the ICFAI group, offering management, engineering, and law programs.",
+    "campus": "Kumhari, Durg",
+    "officialUrl": "https://www.iuraipur.edu.in",
+    "acceptedExams": [
+      "merit-based",
+      "interview"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "interview",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.iuraipur.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2011",
+      "district": "Durg",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "itm-university-raipur",
+    "name": "ITM University Raipur",
+    "shortName": "ITM Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Private university offering industry-oriented programs.",
+    "campus": "Uparwara, Naya Raipur",
+    "officialUrl": "https://itmuniversity.org",
+    "acceptedExams": [
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://itmuniversity.org"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2012",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "amity-raipur",
+    "name": "Amity University Chhattisgarh",
+    "shortName": "Amity Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Raipur campus of the Amity Education Group.",
+    "campus": "Manth (Kharora), Raipur",
+    "officialUrl": "https://www.amity.edu/raipur",
+    "acceptedExams": [
+      "amity-jee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "amity-jee"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "amity-jee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.amity.edu/raipur"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2014",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kalinga-university",
+    "name": "Kalinga University",
+    "shortName": "Kalinga Uni",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Private university offering a wide array of courses.",
+    "campus": "Kotni, Naya Raipur",
+    "officialUrl": "https://kalingauniversity.ac.in",
+    "acceptedExams": [
+      "kalsee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "kalsee"
+        ]
+      },
+      {
+        "name": "BA LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "kalsee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "kalsee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://kalingauniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mats-university",
+    "name": "MATS University",
+    "shortName": "MATS",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Private university focused on technology and management.",
+    "campus": "Aarang, Raipur",
+    "officialUrl": "https://matsuniversity.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://matsuniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2006",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cv-raman-uni",
+    "name": "Dr. C.V. Raman University",
+    "shortName": "CVRU",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh",
+    "rankingTier": "Tier 3",
+    "overview": "Private university mainly catering to rural and tribal students.",
+    "campus": "Kota, Bilaspur",
+    "officialUrl": "https://www.cvru.ac.in",
+    "acceptedExams": [
+      "ajee"
+    ],
+    "courses": [
+      {
+        "name": "B.E.",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "ajee"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ajee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ajee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low to Moderate",
+    "sources": [
+      "https://www.cvru.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2006",
+      "district": "Bilaspur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "sarguja-university",
+    "name": "Sant Gahira Guru Vishwavidyalaya",
+    "shortName": "Sarguja Uni",
+    "location": "Ambikapur, Surguja District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "State university serving the Surguja division.",
+    "campus": "Ambikapur",
+    "officialUrl": "http://www.sggcg.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.sggcg.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "2008",
+      "district": "Surguja",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bastar-university",
+    "name": "Shaheed Mahendra Karma Vishwavidyalaya",
+    "shortName": "Bastar Uni",
+    "location": "Jagdalpur, Bastar District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "State university serving the Bastar division.",
+    "campus": "Dharampura, Jagdalpur",
+    "officialUrl": "http://www.bvvjdp.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.Sc (Forestry, Anthropology)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.bvvjdp.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "2008",
+      "district": "Bastar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ktuje-raipur",
+    "name": "Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya",
+    "shortName": "KTUJM",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Specialized state university for journalism and mass communication.",
+    "campus": "Kathadih, Raipur",
+    "officialUrl": "http://ktujm.ac.in",
+    "acceptedExams": [
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Mass Communication)",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "M.A. (Mass Communication)",
+        "degree": "M.A.",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Media Houses"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://ktujm.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University",
+      "establishedYear": "2005",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "govt-science-college-raipur",
+    "name": "Government Nagarjuna Post Graduate College of Science",
+    "shortName": "Science College Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "Premier autonomous government science college.",
+    "campus": "GE Road, Raipur",
+    "officialUrl": "http://www.gcsca.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://www.gcsca.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Pt. Ravishankar Shukla University"
+      ],
+      "ownership": "Government Autonomous",
+      "district": "Raipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cmd-college-bilaspur",
+    "name": "C.M. Dubey Post Graduate College",
+    "shortName": "CMD College",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh",
+    "rankingTier": "Tier 3",
+    "overview": "Oldest and most prominent college in Bilaspur city.",
+    "campus": "Link Road, Bilaspur",
+    "officialUrl": "http://cmdpgcollege.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://cmdpgcollege.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Atal Bihari Vajpayee Vishwavidyalaya"
+      ],
+      "ownership": "Private Aided",
+      "district": "Bilaspur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "iim-raipur",
+    "name": "Indian Institute of Management Raipur",
+    "shortName": "IIM Raipur",
+    "location": "Raipur, Chhattisgarh",
+    "rankingTier": "Tier 1",
+    "overview": "A prominent management institute (IIM) newly established in 2010.",
+    "campus": "Naya Raipur",
+    "officialUrl": "https://www.iimraipur.ac.in",
+    "acceptedExams": [
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "PGP",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "94%"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "ICICI Bank",
+      "Accenture"
+    ],
+    "tuition": "₹16-18 Lakhs",
+    "sources": [
+      "https://www.iimraipur.ac.in"
+    ],
+    "meta": {
+      "ownership": "Autonomous / INI",
+      "establishedYear": "2010",
+      "district": "Raipur",
+      "sourceType": "manual"
+    },
+    "placements": {
+      "averagePackage": "₹19.7 LPA",
+      "medianPackage": "₹18.5 LPA",
+      "highestPackage": "₹43.4 LPA"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-raipur",
+    "name": "National Institute of Technology Raipur",
+    "shortName": "National Institute of Technology Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Raipur",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Raipur",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

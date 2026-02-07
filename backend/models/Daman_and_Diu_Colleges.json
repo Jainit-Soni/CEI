@@ -1,0 +1,591 @@
+[
+  {
+    "id": "nift-daman",
+    "name": "National Institute of Fashion Technology Daman",
+    "shortName": "NIFT Daman",
+    "location": "Daman, Daman District, Daman & Diu",
+    "rankingTier": "Tier 1",
+    "overview": "A statutory institute under the Ministry of Textiles, Govt. of India. Established in 2022, it offers premier fashion education and is part of the prestigious NIFT network.",
+    "campus": "Govt. Engineering College Campus, Varkund",
+    "officialUrl": "https://www.nift.ac.in/daman",
+    "acceptedExams": [
+      "nift-entrance-exam"
+    ],
+    "courses": [
+      {
+        "name": "B.Des (Textile Design)",
+        "degree": "Bachelor of Design",
+        "duration": "4 years",
+        "exams": [
+          "nift-entrance-exam"
+        ]
+      },
+      {
+        "name": "MFM (Master of Fashion Management)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "nift-entrance-exam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nift-entrance-exam",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Arvind",
+      "Raymond",
+      "Future Group"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.nift.ac.in/daman"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Ministry of Textiles"
+      ],
+      "ownership": "Central Govt (Statutory)",
+      "establishedYear": "2022",
+      "district": "Daman",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-vadodara-diu-campus",
+    "name": "Indian Institute of Information Technology Vadodara - International Campus Diu",
+    "shortName": "IIITV-ICD",
+    "location": "Diu, Daman & Diu",
+    "rankingTier": "Tier 1",
+    "overview": "A satellite campus of IIIT Vadodara (an Institute of National Importance), located in the Education Hub of Diu. It focuses on Computer Science engineering.",
+    "campus": "Education Hub, Kevdi",
+    "officialUrl": "http://diu.iiitvadodara.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Computer Science & Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE ~35000 Rank (All India)"
+      }
+    ],
+    "topRecruiters": [
+      "MathWorks",
+      "Oracle",
+      "Jio",
+      "Siemens"
+    ],
+    "tuition": "High",
+    "sources": [
+      "http://diu.iiitvadodara.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "PPP (Central Govt Mentored)",
+      "establishedYear": "2020",
+      "district": "Diu",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "government-college-daman",
+    "name": "Government College, Daman",
+    "shortName": "GC Daman",
+    "location": "Nani Daman, Daman, Daman & Diu",
+    "rankingTier": "Tier 2",
+    "overview": "The premier higher education institution in Daman district, affiliated to Veer Narmad South Gujarat University. It offers UG and PG courses in Arts, Commerce, and Science.",
+    "campus": "Nani Daman",
+    "officialUrl": "http://www.governmentcollegedaman.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Chemistry, Mathematics, Microbiology)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.A. (Economics, English, Gujarati, Hindi)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "M.Sc (Chemistry)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://www.governmentcollegedaman.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Veer Narmad South Gujarat University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1966",
+      "district": "Daman",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "government-college-diu",
+    "name": "Government College, Diu",
+    "shortName": "GC Diu",
+    "location": "Diu, Daman & Diu",
+    "rankingTier": "Tier 3",
+    "overview": "Located in the Education Hub of Diu, this college serves the higher education needs of the island district. Formerly affiliated to Saurashtra University, now with BKNMU.",
+    "campus": "Education Hub, Kevdi",
+    "officialUrl": "https://diucollege.ac.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (English, Economics, Gujarati)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.Sc",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://diucollege.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Bhakta Kavi Narsinh Mehta University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2013",
+      "district": "Diu",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-polytechnic-daman",
+    "name": "Government Polytechnic, Daman",
+    "shortName": "G.P. Daman",
+    "location": "Varkund, Daman, Daman & Diu",
+    "rankingTier": "Tier 2",
+    "overview": "Established to provide technical manpower to the industrial hub of Daman. It offers diploma courses in various engineering disciplines.",
+    "campus": "Varkund",
+    "officialUrl": "http://www.gpdaman.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/Mechanical/Electrical/Chemical/Computer/IT/Plastic Engg",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Industrial Units in Daman"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://www.gpdaman.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Gujarat Technological University",
+        "AICTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1989",
+      "district": "Daman",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "government-polytechnic-diu",
+    "name": "Government Polytechnic, Diu",
+    "shortName": "G.P. Diu",
+    "location": "Diu, Daman & Diu",
+    "rankingTier": "Tier 3",
+    "overview": "A technical institute located in Diu offering diploma courses, affiliated with Gujarat Technological University.",
+    "campus": "Education Hub, Kevdi",
+    "officialUrl": "http://gpdiu.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil/Mechanical/Electrical/Marine Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://gpdiu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Gujarat Technological University",
+        "AICTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2014",
+      "district": "Diu",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "college-of-nursing-daman",
+    "name": "College of Nursing, Daman",
+    "shortName": "Nursing College Daman",
+    "location": "Daman, Daman & Diu",
+    "rankingTier": "Tier 3",
+    "overview": "A government nursing college attached to the Government Hospital, Marwad, offering B.Sc. Nursing.",
+    "campus": "Government Hospital Campus, Marwad",
+    "officialUrl": "http://www.con-daman.co.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://www.con-daman.co.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Veer Narmad South Gujarat University",
+        "INC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2017",
+      "district": "Daman",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "vaidik-dental-college-and-research-centre",
+    "name": "Vaidik Dental College and Research Centre",
+    "shortName": "Vaidik Dental College",
+    "location": "Daman, Daman & Diu",
+    "rankingTier": "Tier 3",
+    "overview": "The only dental college in the region, offering BDS programs under VNSGU affiliation.",
+    "campus": "Wadi-Bhamti",
+    "officialUrl": "http://www.vaidikdentalcollege.edu.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "BDS",
+        "degree": "BDS",
+        "duration": "5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate (Private)",
+    "sources": [
+      "http://www.vaidikdentalcollege.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Veer Narmad South Gujarat University",
+        "DCI"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2009",
+      "district": "Daman",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "ttti-daman",
+    "name": "Technical Training Institute Daman",
+    "shortName": "TTTI Daman",
+    "location": "Moti Daman, Daman & Diu",
+    "rankingTier": "Tier 3",
+    "overview": "A government institute providing vocational and technical training certificates and diplomas.",
+    "campus": "Fort Area, Moti Daman",
+    "officialUrl": "https://daman.nic.in/ttti.aspx",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "Certificate courses (Technical)",
+        "degree": "Certificate",
+        "duration": "1-2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://daman.nic.in/ttti.aspx"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "SCVT"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1978",
+      "district": "Daman",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  }
+]

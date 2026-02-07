@@ -1,0 +1,2415 @@
+[
+  {
+    "id": "iit-patna",
+    "name": "Indian Institute of Technology Patna",
+    "shortName": "IIT Patna",
+    "location": "Bihta, Patna District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "One of the new IITs established in 2008, rapidly growing in research and placements.",
+    "campus": "Bihta, Patna",
+    "officialUrl": "https://www.iitp.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, AI & Data Science, EEE, Mech, Civil, Chem, Meta)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc (Physics, Chemistry, Maths)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: AIR ~2600"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Oracle",
+      "Samsung"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iitp.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2008",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-patna",
+    "name": "National Institute of Technology Patna",
+    "shortName": "NIT Patna",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "The 18th NIT created by the Ministry of Education, formerly Bihar College of Engineering (est. 1886).",
+    "campus": "Ashok Rajpath, Patna",
+    "officialUrl": "https://www.nitp.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Electrical, Mech, Civil)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Integrated M.Sc",
+        "degree": "Integrated M.Sc",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Adobe",
+      "Amazon",
+      "L&T",
+      "Alstom"
+    ],
+    "tuition": "Standard NIT Fees",
+    "sources": [
+      "https://www.nitp.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2004",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iim-bodh-gaya",
+    "name": "Indian Institute of Management Bodh Gaya",
+    "shortName": "IIM Bodh Gaya",
+    "location": "Bodh Gaya, Gaya District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "One of the new generation IIMs, focusing on mindful management and sustainable business practices.",
+    "campus": "Uruvela, Prabandh Vihar, Bodh Gaya",
+    "officialUrl": "https://iimbg.ac.in",
+    "acceptedExams": [
+      "cat",
+      "jipmat"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "Integrated Programme in Management (IPM)",
+        "degree": "BBA+MBA",
+        "duration": "5 years",
+        "exams": [
+          "jipmat"
+        ]
+      },
+      {
+        "name": "MBA (Digital Business Management)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "MBA (Hospital & Healthcare Management)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "92+ percentile (General)"
+      }
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "Deloitte",
+      "HDFC Bank",
+      "Adani Group"
+    ],
+    "tuition": "~INR 15-16 Lakhs",
+    "sources": [
+      "https://iimbg.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Autonomous / INI",
+      "establishedYear": "2015",
+      "district": "Gaya",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "aiims-patna",
+    "name": "All India Institute of Medical Sciences Patna",
+    "shortName": "AIIMS Patna",
+    "location": "Phulwari Sharif, Patna District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "Premier medical institute and hospital established under PMSSY to correct regional imbalances in healthcare.",
+    "campus": "Phulwari Sharif, Patna",
+    "officialUrl": "https://aiimspatna.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "ini-cet"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons) Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ini-cet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://aiimspatna.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2012",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "cnlu-patna",
+    "name": "Chanakya National Law University",
+    "shortName": "CNLU",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "A premier National Law University in Bihar dedicated to legal education.",
+    "campus": "Nyaya Nagar, Mithapur, Patna",
+    "officialUrl": "https://cnlu.ac.in",
+    "acceptedExams": [
+      "clat-ug",
+      "clat-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat-ug"
+        ]
+      },
+      {
+        "name": "B.B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat-ug"
+        ]
+      },
+      {
+        "name": "LL.M",
+        "degree": "LL.M",
+        "duration": "1 year",
+        "exams": [
+          "clat-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat-ug",
+        "year": "2024",
+        "cutoff": "AIR ~1100-1300"
+      }
+    ],
+    "topRecruiters": [
+      "Law Firms",
+      "Banks",
+      "Corporate Legal Depts"
+    ],
+    "tuition": "State NLU Fees",
+    "sources": [
+      "https://cnlu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Legislature / NLU",
+      "establishedYear": "2006",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "central-uni-south-bihar",
+    "name": "Central University of South Bihar",
+    "shortName": "CUSB",
+    "location": "Gaya, Gaya District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Central university accredited with NAAC 'A++' grade, offering integrated and PG courses.",
+    "campus": "Panchanpur, Gaya",
+    "officialUrl": "https://www.cusb.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "Integrated B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "Integrated B.A. B.Ed / B.Sc B.Ed",
+        "degree": "Integrated B.Ed",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.Sc (Biotech, Bioinformatics, Env Science, Life Science)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "M.Pharm",
+        "degree": "M.Pharm",
+        "duration": "2 years",
+        "exams": [
+          "gpat",
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Azim Premji Foundation",
+      "Gandhi Fellowship"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://www.cusb.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "2009",
+      "district": "Gaya",
+      "naacGrade": "A++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nalanda-university",
+    "name": "Nalanda University",
+    "shortName": "Nalanda",
+    "location": "Rajgir, Nalanda District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "An international university reviving the ancient Nalanda tradition, focusing on Asian studies, ecology, and history.",
+    "campus": "Rajgir, Nalanda",
+    "officialUrl": "https://nalandauniv.edu.in",
+    "acceptedExams": [
+      "merit-based",
+      "statement-of-purpose"
+    ],
+    "courses": [
+      {
+        "name": "M.A. (Buddhist Studies, Philosophy, Historical Studies)",
+        "degree": "M.A.",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.Sc (Ecology and Environment Studies)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA (Sustainable Development and Management)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "xat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "statement-of-purpose",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Think Tanks",
+      "UN Bodies",
+      "NGOs"
+    ],
+    "tuition": "Moderate (International Standards)",
+    "sources": [
+      "https://nalandauniv.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "International University (Central Govt Supported)",
+      "establishedYear": "2010",
+      "district": "Nalanda",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "drpca-pusa",
+    "name": "Dr. Rajendra Prasad Central Agricultural University",
+    "shortName": "RPCAU Pusa",
+    "location": "Pusa, Samastipur District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "A central agricultural university with a rich history in agricultural research.",
+    "campus": "Pusa, Samastipur",
+    "officialUrl": "https://www.rpcau.ac.in",
+    "acceptedExams": [
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "B.Tech (Agricultural Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "B.F.Sc (Fisheries)",
+        "degree": "B.F.Sc",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "MBA (Rural Management / Agri-Business)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "xat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Agro Industries",
+      "Banking Sector"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://www.rpcau.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "1970",
+      "district": "Samastipur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-bhagalpur",
+    "name": "Indian Institute of Information Technology Bhagalpur",
+    "shortName": "IIIT Bhagalpur",
+    "location": "Bhagalpur, Bhagalpur District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Institute of National Importance operating under PPP mode, mentored by IIT Guwahati.",
+    "campus": "Sabour, Bhagalpur",
+    "officialUrl": "https://www.iiitbh.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mechatronics, Maths & Computing)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Media.net",
+      "Samsung"
+    ],
+    "tuition": "Standard IIIT Fees",
+    "sources": [
+      "https://www.iiitbh.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "PPP Model / INI",
+      "establishedYear": "2017",
+      "district": "Bhagalpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "patna-university",
+    "name": "Patna University",
+    "shortName": "PU",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "The 7th oldest university in the Indian subcontinent, known for its historical significance.",
+    "campus": "Ashok Rajpath, Patna",
+    "officialUrl": "https://pup.ac.in",
+    "acceptedExams": [
+      "pucet",
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "pucet"
+        ]
+      },
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "pucet"
+        ]
+      },
+      {
+        "name": "M.Ed",
+        "degree": "M.Ed",
+        "duration": "2 years",
+        "exams": [
+          "pucet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "pucet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://pup.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1917",
+      "district": "Patna",
+      "naacGrade": "B+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "patna-womens-college",
+    "name": "Patna Women's College (Autonomous)",
+    "shortName": "PWC Patna",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Premier autonomous college for women, affiliated with Patna University, NAAC 'A' grade.",
+    "campus": "Bailey Road, Patna",
+    "officialUrl": "https://patnawomenscollege.in",
+    "acceptedExams": [
+      "pwc-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "pwc-entrance"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "pwc-entrance"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "pwc-entrance"
+        ]
+      },
+      {
+        "name": "B.Ed",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "pwc-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "pwc-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "TCS",
+      "Concentrix"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://patnawomenscollege.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Patna University"
+      ],
+      "ownership": "Private Aided / Autonomous",
+      "establishedYear": "1940",
+      "district": "Patna",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "igims-patna",
+    "name": "Indira Gandhi Institute of Medical Sciences",
+    "shortName": "IGIMS Patna",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "An autonomous medical institute on the pattern of AIIMS, offering super-specialty care.",
+    "campus": "Sheikhpura, Patna",
+    "officialUrl": "http://www.igims.org",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "DM/M.Ch",
+        "degree": "Super Specialty",
+        "duration": "3 years",
+        "exams": [
+          "neet-ss"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.igims.org"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Deemed University (Autonomous)",
+      "establishedYear": "1983",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "pmch-patna",
+    "name": "Patna Medical College and Hospital",
+    "shortName": "PMCH",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "The oldest and largest medical college in Bihar (est. 1925).",
+    "campus": "Ashok Rajpath, Patna",
+    "officialUrl": "https://www.pmch.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "State Rank Top 50"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.pmch.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Aryabhatta Knowledge University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1925",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nmch-patna",
+    "name": "Nalanda Medical College and Hospital",
+    "shortName": "NMCH Patna",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Major government medical college located in Kankarbagh.",
+    "campus": "Kankarbagh, Patna",
+    "officialUrl": "http://nmchpatna.org",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://nmchpatna.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "Aryabhatta Knowledge University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1970",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dmch-darbhanga",
+    "name": "Darbhanga Medical College and Hospital",
+    "shortName": "DMCH",
+    "location": "Darbhanga, Darbhanga District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Historic medical college serving the Mithila region.",
+    "campus": "Laheriasarai, Darbhanga",
+    "officialUrl": "https://dmch.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://dmch.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Aryabhatta Knowledge University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1946",
+      "district": "Darbhanga",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "skmch-muzaffarpur",
+    "name": "Sri Krishna Medical College and Hospital",
+    "shortName": "SKMCH",
+    "location": "Muzaffarpur, Muzaffarpur District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Key government medical college in North Bihar.",
+    "campus": "Uma Nagar, Muzaffarpur",
+    "officialUrl": "https://skmch.org",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://skmch.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "Aryabhatta Knowledge University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1970",
+      "district": "Muzaffarpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "niper-hajipur",
+    "name": "National Institute of Pharmaceutical Education and Research Hajipur",
+    "shortName": "NIPER Hajipur",
+    "location": "Hajipur, Vaishali District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "Institute of National Importance for pharmaceutical sciences.",
+    "campus": "EPIP, Hajipur",
+    "officialUrl": "http://www.niperhajipur.ac.in",
+    "acceptedExams": [
+      "niper-jee",
+      "gpat"
+    ],
+    "courses": [
+      {
+        "name": "M.S. (Pharm)",
+        "degree": "Master of Science",
+        "duration": "2 years",
+        "exams": [
+          "niper-jee"
+        ]
+      },
+      {
+        "name": "M.Pharm",
+        "degree": "M.Pharm",
+        "duration": "2 years",
+        "exams": [
+          "niper-jee"
+        ]
+      },
+      {
+        "name": "Ph.D",
+        "degree": "Ph.D",
+        "duration": "3-5 years",
+        "exams": [
+          "niper-jee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "niper-jee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gpat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Pharma MNCs"
+    ],
+    "tuition": "Standard NIPER Fees",
+    "sources": [
+      "http://www.niperhajipur.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2007",
+      "district": "Vaishali",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "bce-patna",
+    "name": "Bakhtiyarpur College of Engineering",
+    "shortName": "BCE Patna",
+    "location": "Bakhtiyarpur, Patna District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Government engineering college under the Department of Science & Technology, Bihar.",
+    "campus": "Champapur, Bakhtiyarpur",
+    "officialUrl": "https://www.bcebakhtiyarpur.org",
+    "acceptedExams": [
+      "jee-main",
+      "bcece"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Mech, Civil, EEE, IoT, Fire Tech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "bcece",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "HCL",
+      "TCS",
+      "Prism Cement"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.bcebakhtiyarpur.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "Bihar Engineering University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2016",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mit-muzaffarpur",
+    "name": "Muzaffarpur Institute of Technology",
+    "shortName": "MIT Muzaffarpur",
+    "location": "Muzaffarpur, Muzaffarpur District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "One of the oldest government engineering colleges in Eastern India (est. 1954).",
+    "campus": "Lakshmi Chowk, Muzaffarpur",
+    "officialUrl": "https://www.mitmuzaffarpur.org",
+    "acceptedExams": [
+      "jee-main",
+      "bcece"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, Electrical, ECE, IT, Leather Tech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "bcece"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "bcece",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Alstom",
+      "Prism Johnson",
+      "HCL"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.mitmuzaffarpur.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "Bihar Engineering University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1954",
+      "district": "Muzaffarpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bce-bhagalpur",
+    "name": "Bhagalpur College of Engineering",
+    "shortName": "BCE Bhagalpur",
+    "location": "Bhagalpur, Bhagalpur District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Premier government engineering institute in the Silk City.",
+    "campus": "Sabour, Bhagalpur",
+    "officialUrl": "https://www.bcebhagalpur.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, Electrical, ECE, CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.bcebhagalpur.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Bihar Engineering University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1960",
+      "district": "Bhagalpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nce-chandi",
+    "name": "Nalanda College of Engineering",
+    "shortName": "NCE Chandi",
+    "location": "Chandi, Nalanda District, Bihar",
+    "rankingTier": "Tier 3",
+    "overview": "Government engineering college in Nalanda district.",
+    "campus": "Chandi, Nalanda",
+    "officialUrl": "https://www.ncechandi.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Mech, EEE, Aeronautical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.ncechandi.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Bihar Engineering University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2008",
+      "district": "Nalanda",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "gce-gaya",
+    "name": "Gaya College of Engineering",
+    "shortName": "GCE Gaya",
+    "location": "Gaya, Gaya District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly Magadh Engineering College, now a government institute.",
+    "campus": "Sri Krishna Nagar, Gaya",
+    "officialUrl": "https://www.gcegaya.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Mech, EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.gcegaya.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Bihar Engineering University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1981",
+      "district": "Gaya",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "lnce-motihari",
+    "name": "Motihari College of Engineering",
+    "shortName": "MCE Motihari",
+    "location": "Motihari, East Champaran District, Bihar",
+    "rankingTier": "Tier 3",
+    "overview": "Government engineering college in East Champaran.",
+    "campus": "Bairiya, Motihari",
+    "officialUrl": "https://www.mcemotihari.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Mech, EEE, AI)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.mcemotihari.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Bihar Engineering University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2008",
+      "district": "East Champaran",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "aku-patna",
+    "name": "Aryabhatta Knowledge University",
+    "shortName": "AKU",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "The affiliating university for technical, medical, and professional education in Bihar.",
+    "campus": "Mithapur, Patna",
+    "officialUrl": "http://akubihar.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "neet-ug",
+      "neet-pg",
+      "bcece"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Affiliated Colleges)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBBS (Affiliated Colleges)",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by college",
+    "sources": [
+      "http://akubihar.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University (Affiliating)",
+      "establishedYear": "2010",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "basu-patna",
+    "name": "Bihar Animal Sciences University",
+    "shortName": "BASU",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Specialized university for veterinary and animal sciences.",
+    "campus": "Bihar Veterinary College Campus, Patna",
+    "officialUrl": "https://basu.org.in",
+    "acceptedExams": [
+      "neet-ug",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "B.V.Sc",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Tech (Dairy Technology)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "bcece"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://basu.org.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University",
+      "establishedYear": "2016",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bau-sabour",
+    "name": "Bihar Agricultural University",
+    "shortName": "BAU Sabour",
+    "location": "Sabour, Bhagalpur District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "State agricultural university with multiple constituent colleges.",
+    "campus": "Sabour, Bhagalpur",
+    "officialUrl": "https://www.bausabour.ac.in",
+    "acceptedExams": [
+      "bcece",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "bcece"
+        ]
+      },
+      {
+        "name": "B.Sc (Hons) Horticulture",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "bcece"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "bcece",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.bausabour.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University",
+      "establishedYear": "2010",
+      "district": "Bhagalpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cimp-patna",
+    "name": "Chandragupt Institute of Management Patna",
+    "shortName": "CIMP",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Autonomous management institute funded by the Bihar government.",
+    "campus": "Mithapur, Patna",
+    "officialUrl": "https://www.cimp.ac.in",
+    "acceptedExams": [
+      "cat",
+      "xat",
+      "cmat"
+    ],
+    "courses": [
+      {
+        "name": "PGDM",
+        "degree": "PGDM",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "xat",
+          "cmat"
+        ]
+      },
+      {
+        "name": "PGDM-IEV (Innovation, Entrepreneurship & Venture Development)",
+        "degree": "PGDM",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "xat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "xat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amul",
+      "HDFC Bank",
+      "Asian Paints"
+    ],
+    "tuition": "~INR 7.5 Lakhs",
+    "sources": [
+      "https://www.cimp.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Autonomous (Govt Funded)",
+      "establishedYear": "2008",
+      "district": "Patna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "lnmu-darbhanga",
+    "name": "Lalit Narayan Mithila University",
+    "shortName": "LNMU",
+    "location": "Darbhanga, Darbhanga District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "Major state university serving the Mithila region.",
+    "campus": "Kameshwar Nagar, Darbhanga",
+    "officialUrl": "https://lnmu.ac.in",
+    "acceptedExams": [
+      "merit-based",
+      "cet-bed"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Ed (CET-BED Nodal University)",
+        "degree": "B.Ed",
+        "duration": "2 years",
+        "exams": [
+          "bihar-cet-bed"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cet-bed",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://lnmu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1972",
+      "district": "Darbhanga",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "tmbu-bhagalpur",
+    "name": "Tilka Manjhi Bhagalpur University",
+    "shortName": "TMBU",
+    "location": "Bhagalpur, Bhagalpur District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "State university named after freedom fighter Tilka Manjhi.",
+    "campus": "Bhagalpur",
+    "officialUrl": "http://tmbuniv.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://tmbuniv.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1960",
+      "district": "Bhagalpur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "magadh-university",
+    "name": "Magadh University",
+    "shortName": "MU Bodh Gaya",
+    "location": "Bodh Gaya, Gaya District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "One of the largest state universities in Bihar.",
+    "campus": "Bodh Gaya",
+    "officialUrl": "https://magadhuniversity.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. / B.Sc / B.Com",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://magadhuniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1962",
+      "district": "Gaya",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-patna",
+    "name": "Indian Institute of Technology Patna",
+    "shortName": "Indian Institute of Technology Patna",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Patna",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Patna",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-patna",
+    "name": "National Institute of Technology Patna",
+    "shortName": "National Institute of Technology Patna",
+    "location": "Patna, Patna District, Bihar",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Patna",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Patna",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

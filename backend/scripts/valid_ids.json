@@ -1,0 +1,5732 @@
+[
+  {
+    "id": "iit-tirupati",
+    "name": "Indian Institute of Technology Tirupati",
+    "shortName": "IIT Tirupati",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh"
+  },
+  {
+    "id": "iim-visakhapatnam",
+    "name": "Indian Institute of Management Visakhapatnam",
+    "shortName": "IIM Vizag",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh"
+  },
+  {
+    "id": "nit-andhra-pradesh",
+    "name": "National Institute of Technology Andhra Pradesh",
+    "shortName": "NIT AP",
+    "location": "Tadepalligudem, West Godavari District, Andhra Pradesh"
+  },
+  {
+    "id": "iiit-sricity",
+    "name": "Indian Institute of Information Technology Sri City",
+    "shortName": "IIIT Sri City",
+    "location": "Sri City, Chittoor District, Andhra Pradesh"
+  },
+  {
+    "id": "iiit-kurnool",
+    "name": "Indian Institute of Information Technology Design and Manufacturing Kurnool",
+    "shortName": "IIITDM Kurnool",
+    "location": "Kurnool, Kurnool District, Andhra Pradesh"
+  },
+  {
+    "id": "spa-vijayawada",
+    "name": "School of Planning and Architecture Vijayawada",
+    "shortName": "SPA Vijayawada",
+    "location": "Vijayawada, Krishna District, Andhra Pradesh"
+  },
+  {
+    "id": "aiims-mangalagiri",
+    "name": "All India Institute of Medical Sciences Mangalagiri",
+    "shortName": "AIIMS Mangalagiri",
+    "location": "Mangalagiri, Guntur District, Andhra Pradesh"
+  },
+  {
+    "id": "andhra-university",
+    "name": "Andhra University",
+    "shortName": "AU Visakhapatnam",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh"
+  },
+  {
+    "id": "svu-tirupati",
+    "name": "Sri Venkateswara University",
+    "shortName": "SVU Tirupati",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh"
+  },
+  {
+    "id": "jntu-kakinada",
+    "name": "Jawaharlal Nehru Technological University Kakinada",
+    "shortName": "JNTU Kakinada",
+    "location": "Kakinada, Kakinada District, Andhra Pradesh"
+  },
+  {
+    "id": "jntu-anantapur",
+    "name": "Jawaharlal Nehru Technological University Anantapur",
+    "shortName": "JNTU Anantapur",
+    "location": "Anantapur, Anantapur District, Andhra Pradesh"
+  },
+  {
+    "id": "gitam-visakhapatnam",
+    "name": "Gandhi Institute of Technology and Management",
+    "shortName": "GITAM",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh"
+  },
+  {
+    "id": "kl-university-guntur",
+    "name": "K L Deemed to be University",
+    "shortName": "KLU",
+    "location": "Vaddeswaram, Guntur District, Andhra Pradesh"
+  },
+  {
+    "id": "vignan-university-guntur",
+    "name": "Vignan's Foundation for Science, Technology and Research",
+    "shortName": "Vignan University",
+    "location": "Vadlamudi, Guntur District, Andhra Pradesh"
+  },
+  {
+    "id": "srm-ap",
+    "name": "SRM University, Andhra Pradesh",
+    "shortName": "SRM AP",
+    "location": "Amaravati, Guntur District, Andhra Pradesh"
+  },
+  {
+    "id": "vit-ap",
+    "name": "VIT-AP University",
+    "shortName": "VIT AP",
+    "location": "Amaravati, Guntur District, Andhra Pradesh"
+  },
+  {
+    "id": "sree-vidyanikethan",
+    "name": "Sree Vidyanikethan Engineering College",
+    "shortName": "SVEC Tirupati",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh"
+  },
+  {
+    "id": "gmr-it-rajam",
+    "name": "GMR Institute of Technology",
+    "shortName": "GMRIT",
+    "location": "Rajam, Vizianagaram District, Andhra Pradesh"
+  },
+  {
+    "id": "gayatri-vidya-parishad",
+    "name": "Gayatri Vidya Parishad College of Engineering",
+    "shortName": "GVPCE Visakhapatnam",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh"
+  },
+  {
+    "id": "rvr-jc-guntur",
+    "name": "R.V.R. & J.C. College of Engineering",
+    "shortName": "RVR&JC",
+    "location": "Guntur, Guntur District, Andhra Pradesh"
+  },
+  {
+    "id": "vr-siddhartha-vijayawada",
+    "name": "Velagapudi Ramakrishna Siddhartha Engineering College",
+    "shortName": "VRSEC",
+    "location": "Vijayawada, Krishna District, Andhra Pradesh"
+  },
+  {
+    "id": "acharya-nagarjuna-university",
+    "name": "Acharya Nagarjuna University",
+    "shortName": "ANU Guntur",
+    "location": "Guntur, Guntur District, Andhra Pradesh"
+  },
+  {
+    "id": "sri-krishnadevaraya-university",
+    "name": "Sri Krishnadevaraya University",
+    "shortName": "SKU Anantapur",
+    "location": "Anantapur, Anantapur District, Andhra Pradesh"
+  },
+  {
+    "id": "ntr-health-university",
+    "name": "Dr. YSR University of Health Sciences",
+    "shortName": "Dr. YSR UHS",
+    "location": "Vijayawada, Krishna District, Andhra Pradesh"
+  },
+  {
+    "id": "andhra-medical-college",
+    "name": "Andhra Medical College",
+    "shortName": "AMC Visakhapatnam",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh"
+  },
+  {
+    "id": "guntur-medical-college",
+    "name": "Guntur Medical College",
+    "shortName": "GMC Guntur",
+    "location": "Guntur, Guntur District, Andhra Pradesh"
+  },
+  {
+    "id": "kurnool-medical-college",
+    "name": "Kurnool Medical College",
+    "shortName": "KMC Kurnool",
+    "location": "Kurnool, Kurnool District, Andhra Pradesh"
+  },
+  {
+    "id": "angrau-guntur",
+    "name": "Acharya N.G. Ranga Agricultural University",
+    "shortName": "ANGRAU",
+    "location": "Guntur, Guntur District, Andhra Pradesh"
+  },
+  {
+    "id": "svims-tirupati",
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "shortName": "SVIMS",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh"
+  },
+  {
+    "id": "spmvv-tirupati",
+    "name": "Sri Padmavati Mahila Visvavidyalayam",
+    "shortName": "SPMVV",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh"
+  },
+  {
+    "id": "yvu-kadapa",
+    "name": "Yogi Vemana University",
+    "shortName": "YVU Kadapa",
+    "location": "Kadapa, Kadapa District, Andhra Pradesh"
+  },
+  {
+    "id": "anits-visakhapatnam",
+    "name": "Anil Neerukonda Institute of Technology and Sciences",
+    "shortName": "ANITS",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh"
+  },
+  {
+    "id": "vishnu-institute-bhimavaram",
+    "name": "Vishnu Institute of Technology",
+    "shortName": "VIT Bhimavaram",
+    "location": "Bhimavaram, West Godavari District, Andhra Pradesh"
+  },
+  {
+    "id": "aditya-engineering-college",
+    "name": "Aditya Engineering College",
+    "shortName": "AEC Surampalem",
+    "location": "Surampalem, East Godavari District, Andhra Pradesh"
+  },
+  {
+    "id": "rgukt-rkvalley",
+    "name": "Rajiv Gandhi University of Knowledge Technologies (RK Valley)",
+    "shortName": "IIIT RK Valley",
+    "location": "Idupulapaya, Kadapa District, Andhra Pradesh"
+  },
+  {
+    "id": "rgukt-nuzvid",
+    "name": "Rajiv Gandhi University of Knowledge Technologies (Nuzvid)",
+    "shortName": "IIIT Nuzvid",
+    "location": "Nuzvid, Krishna District, Andhra Pradesh"
+  },
+  {
+    "id": "dravidian-university",
+    "name": "Dravidian University",
+    "shortName": "Dravidian Uni",
+    "location": "Kuppam, Chittoor District, Andhra Pradesh"
+  },
+  {
+    "id": "damodaram-sanjivayya-nlu",
+    "name": "Damodaram Sanjivayya National Law University",
+    "shortName": "DSNLU",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh"
+  },
+  {
+    "id": "krea-university",
+    "name": "Krea University",
+    "shortName": "Krea",
+    "location": "Sri City, Chittoor District, Andhra Pradesh"
+  },
+  {
+    "id": "nit-arunachal-pradesh",
+    "name": "National Institute of Technology Arunachal Pradesh",
+    "shortName": "NIT AP",
+    "location": "Jote, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "nerist-itanagar",
+    "name": "North Eastern Regional Institute of Science and Technology",
+    "shortName": "NERIST",
+    "location": "Nirjuli, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "rajiv-gandhi-university",
+    "name": "Rajiv Gandhi University",
+    "shortName": "RGU",
+    "location": "Rono Hills, Doimukh, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "arunachal-university-studies",
+    "name": "Arunachal University of Studies",
+    "shortName": "AUS",
+    "location": "Namsai, Namsai District, Arunachal Pradesh"
+  },
+  {
+    "id": "himalayan-university-itanagar",
+    "name": "Himalayan University",
+    "shortName": "Himalayan Uni",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "apex-professional-university",
+    "name": "Apex Professional University",
+    "shortName": "APU Pasighat",
+    "location": "Pasighat, East Siang District, Arunachal Pradesh"
+  },
+  {
+    "id": "nftu-alo",
+    "name": "North East Frontier Technical University",
+    "shortName": "NFTU",
+    "location": "Aalo, West Siang District, Arunachal Pradesh"
+  },
+  {
+    "id": "igta-msu-ziro",
+    "name": "Indira Gandhi Technological and Medical Sciences University",
+    "shortName": "IGTAMSU",
+    "location": "Ziro, Lower Subansiri District, Arunachal Pradesh"
+  },
+  {
+    "id": "jn-college-pasighat",
+    "name": "Jawaharlal Nehru College",
+    "shortName": "JNC Pasighat",
+    "location": "Pasighat, East Siang District, Arunachal Pradesh"
+  },
+  {
+    "id": "dngc-itanagar",
+    "name": "Dera Natung Government College",
+    "shortName": "DNGC Itanagar",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "iggc-tezu",
+    "name": "Indira Gandhi Government College",
+    "shortName": "IGGC Tezu",
+    "location": "Tezu, Lohit District, Arunachal Pradesh"
+  },
+  {
+    "id": "govt-college-bomdila",
+    "name": "Government College Bomdila",
+    "shortName": "GC Bomdila",
+    "location": "Bomdila, West Kameng District, Arunachal Pradesh"
+  },
+  {
+    "id": "saint-claret-college-ziro",
+    "name": "Saint Claret College",
+    "shortName": "SCC Ziro",
+    "location": "Ziro, Lower Subansiri District, Arunachal Pradesh"
+  },
+  {
+    "id": "don-bosco-college-itanagar",
+    "name": "Don Bosco College",
+    "shortName": "DBC Itanagar",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "arunachal-law-academy",
+    "name": "Arunachal Law Academy",
+    "shortName": "ALA Itanagar",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "hills-college-teacher-education",
+    "name": "Hills College of Teacher Education",
+    "shortName": "HCTE",
+    "location": "Naharlagun, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "rg-govt-polytechnic",
+    "name": "Rajiv Gandhi Government Polytechnic",
+    "shortName": "RGGP Itanagar",
+    "location": "Itanagar, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "tomi-polytechnic",
+    "name": "Tomi Polytechnic College",
+    "shortName": "Tomi Polytechnic",
+    "location": "Basar, Leparada District, Arunachal Pradesh"
+  },
+  {
+    "id": "wr-govt-college-deomali",
+    "name": "Wangcha Rajkumar Government College",
+    "shortName": "WRGC Deomali",
+    "location": "Deomali, Tirap District, Arunachal Pradesh"
+  },
+  {
+    "id": "rf-govt-college-changlang",
+    "name": "Rang Frah Government College",
+    "shortName": "RFGC Changlang",
+    "location": "Changlang, Changlang District, Arunachal Pradesh"
+  },
+  {
+    "id": "govt-model-college-basar",
+    "name": "Government Model College Basar",
+    "shortName": "GMC Basar",
+    "location": "Basar, Leparada District, Arunachal Pradesh"
+  },
+  {
+    "id": "govt-college-doimukh",
+    "name": "Government College Doimukh",
+    "shortName": "GC Doimukh",
+    "location": "Doimukh, Papum Pare District, Arunachal Pradesh"
+  },
+  {
+    "id": "iit-guwahati",
+    "name": "Indian Institute of Technology Guwahati",
+    "shortName": "IIT Guwahati",
+    "location": "Guwahati, Kamrup District, Assam"
+  },
+  {
+    "id": "nit-silchar",
+    "name": "National Institute of Technology Silchar",
+    "shortName": "NIT Silchar",
+    "location": "Silchar, Cachar District, Assam"
+  },
+  {
+    "id": "tezpur-university",
+    "name": "Tezpur University",
+    "shortName": "TU",
+    "location": "Tezpur, Sonitpur District, Assam"
+  },
+  {
+    "id": "gauhati-university",
+    "name": "Gauhati University",
+    "shortName": "GU",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "dibrugarh-university",
+    "name": "Dibrugarh University",
+    "shortName": "DU",
+    "location": "Dibrugarh, Dibrugarh District, Assam"
+  },
+  {
+    "id": "assam-agricultural-university",
+    "name": "Assam Agricultural University",
+    "shortName": "AAU Jorhat",
+    "location": "Jorhat, Jorhat District, Assam"
+  },
+  {
+    "id": "assam-university-silchar",
+    "name": "Assam University",
+    "shortName": "AUS Silchar",
+    "location": "Silchar, Cachar District, Assam"
+  },
+  {
+    "id": "cotton-university",
+    "name": "Cotton University",
+    "shortName": "Cotton Uni",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "nlu-assam",
+    "name": "National Law University and Judicial Academy, Assam",
+    "shortName": "NLUJAA",
+    "location": "Guwahati, Kamrup District, Assam"
+  },
+  {
+    "id": "gauhati-medical-college",
+    "name": "Gauhati Medical College and Hospital",
+    "shortName": "GMCH Guwahati",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "assam-medical-college-dibrugarh",
+    "name": "Assam Medical College",
+    "shortName": "AMCH Dibrugarh",
+    "location": "Dibrugarh, Dibrugarh District, Assam"
+  },
+  {
+    "id": "silchar-medical-college",
+    "name": "Silchar Medical College and Hospital",
+    "shortName": "SMCH Silchar",
+    "location": "Silchar, Cachar District, Assam"
+  },
+  {
+    "id": "jorhat-medical-college",
+    "name": "Jorhat Medical College and Hospital",
+    "shortName": "JMCH Jorhat",
+    "location": "Jorhat, Jorhat District, Assam"
+  },
+  {
+    "id": "aec-guwahati",
+    "name": "Assam Engineering College",
+    "shortName": "AEC Guwahati",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "jec-jorhat",
+    "name": "Jorhat Engineering College",
+    "shortName": "JEC Jorhat",
+    "location": "Jorhat, Jorhat District, Assam"
+  },
+  {
+    "id": "jist-jorhat",
+    "name": "Jorhat Institute of Science and Technology",
+    "shortName": "JIST",
+    "location": "Jorhat, Jorhat District, Assam"
+  },
+  {
+    "id": "bbec-kokrajhar",
+    "name": "Bineswar Brahma Engineering College",
+    "shortName": "BBEC Kokrajhar",
+    "location": "Kokrajhar, Kokrajhar District, Assam"
+  },
+  {
+    "id": "gimt-guwahati",
+    "name": "Girijananda Chowdhury Institute of Management and Technology",
+    "shortName": "GIMT Guwahati",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "don-bosco-university",
+    "name": "Assam Don Bosco University",
+    "shortName": "ADBU",
+    "location": "Sonapur, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "kaziranga-university",
+    "name": "The Assam Kaziranga University",
+    "shortName": "Kaziranga Uni",
+    "location": "Jorhat, Jorhat District, Assam"
+  },
+  {
+    "id": "royal-global-university",
+    "name": "The Assam Royal Global University",
+    "shortName": "RGU Guwahati",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "assam-down-town-university",
+    "name": "Assam Down Town University",
+    "shortName": "ADTU",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "bodoland-university",
+    "name": "Bodoland University",
+    "shortName": "Bodoland Uni",
+    "location": "Kokrajhar, Kokrajhar District, Assam"
+  },
+  {
+    "id": "kkhsou-guwahati",
+    "name": "Krishna Kanta Handiqui State Open University",
+    "shortName": "KKHSOU",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "ssuhs-guwahati",
+    "name": "Srimanta Sankaradeva University of Health Sciences",
+    "shortName": "SSUHS",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "astu-guwahati",
+    "name": "Assam Science and Technology University",
+    "shortName": "ASTU",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "jb-law-college-guwahati",
+    "name": "J.B. Law College",
+    "shortName": "JB Law College",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "nef-law-college",
+    "name": "NEF Law College",
+    "shortName": "NEF Law",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam"
+  },
+  {
+    "id": "iit-patna",
+    "name": "Indian Institute of Technology Patna",
+    "shortName": "IIT Patna",
+    "location": "Bihta, Patna District, Bihar"
+  },
+  {
+    "id": "nit-patna",
+    "name": "National Institute of Technology Patna",
+    "shortName": "NIT Patna",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "iim-bodh-gaya",
+    "name": "Indian Institute of Management Bodh Gaya",
+    "shortName": "IIM Bodh Gaya",
+    "location": "Bodh Gaya, Gaya District, Bihar"
+  },
+  {
+    "id": "aiims-patna",
+    "name": "All India Institute of Medical Sciences Patna",
+    "shortName": "AIIMS Patna",
+    "location": "Phulwari Sharif, Patna District, Bihar"
+  },
+  {
+    "id": "cnlu-patna",
+    "name": "Chanakya National Law University",
+    "shortName": "CNLU",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "central-uni-south-bihar",
+    "name": "Central University of South Bihar",
+    "shortName": "CUSB",
+    "location": "Gaya, Gaya District, Bihar"
+  },
+  {
+    "id": "nalanda-university",
+    "name": "Nalanda University",
+    "shortName": "Nalanda",
+    "location": "Rajgir, Nalanda District, Bihar"
+  },
+  {
+    "id": "drpca-pusa",
+    "name": "Dr. Rajendra Prasad Central Agricultural University",
+    "shortName": "RPCAU Pusa",
+    "location": "Pusa, Samastipur District, Bihar"
+  },
+  {
+    "id": "iiit-bhagalpur",
+    "name": "Indian Institute of Information Technology Bhagalpur",
+    "shortName": "IIIT Bhagalpur",
+    "location": "Bhagalpur, Bhagalpur District, Bihar"
+  },
+  {
+    "id": "patna-university",
+    "name": "Patna University",
+    "shortName": "PU",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "patna-womens-college",
+    "name": "Patna Women's College (Autonomous)",
+    "shortName": "PWC Patna",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "igims-patna",
+    "name": "Indira Gandhi Institute of Medical Sciences",
+    "shortName": "IGIMS Patna",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "pmch-patna",
+    "name": "Patna Medical College and Hospital",
+    "shortName": "PMCH",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "nmch-patna",
+    "name": "Nalanda Medical College and Hospital",
+    "shortName": "NMCH Patna",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "dmch-darbhanga",
+    "name": "Darbhanga Medical College and Hospital",
+    "shortName": "DMCH",
+    "location": "Darbhanga, Darbhanga District, Bihar"
+  },
+  {
+    "id": "skmch-muzaffarpur",
+    "name": "Sri Krishna Medical College and Hospital",
+    "shortName": "SKMCH",
+    "location": "Muzaffarpur, Muzaffarpur District, Bihar"
+  },
+  {
+    "id": "niper-hajipur",
+    "name": "National Institute of Pharmaceutical Education and Research Hajipur",
+    "shortName": "NIPER Hajipur",
+    "location": "Hajipur, Vaishali District, Bihar"
+  },
+  {
+    "id": "bce-patna",
+    "name": "Bakhtiyarpur College of Engineering",
+    "shortName": "BCE Patna",
+    "location": "Bakhtiyarpur, Patna District, Bihar"
+  },
+  {
+    "id": "mit-muzaffarpur",
+    "name": "Muzaffarpur Institute of Technology",
+    "shortName": "MIT Muzaffarpur",
+    "location": "Muzaffarpur, Muzaffarpur District, Bihar"
+  },
+  {
+    "id": "bce-bhagalpur",
+    "name": "Bhagalpur College of Engineering",
+    "shortName": "BCE Bhagalpur",
+    "location": "Bhagalpur, Bhagalpur District, Bihar"
+  },
+  {
+    "id": "nce-chandi",
+    "name": "Nalanda College of Engineering",
+    "shortName": "NCE Chandi",
+    "location": "Chandi, Nalanda District, Bihar"
+  },
+  {
+    "id": "gce-gaya",
+    "name": "Gaya College of Engineering",
+    "shortName": "GCE Gaya",
+    "location": "Gaya, Gaya District, Bihar"
+  },
+  {
+    "id": "lnce-motihari",
+    "name": "Motihari College of Engineering",
+    "shortName": "MCE Motihari",
+    "location": "Motihari, East Champaran District, Bihar"
+  },
+  {
+    "id": "aku-patna",
+    "name": "Aryabhatta Knowledge University",
+    "shortName": "AKU",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "basu-patna",
+    "name": "Bihar Animal Sciences University",
+    "shortName": "BASU",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "bau-sabour",
+    "name": "Bihar Agricultural University",
+    "shortName": "BAU Sabour",
+    "location": "Sabour, Bhagalpur District, Bihar"
+  },
+  {
+    "id": "cimp-patna",
+    "name": "Chandragupt Institute of Management Patna",
+    "shortName": "CIMP",
+    "location": "Patna, Patna District, Bihar"
+  },
+  {
+    "id": "lnmu-darbhanga",
+    "name": "Lalit Narayan Mithila University",
+    "shortName": "LNMU",
+    "location": "Darbhanga, Darbhanga District, Bihar"
+  },
+  {
+    "id": "tmbu-bhagalpur",
+    "name": "Tilka Manjhi Bhagalpur University",
+    "shortName": "TMBU",
+    "location": "Bhagalpur, Bhagalpur District, Bihar"
+  },
+  {
+    "id": "magadh-university",
+    "name": "Magadh University",
+    "shortName": "MU Bodh Gaya",
+    "location": "Bodh Gaya, Gaya District, Bihar"
+  },
+  {
+    "id": "panjab-university-chandigarh",
+    "name": "Panjab University",
+    "shortName": "PU",
+    "location": "Sector 14, Chandigarh"
+  },
+  {
+    "id": "pgimer-chandigarh",
+    "name": "Postgraduate Institute of Medical Education and Research",
+    "shortName": "PGIMER",
+    "location": "Sector 12, Chandigarh"
+  },
+  {
+    "id": "punjab-engineering-college",
+    "name": "Punjab Engineering College (Deemed to be University)",
+    "shortName": "PEC Chandigarh",
+    "location": "Sector 12, Chandigarh"
+  },
+  {
+    "id": "govt-medical-college-hospital-chandigarh",
+    "name": "Government Medical College and Hospital, Chandigarh",
+    "shortName": "GMCH 32",
+    "location": "Sector 32, Chandigarh"
+  },
+  {
+    "id": "chandigarh-college-of-engineering-technology-degree",
+    "name": "Chandigarh College of Engineering and Technology (Degree Wing)",
+    "shortName": "CCET Degree",
+    "location": "Sector 26, Chandigarh"
+  },
+  {
+    "id": "chandigarh-college-of-architecture",
+    "name": "Chandigarh College of Architecture",
+    "shortName": "CCA",
+    "location": "Sector 12, Chandigarh"
+  },
+  {
+    "id": "dav-college-sector-10",
+    "name": "DAV College, Sector 10",
+    "shortName": "DAV 10",
+    "location": "Sector 10, Chandigarh"
+  },
+  {
+    "id": "goswami-ganesh-dutta-sd-college",
+    "name": "Goswami Ganesh Dutta Sanatan Dharma College",
+    "shortName": "GGDSD College",
+    "location": "Sector 32, Chandigarh"
+  },
+  {
+    "id": "mcm-dav-college-for-women",
+    "name": "Mehr Chand Mahajan DAV College for Women",
+    "shortName": "MCM DAV",
+    "location": "Sector 36, Chandigarh"
+  },
+  {
+    "id": "post-graduate-government-college-sector-11",
+    "name": "Post Graduate Government College, Sector 11",
+    "shortName": "PGGC 11",
+    "location": "Sector 11, Chandigarh"
+  },
+  {
+    "id": "post-graduate-government-college-for-girls-sector-11",
+    "name": "Post Graduate Government College for Girls, Sector 11",
+    "shortName": "PGGCG 11",
+    "location": "Sector 11, Chandigarh"
+  },
+  {
+    "id": "post-graduate-government-college-for-girls-sector-42",
+    "name": "Post Graduate Government College for Girls, Sector 42",
+    "shortName": "PGGCG 42",
+    "location": "Sector 42, Chandigarh"
+  },
+  {
+    "id": "post-graduate-government-college-sector-46",
+    "name": "Post Graduate Government College, Sector 46",
+    "shortName": "PGGC 46",
+    "location": "Sector 46, Chandigarh"
+  },
+  {
+    "id": "govt-college-commerce-business-administration",
+    "name": "Government College of Commerce and Business Administration",
+    "shortName": "GCCBA 50",
+    "location": "Sector 50, Chandigarh"
+  },
+  {
+    "id": "government-college-of-art-chandigarh",
+    "name": "Government College of Art",
+    "shortName": "GCA Chandigarh",
+    "location": "Sector 10, Chandigarh"
+  },
+  {
+    "id": "ihm-chandigarh",
+    "name": "Dr. Ambedkar Institute of Hotel Management Catering and Nutrition",
+    "shortName": "IHM Chandigarh",
+    "location": "Sector 42, Chandigarh"
+  },
+  {
+    "id": "government-home-science-college-chandigarh",
+    "name": "Government Home Science College",
+    "shortName": "Home Science College",
+    "location": "Sector 10, Chandigarh"
+  },
+  {
+    "id": "nitttr-chandigarh",
+    "name": "National Institute of Technical Teachers Training and Research",
+    "shortName": "NITTTR Chandigarh",
+    "location": "Sector 26, Chandigarh"
+  },
+  {
+    "id": "sri-guru-gobind-singh-college",
+    "name": "Sri Guru Gobind Singh College",
+    "shortName": "SGGS College",
+    "location": "Sector 26, Chandigarh"
+  },
+  {
+    "id": "guru-gobind-singh-college-for-women",
+    "name": "Guru Gobind Singh College for Women",
+    "shortName": "GGSCW",
+    "location": "Sector 26, Chandigarh"
+  },
+  {
+    "id": "dev-samaj-college-for-women-45",
+    "name": "Dev Samaj College for Women",
+    "shortName": "Dev Samaj 45",
+    "location": "Sector 45, Chandigarh"
+  },
+  {
+    "id": "government-college-of-education-chandigarh",
+    "name": "Government College of Education",
+    "shortName": "GCE Chandigarh",
+    "location": "Sector 20, Chandigarh"
+  },
+  {
+    "id": "chandigarh-college-engineering-technology-diploma",
+    "name": "Chandigarh College of Engineering and Technology (Diploma Wing)",
+    "shortName": "CCET Diploma",
+    "location": "Sector 26, Chandigarh"
+  },
+  {
+    "id": "government-polytechnic-for-women-chandigarh",
+    "name": "Government Polytechnic for Women",
+    "shortName": "GPW Chandigarh",
+    "location": "Sector 10, Chandigarh"
+  },
+  {
+    "id": "iit-bhilai",
+    "name": "Indian Institute of Technology Bhilai",
+    "shortName": "IIT Bhilai",
+    "location": "Bhilai, Durg District, Chhattisgarh"
+  },
+  {
+    "id": "nit-raipur",
+    "name": "National Institute of Technology Raipur",
+    "shortName": "NIT Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "iiit-naya-raipur",
+    "name": "Dr. Shyama Prasad Mukherjee International Institute of Information Technology Naya Raipur",
+    "shortName": "IIIT Naya Raipur",
+    "location": "Naya Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "aiims-raipur",
+    "name": "All India Institute of Medical Sciences Raipur",
+    "shortName": "AIIMS Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "hnlu-raipur",
+    "name": "Hidayatullah National Law University",
+    "shortName": "HNLU",
+    "location": "Naya Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "guru-ghasidas-vishwavidyalaya",
+    "name": "Guru Ghasidas Vishwavidyalaya",
+    "shortName": "GGU Bilaspur",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh"
+  },
+  {
+    "id": "pt-ravishankar-shukla-uni",
+    "name": "Pt. Ravishankar Shukla University",
+    "shortName": "PRSU Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "csvtu-bhilai",
+    "name": "Chhattisgarh Swami Vivekanand Technical University",
+    "shortName": "CSVTU",
+    "location": "Bhilai, Durg District, Chhattisgarh"
+  },
+  {
+    "id": "igkv-raipur",
+    "name": "Indira Gandhi Krishi Vishwavidyalaya",
+    "shortName": "IGKV",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "ayush-uni-raipur",
+    "name": "Pt. Deendayal Upadhyay Memorial Health Sciences and Ayush University",
+    "shortName": "Ayush University",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "pt-jnm-medical-college",
+    "name": "Pt. Jawahar Lal Nehru Memorial Medical College",
+    "shortName": "Pt JNM Medical College",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "cims-bilaspur",
+    "name": "Chhattisgarh Institute of Medical Sciences",
+    "shortName": "CIMS Bilaspur",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh"
+  },
+  {
+    "id": "gmc-jagdalpur",
+    "name": "Late Baliram Kashyap Memorial Government Medical College",
+    "shortName": "GMC Jagdalpur",
+    "location": "Jagdalpur, Bastar District, Chhattisgarh"
+  },
+  {
+    "id": "gec-raipur",
+    "name": "Government Engineering College Raipur",
+    "shortName": "GEC Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "gec-bilaspur",
+    "name": "Government Engineering College Bilaspur",
+    "shortName": "GEC Bilaspur",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh"
+  },
+  {
+    "id": "gec-jagdalpur",
+    "name": "Government Engineering College Jagdalpur",
+    "shortName": "GEC Jagdalpur",
+    "location": "Jagdalpur, Bastar District, Chhattisgarh"
+  },
+  {
+    "id": "bit-durg",
+    "name": "Bhilai Institute of Technology",
+    "shortName": "BIT Durg",
+    "location": "Durg, Durg District, Chhattisgarh"
+  },
+  {
+    "id": "ssipmt-raipur",
+    "name": "Shri Shankaracharya Institute of Professional Management and Technology",
+    "shortName": "SSIPMT",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "rcet-bhilai",
+    "name": "Rungta College of Engineering and Technology",
+    "shortName": "RCET Bhilai",
+    "location": "Bhilai, Durg District, Chhattisgarh"
+  },
+  {
+    "id": "op-jindal-uni",
+    "name": "OP Jindal University",
+    "shortName": "OPJU",
+    "location": "Raigarh, Raigarh District, Chhattisgarh"
+  },
+  {
+    "id": "icfai-raipur",
+    "name": "ICFAI University Raipur",
+    "shortName": "ICFAI Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "itm-university-raipur",
+    "name": "ITM University Raipur",
+    "shortName": "ITM Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "amity-raipur",
+    "name": "Amity University Chhattisgarh",
+    "shortName": "Amity Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "kalinga-university",
+    "name": "Kalinga University",
+    "shortName": "Kalinga Uni",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "mats-university",
+    "name": "MATS University",
+    "shortName": "MATS",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "cv-raman-uni",
+    "name": "Dr. C.V. Raman University",
+    "shortName": "CVRU",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh"
+  },
+  {
+    "id": "sarguja-university",
+    "name": "Sant Gahira Guru Vishwavidyalaya",
+    "shortName": "Sarguja Uni",
+    "location": "Ambikapur, Surguja District, Chhattisgarh"
+  },
+  {
+    "id": "bastar-university",
+    "name": "Shaheed Mahendra Karma Vishwavidyalaya",
+    "shortName": "Bastar Uni",
+    "location": "Jagdalpur, Bastar District, Chhattisgarh"
+  },
+  {
+    "id": "ktuje-raipur",
+    "name": "Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya",
+    "shortName": "KTUJM",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "govt-science-college-raipur",
+    "name": "Government Nagarjuna Post Graduate College of Science",
+    "shortName": "Science College Raipur",
+    "location": "Raipur, Raipur District, Chhattisgarh"
+  },
+  {
+    "id": "cmd-college-bilaspur",
+    "name": "C.M. Dubey Post Graduate College",
+    "shortName": "CMD College",
+    "location": "Bilaspur, Bilaspur District, Chhattisgarh"
+  },
+  {
+    "id": "ihm-silvassa",
+    "name": "Institute of Hotel Management Catering Technology & Applied Nutrition, Silvassa",
+    "shortName": "IHM Silvassa",
+    "location": "Silvassa, Dadra and Nagar Haveli"
+  },
+  {
+    "id": "ssr-college-of-arts-commerce-science",
+    "name": "SSR College of Arts, Commerce and Science",
+    "shortName": "SSR College",
+    "location": "Silvassa, Dadra and Nagar Haveli"
+  },
+  {
+    "id": "dr-bba-government-polytechnic",
+    "name": "Dr. B.B.A. Government Polytechnic",
+    "shortName": "Govt Polytechnic Silvassa",
+    "location": "Karad, Silvassa, Dadra and Nagar Haveli"
+  },
+  {
+    "id": "ssr-institute-of-management-research",
+    "name": "SSR Institute of Management and Research",
+    "shortName": "SSRIMR",
+    "location": "Silvassa, Dadra and Nagar Haveli"
+  },
+  {
+    "id": "government-college-silvassa",
+    "name": "Dr. A.P.J. Abdul Kalam Government College",
+    "shortName": "APJ GC Silvassa",
+    "location": "Silvassa, Dadra and Nagar Haveli"
+  },
+  {
+    "id": "ssr-college-of-pharmacy",
+    "name": "SSR College of Pharmacy",
+    "shortName": "SSR Pharmacy",
+    "location": "Silvassa, Dadra and Nagar Haveli"
+  },
+  {
+    "id": "ssr-college-of-education",
+    "name": "SSR College of Education",
+    "shortName": "SSR B.Ed",
+    "location": "Silvassa, Dadra and Nagar Haveli"
+  },
+  {
+    "id": "namo-medical-education-and-research-institute",
+    "name": "Namo Medical Education and Research Institute",
+    "shortName": "Namo Medical College",
+    "location": "Silvassa, Dadra and Nagar Haveli"
+  },
+  {
+    "id": "government-nursing-college-silvassa",
+    "name": "Government College of Nursing, Silvassa",
+    "shortName": "Govt Nursing Silvassa",
+    "location": "Silvassa, Dadra and Nagar Haveli"
+  },
+  {
+    "id": "nift-daman",
+    "name": "National Institute of Fashion Technology Daman",
+    "shortName": "NIFT Daman",
+    "location": "Daman, Daman District, Daman & Diu"
+  },
+  {
+    "id": "iiit-vadodara-diu-campus",
+    "name": "Indian Institute of Information Technology Vadodara - International Campus Diu",
+    "shortName": "IIITV-ICD",
+    "location": "Diu, Daman & Diu"
+  },
+  {
+    "id": "government-college-daman",
+    "name": "Government College, Daman",
+    "shortName": "GC Daman",
+    "location": "Nani Daman, Daman, Daman & Diu"
+  },
+  {
+    "id": "government-college-diu",
+    "name": "Government College, Diu",
+    "shortName": "GC Diu",
+    "location": "Diu, Daman & Diu"
+  },
+  {
+    "id": "government-polytechnic-daman",
+    "name": "Government Polytechnic, Daman",
+    "shortName": "G.P. Daman",
+    "location": "Varkund, Daman, Daman & Diu"
+  },
+  {
+    "id": "government-polytechnic-diu",
+    "name": "Government Polytechnic, Diu",
+    "shortName": "G.P. Diu",
+    "location": "Diu, Daman & Diu"
+  },
+  {
+    "id": "college-of-nursing-daman",
+    "name": "College of Nursing, Daman",
+    "shortName": "Nursing College Daman",
+    "location": "Daman, Daman & Diu"
+  },
+  {
+    "id": "vaidik-dental-college-and-research-centre",
+    "name": "Vaidik Dental College and Research Centre",
+    "shortName": "Vaidik Dental College",
+    "location": "Daman, Daman & Diu"
+  },
+  {
+    "id": "ttti-daman",
+    "name": "Technical Training Institute Daman",
+    "shortName": "TTTI Daman",
+    "location": "Moti Daman, Daman & Diu"
+  },
+  {
+    "id": "iit-delhi",
+    "name": "Indian Institute of Technology Delhi",
+    "shortName": "IIT Delhi",
+    "location": "Hauz Khas, New Delhi, Delhi"
+  },
+  {
+    "id": "aiims-new-delhi",
+    "name": "All India Institute of Medical Sciences, New Delhi",
+    "shortName": "AIIMS Delhi",
+    "location": "Ansari Nagar, New Delhi, Delhi"
+  },
+  {
+    "id": "university-of-delhi",
+    "name": "University of Delhi",
+    "shortName": "DU",
+    "location": "Delhi"
+  },
+  {
+    "id": "jawaharlal-nehru-university",
+    "name": "Jawaharlal Nehru University",
+    "shortName": "JNU",
+    "location": "New Delhi, Delhi"
+  },
+  {
+    "id": "delhi-technological-university",
+    "name": "Delhi Technological University",
+    "shortName": "DTU (DCE)",
+    "location": "Rohini, Delhi"
+  },
+  {
+    "id": "jamia-millia-islamia",
+    "name": "Jamia Millia Islamia",
+    "shortName": "JMI",
+    "location": "Jamia Nagar, New Delhi, Delhi"
+  },
+  {
+    "id": "guru-gobind-singh-indraprastha-university",
+    "name": "Guru Gobind Singh Indraprastha University",
+    "shortName": "GGSIPU (IP University)",
+    "location": "Dwarka, New Delhi, Delhi"
+  },
+  {
+    "id": "national-law-university-delhi",
+    "name": "National Law University, Delhi",
+    "shortName": "NLU Delhi",
+    "location": "Dwarka, New Delhi, Delhi"
+  },
+  {
+    "id": "maulana-azad-medical-college",
+    "name": "Maulana Azad Medical College",
+    "shortName": "MAMC",
+    "location": "Bahadur Shah Zafar Marg, New Delhi, Delhi"
+  },
+  {
+    "id": "lady-hardinge-medical-college",
+    "name": "Lady Hardinge Medical College",
+    "shortName": "LHMC",
+    "location": "Connaught Place, New Delhi, Delhi"
+  },
+  {
+    "id": "vardhman-mahavir-medical-college",
+    "name": "Vardhman Mahavir Medical College & Safdarjung Hospital",
+    "shortName": "VMMC",
+    "location": "Ansari Nagar, New Delhi, Delhi"
+  },
+  {
+    "id": "netaji-subhas-university-of-technology",
+    "name": "Netaji Subhas University of Technology",
+    "shortName": "NSUT (NSIT)",
+    "location": "Dwarka, New Delhi, Delhi"
+  },
+  {
+    "id": "iiit-delhi",
+    "name": "Indraprastha Institute of Information Technology Delhi",
+    "shortName": "IIIT-Delhi",
+    "location": "Okhla, New Delhi, Delhi"
+  },
+  {
+    "id": "shri-ram-college-of-commerce",
+    "name": "Shri Ram College of Commerce",
+    "shortName": "SRCC",
+    "location": "North Campus, Delhi"
+  },
+  {
+    "id": "st-stephens-college-delhi",
+    "name": "St. Stephen's College",
+    "shortName": "St. Stephen's",
+    "location": "North Campus, Delhi"
+  },
+  {
+    "id": "miranda-house",
+    "name": "Miranda House",
+    "shortName": "Miranda House",
+    "location": "North Campus, Delhi"
+  },
+  {
+    "id": "hindu-college-delhi",
+    "name": "Hindu College",
+    "shortName": "Hindu College",
+    "location": "North Campus, Delhi"
+  },
+  {
+    "id": "indira-gandhi-delhi-technical-university-for-women",
+    "name": "Indira Gandhi Delhi Technical University for Women",
+    "shortName": "IGDTUW",
+    "location": "Kashmere Gate, Delhi"
+  },
+  {
+    "id": "ambedkar-university-delhi",
+    "name": "Dr. B.R. Ambedkar University Delhi",
+    "shortName": "AUD",
+    "location": "Kashmere Gate, Delhi"
+  },
+  {
+    "id": "school-of-planning-and-architecture-delhi",
+    "name": "School of Planning and Architecture, New Delhi",
+    "shortName": "SPA Delhi",
+    "location": "IP Estate, New Delhi, Delhi"
+  },
+  {
+    "id": "iit-goa",
+    "name": "Indian Institute of Technology Goa",
+    "shortName": "IIT Goa",
+    "location": "Ponda, North Goa, Goa"
+  },
+  {
+    "id": "nit-goa",
+    "name": "National Institute of Technology Goa",
+    "shortName": "NIT Goa",
+    "location": "Cuncolim, South Goa, Goa"
+  },
+  {
+    "id": "goa-university",
+    "name": "Goa University",
+    "shortName": "GU",
+    "location": "Taleigao, North Goa, Goa"
+  },
+  {
+    "id": "goa-medical-college",
+    "name": "Goa Medical College",
+    "shortName": "GMC Goa",
+    "location": "Bambolim, North Goa, Goa"
+  },
+  {
+    "id": "goa-engineering-college",
+    "name": "Goa College of Engineering",
+    "shortName": "GEC Farmagudi",
+    "location": "Ponda, North Goa, Goa"
+  },
+  {
+    "id": "don-bosco-college-engineering",
+    "name": "Don Bosco College of Engineering",
+    "shortName": "DBCE Fatorda",
+    "location": "Fatorda, South Goa, Goa"
+  },
+  {
+    "id": "pcce-verna",
+    "name": "Padre Conceicao College of Engineering",
+    "shortName": "PCCE Verna",
+    "location": "Verna, South Goa, Goa"
+  },
+  {
+    "id": "agnel-institute-assagao",
+    "name": "Agnel Institute of Technology and Design",
+    "shortName": "AITD Assagao",
+    "location": "Assagao, North Goa, Goa"
+  },
+  {
+    "id": "shree-rayeshwar-institute",
+    "name": "Shree Rayeshwar Institute of Engineering and Information Technology",
+    "shortName": "RIT Shiroda",
+    "location": "Shiroda, North Goa, Goa"
+  },
+  {
+    "id": "bits-pilani-goa",
+    "name": "Birla Institute of Technology and Science, Pilani - Goa Campus",
+    "shortName": "BITS Goa",
+    "location": "Zuarinagar, South Goa, Goa"
+  },
+  {
+    "id": "goa-institute-of-management",
+    "name": "Goa Institute of Management",
+    "shortName": "GIM Goa",
+    "location": "Sanquelim, North Goa, Goa"
+  },
+  {
+    "id": "ihm-goa",
+    "name": "Institute of Hotel Management, Catering Technology and Applied Nutrition",
+    "shortName": "IHM Goa",
+    "location": "Porvorim, North Goa, Goa"
+  },
+  {
+    "id": "goa-college-of-architecture",
+    "name": "Goa College of Architecture",
+    "shortName": "GCA",
+    "location": "Panaji, North Goa, Goa"
+  },
+  {
+    "id": "goa-college-of-pharmacy",
+    "name": "Goa College of Pharmacy",
+    "shortName": "GCP",
+    "location": "Panaji, North Goa, Goa"
+  },
+  {
+    "id": "vm-salgaocar-law-college",
+    "name": "V.M. Salgaocar College of Law",
+    "shortName": "Salgaocar Law",
+    "location": "Miramar, North Goa, Goa"
+  },
+  {
+    "id": "gr-kare-law-college",
+    "name": "Govind Ramnath Kare College of Law",
+    "shortName": "GR Kare Law",
+    "location": "Margao, South Goa, Goa"
+  },
+  {
+    "id": "goa-dental-college",
+    "name": "Goa Dental College and Hospital",
+    "shortName": "GDC Goa",
+    "location": "Bambolim, North Goa, Goa"
+  },
+  {
+    "id": "chowgule-college",
+    "name": "Parvatibai Chowgule College of Arts and Science (Autonomous)",
+    "shortName": "Chowgule College",
+    "location": "Margao, South Goa, Goa"
+  },
+  {
+    "id": "st-xaviers-college-mapusa",
+    "name": "St. Xavier's College",
+    "shortName": "St Xavier's Mapusa",
+    "location": "Mapusa, North Goa, Goa"
+  },
+  {
+    "id": "dhempe-college",
+    "name": "Dhempe College of Arts and Science",
+    "shortName": "Dhempe College",
+    "location": "Panaji, North Goa, Goa"
+  },
+  {
+    "id": "damodar-college",
+    "name": "V.V.M.'s Shree Damodar College of Commerce & Economics",
+    "shortName": "Damodar College",
+    "location": "Margao, South Goa, Goa"
+  },
+  {
+    "id": "govt-college-sanquelim",
+    "name": "Government College of Arts, Science and Commerce, Sanquelim",
+    "shortName": "GC Sanquelim",
+    "location": "Sanquelim, North Goa, Goa"
+  },
+  {
+    "id": "govt-college-quepem",
+    "name": "Government College of Arts, Science and Commerce, Quepem",
+    "shortName": "GC Quepem",
+    "location": "Quepem, South Goa, Goa"
+  },
+  {
+    "id": "goa-college-of-art",
+    "name": "Goa College of Art",
+    "shortName": "Goa Art College",
+    "location": "Panaji, North Goa, Goa"
+  },
+  {
+    "id": "gomantak-ayurveda-mahavidyalaya",
+    "name": "Gomantak Ayurveda Mahavidyalaya and Research Centre",
+    "shortName": "GAMRC",
+    "location": "Shiroda, North Goa, Goa"
+  },
+  {
+    "id": "institute-nursing-education-goa",
+    "name": "Institute of Nursing Education",
+    "shortName": "INE Goa",
+    "location": "Bambolim, North Goa, Goa"
+  },
+  {
+    "id": "nusi-maritime-academy",
+    "name": "NUSI Maritime Academy",
+    "shortName": "NUSI Goa",
+    "location": "Salcete, South Goa, Goa"
+  },
+  {
+    "id": "govt-polytechnic-panaji",
+    "name": "Government Polytechnic Panaji",
+    "shortName": "GPP Panaji",
+    "location": "Panaji, North Goa, Goa"
+  },
+  {
+    "id": "agnel-polytechnic-verna",
+    "name": "Agnel Polytechnic",
+    "shortName": "Agnel Poly Verna",
+    "location": "Verna, South Goa, Goa"
+  },
+  {
+    "id": "iim-ahm",
+    "name": "Indian Institute of Management Ahmedabad",
+    "shortName": "IIM Ahmedabad",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "msu-baroda",
+    "name": "The Maharaja Sayajirao University of Baroda",
+    "shortName": "MSU Baroda",
+    "location": "Vadodara, Vadodara District, Gujarat"
+  },
+  {
+    "id": "cept-uni-ahmedabad",
+    "name": "CEPT University",
+    "shortName": "CEPT",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "gnlu-gandhinagar",
+    "name": "Gujarat National Law University",
+    "shortName": "GNLU",
+    "location": "Gandhinagar, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "iit-gandhinagar",
+    "name": "Indian Institute of Technology Gandhinagar",
+    "shortName": "IIT Gandhinagar",
+    "location": "Gandhinagar, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "svnit-surat",
+    "name": "Sardar Vallabhbhai National Institute of Technology",
+    "shortName": "SVNIT Surat",
+    "location": "Surat, Surat District, Gujarat"
+  },
+  {
+    "id": "ddu-nadiad",
+    "name": "Dharmsinh Desai University",
+    "shortName": "DDU Nadiad",
+    "location": "Nadiad, Kheda District, Gujarat"
+  },
+  {
+    "id": "bvm-anand",
+    "name": "Birla Vishvakarma Mahavidyalaya",
+    "shortName": "BVM",
+    "location": "Vallabh Vidyanagar, Anand District, Gujarat"
+  },
+  {
+    "id": "nirma-uni",
+    "name": "Nirma University",
+    "shortName": "Nirma",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "au-ahmedabad",
+    "name": "Ahmedabad University",
+    "shortName": "Ahmedabad Uni",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "pdeu-gandhinagar",
+    "name": "Pandit Deendayal Energy University",
+    "shortName": "PDEU (formerly PDPU)",
+    "location": "Gandhinagar, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "da-iict",
+    "name": "Dhirubhai Ambani Institute of Information and Communication Technology",
+    "shortName": "DA-IICT",
+    "location": "Gandhinagar, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "charusat-changa",
+    "name": "Charotar University of Science and Technology",
+    "shortName": "CHARUSAT",
+    "location": "Changa, Anand District, Gujarat"
+  },
+  {
+    "id": "marwadi-uni-rajkot",
+    "name": "Marwadi University",
+    "shortName": "Marwadi Uni",
+    "location": "Rajkot, Rajkot District, Gujarat"
+  },
+  {
+    "id": "parul-uni",
+    "name": "Parul University",
+    "shortName": "Parul Uni",
+    "location": "Vadodara, Vadodara District, Gujarat"
+  },
+  {
+    "id": "ldce-ahmedabad",
+    "name": "L.D. College of Engineering",
+    "shortName": "LDCE",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "vgec-chandkheda",
+    "name": "Vishwakarma Government Engineering College",
+    "shortName": "VGEC",
+    "location": "Ahmedabad, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "bjmc-ahmedabad",
+    "name": "B.J. Medical College",
+    "shortName": "BJMC",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "gcet-anand",
+    "name": "G.H. Patel College of Engineering and Technology",
+    "shortName": "GCET",
+    "location": "Vallabh Vidyanagar, Anand District, Gujarat"
+  },
+  {
+    "id": "adit-anand",
+    "name": "A.D. Patel Institute of Technology",
+    "shortName": "ADIT",
+    "location": "New Vallabh Vidyanagar, Anand District, Gujarat"
+  },
+  {
+    "id": "gec-rajkot",
+    "name": "Government Engineering College Rajkot",
+    "shortName": "GEC Rajkot",
+    "location": "Rajkot, Rajkot District, Gujarat"
+  },
+  {
+    "id": "gec-surat",
+    "name": "Dr. S. & S.S. Ghandhy Government Engineering College",
+    "shortName": "GEC Surat",
+    "location": "Surat, Surat District, Gujarat"
+  },
+  {
+    "id": "gec-bhavnagar",
+    "name": "Government Engineering College Bhavnagar",
+    "shortName": "GEC Bhavnagar",
+    "location": "Bhavnagar, Bhavnagar District, Gujarat"
+  },
+  {
+    "id": "scet-surat",
+    "name": "Sarvajanik College of Engineering and Technology",
+    "shortName": "SCET",
+    "location": "Surat, Surat District, Gujarat"
+  },
+  {
+    "id": "medical-college-baroda",
+    "name": "Medical College Baroda",
+    "shortName": "Baroda Medical College",
+    "location": "Vadodara, Vadodara District, Gujarat"
+  },
+  {
+    "id": "pdumc-rajkot",
+    "name": "Pandit Deendayal Upadhyay Medical College",
+    "shortName": "PDU Medical College",
+    "location": "Rajkot, Rajkot District, Gujarat"
+  },
+  {
+    "id": "gmers-gandhinagar",
+    "name": "GMERS Medical College Gandhinagar",
+    "shortName": "GMERS Gandhinagar",
+    "location": "Gandhinagar, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "anand-agri-uni",
+    "name": "Anand Agricultural University",
+    "shortName": "AAU",
+    "location": "Anand, Anand District, Gujarat"
+  },
+  {
+    "id": "jau-junagadh",
+    "name": "Junagadh Agricultural University",
+    "shortName": "JAU",
+    "location": "Junagadh, Junagadh District, Gujarat"
+  },
+  {
+    "id": "nau-navsari",
+    "name": "Navsari Agricultural University",
+    "shortName": "NAU",
+    "location": "Navsari, Navsari District, Gujarat"
+  },
+  {
+    "id": "sdau-dantiwada",
+    "name": "Sardarkrushinagar Dantiwada Agricultural University",
+    "shortName": "SDAU",
+    "location": "Dantiwada, Banaskantha District, Gujarat"
+  },
+  {
+    "id": "nfsu-gandhinagar",
+    "name": "National Forensic Sciences University",
+    "shortName": "NFSU",
+    "location": "Gandhinagar, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "raksha-shakti-uni",
+    "name": "Rashtriya Raksha University",
+    "shortName": "RRU (formerly RSU)",
+    "location": "Gandhinagar, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "gtu-ahmedabad",
+    "name": "Gujarat Technological University",
+    "shortName": "GTU",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "gujarat-uni",
+    "name": "Gujarat University",
+    "shortName": "Gujarat Uni",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "saurashtra-uni",
+    "name": "Saurashtra University",
+    "shortName": "Saurashtra Uni",
+    "location": "Rajkot, Rajkot District, Gujarat"
+  },
+  {
+    "id": "vnsgu-surat",
+    "name": "Veer Narmad South Gujarat University",
+    "shortName": "VNSGU",
+    "location": "Surat, Surat District, Gujarat"
+  },
+  {
+    "id": "hngu-patan",
+    "name": "Hemchandracharya North Gujarat University",
+    "shortName": "HNGU",
+    "location": "Patan, Patan District, Gujarat"
+  },
+  {
+    "id": "mkb-uni-bhavnagar",
+    "name": "Maharaja Krishnakumarsinhji Bhavnagar University",
+    "shortName": "MKBU",
+    "location": "Bhavnagar, Bhavnagar District, Gujarat"
+  },
+  {
+    "id": "kskv-kachchh-uni",
+    "name": "Krantiguru Shyamji Krishna Verma Kachchh University",
+    "shortName": "KSKV Kachchh University",
+    "location": "Bhuj, Kutch District, Gujarat"
+  },
+  {
+    "id": "gls-uni-ahmedabad",
+    "name": "GLS University",
+    "shortName": "GLS",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "indus-uni-ahmedabad",
+    "name": "Indus University",
+    "shortName": "Indus Uni",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "ganpat-uni",
+    "name": "Ganpat University",
+    "shortName": "GUNI",
+    "location": "Kherva, Mehsana District, Gujarat"
+  },
+  {
+    "id": "karnavati-uni",
+    "name": "Karnavati University",
+    "shortName": "Karnavati",
+    "location": "Uvarsad, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "silver-oak-uni",
+    "name": "Silver Oak University",
+    "shortName": "Silver Oak",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "swarrnim-uni",
+    "name": "Swarrnim Startup and Innovation University",
+    "shortName": "Swarrnim",
+    "location": "Gandhinagar, Gandhinagar District, Gujarat"
+  },
+  {
+    "id": "navrachana-uni",
+    "name": "Navrachana University",
+    "shortName": "NUV",
+    "location": "Vadodara, Vadodara District, Gujarat"
+  },
+  {
+    "id": "gsfc-uni",
+    "name": "GSFC University",
+    "shortName": "GSFC Uni",
+    "location": "Vadodara, Vadodara District, Gujarat"
+  },
+  {
+    "id": "atmiya-uni",
+    "name": "Atmiya University",
+    "shortName": "Atmiya",
+    "location": "Rajkot, Rajkot District, Gujarat"
+  },
+  {
+    "id": "rk-uni",
+    "name": "RK University",
+    "shortName": "RKU",
+    "location": "Rajkot, Rajkot District, Gujarat"
+  },
+  {
+    "id": "pp-savani-uni",
+    "name": "P.P. Savani University",
+    "shortName": "PPSU",
+    "location": "Kosamba, Surat District, Gujarat"
+  },
+  {
+    "id": "c-u-shah-uni",
+    "name": "C.U. Shah University",
+    "shortName": "C.U. Shah",
+    "location": "Wadhwan, Surendranagar District, Gujarat"
+  },
+  {
+    "id": "gokul-global-uni",
+    "name": "Gokul Global University",
+    "shortName": "Gokul Uni",
+    "location": "Sidhpur, Patan District, Gujarat"
+  },
+  {
+    "id": "sankalchand-patel-uni",
+    "name": "Sankalchand Patel University",
+    "shortName": "SPU",
+    "location": "Visnagar, Mehsana District, Gujarat"
+  },
+  {
+    "id": "monark-uni",
+    "name": "Monark University",
+    "shortName": "Monark",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "rai-uni",
+    "name": "Rai University",
+    "shortName": "Rai Uni",
+    "location": "Dholka, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "itm-sls-uni",
+    "name": "ITM (SLS) Baroda University",
+    "shortName": "ITM BU",
+    "location": "Vadodara, Vadodara District, Gujarat"
+  },
+  {
+    "id": "upl-uni",
+    "name": "UPL University of Sustainable Technology",
+    "shortName": "UPL Uni",
+    "location": "Ankleshwar, Bharuch District, Gujarat"
+  },
+  {
+    "id": "st-xaviers-ahmedabad",
+    "name": "St. Xavier's College (Autonomous)",
+    "shortName": "St. Xavier's",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "hl-college-commerce",
+    "name": "H.L. College of Commerce",
+    "shortName": "HLCC",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "mg-science-ahmedabad",
+    "name": "M.G. Science Institute",
+    "shortName": "MG Science",
+    "location": "Ahmedabad, Ahmedabad District, Gujarat"
+  },
+  {
+    "id": "iim-rohtak",
+    "name": "Indian Institute of Management Rohtak",
+    "shortName": "IIM Rohtak",
+    "location": "Rohtak, Rohtak District, Haryana"
+  },
+  {
+    "id": "mdi-gurgaon",
+    "name": "Management Development Institute",
+    "shortName": "MDI Gurgaon",
+    "location": "Gurugram, Gurugram District, Haryana"
+  },
+  {
+    "id": "nit-kurukshetra",
+    "name": "National Institute of Technology Kurukshetra",
+    "shortName": "NIT Kurukshetra",
+    "location": "Kurukshetra, Kurukshetra District, Haryana"
+  },
+  {
+    "id": "op-jindal-global-uni",
+    "name": "O.P. Jindal Global University",
+    "shortName": "JGU",
+    "location": "Sonipat, Sonipat District, Haryana"
+  },
+  {
+    "id": "ashoka-university",
+    "name": "Ashoka University",
+    "shortName": "Ashoka",
+    "location": "Sonipat, Sonipat District, Haryana"
+  },
+  {
+    "id": "iiit-sonepat",
+    "name": "Indian Institute of Information Technology Sonepat",
+    "shortName": "IIIT Sonepat",
+    "location": "Sonepat, Sonepat District, Haryana"
+  },
+  {
+    "id": "central-uni-haryana",
+    "name": "Central University of Haryana",
+    "shortName": "CUH",
+    "location": "Mahendergarh, Mahendergarh District, Haryana"
+  },
+  {
+    "id": "niftem-sonepat",
+    "name": "National Institute of Food Technology Entrepreneurship and Management",
+    "shortName": "NIFTEM",
+    "location": "Sonepat, Sonepat District, Haryana"
+  },
+  {
+    "id": "jc-bose-ymca-faridabad",
+    "name": "J.C. Bose University of Science and Technology, YMCA",
+    "shortName": "YMCA Faridabad",
+    "location": "Faridabad, Faridabad District, Haryana"
+  },
+  {
+    "id": "kurukshetra-university",
+    "name": "Kurukshetra University",
+    "shortName": "KUK",
+    "location": "Kurukshetra, Kurukshetra District, Haryana"
+  },
+  {
+    "id": "mdu-rohtak",
+    "name": "Maharshi Dayanand University",
+    "shortName": "MDU Rohtak",
+    "location": "Rohtak, Rohtak District, Haryana"
+  },
+  {
+    "id": "dcrust-murthal",
+    "name": "Deenbandhu Chhotu Ram University of Science and Technology",
+    "shortName": "DCRUST Murthal",
+    "location": "Murthal, Sonepat District, Haryana"
+  },
+  {
+    "id": "gju-hisar",
+    "name": "Guru Jambheshwar University of Science and Technology",
+    "shortName": "GJUST Hisar",
+    "location": "Hisar, Hisar District, Haryana"
+  },
+  {
+    "id": "ccshau-hisar",
+    "name": "Chaudhary Charan Singh Haryana Agricultural University",
+    "shortName": "CCSHAU",
+    "location": "Hisar, Hisar District, Haryana"
+  },
+  {
+    "id": "pgims-rohtak",
+    "name": "Pandit Bhagwat Dayal Sharma Post Graduate Institute of Medical Sciences",
+    "shortName": "PGIMS Rohtak",
+    "location": "Rohtak, Rohtak District, Haryana"
+  },
+  {
+    "id": "kalpana-chawla-gmc",
+    "name": "Kalpana Chawla Government Medical College",
+    "shortName": "KCGMC Karnal",
+    "location": "Karnal, Karnal District, Haryana"
+  },
+  {
+    "id": "esic-faridabad",
+    "name": "ESIC Medical College and Hospital",
+    "shortName": "ESIC Faridabad",
+    "location": "Faridabad, Faridabad District, Haryana"
+  },
+  {
+    "id": "amity-gurugram",
+    "name": "Amity University Haryana",
+    "shortName": "Amity Gurugram",
+    "location": "Gurugram, Gurugram District, Haryana"
+  },
+  {
+    "id": "manav-rachna-university",
+    "name": "Manav Rachna University",
+    "shortName": "MRU",
+    "location": "Faridabad, Faridabad District, Haryana"
+  },
+  {
+    "id": "mriirs-faridabad",
+    "name": "Manav Rachna International Institute of Research and Studies",
+    "shortName": "MRIIRS",
+    "location": "Faridabad, Faridabad District, Haryana"
+  },
+  {
+    "id": "bml-munjal-uni",
+    "name": "BML Munjal University",
+    "shortName": "BMU",
+    "location": "Gurugram, Gurugram District, Haryana"
+  },
+  {
+    "id": "northcap-university",
+    "name": "The NorthCap University",
+    "shortName": "NCU Gurgaon",
+    "location": "Gurugram, Gurugram District, Haryana"
+  },
+  {
+    "id": "sgt-university",
+    "name": "SGT University",
+    "shortName": "SGT",
+    "location": "Gurugram, Gurugram District, Haryana"
+  },
+  {
+    "id": "mm-deemed-mullana",
+    "name": "Maharishi Markandeshwar (Deemed to be University)",
+    "shortName": "MMU Mullana",
+    "location": "Mullana, Ambala District, Haryana"
+  },
+  {
+    "id": "gd-goenka-university",
+    "name": "GD Goenka University",
+    "shortName": "GDGU",
+    "location": "Gurugram, Gurugram District, Haryana"
+  },
+  {
+    "id": "great-lakes-gurgaon",
+    "name": "Great Lakes Institute of Management, Gurgaon",
+    "shortName": "Great Lakes Gurgaon",
+    "location": "Gurugram, Gurugram District, Haryana"
+  },
+  {
+    "id": "nid-haryana",
+    "name": "National Institute of Design Haryana",
+    "shortName": "NID Kurukshetra",
+    "location": "Kurukshetra, Kurukshetra District, Haryana"
+  },
+  {
+    "id": "sushant-university",
+    "name": "Sushant University",
+    "shortName": "Sushant Uni",
+    "location": "Gurugram, Gurugram District, Haryana"
+  },
+  {
+    "id": "piet-panipat",
+    "name": "Panipat Institute of Engineering and Technology",
+    "shortName": "PIET",
+    "location": "Panipat, Panipat District, Haryana"
+  },
+  {
+    "id": "siet-nilokheri",
+    "name": "State Institute of Engineering and Technology",
+    "shortName": "SIET Nilokheri",
+    "location": "Nilokheri, Karnal District, Haryana"
+  },
+  {
+    "id": "luvas-hisar",
+    "name": "Lala Lajpat Rai University of Veterinary and Animal Sciences",
+    "shortName": "LUVAS",
+    "location": "Hisar, Hisar District, Haryana"
+  },
+  {
+    "id": "iit-mandi",
+    "name": "Indian Institute of Technology Mandi",
+    "shortName": "IIT Mandi",
+    "location": "Mandi, Mandi District, Himachal Pradesh"
+  },
+  {
+    "id": "nit-hamirpur",
+    "name": "National Institute of Technology Hamirpur",
+    "shortName": "NIT Hamirpur",
+    "location": "Hamirpur, Hamirpur District, Himachal Pradesh"
+  },
+  {
+    "id": "iim-sirmaur",
+    "name": "Indian Institute of Management Sirmaur",
+    "shortName": "IIM Sirmaur",
+    "location": "Paonta Sahib, Sirmaur District, Himachal Pradesh"
+  },
+  {
+    "id": "iiit-una",
+    "name": "Indian Institute of Information Technology Una",
+    "shortName": "IIIT Una",
+    "location": "Una, Una District, Himachal Pradesh"
+  },
+  {
+    "id": "aiims-bilaspur",
+    "name": "All India Institute of Medical Sciences Bilaspur",
+    "shortName": "AIIMS Bilaspur",
+    "location": "Bilaspur, Bilaspur District, Himachal Pradesh"
+  },
+  {
+    "id": "hpu-shimla",
+    "name": "Himachal Pradesh University",
+    "shortName": "HPU Shimla",
+    "location": "Shimla, Shimla District, Himachal Pradesh"
+  },
+  {
+    "id": "central-uni-himachal",
+    "name": "Central University of Himachal Pradesh",
+    "shortName": "CUHP",
+    "location": "Dharamshala, Kangra District, Himachal Pradesh"
+  },
+  {
+    "id": "ys-parmar-horticulture-uni",
+    "name": "Dr. Yashwant Singh Parmar University of Horticulture and Forestry",
+    "shortName": "YSP UHF Nauni",
+    "location": "Nauni, Solan District, Himachal Pradesh"
+  },
+  {
+    "id": "csk-hpkv-palampur",
+    "name": "Chaudhary Sarwan Kumar Himachal Pradesh Krishi Vishvavidyalaya",
+    "shortName": "CSK HPKV Palampur",
+    "location": "Palampur, Kangra District, Himachal Pradesh"
+  },
+  {
+    "id": "hptu-hamirpur",
+    "name": "Himachal Pradesh Technical University",
+    "shortName": "HPTU",
+    "location": "Hamirpur, Hamirpur District, Himachal Pradesh"
+  },
+  {
+    "id": "atal-medical-university",
+    "name": "Atal Medical and Research University",
+    "shortName": "AMRU HP",
+    "location": "Mandi, Mandi District, Himachal Pradesh"
+  },
+  {
+    "id": "igmc-shimla",
+    "name": "Indira Gandhi Medical College",
+    "shortName": "IGMC Shimla",
+    "location": "Shimla, Shimla District, Himachal Pradesh"
+  },
+  {
+    "id": "rpgmc-tanda",
+    "name": "Dr. Rajendra Prasad Government Medical College",
+    "shortName": "RPGMC Tanda",
+    "location": "Tanda, Kangra District, Himachal Pradesh"
+  },
+  {
+    "id": "slbsgmc-mandi",
+    "name": "Shri Lal Bahadur Shastri Government Medical College",
+    "shortName": "SLBSGMC Mandi",
+    "location": "Mandi, Mandi District, Himachal Pradesh"
+  },
+  {
+    "id": "ys-parmar-gmc-nahan",
+    "name": "Dr. Y.S. Parmar Government Medical College",
+    "shortName": "GMC Nahan",
+    "location": "Nahan, Sirmaur District, Himachal Pradesh"
+  },
+  {
+    "id": "jln-gmc-chamba",
+    "name": "Pt. Jawaharlal Nehru Government Medical College",
+    "shortName": "GMC Chamba",
+    "location": "Chamba, Chamba District, Himachal Pradesh"
+  },
+  {
+    "id": "rkgmc-hamirpur",
+    "name": "Dr. Radhakrishnan Government Medical College",
+    "shortName": "GMC Hamirpur",
+    "location": "Hamirpur, Hamirpur District, Himachal Pradesh"
+  },
+  {
+    "id": "jngec-sundernagar",
+    "name": "Jawaharlal Nehru Government Engineering College",
+    "shortName": "JNGEC",
+    "location": "Sundernagar, Mandi District, Himachal Pradesh"
+  },
+  {
+    "id": "rggec-kangra",
+    "name": "Rajiv Gandhi Government Engineering College",
+    "shortName": "RGGEC Kangra",
+    "location": "Nagrota Bagwan, Kangra District, Himachal Pradesh"
+  },
+  {
+    "id": "abv-giet-pragatinagar",
+    "name": "Atal Bihari Vajpayee Government Institute of Engineering and Technology",
+    "shortName": "ABVGIET",
+    "location": "Pragatinagar, Shimla District, Himachal Pradesh"
+  },
+  {
+    "id": "shoolini-university",
+    "name": "Shoolini University of Biotechnology and Management Sciences",
+    "shortName": "Shoolini Uni",
+    "location": "Solan, Solan District, Himachal Pradesh"
+  },
+  {
+    "id": "jaypee-university-waknaghat",
+    "name": "Jaypee University of Information Technology",
+    "shortName": "JUIT Waknaghat",
+    "location": "Waknaghat, Solan District, Himachal Pradesh"
+  },
+  {
+    "id": "chitkara-university-hp",
+    "name": "Chitkara University Himachal Pradesh",
+    "shortName": "Chitkara HP",
+    "location": "Baddi, Solan District, Himachal Pradesh"
+  },
+  {
+    "id": "bahra-university",
+    "name": "Bahra University",
+    "shortName": "Bahra Uni",
+    "location": "Waknaghat, Solan District, Himachal Pradesh"
+  },
+  {
+    "id": "eternal-university",
+    "name": "Eternal University",
+    "shortName": "Eternal Uni",
+    "location": "Baru Sahib, Sirmaur District, Himachal Pradesh"
+  },
+  {
+    "id": "maharishi-markandeshwar-solan",
+    "name": "Maharishi Markandeshwar University",
+    "shortName": "MMU Solan",
+    "location": "Solan, Solan District, Himachal Pradesh"
+  },
+  {
+    "id": "hp-national-law-university",
+    "name": "Himachal Pradesh National Law University",
+    "shortName": "HPNLU",
+    "location": "Shimla, Shimla District, Himachal Pradesh"
+  },
+  {
+    "id": "st-bedes-shimla",
+    "name": "St. Bede's College",
+    "shortName": "St. Bede's",
+    "location": "Shimla, Shimla District, Himachal Pradesh"
+  },
+  {
+    "id": "govt-college-dharamshala",
+    "name": "Government Post Graduate College Dharamshala",
+    "shortName": "GC Dharamshala",
+    "location": "Dharamshala, Kangra District, Himachal Pradesh"
+  },
+  {
+    "id": "govt-college-mandi",
+    "name": "Vallabh Government College Mandi",
+    "shortName": "GC Mandi",
+    "location": "Mandi, Mandi District, Himachal Pradesh"
+  },
+  {
+    "id": "iit-jammu",
+    "name": "Indian Institute of Technology Jammu",
+    "shortName": "IIT Jammu",
+    "location": "Jagti, Nagrota, Jammu, Jammu & Kashmir"
+  },
+  {
+    "id": "iim-jammu",
+    "name": "Indian Institute of Management Jammu",
+    "shortName": "IIM Jammu",
+    "location": "Jagti, Nagrota, Jammu, Jammu & Kashmir"
+  },
+  {
+    "id": "nit-srinagar",
+    "name": "National Institute of Technology Srinagar",
+    "shortName": "NIT Srinagar",
+    "location": "Hazratbal, Srinagar, Jammu & Kashmir"
+  },
+  {
+    "id": "university-of-kashmir",
+    "name": "University of Kashmir",
+    "shortName": "KU",
+    "location": "Hazratbal, Srinagar, Jammu & Kashmir"
+  },
+  {
+    "id": "university-of-jammu",
+    "name": "University of Jammu",
+    "shortName": "JU",
+    "location": "Jammu Tawi, Jammu, Jammu & Kashmir"
+  },
+  {
+    "id": "central-university-of-kashmir",
+    "name": "Central University of Kashmir",
+    "shortName": "CUK",
+    "location": "Ganderbal, Jammu & Kashmir"
+  },
+  {
+    "id": "central-university-of-jammu",
+    "name": "Central University of Jammu",
+    "shortName": "CU Jammu",
+    "location": "Samba, Jammu & Kashmir"
+  },
+  {
+    "id": "sher-e-kashmir-university-agricultural-sciences-kashmir",
+    "name": "Sher-e-Kashmir University of Agricultural Sciences and Technology of Kashmir",
+    "shortName": "SKUAST-K",
+    "location": "Shalimar, Srinagar, Jammu & Kashmir"
+  },
+  {
+    "id": "sher-e-kashmir-university-agricultural-sciences-jammu",
+    "name": "Sher-e-Kashmir University of Agricultural Sciences and Technology of Jammu",
+    "shortName": "SKUAST-J",
+    "location": "Chatha, Jammu, Jammu & Kashmir"
+  },
+  {
+    "id": "govt-medical-college-srinagar",
+    "name": "Government Medical College, Srinagar",
+    "shortName": "GMC Srinagar",
+    "location": "Karan Nagar, Srinagar, Jammu & Kashmir"
+  },
+  {
+    "id": "govt-medical-college-jammu",
+    "name": "Government Medical College, Jammu",
+    "shortName": "GMC Jammu",
+    "location": "Bakshi Nagar, Jammu, Jammu & Kashmir"
+  },
+  {
+    "id": "skims-soura",
+    "name": "Sher-i-Kashmir Institute of Medical Sciences",
+    "shortName": "SKIMS",
+    "location": "Soura, Srinagar, Jammu & Kashmir"
+  },
+  {
+    "id": "islamic-university-science-technology",
+    "name": "Islamic University of Science and Technology",
+    "shortName": "IUST",
+    "location": "Awantipora, Pulwama, Jammu & Kashmir"
+  },
+  {
+    "id": "bgsbu-rajouri",
+    "name": "Baba Ghulam Shah Badshah University",
+    "shortName": "BGSBU",
+    "location": "Rajouri, Jammu & Kashmir"
+  },
+  {
+    "id": "shri-mata-vaishno-devi-university",
+    "name": "Shri Mata Vaishno Devi University",
+    "shortName": "SMVDU",
+    "location": "Katra, Reasi, Jammu & Kashmir"
+  },
+  {
+    "id": "govt-college-engineering-technology-jammu",
+    "name": "Government College of Engineering and Technology, Jammu",
+    "shortName": "GCET Jammu",
+    "location": "Chak Bhalwal, Jammu, Jammu & Kashmir"
+  },
+  {
+    "id": "govt-college-engineering-technology-safapora",
+    "name": "Government College of Engineering and Technology, Safapora",
+    "shortName": "GCET Kashmir",
+    "location": "Safapora, Ganderbal, Jammu & Kashmir"
+  },
+  {
+    "id": "model-institute-engineering-technology-jammu",
+    "name": "Model Institute of Engineering and Technology",
+    "shortName": "MIET Jammu",
+    "location": "Kot Bhalwal, Jammu, Jammu & Kashmir"
+  },
+  {
+    "id": "ssm-college-engineering-pattan",
+    "name": "SSM College of Engineering",
+    "shortName": "SSM College",
+    "location": "Pattan, Baramulla, Jammu & Kashmir"
+  },
+  {
+    "id": "govt-dental-college-srinagar",
+    "name": "Government Dental College, Srinagar",
+    "shortName": "GDC Srinagar",
+    "location": "Shireen Bagh, Srinagar, Jammu & Kashmir"
+  },
+  {
+    "id": "govt-college-women-parade-jammu",
+    "name": "Government College for Women, Parade Ground",
+    "shortName": "GCW Parade",
+    "location": "Jammu, Jammu & Kashmir"
+  },
+  {
+    "id": "islamia-college-science-commerce-srinagar",
+    "name": "Islamia College of Science and Commerce",
+    "shortName": "ICSC Srinagar",
+    "location": "Hawal, Srinagar, Jammu & Kashmir"
+  },
+  {
+    "id": "iit-ism-dhanbad",
+    "name": "Indian Institute of Technology (Indian School of Mines), Dhanbad",
+    "shortName": "IIT (ISM) Dhanbad",
+    "location": "Dhanbad, Jharkhand"
+  },
+  {
+    "id": "nit-jamshedpur",
+    "name": "National Institute of Technology Jamshedpur",
+    "shortName": "NIT Jamshedpur",
+    "location": "Adityapur, Jamshedpur, Jharkhand"
+  },
+  {
+    "id": "iim-ranchi",
+    "name": "Indian Institute of Management Ranchi",
+    "shortName": "IIM Ranchi",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "iiit-ranchi",
+    "name": "Indian Institute of Information Technology Ranchi",
+    "shortName": "IIIT Ranchi",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "aiims-deoghar",
+    "name": "All India Institute of Medical Sciences Deoghar",
+    "shortName": "AIIMS Deoghar",
+    "location": "Deoghar, Jharkhand"
+  },
+  {
+    "id": "central-university-jharkhand",
+    "name": "Central University of Jharkhand",
+    "shortName": "CUJ",
+    "location": "Brambe/Cheri-Manatu, Ranchi, Jharkhand"
+  },
+  {
+    "id": "nusrl-ranchi",
+    "name": "National University of Study and Research in Law",
+    "shortName": "NUSRL",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "bit-sindri",
+    "name": "Birsa Institute of Technology, Sindri",
+    "shortName": "BIT Sindri",
+    "location": "Sindri, Dhanbad, Jharkhand"
+  },
+  {
+    "id": "ranchi-university",
+    "name": "Ranchi University",
+    "shortName": "RU",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "st-xaviers-college-ranchi",
+    "name": "St. Xavier's College, Ranchi",
+    "shortName": "SXC Ranchi",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "rims-ranchi",
+    "name": "Rajendra Institute of Medical Sciences",
+    "shortName": "RIMS Ranchi",
+    "location": "Bariatu, Ranchi, Jharkhand"
+  },
+  {
+    "id": "jharkhand-university-of-technology",
+    "name": "Jharkhand University of Technology",
+    "shortName": "JUT",
+    "location": "Namkum, Ranchi, Jharkhand"
+  },
+  {
+    "id": "vinoba-bhave-university",
+    "name": "Vinoba Bhave University",
+    "shortName": "VBU",
+    "location": "Hazaribagh, Jharkhand"
+  },
+  {
+    "id": "bbmku-dhanbad",
+    "name": "Binod Bihari Mahto Koyalanchal University",
+    "shortName": "BBMKU",
+    "location": "Dhanbad, Jharkhand"
+  },
+  {
+    "id": "kolhan-university",
+    "name": "Kolhan University",
+    "shortName": "KU",
+    "location": "Chaibasa, Jharkhand"
+  },
+  {
+    "id": "skmu-dumka",
+    "name": "Sido Kanhu Murmu University",
+    "shortName": "SKMU",
+    "location": "Dumka, Jharkhand"
+  },
+  {
+    "id": "npu-palamu",
+    "name": "Nilamber-Pitamber University",
+    "shortName": "NPU",
+    "location": "Medininagar, Palamu, Jharkhand"
+  },
+  {
+    "id": "dr-shyama-prasad-mukherjee-university",
+    "name": "Dr. Shyama Prasad Mukherjee University",
+    "shortName": "DSPMU",
+    "location": "Morabadi, Ranchi, Jharkhand"
+  },
+  {
+    "id": "xlri-jamshedpur",
+    "name": "XLRI - Xavier School of Management",
+    "shortName": "XLRI",
+    "location": "Jamshedpur, Jharkhand"
+  },
+  {
+    "id": "jamshedpur-womens-university",
+    "name": "Jamshedpur Women's University",
+    "shortName": "JWU",
+    "location": "Jamshedpur, Jharkhand"
+  },
+  {
+    "id": "birsa-agricultural-university",
+    "name": "Birsa Agricultural University",
+    "shortName": "BAU",
+    "location": "Kanke, Ranchi, Jharkhand"
+  },
+  {
+    "id": "jharkhand-raksha-shakti-university",
+    "name": "Jharkhand Raksha Shakti University",
+    "shortName": "JRSU",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "amity-university-jharkhand",
+    "name": "Amity University Jharkhand",
+    "shortName": "Amity Ranchi",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "icfai-university-jharkhand",
+    "name": "ICFAI University Jharkhand",
+    "shortName": "ICFAI Ranchi",
+    "location": "Daladali, Ranchi, Jharkhand"
+  },
+  {
+    "id": "sarala-birla-university",
+    "name": "Sarala Birla University",
+    "shortName": "SBU",
+    "location": "Mahilong, Ranchi, Jharkhand"
+  },
+  {
+    "id": "usha-martin-university",
+    "name": "Usha Martin University",
+    "shortName": "UMU",
+    "location": "Angara, Ranchi, Jharkhand"
+  },
+  {
+    "id": "jharkhand-rai-university",
+    "name": "Jharkhand Rai University",
+    "shortName": "JRU",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "ybn-university",
+    "name": "YBN University",
+    "shortName": "YBN",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "arka-jain-university",
+    "name": "Arka Jain University",
+    "shortName": "AJU",
+    "location": "Jamshedpur, Jharkhand"
+  },
+  {
+    "id": "sai-nath-university",
+    "name": "Sai Nath University",
+    "shortName": "SNU",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "mgm-medical-college-jamshedpur",
+    "name": "Mahatma Gandhi Memorial Medical College",
+    "shortName": "MGM Jamshedpur",
+    "location": "Jamshedpur, Jharkhand"
+  },
+  {
+    "id": "snmmch-dhanbad",
+    "name": "Shaheed Nirmal Mahto Medical College",
+    "shortName": "SNMMCH (PMCH)",
+    "location": "Dhanbad, Jharkhand"
+  },
+  {
+    "id": "palamu-medical-college",
+    "name": "Medinirai Medical College (Palamu Medical College)",
+    "shortName": "MMCH Palamu",
+    "location": "Medininagar, Palamu, Jharkhand"
+  },
+  {
+    "id": "hazaribagh-medical-college",
+    "name": "Sheikh Bhikhari Medical College (Hazaribagh Medical College)",
+    "shortName": "SBMC Hazaribagh",
+    "location": "Hazaribagh, Jharkhand"
+  },
+  {
+    "id": "dumka-medical-college",
+    "name": "Phulo Jhano Medical College (Dumka Medical College)",
+    "shortName": "PJMCH Dumka",
+    "location": "Dumka, Jharkhand"
+  },
+  {
+    "id": "manipal-tata-medical-college",
+    "name": "Manipal Tata Medical College",
+    "shortName": "MTMC",
+    "location": "Jamshedpur, Jharkhand"
+  },
+  {
+    "id": "niamt-hatia",
+    "name": "National Institute of Advanced Manufacturing Technology (formerly NIFFT)",
+    "shortName": "NIAMT (NIFFT)",
+    "location": "Hatia, Ranchi, Jharkhand"
+  },
+  {
+    "id": "cip-ranchi",
+    "name": "Central Institute of Psychiatry",
+    "shortName": "CIP Ranchi",
+    "location": "Kanke, Ranchi, Jharkhand"
+  },
+  {
+    "id": "rinpas-ranchi",
+    "name": "Ranchi Institute of Neuro-Psychiatry and Allied Sciences",
+    "shortName": "RINPAS",
+    "location": "Kanke, Ranchi, Jharkhand"
+  },
+  {
+    "id": "st-columbas-college-hazaribagh",
+    "name": "St. Columba's College",
+    "shortName": "St. Columba's",
+    "location": "Hazaribagh, Jharkhand"
+  },
+  {
+    "id": "karim-city-college-jamshedpur",
+    "name": "Karim City College",
+    "shortName": "KCC",
+    "location": "Jamshedpur, Jharkhand"
+  },
+  {
+    "id": "jamshedpur-cooperative-college",
+    "name": "Jamshedpur Co-operative College",
+    "shortName": "JCC",
+    "location": "Jamshedpur, Jharkhand"
+  },
+  {
+    "id": "marwari-college-ranchi",
+    "name": "Marwari College, Ranchi",
+    "shortName": "Marwari College",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "gossner-college-ranchi",
+    "name": "Gossner College",
+    "shortName": "Gossner",
+    "location": "Ranchi, Jharkhand"
+  },
+  {
+    "id": "cambridge-institute-technology-ranchi",
+    "name": "Cambridge Institute of Technology",
+    "shortName": "CIT Ranchi",
+    "location": "Tatisilwai, Ranchi, Jharkhand"
+  },
+  {
+    "id": "rvs-college-engineering-technology",
+    "name": "R.V.S. College of Engineering and Technology",
+    "shortName": "RVSCET",
+    "location": "Jamshedpur, Jharkhand"
+  },
+  {
+    "id": "iisc-bengaluru",
+    "name": "Indian Institute of Science",
+    "shortName": "IISc",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "iim-bangalore",
+    "name": "Indian Institute of Management Bangalore",
+    "shortName": "IIMB",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "nit-karnataka-surathkal",
+    "name": "National Institute of Technology Karnataka, Surathkal",
+    "shortName": "NITK Surathkal",
+    "location": "Surathkal, Mangaluru, Karnataka"
+  },
+  {
+    "id": "iit-dharwad",
+    "name": "Indian Institute of Technology Dharwad",
+    "shortName": "IIT Dharwad",
+    "location": "Dharwad, Karnataka"
+  },
+  {
+    "id": "nlsiu-bengaluru",
+    "name": "National Law School of India University",
+    "shortName": "NLSIU",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "iiit-bangalore",
+    "name": "International Institute of Information Technology Bangalore",
+    "shortName": "IIIT-B",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "manipal-academy-of-higher-education",
+    "name": "Manipal Academy of Higher Education",
+    "shortName": "MAHE (Manipal University)",
+    "location": "Manipal, Udupi, Karnataka"
+  },
+  {
+    "id": "visvesvaraya-technological-university",
+    "name": "Visvesvaraya Technological University",
+    "shortName": "VTU",
+    "location": "Belagavi, Karnataka"
+  },
+  {
+    "id": "rv-college-of-engineering",
+    "name": "Rashtreeya Vidyalaya College of Engineering",
+    "shortName": "RVCE",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "bms-college-of-engineering",
+    "name": "B.M.S. College of Engineering",
+    "shortName": "BMSCE",
+    "location": "Basavanagudi, Bengaluru, Karnataka"
+  },
+  {
+    "id": "ms-ramaiah-institute-of-technology",
+    "name": "M.S. Ramaiah Institute of Technology",
+    "shortName": "MSRIT",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "bangalore-university",
+    "name": "Bangalore University",
+    "shortName": "BU",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "university-of-mysore",
+    "name": "University of Mysore",
+    "shortName": "UoM",
+    "location": "Mysuru, Karnataka"
+  },
+  {
+    "id": "karnatak-university-dharwad",
+    "name": "Karnatak University",
+    "shortName": "KUD",
+    "location": "Dharwad, Karnataka"
+  },
+  {
+    "id": "rajiv-gandhi-university-of-health-sciences",
+    "name": "Rajiv Gandhi University of Health Sciences",
+    "shortName": "RGUHS",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "bangalore-medical-college-research-institute",
+    "name": "Bangalore Medical College and Research Institute",
+    "shortName": "BMCRI",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "st-johns-medical-college",
+    "name": "St. John's Medical College",
+    "shortName": "St. John's",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "christ-university-bengaluru",
+    "name": "Christ (Deemed to be University)",
+    "shortName": "Christ University",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "pes-university",
+    "name": "PES University",
+    "shortName": "PESU",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "jain-university-bengaluru",
+    "name": "Jain (Deemed to be University)",
+    "shortName": "Jain University",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "reva-university",
+    "name": "REVA University",
+    "shortName": "REVA",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "university-of-agricultural-sciences-bangalore",
+    "name": "University of Agricultural Sciences, Bangalore",
+    "shortName": "UAS Bangalore",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "central-university-of-karnataka",
+    "name": "Central University of Karnataka",
+    "shortName": "CUK",
+    "location": "Kalaburagi, Karnataka"
+  },
+  {
+    "id": "karnataka-state-law-university",
+    "name": "Karnataka State Law University",
+    "shortName": "KSLU",
+    "location": "Hubballi, Karnataka"
+  },
+  {
+    "id": "jss-academy-of-higher-education-and-research",
+    "name": "JSS Academy of Higher Education and Research",
+    "shortName": "JSS AHER",
+    "location": "Mysuru, Karnataka"
+  },
+  {
+    "id": "kle-technological-university",
+    "name": "KLE Technological University",
+    "shortName": "KLE Tech",
+    "location": "Hubballi, Karnataka"
+  },
+  {
+    "id": "siddaganga-institute-of-technology",
+    "name": "Siddaganga Institute of Technology",
+    "shortName": "SIT Tumkur",
+    "location": "Tumakuru, Karnataka"
+  },
+  {
+    "id": "nift-bengaluru",
+    "name": "National Institute of Fashion Technology Bengaluru",
+    "shortName": "NIFT Bengaluru",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "university-visvesvaraya-college-of-engineering",
+    "name": "University Visvesvaraya College of Engineering",
+    "shortName": "UVCE",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "mount-carmel-college",
+    "name": "Mount Carmel College",
+    "shortName": "MCC",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "st-josephs-university-bengaluru",
+    "name": "St. Joseph's University",
+    "shortName": "SJU",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "iit-palakkad",
+    "name": "Indian Institute of Technology Palakkad",
+    "shortName": "IIT Palakkad",
+    "location": "Kanjikode, Palakkad, Kerala"
+  },
+  {
+    "id": "iim-kozhikode",
+    "name": "Indian Institute of Management Kozhikode",
+    "shortName": "IIMK",
+    "location": "Kozhikode, Kerala"
+  },
+  {
+    "id": "nit-calicut",
+    "name": "National Institute of Technology Calicut",
+    "shortName": "NITC",
+    "location": "Kozhikode, Kerala"
+  },
+  {
+    "id": "iiser-thiruvananthapuram",
+    "name": "Indian Institute of Science Education and Research Thiruvananthapuram",
+    "shortName": "IISER TVM",
+    "location": "Vithura, Thiruvananthapuram, Kerala"
+  },
+  {
+    "id": "iist-thiruvananthapuram",
+    "name": "Indian Institute of Space Science and Technology",
+    "shortName": "IIST",
+    "location": "Valiamala, Thiruvananthapuram, Kerala"
+  },
+  {
+    "id": "sctimst-trivandrum",
+    "name": "Sree Chitra Tirunal Institute for Medical Sciences and Technology",
+    "shortName": "SCTIMST",
+    "location": "Thiruvananthapuram, Kerala"
+  },
+  {
+    "id": "central-university-of-kerala",
+    "name": "Central University of Kerala",
+    "shortName": "CUK",
+    "location": "Kasaragod, Kerala"
+  },
+  {
+    "id": "university-of-kerala",
+    "name": "University of Kerala",
+    "shortName": "Kerala University",
+    "location": "Thiruvananthapuram, Kerala"
+  },
+  {
+    "id": "cusat-kochi",
+    "name": "Cochin University of Science and Technology",
+    "shortName": "CUSAT",
+    "location": "Kochi, Kerala"
+  },
+  {
+    "id": "mahatma-gandhi-university-kerala",
+    "name": "Mahatma Gandhi University",
+    "shortName": "MGU Kerala",
+    "location": "Kottayam, Kerala"
+  },
+  {
+    "id": "university-of-calicut",
+    "name": "University of Calicut",
+    "shortName": "Calicut University",
+    "location": "Tenhipalam, Malappuram, Kerala"
+  },
+  {
+    "id": "kannur-university",
+    "name": "Kannur University",
+    "shortName": "Kannur University",
+    "location": "Kannur, Kerala"
+  },
+  {
+    "id": "apj-abdul-kalam-technological-university",
+    "name": "APJ Abdul Kalam Technological University",
+    "shortName": "KTU",
+    "location": "Thiruvananthapuram, Kerala"
+  },
+  {
+    "id": "kerala-university-of-health-sciences",
+    "name": "Kerala University of Health Sciences",
+    "shortName": "KUHS",
+    "location": "Thrissur, Kerala"
+  },
+  {
+    "id": "kerala-agricultural-university",
+    "name": "Kerala Agricultural University",
+    "shortName": "KAU",
+    "location": "Vellanikkara, Thrissur, Kerala"
+  },
+  {
+    "id": "nuals-kochi",
+    "name": "National University of Advanced Legal Studies",
+    "shortName": "NUALS",
+    "location": "Kochi, Kerala"
+  },
+  {
+    "id": "college-of-engineering-trivandrum",
+    "name": "College of Engineering Trivandrum",
+    "shortName": "CET",
+    "location": "Thiruvananthapuram, Kerala"
+  },
+  {
+    "id": "govt-medical-college-thiruvananthapuram",
+    "name": "Government Medical College, Thiruvananthapuram",
+    "shortName": "Trivandrum Medical College",
+    "location": "Thiruvananthapuram, Kerala"
+  },
+  {
+    "id": "govt-medical-college-kozhikode",
+    "name": "Government Medical College, Kozhikode",
+    "shortName": "Calicut Medical College",
+    "location": "Kozhikode, Kerala"
+  },
+  {
+    "id": "amrita-vishwa-vidyapeetham-amritapuri",
+    "name": "Amrita Vishwa Vidyapeetham",
+    "shortName": "Amrita University",
+    "location": "Amritapuri (Kollam) / Kochi, Kerala"
+  },
+  {
+    "id": "university-college-thiruvananthapuram",
+    "name": "University College, Thiruvananthapuram",
+    "shortName": "University College",
+    "location": "Thiruvananthapuram, Kerala"
+  },
+  {
+    "id": "sacred-heart-college-thevara",
+    "name": "Sacred Heart College, Thevara",
+    "shortName": "SH College",
+    "location": "Kochi, Kerala"
+  },
+  {
+    "id": "rajagiri-school-of-engineering-and-technology",
+    "name": "Rajagiri School of Engineering & Technology",
+    "shortName": "RSET",
+    "location": "Kochi, Kerala"
+  },
+  {
+    "id": "tkm-college-of-engineering",
+    "name": "Thangal Kunju Musaliar College of Engineering",
+    "shortName": "TKMCE",
+    "location": "Kollam, Kerala"
+  },
+  {
+    "id": "kerala-kalamandalam",
+    "name": "Kerala Kalamandalam",
+    "shortName": "Kalamandalam",
+    "location": "Cheruthuruthy, Thrissur, Kerala"
+  },
+  {
+    "id": "thunchath-ezhuthachan-malayalam-university",
+    "name": "Thunchath Ezhuthachan Malayalam University",
+    "shortName": "Malayalam University",
+    "location": "Tirur, Malappuram, Kerala"
+  },
+  {
+    "id": "chinmaya-vishwavidyapeeth",
+    "name": "Chinmaya Vishwavidyapeeth",
+    "shortName": "CVV",
+    "location": "Ernakulam, Kerala"
+  },
+  {
+    "id": "model-engineering-college-thrikkakara",
+    "name": "Government Model Engineering College",
+    "shortName": "MEC Kochi",
+    "location": "Thrikkakara, Kochi, Kerala"
+  },
+  {
+    "id": "st-teresa-college-ernakulam",
+    "name": "St. Teresa's College",
+    "shortName": "St. Teresa's",
+    "location": "Ernakulam, Kerala"
+  },
+  {
+    "id": "farook-college-calicut",
+    "name": "Farook College",
+    "shortName": "Farook College",
+    "location": "Kozhikode, Kerala"
+  },
+  {
+    "id": "kufos-kochi",
+    "name": "Kerala University of Fisheries and Ocean Studies",
+    "shortName": "KUFOS",
+    "location": "Panangad, Kochi, Kerala"
+  },
+  {
+    "id": "kvasu-wayanad",
+    "name": "Kerala Veterinary and Animal Sciences University",
+    "shortName": "KVASU",
+    "location": "Pookode, Wayanad, Kerala"
+  },
+  {
+    "id": "university-of-ladakh",
+    "name": "University of Ladakh",
+    "shortName": "UoL",
+    "location": "Leh/Kargil, Ladakh"
+  },
+  {
+    "id": "central-institute-of-buddhist-studies",
+    "name": "Central Institute of Buddhist Studies",
+    "shortName": "CIBS",
+    "location": "Choglamsar, Leh, Ladakh"
+  },
+  {
+    "id": "national-institute-of-sowa-rigpa",
+    "name": "National Institute of Sowa Rigpa",
+    "shortName": "NISR",
+    "location": "Leh, Ladakh"
+  },
+  {
+    "id": "government-medical-college-leh",
+    "name": "Government Medical College, Leh",
+    "shortName": "GMC Leh",
+    "location": "Leh, Ladakh"
+  },
+  {
+    "id": "eliezer-joldan-memorial-college-leh",
+    "name": "Eliezer Joldan Memorial College",
+    "shortName": "EJM College",
+    "location": "Leh, Ladakh"
+  },
+  {
+    "id": "government-degree-college-kargil",
+    "name": "Government Degree College, Kargil",
+    "shortName": "GDC Kargil",
+    "location": "Kargil, Ladakh"
+  },
+  {
+    "id": "government-degree-college-nubra",
+    "name": "Government Degree College, Nubra",
+    "shortName": "GDC Nubra",
+    "location": "Diskit, Nubra, Ladakh"
+  },
+  {
+    "id": "government-degree-college-zanskar",
+    "name": "Government Degree College, Zanskar",
+    "shortName": "GDC Zanskar",
+    "location": "Padum, Zanskar, Ladakh"
+  },
+  {
+    "id": "government-degree-college-drass",
+    "name": "Government Degree College, Drass",
+    "shortName": "GDC Drass",
+    "location": "Drass, Kargil, Ladakh"
+  },
+  {
+    "id": "government-degree-college-khaltsi",
+    "name": "Government Degree College, Khaltsi",
+    "shortName": "GDC Khaltsi",
+    "location": "Khaltsi, Leh, Ladakh"
+  },
+  {
+    "id": "government-polytechnic-leh",
+    "name": "Government Polytechnic, Leh",
+    "shortName": "GP Leh",
+    "location": "Leh, Ladakh"
+  },
+  {
+    "id": "government-polytechnic-kargil",
+    "name": "Government Polytechnic, Kargil",
+    "shortName": "GP Kargil",
+    "location": "Kargil, Ladakh"
+  },
+  {
+    "id": "govt-jawaharlal-nehru-college-lakshadweep",
+    "name": "Government Jawaharlal Nehru College",
+    "shortName": "JNC Kavaratti",
+    "location": "Kavaratti, Lakshadweep"
+  },
+  {
+    "id": "mahatma-gandhi-college-androth",
+    "name": "Mahatma Gandhi College",
+    "shortName": "MGC Androth",
+    "location": "Androth, Lakshadweep"
+  },
+  {
+    "id": "pm-sayeed-calicut-university-centre-androth",
+    "name": "P.M. Sayeed Calicut University Centre",
+    "shortName": "CUC Androth",
+    "location": "Androth, Lakshadweep"
+  },
+  {
+    "id": "calicut-university-centre-kadmat",
+    "name": "Calicut University Centre, Kadmat",
+    "shortName": "CUC Kadmat",
+    "location": "Kadmat, Lakshadweep"
+  },
+  {
+    "id": "calicut-university-centre-kavaratti",
+    "name": "Calicut University Centre, Kavaratti",
+    "shortName": "CUC Kavaratti",
+    "location": "Kavaratti, Lakshadweep"
+  },
+  {
+    "id": "diet-lakshadweep",
+    "name": "District Institute of Education and Training",
+    "shortName": "DIET Lakshadweep",
+    "location": "Kavaratti, Lakshadweep"
+  },
+  {
+    "id": "government-iti-kavaratti",
+    "name": "Government Industrial Training Institute, Kavaratti",
+    "shortName": "ITI Kavaratti",
+    "location": "Kavaratti, Lakshadweep"
+  },
+  {
+    "id": "iit-bombay",
+    "name": "Indian Institute of Technology Bombay",
+    "shortName": "IIT Bombay",
+    "location": "Powai, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "iim-mumbai",
+    "name": "Indian Institute of Management Mumbai",
+    "shortName": "IIM Mumbai",
+    "location": "Powai, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "ict-mumbai",
+    "name": "Institute of Chemical Technology",
+    "shortName": "ICT Mumbai",
+    "location": "Matunga, Mumbai, Maharashtra"
+  },
+  {
+    "id": "tiss-mumbai",
+    "name": "Tata Institute of Social Sciences",
+    "shortName": "TISS Mumbai",
+    "location": "Deonar, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "jbims-mum",
+    "name": "Jamnalal Bajaj Institute of Management Studies",
+    "shortName": "JBIMS",
+    "location": "Churchgate, Mumbai, Maharashtra"
+  },
+  {
+    "id": "coep-tech-pune",
+    "name": "COEP Technological University",
+    "shortName": "COEP Tech",
+    "location": "Shivajinagar, Pune, Maharashtra"
+  },
+  {
+    "id": "vjti-mumbai",
+    "name": "Veermata Jijabai Technological Institute",
+    "shortName": "VJTI",
+    "location": "Matunga, Mumbai, Maharashtra"
+  },
+  {
+    "id": "spjimr-mum",
+    "name": "SP Jain Institute of Management and Research",
+    "shortName": "SPJIMR",
+    "location": "Andheri West, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "vnit-nagpur",
+    "name": "Visvesvaraya National Institute of Technology",
+    "shortName": "VNIT Nagpur",
+    "location": "Nagpur, Nagpur District, Maharashtra"
+  },
+  {
+    "id": "symbiosis-pune",
+    "name": "Symbiosis International (Deemed University)",
+    "shortName": "SIU",
+    "location": "Lavale, Pune, Maharashtra"
+  },
+  {
+    "id": "nmims-mumbai",
+    "name": "SVKM's NMIMS (Deemed to be University)",
+    "shortName": "NMIMS",
+    "location": "Vile Parle, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "iiser-pune",
+    "name": "Indian Institute of Science Education and Research Pune",
+    "shortName": "IISER Pune",
+    "location": "Pashan, Pune, Maharashtra"
+  },
+  {
+    "id": "aiims-nagpur",
+    "name": "All India Institute of Medical Sciences Nagpur",
+    "shortName": "AIIMS Nagpur",
+    "location": "MIHAN, Nagpur, Maharashtra"
+  },
+  {
+    "id": "bjmc-pune",
+    "name": "B.J. Government Medical College",
+    "shortName": "BJMC Pune",
+    "location": "Pune, Pune District, Maharashtra"
+  },
+  {
+    "id": "kem-mumbai",
+    "name": "Seth G.S. Medical College and K.E.M. Hospital",
+    "shortName": "GSMC KEM",
+    "location": "Parel, Mumbai, Maharashtra"
+  },
+  {
+    "id": "afmc-pune",
+    "name": "Armed Forces Medical College",
+    "shortName": "AFMC",
+    "location": "Wanowrie, Pune, Maharashtra"
+  },
+  {
+    "id": "glc-mumbai",
+    "name": "Government Law College",
+    "shortName": "GLC Mumbai",
+    "location": "Churchgate, Mumbai, Maharashtra"
+  },
+  {
+    "id": "ils-pune",
+    "name": "ILS Law College",
+    "shortName": "ILS Pune",
+    "location": "Law College Road, Pune, Maharashtra"
+  },
+  {
+    "id": "sir-jj-architecture",
+    "name": "Sir J.J. College of Architecture",
+    "shortName": "Sir JJ Arch",
+    "location": "Fort, Mumbai, Maharashtra"
+  },
+  {
+    "id": "st-xaviers-mumbai",
+    "name": "St. Xavier's College (Autonomous)",
+    "shortName": "St. Xavier's Mumbai",
+    "location": "Fort, Mumbai, Maharashtra"
+  },
+  {
+    "id": "fergusson-pune",
+    "name": "Fergusson College (Autonomous)",
+    "shortName": "Fergusson",
+    "location": "Shivajinagar, Pune, Maharashtra"
+  },
+  {
+    "id": "spit-mumbai",
+    "name": "Sardar Patel Institute of Technology",
+    "shortName": "SPIT",
+    "location": "Andheri West, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "pict-pune",
+    "name": "Pune Institute of Computer Technology",
+    "shortName": "PICT",
+    "location": "Dhankawadi, Pune, Maharashtra"
+  },
+  {
+    "id": "vit-pune",
+    "name": "Vishwakarma Institute of Technology",
+    "shortName": "VIT Pune",
+    "location": "Bibwewadi, Pune, Maharashtra"
+  },
+  {
+    "id": "walchand-sangli",
+    "name": "Walchand College of Engineering",
+    "shortName": "WCE Sangli",
+    "location": "Sangli, Sangli District, Maharashtra"
+  },
+  {
+    "id": "mumbai-university",
+    "name": "University of Mumbai",
+    "shortName": "MU",
+    "location": "Kalina / Fort, Mumbai, Maharashtra"
+  },
+  {
+    "id": "sppu-pune",
+    "name": "Savitribai Phule Pune University",
+    "shortName": "SPPU",
+    "location": "Ganeshkhind, Pune, Maharashtra"
+  },
+  {
+    "id": "pumba-pune",
+    "name": "Department of Management Sciences (PUMBA)",
+    "shortName": "PUMBA",
+    "location": "Ganeshkhind, Pune, Maharashtra"
+  },
+  {
+    "id": "simsree-mumbai",
+    "name": "Sydenham Institute of Management Studies, Research and Entrepreneurship Education",
+    "shortName": "SIMSREE",
+    "location": "Churchgate, Mumbai, Maharashtra"
+  },
+  {
+    "id": "gmc-nagpur",
+    "name": "Government Medical College Nagpur",
+    "shortName": "GMC Nagpur",
+    "location": "Nagpur, Nagpur District, Maharashtra"
+  },
+  {
+    "id": "batu-lonere",
+    "name": "Dr. Babasaheb Ambedkar Technological University",
+    "shortName": "DBATU",
+    "location": "Lonere, Raigad District, Maharashtra"
+  },
+  {
+    "id": "dy-patil-pune",
+    "name": "Dr. D.Y. Patil Vidyapeeth",
+    "shortName": "DPU",
+    "location": "Pimpri, Pune, Maharashtra"
+  },
+  {
+    "id": "bharati-vidyapeeth-pune",
+    "name": "Bharati Vidyapeeth (Deemed to be University)",
+    "shortName": "BVDU",
+    "location": "Dhankawadi, Pune, Maharashtra"
+  },
+  {
+    "id": "kj-somaiya-mumbai",
+    "name": "K.J. Somaiya Institute of Management",
+    "shortName": "KJSIM",
+    "location": "Vidyavihar, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "welingkar-mumbai",
+    "name": "Prin. L.N. Welingkar Institute of Management Development and Research",
+    "shortName": "WeSchool Mumbai",
+    "location": "Matunga, Mumbai, Maharashtra"
+  },
+  {
+    "id": "mithibai-mumbai",
+    "name": "Mithibai College of Arts, Chauhan Institute of Science & Amrutben Jivanlal College of Commerce and Economics",
+    "shortName": "Mithibai College",
+    "location": "Vile Parle, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "nm-college-mumbai",
+    "name": "Narsee Monjee College of Commerce and Economics",
+    "shortName": "NM College",
+    "location": "Vile Parle, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "pcco-pune",
+    "name": "Pimpri Chinchwad College of Engineering",
+    "shortName": "PCCOE",
+    "location": "Nigdi, Pune, Maharashtra"
+  },
+  {
+    "id": "kkit-nagpur",
+    "name": "Kavikulguru Kalidas Sanskrit University",
+    "shortName": "KKSU",
+    "location": "Ramtek, Nagpur District, Maharashtra"
+  },
+  {
+    "id": "shivaji-university-kolhapur",
+    "name": "Shivaji University",
+    "shortName": "SUK",
+    "location": "Kolhapur, Kolhapur District, Maharashtra"
+  },
+  {
+    "id": "bamu-aurangabad",
+    "name": "Dr. Babasaheb Ambedkar Marathwada University",
+    "shortName": "BAMU",
+    "location": "Chhatrapati Sambhajinagar (Aurangabad), Maharashtra"
+  },
+  {
+    "id": "mnlu-mumbai",
+    "name": "Maharashtra National Law University Mumbai",
+    "shortName": "MNLU Mumbai",
+    "location": "Powai, Mumbai Suburban, Maharashtra"
+  },
+  {
+    "id": "iit-nagpur",
+    "name": "Indian Institute of Information Technology Nagpur",
+    "shortName": "IIIT Nagpur",
+    "location": "Nagpur, Nagpur District, Maharashtra"
+  },
+  {
+    "id": "iit-pune",
+    "name": "Indian Institute of Information Technology Pune",
+    "shortName": "IIIT Pune",
+    "location": "Pune, Pune District, Maharashtra"
+  },
+  {
+    "id": "manipur-university",
+    "name": "Manipur University",
+    "shortName": "MU",
+    "location": "Canchipur, Imphal West, Manipur"
+  },
+  {
+    "id": "nit-manipur",
+    "name": "National Institute of Technology Manipur",
+    "shortName": "NIT Manipur",
+    "location": "Langol, Imphal West, Manipur"
+  },
+  {
+    "id": "rims-imphal",
+    "name": "Regional Institute of Medical Sciences",
+    "shortName": "RIMS Imphal",
+    "location": "Lamphelpat, Imphal West, Manipur"
+  },
+  {
+    "id": "central-agricultural-university-imphal",
+    "name": "Central Agricultural University",
+    "shortName": "CAU Imphal",
+    "location": "Iroisemba, Imphal West, Manipur"
+  },
+  {
+    "id": "iiit-manipur",
+    "name": "Indian Institute of Information Technology Manipur",
+    "shortName": "IIIT Manipur",
+    "location": "Mantripukhri, Imphal East, Manipur"
+  },
+  {
+    "id": "dhanamanjuri-university",
+    "name": "Dhanamanjuri University",
+    "shortName": "DMU",
+    "location": "Imphal, Manipur"
+  },
+  {
+    "id": "national-sports-university",
+    "name": "National Sports University",
+    "shortName": "NSU",
+    "location": "Koutruk, Imphal West, Manipur"
+  },
+  {
+    "id": "jnims-imphal",
+    "name": "Jawaharlal Nehru Institute of Medical Sciences",
+    "shortName": "JNIMS",
+    "location": "Porompat, Imphal East, Manipur"
+  },
+  {
+    "id": "manipur-technical-university",
+    "name": "Manipur Technical University",
+    "shortName": "MTU",
+    "location": "Takyelpat, Imphal West, Manipur"
+  },
+  {
+    "id": "manipur-university-of-culture",
+    "name": "Manipur University of Culture",
+    "shortName": "MUC",
+    "location": "Palace Compound, Imphal East, Manipur"
+  },
+  {
+    "id": "manipur-institute-of-technology",
+    "name": "Manipur Institute of Technology",
+    "shortName": "MIT Manipur",
+    "location": "Takyelpat, Imphal West, Manipur"
+  },
+  {
+    "id": "shija-academy-health-sciences",
+    "name": "Shija Academy of Health Sciences",
+    "shortName": "SAHS",
+    "location": "Langol, Imphal West, Manipur"
+  },
+  {
+    "id": "don-bosco-college-maram",
+    "name": "Don Bosco College, Maram",
+    "shortName": "DBC Maram",
+    "location": "Maram, Senapati, Manipur"
+  },
+  {
+    "id": "s-kula-womens-college",
+    "name": "S. Kula Women's College",
+    "shortName": "SKWC",
+    "location": "Nambol, Bishnupur, Manipur"
+  },
+  {
+    "id": "imphal-college",
+    "name": "Imphal College",
+    "shortName": "Imphal College",
+    "location": "Imphal West, Manipur"
+  },
+  {
+    "id": "manipur-college",
+    "name": "Manipur College",
+    "shortName": "Manipur College",
+    "location": "Singjamei, Imphal West, Manipur"
+  },
+  {
+    "id": "oriental-college-imphal",
+    "name": "Oriental College",
+    "shortName": "Oriental College",
+    "location": "Takyel, Imphal West, Manipur"
+  },
+  {
+    "id": "modern-college-imphal",
+    "name": "Modern College",
+    "shortName": "Modern College",
+    "location": "Porompat, Imphal East, Manipur"
+  },
+  {
+    "id": "standard-college-kongba",
+    "name": "Standard College",
+    "shortName": "Standard College",
+    "location": "Kongba, Imphal East, Manipur"
+  },
+  {
+    "id": "churachandpur-college",
+    "name": "Churachandpur College",
+    "shortName": "CC College",
+    "location": "Churachandpur, Manipur"
+  },
+  {
+    "id": "rayburn-college",
+    "name": "Rayburn College",
+    "shortName": "Rayburn College",
+    "location": "Churachandpur, Manipur"
+  },
+  {
+    "id": "united-college-chandel",
+    "name": "United College, Chandel",
+    "shortName": "United College",
+    "location": "Chandel, Manipur"
+  },
+  {
+    "id": "pettigrew-college-ukhrul",
+    "name": "Pettigrew College",
+    "shortName": "Pettigrew College",
+    "location": "Ukhrul, Manipur"
+  },
+  {
+    "id": "lilong-haoreibi-college",
+    "name": "Lilong Haoreibi College",
+    "shortName": "LHC",
+    "location": "Lilong, Thoubal, Manipur"
+  },
+  {
+    "id": "thoubal-college",
+    "name": "Thoubal College",
+    "shortName": "Thoubal College",
+    "location": "Thoubal, Manipur"
+  },
+  {
+    "id": "moirang-college",
+    "name": "Moirang College",
+    "shortName": "Moirang College",
+    "location": "Moirang, Bishnupur, Manipur"
+  },
+  {
+    "id": "bir-tikendrajit-university",
+    "name": "Bir Tikendrajit University",
+    "shortName": "BTU",
+    "location": "Canchipur, Imphal West, Manipur"
+  },
+  {
+    "id": "sangai-international-university",
+    "name": "Sangai International University",
+    "shortName": "SIU",
+    "location": "Churachandpur, Manipur"
+  },
+  {
+    "id": "manipur-international-university",
+    "name": "Manipur International University",
+    "shortName": "MIU",
+    "location": "Imphal, Manipur"
+  },
+  {
+    "id": "govt-polytechnic-imphal",
+    "name": "Government Polytechnic Imphal",
+    "shortName": "GP Imphal",
+    "location": "Takyelpat, Imphal West, Manipur"
+  },
+  {
+    "id": "nielit-imphal",
+    "name": "National Institute of Electronics & Information Technology Imphal",
+    "shortName": "NIELIT Imphal",
+    "location": "Akampat, Imphal East, Manipur"
+  },
+  {
+    "id": "ci-college-bishnupur",
+    "name": "C.I. College",
+    "shortName": "CI College",
+    "location": "Bishnupur, Manipur"
+  },
+  {
+    "id": "ng-college-imphal",
+    "name": "N.G. College",
+    "shortName": "NG College",
+    "location": "Lamphelpat, Imphal West, Manipur"
+  },
+  {
+    "id": "iim-shillong",
+    "name": "Indian Institute of Management Shillong",
+    "shortName": "IIM Shillong",
+    "location": "Umsawli, East Khasi Hills, Meghalaya"
+  },
+  {
+    "id": "nit-meghalaya",
+    "name": "National Institute of Technology Meghalaya",
+    "shortName": "NIT Meghalaya",
+    "location": "Sohra (Cherrapunji) / Shillong, Meghalaya"
+  },
+  {
+    "id": "north-eastern-hill-university",
+    "name": "North-Eastern Hill University",
+    "shortName": "NEHU",
+    "location": "Shillong, Meghalaya"
+  },
+  {
+    "id": "neigrihms-shillong",
+    "name": "North Eastern Indira Gandhi Regional Institute of Health and Medical Sciences",
+    "shortName": "NEIGRIHMS",
+    "location": "Mawdiangdiang, Shillong, Meghalaya"
+  },
+  {
+    "id": "nift-shillong",
+    "name": "National Institute of Fashion Technology Shillong",
+    "shortName": "NIFT Shillong",
+    "location": "Umsawli, Shillong, Meghalaya"
+  },
+  {
+    "id": "ihm-shillong",
+    "name": "Institute of Hotel Management Catering Technology & Applied Nutrition",
+    "shortName": "IHM Shillong",
+    "location": "Mawkasiang, Shillong, Meghalaya"
+  },
+  {
+    "id": "eflu-shillong",
+    "name": "English and Foreign Languages University, Shillong Campus",
+    "shortName": "EFLU Shillong",
+    "location": "Shillong, Meghalaya"
+  },
+  {
+    "id": "st-anthonys-college-shillong",
+    "name": "St. Anthony's College",
+    "shortName": "St. Anthony's",
+    "location": "Laitumkhrah, Shillong, Meghalaya"
+  },
+  {
+    "id": "st-edmunds-college-shillong",
+    "name": "St. Edmund's College",
+    "shortName": "St. Edmund's",
+    "location": "Laitumkhrah, Shillong, Meghalaya"
+  },
+  {
+    "id": "lady-keane-college",
+    "name": "Lady Keane College",
+    "shortName": "Lady Keane",
+    "location": "Shillong, Meghalaya"
+  },
+  {
+    "id": "university-of-science-and-technology-meghalaya",
+    "name": "University of Science and Technology Meghalaya",
+    "shortName": "USTM",
+    "location": "Baridua, Ri-Bhoi, Meghalaya"
+  },
+  {
+    "id": "martin-luther-christian-university",
+    "name": "Martin Luther Christian University",
+    "shortName": "MLCU",
+    "location": "Nongrah, Shillong, Meghalaya"
+  },
+  {
+    "id": "william-carey-university-meghalaya",
+    "name": "William Carey University",
+    "shortName": "WCU",
+    "location": "Umsning, Ri-Bhoi, Meghalaya"
+  },
+  {
+    "id": "icfai-university-meghalaya",
+    "name": "The ICFAI University, Meghalaya",
+    "shortName": "ICFAI Meghalaya",
+    "location": "Shillong, Meghalaya"
+  },
+  {
+    "id": "mahatma-gandhi-university-meghalaya",
+    "name": "Mahatma Gandhi University",
+    "shortName": "MGU Meghalaya",
+    "location": "Khanapara, Ri-Bhoi, Meghalaya"
+  },
+  {
+    "id": "shillong-college",
+    "name": "Shillong College",
+    "shortName": "Shillong College",
+    "location": "Laitumkhrah, Shillong, Meghalaya"
+  },
+  {
+    "id": "sankardev-college-shillong",
+    "name": "Sankardev College",
+    "shortName": "Sankardev College",
+    "location": "Bishnupur, Shillong, Meghalaya"
+  },
+  {
+    "id": "union-christian-college-meghalaya",
+    "name": "Union Christian College",
+    "shortName": "UCC",
+    "location": "Umiam, Ri-Bhoi, Meghalaya"
+  },
+  {
+    "id": "don-bosco-college-tura",
+    "name": "Don Bosco College, Tura",
+    "shortName": "DBC Tura",
+    "location": "Tura, West Garo Hills, Meghalaya"
+  },
+  {
+    "id": "tura-government-college",
+    "name": "Tura Government College",
+    "shortName": "Tura Govt College",
+    "location": "Tura, West Garo Hills, Meghalaya"
+  },
+  {
+    "id": "kiang-nangbah-government-college",
+    "name": "Kiang Nangbah Government College",
+    "shortName": "KNGC Jowai",
+    "location": "Jowai, West Jaintia Hills, Meghalaya"
+  },
+  {
+    "id": "shillong-polytechnic",
+    "name": "Shillong Polytechnic",
+    "shortName": "Shillong Polytechnic",
+    "location": "Mawlai, Shillong, Meghalaya"
+  },
+  {
+    "id": "jowai-polytechnic",
+    "name": "Jowai Polytechnic",
+    "shortName": "Jowai Polytechnic",
+    "location": "Jowai, West Jaintia Hills, Meghalaya"
+  },
+  {
+    "id": "tura-polytechnic",
+    "name": "Tura Polytechnic",
+    "shortName": "Tura Polytechnic",
+    "location": "Tura, West Garo Hills, Meghalaya"
+  },
+  {
+    "id": "college-of-community-science-central-agricultural-university",
+    "name": "College of Community Science, Tura",
+    "shortName": "CCS Tura",
+    "location": "Tura, Meghalaya"
+  },
+  {
+    "id": "shillong-law-college",
+    "name": "Shillong Law College",
+    "shortName": "Shillong Law College",
+    "location": "Dhankheti, Shillong, Meghalaya"
+  },
+  {
+    "id": "mizoram-university",
+    "name": "Mizoram University",
+    "shortName": "MZU",
+    "location": "Tanhril, Aizawl, Mizoram"
+  },
+  {
+    "id": "nit-mizoram",
+    "name": "National Institute of Technology Mizoram",
+    "shortName": "NIT Mizoram",
+    "location": "Aizawl, Mizoram"
+  },
+  {
+    "id": "zoram-medical-college",
+    "name": "Zoram Medical College",
+    "shortName": "ZMC",
+    "location": "Falkawn, Aizawl, Mizoram"
+  },
+  {
+    "id": "ripans-aizawl",
+    "name": "Regional Institute of Paramedical and Nursing Sciences",
+    "shortName": "RIPANS",
+    "location": "Zemabawk, Aizawl, Mizoram"
+  },
+  {
+    "id": "pachhunga-university-college",
+    "name": "Pachhunga University College",
+    "shortName": "PUC",
+    "location": "College Veng, Aizawl, Mizoram"
+  },
+  {
+    "id": "college-of-veterinary-sciences-ah-selesih",
+    "name": "College of Veterinary Sciences & Animal Husbandry, Selesih",
+    "shortName": "CVSc & AH Mizoram",
+    "location": "Selesih, Aizawl, Mizoram"
+  },
+  {
+    "id": "icfai-university-mizoram",
+    "name": "The ICFAI University, Mizoram",
+    "shortName": "ICFAI Mizoram",
+    "location": "Durtlang North, Aizawl, Mizoram"
+  },
+  {
+    "id": "govt-zirtiri-residential-science-college",
+    "name": "Government Zirtiri Residential Science College",
+    "shortName": "GZRSC",
+    "location": "Ramhmun, Aizawl, Mizoram"
+  },
+  {
+    "id": "govt-hrangbana-college",
+    "name": "Government Hrangbana College",
+    "shortName": "GHBC",
+    "location": "Chanmari, Aizawl, Mizoram"
+  },
+  {
+    "id": "govt-t-romana-college",
+    "name": "Government T. Romana College",
+    "shortName": "GTRC",
+    "location": "Republic Veng, Aizawl, Mizoram"
+  },
+  {
+    "id": "govt-aizawl-north-college",
+    "name": "Government Aizawl North College",
+    "shortName": "GANC",
+    "location": "Ramhlun North, Aizawl, Mizoram"
+  },
+  {
+    "id": "govt-aizawl-west-college",
+    "name": "Government Aizawl West College",
+    "shortName": "GAWC",
+    "location": "Dawrpui Veng, Aizawl, Mizoram"
+  },
+  {
+    "id": "govt-johnson-college",
+    "name": "Government Johnson College",
+    "shortName": "Johnson College",
+    "location": "Shivaji Tillah, Aizawl, Mizoram"
+  },
+  {
+    "id": "govt-j-thankima-college",
+    "name": "Government J. Thankima College",
+    "shortName": "GJTC",
+    "location": "Bawngkawn, Aizawl, Mizoram"
+  },
+  {
+    "id": "govt-lunglei-college",
+    "name": "Lunglei Government College",
+    "shortName": "LGC",
+    "location": "Lunglei, Mizoram"
+  },
+  {
+    "id": "govt-champhai-college",
+    "name": "Government Champhai College",
+    "shortName": "GCC",
+    "location": "Champhai, Mizoram"
+  },
+  {
+    "id": "govt-serchhip-college",
+    "name": "Government Serchhip College",
+    "shortName": "Serchhip College",
+    "location": "Serchhip, Mizoram"
+  },
+  {
+    "id": "govt-saiha-college",
+    "name": "Government Saiha College",
+    "shortName": "Saiha College",
+    "location": "Saiha, Mizoram"
+  },
+  {
+    "id": "govt-lawngtlai-college",
+    "name": "Government Lawngtlai College",
+    "shortName": "Lawngtlai College",
+    "location": "Lawngtlai, Mizoram"
+  },
+  {
+    "id": "govt-mamit-college",
+    "name": "Government Mamit College",
+    "shortName": "Mamit College",
+    "location": "Mamit, Mizoram"
+  },
+  {
+    "id": "govt-kolasib-college",
+    "name": "Government Kolasib College",
+    "shortName": "Kolasib College",
+    "location": "Kolasib, Mizoram"
+  },
+  {
+    "id": "govt-saitual-college",
+    "name": "Government Saitual College",
+    "shortName": "Saitual College",
+    "location": "Saitual, Mizoram"
+  },
+  {
+    "id": "govt-khawzawl-college",
+    "name": "Government Khawzawl College",
+    "shortName": "Khawzawl College",
+    "location": "Khawzawl, Mizoram"
+  },
+  {
+    "id": "govt-hnahthial-college",
+    "name": "Government Hnahthial College",
+    "shortName": "Hnahthial College",
+    "location": "Hnahthial, Mizoram"
+  },
+  {
+    "id": "govt-zawlnuam-college",
+    "name": "Government Zawlnuam College",
+    "shortName": "Zawlnuam College",
+    "location": "Zawlnuam, Mamit, Mizoram"
+  },
+  {
+    "id": "hatim-lunglei",
+    "name": "Higher and Technical Institute of Mizoram",
+    "shortName": "HATIM",
+    "location": "Lunglei, Mizoram"
+  },
+  {
+    "id": "mizoram-law-college",
+    "name": "Government Mizoram Law College",
+    "shortName": "Mizoram Law College",
+    "location": "Luangmual, Aizawl, Mizoram"
+  },
+  {
+    "id": "iase-mizoram",
+    "name": "Institute of Advanced Study in Education",
+    "shortName": "IASE Mizoram",
+    "location": "Republic Veng, Aizawl, Mizoram"
+  },
+  {
+    "id": "nielit-aizawl",
+    "name": "National Institute of Electronics & Information Technology Aizawl",
+    "shortName": "NIELIT Aizawl",
+    "location": "Zuangtui, Aizawl, Mizoram"
+  },
+  {
+    "id": "mizoram-polytechnic-lunglei",
+    "name": "Mizoram Polytechnic Lunglei",
+    "shortName": "MPL",
+    "location": "Lunglei, Mizoram"
+  },
+  {
+    "id": "womens-polytechnic-aizawl",
+    "name": "Women's Polytechnic Aizawl",
+    "shortName": "WPA",
+    "location": "Durtlang, Aizawl, Mizoram"
+  },
+  {
+    "id": "nagaland-university",
+    "name": "Nagaland University",
+    "shortName": "NU",
+    "location": "Lumami, Zunheboto, Nagaland"
+  },
+  {
+    "id": "nit-nagaland",
+    "name": "National Institute of Technology Nagaland",
+    "shortName": "NIT Nagaland",
+    "location": "Chumukedima, Dimapur, Nagaland"
+  },
+  {
+    "id": "nimsr-kohima",
+    "name": "Nagaland Institute of Medical Sciences and Research",
+    "shortName": "NIMSR",
+    "location": "Phriebagei, Kohima, Nagaland"
+  },
+  {
+    "id": "kohima-science-college",
+    "name": "Kohima Science College (Autonomous)",
+    "shortName": "KSCJ",
+    "location": "Jotsoma, Kohima, Nagaland"
+  },
+  {
+    "id": "patkai-christian-college",
+    "name": "Patkai Christian College (Autonomous)",
+    "shortName": "Patkai",
+    "location": "Chumukedima, Dimapur, Nagaland"
+  },
+  {
+    "id": "st-josephs-college-jakhama",
+    "name": "St. Joseph's College (Autonomous), Jakhama",
+    "shortName": "SJC Jakhama",
+    "location": "Jakhama, Kohima, Nagaland"
+  },
+  {
+    "id": "st-joseph-university-nagaland",
+    "name": "St. Joseph University",
+    "shortName": "SJU Nagaland",
+    "location": "Chumukedima, Nagaland"
+  },
+  {
+    "id": "icfai-university-nagaland",
+    "name": "The ICFAI University, Nagaland",
+    "shortName": "ICFAI Nagaland",
+    "location": "Sovima, Dimapur, Nagaland"
+  },
+  {
+    "id": "the-global-open-university-nagaland",
+    "name": "The Global Open University",
+    "shortName": "TGOU",
+    "location": "Dimapur, Nagaland"
+  },
+  {
+    "id": "north-east-christian-university",
+    "name": "North East Christian University",
+    "shortName": "NECU",
+    "location": "Dimapur, Nagaland"
+  },
+  {
+    "id": "dimapur-government-college",
+    "name": "Dimapur Government College",
+    "shortName": "DGC",
+    "location": "Dimapur, Nagaland"
+  },
+  {
+    "id": "kohima-college",
+    "name": "Kohima College",
+    "shortName": "Kohima College",
+    "location": "Kruoliezou, Kohima, Nagaland"
+  },
+  {
+    "id": "fazl-ali-college",
+    "name": "Fazl Ali College",
+    "shortName": "FAC",
+    "location": "Chuchuyimlang, Mokokchung, Nagaland"
+  },
+  {
+    "id": "tetso-college",
+    "name": "Tetso College",
+    "shortName": "Tetso",
+    "location": "Sovima, Dimapur, Nagaland"
+  },
+  {
+    "id": "model-christian-college",
+    "name": "Model Christian College",
+    "shortName": "Model Christian",
+    "location": "Kohima, Nagaland"
+  },
+  {
+    "id": "japfu-christian-college",
+    "name": "Japfu Christian College",
+    "shortName": "JCC",
+    "location": "Kigwema, Kohima, Nagaland"
+  },
+  {
+    "id": "phek-government-college",
+    "name": "Phek Government College",
+    "shortName": "PGC",
+    "location": "Phek, Nagaland"
+  },
+  {
+    "id": "yingli-college",
+    "name": "Yingli College",
+    "shortName": "Yingli College",
+    "location": "Longleng, Nagaland"
+  },
+  {
+    "id": "zisaji-presidency-college",
+    "name": "Zisaji Presidency College",
+    "shortName": "ZPC",
+    "location": "Kiphire, Nagaland"
+  },
+  {
+    "id": "wangkhao-government-college",
+    "name": "Wangkhao Government College",
+    "shortName": "WGC",
+    "location": "Mon, Nagaland"
+  },
+  {
+    "id": "peren-government-college",
+    "name": "Peren Government College",
+    "shortName": "PGC Peren",
+    "location": "Peren, Nagaland"
+  },
+  {
+    "id": "mount-tiyi-college",
+    "name": "Mount Tiyi College",
+    "shortName": "MTC",
+    "location": "Wokha, Nagaland"
+  },
+  {
+    "id": "sao-chang-college",
+    "name": "Sao Chang College",
+    "shortName": "SCC",
+    "location": "Tuensang, Nagaland"
+  },
+  {
+    "id": "unity-college-dimapur",
+    "name": "Unity College",
+    "shortName": "Unity College",
+    "location": "Dimapur, Nagaland"
+  },
+  {
+    "id": "c-edge-college",
+    "name": "C-Edge College",
+    "shortName": "C-Edge",
+    "location": "Niuland, Dimapur, Nagaland"
+  },
+  {
+    "id": "kohima-law-college",
+    "name": "Kohima Law College",
+    "shortName": "Kohima Law",
+    "location": "Kohima, Nagaland"
+  },
+  {
+    "id": "government-polytechnic-kohima",
+    "name": "Government Polytechnic Kohima",
+    "shortName": "GP Kohima",
+    "location": "Kohima, Nagaland"
+  },
+  {
+    "id": "institute-of-communication-information-technology-mokokchung",
+    "name": "Institute of Communication & Information Technology",
+    "shortName": "ICIT Mokokchung",
+    "location": "Mokokchung, Nagaland"
+  },
+  {
+    "id": "khelhoshe-polytechnic-atoizu",
+    "name": "Khelhoshe Polytechnic Atoizu",
+    "shortName": "KPA",
+    "location": "Atoizu, Zunheboto, Nagaland"
+  },
+  {
+    "id": "iit-bhubaneswar",
+    "name": "Indian Institute of Technology Bhubaneswar",
+    "shortName": "IIT BBS",
+    "location": "Jatni, Khordha, Odisha"
+  },
+  {
+    "id": "nit-rourkela",
+    "name": "National Institute of Technology Rourkela",
+    "shortName": "NIT Rourkela",
+    "location": "Rourkela, Sundargarh, Odisha"
+  },
+  {
+    "id": "aiims-bhubaneswar",
+    "name": "All India Institute of Medical Sciences Bhubaneswar",
+    "shortName": "AIIMS Bhubaneswar",
+    "location": "Bhubaneswar, Odisha"
+  },
+  {
+    "id": "iim-sambalpur",
+    "name": "Indian Institute of Management Sambalpur",
+    "shortName": "IIM Sambalpur",
+    "location": "Sambalpur, Odisha"
+  },
+  {
+    "id": "niser-bhubaneswar",
+    "name": "National Institute of Science Education and Research",
+    "shortName": "NISER",
+    "location": "Jatni, Khordha, Odisha"
+  },
+  {
+    "id": "iiser-berhampur",
+    "name": "Indian Institute of Science Education and Research Berhampur",
+    "shortName": "IISER Berhampur",
+    "location": "Berhampur, Ganjam, Odisha"
+  },
+  {
+    "id": "central-university-of-odisha",
+    "name": "Central University of Odisha",
+    "shortName": "CUO",
+    "location": "Koraput, Odisha"
+  },
+  {
+    "id": "utkal-university",
+    "name": "Utkal University",
+    "shortName": "Utkal University",
+    "location": "Bhubaneswar, Odisha"
+  },
+  {
+    "id": "ravenshaw-university",
+    "name": "Ravenshaw University",
+    "shortName": "Ravenshaw",
+    "location": "Cuttack, Odisha"
+  },
+  {
+    "id": "sambalpur-university",
+    "name": "Sambalpur University",
+    "shortName": "Sambalpur University",
+    "location": "Burla, Sambalpur, Odisha"
+  },
+  {
+    "id": "berhampur-university",
+    "name": "Berhampur University",
+    "shortName": "BU Odisha",
+    "location": "Bhanja Bihar, Berhampur, Odisha"
+  },
+  {
+    "id": "kiit-university",
+    "name": "Kalinga Institute of Industrial Technology",
+    "shortName": "KIIT",
+    "location": "Bhubaneswar, Odisha"
+  },
+  {
+    "id": "soa-university",
+    "name": "Siksha 'O' Anusandhan",
+    "shortName": "SOA University",
+    "location": "Bhubaneswar, Odisha"
+  },
+  {
+    "id": "vssut-burla",
+    "name": "Veer Surendra Sai University of Technology",
+    "shortName": "VSSUT",
+    "location": "Burla, Sambalpur, Odisha"
+  },
+  {
+    "id": "outr-bhubaneswar",
+    "name": "Odisha University of Technology and Research",
+    "shortName": "OUTR (formerly CET)",
+    "location": "Ghatikia, Bhubaneswar, Odisha"
+  },
+  {
+    "id": "ouat-bhubaneswar",
+    "name": "Odisha University of Agriculture and Technology",
+    "shortName": "OUAT",
+    "location": "Bhubaneswar, Odisha"
+  },
+  {
+    "id": "national-law-university-odisha",
+    "name": "National Law University Odisha",
+    "shortName": "NLUO",
+    "location": "Cuttack, Odisha"
+  },
+  {
+    "id": "scb-medical-college-cuttack",
+    "name": "Srirama Chandra Bhanja Medical College and Hospital",
+    "shortName": "SCB Medical College",
+    "location": "Cuttack, Odisha"
+  },
+  {
+    "id": "mkcg-medical-college-berhampur",
+    "name": "Maharaja Krishna Chandra Gajapati Medical College",
+    "shortName": "MKCG",
+    "location": "Berhampur, Ganjam, Odisha"
+  },
+  {
+    "id": "vimsar-burla",
+    "name": "Veer Surendra Sai Institute of Medical Sciences and Research",
+    "shortName": "VIMSAR",
+    "location": "Burla, Sambalpur, Odisha"
+  },
+  {
+    "id": "iiit-bhubaneswar",
+    "name": "International Institute of Information Technology Bhubaneswar",
+    "shortName": "IIIT Bhubaneswar",
+    "location": "Gothapatna, Bhubaneswar, Odisha"
+  },
+  {
+    "id": "centurion-university-paralakhemundi",
+    "name": "Centurion University of Technology and Management",
+    "shortName": "CUTM",
+    "location": "Paralakhemundi, Gajapati, Odisha"
+  },
+  {
+    "id": "xim-university",
+    "name": "XIM University",
+    "shortName": "XIMB",
+    "location": "Harirajpur/Bhubaneswar, Odisha"
+  },
+  {
+    "id": "bput-rourkela",
+    "name": "Biju Patnaik University of Technology",
+    "shortName": "BPUT",
+    "location": "Rourkela, Odisha"
+  },
+  {
+    "id": "vikram-deb-university",
+    "name": "Vikram Deb University",
+    "shortName": "VD University",
+    "location": "Jeypore, Koraput, Odisha"
+  },
+  {
+    "id": "dharanidhar-university",
+    "name": "Dharanidhar University",
+    "shortName": "Dharanidhar University",
+    "location": "Keonjhar, Odisha"
+  },
+  {
+    "id": "bjb-autonomous-college",
+    "name": "Buxi Jagabandhu Bidyadhar Autonomous College",
+    "shortName": "BJB College",
+    "location": "Bhubaneswar, Odisha"
+  },
+  {
+    "id": "silicon-university-bhubaneswar",
+    "name": "Silicon University",
+    "shortName": "Silicon",
+    "location": "Bhubaneswar, Odisha"
+  },
+  {
+    "id": "cv-raman-global-university",
+    "name": "C.V. Raman Global University",
+    "shortName": "CGU",
+    "location": "Bhubaneswar, Odisha"
+  },
+  {
+    "id": "nist-university-berhampur",
+    "name": "NIST University",
+    "shortName": "NIST",
+    "location": "Berhampur, Odisha"
+  },
+  {
+    "id": "pondicherry-university",
+    "name": "Pondicherry University",
+    "shortName": "PU",
+    "location": "Kalapet, Puducherry"
+  },
+  {
+    "id": "jipmer-puducherry",
+    "name": "Jawaharlal Institute of Postgraduate Medical Education and Research",
+    "shortName": "JIPMER",
+    "location": "Puducherry"
+  },
+  {
+    "id": "puducherry-technological-university",
+    "name": "Puducherry Technological University",
+    "shortName": "PTU",
+    "location": "Pillaichavady, Puducherry"
+  },
+  {
+    "id": "indira-gandhi-medical-college-research-institute",
+    "name": "Indira Gandhi Medical College and Research Institute",
+    "shortName": "IGMCRI",
+    "location": "Kathirkamam, Puducherry"
+  },
+  {
+    "id": "mahatma-gandhi-postgraduate-institute-dental-sciences",
+    "name": "Mahatma Gandhi Postgraduate Institute of Dental Sciences",
+    "shortName": "MGPGI",
+    "location": "Puducherry"
+  },
+  {
+    "id": "rajiv-gandhi-institute-of-veterinary-education-and-research",
+    "name": "Rajiv Gandhi Institute of Veterinary Education and Research",
+    "shortName": "RIVER",
+    "location": "Kurumbapet, Puducherry"
+  },
+  {
+    "id": "mother-theresa-post-graduate-and-research-institute-of-health-sciences",
+    "name": "Mother Theresa Post Graduate and Research Institute of Health Sciences",
+    "shortName": "MTPG & RIHS",
+    "location": "Puducherry"
+  },
+  {
+    "id": "sri-balaji-vidyapeeth",
+    "name": "Sri Balaji Vidyapeeth",
+    "shortName": "SBV",
+    "location": "Pillaiyarkuppam, Puducherry"
+  },
+  {
+    "id": "vinayaka-missions-medical-college-karaikal",
+    "name": "Vinayaka Mission's Medical College and Hospital",
+    "shortName": "VMMC Karaikal",
+    "location": "Karaikal, Puducherry"
+  },
+  {
+    "id": "sri-manakula-vinayagar-engineering-college",
+    "name": "Sri Manakula Vinayagar Engineering College",
+    "shortName": "SMVEC",
+    "location": "Madagadipet, Puducherry"
+  },
+  {
+    "id": "kanchi-mamunivar-govt-institute-for-postgraduate-studies",
+    "name": "Kanchi Mamunivar Government Institute for Postgraduate Studies and Research",
+    "shortName": "KMGIPSR",
+    "location": "Lawspet, Puducherry"
+  },
+  {
+    "id": "bharathidasan-govt-college-for-women",
+    "name": "Bharathidasan Government College for Women",
+    "shortName": "BGCW",
+    "location": "Puducherry"
+  },
+  {
+    "id": "tagore-government-arts-and-science-college",
+    "name": "Tagore Government Arts and Science College",
+    "shortName": "TAC",
+    "location": "Lawspet, Puducherry"
+  },
+  {
+    "id": "dr-ambedkar-govt-law-college-puducherry",
+    "name": "Dr. Ambedkar Government Law College",
+    "shortName": "AGLC Puducherry",
+    "location": "Kalapet, Puducherry"
+  },
+  {
+    "id": "perunthalaivar-kamarajar-arts-college",
+    "name": "Perunthalaivar Kamarajar Arts College",
+    "shortName": "PKAC",
+    "location": "Kalitheerthalkuppam, Puducherry"
+  },
+  {
+    "id": "arignar-anna-government-arts-and-science-college-karaikal",
+    "name": "Arignar Anna Government Arts and Science College",
+    "shortName": "AAGASC Karaikal",
+    "location": "Karaikal, Puducherry"
+  },
+  {
+    "id": "avvaiyar-government-college-for-women-karaikal",
+    "name": "Avvaiyar Government College for Women",
+    "shortName": "AGCW Karaikal",
+    "location": "Karaikal, Puducherry"
+  },
+  {
+    "id": "mahatma-gandhi-govt-arts-college-mahe",
+    "name": "Mahatma Gandhi Government Arts College",
+    "shortName": "MGGAC Mahe",
+    "location": "Mahe, Puducherry"
+  },
+  {
+    "id": "dr-srv-government-arts-science-college-yanam",
+    "name": "Dr. S.R.K. Government Arts College",
+    "shortName": "SRK Yanam",
+    "location": "Yanam, Puducherry"
+  },
+  {
+    "id": "motilal-nehru-govt-polytechnic-college",
+    "name": "Motilal Nehru Government Polytechnic College",
+    "shortName": "MNGPC",
+    "location": "Lawspet, Puducherry"
+  },
+  {
+    "id": "women-polytechnic-college-puducherry",
+    "name": "Women's Polytechnic College",
+    "shortName": "WPC Puducherry",
+    "location": "Lawspet, Puducherry"
+  },
+  {
+    "id": "iit-ropar",
+    "name": "Indian Institute of Technology Ropar",
+    "shortName": "IIT Ropar",
+    "location": "Rupnagar, Punjab"
+  },
+  {
+    "id": "iim-amritsar",
+    "name": "Indian Institute of Management Amritsar",
+    "shortName": "IIM Amritsar",
+    "location": "Amritsar, Punjab"
+  },
+  {
+    "id": "nit-jalandhar",
+    "name": "Dr. B. R. Ambedkar National Institute of Technology Jalandhar",
+    "shortName": "NIT Jalandhar",
+    "location": "Jalandhar, Punjab"
+  },
+  {
+    "id": "iiser-mohali",
+    "name": "Indian Institute of Science Education and Research Mohali",
+    "shortName": "IISER Mohali",
+    "location": "Mohali, SAS Nagar, Punjab"
+  },
+  {
+    "id": "thapar-institute",
+    "name": "Thapar Institute of Engineering and Technology",
+    "shortName": "TIET",
+    "location": "Patiala, Punjab"
+  },
+  {
+    "id": "central-university-of-punjab",
+    "name": "Central University of Punjab",
+    "shortName": "CUP Bathinda",
+    "location": "Bathinda, Punjab"
+  },
+  {
+    "id": "guru-nanak-dev-university",
+    "name": "Guru Nanak Dev University",
+    "shortName": "GNDU",
+    "location": "Amritsar, Punjab"
+  },
+  {
+    "id": "punjabi-university-patiala",
+    "name": "Punjabi University",
+    "shortName": "PUP",
+    "location": "Patiala, Punjab"
+  },
+  {
+    "id": "lovely-professional-university",
+    "name": "Lovely Professional University",
+    "shortName": "LPU",
+    "location": "Phagwara, Kapurthala, Punjab"
+  },
+  {
+    "id": "chandigarh-university-mohali",
+    "name": "Chandigarh University",
+    "shortName": "CU",
+    "location": "Gharuan, Mohali, Punjab"
+  },
+  {
+    "id": "chitkara-university-punjab",
+    "name": "Chitkara University",
+    "shortName": "Chitkara Punjab",
+    "location": "Rajpura, Patiala, Punjab"
+  },
+  {
+    "id": "aiims-bathinda",
+    "name": "All India Institute of Medical Sciences Bathinda",
+    "shortName": "AIIMS Bathinda",
+    "location": "Bathinda, Punjab"
+  },
+  {
+    "id": "sliet-longowal",
+    "name": "Sant Longowal Institute of Engineering and Technology",
+    "shortName": "SLIET",
+    "location": "Longowal, Sangrur, Punjab"
+  },
+  {
+    "id": "punjab-agricultural-university",
+    "name": "Punjab Agricultural University",
+    "shortName": "PAU",
+    "location": "Ludhiana, Punjab"
+  },
+  {
+    "id": "ik-gujral-punjab-technical-university",
+    "name": "I.K. Gujral Punjab Technical University",
+    "shortName": "IKGPTU",
+    "location": "Kapurthala, Punjab"
+  },
+  {
+    "id": "baba-farid-university-health-sciences",
+    "name": "Baba Farid University of Health Sciences",
+    "shortName": "BFUHS",
+    "location": "Faridkot, Punjab"
+  },
+  {
+    "id": "govt-medical-college-patiala",
+    "name": "Government Medical College, Patiala",
+    "shortName": "GMC Patiala",
+    "location": "Patiala, Punjab"
+  },
+  {
+    "id": "govt-medical-college-amritsar",
+    "name": "Government Medical College, Amritsar",
+    "shortName": "GMC Amritsar",
+    "location": "Amritsar, Punjab"
+  },
+  {
+    "id": "christian-medical-college-ludhiana",
+    "name": "Christian Medical College",
+    "shortName": "CMC Ludhiana",
+    "location": "Ludhiana, Punjab"
+  },
+  {
+    "id": "dayanand-medical-college",
+    "name": "Dayanand Medical College and Hospital",
+    "shortName": "DMC Ludhiana",
+    "location": "Ludhiana, Punjab"
+  },
+  {
+    "id": "guru-nanak-dev-engineering-college",
+    "name": "Guru Nanak Dev Engineering College",
+    "shortName": "GNDEC",
+    "location": "Ludhiana, Punjab"
+  },
+  {
+    "id": "dav-university-jalandhar",
+    "name": "DAV University",
+    "shortName": "DAV University",
+    "location": "Jalandhar, Punjab"
+  },
+  {
+    "id": "rajiv-gandhi-national-university-of-law",
+    "name": "Rajiv Gandhi National University of Law",
+    "shortName": "RGNUL",
+    "location": "Patiala, Punjab"
+  },
+  {
+    "id": "plaksha-university",
+    "name": "Plaksha University",
+    "shortName": "Plaksha",
+    "location": "Mohali, Punjab"
+  },
+  {
+    "id": "bits-pilani",
+    "name": "Birla Institute of Technology and Science, Pilani",
+    "shortName": "BITS Pilani",
+    "location": "Pilani, Jhunjhunu District, Rajasthan"
+  },
+  {
+    "id": "iit-jodhpur",
+    "name": "Indian Institute of Technology Jodhpur",
+    "shortName": "IIT Jodhpur",
+    "location": "Jodhpur, Jodhpur District, Rajasthan"
+  },
+  {
+    "id": "iim-udaipur",
+    "name": "Indian Institute of Management Udaipur",
+    "shortName": "IIM Udaipur",
+    "location": "Udaipur, Udaipur District, Rajasthan"
+  },
+  {
+    "id": "mnit-jaipur",
+    "name": "Malaviya National Institute of Technology",
+    "shortName": "MNIT Jaipur",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "nlu-jodhpur",
+    "name": "National Law University Jodhpur",
+    "shortName": "NLUJ",
+    "location": "Jodhpur, Jodhpur District, Rajasthan"
+  },
+  {
+    "id": "aiims-jodhpur",
+    "name": "All India Institute of Medical Sciences Jodhpur",
+    "shortName": "AIIMS Jodhpur",
+    "location": "Jodhpur, Jodhpur District, Rajasthan"
+  },
+  {
+    "id": "rajasthan-uni-jaipur",
+    "name": "University of Rajasthan",
+    "shortName": "UNIRAJ",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "banasthali-vidyapith",
+    "name": "Banasthali Vidyapith",
+    "shortName": "Banasthali",
+    "location": "Banasthali, Tonk District, Rajasthan"
+  },
+  {
+    "id": "lnmiit-jaipur",
+    "name": "The LNM Institute of Information Technology",
+    "shortName": "LNMIIT",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "manipal-jaipur",
+    "name": "Manipal University Jaipur",
+    "shortName": "MUJ",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "central-uni-rajasthan",
+    "name": "Central University of Rajasthan",
+    "shortName": "CURAJ",
+    "location": "Bandarsindri, Ajmer District, Rajasthan"
+  },
+  {
+    "id": "rtu-kota",
+    "name": "Rajasthan Technical University",
+    "shortName": "RTU Kota",
+    "location": "Kota, Kota District, Rajasthan"
+  },
+  {
+    "id": "mbm-uni-jodhpur",
+    "name": "MBM University",
+    "shortName": "MBM Jodhpur",
+    "location": "Jodhpur, Jodhpur District, Rajasthan"
+  },
+  {
+    "id": "sms-medical-college",
+    "name": "Sawai Man Singh Medical College",
+    "shortName": "SMS Medical College",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "mlsu-udaipur",
+    "name": "Mohanlal Sukhadia University",
+    "shortName": "MLSU",
+    "location": "Udaipur, Udaipur District, Rajasthan"
+  },
+  {
+    "id": "jnvu-jodhpur",
+    "name": "Jai Narain Vyas University",
+    "shortName": "JNVU",
+    "location": "Jodhpur, Jodhpur District, Rajasthan"
+  },
+  {
+    "id": "skit-jaipur",
+    "name": "Swami Keshvanand Institute of Technology, Management & Gramothan",
+    "shortName": "SKIT Jaipur",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "jecrc-uni",
+    "name": "JECRC University",
+    "shortName": "JECRC Uni",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "amity-jaipur",
+    "name": "Amity University Rajasthan",
+    "shortName": "Amity Jaipur",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "iiit-kota",
+    "name": "Indian Institute of Information Technology Kota",
+    "shortName": "IIIT Kota",
+    "location": "Kota, Kota District, Rajasthan"
+  },
+  {
+    "id": "iis-university-jaipur",
+    "name": "IIS (Deemed to be University)",
+    "shortName": "IIS University",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "poornima-uni",
+    "name": "Poornima University",
+    "shortName": "Poornima Uni",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "sn-medical-college-jodhpur",
+    "name": "Dr. S.N. Medical College",
+    "shortName": "SNMC Jodhpur",
+    "location": "Jodhpur, Jodhpur District, Rajasthan"
+  },
+  {
+    "id": "sp-medical-college-bikaner",
+    "name": "Sardar Patel Medical College",
+    "shortName": "SPMC Bikaner",
+    "location": "Bikaner, Bikaner District, Rajasthan"
+  },
+  {
+    "id": "nift-jodhpur",
+    "name": "National Institute of Fashion Technology Jodhpur",
+    "shortName": "NIFT Jodhpur",
+    "location": "Jodhpur, Jodhpur District, Rajasthan"
+  },
+  {
+    "id": "fddi-jodhpur",
+    "name": "Footwear Design and Development Institute",
+    "shortName": "FDDI Jodhpur",
+    "location": "Jodhpur, Jodhpur District, Rajasthan"
+  },
+  {
+    "id": "ruhs-jaipur",
+    "name": "Rajasthan University of Health Sciences",
+    "shortName": "RUHS",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "mgs-uni-bikaner",
+    "name": "Maharaja Ganga Singh University",
+    "shortName": "MGSU",
+    "location": "Bikaner, Bikaner District, Rajasthan"
+  },
+  {
+    "id": "mds-uni-ajmer",
+    "name": "Maharshi Dayanand Saraswati University",
+    "shortName": "MDSU",
+    "location": "Ajmer, Ajmer District, Rajasthan"
+  },
+  {
+    "id": "uok-kota",
+    "name": "University of Kota",
+    "shortName": "UOK",
+    "location": "Kota, Kota District, Rajasthan"
+  },
+  {
+    "id": "btu-bikaner",
+    "name": "Bikaner Technical University",
+    "shortName": "BTU",
+    "location": "Bikaner, Bikaner District, Rajasthan"
+  },
+  {
+    "id": "niit-university",
+    "name": "NIIT University",
+    "shortName": "NU",
+    "location": "Neemrana, Alwar District, Rajasthan"
+  },
+  {
+    "id": "mody-uni",
+    "name": "Mody University of Science and Technology",
+    "shortName": "Mody University",
+    "location": "Lakshmangarh, Sikar District, Rajasthan"
+  },
+  {
+    "id": "gec-ajmer",
+    "name": "Government Engineering College Ajmer",
+    "shortName": "ECA",
+    "location": "Ajmer, Ajmer District, Rajasthan"
+  },
+  {
+    "id": "gec-bikaner",
+    "name": "Government Engineering College Bikaner",
+    "shortName": "ECB",
+    "location": "Bikaner, Bikaner District, Rajasthan"
+  },
+  {
+    "id": "ucet-bikaner",
+    "name": "University College of Engineering and Technology",
+    "shortName": "UCET Bikaner",
+    "location": "Bikaner, Bikaner District, Rajasthan"
+  },
+  {
+    "id": "jk-lakshmipat-uni",
+    "name": "JK Lakshmipat University",
+    "shortName": "JKLU",
+    "location": "Jaipur, Jaipur District, Rajasthan"
+  },
+  {
+    "id": "mewar-uni",
+    "name": "Mewar University",
+    "shortName": "Mewar Uni",
+    "location": "Chittorgarh, Chittorgarh District, Rajasthan"
+  },
+  {
+    "id": "jhalawar-medical-college",
+    "name": "Jhalawar Medical College",
+    "shortName": "JMC Jhalawar",
+    "location": "Jhalawar, Jhalawar District, Rajasthan"
+  },
+  {
+    "id": "rnt-medical-college-udaipur",
+    "name": "Ravindra Nath Tagore Medical College",
+    "shortName": "RNT Udaipur",
+    "location": "Udaipur, Udaipur District, Rajasthan"
+  },
+  {
+    "id": "jln-medical-college-ajmer",
+    "name": "Jawaharlal Nehru Medical College",
+    "shortName": "JLN Ajmer",
+    "location": "Ajmer, Ajmer District, Rajasthan"
+  },
+  {
+    "id": "ayurved-university-jodhpur",
+    "name": "Dr. Sarvepalli Radhakrishnan Rajasthan Ayurved University",
+    "shortName": "DSRRAU",
+    "location": "Jodhpur, Jodhpur District, Rajasthan"
+  },
+  {
+    "id": "nit-sikkim",
+    "name": "National Institute of Technology Sikkim",
+    "shortName": "NIT Sikkim",
+    "location": "Ravangla, Namchi District, Sikkim"
+  },
+  {
+    "id": "sikkim-university",
+    "name": "Sikkim University",
+    "shortName": "SU",
+    "location": "Gangtok, Gangtok District, Sikkim"
+  },
+  {
+    "id": "sikkim-manipal-university",
+    "name": "Sikkim Manipal University",
+    "shortName": "SMU",
+    "location": "Gangtok/Majitar, Sikkim"
+  },
+  {
+    "id": "caepht-sikkim",
+    "name": "College of Agricultural Engineering and Post Harvest Technology",
+    "shortName": "CAEPHT",
+    "location": "Ranipool, Gangtok District, Sikkim"
+  },
+  {
+    "id": "nar-bahadur-bhandari-government-college",
+    "name": "Nar Bahadur Bhandari Government College",
+    "shortName": "NBBGC (SGC Tadong)",
+    "location": "Tadong, Gangtok District, Sikkim"
+  },
+  {
+    "id": "srm-university-sikkim",
+    "name": "SRM University Sikkim",
+    "shortName": "SRM Sikkim",
+    "location": "Tadong, Gangtok District, Sikkim"
+  },
+  {
+    "id": "icfai-university-sikkim",
+    "name": "The ICFAI University, Sikkim",
+    "shortName": "ICFAI Sikkim",
+    "location": "Gangtok, Sikkim"
+  },
+  {
+    "id": "sikkim-government-college-namchi",
+    "name": "Sikkim Government College, Namchi",
+    "shortName": "SGC Namchi",
+    "location": "Kamrang, Namchi District, Sikkim"
+  },
+  {
+    "id": "sikkim-government-college-burtuk",
+    "name": "Sikkim Government College, Burtuk",
+    "shortName": "SGC Burtuk",
+    "location": "Burtuk, Gangtok District, Sikkim"
+  },
+  {
+    "id": "sikkim-government-college-rhenock",
+    "name": "Sikkim Government College, Rhenock",
+    "shortName": "SGC Rhenock",
+    "location": "Rhenock, Pakyong District, Sikkim"
+  },
+  {
+    "id": "sikkim-government-college-gyalshing",
+    "name": "Sikkim Government College, Gyalshing",
+    "shortName": "SGC Gyalshing",
+    "location": "Gyalshing, Gyalshing District, Sikkim"
+  },
+  {
+    "id": "sikkim-government-law-college",
+    "name": "Sikkim Government Law College",
+    "shortName": "SGLC",
+    "location": "Burtuk, Gangtok District, Sikkim"
+  },
+  {
+    "id": "himalayan-pharmacy-institute",
+    "name": "Himalayan Pharmacy Institute",
+    "shortName": "HPI",
+    "location": "Majhitar, Pakyong District, Sikkim"
+  },
+  {
+    "id": "advanced-technical-training-centre",
+    "name": "Advanced Technical Training Centre",
+    "shortName": "ATTC",
+    "location": "Bardang, Pakyong District, Sikkim"
+  },
+  {
+    "id": "centre-for-computers-and-communication-technology",
+    "name": "Centre for Computers and Communication Technology",
+    "shortName": "CCCT",
+    "location": "Chisopani, Namchi District, Sikkim"
+  },
+  {
+    "id": "vinayaka-missions-sikkim-university",
+    "name": "Vinayaka Missions Sikkim University",
+    "shortName": "VMSU",
+    "location": "Tadong, Gangtok District, Sikkim"
+  },
+  {
+    "id": "pakim-palatine-college",
+    "name": "Pakim Palatine College",
+    "shortName": "PPC",
+    "location": "Pakyong, Sikkim"
+  },
+  {
+    "id": "medhavi-skills-university",
+    "name": "Medhavi Skills University",
+    "shortName": "MSU",
+    "location": "Singtam, Sikkim"
+  },
+  {
+    "id": "sikkim-professional-university",
+    "name": "Sikkim Professional University",
+    "shortName": "SPU",
+    "location": "Gangtok, Sikkim"
+  },
+  {
+    "id": "sikkim-alpine-university",
+    "name": "Sikkim Alpine University",
+    "shortName": "SAU",
+    "location": "Kamrang, Namchi District, Sikkim"
+  },
+  {
+    "id": "iit-madras",
+    "name": "Indian Institute of Technology Madras",
+    "shortName": "IIT Madras",
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "id": "nit-trichy",
+    "name": "National Institute of Technology Tiruchirappalli",
+    "shortName": "NIT Trichy",
+    "location": "Tiruchirappalli, Tamil Nadu"
+  },
+  {
+    "id": "anna-university-chennai",
+    "name": "Anna University",
+    "shortName": "AU Chennai",
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "id": "vellore-institute-of-technology",
+    "name": "Vellore Institute of Technology",
+    "shortName": "VIT Vellore",
+    "location": "Vellore, Tamil Nadu"
+  },
+  {
+    "id": "amrita-vishwa-vidyapeetham-coimbatore",
+    "name": "Amrita Vishwa Vidyapeetham",
+    "shortName": "Amrita Coimbatore",
+    "location": "Ettimadai, Coimbatore, Tamil Nadu"
+  },
+  {
+    "id": "central-university-of-tamil-nadu",
+    "name": "Central University of Tamil Nadu",
+    "shortName": "CUTN",
+    "location": "Thiruvarur, Tamil Nadu"
+  },
+  {
+    "id": "university-of-madras",
+    "name": "University of Madras",
+    "shortName": "Madras University",
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "id": "bharathiar-university",
+    "name": "Bharathiar University",
+    "shortName": "BU Coimbatore",
+    "location": "Coimbatore, Tamil Nadu"
+  },
+  {
+    "id": "christian-medical-college-vellore",
+    "name": "Christian Medical College",
+    "shortName": "CMC Vellore",
+    "location": "Vellore, Tamil Nadu"
+  },
+  {
+    "id": "madras-medical-college",
+    "name": "Madras Medical College",
+    "shortName": "MMC Chennai",
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "id": "srm-institute-of-science-and-technology",
+    "name": "SRM Institute of Science and Technology",
+    "shortName": "SRMIST",
+    "location": "Kattankulathur, Chengalpattu, Tamil Nadu"
+  },
+  {
+    "id": "sastra-deemed-university",
+    "name": "Shanmugha Arts, Science, Technology & Research Academy",
+    "shortName": "SASTRA",
+    "location": "Thirumalaisamudram, Thanjavur, Tamil Nadu"
+  },
+  {
+    "id": "tamil-nadu-agricultural-university",
+    "name": "Tamil Nadu Agricultural University",
+    "shortName": "TNAU",
+    "location": "Coimbatore, Tamil Nadu"
+  },
+  {
+    "id": "psg-college-of-technology",
+    "name": "PSG College of Technology",
+    "shortName": "PSG Tech",
+    "location": "Coimbatore, Tamil Nadu"
+  },
+  {
+    "id": "ssn-college-of-engineering",
+    "name": "Sri Sivasubramaniya Nadar College of Engineering",
+    "shortName": "SSN",
+    "location": "Kalavakkam, Chengalpattu, Tamil Nadu"
+  },
+  {
+    "id": "loyola-college-chennai",
+    "name": "Loyola College",
+    "shortName": "Loyola",
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "id": "madras-christian-college",
+    "name": "Madras Christian College",
+    "shortName": "MCC",
+    "location": "Tambaram, Chengalpattu, Tamil Nadu"
+  },
+  {
+    "id": "tamil-nadu-national-law-university",
+    "name": "Tamil Nadu National Law University",
+    "shortName": "TNNLU",
+    "location": "Tiruchirappalli, Tamil Nadu"
+  },
+  {
+    "id": "iim-tiruchirappalli",
+    "name": "Indian Institute of Management Tiruchirappalli",
+    "shortName": "IIM Trichy",
+    "location": "Tiruchirappalli, Tamil Nadu"
+  },
+  {
+    "id": "iiitdm-kancheepuram",
+    "name": "Indian Institute of Information Technology, Design and Manufacturing",
+    "shortName": "IIITDM Kancheepuram",
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "id": "iit-hyderabad",
+    "name": "Indian Institute of Technology Hyderabad",
+    "shortName": "IIT Hyderabad",
+    "location": "Kandi, Sangareddy, Telangana"
+  },
+  {
+    "id": "university-of-hyderabad",
+    "name": "University of Hyderabad",
+    "shortName": "UoH (HCU)",
+    "location": "Gachibowli, Hyderabad, Telangana"
+  },
+  {
+    "id": "nit-warangal",
+    "name": "National Institute of Technology Warangal",
+    "shortName": "NIT Warangal",
+    "location": "Warangal, Telangana"
+  },
+  {
+    "id": "iiit-hyderabad",
+    "name": "International Institute of Information Technology Hyderabad",
+    "shortName": "IIIT Hyderabad",
+    "location": "Gachibowli, Hyderabad, Telangana"
+  },
+  {
+    "id": "osmania-university",
+    "name": "Osmania University",
+    "shortName": "OU",
+    "location": "Hyderabad, Telangana"
+  },
+  {
+    "id": "jntu-hyderabad",
+    "name": "Jawaharlal Nehru Technological University Hyderabad",
+    "shortName": "JNTUH",
+    "location": "Kukatpally, Hyderabad, Telangana"
+  },
+  {
+    "id": "bits-pilani-hyderabad",
+    "name": "Birla Institute of Technology and Science, Pilani - Hyderabad Campus",
+    "shortName": "BITS Hyderabad",
+    "location": "Jawaharnagar, Shameerpet, Telangana"
+  },
+  {
+    "id": "nalsar-university-of-law",
+    "name": "NALSAR University of Law",
+    "shortName": "NALSAR",
+    "location": "Shameerpet, Hyderabad, Telangana"
+  },
+  {
+    "id": "eflu-hyderabad",
+    "name": "The English and Foreign Languages University",
+    "shortName": "EFLU",
+    "location": "Tarnaka, Hyderabad, Telangana"
+  },
+  {
+    "id": "mahendra-university",
+    "name": "Mahindra University",
+    "shortName": "MU Hyderabad",
+    "location": "Bahadurpally, Hyderabad, Telangana"
+  },
+  {
+    "id": "chaitanya-bharathi-institute-of-technology",
+    "name": "Chaitanya Bharathi Institute of Technology",
+    "shortName": "CBIT",
+    "location": "Gandipet, Hyderabad, Telangana"
+  },
+  {
+    "id": "vasavi-college-of-engineering",
+    "name": "Vasavi College of Engineering",
+    "shortName": "Vasavi",
+    "location": "Ibrahimbagh, Hyderabad, Telangana"
+  },
+  {
+    "id": "vnr-vignana-jyothi-institute-of-engineering-and-technology",
+    "name": "VNR Vignana Jyothi Institute of Engineering and Technology",
+    "shortName": "VNR VJIET",
+    "location": "Bachupally, Hyderabad, Telangana"
+  },
+  {
+    "id": "kakatiya-university",
+    "name": "Kakatiya University",
+    "shortName": "KU Warangal",
+    "location": "Warangal, Telangana"
+  },
+  {
+    "id": "osmania-medical-college",
+    "name": "Osmania Medical College",
+    "shortName": "OMC",
+    "location": "Koti, Hyderabad, Telangana"
+  },
+  {
+    "id": "woxsen-university",
+    "name": "Woxsen University",
+    "shortName": "Woxsen",
+    "location": "Kamkole, Sangareddy, Telangana"
+  },
+  {
+    "id": "anurag-university",
+    "name": "Anurag University",
+    "shortName": "Anurag University",
+    "location": "Venkatapur, Medchal, Telangana"
+  },
+  {
+    "id": "nizam-college-hyderabad",
+    "name": "Nizam College",
+    "shortName": "Nizam College",
+    "location": "Basheerbagh, Hyderabad, Telangana"
+  },
+  {
+    "id": "telangana-mahila-viswavidyalayam",
+    "name": "Telangana Mahila Viswavidyalayam (Telangana Women's University)",
+    "shortName": "TMV",
+    "location": "Koti, Hyderabad, Telangana"
+  },
+  {
+    "id": "icfai-foundation-for-higher-education",
+    "name": "ICFAI Foundation for Higher Education",
+    "shortName": "IFHE (ICFAI Hyderabad)",
+    "location": "Shankarpally Road, Hyderabad, Telangana"
+  },
+  {
+    "id": "nit-agartala",
+    "name": "National Institute of Technology Agartala",
+    "shortName": "NIT Agartala",
+    "location": "Jirania, West Tripura, Tripura"
+  },
+  {
+    "id": "tripura-university",
+    "name": "Tripura University",
+    "shortName": "TU",
+    "location": "Suryamaninagar, West Tripura, Tripura"
+  },
+  {
+    "id": "iiit-agartala",
+    "name": "Indian Institute of Information Technology Agartala",
+    "shortName": "IIIT Agartala",
+    "location": "Jirania, West Tripura, Tripura"
+  },
+  {
+    "id": "maharaja-bir-bikram-university",
+    "name": "Maharaja Bir Bikram University",
+    "shortName": "MBB University",
+    "location": "Agartala, Tripura"
+  },
+  {
+    "id": "icfai-university-tripura",
+    "name": "The ICFAI University, Tripura",
+    "shortName": "ICFAI Tripura",
+    "location": "Kamalghat, West Tripura, Tripura"
+  },
+  {
+    "id": "agartala-government-medical-college",
+    "name": "Agartala Government Medical College",
+    "shortName": "AGMC",
+    "location": "Agartala, Tripura"
+  },
+  {
+    "id": "tripura-medical-college",
+    "name": "Tripura Medical College & Dr. B.R. Ambedkar Memorial Teaching Hospital",
+    "shortName": "TMC",
+    "location": "Hapania, West Tripura, Tripura"
+  },
+  {
+    "id": "tripura-institute-of-technology",
+    "name": "Tripura Institute of Technology",
+    "shortName": "TIT Narsingarh",
+    "location": "Narsingarh, West Tripura, Tripura"
+  },
+  {
+    "id": "national-forensic-sciences-university-tripura",
+    "name": "National Forensic Sciences University, Tripura Campus",
+    "shortName": "NFSU Tripura",
+    "location": "Agartala, Tripura"
+  },
+  {
+    "id": "college-of-fisheries-tripura",
+    "name": "College of Fisheries, Lembucherra",
+    "shortName": "COF Tripura",
+    "location": "Lembucherra, West Tripura, Tripura"
+  },
+  {
+    "id": "college-of-agriculture-tripura",
+    "name": "College of Agriculture, Tripura",
+    "shortName": "CAT",
+    "location": "Lembucherra, West Tripura, Tripura"
+  },
+  {
+    "id": "college-of-veterinary-sciences-tripura",
+    "name": "College of Veterinary Sciences and Animal Husbandry",
+    "shortName": "CVSc Tripura",
+    "location": "R.K. Nagar, West Tripura, Tripura"
+  },
+  {
+    "id": "techno-college-of-engineering-agartala",
+    "name": "Techno College of Engineering Agartala",
+    "shortName": "TCEA",
+    "location": "Maheshkhola, West Tripura, Tripura"
+  },
+  {
+    "id": "maharaja-bir-bikram-college",
+    "name": "Maharaja Bir Bikram College",
+    "shortName": "MBB College",
+    "location": "Agartala, Tripura"
+  },
+  {
+    "id": "womens-college-agartala",
+    "name": "Women's College, Agartala",
+    "shortName": "Women's College",
+    "location": "Agartala, Tripura"
+  },
+  {
+    "id": "ramthakur-college",
+    "name": "Ramthakur College",
+    "shortName": "Ramthakur College",
+    "location": "Agartala, Tripura"
+  },
+  {
+    "id": "holy-cross-college-agartala",
+    "name": "Holy Cross College",
+    "shortName": "Holy Cross",
+    "location": "Jubatara, West Tripura, Tripura"
+  },
+  {
+    "id": "ripsat-agartala",
+    "name": "Regional Institute of Pharmaceutical Science and Technology",
+    "shortName": "RIPSAT",
+    "location": "Agartala, Tripura"
+  },
+  {
+    "id": "tripura-government-law-college",
+    "name": "Tripura Government Law College",
+    "shortName": "TGLC",
+    "location": "Agartala, Tripura"
+  },
+  {
+    "id": "netaji-subhash-mahavidyalaya-udaipur",
+    "name": "Netaji Subhash Mahavidyalaya (Govt Degree College, Udaipur)",
+    "shortName": "NSM Udaipur",
+    "location": "Udaipur, Gomati, Tripura"
+  },
+  {
+    "id": "ishwar-chandra-vidyasagar-college-belonia",
+    "name": "Ishwar Chandra Vidyasagar College (Govt Degree College, Belonia)",
+    "shortName": "ICVC Belonia",
+    "location": "Belonia, South Tripura, Tripura"
+  },
+  {
+    "id": "ramkrishna-mahavidyalaya-kailashahar",
+    "name": "Ramkrishna Mahavidyalaya (Govt Degree College, Kailashahar)",
+    "shortName": "RKM Kailashahar",
+    "location": "Kailashahar, Unakoti, Tripura"
+  },
+  {
+    "id": "govt-degree-college-dharmanagar",
+    "name": "Government Degree College, Dharmanagar",
+    "shortName": "GDC Dharmanagar",
+    "location": "Dharmanagar, North Tripura, Tripura"
+  },
+  {
+    "id": "iit-roorkee",
+    "name": "Indian Institute of Technology Roorkee",
+    "shortName": "IIT Roorkee",
+    "location": "Roorkee, Haridwar, Uttarakhand"
+  },
+  {
+    "id": "aiims-rishikesh",
+    "name": "All India Institute of Medical Sciences Rishikesh",
+    "shortName": "AIIMS Rishikesh",
+    "location": "Rishikesh, Dehradun, Uttarakhand"
+  },
+  {
+    "id": "nit-uttarakhand",
+    "name": "National Institute of Technology Uttarakhand",
+    "shortName": "NIT Uttarakhand",
+    "location": "Srinagar, Pauri Garhwal, Uttarakhand"
+  },
+  {
+    "id": "gb-pant-university-agriculture-technology",
+    "name": "Govind Ballabh Pant University of Agriculture and Technology",
+    "shortName": "GBPUAT",
+    "location": "Pantnagar, Udham Singh Nagar, Uttarakhand"
+  },
+  {
+    "id": "hnb-garhwal-university",
+    "name": "Hemvati Nandan Bahuguna Garhwal University",
+    "shortName": "HNBGU",
+    "location": "Srinagar, Pauri Garhwal, Uttarakhand"
+  },
+  {
+    "id": "kumaun-university",
+    "name": "Kumaun University",
+    "shortName": "KU Nainital",
+    "location": "Nainital, Uttarakhand"
+  },
+  {
+    "id": "university-of-petroleum-energy-studies",
+    "name": "University of Petroleum and Energy Studies",
+    "shortName": "UPES",
+    "location": "Dehradun, Uttarakhand"
+  },
+  {
+    "id": "graphic-era-university",
+    "name": "Graphic Era (Deemed to be University)",
+    "shortName": "GEU",
+    "location": "Dehradun, Uttarakhand"
+  },
+  {
+    "id": "doon-university",
+    "name": "Doon University",
+    "shortName": "Doon University",
+    "location": "Dehradun, Uttarakhand"
+  },
+  {
+    "id": "uttarakhand-technical-university",
+    "name": "Veer Madho Singh Bhandari Uttarakhand Technical University",
+    "shortName": "UTU",
+    "location": "Dehradun, Uttarakhand"
+  },
+  {
+    "id": "govt-medical-college-haldwani",
+    "name": "Government Medical College, Haldwani",
+    "shortName": "GMC Haldwani",
+    "location": "Haldwani, Nainital, Uttarakhand"
+  },
+  {
+    "id": "govt-doon-medical-college",
+    "name": "Government Doon Medical College",
+    "shortName": "GDMC Dehradun",
+    "location": "Dehradun, Uttarakhand"
+  },
+  {
+    "id": "shri-guru-ram-rai-university",
+    "name": "Shri Guru Ram Rai University",
+    "shortName": "SGRR University",
+    "location": "Dehradun, Uttarakhand"
+  },
+  {
+    "id": "uttaranchal-university",
+    "name": "Uttaranchal University",
+    "shortName": "Uttaranchal University",
+    "location": "Dehradun, Uttarakhand"
+  },
+  {
+    "id": "swami-rama-himalayan-university",
+    "name": "Swami Rama Himalayan University",
+    "shortName": "SRHU",
+    "location": "Jolly Grant, Dehradun, Uttarakhand"
+  },
+  {
+    "id": "college-of-technology-pantnagar",
+    "name": "College of Technology, Pantnagar",
+    "shortName": "COT Pantnagar",
+    "location": "Pantnagar, Udham Singh Nagar, Uttarakhand"
+  },
+  {
+    "id": "bipin-tripathi-kumaon-institute-of-technology",
+    "name": "Bipin Tripathi Kumaon Institute of Technology",
+    "shortName": "BTKIT Dwarahat",
+    "location": "Dwarahat, Almora, Uttarakhand"
+  },
+  {
+    "id": "thdc-institute-of-hydropower-engineering-and-technology",
+    "name": "THDC Institute of Hydropower Engineering and Technology",
+    "shortName": "THDC-IHET",
+    "location": "Tehri, Uttarakhand"
+  },
+  {
+    "id": "women-institute-of-technology-dehradun",
+    "name": "Women Institute of Technology",
+    "shortName": "WIT Dehradun",
+    "location": "Dehradun, Uttarakhand"
+  },
+  {
+    "id": "nanhi-pari-seemant-engineering-institute",
+    "name": "Nanhi Pari Seemant Engineering Institute",
+    "shortName": "NPSEI Pithoragarh",
+    "location": "Pithoragarh, Uttarakhand"
+  },
+  {
+    "id": "iit-kanpur",
+    "name": "Indian Institute of Technology Kanpur",
+    "shortName": "IIT Kanpur",
+    "location": "Kanpur, Kanpur Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "iit-bhu-varanasi",
+    "name": "Indian Institute of Technology (BHU) Varanasi",
+    "shortName": "IIT BHU",
+    "location": "Varanasi, Varanasi District, Uttar Pradesh"
+  },
+  {
+    "id": "iim-lucknow",
+    "name": "Indian Institute of Management Lucknow",
+    "shortName": "IIM Lucknow",
+    "location": "Lucknow, Lucknow District, Uttar Pradesh"
+  },
+  {
+    "id": "bhu-varanasi",
+    "name": "Banaras Hindu University",
+    "shortName": "BHU",
+    "location": "Varanasi, Varanasi District, Uttar Pradesh"
+  },
+  {
+    "id": "amu-aligarh",
+    "name": "Aligarh Muslim University",
+    "shortName": "AMU",
+    "location": "Aligarh, Aligarh District, Uttar Pradesh"
+  },
+  {
+    "id": "mnnit-allahabad",
+    "name": "Motilal Nehru National Institute of Technology Allahabad",
+    "shortName": "MNNIT Allahabad",
+    "location": "Prayagraj, Prayagraj District, Uttar Pradesh"
+  },
+  {
+    "id": "iiit-allahabad",
+    "name": "Indian Institute of Information Technology Allahabad",
+    "shortName": "IIIT Allahabad",
+    "location": "Prayagraj, Prayagraj District, Uttar Pradesh"
+  },
+  {
+    "id": "hbtu-kanpur",
+    "name": "Harcourt Butler Technical University",
+    "shortName": "HBTU Kanpur",
+    "location": "Kanpur, Kanpur Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "rgipt-amethi",
+    "name": "Rajiv Gandhi Institute of Petroleum Technology",
+    "shortName": "RGIPT",
+    "location": "Jais, Amethi District, Uttar Pradesh"
+  },
+  {
+    "id": "iet-lucknow",
+    "name": "Institute of Engineering and Technology Lucknow",
+    "shortName": "IET Lucknow",
+    "location": "Lucknow, Lucknow District, Uttar Pradesh"
+  },
+  {
+    "id": "kgmu-lucknow",
+    "name": "King George's Medical University",
+    "shortName": "KGMU",
+    "location": "Lucknow, Lucknow District, Uttar Pradesh"
+  },
+  {
+    "id": "ims-bhu-varanasi",
+    "name": "Institute of Medical Sciences, BHU",
+    "shortName": "IMS BHU",
+    "location": "Varanasi, Varanasi District, Uttar Pradesh"
+  },
+  {
+    "id": "sgpgims-lucknow",
+    "name": "Sanjay Gandhi Postgraduate Institute of Medical Sciences",
+    "shortName": "SGPGIMS",
+    "location": "Lucknow, Lucknow District, Uttar Pradesh"
+  },
+  {
+    "id": "rml-nlu-lucknow",
+    "name": "Dr. Ram Manohar Lohiya National Law University",
+    "shortName": "RMLNLU",
+    "location": "Lucknow, Lucknow District, Uttar Pradesh"
+  },
+  {
+    "id": "aktu-lucknow",
+    "name": "Dr. A.P.J. Abdul Kalam Technical University",
+    "shortName": "AKTU",
+    "location": "Lucknow, Lucknow District, Uttar Pradesh"
+  },
+  {
+    "id": "university-of-lucknow",
+    "name": "University of Lucknow",
+    "shortName": "LU",
+    "location": "Lucknow, Lucknow District, Uttar Pradesh"
+  },
+  {
+    "id": "university-of-allahabad",
+    "name": "University of Allahabad",
+    "shortName": "AU",
+    "location": "Prayagraj, Prayagraj District, Uttar Pradesh"
+  },
+  {
+    "id": "amity-university-noida",
+    "name": "Amity University Uttar Pradesh",
+    "shortName": "Amity Noida",
+    "location": "Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "shiv-nadar-uni",
+    "name": "Shiv Nadar Institution of Eminence",
+    "shortName": "SNU",
+    "location": "Greater Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "jiit-noida",
+    "name": "Jaypee Institute of Information Technology",
+    "shortName": "JIIT Noida",
+    "location": "Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "bennett-uni",
+    "name": "Bennett University",
+    "shortName": "Bennett Uni",
+    "location": "Greater Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "sharda-uni",
+    "name": "Sharda University",
+    "shortName": "Sharda",
+    "location": "Greater Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "galgotias-uni",
+    "name": "Galgotias University",
+    "shortName": "Galgotias",
+    "location": "Greater Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "gla-uni-mathura",
+    "name": "GLA University",
+    "shortName": "GLA Mathura",
+    "location": "Mathura, Mathura District, Uttar Pradesh"
+  },
+  {
+    "id": "dayalbagh-agra",
+    "name": "Dayalbagh Educational Institute",
+    "shortName": "DEI Agra",
+    "location": "Agra, Agra District, Uttar Pradesh"
+  },
+  {
+    "id": "jss-noida",
+    "name": "JSS Academy of Technical Education",
+    "shortName": "JSS Noida",
+    "location": "Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "akg-ghaziabad",
+    "name": "Ajay Kumar Garg Engineering College",
+    "shortName": "AKGEC",
+    "location": "Ghaziabad, Ghaziabad District, Uttar Pradesh"
+  },
+  {
+    "id": "kiet-ghaziabad",
+    "name": "KIET Group of Institutions",
+    "shortName": "KIET",
+    "location": "Ghaziabad, Ghaziabad District, Uttar Pradesh"
+  },
+  {
+    "id": "abes-ghaziabad",
+    "name": "ABES Engineering College",
+    "shortName": "ABES-EC",
+    "location": "Ghaziabad, Ghaziabad District, Uttar Pradesh"
+  },
+  {
+    "id": "gl-bajaj-noida",
+    "name": "G.L. Bajaj Institute of Technology and Management",
+    "shortName": "GL Bajaj",
+    "location": "Greater Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "niet-noida",
+    "name": "Noida Institute of Engineering and Technology",
+    "shortName": "NIET",
+    "location": "Greater Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "gniot-noida",
+    "name": "GNIOT Group of Institutions",
+    "shortName": "GNIOT",
+    "location": "Greater Noida, Gautam Buddha Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "psit-kanpur",
+    "name": "Pranveer Singh Institute of Technology",
+    "shortName": "PSIT Kanpur",
+    "location": "Kanpur, Kanpur Nagar, Uttar Pradesh"
+  },
+  {
+    "id": "srmu-lucknow",
+    "name": "Shri Ramswaroop Memorial University",
+    "shortName": "SRMU",
+    "location": "Barabanki, Uttar Pradesh"
+  },
+  {
+    "id": "integral-uni-lucknow",
+    "name": "Integral University",
+    "shortName": "Integral",
+    "location": "Lucknow, Lucknow District, Uttar Pradesh"
+  },
+  {
+    "id": "bbau-lucknow",
+    "name": "Babasaheb Bhimrao Ambedkar University",
+    "shortName": "BBAU",
+    "location": "Lucknow, Lucknow District, Uttar Pradesh"
+  },
+  {
+    "id": "ccsu-meerut",
+    "name": "Chaudhary Charan Singh University",
+    "shortName": "CCSU",
+    "location": "Meerut, Meerut District, Uttar Pradesh"
+  },
+  {
+    "id": "ddu-gorakhpur",
+    "name": "Deen Dayal Upadhyaya Gorakhpur University",
+    "shortName": "DDU GU",
+    "location": "Gorakhpur, Gorakhpur District, Uttar Pradesh"
+  },
+  {
+    "id": "mjpr-bareilly",
+    "name": "Mahatma Jyotiba Phule Rohilkhand University",
+    "shortName": "MJPRU",
+    "location": "Bareilly, Bareilly District, Uttar Pradesh"
+  },
+  {
+    "id": "iit-kharagpur",
+    "name": "Indian Institute of Technology Kharagpur",
+    "shortName": "IIT KGP",
+    "location": "Kharagpur, Paschim Medinipur, West Bengal"
+  },
+  {
+    "id": "iim-calcutta",
+    "name": "Indian Institute of Management Calcutta",
+    "shortName": "IIM Calcutta",
+    "location": "Joka, Kolkata, West Bengal"
+  },
+  {
+    "id": "jadavpur-university",
+    "name": "Jadavpur University",
+    "shortName": "JU",
+    "location": "Jadavpur, Kolkata, West Bengal"
+  },
+  {
+    "id": "university-of-calcutta",
+    "name": "University of Calcutta",
+    "shortName": "CU",
+    "location": "Kolkata, West Bengal"
+  },
+  {
+    "id": "indian-statistical-institute-kolkata",
+    "name": "Indian Statistical Institute",
+    "shortName": "ISI Kolkata",
+    "location": "Baranagar, Kolkata, West Bengal"
+  },
+  {
+    "id": "iiest-shibpur",
+    "name": "Indian Institute of Engineering Science and Technology, Shibpur",
+    "shortName": "IIEST Shibpur",
+    "location": "Shibpur, Howrah, West Bengal"
+  },
+  {
+    "id": "nit-durgapur",
+    "name": "National Institute of Technology Durgapur",
+    "shortName": "NIT Durgapur",
+    "location": "Durgapur, Paschim Bardhaman, West Bengal"
+  },
+  {
+    "id": "iiser-kolkata",
+    "name": "Indian Institute of Science Education and Research Kolkata",
+    "shortName": "IISER Kolkata",
+    "location": "Mohanpur, Nadia, West Bengal"
+  },
+  {
+    "id": "visva-bharati-university",
+    "name": "Visva-Bharati University",
+    "shortName": "Visva-Bharati",
+    "location": "Santiniketan, Birbhum, West Bengal"
+  },
+  {
+    "id": "nujs-kolkata",
+    "name": "West Bengal National University of Juridical Sciences",
+    "shortName": "WBNUJS",
+    "location": "Kolkata, West Bengal"
+  },
+  {
+    "id": "presidency-university-kolkata",
+    "name": "Presidency University",
+    "shortName": "Presidency",
+    "location": "Kolkata, West Bengal"
+  },
+  {
+    "id": "st-xaviers-college-kolkata",
+    "name": "St. Xavier's College (Autonomous)",
+    "shortName": "SXC Kolkata",
+    "location": "Kolkata, West Bengal"
+  },
+  {
+    "id": "medical-college-kolkata",
+    "name": "Medical College and Hospital, Kolkata",
+    "shortName": "MCK (Calcutta Medical College)",
+    "location": "Kolkata, West Bengal"
+  },
+  {
+    "id": "ipgmer-sskm-hospital",
+    "name": "Institute of Post Graduate Medical Education and Research",
+    "shortName": "IPGMER (SSKM)",
+    "location": "Kolkata, West Bengal"
+  },
+  {
+    "id": "makaut-kolkata",
+    "name": "Maulana Abul Kalam Azad University of Technology",
+    "shortName": "MAKAUT (WBUT)",
+    "location": "Haringhata, Nadia, West Bengal"
+  },
+  {
+    "id": "iem-kolkata",
+    "name": "Institute of Engineering and Management",
+    "shortName": "IEM Kolkata",
+    "location": "Salt Lake, Kolkata, West Bengal"
+  },
+  {
+    "id": "heritage-institute-of-technology",
+    "name": "Heritage Institute of Technology",
+    "shortName": "HIT Kolkata",
+    "location": "Kolkata, West Bengal"
+  },
+  {
+    "id": "bidhan-chandra-krishi-viswavidyalaya",
+    "name": "Bidhan Chandra Krishi Viswavidyalaya",
+    "shortName": "BCKV",
+    "location": "Mohanpur, Nadia, West Bengal"
+  },
+  {
+    "id": "st-xaviers-university-kolkata",
+    "name": "St. Xavier's University",
+    "shortName": "SXUK",
+    "location": "New Town, Kolkata, West Bengal"
+  },
+  {
+    "id": "ramakrishna-mission-vidyamandira",
+    "name": "Ramakrishna Mission Vidyamandira",
+    "shortName": "RKM Belur",
+    "location": "Belur Math, Howrah, West Bengal"
+  }
+]

@@ -1,0 +1,2301 @@
+[
+  {
+    "id": "iit-guwahati",
+    "name": "Indian Institute of Technology Guwahati",
+    "shortName": "IIT Guwahati",
+    "location": "Guwahati, Kamrup District, Assam",
+    "rankingTier": "Tier 1",
+    "overview": "The sixth IIT established in India, known for its scenic campus and research excellence.",
+    "campus": "North Guwahati, Guwahati",
+    "officialUrl": "https://www.iitg.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam",
+      "uceed",
+      "ceed"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Mech, Civil, Chemical, BioTech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "B.Des",
+        "degree": "B.Des",
+        "duration": "4 years",
+        "exams": [
+          "uceed"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: 607 | ECE: 1610 | MnC: 1120",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Google",
+      "Goldman Sachs",
+      "Uber"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iitg.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1994",
+      "district": "Kamrup",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹25.5 LPA",
+      "medianPackage": "₹21.0 LPA",
+      "highestPackage": "₹1.20 CPA"
+    }
+  },
+  {
+    "id": "nit-silchar",
+    "name": "National Institute of Technology Silchar",
+    "shortName": "NIT Silchar",
+    "location": "Silchar, Cachar District, Assam",
+    "rankingTier": "Tier 1",
+    "overview": "One of the premier NITs in the North East, consistently ranked high for engineering.",
+    "campus": "Fakiragram, Silchar",
+    "officialUrl": "http://www.nits.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "cat",
+      "mat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EE, Mech, Civil, EIE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Samsung",
+      "Oracle",
+      "SAP"
+    ],
+    "tuition": "Standard NIT Fees",
+    "sources": [
+      "http://www.nits.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1967",
+      "district": "Cachar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "tezpur-university",
+    "name": "Tezpur University",
+    "shortName": "TU",
+    "location": "Tezpur, Sonitpur District, Assam",
+    "rankingTier": "Tier 1",
+    "overview": "A central university known for its lush green campus and academic quality, often ranked among top universities in India.",
+    "campus": "Napaam, Tezpur",
+    "officialUrl": "http://www.tezu.ernet.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jee-main",
+      "gate",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, Food Tech, Electrical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Integrated M.Sc / M.Com / M.A.",
+        "degree": "Integrated PG",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "xat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Wipro",
+      "ITC"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "http://www.tezu.ernet.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "1994",
+      "district": "Sonitpur",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "gauhati-university",
+    "name": "Gauhati University",
+    "shortName": "GU",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "The oldest university in North East India, affiliating hundreds of colleges.",
+    "campus": "Jalukbari, Guwahati",
+    "officialUrl": "https://www.gauhati.ac.in",
+    "acceptedExams": [
+      "merit-based",
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc (Physics, Chem, Botany, Zoology)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "M.A. (English, Assamese, Pol Science, History)",
+        "degree": "M.A.",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "M.Com",
+        "degree": "M.Com",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "B.Tech (GUIST)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "assam-cee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Univ)",
+    "sources": [
+      "https://www.gauhati.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1948",
+      "district": "Kamrup Metro",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dibrugarh-university",
+    "name": "Dibrugarh University",
+    "shortName": "DU",
+    "location": "Dibrugarh, Dibrugarh District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "Major state university serving Upper Assam, known for Petroleum Technology and Management.",
+    "campus": "Rajabheta, Dibrugarh",
+    "officialUrl": "https://dibru.ac.in",
+    "acceptedExams": [
+      "merit-based",
+      "dupget"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Petroleum Engg, Mech, CSE, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "assam-cee"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "cmat"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "dupget"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "dupget",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Oil India",
+      "ONGC"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://dibru.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1965",
+      "district": "Dibrugarh",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "assam-agricultural-university",
+    "name": "Assam Agricultural University",
+    "shortName": "AAU Jorhat",
+    "location": "Jorhat, Jorhat District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "The first agricultural university in the North East, pioneering tea research.",
+    "campus": "Barbheta, Jorhat",
+    "officialUrl": "http://www.aau.ac.in",
+    "acceptedExams": [
+      "aau-vet",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "merit-based",
+          "icar-aieea"
+        ]
+      },
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "B.V.Sc",
+        "duration": "5.5 years",
+        "exams": [
+          "aau-vet"
+        ]
+      },
+      {
+        "name": "B.Sc (Community Science)",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "aau-vet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Tea Estates",
+      "Agro Industries"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.aau.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1969",
+      "district": "Jorhat",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "assam-university-silchar",
+    "name": "Assam University",
+    "shortName": "AUS Silchar",
+    "location": "Silchar, Cachar District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "A central university serving the Barak Valley region.",
+    "campus": "Dorgakona, Silchar",
+    "officialUrl": "http://www.aus.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Agricultural Engg)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Integrated B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "cmat",
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "http://www.aus.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "1994",
+      "district": "Cachar",
+      "naacGrade": "B",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cotton-university",
+    "name": "Cotton University",
+    "shortName": "Cotton Uni",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "Ideally evolved from the historic Cotton College, it is a premier state university for liberal arts and sciences.",
+    "campus": "Panbazar, Guwahati",
+    "officialUrl": "https://cottonuniversity.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Honours)",
+        "degree": "B.A.",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Honours)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A. / M.Sc",
+        "degree": "PG",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://cottonuniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "2017",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nlu-assam",
+    "name": "National Law University and Judicial Academy, Assam",
+    "shortName": "NLUJAA",
+    "location": "Guwahati, Kamrup District, Assam",
+    "rankingTier": "Tier 1",
+    "overview": "The only National Law University in the North East region (excluding Meghalaya).",
+    "campus": "Amingaon, Guwahati",
+    "officialUrl": "http://www.nluassam.ac.in",
+    "acceptedExams": [
+      "clat-ug",
+      "clat-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat-ug"
+        ]
+      },
+      {
+        "name": "LL.M",
+        "degree": "LL.M",
+        "duration": "1 year",
+        "exams": [
+          "clat-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat-ug",
+        "year": "2024",
+        "cutoff": "AIR ~1500-1600"
+      }
+    ],
+    "topRecruiters": [
+      "Law Firms",
+      "Corporate Legal Depts"
+    ],
+    "tuition": "~INR 2.5 Lakhs/year",
+    "sources": [
+      "http://www.nluassam.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Legislature / NLU",
+      "establishedYear": "2009",
+      "district": "Kamrup",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "gauhati-medical-college",
+    "name": "Gauhati Medical College and Hospital",
+    "shortName": "GMCH Guwahati",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 1",
+    "overview": "The premier medical college of Assam and the North East.",
+    "campus": "Bhangagarh, Guwahati",
+    "officialUrl": "https://gmchassam.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      },
+      {
+        "name": "DM/M.Ch",
+        "degree": "Super Specialty",
+        "duration": "3 years",
+        "exams": [
+          "neet-ss"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "State Rank Top 50"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://gmchassam.gov.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "SSUHS Guwahati"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1960",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "assam-medical-college-dibrugarh",
+    "name": "Assam Medical College",
+    "shortName": "AMCH Dibrugarh",
+    "location": "Dibrugarh, Dibrugarh District, Assam",
+    "rankingTier": "Tier 1",
+    "overview": "The oldest medical college in North East India (est. 1947).",
+    "campus": "Barbari, Dibrugarh",
+    "officialUrl": "https://www.assammedicalcollege.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.assammedicalcollege.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "SSUHS Guwahati"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1947",
+      "district": "Dibrugarh",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "silchar-medical-college",
+    "name": "Silchar Medical College and Hospital",
+    "shortName": "SMCH Silchar",
+    "location": "Silchar, Cachar District, Assam",
+    "rankingTier": "Tier 1",
+    "overview": "Major government medical college serving the Barak Valley.",
+    "campus": "Ghungoor, Silchar",
+    "officialUrl": "https://smcassam.gov.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://smcassam.gov.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "SSUHS Guwahati"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1968",
+      "district": "Cachar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "jorhat-medical-college",
+    "name": "Jorhat Medical College and Hospital",
+    "shortName": "JMCH Jorhat",
+    "location": "Jorhat, Jorhat District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "Established in 2009 to serve Upper Assam.",
+    "campus": "Kushal Konwar Path, Jorhat",
+    "officialUrl": "https://jorhatmedicalcollege.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://jorhatmedicalcollege.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "SSUHS Guwahati"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2009",
+      "district": "Jorhat",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "aec-guwahati",
+    "name": "Assam Engineering College",
+    "shortName": "AEC Guwahati",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "Premier government engineering college of Assam, established in 1955.",
+    "campus": "Jalukbari, Guwahati",
+    "officialUrl": "https://aec.ac.in",
+    "acceptedExams": [
+      "assam-cee",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, Electrical, Chemical, CSE, ETE, I&P)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "assam-cee"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate",
+          "assam-cee-pg"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "assam-jme"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "assam-cee",
+        "year": "2024",
+        "cutoff": "Civil: Rank ~300-400 (Gen)"
+      }
+    ],
+    "topRecruiters": [
+      "Oil India",
+      "APDCL",
+      "TCS",
+      "Wipro"
+    ],
+    "tuition": "Government Fees (~INR 11,000/year)",
+    "sources": [
+      "https://aec.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "ASTU Guwahati"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1955",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jec-jorhat",
+    "name": "Jorhat Engineering College",
+    "shortName": "JEC Jorhat",
+    "location": "Jorhat, Jorhat District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "Second oldest government engineering college in the North East.",
+    "campus": "Garmur, Jorhat",
+    "officialUrl": "https://jecassam.ac.in",
+    "acceptedExams": [
+      "assam-cee",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, Electrical, CSE, Instrumentation)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "assam-cee"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "assam-jme"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "assam-cee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Oil India",
+      "BCPL",
+      "TCS"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://jecassam.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "ASTU Guwahati"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1960",
+      "district": "Jorhat",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jist-jorhat",
+    "name": "Jorhat Institute of Science and Technology",
+    "shortName": "JIST",
+    "location": "Jorhat, Jorhat District, Assam",
+    "rankingTier": "Tier 3",
+    "overview": "Formerly Science College Jorhat, now offering engineering and science courses.",
+    "campus": "Sotai, Jorhat",
+    "officialUrl": "https://jist.ac.in",
+    "acceptedExams": [
+      "assam-cee",
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, Mech, ETC, PEI)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "assam-cee"
+        ]
+      },
+      {
+        "name": "B.Sc (Physics, Chemistry, Maths)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "assam-cee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://jist.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "ASTU Guwahati",
+        "Dibrugarh University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1971",
+      "district": "Jorhat",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "bbec-kokrajhar",
+    "name": "Bineswar Brahma Engineering College",
+    "shortName": "BBEC Kokrajhar",
+    "location": "Kokrajhar, Kokrajhar District, Assam",
+    "rankingTier": "Tier 3",
+    "overview": "Government engineering college serving the Bodoland Territorial Region.",
+    "campus": "Chandrapara, Kokrajhar",
+    "officialUrl": "https://www.bbec.ac.in",
+    "acceptedExams": [
+      "assam-cee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Chemical, Civil, Electrical, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "assam-cee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "assam-cee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.bbec.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "ASTU Guwahati"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2010",
+      "district": "Kokrajhar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "gimt-guwahati",
+    "name": "Girijananda Chowdhury Institute of Management and Technology",
+    "shortName": "GIMT Guwahati",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "The first private engineering college in Assam under the Shrimanta Shankar Academy Society.",
+    "campus": "Azara, Guwahati",
+    "officialUrl": "https://gimt-guwahati.ac.in",
+    "acceptedExams": [
+      "assam-cee",
+      "jee-main",
+      "cmat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EE, ME, Civil)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "assam-cee",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "assam-cee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "TCS",
+      "Vodafone"
+    ],
+    "tuition": "Moderate Private Fees",
+    "sources": [
+      "https://gimt-guwahati.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "ASTU Guwahati"
+      ],
+      "ownership": "Private",
+      "establishedYear": "2006",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "don-bosco-university",
+    "name": "Assam Don Bosco University",
+    "shortName": "ADBU",
+    "location": "Sonapur, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "First private university in Assam, NAAC 'A' accredited.",
+    "campus": "Tapesia Gardens, Sonapur",
+    "officialUrl": "https://www.dbuniversity.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "dbu-get"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, ECE, EEE, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "dbu-get"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "dbu-pget"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "dbu-get",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "Capgemini",
+      "Cognizant"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.dbuniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2008",
+      "district": "Kamrup Metro",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kaziranga-university",
+    "name": "The Assam Kaziranga University",
+    "shortName": "Kaziranga Uni",
+    "location": "Jorhat, Jorhat District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "Leading private university in Upper Assam with a focus on placement.",
+    "campus": "Koraikhowa, Jorhat",
+    "officialUrl": "https://www.kazirangauniversity.in",
+    "acceptedExams": [
+      "jee-main",
+      "kuest"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Mech, ECE, Electrical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "kuest"
+        ]
+      },
+      {
+        "name": "B.Optom",
+        "degree": "B.Optom",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "kuest"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "kuest",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Audi",
+      "BMW (Internships)",
+      "TCS"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.kazirangauniversity.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2012",
+      "district": "Jorhat",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "royal-global-university",
+    "name": "The Assam Royal Global University",
+    "shortName": "RGU Guwahati",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "Largest private university in Guwahati with world-class infrastructure.",
+    "campus": "Betkuchi, NH-37, Guwahati",
+    "officialUrl": "https://rgu.ac",
+    "acceptedExams": [
+      "jee-main",
+      "r-jee",
+      "cat",
+      "mat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Mech, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "r-jee"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "xat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "r-jee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Byju's",
+      "Wipro"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://rgu.ac"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2017",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "assam-down-town-university",
+    "name": "Assam Down Town University",
+    "shortName": "ADTU",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "Private university with a strong focus on paramedical and nursing sciences.",
+    "campus": "Panikhaiti, Guwahati",
+    "officialUrl": "https://adtu.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.Pharm",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Down Town Hospital",
+      "Apollo"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://adtu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2010",
+      "district": "Kamrup Metro",
+      "naacGrade": "B",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bodoland-university",
+    "name": "Bodoland University",
+    "shortName": "Bodoland Uni",
+    "location": "Kokrajhar, Kokrajhar District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "State university serving the Bodoland Territorial Region.",
+    "campus": "Kokrajhar",
+    "officialUrl": "https://www.buniv.edu.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc (Physics, Chem, Botany, Zoology)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.buniv.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "2009",
+      "district": "Kokrajhar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kkhsou-guwahati",
+    "name": "Krishna Kanta Handiqui State Open University",
+    "shortName": "KKHSOU",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Unranked",
+    "overview": "State open university providing distance education.",
+    "campus": "Khanapara, Guwahati",
+    "officialUrl": "http://www.kkhsou.in",
+    "acceptedExams": [
+      "direct-admission"
+    ],
+    "courses": [
+      {
+        "name": "B.A.",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "direct-admission"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "direct-admission",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Very Low",
+    "sources": [
+      "http://www.kkhsou.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Open University",
+      "establishedYear": "2006",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "ssuhs-guwahati",
+    "name": "Srimanta Sankaradeva University of Health Sciences",
+    "shortName": "SSUHS",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "The affiliating health sciences university for Assam.",
+    "campus": "Bhangagarh, Guwahati",
+    "officialUrl": "http://ssuhs.in",
+    "acceptedExams": [
+      "nee-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS (Affiliated Colleges)",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nee-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies",
+    "sources": [
+      "http://ssuhs.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "2009",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "astu-guwahati",
+    "name": "Assam Science and Technology University",
+    "shortName": "ASTU",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 2",
+    "overview": "The affiliating technical university for engineering and pharmacy colleges in Assam.",
+    "campus": "Jalukbari, Guwahati",
+    "officialUrl": "https://astu.ac.in",
+    "acceptedExams": [
+      "assam-cee",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Affiliated Colleges)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "assam-cee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "assam-cee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies",
+    "sources": [
+      "https://astu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Technical University",
+      "establishedYear": "2010",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jb-law-college-guwahati",
+    "name": "J.B. Law College",
+    "shortName": "JB Law College",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 3",
+    "overview": "One of the premier law colleges in Assam.",
+    "campus": "Chandmari, Guwahati",
+    "officialUrl": "http://www.jblawcollegeguwahati.com",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "LL.M",
+        "degree": "LL.M",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.jblawcollegeguwahati.com"
+    ],
+    "meta": {
+      "affiliations": [
+        "Gauhati University"
+      ],
+      "ownership": "Private (Aided)",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "nef-law-college",
+    "name": "NEF Law College",
+    "shortName": "NEF Law",
+    "location": "Guwahati, Kamrup Metropolitan District, Assam",
+    "rankingTier": "Tier 3",
+    "overview": "Top private law college in the North East region.",
+    "campus": "Christian Basti, Guwahati",
+    "officialUrl": "https://www.nefcollege.org",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.nefcollege.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "Gauhati University"
+      ],
+      "ownership": "Private",
+      "district": "Kamrup Metro",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "indian-institute-of-technology-guwahati",
+    "name": "Indian Institute of Technology Guwahati",
+    "shortName": "Indian Institute of Technology Guwahati",
+    "location": "Guwahati, Guwahati District, Assam",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Guwahati",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Guwahati",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-silchar",
+    "name": "National Institute of Technology Silchar",
+    "shortName": "National Institute of Technology Silchar",
+    "location": "Silchar, Silchar District, Assam",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Silchar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Silchar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  }
+]

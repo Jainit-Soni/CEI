@@ -1,0 +1,3492 @@
+[
+  {
+    "id": "iit-tirupati",
+    "name": "Indian Institute of Technology Tirupati",
+    "shortName": "IIT Tirupati",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the fastest-growing 3rd generation IITs, known for its focus on core engineering and research.",
+    "campus": "Yerpedu-Venkatagiri Road, Tirupati",
+    "officialUrl": "https://www.iittp.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, EE, ME, Civil, Chemical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc (Maths, Physics, Chemistry)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: AIR ~3400"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "MathWorks",
+      "Texas Instruments",
+      "L&T"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iittp.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2015",
+      "district": "Tirupati",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iim-visakhapatnam",
+    "name": "Indian Institute of Management Visakhapatnam",
+    "shortName": "IIM Vizag",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Known as the 'Sunrise IIM', it has quickly established itself with strong placements and infrastructure.",
+    "campus": "Gambheeram, Visakhapatnam",
+    "officialUrl": "https://www.iimv.ac.in",
+    "acceptedExams": [
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "Post Graduate Program in Management (PGP)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "PGPEx (Executive)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "gmat",
+          "gre"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "85+ percentile (General)"
+      }
+    ],
+    "topRecruiters": [
+      "KPMG",
+      "Deloitte",
+      "Adani Group",
+      "ICICI Bank"
+    ],
+    "tuition": "~INR 17-18 Lakhs",
+    "sources": [
+      "https://www.iimv.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Autonomous / INI",
+      "establishedYear": "2015",
+      "district": "Visakhapatnam",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-andhra-pradesh",
+    "name": "National Institute of Technology Andhra Pradesh",
+    "shortName": "NIT AP",
+    "location": "Tadepalligudem, West Godavari District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "The youngest NIT in India, rapidly developing its infrastructure and academic programs.",
+    "campus": "Chennai-Kolkata Highway, Tadepalligudem",
+    "officialUrl": "https://www.nitandhra.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Mech, Civil, Biotech, Chemical, MME)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "L&T",
+      "TCS",
+      "Accenture"
+    ],
+    "tuition": "Standard NIT Fees",
+    "sources": [
+      "https://www.nitandhra.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2015",
+      "district": "West Godavari",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-sricity",
+    "name": "Indian Institute of Information Technology Sri City",
+    "shortName": "IIIT Sri City",
+    "location": "Sri City, Chittoor District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Institute of National Importance (PPP mode) located in a major industrial hub.",
+    "campus": "Gnan Marg, Sri City",
+    "officialUrl": "https://www.iiits.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, AI & Data Science)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech (AI/ML, Cyber Security)",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Swiggy",
+      "Microsoft",
+      "Commvault"
+    ],
+    "tuition": "Standard IIIT Fees",
+    "sources": [
+      "https://www.iiits.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "PPP Model / INI",
+      "establishedYear": "2013",
+      "district": "Tirupati",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-kurnool",
+    "name": "Indian Institute of Information Technology Design and Manufacturing Kurnool",
+    "shortName": "IIITDM Kurnool",
+    "location": "Kurnool, Kurnool District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Specialized INI focusing on IT and Manufacturing design.",
+    "campus": "Jagannathagattu, Kurnool",
+    "officialUrl": "https://www.iiitk.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech with Design, AI & DS)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Cognizant",
+      "Mindtree"
+    ],
+    "tuition": "Standard IIIT Fees",
+    "sources": [
+      "https://www.iiitk.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2015",
+      "district": "Kurnool",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "spa-vijayawada",
+    "name": "School of Planning and Architecture Vijayawada",
+    "shortName": "SPA Vijayawada",
+    "location": "Vijayawada, Krishna District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance dedicated to architecture and planning.",
+    "campus": "ITI Road, Vijayawada",
+    "officialUrl": "https://www.spav.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "ceed"
+    ],
+    "courses": [
+      {
+        "name": "Bachelor of Architecture (B.Arch)",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Bachelor of Planning (B.Plan)",
+        "degree": "B.Plan",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Master of Planning",
+        "degree": "M.Plan",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "L&T",
+      "GMR",
+      "JLL"
+    ],
+    "tuition": "Standard SPA Fees",
+    "sources": [
+      "https://www.spav.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2008",
+      "district": "Krishna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "aiims-mangalagiri",
+    "name": "All India Institute of Medical Sciences Mangalagiri",
+    "shortName": "AIIMS Mangalagiri",
+    "location": "Mangalagiri, Guntur District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Premier medical institute established under PMSSY.",
+    "campus": "Mangalagiri, Guntur",
+    "officialUrl": "https://www.aiimsmangalagiri.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "ini-cet"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ini-cet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://www.aiimsmangalagiri.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2018",
+      "district": "Guntur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "andhra-university",
+    "name": "Andhra University",
+    "shortName": "AU Visakhapatnam",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "One of the oldest and most prestigious state universities in India.",
+    "campus": "Waltair, Visakhapatnam",
+    "officialUrl": "https://www.andhrauniversity.edu.in",
+    "acceptedExams": [
+      "ap-eapcet",
+      "ap-icet",
+      "ap-pgecet",
+      "ap-lawcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (AU College of Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet"
+        ]
+      },
+      {
+        "name": "LL.B",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "ap-lawcet"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "ap-pgcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "CSE: Rank ~800-1000"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Wipro",
+      "Infosys",
+      "Deloitte"
+    ],
+    "tuition": "Low (State Univ)",
+    "sources": [
+      "https://www.andhrauniversity.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1926",
+      "district": "Visakhapatnam",
+      "naacGrade": "A++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "svu-tirupati",
+    "name": "Sri Venkateswara University",
+    "shortName": "SVU Tirupati",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Renowned state university in the temple city of Tirupati.",
+    "campus": "Tirupati",
+    "officialUrl": "https://svuniversity.edu.in",
+    "acceptedExams": [
+      "ap-eapcet",
+      "ap-icet",
+      "ap-pgecet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (College of Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "ap-pgcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ap-icet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "TCS",
+      "Cognizant"
+    ],
+    "tuition": "Low (State Univ)",
+    "sources": [
+      "https://svuniversity.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1954",
+      "district": "Tirupati",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "jntu-kakinada",
+    "name": "Jawaharlal Nehru Technological University Kakinada",
+    "shortName": "JNTU Kakinada",
+    "location": "Kakinada, Kakinada District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Premier technical university in AP, affiliating colleges across coastal districts.",
+    "campus": "Kakinada",
+    "officialUrl": "https://www.jntuk.edu.in",
+    "acceptedExams": [
+      "ap-eapcet",
+      "ap-icet",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, Petro, EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate",
+          "ap-pgecet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ap-icet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Accenture",
+      "L&T Infotech"
+    ],
+    "tuition": "State Govt Fees",
+    "sources": [
+      "https://www.jntuk.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Technological University",
+      "establishedYear": "1946",
+      "district": "Kakinada",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "jntu-anantapur",
+    "name": "Jawaharlal Nehru Technological University Anantapur",
+    "shortName": "JNTU Anantapur",
+    "location": "Anantapur, Anantapur District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Major technical university serving the Rayalaseema region.",
+    "campus": "Anantapur",
+    "officialUrl": "https://www.jntua.ac.in",
+    "acceptedExams": [
+      "ap-eapcet",
+      "ap-icet",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate",
+          "ap-pgecet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ap-icet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Wipro",
+      "Infosys"
+    ],
+    "tuition": "State Govt Fees",
+    "sources": [
+      "https://www.jntua.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Technological University",
+      "establishedYear": "1946",
+      "district": "Anantapur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "gitam-visakhapatnam",
+    "name": "Gandhi Institute of Technology and Management",
+    "shortName": "GITAM",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Top-ranked private deemed university with a beautiful beachfront campus.",
+    "campus": "Rushikonda, Visakhapatnam",
+    "officialUrl": "https://www.gitam.edu",
+    "acceptedExams": [
+      "gat",
+      "jee-main",
+      "ap-eapcet",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, Biotech, Aero)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gat",
+          "jee-main",
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "gat"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Deloitte",
+      "Amazon",
+      "Microsoft"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://www.gitam.edu"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University",
+      "establishedYear": "1980",
+      "district": "Visakhapatnam",
+      "naacGrade": "A++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kl-university-guntur",
+    "name": "K L Deemed to be University",
+    "shortName": "KLU",
+    "location": "Vaddeswaram, Guntur District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Renowned private university known for its 100% placement record and rigorous academics.",
+    "campus": "Green Fields, Vaddeswaram, Guntur",
+    "officialUrl": "https://www.kluniversity.in",
+    "acceptedExams": [
+      "kleee",
+      "jee-main",
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, AI&DS, Biotech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "kleee",
+          "jee-main",
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata",
+          "kleee"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet",
+          "cat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "kleee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Cisco",
+      "Amazon",
+      "ServiceNow",
+      "Deloitte"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://www.kluniversity.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University",
+      "establishedYear": "1980",
+      "district": "Guntur",
+      "naacGrade": "A++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vignan-university-guntur",
+    "name": "Vignan's Foundation for Science, Technology and Research",
+    "shortName": "Vignan University",
+    "location": "Vadlamudi, Guntur District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Popular private university in the Guntur-Vijayawada region.",
+    "campus": "Vadlamudi, Guntur",
+    "officialUrl": "https://vignan.ac.in",
+    "acceptedExams": [
+      "vsat",
+      "jee-main",
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, Food Tech, Biotech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "vsat",
+          "jee-main",
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "B.Pharmacy",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet",
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "vsat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "HCL",
+      "Hyundai",
+      "Amazon"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://vignan.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University",
+      "district": "Guntur",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "srm-ap",
+    "name": "SRM University, Andhra Pradesh",
+    "shortName": "SRM AP",
+    "location": "Amaravati, Guntur District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Private university focused on research-led multidisciplinary education.",
+    "campus": "Neerukonda, Mangalagiri, Guntur",
+    "officialUrl": "https://srmap.edu.in",
+    "acceptedExams": [
+      "srmjeee",
+      "jee-main",
+      "sat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, Electrical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "srmjeee",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Sc / B.A. (Liberal Arts)",
+        "degree": "UG",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "xat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "srmjeee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Human Resocia",
+      "Amazon",
+      "PayPal"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://srmap.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2017",
+      "district": "Guntur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vit-ap",
+    "name": "VIT-AP University",
+    "shortName": "VIT AP",
+    "location": "Amaravati, Guntur District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Part of the VIT group, offering quality engineering and law education.",
+    "campus": "Inavolu, Amaravati",
+    "officialUrl": "https://vitap.ac.in",
+    "acceptedExams": [
+      "viteee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "viteee"
+        ]
+      },
+      {
+        "name": "Integrated M.Tech (CSE)",
+        "degree": "Dual Degree",
+        "duration": "5 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "B.A. LL.B / B.B.A. LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat",
+          "lsat-india"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "viteee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Intel",
+      "Microsoft",
+      "TCS"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://vitap.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2017",
+      "district": "Guntur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sree-vidyanikethan",
+    "name": "Sree Vidyanikethan Engineering College",
+    "shortName": "SVEC Tirupati",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Autonomous college part of Mohan Babu University, highly reputed in Rayalaseema.",
+    "campus": "Sree Sainath Nagar, Tirupati",
+    "officialUrl": "https://svec.education",
+    "acceptedExams": [
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Civil, Mech, IT, CSSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "ap-pgecet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Cognizant",
+      "Wipro",
+      "Infosys"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://svec.education"
+    ],
+    "meta": {
+      "affiliations": [
+        "Mohan Babu University"
+      ],
+      "ownership": "Private / Autonomous",
+      "district": "Tirupati",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gmr-it-rajam",
+    "name": "GMR Institute of Technology",
+    "shortName": "GMRIT",
+    "location": "Rajam, Vizianagaram District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Autonomous engineering college managed by the GMR Varalakshmi Foundation.",
+    "campus": "GMR Nagar, Rajam",
+    "officialUrl": "http://www.gmrit.org",
+    "acceptedExams": [
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Mech, EEE, ECE, Chem, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Cognizant",
+      "GMR Group"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://www.gmrit.org"
+    ],
+    "meta": {
+      "affiliations": [
+        "JNTU Kakinada"
+      ],
+      "ownership": "Private / Autonomous",
+      "district": "Vizianagaram",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gayatri-vidya-parishad",
+    "name": "Gayatri Vidya Parishad College of Engineering",
+    "shortName": "GVPCE Visakhapatnam",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "One of the top private autonomous engineering colleges in AP.",
+    "campus": "Madhurawada, Visakhapatnam",
+    "officialUrl": "https://www.gvpce.ac.in",
+    "acceptedExams": [
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Mech, Civil, Chemical, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "ap-pgecet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2023",
+        "cutoff": "CSE: Rank ~2000"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "TCS Digital",
+      "Wipro"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.gvpce.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "JNTU Kakinada"
+      ],
+      "ownership": "Private / Autonomous",
+      "district": "Visakhapatnam",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rvr-jc-guntur",
+    "name": "R.V.R. & J.C. College of Engineering",
+    "shortName": "RVR&JC",
+    "location": "Guntur, Guntur District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Oldest and most reputed private engineering college in Guntur district.",
+    "campus": "Chowdavaram, Guntur",
+    "officialUrl": "http://rvrjcce.ac.in",
+    "acceptedExams": [
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Mech, Civil, Chem, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "CTS",
+      "Infosys"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://rvrjcce.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Acharya Nagarjuna University"
+      ],
+      "ownership": "Private / Autonomous",
+      "district": "Guntur",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vr-siddhartha-vijayawada",
+    "name": "Velagapudi Ramakrishna Siddhartha Engineering College",
+    "shortName": "VRSEC",
+    "location": "Vijayawada, Krishna District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "First private engineering college in AP, highly regarded for academics.",
+    "campus": "Kanuru, Vijayawada",
+    "officialUrl": "https://www.vrsiddhartha.ac.in",
+    "acceptedExams": [
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Mech, Civil, IT, EIE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Amazon",
+      "Cisco"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.vrsiddhartha.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "JNTU Kakinada"
+      ],
+      "ownership": "Private / Autonomous",
+      "district": "Krishna",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "acharya-nagarjuna-university",
+    "name": "Acharya Nagarjuna University",
+    "shortName": "ANU Guntur",
+    "location": "Guntur, Guntur District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Major state university located between Guntur and Vijayawada.",
+    "campus": "Nagarjuna Nagar, Guntur",
+    "officialUrl": "https://www.nagarjunauniversity.ac.in",
+    "acceptedExams": [
+      "ap-eapcet",
+      "ap-icet",
+      "ap-pgecet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (University College)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "ap-pgcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ap-icet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.nagarjunauniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1976",
+      "district": "Guntur",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sri-krishnadevaraya-university",
+    "name": "Sri Krishnadevaraya University",
+    "shortName": "SKU Anantapur",
+    "location": "Anantapur, Anantapur District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "State university serving the Anantapur region.",
+    "campus": "Anantapur",
+    "officialUrl": "http://skuniversity.ac.in",
+    "acceptedExams": [
+      "ap-eapcet",
+      "ap-icet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (College of Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ap-icet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://skuniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1981",
+      "district": "Anantapur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ntr-health-university",
+    "name": "Dr. YSR University of Health Sciences",
+    "shortName": "Dr. YSR UHS",
+    "location": "Vijayawada, Krishna District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "State university for medical, dental, and nursing education (formerly Dr. NTR UHS).",
+    "campus": "Vijayawada",
+    "officialUrl": "http://drysruhs.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS (Affiliated Colleges)",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "BDS",
+        "degree": "BDS",
+        "duration": "5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by College",
+    "sources": [
+      "http://drysruhs.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1986",
+      "district": "Krishna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "andhra-medical-college",
+    "name": "Andhra Medical College",
+    "shortName": "AMC Visakhapatnam",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Oldest medical college in Andhra Pradesh, attached to King George Hospital.",
+    "campus": "Maharanipeta, Visakhapatnam",
+    "officialUrl": "http://amc.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://amc.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Dr. YSR UHS"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1923",
+      "district": "Visakhapatnam",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "guntur-medical-college",
+    "name": "Guntur Medical College",
+    "shortName": "GMC Guntur",
+    "location": "Guntur, Guntur District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Premier government medical college in the Guntur region.",
+    "campus": "Kanna Vari Thota, Guntur",
+    "officialUrl": "http://gunturmedicalcollege.edu.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://gunturmedicalcollege.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Dr. YSR UHS"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1946",
+      "district": "Guntur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "kurnool-medical-college",
+    "name": "Kurnool Medical College",
+    "shortName": "KMC Kurnool",
+    "location": "Kurnool, Kurnool District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Major government medical college in the Rayalaseema region.",
+    "campus": "Budhawara Peta, Kurnool",
+    "officialUrl": "http://kurnoolmedicalcollege.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://kurnoolmedicalcollege.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Dr. YSR UHS"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1957",
+      "district": "Kurnool",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "angrau-guntur",
+    "name": "Acharya N.G. Ranga Agricultural University",
+    "shortName": "ANGRAU",
+    "location": "Guntur, Guntur District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "Largest state agricultural university in AP.",
+    "campus": "Lam, Guntur",
+    "officialUrl": "https://angrau.ac.in",
+    "acceptedExams": [
+      "ap-eapcet",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "B.Tech (Agricultural Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://angrau.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1964",
+      "district": "Guntur",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "svims-tirupati",
+    "name": "Sri Venkateswara Institute of Medical Sciences",
+    "shortName": "SVIMS",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "University established by TTD, offering super-specialty medical care and education.",
+    "campus": "Alipiri Road, Tirupati",
+    "officialUrl": "https://svimstpt.ap.nic.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "BPT",
+        "degree": "BPT",
+        "duration": "4.5 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Subsidized",
+    "sources": [
+      "https://svimstpt.ap.nic.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University (TTD)",
+      "establishedYear": "1993",
+      "district": "Tirupati",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "spmvv-tirupati",
+    "name": "Sri Padmavati Mahila Visvavidyalayam",
+    "shortName": "SPMVV",
+    "location": "Tirupati, Tirupati District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Women's university offering Engineering, Pharmacy, Law, and Sciences.",
+    "campus": "Tirupati",
+    "officialUrl": "https://www.spmvv.ac.in",
+    "acceptedExams": [
+      "ap-eapcet",
+      "ap-icet",
+      "ap-lawcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "B.Pharmacy",
+        "degree": "B.Pharm",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "ap-icet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ap-icet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.spmvv.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University (Women Only)",
+      "establishedYear": "1983",
+      "district": "Tirupati",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "yvu-kadapa",
+    "name": "Yogi Vemana University",
+    "shortName": "YVU Kadapa",
+    "location": "Kadapa, Kadapa District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "State university serving the Kadapa region.",
+    "campus": "Vemanapuram, Kadapa",
+    "officialUrl": "http://www.yvu.edu.in",
+    "acceptedExams": [
+      "ap-eapcet",
+      "ap-icet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (College of Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "ap-pgcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ap-icet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.yvu.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "2006",
+      "district": "Kadapa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "anits-visakhapatnam",
+    "name": "Anil Neerukonda Institute of Technology and Sciences",
+    "shortName": "ANITS",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Reputed private autonomous engineering college in Vizag.",
+    "campus": "Sangivalasa, Visakhapatnam",
+    "officialUrl": "https://www.anits.edu.in",
+    "acceptedExams": [
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE, Mech, Civil, IT, Chemical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Infosys",
+      "TCS",
+      "Amazon"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.anits.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Andhra University"
+      ],
+      "ownership": "Private / Autonomous",
+      "district": "Visakhapatnam",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vishnu-institute-bhimavaram",
+    "name": "Vishnu Institute of Technology",
+    "shortName": "VIT Bhimavaram",
+    "location": "Bhimavaram, West Godavari District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Top-tier private engineering college known for infrastructure and women's education (Shri Vishnu).",
+    "campus": "Vishnupur, Bhimavaram",
+    "officialUrl": "https://vishnu.edu.in",
+    "acceptedExams": [
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, EEE, IT, AI&DS)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Expedia",
+      "Adobe"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://vishnu.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "JNTU Kakinada"
+      ],
+      "ownership": "Private / Autonomous",
+      "district": "West Godavari",
+      "naacGrade": "A++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "aditya-engineering-college",
+    "name": "Aditya Engineering College",
+    "shortName": "AEC Surampalem",
+    "location": "Surampalem, East Godavari District, Andhra Pradesh",
+    "rankingTier": "Tier 3",
+    "overview": "Large educational campus with autonomous status.",
+    "campus": "Aditya Nagar, Surampalem",
+    "officialUrl": "https://www.aec.edu.in",
+    "acceptedExams": [
+      "ap-eapcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, EEE, Mining, Ag)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "ap-eapcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ap-eapcet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Wipro",
+      "Tech Mahindra"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.aec.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "JNTU Kakinada"
+      ],
+      "ownership": "Private / Autonomous",
+      "district": "East Godavari",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "rgukt-rkvalley",
+    "name": "Rajiv Gandhi University of Knowledge Technologies (RK Valley)",
+    "shortName": "IIIT RK Valley",
+    "location": "Idupulapaya, Kadapa District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "State university catering to rural meritorious students (integrated B.Tech).",
+    "campus": "Idupulapaya, Kadapa",
+    "officialUrl": "https://www.rguktrkv.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "Integrated B.Tech (6 Years)",
+        "degree": "Dual Degree",
+        "duration": "6 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Infosys",
+      "Wipro"
+    ],
+    "tuition": "Low (State Funded)",
+    "sources": [
+      "https://www.rguktrkv.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University",
+      "district": "Kadapa",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "rgukt-nuzvid",
+    "name": "Rajiv Gandhi University of Knowledge Technologies (Nuzvid)",
+    "shortName": "IIIT Nuzvid",
+    "location": "Nuzvid, Krishna District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "State university focused on ICT education for rural students.",
+    "campus": "Nuzvid",
+    "officialUrl": "https://www.rguktn.ac.in",
+    "acceptedExams": [
+      "merit-based"
+    ],
+    "courses": [
+      {
+        "name": "Integrated B.Tech (6 Years)",
+        "degree": "Dual Degree",
+        "duration": "6 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit-based",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.rguktn.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State University",
+      "district": "Krishna",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dravidian-university",
+    "name": "Dravidian University",
+    "shortName": "Dravidian Uni",
+    "location": "Kuppam, Chittoor District, Andhra Pradesh",
+    "rankingTier": "Unranked",
+    "overview": "University established to promote Dravidian languages and culture.",
+    "campus": "Kuppam",
+    "officialUrl": "http://www.dravidianuniversity.ac.in",
+    "acceptedExams": [
+      "ducet"
+    ],
+    "courses": [
+      {
+        "name": "M.A. (Telugu, Tamil, Kannada, Malayalam, English)",
+        "degree": "M.A.",
+        "duration": "2 years",
+        "exams": [
+          "ducet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ducet",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://www.dravidianuniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1997",
+      "district": "Chittoor",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "damodaram-sanjivayya-nlu",
+    "name": "Damodaram Sanjivayya National Law University",
+    "shortName": "DSNLU",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "The National Law University of Andhra Pradesh.",
+    "campus": "Sabbavaram, Visakhapatnam",
+    "officialUrl": "https://dsnlu.ac.in",
+    "acceptedExams": [
+      "clat-ug",
+      "clat-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat-ug"
+        ]
+      },
+      {
+        "name": "LL.M",
+        "degree": "LL.M",
+        "duration": "1 year",
+        "exams": [
+          "clat-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat-ug",
+        "year": "2024",
+        "cutoff": "AIR ~1200-1400"
+      }
+    ],
+    "topRecruiters": [
+      "Law Firms",
+      "Corporate Legal Depts"
+    ],
+    "tuition": "State NLU Fees",
+    "sources": [
+      "https://dsnlu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Legislature / NLU",
+      "establishedYear": "2008",
+      "district": "Visakhapatnam",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "krea-university",
+    "name": "Krea University",
+    "shortName": "Krea",
+    "location": "Sri City, Chittoor District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "Private university focused on liberal arts and sciences (SIAS) and management (IFMR GSB).",
+    "campus": "Sri City",
+    "officialUrl": "https://krea.edu.in",
+    "acceptedExams": [
+      "krea-aptitude",
+      "cat",
+      "xat"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Hons) / B.Sc (Hons)",
+        "degree": "UG",
+        "duration": "3/4 years",
+        "exams": [
+          "krea-aptitude"
+        ]
+      },
+      {
+        "name": "MBA (IFMR GSB)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "xat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "krea-aptitude",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "JP Morgan",
+      "Barclays"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://krea.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2018",
+      "district": "Chittoor",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "koneru-lakshmaiah-education-fo-vaddeswaram",
+    "name": "Koneru Lakshmaiah Education Foundation",
+    "shortName": "Koneru Lakshmaiah Education Foundation",
+    "location": "Vaddeswaram, Vaddeswaram District, Andhra Pradesh",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Vaddeswaram",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Vaddeswaram",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "sagi-ramakrishnam-raju-enginee-bhimavaram",
+    "name": "Sagi Ramakrishnam Raju Engineering College",
+    "shortName": "Sagi Ramakrishnam Raju Engineering College",
+    "location": "Bhimavaram, Bhimavaram District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhimavaram",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Bhimavaram",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-tadepalligudem",
+    "name": "National Institute of Technology Andhra Pradesh",
+    "shortName": "National Institute of Technology Andhra Pradesh",
+    "location": "Tadepalligudem, Tadepalligudem District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Tadepalligudem",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Tadepalligudem",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "aditya-engineering-college-surampalem",
+    "name": "Aditya Engineering College",
+    "shortName": "Aditya Engineering College",
+    "location": "Surampalem, Surampalem District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Surampalem",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Surampalem",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "aditya-institute-of-technology-tekkali",
+    "name": "Aditya Institute of Technology and Management",
+    "shortName": "Aditya Institute of Technology and Management",
+    "location": "Tekkali, Tekkali District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Tekkali",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Tekkali",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gmr-institute-of-technology-rajam",
+    "name": "GMR Institute of Technology",
+    "shortName": "GMR Institute of Technology",
+    "location": "Rajam, Rajam District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Rajam",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Rajam",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "godavari-institute-of-engineer-rajahmundry",
+    "name": "Godavari Institute of Engineering & Technology",
+    "shortName": "Godavari Institute of Engineering & Technology",
+    "location": "Rajahmundry, Rajahmundry District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Rajahmundry",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Rajahmundry",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "indian-institute-of-petroleum--visakhapatnam",
+    "name": "Indian Institute of Petroleum & Energy",
+    "shortName": "Indian Institute of Petroleum & Energy",
+    "location": "Visakhapatnam, Visakhapatnam District, Andhra Pradesh",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Visakhapatnam",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Visakhapatnam",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]

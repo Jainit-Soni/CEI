@@ -1,0 +1,493 @@
+[
+  {
+    "id": "govt-jawaharlal-nehru-college-lakshadweep",
+    "name": "Government Jawaharlal Nehru College",
+    "shortName": "JNC Kavaratti",
+    "location": "Kavaratti, Lakshadweep",
+    "rankingTier": "Tier 2",
+    "overview": "The oldest and premier higher education institution in Lakshadweep, established in 1972. It is affiliated with Pondicherry University and offers various undergraduate and postgraduate courses.",
+    "campus": "Kavaratti Island",
+    "officialUrl": "https://jnc.lakshadweep.gov.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (English, History, Pol Science)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Mathematics, Chemistry, Physics, Zoology, Botany)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://jnc.lakshadweep.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1972",
+      "district": "Lakshadweep",
+      "naacGrade": "B"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mahatma-gandhi-college-androth",
+    "name": "Mahatma Gandhi College",
+    "shortName": "MGC Androth",
+    "location": "Androth, Lakshadweep",
+    "rankingTier": "Tier 3",
+    "overview": "A government college established to serve the educational needs of Androth island. It is affiliated with the University of Calicut.",
+    "campus": "Androth Island",
+    "officialUrl": "https://mgcandroth.ac.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Arabic, Economics, Pol Science)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Aquaculture, Chemistry)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Com (Co-operation)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mgcandroth.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "University of Calicut"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1994",
+      "district": "Lakshadweep",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "pm-sayeed-calicut-university-centre-androth",
+    "name": "P.M. Sayeed Calicut University Centre",
+    "shortName": "CUC Androth",
+    "location": "Androth, Lakshadweep",
+    "rankingTier": "Tier 3",
+    "overview": "A specialized centre of the University of Calicut offering postgraduate courses and research facilities on the island.",
+    "campus": "Androth Island",
+    "officialUrl": "https://uoc.ac.in",
+    "acceptedExams": [
+      "university-entrance"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc (Aquaculture and Fishery Microbiology)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      },
+      {
+        "name": "M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (State University)",
+    "sources": [
+      "https://uoc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "University of Calicut"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2005",
+      "district": "Lakshadweep",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "calicut-university-centre-kadmat",
+    "name": "Calicut University Centre, Kadmat",
+    "shortName": "CUC Kadmat",
+    "location": "Kadmat, Lakshadweep",
+    "rankingTier": "Tier 3",
+    "overview": "An extension centre of the University of Calicut located on Kadmat Island, focusing on postgraduate education.",
+    "campus": "Kadmat Island",
+    "officialUrl": "https://uoc.ac.in",
+    "acceptedExams": [
+      "university-entrance"
+    ],
+    "courses": [
+      {
+        "name": "M.A. (English, Political Science)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      },
+      {
+        "name": "M.Sc (Computer Science)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (State University)",
+    "sources": [
+      "https://uoc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "University of Calicut"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2005",
+      "district": "Lakshadweep",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "calicut-university-centre-kavaratti",
+    "name": "Calicut University Centre, Kavaratti",
+    "shortName": "CUC Kavaratti",
+    "location": "Kavaratti, Lakshadweep",
+    "rankingTier": "Tier 3",
+    "overview": "A postgraduate centre of the University of Calicut situated in the capital, Kavaratti.",
+    "campus": "Kavaratti Island",
+    "officialUrl": "https://uoc.ac.in",
+    "acceptedExams": [
+      "university-entrance"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc (Chemistry)",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "university-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "university-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (State University)",
+    "sources": [
+      "https://uoc.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "University of Calicut"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2005",
+      "district": "Lakshadweep",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "diet-lakshadweep",
+    "name": "District Institute of Education and Training",
+    "shortName": "DIET Lakshadweep",
+    "location": "Kavaratti, Lakshadweep",
+    "rankingTier": "Tier 3",
+    "overview": "The primary teacher training institute in the UT, offering diploma courses in elementary education.",
+    "campus": "Kavaratti Island",
+    "officialUrl": "https://lakshadweep.gov.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "D.El.Ed",
+        "degree": "Diploma",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Schools in Lakshadweep"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://lakshadweep.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "SCERT"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1999",
+      "district": "Lakshadweep",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "government-iti-kavaratti",
+    "name": "Government Industrial Training Institute, Kavaratti",
+    "shortName": "ITI Kavaratti",
+    "location": "Kavaratti, Lakshadweep",
+    "rankingTier": "Tier 3",
+    "overview": "Provides technical and vocational training to the youth of the islands.",
+    "campus": "Kavaratti Island",
+    "officialUrl": "https://lakshadweep.gov.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "ITI (Various Trades)",
+        "degree": "Certificate",
+        "duration": "1-2 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://lakshadweep.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "NCVT"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1976",
+      "district": "Lakshadweep",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  }
+]

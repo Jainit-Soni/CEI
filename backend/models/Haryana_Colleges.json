@@ -1,0 +1,2441 @@
+[
+  {
+    "id": "iim-rohtak",
+    "name": "Indian Institute of Management Rohtak",
+    "shortName": "IIM Rohtak",
+    "location": "Rohtak, Rohtak District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "A premier management institute in the NCR region, known for its IPM program and research.",
+    "campus": "Management City, Sunaria, Rohtak",
+    "officialUrl": "https://www.iimrohtak.ac.in",
+    "acceptedExams": [
+      "cat",
+      "ipmat",
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "Post Graduate Programme in Management (PGP)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "Integrated Programme in Management (IPM)",
+        "degree": "BBA+MBA",
+        "duration": "5 years",
+        "exams": [
+          "ipmat"
+        ]
+      },
+      {
+        "name": "Integrated Programme in Law (IPL)",
+        "degree": "BBA+LL.B",
+        "duration": "5 years",
+        "exams": [
+          "clat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "95+ percentile (General)"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Amazon",
+      "KPMG",
+      "Capgemini"
+    ],
+    "tuition": "~INR 17-18 Lakhs",
+    "sources": [
+      "https://www.iimrohtak.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Autonomous / INI",
+      "establishedYear": "2009",
+      "district": "Rohtak",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹19.27 LPA",
+      "medianPackage": "₹17.0 LPA",
+      "highestPackage": "₹48.25 LPA"
+    }
+  },
+  {
+    "id": "mdi-gurgaon",
+    "name": "Management Development Institute",
+    "shortName": "MDI Gurgaon",
+    "location": "Gurugram, Gurugram District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "One of India's top private business schools, comparable to top IIMs.",
+    "campus": "Sukhrali, Gurugram",
+    "officialUrl": "https://www.mdi.ac.in",
+    "acceptedExams": [
+      "cat",
+      "gmat"
+    ],
+    "courses": [
+      {
+        "name": "PGDM",
+        "degree": "PGDM",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "PGDM-HRM",
+        "degree": "PGDM",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      },
+      {
+        "name": "PGDM-IB (International Business)",
+        "degree": "PGDM",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2023",
+        "cutoff": "97+ percentile"
+      }
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "Boston Consulting Group",
+      "Goldman Sachs",
+      "Google"
+    ],
+    "tuition": "~INR 24-26 Lakhs",
+    "sources": [
+      "https://www.mdi.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private / Autonomous",
+      "establishedYear": "1973",
+      "district": "Gurugram",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹25.5 LPA",
+      "medianPackage": "₹24.2 LPA",
+      "highestPackage": "₹63.3 LPA"
+    }
+  },
+  {
+    "id": "nit-kurukshetra",
+    "name": "National Institute of Technology Kurukshetra",
+    "shortName": "NIT Kurukshetra",
+    "location": "Kurukshetra, Kurukshetra District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "An Institute of National Importance formerly known as REC Kurukshetra.",
+    "campus": "Thanesar, Kurukshetra",
+    "officialUrl": "https://nitkkr.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "nimcet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT, ECE, Mech, Civil, Electrical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "3 years",
+        "exams": [
+          "nimcet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: AIR ~6000-8000"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Adobe",
+      "Amazon",
+      "Uber"
+    ],
+    "tuition": "Standard NIT Fees",
+    "sources": [
+      "https://nitkkr.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1963",
+      "district": "Kurukshetra",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹12.5 LPA",
+      "medianPackage": "₹10.0 LPA",
+      "highestPackage": "₹45.0 LPA"
+    }
+  },
+  {
+    "id": "op-jindal-global-uni",
+    "name": "O.P. Jindal Global University",
+    "shortName": "JGU",
+    "location": "Sonipat, Sonipat District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "Institution of Eminence known for Law, International Affairs, and Liberal Arts.",
+    "campus": "Jagdishpur, Sonipat",
+    "officialUrl": "https://jgu.edu.in",
+    "acceptedExams": [
+      "lsat-india",
+      "jsat",
+      "cat",
+      "sat"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B (Hons)",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "lsat-india"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "xat",
+          "gmat"
+        ]
+      },
+      {
+        "name": "B.A. (Hons) Liberal Arts / Global Affairs",
+        "degree": "B.A. Hons",
+        "duration": "3 years",
+        "exams": [
+          "jsat",
+          "sat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "lsat-india",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jsat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Khaitan & Co",
+      "AZB & Partners",
+      "Cyril Amarchand Mangaldas"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://jgu.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University (IoE)",
+      "establishedYear": "2009",
+      "district": "Sonipat",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "ashoka-university",
+    "name": "Ashoka University",
+    "shortName": "Ashoka",
+    "location": "Sonipat, Sonipat District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "Pioneer in liberal arts and sciences education in India.",
+    "campus": "Rajiv Gandhi Education City, Sonipat",
+    "officialUrl": "https://www.ashoka.edu.in",
+    "acceptedExams": [
+      "ashoka-aptitude-test",
+      "sat",
+      "act"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc. (Hons) Liberal Arts & Sciences",
+        "degree": "UG",
+        "duration": "3/4 years",
+        "exams": [
+          "ashoka-aptitude-test",
+          "sat"
+        ]
+      },
+      {
+        "name": "Young India Fellowship (YIF)",
+        "degree": "PG Diploma",
+        "duration": "1 year",
+        "exams": [
+          "interview",
+          "essay"
+        ]
+      },
+      {
+        "name": "M.A. Economics",
+        "degree": "M.A.",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ashoka-aptitude-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "sat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "Dalberg",
+      "Genpact"
+    ],
+    "tuition": "High-tier Private Fees",
+    "sources": [
+      "https://www.ashoka.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2014",
+      "district": "Sonipat",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-sonepat",
+    "name": "Indian Institute of Information Technology Sonepat",
+    "shortName": "IIIT Sonepat",
+    "location": "Sonepat, Sonepat District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Institute of National Importance operating under PPP mode.",
+    "campus": "IIT Delhi Technopark, Sonepat",
+    "officialUrl": "http://www.iiitsonepat.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Cisco",
+      "Cred"
+    ],
+    "tuition": "Standard IIIT Fees",
+    "sources": [
+      "http://www.iiitsonepat.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "PPP Model / INI",
+      "establishedYear": "2014",
+      "district": "Sonepat",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "central-uni-haryana",
+    "name": "Central University of Haryana",
+    "shortName": "CUH",
+    "location": "Mahendergarh, Mahendergarh District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "A central university offering diverse disciplines in a rural setting.",
+    "campus": "Jant-Pali, Mahendergarh",
+    "officialUrl": "http://www.cuh.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Civil, Electrical, Printing & Packaging)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Sc (Physics, Chemistry, Maths, Biotech)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "http://www.cuh.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central University",
+      "establishedYear": "2009",
+      "district": "Mahendergarh",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "niftem-sonepat",
+    "name": "National Institute of Food Technology Entrepreneurship and Management",
+    "shortName": "NIFTEM",
+    "location": "Sonepat, Sonepat District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Deemed university under Ministry of Food Processing Industries, focusing on food tech.",
+    "campus": "Kundli, Sonepat",
+    "officialUrl": "http://www.niftem.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Food Technology and Management)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "MBA (Food & Agribusiness Management)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Nestle",
+      "ITC",
+      "Amul",
+      "Mondelez"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "http://www.niftem.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University (Central Govt)",
+      "establishedYear": "2012",
+      "district": "Sonepat",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "jc-bose-ymca-faridabad",
+    "name": "J.C. Bose University of Science and Technology, YMCA",
+    "shortName": "YMCA Faridabad",
+    "location": "Faridabad, Faridabad District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly YMCA Institute of Engineering, now a prominent state technical university.",
+    "campus": "Sector 6, Faridabad",
+    "officialUrl": "https://jcboseust.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT, ECE, Mech, Electrical, Civil)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "merit-based"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Samsung",
+      "Adobe",
+      "Amazon",
+      "Maruti Suzuki"
+    ],
+    "tuition": "State Govt Fees",
+    "sources": [
+      "https://jcboseust.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Technical University",
+      "establishedYear": "1969",
+      "district": "Faridabad",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kurukshetra-university",
+    "name": "Kurukshetra University",
+    "shortName": "KUK",
+    "location": "Kurukshetra, Kurukshetra District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "One of the oldest and most respected state universities in Haryana.",
+    "campus": "Thanesar, Kurukshetra",
+    "officialUrl": "https://www.kuk.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (UIET: CSE, ECE, Mech, BioTech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Sc (Various Disciplines)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "LL.B (3 Years)",
+        "degree": "LL.B",
+        "duration": "3 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Univ)",
+    "sources": [
+      "https://www.kuk.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1956",
+      "district": "Kurukshetra",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mdu-rohtak",
+    "name": "Maharshi Dayanand University",
+    "shortName": "MDU Rohtak",
+    "location": "Rohtak, Rohtak District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Major affiliating state university with a large campus and diverse courses.",
+    "campus": "Delhi Road, Rohtak",
+    "officialUrl": "https://mdu.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (UIET: CSE, ECE, Mech, Civil, Biotech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Univ)",
+    "sources": [
+      "https://mdu.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Public University",
+      "establishedYear": "1976",
+      "district": "Rohtak",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "dcrust-murthal",
+    "name": "Deenbandhu Chhotu Ram University of Science and Technology",
+    "shortName": "DCRUST Murthal",
+    "location": "Murthal, Sonepat District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "State technical university formerly known as CRSCE.",
+    "campus": "Murthal, Sonepat",
+    "officialUrl": "https://www.dcrustm.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "nata"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil, Electrical, Chemical, BioMedical)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Fidelity",
+      "Escorts"
+    ],
+    "tuition": "State Govt Fees",
+    "sources": [
+      "https://www.dcrustm.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Technical University",
+      "establishedYear": "1987",
+      "district": "Sonepat",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gju-hisar",
+    "name": "Guru Jambheshwar University of Science and Technology",
+    "shortName": "GJUST Hisar",
+    "location": "Hisar, Hisar District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "State university focused on science, technology, and management.",
+    "campus": "Hisar",
+    "officialUrl": "https://www.gjust.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT, ECE, Mech, Printing, Food Tech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Sc (Physics, Chem, Env Science, Biotech)",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "cmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "gate",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "ITC",
+      "Adani Wilmar",
+      "Wipro"
+    ],
+    "tuition": "State Govt Fees",
+    "sources": [
+      "https://www.gjust.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Technical University",
+      "establishedYear": "1995",
+      "district": "Hisar",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ccshau-hisar",
+    "name": "Chaudhary Charan Singh Haryana Agricultural University",
+    "shortName": "CCSHAU",
+    "location": "Hisar, Hisar District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "One of Asia's biggest agricultural universities.",
+    "campus": "Hisar",
+    "officialUrl": "http://hau.ac.in",
+    "acceptedExams": [
+      "icar-aieea",
+      "entrance-test"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Hons) Agriculture",
+        "degree": "B.Sc Hons",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea",
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "B.Tech (Agricultural Engineering)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "icar-aieea"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "entrance-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Agro Industries",
+      "Banking"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "http://hau.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Agricultural University",
+      "establishedYear": "1970",
+      "district": "Hisar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "pgims-rohtak",
+    "name": "Pandit Bhagwat Dayal Sharma Post Graduate Institute of Medical Sciences",
+    "shortName": "PGIMS Rohtak",
+    "location": "Rohtak, Rohtak District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "Premier government medical college and hospital in Haryana.",
+    "campus": "Medical Enclave, Rohtak",
+    "officialUrl": "http://www.uhsr.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "common-entrance-test"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "State Rank Top 100"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://www.uhsr.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "UHS Rohtak"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1960",
+      "district": "Rohtak",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "kalpana-chawla-gmc",
+    "name": "Kalpana Chawla Government Medical College",
+    "shortName": "KCGMC Karnal",
+    "location": "Karnal, Karnal District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Government medical college named after the astronaut Kalpana Chawla.",
+    "campus": "Karnal",
+    "officialUrl": "http://kcgmc.edu.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "http://kcgmc.edu.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "UHS Rohtak"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2017",
+      "district": "Karnal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "esic-faridabad",
+    "name": "ESIC Medical College and Hospital",
+    "shortName": "ESIC Faridabad",
+    "location": "Faridabad, Faridabad District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Central government medical college under the Ministry of Labour and Employment.",
+    "campus": "NH-3, NIT, Faridabad",
+    "officialUrl": "https://www.esic.gov.in/medical/medical-college-hospital-faridabad",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MD/MS",
+        "degree": "MD/MS",
+        "duration": "3 years",
+        "exams": [
+          "neet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (Central Govt)",
+    "sources": [
+      "https://www.esic.gov.in/medical/medical-college-hospital-faridabad"
+    ],
+    "meta": {
+      "affiliations": [
+        "UHS Rohtak"
+      ],
+      "ownership": "Central Govt (ESIC)",
+      "establishedYear": "2015",
+      "district": "Faridabad",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "amity-gurugram",
+    "name": "Amity University Haryana",
+    "shortName": "Amity Gurugram",
+    "location": "Gurugram, Gurugram District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Large private university campus in Manesar, Gurugram.",
+    "campus": "Manesar, Gurugram",
+    "officialUrl": "https://www.amity.edu/gurugram",
+    "acceptedExams": [
+      "jee-main",
+      "amity-jee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Aerospace, BioTech, Civil, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "amity-jee"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "amity-jee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Shell",
+      "Hyundai"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.amity.edu/gurugram"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2010",
+      "district": "Gurugram",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "manav-rachna-university",
+    "name": "Manav Rachna University",
+    "shortName": "MRU",
+    "location": "Faridabad, Faridabad District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Private university focused on engineering, law, and education.",
+    "campus": "Sector 43, Faridabad",
+    "officialUrl": "https://manavrachna.edu.in/university",
+    "acceptedExams": [
+      "jee-main",
+      "mrnat",
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Robotics)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "mrnat"
+        ]
+      },
+      {
+        "name": "B.A. LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat",
+          "mrnat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "mrnat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Accenture",
+      "IBM"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://manavrachna.edu.in/university"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2014",
+      "district": "Faridabad",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mriirs-faridabad",
+    "name": "Manav Rachna International Institute of Research and Studies",
+    "shortName": "MRIIRS",
+    "location": "Faridabad, Faridabad District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Deemed university known for research and professional courses.",
+    "campus": "Sector 43, Faridabad",
+    "officialUrl": "https://manavrachna.edu.in/mriirs",
+    "acceptedExams": [
+      "jee-main",
+      "mrnat",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "mrnat"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "mat"
+        ]
+      },
+      {
+        "name": "BDS",
+        "degree": "BDS",
+        "duration": "5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "mrnat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Infosys",
+      "Wipro",
+      "HCL"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://manavrachna.edu.in/mriirs"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University",
+      "district": "Faridabad",
+      "naacGrade": "A++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "bml-munjal-uni",
+    "name": "BML Munjal University",
+    "shortName": "BMU",
+    "location": "Gurugram, Gurugram District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Founded by the Hero Group, focusing on practical learning and industry integration.",
+    "campus": "NH-8, Sidhrawali, Gurugram",
+    "officialUrl": "https://www.bmu.edu.in",
+    "acceptedExams": [
+      "jee-main",
+      "sat",
+      "cat",
+      "nmat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, Mech, Electronics)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "sat"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "nmat",
+          "mat"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "ugat",
+          "sat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "sat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Hero MotoCorp",
+      "KPMG",
+      "Deloitte"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.bmu.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2014",
+      "district": "Gurugram",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "northcap-university",
+    "name": "The NorthCap University",
+    "shortName": "NCU Gurgaon",
+    "location": "Gurugram, Gurugram District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly ITM University, known for engineering and law programs.",
+    "campus": "Sector 23A, Gurugram",
+    "officialUrl": "https://www.ncuindia.edu",
+    "acceptedExams": [
+      "jee-main",
+      "clat",
+      "lsat-india"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "BBA LL.B",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "clat",
+          "lsat-india"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "clat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Optum",
+      "Fidelity"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.ncuindia.edu"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "1996",
+      "district": "Gurugram",
+      "naacGrade": "A",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sgt-university",
+    "name": "SGT University",
+    "shortName": "SGT",
+    "location": "Gurugram, Gurugram District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Large multidisciplinary university with a strong focus on medical and health sciences.",
+    "campus": "Budhera, Gurugram",
+    "officialUrl": "https://sgtuniversity.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "BDS",
+        "degree": "BDS",
+        "duration": "5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://sgtuniversity.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Gurugram",
+      "naacGrade": "A+",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "mm-deemed-mullana",
+    "name": "Maharishi Markandeshwar (Deemed to be University)",
+    "shortName": "MMU Mullana",
+    "location": "Mullana, Ambala District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Major deemed university with medical, dental, and engineering colleges.",
+    "campus": "Mullana, Ambala",
+    "officialUrl": "https://www.mmumullana.org",
+    "acceptedExams": [
+      "neet-ug",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "BDS",
+        "degree": "BDS",
+        "duration": "5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Infosys",
+      "Wipro",
+      "Tech Mahindra"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://www.mmumullana.org"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University",
+      "establishedYear": "1993",
+      "district": "Ambala",
+      "naacGrade": "A++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gd-goenka-university",
+    "name": "GD Goenka University",
+    "shortName": "GDGU",
+    "location": "Gurugram, Gurugram District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Premium private university known for design, hospitality, and engineering.",
+    "campus": "Sohna Road, Gurugram",
+    "officialUrl": "https://www.gdgoenkauniversity.com",
+    "acceptedExams": [
+      "jee-main",
+      "cuet-ug",
+      "dat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main",
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Des",
+        "degree": "B.Des",
+        "duration": "4 years",
+        "exams": [
+          "dat"
+        ]
+      },
+      {
+        "name": "B.Sc (Hospitality)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.gdgoenkauniversity.com"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Gurugram",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "great-lakes-gurgaon",
+    "name": "Great Lakes Institute of Management, Gurgaon",
+    "shortName": "Great Lakes Gurgaon",
+    "location": "Gurugram, Gurugram District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Prominent management institute, sister campus of Great Lakes Chennai.",
+    "campus": "Bilaspur-Tauru Road, Gurugram",
+    "officialUrl": "https://www.greatlakes.edu.in/gurgaon",
+    "acceptedExams": [
+      "cat",
+      "xat",
+      "gmat"
+    ],
+    "courses": [
+      {
+        "name": "PGPM",
+        "degree": "PG Certificate",
+        "duration": "1 year",
+        "exams": [
+          "cat",
+          "xat",
+          "gmat"
+        ]
+      },
+      {
+        "name": "PGDM",
+        "degree": "PGDM",
+        "duration": "2 years",
+        "exams": [
+          "cat",
+          "xat",
+          "gmat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "xat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Accenture",
+      "Cognizant"
+    ],
+    "tuition": "~INR 15-18 Lakhs",
+    "sources": [
+      "https://www.greatlakes.edu.in/gurgaon"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private / Autonomous",
+      "establishedYear": "2010",
+      "district": "Gurugram",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nid-haryana",
+    "name": "National Institute of Design Haryana",
+    "shortName": "NID Kurukshetra",
+    "location": "Kurukshetra, Kurukshetra District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "Institute of National Importance for design education.",
+    "campus": "Umri, Kurukshetra",
+    "officialUrl": "https://www.nidh.ac.in",
+    "acceptedExams": [
+      "nid-dat"
+    ],
+    "courses": [
+      {
+        "name": "B.Des (Industrial, Comm, Textile)",
+        "degree": "B.Des",
+        "duration": "4 years",
+        "exams": [
+          "nid-dat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nid-dat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Standard NID Fees",
+    "sources": [
+      "https://www.nidh.ac.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2016",
+      "district": "Kurukshetra",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "sushant-university",
+    "name": "Sushant University",
+    "shortName": "Sushant Uni",
+    "location": "Gurugram, Gurugram District, Haryana",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly Ansal University, known for its architecture and design schools.",
+    "campus": "Golf Course Road, Gurugram",
+    "officialUrl": "https://sushantuniversity.edu.in",
+    "acceptedExams": [
+      "nata",
+      "jee-main",
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      },
+      {
+        "name": "B.Des",
+        "degree": "B.Des",
+        "duration": "4 years",
+        "exams": [
+          "entrance-test"
+        ]
+      },
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nata",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://sushantuniversity.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private University",
+      "establishedYear": "2012",
+      "district": "Gurugram",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "piet-panipat",
+    "name": "Panipat Institute of Engineering and Technology",
+    "shortName": "PIET",
+    "location": "Panipat, Panipat District, Haryana",
+    "rankingTier": "Tier 3",
+    "overview": "Popular private engineering and management college in the Delhi-NCR belt.",
+    "campus": "Samalkha, Panipat",
+    "officialUrl": "https://www.piet.co.in",
+    "acceptedExams": [
+      "jee-main",
+      "mat",
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "mat",
+          "cat"
+        ]
+      },
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "merit-based"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "mat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "Capgemini",
+      "HCL"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.piet.co.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Kurukshetra University"
+      ],
+      "ownership": "Private",
+      "district": "Panipat",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "siet-nilokheri",
+    "name": "State Institute of Engineering and Technology",
+    "shortName": "SIET Nilokheri",
+    "location": "Nilokheri, Karnal District, Haryana",
+    "rankingTier": "Tier 3",
+    "overview": "Government engineering college.",
+    "campus": "Nilokheri, Karnal",
+    "officialUrl": "https://www.gecnilokheri.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, Mech, Civil)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Government Fees",
+    "sources": [
+      "https://www.gecnilokheri.ac.in"
+    ],
+    "meta": {
+      "affiliations": [
+        "Kurukshetra University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2016",
+      "district": "Karnal",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "luvas-hisar",
+    "name": "Lala Lajpat Rai University of Veterinary and Animal Sciences",
+    "shortName": "LUVAS",
+    "location": "Hisar, Hisar District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "State university dedicated to veterinary and animal sciences.",
+    "campus": "Hisar",
+    "officialUrl": "https://www.luvas.edu.in",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "B.V.Sc",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.luvas.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "State Veterinary University",
+      "establishedYear": "2010",
+      "district": "Hisar",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-kurukshetra",
+    "name": "National Institute of Technology Kurukshetra",
+    "shortName": "National Institute of Technology Kurukshetra",
+    "location": "Kurukshetra, Kurukshetra District, Haryana",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Kurukshetra",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Kurukshetra",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  }
+]

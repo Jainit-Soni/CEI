@@ -1,0 +1,2954 @@
+[
+  {
+    "id": "iit-bhubaneswar",
+    "name": "Indian Institute of Technology Bhubaneswar",
+    "shortName": "IIT BBS",
+    "location": "Jatni, Khordha, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "A second-generation IIT established in 2008, operating from a sprawling permanent campus at the foot of Barunei Hill. It focuses on core engineering, climate science, and minerals.",
+    "campus": "Argul",
+    "officialUrl": "https://www.iitbbs.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      },
+      {
+        "name": "M.Sc",
+        "degree": "M.Sc",
+        "duration": "2 years",
+        "exams": [
+          "jam"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE ~3000 Rank"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Goldman Sachs",
+      "PSUs"
+    ],
+    "tuition": "Standard IIT Fees",
+    "sources": [
+      "https://www.iitbbs.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2008",
+      "district": "Khordha",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "nit-rourkela",
+    "name": "National Institute of Technology Rourkela",
+    "shortName": "NIT Rourkela",
+    "location": "Rourkela, Sundargarh, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "One of the premier NITs in India, consistently ranked among the top engineering institutes. It offers a wide range of specialized courses including Ceramics and Food Process Engineering.",
+    "campus": "Sector 1",
+    "officialUrl": "https://www.nitrkl.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Integrated M.Sc",
+        "degree": "M.Sc",
+        "duration": "5 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: 3800 | ECE: 8200 | Mech: 18000",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Qualcomm",
+      "Tata Steel",
+      "L&T"
+    ],
+    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "sources": [
+      "https://www.nitrkl.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "1961",
+      "district": "Sundargarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹14.2 LPA",
+      "medianPackage": "₹11.0 LPA",
+      "highestPackage": "₹83.0 LPA"
+    }
+  },
+  {
+    "id": "aiims-bhubaneswar",
+    "name": "All India Institute of Medical Sciences Bhubaneswar",
+    "shortName": "AIIMS Bhubaneswar",
+    "location": "Bhubaneswar, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "An apex healthcare institute established under the PMSSY. It is one of the most sought-after AIIMS outside New Delhi.",
+    "campus": "Sijua, Patrapada",
+    "officialUrl": "https://aiimsbhubaneswar.nic.in",
+    "acceptedExams": [
+      "neet-ug",
+      "ini-cet"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc Nursing",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "aiims-nursing-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "General Rank ~600"
+      }
+    ],
+    "topRecruiters": [
+      "Hospitals",
+      "Research Organizations"
+    ],
+    "tuition": "Very Low (Central Govt)",
+    "sources": [
+      "https://aiimsbhubaneswar.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2012",
+      "district": "Khordha",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iim-sambalpur",
+    "name": "Indian Institute of Management Sambalpur",
+    "shortName": "IIM Sambalpur",
+    "location": "Sambalpur, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "A third-generation IIM operating from its permanent campus in Basantpur. It focuses on innovation and entrepreneurship.",
+    "campus": "Basantpur",
+    "officialUrl": "https://www.iimsambalpur.ac.in",
+    "acceptedExams": [
+      "cat"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Accenture",
+      "Infosys"
+    ],
+    "tuition": "₹13,00,000 (Approx)",
+    "sources": [
+      "https://www.iimsambalpur.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2015",
+      "district": "Sambalpur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "niser-bhubaneswar",
+    "name": "National Institute of Science Education and Research",
+    "shortName": "NISER",
+    "location": "Jatni, Khordha, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "An autonomous institute under the Department of Atomic Energy (DAE), affiliated with HBNI. Known for high-quality basic sciences education.",
+    "campus": "Jatni",
+    "officialUrl": "https://www.niser.ac.in",
+    "acceptedExams": [
+      "nest"
+    ],
+    "courses": [
+      {
+        "name": "Integrated M.Sc",
+        "degree": "M.Sc",
+        "duration": "5 years",
+        "exams": [
+          "nest"
+        ]
+      },
+      {
+        "name": "Ph.D",
+        "degree": "Ph.D",
+        "duration": "Var",
+        "exams": [
+          "gate",
+          "net",
+          "jest"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "nest",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "BARC",
+      "Research Labs",
+      "Academia"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.niser.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "HBNI (Deemed)"
+      ],
+      "ownership": "Central Govt (DAE)",
+      "establishedYear": "2007",
+      "district": "Khordha",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiser-berhampur",
+    "name": "Indian Institute of Science Education and Research Berhampur",
+    "shortName": "IISER Berhampur",
+    "location": "Berhampur, Ganjam, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "One of the newest IISERs, dedicated to scientific research and science education.",
+    "campus": "Laudigam",
+    "officialUrl": "https://www.iiserbpr.ac.in",
+    "acceptedExams": [
+      "iiser-aptitude-test",
+      "jee-advanced"
+    ],
+    "courses": [
+      {
+        "name": "BS-MS Dual Degree",
+        "degree": "Integrated Master of Science",
+        "duration": "5 years",
+        "exams": [
+          "iiser-aptitude-test",
+          "jee-advanced"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "iiser-aptitude-test",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Research Labs"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.iiserbpr.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [],
+      "ownership": "Central Govt / INI",
+      "establishedYear": "2016",
+      "district": "Ganjam",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "central-university-of-odisha",
+    "name": "Central University of Odisha",
+    "shortName": "CUO",
+    "location": "Koraput, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "Established to promote higher education in the tribal-dominated KBK region. It offers various postgraduate and research programs.",
+    "campus": "Sunabeda",
+    "officialUrl": "https://cuo.ac.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "M.Sc/M.A./MBA",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      },
+      {
+        "name": "Integrated M.Sc (Maths)",
+        "degree": "M.Sc",
+        "duration": "5 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "cuet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://cuo.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Central University",
+      "establishedYear": "2009",
+      "district": "Koraput",
+      "naacGrade": "B+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "utkal-university",
+    "name": "Utkal University",
+    "shortName": "Utkal University",
+    "location": "Bhubaneswar, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "The oldest university in Odisha and the 17th oldest in India. It is a premier affiliating university located at Vani Vihar.",
+    "campus": "Vani Vihar",
+    "officialUrl": "https://utkaluniversity.ac.in",
+    "acceptedExams": [
+      "cpet-odisha"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cpet-odisha"
+        ]
+      },
+      {
+        "name": "MBA",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "cpet-odisha"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cpet-odisha",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://utkaluniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1943",
+      "district": "Khordha",
+      "naacGrade": "A+"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "ravenshaw-university",
+    "name": "Ravenshaw University",
+    "shortName": "Ravenshaw",
+    "location": "Cuttack, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly the prestigious Ravenshaw College, it was upgraded to a unitary university. It is a historic institution in East India.",
+    "campus": "College Square",
+    "officialUrl": "https://ravenshawuniversity.ac.in",
+    "acceptedExams": [
+      "cpet-odisha",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "UG Courses (Arts, Science, Commerce)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "PG Courses",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cpet-odisha"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cpet-odisha",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Infosys",
+      "Wipro"
+    ],
+    "tuition": "Low to Moderate",
+    "sources": [
+      "https://ravenshawuniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1868",
+      "district": "Cuttack",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "sambalpur-university",
+    "name": "Sambalpur University",
+    "shortName": "Sambalpur University",
+    "location": "Burla, Sambalpur, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "Located at Jyoti Vihar, Burla, it serves the higher education needs of Western Odisha.",
+    "campus": "Jyoti Vihar",
+    "officialUrl": "https://www.suniv.ac.in",
+    "acceptedExams": [
+      "cpet-odisha"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cpet-odisha"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cpet-odisha",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.suniv.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1967",
+      "district": "Sambalpur",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "berhampur-university",
+    "name": "Berhampur University",
+    "shortName": "BU Odisha",
+    "location": "Bhanja Bihar, Berhampur, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "The oldest university in Southern Odisha, affiliating colleges in Ganjam, Gajapati, and Kandhamal districts.",
+    "campus": "Bhanja Bihar",
+    "officialUrl": "https://www.buodisha.edu.in",
+    "acceptedExams": [
+      "cpet-odisha"
+    ],
+    "courses": [
+      {
+        "name": "M.A./M.Sc/M.Com",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cpet-odisha"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cpet-odisha",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.buodisha.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1967",
+      "district": "Ganjam",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "kiit-university",
+    "name": "Kalinga Institute of Industrial Technology",
+    "shortName": "KIIT",
+    "location": "Bhubaneswar, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "A premier private deemed university and Institute of Eminence (IoE), known for its massive campus and diverse professional programs.",
+    "campus": "Patia",
+    "officialUrl": "https://kiit.ac.in",
+    "acceptedExams": [
+      "kiitee",
+      "neet-ug",
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "kiitee"
+        ]
+      },
+      {
+        "name": "MBBS (KIMS)",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      },
+      {
+        "name": "MBA (KSOM)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "kiitee-mgmt",
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "kiitee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Accenture",
+      "Cognizant",
+      "High Radius",
+      "Deloitte"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://kiit.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "1992",
+      "district": "Khordha",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "soa-university",
+    "name": "Siksha 'O' Anusandhan",
+    "shortName": "SOA University",
+    "location": "Bhubaneswar, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "A major private deemed university in Bhubaneswar, comprising ITER (Engineering) and IMS (Medical). Consistently ranked high in NIRF.",
+    "campus": "Khandagiri",
+    "officialUrl": "https://www.soa.ac.in",
+    "acceptedExams": [
+      "saat",
+      "jee-main",
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (ITER)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "saat",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "MBBS (IMS)",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "saat",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Amazon",
+      "TCS",
+      "Infosys"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://www.soa.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC - Deemed University"
+      ],
+      "ownership": "Private Deemed",
+      "establishedYear": "2007",
+      "district": "Khordha",
+      "naacGrade": "A++"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "vssut-burla",
+    "name": "Veer Surendra Sai University of Technology",
+    "shortName": "VSSUT",
+    "location": "Burla, Sambalpur, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "Formerly UCE Burla, it is the oldest government engineering college in Odisha, now a unitary state university. Known for its strong alumni network.",
+    "campus": "Burla",
+    "officialUrl": "https://www.vssut.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "M.Tech",
+        "degree": "M.Tech",
+        "duration": "2 years",
+        "exams": [
+          "gate",
+          "ojee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE ~45000 Rank (State Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Tata Steel",
+      "Vedanta",
+      "Aditya Birla",
+      "Maruti Suzuki"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://www.vssut.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1956",
+      "district": "Sambalpur",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "outr-bhubaneswar",
+    "name": "Odisha University of Technology and Research",
+    "shortName": "OUTR (formerly CET)",
+    "location": "Ghatikia, Bhubaneswar, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "Formerly College of Engineering and Technology (CET), Bhubaneswar. It was upgraded to a unitary university in 2021. It is a top choice for engineering aspirants in Odisha.",
+    "campus": "Ghatikia",
+    "officialUrl": "https://www.outr.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Arch",
+        "degree": "B.Arch",
+        "duration": "5 years",
+        "exams": [
+          "nata"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE ~35000 Rank (State Quota)"
+      }
+    ],
+    "topRecruiters": [
+      "Maruti Suzuki",
+      "Asian Paints",
+      "TCS Digital",
+      "Deloitte"
+    ],
+    "tuition": "Low (State Govt)",
+    "sources": [
+      "https://www.outr.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1981",
+      "district": "Khordha",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "ouat-bhubaneswar",
+    "name": "Odisha University of Agriculture and Technology",
+    "shortName": "OUAT",
+    "location": "Bhubaneswar, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "The second oldest agricultural university in India. It offers education in agriculture, horticulture, veterinary science, and agricultural engineering.",
+    "campus": "Siripur",
+    "officialUrl": "https://www.ouat.nic.in",
+    "acceptedExams": [
+      "ouat-entrance",
+      "icar-aieea"
+    ],
+    "courses": [
+      {
+        "name": "B.Sc (Agriculture)",
+        "degree": "B.Sc",
+        "duration": "4 years",
+        "exams": [
+          "ouat-entrance"
+        ]
+      },
+      {
+        "name": "B.V.Sc & A.H.",
+        "degree": "Bachelor of Veterinary Science",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug",
+          "ouat-entrance"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "ouat-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "icar-aieea",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.ouat.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "ICAR"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1962",
+      "district": "Khordha",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "national-law-university-odisha",
+    "name": "National Law University Odisha",
+    "shortName": "NLUO",
+    "location": "Cuttack, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "A premier National Law University established by the NLUO Act of 2008. It focuses on legal education and research.",
+    "campus": "Naraj",
+    "officialUrl": "https://www.nluo.ac.in",
+    "acceptedExams": [
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "BA LLB (Hons)",
+        "degree": "Integrated LLB",
+        "duration": "5 years",
+        "exams": [
+          "clat"
+        ]
+      },
+      {
+        "name": "BBA LLB (Hons)",
+        "degree": "Integrated LLB",
+        "duration": "5 years",
+        "exams": [
+          "clat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "clat",
+        "year": "2023",
+        "cutoff": "AIR ~1000"
+      }
+    ],
+    "topRecruiters": [
+      "Khaitan & Co",
+      "Shardul Amarchand Mangaldas",
+      "Trilegal"
+    ],
+    "tuition": "High (NLU Standard)",
+    "sources": [
+      "https://www.nluo.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Bar Council of India"
+      ],
+      "ownership": "State University (NLU)",
+      "establishedYear": "2009",
+      "district": "Cuttack",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "scb-medical-college-cuttack",
+    "name": "Srirama Chandra Bhanja Medical College and Hospital",
+    "shortName": "SCB Medical College",
+    "location": "Cuttack, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "The oldest and premier government medical college in Odisha, attracting the top rankers of the state.",
+    "campus": "Mangalabag",
+    "officialUrl": "https://scbmch.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg",
+      "neet-ss"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "State Quota ~650 Score"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://scbmch.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Utkal University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1944",
+      "district": "Cuttack",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "mkcg-medical-college-berhampur",
+    "name": "Maharaja Krishna Chandra Gajapati Medical College",
+    "shortName": "MKCG",
+    "location": "Berhampur, Ganjam, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "A major government medical college and hospital serving Southern Odisha.",
+    "campus": "Berhampur",
+    "officialUrl": "https://mkcgmch.org",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mkcgmch.org"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Berhampur University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1962",
+      "district": "Ganjam",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "vimsar-burla",
+    "name": "Veer Surendra Sai Institute of Medical Sciences and Research",
+    "shortName": "VIMSAR",
+    "location": "Burla, Sambalpur, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "A premier government medical college and hospital serving Western Odisha.",
+    "campus": "Burla",
+    "officialUrl": "https://vimsar.ac.in",
+    "acceptedExams": [
+      "neet-ug",
+      "neet-pg"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "neet-pg",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://vimsar.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Sambalpur University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1959",
+      "district": "Sambalpur",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "iiit-bhubaneswar",
+    "name": "International Institute of Information Technology Bhubaneswar",
+    "shortName": "IIIT Bhubaneswar",
+    "location": "Gothapatna, Bhubaneswar, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "Established by the Govt of Odisha and converted to a unitary university. It focuses on IT and related fields.",
+    "campus": "Gothapatna",
+    "officialUrl": "https://www.iiit-bh.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, IT, ETC, EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Dell",
+      "IBM",
+      "Infosys"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.iiit-bh.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2006",
+      "district": "Khordha",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "centurion-university-paralakhemundi",
+    "name": "Centurion University of Technology and Management",
+    "shortName": "CUTM",
+    "location": "Paralakhemundi, Gajapati, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "The first private state university in Odisha, known for its focus on skill development and vocational education.",
+    "campus": "Paralakhemundi / Bhubaneswar",
+    "officialUrl": "https://cutm.ac.in",
+    "acceptedExams": [
+      "cuee",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cuee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cuee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://cutm.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2010",
+      "district": "Gajapati",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "xim-university",
+    "name": "XIM University",
+    "shortName": "XIMB",
+    "location": "Harirajpur/Bhubaneswar, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "Known primarily for Xavier Institute of Management Bhubaneswar (XIMB), it is a top-tier private Jesuit university offering management and liberal arts programs.",
+    "campus": "New Campus (Harirajpur)",
+    "officialUrl": "https://xim.edu.in",
+    "acceptedExams": [
+      "xat",
+      "cat",
+      "gmat",
+      "x-gmt"
+    ],
+    "courses": [
+      {
+        "name": "MBA (Business Management)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "xat",
+          "cat"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "xat",
+        "year": "2023",
+        "cutoff": "90+ percentile"
+      }
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "PwC",
+      "ICICI Bank",
+      "Tata Steel"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://xim.edu.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2013",
+      "district": "Puri",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "bput-rourkela",
+    "name": "Biju Patnaik University of Technology",
+    "shortName": "BPUT",
+    "location": "Rourkela, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "The state affiliating university for technical education. Most private engineering and pharmacy colleges in Odisha are affiliated with BPUT.",
+    "campus": "Chhend Colony",
+    "officialUrl": "https://www.bput.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "ojee"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Affiliated Colleges)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "ojee",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Varies by college",
+    "sources": [
+      "https://www.bput.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC",
+        "AICTE"
+      ],
+      "ownership": "State University",
+      "establishedYear": "2002",
+      "district": "Sundargarh",
+      "naacGrade": "NA"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "vikram-deb-university",
+    "name": "Vikram Deb University",
+    "shortName": "VD University",
+    "location": "Jeypore, Koraput, Odisha",
+    "rankingTier": "Tier 3",
+    "overview": "Formerly Vikram Deb Autonomous College, recently upgraded to a university. It is a key institution in the KBK region.",
+    "campus": "Jeypore",
+    "officialUrl": "https://www.vikramdebuniversity.ac.in",
+    "acceptedExams": [
+      "cpet-odisha",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "UG Courses",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "PG Courses",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cpet-odisha"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cpet-odisha",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "merit",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.vikramdebuniversity.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1947",
+      "district": "Koraput",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "dharanidhar-university",
+    "name": "Dharanidhar University",
+    "shortName": "Dharanidhar University",
+    "location": "Keonjhar, Odisha",
+    "rankingTier": "Tier 3",
+    "overview": "Formerly Dharanidhar Autonomous College, upgraded to a university to serve the mineral-rich district of Keonjhar.",
+    "campus": "Keonjhar",
+    "officialUrl": "https://www.dduniversity.nic.in",
+    "acceptedExams": [
+      "cpet-odisha"
+    ],
+    "courses": [
+      {
+        "name": "UG/PG Courses",
+        "degree": "Bachelor/Master",
+        "duration": "3/2 years",
+        "exams": [
+          "merit",
+          "cpet-odisha"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cpet-odisha",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Startups",
+      "Local IT Companies",
+      "Small Manufacturing Units",
+      "Regional Construction Firms",
+      "Local Government Projects"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.dduniversity.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "State University",
+      "establishedYear": "1957",
+      "district": "Keonjhar",
+      "naacGrade": "B++"
+    },
+    "placements": {
+      "averagePackage": "₹3-6 LPA",
+      "medianPackage": "₹3-5 LPA",
+      "highestPackage": "₹8-15 LPA",
+      "placementRate": "50-70%"
+    }
+  },
+  {
+    "id": "bjb-autonomous-college",
+    "name": "Buxi Jagabandhu Bidyadhar Autonomous College",
+    "shortName": "BJB College",
+    "location": "Bhubaneswar, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "One of the most prestigious autonomous colleges in Odisha, known for its high cutoffs and academic environment.",
+    "campus": "Lewis Road",
+    "officialUrl": "https://www.bjbcollege.in",
+    "acceptedExams": [
+      "sams-odisha-merit"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "sams-odisha",
+        "year": "2023",
+        "cutoff": "Physics ~94%"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "Low",
+    "sources": [
+      "https://www.bjbcollege.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Utkal University (Autonomous)"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1957",
+      "district": "Khordha",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "silicon-university-bhubaneswar",
+    "name": "Silicon University",
+    "shortName": "Silicon",
+    "location": "Bhubaneswar, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly Silicon Institute of Technology, it was one of the top private engineering colleges in Odisha, now upgraded to a private university.",
+    "campus": "Patia",
+    "officialUrl": "https://silicon.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "silicon-entrance"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (CSE, ECE, EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "silicon-entrance",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Infosys",
+      "Wipro",
+      "Mindtree",
+      "SAP"
+    ],
+    "tuition": "Moderate to High",
+    "sources": [
+      "https://silicon.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "2001",
+      "district": "Khordha",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "cv-raman-global-university",
+    "name": "C.V. Raman Global University",
+    "shortName": "CGU",
+    "location": "Bhubaneswar, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly C.V. Raman College of Engineering, now a private university. Known for its focus on marine engineering and skills.",
+    "campus": "Mahura, Janla",
+    "officialUrl": "https://cgu-odisha.ac.in",
+    "acceptedExams": [
+      "cget",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "cget",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "cget",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Bosch",
+      "Tech Mahindra",
+      "Cognizant"
+    ],
+    "tuition": "High",
+    "sources": [
+      "https://cgu-odisha.ac.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "1997",
+      "district": "Khordha",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "nist-university-berhampur",
+    "name": "NIST University",
+    "shortName": "NIST",
+    "location": "Berhampur, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "Formerly National Institute of Science and Technology, it is a leading private engineering institution in Southern Odisha, now a university.",
+    "campus": "Pallur Hills",
+    "officialUrl": "https://www.nist.edu",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Wipro",
+      "Infosys",
+      "TCS"
+    ],
+    "tuition": "Moderate",
+    "sources": [
+      "https://www.nist.edu"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "UGC"
+      ],
+      "ownership": "Private University",
+      "establishedYear": "1996",
+      "district": "Ganjam",
+      "naacGrade": "A"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-rourkela",
+    "name": "National Institute of Technology Rourkela",
+    "shortName": "National Institute of Technology Rourkela",
+    "location": "Rourkela, Rourkela District, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Rourkela",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Rourkela",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "siksha-o-anusandhan-bhubaneswar",
+    "name": "Siksha 'O' Anusandhan",
+    "shortName": "Siksha 'O' Anusandhan",
+    "location": "Bhubaneswar, Bhubaneswar District, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhubaneswar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Bhubaneswar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "kalinga-institute-of-industria-bhubaneswar",
+    "name": "Kalinga Institute of Industrial Technology",
+    "shortName": "Kalinga Institute of Industrial Technology",
+    "location": "Bhubaneswar, Bhubaneswar District, Odisha",
+    "rankingTier": "Tier 1",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhubaneswar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Amazon",
+      "Apple",
+      "Meta",
+      "Netflix",
+      "Adobe",
+      "Salesforce",
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "JP Morgan",
+      "Barclays",
+      "Deutsche Bank",
+      "McKinsey",
+      "BCG"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Bhubaneswar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹15-25 LPA",
+      "medianPackage": "₹12-18 LPA",
+      "highestPackage": "₹50+ LPA",
+      "placementRate": "85-95%"
+    }
+  },
+  {
+    "id": "cv-raman-global-university-bhubaneswar",
+    "name": "C.V. Raman Global University",
+    "shortName": "C.V. Raman Global University",
+    "location": "Bhubaneswar, Bhubaneswar District, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhubaneswar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Bhubaneswar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "national-institute-of-technolo-bhubaneswar",
+    "name": "National Institute of Technology Bhubaneswar",
+    "shortName": "National Institute of Technology Bhubaneswar",
+    "location": "Bhubaneswar, Bhubaneswar District, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhubaneswar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹50,000 - 1,50,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Government",
+      "establishedYear": "",
+      "district": "Bhubaneswar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "centurion-university-of-techno-paralakhemundi",
+    "name": "Centurion University of Technology and Management",
+    "shortName": "Centurion University of Technology and Management",
+    "location": "Paralakhemundi, Paralakhemundi District, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Paralakhemundi",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Paralakhemundi",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "college-of-engineering-technol-bhubaneswar",
+    "name": "College of Engineering & Technology Bhubaneswar",
+    "shortName": "College of Engineering & Technology Bhubaneswar",
+    "location": "Bhubaneswar, Bhubaneswar District, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhubaneswar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Bhubaneswar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gandhi-engineering-college-bhubaneswar",
+    "name": "Gandhi Engineering College",
+    "shortName": "Gandhi Engineering College",
+    "location": "Bhubaneswar, Bhubaneswar District, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhubaneswar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Bhubaneswar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gandhi-institute-for-technolog-bhubaneswar",
+    "name": "Gandhi Institute for Technological Advancement",
+    "shortName": "Gandhi Institute for Technological Advancement",
+    "location": "Bhubaneswar, Bhubaneswar District, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Bhubaneswar",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Bhubaneswar",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "giet-university-gunupur-gunupur",
+    "name": "GIET University Gunupur",
+    "shortName": "GIET University Gunupur",
+    "location": "Gunupur, Gunupur District, Odisha",
+    "rankingTier": "Tier 2",
+    "overview": "NIRF Ranked Engineering Institute",
+    "campus": "Gunupur",
+    "officialUrl": "",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "Computer Science and Engineering (CSE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Information Technology (IT)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electronics and Communication Engineering (ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Electrical and Electronics Engineering (EEE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tech Mahindra",
+      "Cognizant",
+      "Accenture",
+      "Capgemini",
+      "IBM",
+      "Oracle",
+      "SAP",
+      "VMware"
+    ],
+    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "sources": [],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Private",
+      "establishedYear": "",
+      "district": "Gunupur",
+      "sourceType": "official",
+      "sourceName": "NIRF 2024"
+    },
+    "placements": {
+      "averagePackage": "₹6-12 LPA",
+      "medianPackage": "₹5-9 LPA",
+      "highestPackage": "₹20-30 LPA",
+      "placementRate": "70-85%"
+    }
+  }
+]
