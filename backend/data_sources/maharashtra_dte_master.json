@@ -1,0 +1,207 @@
+[
+    {
+        "id": "vjti-mumbai",
+        "dteCode": "3012",
+        "name": "Veermata Jijabai Technological Institute (VJTI)"
+    },
+    {
+        "id": "coep-tech-pune",
+        "dteCode": "6006",
+        "name": "COEP Technological University"
+    },
+    {
+        "id": "ict-mumbai",
+        "dteCode": "3036",
+        "name": "Institute of Chemical Technology"
+    },
+    {
+        "id": "spit-mumbai",
+        "dteCode": "3215",
+        "name": "Sardar Patel Institute of Technology"
+    },
+    {
+        "id": "spce-mumbai",
+        "dteCode": "3014",
+        "name": "Sardar Patel College of Engineering"
+    },
+    {
+        "id": "pict-pune",
+        "dteCode": "6271",
+        "name": "Pune Institute of Computer Technology"
+    },
+    {
+        "id": "vit-pune",
+        "dteCode": "6273",
+        "name": "Vishwakarma Institute of Technology"
+    },
+    {
+        "id": "walchand-sangli",
+        "dteCode": "6007",
+        "name": "Walchand College of Engineering"
+    },
+    {
+        "id": "dj-sanghvi-mumbai",
+        "dteCode": "3199",
+        "name": "Dwarkadas J. Sanghvi College of Engineering"
+    },
+    {
+        "id": "thadomal-mumbai",
+        "dteCode": "3182",
+        "name": "Thadomal Shahani Engineering College"
+    },
+    {
+        "id": "vesit-mumbai",
+        "dteCode": "3185",
+        "name": "Vivekanand Education Society's Institute of Technology"
+    },
+    {
+        "id": "fr-crce-bandra",
+        "dteCode": "3184",
+        "name": "Fr. Conceicao Rodrigues College of Engineering"
+    },
+    {
+        "id": "fcrit-vashi",
+        "dteCode": "3197",
+        "name": "Fr. C. Rodrigues Institute of Technology"
+    },
+    {
+        "id": "rait-navi-mumbai",
+        "dteCode": "3196",
+        "name": "Ramrao Adik Institute of Technology"
+    },
+    {
+        "id": "kjsce-vidyavihar",
+        "dteCode": "3175",
+        "name": "K. J. Somaiya College of Engineering"
+    },
+    {
+        "id": "kjsit-sion",
+        "dteCode": "3209",
+        "name": "K. J. Somaiya Institute of Technology"
+    },
+    {
+        "id": "cummins-pune",
+        "dteCode": "6276",
+        "name": "Cummins College of Engineering for Women"
+    },
+    {
+        "id": "viit-pune",
+        "dteCode": "6289",
+        "name": "Vishwakarma Institute of Information Technology"
+    },
+    {
+        "id": "pccoe-pune",
+        "dteCode": "6175",
+        "name": "Pimpri Chinchwad College of Engineering"
+    },
+    {
+        "id": "pccoe-ravet",
+        "dteCode": "6628",
+        "name": "Pimpri Chinchwad College of Engineering and Research"
+    },
+    {
+        "id": "mit-wpu-pune",
+        "dteCode": "6146",
+        "name": "MIT World Peace University (formerly MIT Pune)"
+    },
+    {
+        "id": "mit-adt-pune",
+        "dteCode": "6267",
+        "name": "MIT ADT University"
+    },
+    {
+        "id": "dy-patil-akurdi",
+        "dteCode": "6272",
+        "name": "Dr. D. Y. Patil Institute of Technology, Pimpri"
+    },
+    {
+        "id": "dy-patil-lohegaon",
+        "dteCode": "6758",
+        "name": "Dr. D. Y. Patil School of Engineering, Lohegaon"
+    },
+    {
+        "id": "dy-patil-pimpri",
+        "dteCode": "6272",
+        "name": "Dr. D. Y. Patil Institute of Technology"
+    },
+    {
+        "id": "sinhgad-vadgaon",
+        "dteCode": "6177",
+        "name": "Sinhgad College of Engineering"
+    },
+    {
+        "id": "sinhgad-kondhwa",
+        "dteCode": "6178",
+        "name": "Sinhgad Institute of Technology and Science"
+    },
+    {
+        "id": "thakur-mumbai",
+        "dteCode": "3176",
+        "name": "Thakur College of Engineering and Technology"
+    },
+    {
+        "id": "rizvi-mumbai",
+        "dteCode": "3201",
+        "name": "Rizvi College of Engineering"
+    },
+    {
+        "id": "atharva-mumbai",
+        "dteCode": "3203",
+        "name": "Atharva College of Engineering"
+    },
+    {
+        "id": "sies-navi-mumbai",
+        "dteCode": "3211",
+        "name": "SIES Graduate School of Technology"
+    },
+    {
+        "id": "datta-meghe-airoli",
+        "dteCode": "3187",
+        "name": "Datta Meghe College of Engineering"
+    },
+    {
+        "id": "rajiv-gandhi-mumbai",
+        "dteCode": "3135",
+        "name": "Rajiv Gandhi Institute of Technology"
+    },
+    {
+        "id": "shah-anchor-mumbai",
+        "dteCode": "3148",
+        "name": "Shah & Anchor Kutchhi Engineering College"
+    },
+    {
+        "id": "vidyalankar-mumbai",
+        "dteCode": "3139",
+        "name": "Vidyalankar Institute of Technology"
+    },
+    {
+        "id": "gcoea-amravati",
+        "dteCode": "1002",
+        "name": "Government College of Engineering, Amravati"
+    },
+    {
+        "id": "gcoec-chandrapur",
+        "dteCode": "4004",
+        "name": "Government College of Engineering, Chandrapur"
+    },
+    {
+        "id": "gcoea-aurangabad",
+        "dteCode": "2008",
+        "name": "Government College of Engineering, Aurangabad"
+    },
+    {
+        "id": "gcoek-karad",
+        "dteCode": "6005",
+        "name": "Government College of Engineering, Karad"
+    },
+    {
+        "id": "gcoej-jalgaon",
+        "dteCode": "5004",
+        "name": "Government College of Engineering, Jalgaon"
+    },
+    {
+        "id": "sggs-nanded",
+        "dteCode": "2020",
+        "name": "Shri Guru Gobind Singhji Institute of Engineering and Technology"
+    }
+]

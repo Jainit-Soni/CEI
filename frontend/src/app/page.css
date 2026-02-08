@@ -1,7 +1,49 @@
-﻿.home {
+﻿.home-hero {
+  padding-top: 140px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* ... */
+
+/* Tools Layout */
+.tools-section {
+  padding: 100px 0;
+  background: rgba(248, 250, 252, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.tools-grid {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: 120px;
+}
+
+.tool-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tool-info h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.tool-info p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.tool-block {
+  scroll-margin-top: 120px;
 }
 
 /* Hero Panel Content */
@@ -236,7 +278,8 @@
 
 /* Journey Section */
 .journey-section {
-  background: var(--color-surface-subtle);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
   margin: 0 calc(-1 * var(--space-4));
   padding: var(--space-10) var(--space-8);
   border-radius: 0;

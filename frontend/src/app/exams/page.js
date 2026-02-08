@@ -29,7 +29,9 @@ export default function ExamsPage() {
       try {
         setError(null);
         const examData = await fetchExams();
-        setExams(examData);
+        // Handle both direct array and paginated response
+        const data = Array.isArray(examData) ? examData : (examData.data || []);
+        setExams(data);
       } catch (err) {
         console.error("Failed to load exams", err);
         setError("Failed to load exams. Please try again.");

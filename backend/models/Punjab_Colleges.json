@@ -1995,5 +1995,47 @@
       "highestPackage": "₹20-30 LPA",
       "placementRate": "70-85%"
     }
+  },
+  {
+    "id": "pec-chandigarh",
+    "name": "Punjab Engineering College (PEC)",
+    "shortName": "PEC Chandigarh",
+    "location": "Sector 12, Chandigarh",
+    "rankingTier": "Tier 1",
+    "type": "Public/Government (GFTI)",
+    "overview": "One of the oldest engineering colleges in India (1921), originally established in Lahore. Excellent research output.",
+    "officialUrl": "https://pec.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech ECE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~13754 (AI) | ~18868 (HS)",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Public"
+    }
   }
 ]

@@ -7,12 +7,33 @@ import Button from "./Button";
 import AuthModal from "./AuthModal";
 import UserDropdown from "./UserDropdown";
 import { useAuth } from "@/lib/AuthContext";
+import { Heart } from "lucide-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const pathname = usePathname();
   const { user, loading } = useAuth();
+  const [choiceCount, setChoiceCount] = useState(0);
+
+  useEffect(() => {
+    const updateCount = () => {
+      if (typeof window !== "undefined") {
+        const stored = localStorage.getItem("choice-filling-cart");
+        setChoiceCount(stored ? JSON.parse(stored).length : 0);
+      }
+    };
+
+    updateCount();
+    window.addEventListener("storage", updateCount);
+    // Custom event for same-window updates
+    window.addEventListener("local-storage-update", updateCount);
+
+    return () => {
+      window.removeEventListener("storage", updateCount);
+      window.removeEventListener("local-storage-update", updateCount);
+    };
+  }, []);
 
   // Close menu on route change
   useEffect(() => {
@@ -47,6 +68,12 @@ export default function Header() {
             <Link href="/colleges" className={isActive("/colleges") ? "active" : ""} onClick={() => setOpen(false)}>Colleges</Link>
             <Link href="/exams" className={isActive("/exams") ? "active" : ""} onClick={() => setOpen(false)}>Exams</Link>
             <Link href="/map" className={isActive("/map") ? "active" : ""} onClick={() => setOpen(false)}>Map</Link>
+            <Link href="/roi-calculator" className={isActive("/roi-calculator") ? "active" : ""} onClick={() => setOpen(false)}>ROI Tool</Link>
+            <Link href="/dashboard" className="nav-link icon-link" data-count={choiceCount} onClick={() => setOpen(false)}>
+              <Heart size={20} />
+              <span>My List</span>
+              {choiceCount > 0 && <span className="nav-badge">{choiceCount}</span>}
+            </Link>
           </nav>
           <div className="header-actions">
             {!loading && (

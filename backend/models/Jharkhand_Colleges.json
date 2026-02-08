@@ -3490,5 +3490,100 @@
       "highestPackage": "₹20-30 LPA",
       "placementRate": "70-85%"
     }
+  },
+  {
+    "id": "iit-dhanbad",
+    "name": "Indian Institute of Technology (ISM) Dhanbad",
+    "shortName": "IIT Dhanbad",
+    "location": "Dhanbad, Jharkhand",
+    "rankingTier": "Tier 1",
+    "type": "Public/Government (INI)",
+    "overview": "Formerly ISM Dhanbad, now an IIT. A premier institute known for Mining, CSE, and Petroleum Engineering.",
+    "officialUrl": "https://www.iitism.ac.in",
+    "acceptedExams": [
+      "jee-advanced",
+      "gate",
+      "cat",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "B.Tech MNC",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      },
+      {
+        "name": "B.Tech Petroleum",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-advanced"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-advanced",
+        "year": "2024",
+        "cutoff": "CSE: ~3594 | AI: ~304-439 | Elec: ~6000",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Public"
+    }
+  },
+  {
+    "id": "bit-mesra",
+    "name": "Birla Institute of Technology, Mesra",
+    "shortName": "BIT Mesra",
+    "location": "Mesra, Ranchi, Jharkhand",
+    "rankingTier": "Tier 1",
+    "type": "Private (Deemed University)",
+    "overview": "A premier institute with a rich legacy, known for its sprawling campus and strong alumni network (GFTI).",
+    "officialUrl": "https://www.bitmesra.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech AI-ML",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~22317 (AI) | AI-ML: ~28000",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
   }
 ]

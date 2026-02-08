@@ -1,0 +1,2211 @@
+{
+  "added": [
+    {
+      "id": "nirma-uni",
+      "name": "Nirma University",
+      "shortName": "Nirma",
+      "location": "Ahmedabad, Ahmedabad District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "A leading private university with institutes for technology, management, law, pharmacy, and science.",
+      "campus": "S.G. Highway, Ahmedabad",
+      "officialUrl": "https://nirmauni.ac.in",
+      "acceptedExams": [
+        "jee-main",
+        "cat",
+        "cmat",
+        "clat",
+        "gujcet"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (CSE, ECE, Mechanical, Civil, Chemical, Electrical)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "MBA (General, HR, Family Business)",
+          "degree": "MBA",
+          "duration": "2 years",
+          "exams": [
+            "cat",
+            "cmat"
+          ]
+        },
+        {
+          "name": "Integrated B.A. LL.B (Hons)",
+          "degree": "Integrated Law",
+          "duration": "5 years",
+          "exams": [
+            "clat"
+          ]
+        },
+        {
+          "name": "Integrated B.Com LL.B (Hons)",
+          "degree": "Integrated Law",
+          "duration": "5 years",
+          "exams": [
+            "clat"
+          ]
+        },
+        {
+          "name": "B.Pharm",
+          "degree": "B.Pharm",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "M.Tech (Various Specializations)",
+          "degree": "M.Tech",
+          "duration": "2 years",
+          "exams": [
+            "gate"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "jee-main",
+          "year": "2024",
+          "cutoff": "Check official website",
+          "source": "Official"
+        },
+        {
+          "examId": "cat",
+          "year": "2025",
+          "cutoff": "General: 80-85 Percentile",
+          "source": "Official"
+        },
+        {
+          "examId": "cmat",
+          "year": "2025",
+          "cutoff": "Check official website",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Infosys",
+        "NVIDIA",
+        "Crestron",
+        "Adani",
+        "Oracle"
+      ],
+      "tuition": "B.Tech: ~INR 2.2 Lakhs/year",
+      "sources": [
+        "https://nirmauni.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Ahmedabad",
+        "naacGrade": "A+"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.439Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "pdeu-gandhinagar",
+      "name": "Pandit Deendayal Energy University",
+      "shortName": "PDEU (formerly PDPU)",
+      "location": "Gandhinagar, Gandhinagar District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Private university with a strong focus on Energy, Engineering, and Liberal Studies.",
+      "campus": "Raisan, Gandhinagar",
+      "officialUrl": "https://www.pdpu.ac.in",
+      "acceptedExams": [
+        "jee-main",
+        "gujcet",
+        "cat"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Petroleum Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (ICT, CSE, Mechanical, Civil, Chemical, Electrical)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.A. (Hons) Liberal Studies",
+          "degree": "B.A. Hons",
+          "duration": "4 years",
+          "exams": [
+            "creative-writing-test"
+          ]
+        },
+        {
+          "name": "B.B.A. (Hons)",
+          "degree": "BBA Hons",
+          "duration": "4 years",
+          "exams": [
+            "creative-writing-test"
+          ]
+        },
+        {
+          "name": "MBA (Energy & Infrastructure)",
+          "degree": "MBA",
+          "duration": "2 years",
+          "exams": [
+            "cat",
+            "xat",
+            "nmat"
+          ]
+        },
+        {
+          "name": "M.Tech (Various)",
+          "degree": "M.Tech",
+          "duration": "2 years",
+          "exams": [
+            "gate"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "jee-main",
+          "year": "2025",
+          "cutoff": "CSE: ~14522 (HS) | ICT: ~15913 (HS) | ECE: ~20234 (HS)",
+          "source": "Official"
+        },
+        {
+          "examId": "gujcet",
+          "year": "2024",
+          "cutoff": "Check official website",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "ONGC",
+        "Shell",
+        "Adani",
+        "Reliance",
+        "Wipro"
+      ],
+      "tuition": "B.Tech ~INR 2.68 Lakhs/year",
+      "sources": [
+        "https://www.pdpu.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Gandhinagar",
+        "naacGrade": "A++"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.464Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "da-iict",
+      "name": "Dhirubhai Ambani Institute of Information and Communication Technology",
+      "shortName": "DA-IICT",
+      "location": "Gandhinagar, Gandhinagar District, Gujarat",
+      "rankingTier": "Tier 1",
+      "overview": "Top-tier private university dedicated to ICT education.",
+      "campus": "Indroda Circle, Gandhinagar",
+      "officialUrl": "https://www.daiict.ac.in",
+      "acceptedExams": [
+        "jee-main",
+        "gate"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (ICT)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (Honours in ICT with minor in CS)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (MnC - Mathematics and Computing)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "M.Tech (ICT)",
+          "degree": "M.Tech",
+          "duration": "2 years",
+          "exams": [
+            "gate"
+          ]
+        },
+        {
+          "name": "M.Sc (IT)",
+          "degree": "M.Sc",
+          "duration": "2 years",
+          "exams": [
+            "entrance-test"
+          ]
+        },
+        {
+          "name": "M.Des (Communication Design)",
+          "degree": "M.Des",
+          "duration": "2 years",
+          "exams": [
+            "ceed",
+            "entrance-test"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "jee-main",
+          "year": "2025",
+          "cutoff": "MnC: ~70-100 | ICT: ~140 (HS) | ICT-CS: ~100 (HS)",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Amazon",
+        "Morgan Stanley",
+        "Oracle",
+        "Google"
+      ],
+      "tuition": "High-tier private fee structure",
+      "sources": [
+        "https://www.daiict.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Gandhinagar"
+      },
+      "placements": {
+        "averagePackage": "₹15-25 LPA",
+        "medianPackage": "₹12-18 LPA",
+        "highestPackage": "₹50+ LPA",
+        "placementRate": "85-95%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.478Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "au-ahmedabad",
+      "name": "Ahmedabad University",
+      "shortName": "Ahmedabad Uni",
+      "location": "Ahmedabad, Ahmedabad District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "A private, non-profit research university offering interdisciplinary education.",
+      "campus": "Navrangpura, Ahmedabad",
+      "officialUrl": "https://ahduni.edu.in",
+      "acceptedExams": [
+        "jee-main",
+        "cat",
+        "ku-aptitude",
+        "gujcet"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Computer Science, Mechanical, Chemical)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.A. (Hons) Economics/Psychology/History",
+          "degree": "B.A. Hons",
+          "duration": "3/4 years",
+          "exams": [
+            "scholastic-assessment"
+          ]
+        },
+        {
+          "name": "B.Com (Hons)",
+          "degree": "B.Com",
+          "duration": "3/4 years",
+          "exams": [
+            "merit-based"
+          ]
+        },
+        {
+          "name": "BBA (Honours)",
+          "degree": "BBA",
+          "duration": "3/4 years",
+          "exams": [
+            "merit-based"
+          ]
+        },
+        {
+          "name": "Integrated MBA",
+          "degree": "MBA",
+          "duration": "5 years",
+          "exams": [
+            "merit-based"
+          ]
+        },
+        {
+          "name": "M.Tech (Composites)",
+          "degree": "M.Tech",
+          "duration": "2 years",
+          "exams": [
+            "gate"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CSE: ~3886 | Elec: ~5123 | Mech: ~8756",
+          "source": "Official"
+        },
+        {
+          "examId": "cat",
+          "year": "2024",
+          "cutoff": "80 Percentile",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "HCL",
+        "Tech Mahindra",
+        "Cognizant",
+        "Accenture",
+        "Capgemini",
+        "IBM",
+        "Oracle",
+        "SAP",
+        "VMware"
+      ],
+      "tuition": "Variable; ~INR 3-4 Lakhs/year for Engineering",
+      "sources": [
+        "https://ahduni.edu.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Ahmedabad"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.739Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "ldce-ahmedabad",
+      "name": "L.D. College of Engineering",
+      "shortName": "LDCE",
+      "location": "Ahmedabad, Ahmedabad District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Premier government engineering college of Gujarat.",
+      "campus": "Navrangpura, Ahmedabad",
+      "officialUrl": "https://ldce.ac.in",
+      "acceptedExams": [
+        "gujcet",
+        "jee-main",
+        "pgcet"
+      ],
+      "courses": [
+        {
+          "name": "B.E. Computer Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Information Technology",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Mechanical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Civil Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Electrical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Electronics & Communication",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Chemical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Automobile Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Plastics Technology",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Rubber Technology",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Biomedical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Environment Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Textile Technology",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "M.E. (Various Specializations)",
+          "degree": "M.E.",
+          "duration": "2 years",
+          "exams": [
+            "pgcet",
+            "gate"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: 12-47 | IT: 355-1010 | ECE: 758-2650 | Mech: 692-4802",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Accenture",
+        "TCS",
+        "Reliance",
+        "Adani",
+        "MG Motor"
+      ],
+      "tuition": "Government Fees (~INR 1500/year)",
+      "sources": [
+        "https://ldce.ac.in"
+      ],
+      "meta": {
+        "affiliations": [
+          "Gujarat Technological University"
+        ],
+        "ownership": "Government",
+        "establishedYear": "1948",
+        "district": "Ahmedabad"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.506Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "iit-gandhinagar",
+      "name": "Indian Institute of Technology Gandhinagar",
+      "shortName": "IIT Gandhinagar",
+      "location": "Gandhinagar, Gandhinagar District, Gujarat",
+      "rankingTier": "Tier 1",
+      "overview": "An Institute of National Importance known for its liberal approach to engineering education.",
+      "campus": "Palaj, Gandhinagar",
+      "officialUrl": "https://www.iitgn.ac.in",
+      "acceptedExams": [
+        "jee-advanced",
+        "gate",
+        "jam"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Computer Science & Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-advanced"
+          ]
+        },
+        {
+          "name": "B.Tech (Mechanical Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-advanced"
+          ]
+        },
+        {
+          "name": "B.Tech (Electrical Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-advanced"
+          ]
+        },
+        {
+          "name": "B.Tech (Chemical Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-advanced"
+          ]
+        },
+        {
+          "name": "B.Tech (Civil Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-advanced"
+          ]
+        },
+        {
+          "name": "B.Tech (Artificial Intelligence)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-advanced"
+          ]
+        },
+        {
+          "name": "M.Sc (Cognitive Science)",
+          "degree": "M.Sc",
+          "duration": "2 years",
+          "exams": [
+            "cogjet"
+          ]
+        },
+        {
+          "name": "M.Sc (Physics/Chemistry/Maths)",
+          "degree": "M.Sc",
+          "duration": "2 years",
+          "exams": [
+            "jam"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "jee-advanced",
+          "year": "2025",
+          "cutoff": "CSE: ~1500 | Elec: ~4000 | Mech: ~6000",
+          "source": "Official"
+        },
+        {
+          "examId": "gate",
+          "year": "2024",
+          "cutoff": "Check official website",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Google",
+        "Microsoft",
+        "Texas Instruments",
+        "Goldman Sachs"
+      ],
+      "tuition": "Standard IIT Fees",
+      "sources": [
+        "https://www.iitgn.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Central Govt / INI",
+        "district": "Gandhinagar"
+      },
+      "placements": {
+        "averagePackage": "₹15-25 LPA",
+        "medianPackage": "₹12-18 LPA",
+        "highestPackage": "₹50+ LPA",
+        "placementRate": "85-95%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.520Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "msu-baroda",
+      "name": "The Maharaja Sayajirao University of Baroda",
+      "shortName": "MSU Baroda",
+      "location": "Vadodara, Vadodara District, Gujarat",
+      "rankingTier": "Tier 1",
+      "overview": "Gujarat's only English-medium unitary residential university with a rich historical legacy.",
+      "campus": "Pratapgunj, Vadodara",
+      "officialUrl": "https://www.msubaroda.ac.in",
+      "acceptedExams": [
+        "gujcet",
+        "jee-main",
+        "neet-ug",
+        "nata",
+        "cuet-ug",
+        "cuet-pg"
+      ],
+      "courses": [
+        {
+          "name": "B.E. (Civil, Mechanical, Electrical, Chemical, Electronics)",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet",
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Arch",
+          "degree": "B.Arch",
+          "duration": "5 years",
+          "exams": [
+            "nata"
+          ]
+        },
+        {
+          "name": "MBBS",
+          "degree": "MBBS",
+          "duration": "5.5 years",
+          "exams": [
+            "neet-ug"
+          ]
+        },
+        {
+          "name": "B.Com (Honours)",
+          "degree": "B.Com",
+          "duration": "3 years",
+          "exams": [
+            "merit-based"
+          ]
+        },
+        {
+          "name": "B.Sc (Physics, Chemistry, Maths, Botany, Zoology)",
+          "degree": "B.Sc",
+          "duration": "3 years",
+          "exams": [
+            "merit-based"
+          ]
+        },
+        {
+          "name": "Master of Social Work (MSW)",
+          "degree": "MSW",
+          "duration": "2 years",
+          "exams": [
+            "entrance-test"
+          ]
+        },
+        {
+          "name": "BFA (Fine Arts)",
+          "degree": "BFA",
+          "duration": "4 years",
+          "exams": [
+            "aptitude-test"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CSE: ~523 | Mech: ~6623 | Elec: ~6076 | Civil: ~13326",
+          "source": "Official"
+        },
+        {
+          "examId": "jee-main",
+          "year": "2024",
+          "cutoff": "Check official website",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "L&T",
+        "Reliance",
+        "TCS",
+        "HDFC Bank"
+      ],
+      "tuition": "Varies by faculty; B.E. ~INR 1.5K/year (Grant-in-Aid)",
+      "sources": [
+        "https://www.msubaroda.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "State Public University",
+        "establishedYear": "1949",
+        "district": "Vadodara",
+        "naacGrade": "A+"
+      },
+      "placements": {
+        "averagePackage": "₹15-25 LPA",
+        "medianPackage": "₹12-18 LPA",
+        "highestPackage": "₹50+ LPA",
+        "placementRate": "85-95%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.535Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "svnit-surat",
+      "name": "Sardar Vallabhbhai National Institute of Technology",
+      "shortName": "SVNIT Surat",
+      "location": "Surat, Surat District, Gujarat",
+      "rankingTier": "Tier 1",
+      "overview": "A premier NIT of India, specializing in core engineering disciplines.",
+      "campus": "Ichchhanath, Surat",
+      "officialUrl": "https://www.svnit.ac.in",
+      "acceptedExams": [
+        "jee-main",
+        "gate"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Computer Science & Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (Electronics & Communication)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (Mechanical Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (Chemical Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (Civil Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "M.Sc (Integrated) Physics/Chemistry/Maths",
+          "degree": "M.Sc Integrated",
+          "duration": "5 years",
+          "exams": [
+            "jee-main"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "jee-main",
+          "year": "2025",
+          "cutoff": "CSE: ~6800 (HS) | ECE: ~14000 (OS)",
+          "source": "Official"
+        },
+        {
+          "examId": "gate",
+          "year": "2024",
+          "cutoff": "Check official website",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "L&T",
+        "Reliance",
+        "Samsung",
+        "Jio"
+      ],
+      "tuition": "Standard NIT Fees",
+      "sources": [
+        "https://www.svnit.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Central Govt / INI",
+        "district": "Surat"
+      },
+      "placements": {
+        "averagePackage": "₹15-25 LPA",
+        "medianPackage": "₹12-18 LPA",
+        "highestPackage": "₹50+ LPA",
+        "placementRate": "85-95%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.548Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "bvm-anand",
+      "name": "Birla Vishvakarma Mahavidyalaya",
+      "shortName": "BVM",
+      "location": "Vallabh Vidyanagar, Anand District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "The first engineering college of Gujarat (est. 1948), offering both Grant-in-Aid and Self-Finance courses.",
+      "campus": "Vallabh Vidyanagar, Anand",
+      "officialUrl": "https://www.bvmengineering.ac.in",
+      "acceptedExams": [
+        "gujcet",
+        "jee-main"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Civil Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.Tech (Computer Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.Tech (Mechanical Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.Tech (Electrical Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.Tech (Electronics Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.Tech (Production Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CSE: 400-1800 | IT: 1800-3500 | ECE: 3500-7500",
+          "source": "Official"
+        },
+        {
+          "examId": "jee-main",
+          "year": "2024",
+          "cutoff": "Check official website",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "L&T",
+        "TCS",
+        "Adani",
+        "MG Motor"
+      ],
+      "tuition": "GIA: ~INR 1500/year; SFI: ~INR 1.3 Lakhs/year",
+      "sources": [
+        "https://www.bvmengineering.ac.in"
+      ],
+      "meta": {
+        "affiliations": [
+          "Gujarat Technological University",
+          "Charutar Vidya Mandal"
+        ],
+        "ownership": "Grant-in-Aid / Autonomous",
+        "establishedYear": "1948",
+        "district": "Anand"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.563Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "ddu-nadiad",
+      "name": "Dharmsinh Desai University",
+      "shortName": "DDU Nadiad",
+      "location": "Nadiad, Kheda District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Originally an engineering college (DDIT), now a state university known for rigorous technical education.",
+      "campus": "College Road, Nadiad",
+      "officialUrl": "https://www.ddu.ac.in",
+      "acceptedExams": [
+        "gujcet",
+        "jee-main",
+        "gate"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Computer Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet",
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (Chemical Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet",
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (Electronics & Communication)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet",
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (Instrumentation & Control)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet",
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Pharm",
+          "degree": "B.Pharm",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "MBA",
+          "degree": "MBA",
+          "duration": "2 years",
+          "exams": [
+            "cmat"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: ~351 | EC: 3000-6000 | Chem: 1543-5149",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Infosys",
+        "TCS",
+        "Crest Data",
+        "Reliance"
+      ],
+      "tuition": "Grant-in-Aid seats: Nominal; Self-Finance: ~INR 1.6 Lakhs/year",
+      "sources": [
+        "https://www.ddu.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "State University (Grant-in-Aid + SFI)",
+        "district": "Kheda"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.577Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "vgec-chandkheda",
+      "name": "Vishwakarma Government Engineering College",
+      "shortName": "VGEC",
+      "location": "Ahmedabad, Gandhinagar District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Major government engineering college located near GTU main campus.",
+      "campus": "Chandkheda, Ahmedabad",
+      "officialUrl": "https://vgecg.ac.in",
+      "acceptedExams": [
+        "gujcet",
+        "jee-main"
+      ],
+      "courses": [
+        {
+          "name": "B.E. Computer Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Information Technology",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Electronics & Communication",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Mechanical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Electrical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Chemical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Civil Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Power Electronics",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: 1278-1396 | IT: 2582-3126 | EC: 3387-3559",
+          "source": "Official"
+        },
+        {
+          "examId": "jee-main",
+          "year": "2025",
+          "cutoff": "Check official website",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "TCS",
+        "TatvaSoft",
+        "eInfochips"
+      ],
+      "tuition": "Government Fees",
+      "sources": [
+        "https://vgecg.ac.in"
+      ],
+      "meta": {
+        "affiliations": [
+          "Gujarat Technological University"
+        ],
+        "ownership": "Government",
+        "district": "Gandhinagar"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.591Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "charusat-changa",
+      "name": "Charotar University of Science and Technology",
+      "shortName": "CHARUSAT",
+      "location": "Changa, Anand District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Private university with a very strong rural footprint and high research output.",
+      "campus": "Changa, Petlad, Anand",
+      "officialUrl": "https://www.charusat.ac.in",
+      "acceptedExams": [
+        "gujcet",
+        "jee-main",
+        "neet-ug"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (CSE, IT, EC, Mechanical, Civil, Electrical)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet",
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Pharm",
+          "degree": "B.Pharm",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.Sc (Nursing)",
+          "degree": "B.Sc",
+          "duration": "4 years",
+          "exams": [
+            "neet-ug"
+          ]
+        },
+        {
+          "name": "BPT (Physiotherapy)",
+          "degree": "BPT",
+          "duration": "4.5 years",
+          "exams": [
+            "merit-based"
+          ]
+        },
+        {
+          "name": "MCA",
+          "degree": "MCA",
+          "duration": "2 years",
+          "exams": [
+            "cmat"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: 1500-2000 | IT: 2500-3000",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "TCS",
+        "Motorola",
+        "Sophos",
+        "Crest Data"
+      ],
+      "tuition": "B.Tech ~INR 1.28 Lakhs/year",
+      "sources": [
+        "https://www.charusat.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Anand",
+        "naacGrade": "A+"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.604Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "parul-uni",
+      "name": "Parul University",
+      "shortName": "Parul Uni",
+      "location": "Vadodara, Vadodara District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "One of the largest private university campuses in Western India.",
+      "campus": "Waghodia, Vadodara",
+      "officialUrl": "https://paruluniversity.ac.in",
+      "acceptedExams": [
+        "jee-main",
+        "gujcet",
+        "neet-ug"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (CSE, IT, Aeronautical, Mechanical, Civil)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "MBBS",
+          "degree": "MBBS",
+          "duration": "5.5 years",
+          "exams": [
+            "neet-ug"
+          ]
+        },
+        {
+          "name": "BAMS (Ayurveda)",
+          "degree": "BAMS",
+          "duration": "5.5 years",
+          "exams": [
+            "neet-ug"
+          ]
+        },
+        {
+          "name": "BHMS (Homeopathy)",
+          "degree": "BHMS",
+          "duration": "5.5 years",
+          "exams": [
+            "neet-ug"
+          ]
+        },
+        {
+          "name": "B.Des",
+          "degree": "B.Des",
+          "duration": "4 years",
+          "exams": [
+            "design-aptitude"
+          ]
+        },
+        {
+          "name": "B.Pharm",
+          "degree": "B.Pharm",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CSE: ~12864-36987",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Byju's",
+        "L&T",
+        "TCS",
+        "Nestle"
+      ],
+      "tuition": "Varies widely by course",
+      "sources": [
+        "https://paruluniversity.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Vadodara",
+        "naacGrade": "A++"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.622Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "ganpat-uni",
+      "name": "Ganpat University",
+      "shortName": "GUNI",
+      "location": "Kherva, Mehsana District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Large private university in North Gujarat with a focus on industry-oriented courses.",
+      "campus": "Kherva, Mehsana",
+      "officialUrl": "https://www.ganpatuniversity.ac.in",
+      "acceptedExams": [
+        "gujcet",
+        "jee-main"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Marine Engineering)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Tech (CSE - Cloud Computing / Big Data)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Pharm",
+          "degree": "B.Pharm",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "MBA",
+          "degree": "MBA",
+          "duration": "2 years",
+          "exams": [
+            "cmat"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: ~30445 | IT: ~29400",
+          "source": "Official"
+        },
+        {
+          "examId": "jee-main",
+          "year": "2025",
+          "cutoff": "Check official website",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "IBM",
+        "TCS",
+        "Reliance"
+      ],
+      "tuition": "Moderate",
+      "sources": [
+        "https://www.ganpatuniversity.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Mehsana"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.636Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "marwadi-uni-rajkot",
+      "name": "Marwadi University",
+      "shortName": "Marwadi Uni",
+      "location": "Rajkot, Rajkot District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Major private university in Saurashtra with NAAC A+ accreditation.",
+      "campus": "Rajkot-Morbi Road, Rajkot",
+      "officialUrl": "https://www.marwadiuniversity.ac.in",
+      "acceptedExams": [
+        "gujcet",
+        "jee-main"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Computer, IT, Civil, Mechanical, Auto)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.Sc (Agriculture)",
+          "degree": "B.Sc",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "MBA",
+          "degree": "MBA",
+          "duration": "2 years",
+          "exams": [
+            "cmat"
+          ]
+        },
+        {
+          "name": "B.Pharm",
+          "degree": "B.Pharm",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "LL.B",
+          "degree": "LL.B",
+          "duration": "3 years",
+          "exams": [
+            "merit-based"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: ~35061 | Cyber: ~30473",
+          "source": "Official"
+        },
+        {
+          "examId": "jee-main",
+          "year": "2025",
+          "cutoff": "Check official website",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Local Industry",
+        "TCS",
+        "Wipro"
+      ],
+      "tuition": "Competitive",
+      "sources": [
+        "https://www.marwadiuniversity.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Rajkot",
+        "naacGrade": "A+"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.649Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "silver-oak-uni",
+      "name": "Silver Oak University",
+      "shortName": "Silver Oak",
+      "location": "Ahmedabad, Ahmedabad District, Gujarat",
+      "rankingTier": "Tier 3",
+      "overview": "Rapidly growing private university in Ahmedabad known for high intake in engineering.",
+      "campus": "Gota, Ahmedabad",
+      "officialUrl": "https://silveroakuni.ac.in",
+      "acceptedExams": [
+        "jee-main",
+        "gujcet"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Computer, IT, Civil, Mechanical, Aeronautical)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main"
+          ]
+        },
+        {
+          "name": "B.Sc (Nursing)",
+          "degree": "B.Sc",
+          "duration": "4 years",
+          "exams": [
+            "neet-ug"
+          ]
+        },
+        {
+          "name": "MBA",
+          "degree": "MBA",
+          "duration": "2 years",
+          "exams": [
+            "cmat"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "BE: 16742-50295 | IT: ~35000",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "TCS",
+        "Coca Cola",
+        "Byju's"
+      ],
+      "tuition": "Moderate",
+      "sources": [
+        "https://silveroakuni.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Ahmedabad"
+      },
+      "placements": {
+        "averagePackage": "₹3-6 LPA",
+        "medianPackage": "₹3-5 LPA",
+        "highestPackage": "₹8-15 LPA",
+        "placementRate": "50-70%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.662Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "indus-uni-ahmedabad",
+      "name": "Indus University",
+      "shortName": "Indus Uni",
+      "location": "Ahmedabad, Ahmedabad District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Private university offering engineering, design, and aviation programs.",
+      "campus": "Rancharda, Ahmedabad",
+      "officialUrl": "https://indusuni.ac.in",
+      "acceptedExams": [
+        "jee-main",
+        "gujcet"
+      ],
+      "courses": [
+        {
+          "name": "B.Tech (Computer, Mechanical, Civil, Electrical)",
+          "degree": "B.Tech",
+          "duration": "4 years",
+          "exams": [
+            "jee-main",
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.Des",
+          "degree": "B.Des",
+          "duration": "4 years",
+          "exams": [
+            "indus-design-test"
+          ]
+        },
+        {
+          "name": "B.Sc (Aircraft Maintenance)",
+          "degree": "B.Sc",
+          "duration": "3 years",
+          "exams": [
+            "merit-based"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CSE: ~18713 | IT: ~29299 | CE: ~20849",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "HCL",
+        "Tech Mahindra",
+        "Cognizant",
+        "Accenture",
+        "Capgemini",
+        "IBM",
+        "Oracle",
+        "SAP",
+        "VMware"
+      ],
+      "tuition": "Moderate",
+      "sources": [
+        "https://indusuni.ac.in"
+      ],
+      "meta": {
+        "affiliations": [],
+        "ownership": "Private University",
+        "district": "Ahmedabad"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.674Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "gec-bhavnagar",
+      "name": "Government Engineering College Bhavnagar",
+      "shortName": "GEC Bhavnagar",
+      "location": "Bhavnagar, Bhavnagar District, Gujarat",
+      "rankingTier": "Tier 3",
+      "overview": "Government institute serving the Bhavnagar coastal region.",
+      "campus": "Vidyanagar, Bhavnagar",
+      "officialUrl": "https://www.gecbh.cteguj.in",
+      "acceptedExams": [
+        "gujcet"
+      ],
+      "courses": [
+        {
+          "name": "B.E. Computer Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Information Technology",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Electronics & Communication",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Mechanical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Civil Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Production Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: ~6635 | IT: ~12891 | Mech: ~34413 | EC: ~36372",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Startups",
+        "Local IT Companies",
+        "Small Manufacturing Units",
+        "Regional Construction Firms",
+        "Local Government Projects"
+      ],
+      "tuition": "Government Fees",
+      "sources": [
+        "https://www.gecbh.cteguj.in"
+      ],
+      "meta": {
+        "affiliations": [
+          "Gujarat Technological University"
+        ],
+        "ownership": "Government",
+        "district": "Bhavnagar"
+      },
+      "placements": {
+        "averagePackage": "₹3-6 LPA",
+        "medianPackage": "₹3-5 LPA",
+        "highestPackage": "₹8-15 LPA",
+        "placementRate": "50-70%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.686Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "gec-rajkot",
+      "name": "Government Engineering College Rajkot",
+      "shortName": "GEC Rajkot",
+      "location": "Rajkot, Rajkot District, Gujarat",
+      "rankingTier": "Tier 3",
+      "overview": "Key government institute for Saurashtra region.",
+      "campus": "Mavdi Kankot Road, Rajkot",
+      "officialUrl": "https://www.gecrajkot.ac.in",
+      "acceptedExams": [
+        "gujcet"
+      ],
+      "courses": [
+        {
+          "name": "B.E. Computer Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Mechanical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Civil Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: ~8543 | AI: ~10500 | EC: ~20413 | Mech: ~20923",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Startups",
+        "Local IT Companies",
+        "Small Manufacturing Units",
+        "Regional Construction Firms",
+        "Local Government Projects"
+      ],
+      "tuition": "Government Fees",
+      "sources": [
+        "https://www.gecrajkot.ac.in"
+      ],
+      "meta": {
+        "affiliations": [
+          "Gujarat Technological University"
+        ],
+        "ownership": "Government",
+        "district": "Rajkot"
+      },
+      "placements": {
+        "averagePackage": "₹3-6 LPA",
+        "medianPackage": "₹3-5 LPA",
+        "highestPackage": "₹8-15 LPA",
+        "placementRate": "50-70%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.698Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "gec-surat",
+      "name": "Dr. S. & S.S. Ghandhy Government Engineering College",
+      "shortName": "GEC Surat",
+      "location": "Surat, Surat District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Government engineering college in Surat city.",
+      "campus": "Majura Gate, Surat",
+      "officialUrl": "https://www.gecsu.cteguj.in",
+      "acceptedExams": [
+        "gujcet"
+      ],
+      "courses": [
+        {
+          "name": "B.E. Civil Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Mechanical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Electrical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Electronics & Communication",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Environmental Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: ~4207 | EC: ~13256 | Mech: ~20950 | Elec: ~24164",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "HCL",
+        "Tech Mahindra",
+        "Cognizant",
+        "Accenture",
+        "Capgemini",
+        "IBM",
+        "Oracle",
+        "SAP",
+        "VMware"
+      ],
+      "tuition": "Government Fees",
+      "sources": [
+        "https://www.gecsu.cteguj.in"
+      ],
+      "meta": {
+        "affiliations": [
+          "Gujarat Technological University"
+        ],
+        "ownership": "Government",
+        "district": "Surat"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.712Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "scet-surat",
+      "name": "Sarvajanik College of Engineering and Technology",
+      "shortName": "SCET",
+      "location": "Surat, Surat District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "One of the oldest and most reputed self-financed colleges in Surat.",
+      "campus": "Athwalines, Surat",
+      "officialUrl": "https://scet.ac.in",
+      "acceptedExams": [
+        "gujcet",
+        "jee-main"
+      ],
+      "courses": [
+        {
+          "name": "B.E. Computer Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Information Technology",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Artificial Intelligence & Data Science",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Electronics & Communication",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Electrical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Chemical Engineering",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        },
+        {
+          "name": "B.E. Textile Technology",
+          "degree": "B.E.",
+          "duration": "4 years",
+          "exams": [
+            "gujcet"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "gujcet",
+          "year": "2025",
+          "cutoff": "CE: 4559 | IT: 6666 | AI: 7056 | EC: 12805",
+          "source": "Official"
+        }
+      ],
+      "topRecruiters": [
+        "Reliance",
+        "L&T",
+        "Essar"
+      ],
+      "tuition": "SFI Fees",
+      "sources": [
+        "https://scet.ac.in"
+      ],
+      "meta": {
+        "affiliations": [
+          "Gujarat Technological University",
+          "Sarvajanik University"
+        ],
+        "ownership": "Private / Self-Financed",
+        "district": "Surat"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.725Z",
+      "source": "Admin Verified"
+    },
+    {
+      "id": "st-xaviers-ahmedabad",
+      "name": "St. Xavier's College (Autonomous)",
+      "shortName": "St. Xavier's",
+      "location": "Ahmedabad, Ahmedabad District, Gujarat",
+      "rankingTier": "Tier 2",
+      "overview": "Prestigious autonomous science and arts college with NAAC A+ grade.",
+      "campus": "Navrangpura, Ahmedabad",
+      "officialUrl": "https://sxca.edu.in",
+      "acceptedExams": [
+        "merit-based",
+        "hsc-merit"
+      ],
+      "courses": [
+        {
+          "name": "B.Sc (Physics, Chemistry, Maths, Bio-Chem, Statistics)",
+          "degree": "B.Sc",
+          "duration": "3 years",
+          "exams": [
+            "merit-based"
+          ]
+        },
+        {
+          "name": "B.A. (English, Economics, Psychology)",
+          "degree": "B.A.",
+          "duration": "3 years",
+          "exams": [
+            "merit-based"
+          ]
+        },
+        {
+          "name": "BCA",
+          "degree": "BCA",
+          "duration": "3 years",
+          "exams": [
+            "merit-based"
+          ]
+        }
+      ],
+      "pastCutoffs": [
+        {
+          "examId": "hsc-merit",
+          "year": "2024",
+          "cutoff": "~85-90% (Science Stream)"
+        }
+      ],
+      "topRecruiters": [
+        "TCS",
+        "Wipro",
+        "Research Institutes"
+      ],
+      "tuition": "Low (Grant-in-Aid)",
+      "sources": [
+        "https://sxca.edu.in"
+      ],
+      "meta": {
+        "affiliations": [
+          "Gujarat University"
+        ],
+        "ownership": "Autonomous / Grant-in-Aid",
+        "district": "Ahmedabad",
+        "naacGrade": "A+"
+      },
+      "placements": {
+        "averagePackage": "₹6-12 LPA",
+        "medianPackage": "₹5-9 LPA",
+        "highestPackage": "₹20-30 LPA",
+        "placementRate": "70-85%"
+      },
+      "lastUpdated": "2026-02-07T20:13:04.753Z",
+      "source": "Admin Verified"
+    }
+  ],
+  "deleted": []
+}

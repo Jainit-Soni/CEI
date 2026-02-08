@@ -12,9 +12,10 @@ import { CardSkeleton } from "@/components/Skeleton";
 import Pagination from "@/components/Pagination";
 import FavoriteButton from "@/components/FavoriteButton";
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
-import { fetchColleges, fetchFilters, suggest } from "@/lib/api";
-import { useRouter, useSearchParams } from "next/navigation";
+import { fetchColleges, fetchFilters, suggest, fetchStateStats } from "@/lib/api";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import IndiaMap from "@/components/IndiaMap";
 import "./page.css";
 
 const getDistrict = (college) =>
@@ -52,6 +53,7 @@ function CollegesContent() {
     const [query, setQuery] = useState("");
     const [sortBy, setSortBy] = useState("Most Popular");
     const [filters, setFilters] = useState({
+        state: "All",
         district: "All",
         course: "All",
         tier: "All",
@@ -61,11 +63,14 @@ function CollegesContent() {
     const [page, setPage] = useState(1);
     const [pagination, setPagination] = useState(null);
     const [suggestions, setSuggestions] = useState([]);
+    const [mapStatsData, setMapStatsData] = useState({ states: [] });
+    const [viewMode, setViewMode] = useState("list"); // 'list' only
     const ITEMS_PER_PAGE = 18;
 
     // Initialize state from URL params
     useEffect(() => {
         const q = searchParams.get("q") || "";
+        const state = searchParams.get("state") || "All";
         const district = searchParams.get("district") || "All";
         const course = searchParams.get("course") || "All";
         const tier = searchParams.get("tier") || "All";
@@ -73,7 +78,7 @@ function CollegesContent() {
         const p = parseInt(searchParams.get("page")) || 1;
 
         setQuery(q);
-        setFilters({ district, course, tier });
+        setFilters({ state, district, course, tier });
         setSortBy(sort);
         setPage(p);
     }, [searchParams]);
@@ -82,32 +87,45 @@ function CollegesContent() {
     useEffect(() => {
         const params = new URLSearchParams();
         if (query) params.set("q", query);
+        if (filters.state !== "All") params.set("state", filters.state);
         if (filters.district !== "All") params.set("district", filters.district);
         if (filters.course !== "All") params.set("course", filters.course);
         if (filters.tier !== "All") params.set("tier", filters.tier);
         if (sortBy !== "Most Popular") params.set("sortBy", sortBy);
         if (page > 1) params.set("page", page.toString());
-        if (stateFilter) params.set("state", stateFilter);
+        // If stateFilter exists but we haven't set a state yet, we should respect it
+        // However, if we've explicitly set filters.state to "All", we should NOT re-add it
+        if (stateFilter && filters.state === "All" && !params.has("state")) {
+            // Only add if we aren't explicitly clearing it
+        }
 
         router.replace(`?${params.toString()}`, { scroll: false });
     }, [query, filters, sortBy, page, stateFilter, router]);
 
-    // Load filter options once
+    // Load filter options based on active filters
     useEffect(() => {
         const loadFilters = async () => {
             try {
-                const data = await fetchFilters();
+                const params = {};
+                if (filters.state !== "All") params.state = filters.state;
+                if (filters.district !== "All") params.district = filters.district;
+                if (filters.course !== "All") params.course = filters.course;
+                if (filters.tier !== "All") params.tier = filters.tier;
+                if (query) params.q = query;
+
+                const data = await fetchFilters(params);
                 setFilterOptions({
-                    districts: ["All", ...data.districts],
-                    courses: ["All", ...data.courses],
-                    tiers: ["All", ...data.tiers]
+                    states: ["All", ...(data?.states || [])],
+                    districts: ["All", ...(data?.districts || [])],
+                    courses: ["All", ...(data?.courses || [])],
+                    tiers: ["All", ...(data?.tiers || [])]
                 });
             } catch (err) {
                 console.error("Failed to load filters", err);
             }
         };
         loadFilters();
-    }, []);
+    }, [filters.state, filters.district, filters.course, filters.tier, query]);
 
     useEffect(() => {
         const load = async () => {
@@ -131,6 +149,11 @@ function CollegesContent() {
 
                 if (query) params.q = query;
                 if (filters.district !== "All") params.district = filters.district;
+                if (filters.course !== "All") params.course = filters.course;
+                if (filters.tier !== "All") params.tier = filters.tier;
+
+                const activeState = filters.state !== "All" ? filters.state : stateFilter;
+                if (activeState) params.state = activeState;
 
                 const response = await fetchColleges(params);
 
@@ -167,29 +190,14 @@ function CollegesContent() {
             }
         };
         load();
-    }, [page, query, sortBy, filters.district]);
+    }, [page, query, sortBy, filters.state, filters.district, filters.course, filters.tier, stateFilter]);
+
+    // Map stats removed as per user request
 
 
 
-    // Apply client-side filters and sorting
-    const displayColleges = useMemo(() => {
-        let filtered = colleges.filter((college) => {
-            const matchesCourse =
-                filters.course === "All" ||
-                (college.courses || []).some((course) => course?.name === filters.course);
-            const matchesTier =
-                filters.tier === "All" ||
-                (college.rankingTier || college.ranking) === filters.tier;
-            return matchesCourse && matchesTier;
-        });
-
-        // Sort by popularity if selected
-        if (sortBy === "Most Popular") {
-            filtered = [...filtered].sort((a, b) => getPopularityScore(b) - getPopularityScore(a));
-        }
-
-        return filtered;
-    }, [colleges, filters.course, filters.tier, sortBy]);
+    // No more client-side filtering needed!
+    const displayColleges = colleges;
 
     const stateName = useMemo(() => {
         if (!stateFilter) return null;
@@ -198,6 +206,22 @@ function CollegesContent() {
             word.charAt(0).toUpperCase() + word.slice(1)
         ).join(' ');
     }, [stateFilter]);
+
+    // Compute stats for map based on API data instead of filtered list
+    const stateStats = useMemo(() => {
+        const stats = {};
+        if (!mapStatsData?.states) return stats;
+
+        mapStatsData.states.forEach(state => {
+            // Normalize state name keys
+            const key = state.name.toLowerCase().replace(/\s+/g, "");
+            stats[key] = {
+                count: state.count,
+                topColleges: state.topColleges || []
+            };
+        });
+        return stats;
+    }, [mapStatsData]);
 
     const handleFilterChange = useCallback((id, value) => {
         setFilters((prev) => ({ ...prev, [id]: value }));
@@ -217,13 +241,15 @@ function CollegesContent() {
     const clearFilters = useCallback(() => {
         setQuery("");
         setSortBy("Most Popular");
-        setFilters({ district: "All", course: "All", tier: "All" });
+        setFilters({ state: "All", district: "All", course: "All", tier: "All" });
         setPage(1);
-    }, []);
+        router.push("/colleges");
+    }, [router]);
 
     const hasActiveFilters =
         query ||
         sortBy !== "Most Popular" ||
+        filters.state !== "All" ||
         filters.district !== "All" ||
         filters.course !== "All" ||
         filters.tier !== "All";
@@ -287,6 +313,29 @@ function CollegesContent() {
             );
         }
 
+        const mentorMode = searchParams.get("mentor") === "true";
+        const userRank = parseInt(searchParams.get("rank"));
+
+        const getMatchStatus = (college) => {
+            if (!mentorMode || !userRank) return null;
+
+            // Look for cutoff data in pastCutoffs
+            // For simplicity, we find the first available cutoff value
+            let cutoffVal = null;
+            if (college.pastCutoffs && college.pastCutoffs.length > 0) {
+                const firstCutoff = college.pastCutoffs[0].cutoff;
+                // Parse rank from "Branch: Rank | Branch: Rank" format
+                const match = firstCutoff.match(/:\s*(\d+)/);
+                if (match) cutoffVal = parseInt(match[1]);
+            }
+
+            if (!cutoffVal) return null;
+
+            if (userRank <= cutoffVal * 0.8) return { text: "Safe 🛡️", color: "#10b981" };
+            if (userRank <= cutoffVal * 1.2) return { text: "Match 🎯", color: "#f59e0b" };
+            return { text: "Dream ✨", color: "#6366f1" };
+        };
+
         return (
             <>
                 <div className="results-grid">
@@ -304,6 +353,7 @@ function CollegesContent() {
                                     type="college"
                                     title={college.shortName || college.name}
                                     subtitle={college.location}
+                                    badge={getMatchStatus(college)}
                                     tags={(college.acceptedExams || [])
                                         .slice(0, 3)
                                         .map((exam) => exam.toUpperCase())}
@@ -312,12 +362,16 @@ function CollegesContent() {
                                         college.meta?.ownership,
                                     ].filter(Boolean)}
                                     href={`/college/${college.id}`}
+                                    trust={{
+                                        source: college.source || "Official Website",
+                                        lastUpdated: college.lastUpdated || new Date().toISOString()
+                                    }}
                                 />
                             </div>
                         </RevealOnScroll>
                     ))}
                 </div>
-                {!stateFilter && pagination && pagination.totalPages > 1 && (
+                {pagination && pagination.totalPages > 1 && (
                     <Pagination
                         page={pagination.page}
                         totalPages={pagination.totalPages}
@@ -358,21 +412,12 @@ function CollegesContent() {
                             <div className="list-stats">
                                 <div className="list-stat">
                                     <span className="list-stat-value mono">
-                                        {displayColleges.length || "--"}
+                                        {pagination?.totalCount || displayColleges.length || "--"}
                                     </span>
                                     <span className="list-stat-label">
-                                        {stateName ? "Colleges" : "Districts"}
+                                        Colleges
                                     </span>
                                 </div>
-
-                                {!stateName && (
-                                    <div className="list-stat">
-                                        <span className="list-stat-value mono">
-                                            {pagination?.totalCount || colleges.length || "--"}
-                                        </span>
-                                        <span className="list-stat-label">Colleges</span>
-                                    </div>
-                                )}
                             </div>
                         </RevealOnScroll>
                     </div>
@@ -383,19 +428,6 @@ function CollegesContent() {
                 <Container>
                     <GlassPanel className="filters-panel" variant="strong">
                         <div className="filter-search">
-                            <svg
-                                className="filter-search-icon"
-                                width="18"
-                                height="18"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                aria-hidden="true"
-                            >
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="m21 21-4.35-4.35" />
-                            </svg>
                             <input
                                 type="search"
                                 className="filter-search-input"
@@ -406,6 +438,12 @@ function CollegesContent() {
                         </div>
 
                         <div className="filter-row">
+                            <FancySelect
+                                label="State"
+                                value={filters.state}
+                                options={filterOptions.states}
+                                onChange={(val) => handleFilterChange("state", val)}
+                            />
                             <FancySelect
                                 label="District"
                                 value={filters.district}
@@ -424,26 +462,11 @@ function CollegesContent() {
                                 options={filterOptions.tiers}
                                 onChange={(val) => handleFilterChange("tier", val)}
                             />
-                            <FancySelect
-                                label="Sort"
-                                value={sortBy}
-                                options={SORT_OPTIONS}
-                                onChange={handleSortChange}
-                                searchable={false}
-                            />
                         </div>
 
                         <div className="filter-meta">
                             <span className="filter-count">
-                                Showing <strong>{displayColleges.length}</strong> of{" "}
-                                <strong>{pagination?.totalCount || colleges.length}</strong>{" "}
-                                colleges
-                                {!stateFilter && pagination && pagination.totalPages > 1 && (
-                                    <>
-                                        {" "}
-                                        • Page {pagination.page} of {pagination.totalPages}
-                                    </>
-                                )}
+                                Showing <strong>{displayColleges.length}</strong> {pagination?.totalCount > displayColleges.length ? `of ${pagination.totalCount}` : ""} Results
                             </span>
                             {hasActiveFilters && (
                                 <Button variant="secondary" onClick={clearFilters}>
@@ -456,7 +479,9 @@ function CollegesContent() {
             </section>
 
             <section className="list-results">
-                <Container>{renderContent()}</Container>
+                <Container>
+                    {renderContent()}
+                </Container>
             </section>
         </div>
     );

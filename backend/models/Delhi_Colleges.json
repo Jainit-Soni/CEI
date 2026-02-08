@@ -2139,5 +2139,382 @@
       "highestPackage": "₹20-30 LPA",
       "placementRate": "70-85%"
     }
+  },
+  {
+    "id": "nit-delhi",
+    "name": "National Institute of Technology Delhi",
+    "shortName": "NIT Delhi",
+    "location": "Narela, New Delhi, Delhi",
+    "rankingTier": "Tier 2",
+    "type": "Public/Government (INI)",
+    "overview": "A rapidly growing NIT with a new campus in Narela. Rising in popularity due to location.",
+    "officialUrl": "https://nitdelhi.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech ECE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~10165 (AI) | ECE: ~16000",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Public"
+    }
+  },
+  {
+    "id": "dtu-delhi",
+    "name": "Delhi Technological University (DTU)",
+    "shortName": "DTU",
+    "location": "Shahbad Daulatpur, Bawana Road, Delhi",
+    "rankingTier": "Tier 1",
+    "type": "Public/Government",
+    "overview": "Formerly DCE, DTU is one of India's oldest and most prestigious engineering colleges, renowned for its placements and alumni network.",
+    "officialUrl": "http://dtu.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Software Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech IT",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech ECE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~4876 (AI) | ~13567 (Delhi) | SE: ~7000 (AI)",
+        "source": "JAC Delhi 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Public"
+    }
+  },
+  {
+    "id": "nsut-delhi",
+    "name": "Netaji Subhas University of Technology",
+    "shortName": "NSUT",
+    "location": "Dwarka Sector 3, New Delhi",
+    "rankingTier": "Tier 1",
+    "type": "Public/Government",
+    "overview": "Formerly NSIT, famous for its tech culture and proximity to Gurgaon's corporate hub. A top choice for CSE/IT aspirants.",
+    "officialUrl": "http://nsut.ac.in",
+    "acceptedExams": [
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech CSE-AI",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech IT",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~9869 (AI) | AI-DS: ~3534",
+        "source": "JAC Delhi 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Public"
+    }
+  },
+  {
+    "id": "mait-delhi",
+    "name": "Maharaja Agrasen Institute of Technology",
+    "shortName": "MAIT",
+    "location": "Rohini Sector-22, New Delhi",
+    "rankingTier": "Tier 2",
+    "type": "Private (IPU Affiliated)",
+    "overview": "One of the top colleges under GGSIPU, known for its rigorous academic environment and consistent placements.",
+    "officialUrl": "https://mait.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "ipu-cet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech IT",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~14095-47478 | IT: ~38582-58152",
+        "source": "IPU Counselling 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "msit-delhi",
+    "name": "Maharaja Surajmal Institute of Technology",
+    "shortName": "MSIT",
+    "location": "Janakpuri, New Delhi",
+    "rankingTier": "Tier 2",
+    "type": "Private (IPU Affiliated)",
+    "overview": "A premier IPU college located in Janakpuri, focusing on engineering and technology excellence.",
+    "officialUrl": "http://msit.in",
+    "acceptedExams": [
+      "jee-main",
+      "ipu-cet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech IT",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~54501-62496 (AI) | ~21434 (Delhi)",
+        "source": "IPU Counselling 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "bpit-delhi",
+    "name": "Bhagwan Parshuram Institute of Technology",
+    "shortName": "BPIT",
+    "location": "Rohini Sector 17, New Delhi",
+    "rankingTier": "Tier 2.5",
+    "type": "Private (IPU Affiliated)",
+    "overview": "A solid engineering college under IPU in North Delhi, offering good value for rank.",
+    "officialUrl": "http://bpitindia.com",
+    "acceptedExams": [
+      "jee-main",
+      "ipu-cet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~119838 (Round 1)",
+        "source": "IPU Counselling 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "bvcoe-delhi",
+    "name": "Bharati Vidyapeeth's College of Engineering",
+    "shortName": "BVCOE",
+    "location": "Paschim Vihar, New Delhi",
+    "rankingTier": "Tier 2",
+    "type": "Private (IPU Affiliated)",
+    "overview": "Part of the prestigious Bharati Vidyapeeth group, offering quality engineering education in West Delhi.",
+    "officialUrl": "http://bvcoend.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "ipu-cet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~36573-48945 (AI)",
+        "source": "IPU Counselling 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "vips-delhi",
+    "name": "Vivekananda Institute of Professional Studies - TC",
+    "shortName": "VIPS",
+    "location": "Pitampura, New Delhi",
+    "rankingTier": "Tier 2.5",
+    "type": "Private (IPU Affiliated)",
+    "overview": "Known for its Law and Journalism, VIPS has recently emerged as a strong contender in Engineering under IPU.",
+    "officialUrl": "https://vips.edu",
+    "acceptedExams": [
+      "jee-main",
+      "ipu-cet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~78,737 - 1,00,066",
+        "source": "IPU 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "adgitm-delhi",
+    "name": "Dr. Akhilesh Das Gupta Institute of Technology & Management",
+    "shortName": "ADGITM",
+    "location": "Shastri Park, New Delhi",
+    "rankingTier": "Tier 3",
+    "type": "Private (IPU Affiliated)",
+    "overview": "Formerly NIEC, located in East Delhi, offering decent opportunities for IPU aspirants.",
+    "officialUrl": "https://adgitmdelhi.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "ipu-cet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE: ~90,000 - 1,10,000",
+        "source": "IPU 2023"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
   }
 ]

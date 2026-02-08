@@ -1,0 +1,190 @@
+[
+  {
+    "id": "iim-ahm",
+    "name": "Indian Institute of Management Ahmedabad"
+  },
+  {
+    "id": "cept-uni-ahmedabad",
+    "name": "CEPT University"
+  },
+  {
+    "id": "gnlu-gandhinagar",
+    "name": "Gujarat National Law University"
+  },
+  {
+    "id": "bjmc-ahmedabad",
+    "name": "B.J. Medical College"
+  },
+  {
+    "id": "gcet-anand",
+    "name": "G.H. Patel College of Engineering and Technology"
+  },
+  {
+    "id": "adit-anand",
+    "name": "A.D. Patel Institute of Technology"
+  },
+  {
+    "id": "scet-surat",
+    "name": "Sarvajanik College of Engineering and Technology"
+  },
+  {
+    "id": "medical-college-baroda",
+    "name": "Medical College Baroda"
+  },
+  {
+    "id": "pdumc-rajkot",
+    "name": "Pandit Deendayal Upadhyay Medical College"
+  },
+  {
+    "id": "gmers-gandhinagar",
+    "name": "GMERS Medical College Gandhinagar"
+  },
+  {
+    "id": "anand-agri-uni",
+    "name": "Anand Agricultural University"
+  },
+  {
+    "id": "jau-junagadh",
+    "name": "Junagadh Agricultural University"
+  },
+  {
+    "id": "nau-navsari",
+    "name": "Navsari Agricultural University"
+  },
+  {
+    "id": "sdau-dantiwada",
+    "name": "Sardarkrushinagar Dantiwada Agricultural University"
+  },
+  {
+    "id": "nfsu-gandhinagar",
+    "name": "National Forensic Sciences University"
+  },
+  {
+    "id": "raksha-shakti-uni",
+    "name": "Rashtriya Raksha University"
+  },
+  {
+    "id": "gtu-ahmedabad",
+    "name": "Gujarat Technological University"
+  },
+  {
+    "id": "gujarat-uni",
+    "name": "Gujarat University"
+  },
+  {
+    "id": "saurashtra-uni",
+    "name": "Saurashtra University"
+  },
+  {
+    "id": "vnsgu-surat",
+    "name": "Veer Narmad South Gujarat University"
+  },
+  {
+    "id": "hngu-patan",
+    "name": "Hemchandracharya North Gujarat University"
+  },
+  {
+    "id": "mkb-uni-bhavnagar",
+    "name": "Maharaja Krishnakumarsinhji Bhavnagar University"
+  },
+  {
+    "id": "kskv-kachchh-uni",
+    "name": "Krantiguru Shyamji Krishna Verma Kachchh University"
+  },
+  {
+    "id": "gls-uni-ahmedabad",
+    "name": "GLS University"
+  },
+  {
+    "id": "karnavati-uni",
+    "name": "Karnavati University"
+  },
+  {
+    "id": "swarrnim-uni",
+    "name": "Swarrnim Startup and Innovation University"
+  },
+  {
+    "id": "navrachana-uni",
+    "name": "Navrachana University"
+  },
+  {
+    "id": "gsfc-uni",
+    "name": "GSFC University"
+  },
+  {
+    "id": "atmiya-uni",
+    "name": "Atmiya University"
+  },
+  {
+    "id": "rk-uni",
+    "name": "RK University"
+  },
+  {
+    "id": "pp-savani-uni",
+    "name": "P.P. Savani University"
+  },
+  {
+    "id": "c-u-shah-uni",
+    "name": "C.U. Shah University"
+  },
+  {
+    "id": "gokul-global-uni",
+    "name": "Gokul Global University"
+  },
+  {
+    "id": "sankalchand-patel-uni",
+    "name": "Sankalchand Patel University"
+  },
+  {
+    "id": "monark-uni",
+    "name": "Monark University"
+  },
+  {
+    "id": "rai-uni",
+    "name": "Rai University"
+  },
+  {
+    "id": "itm-sls-uni",
+    "name": "ITM (SLS) Baroda University"
+  },
+  {
+    "id": "upl-uni",
+    "name": "UPL University of Sustainable Technology"
+  },
+  {
+    "id": "st-xaviers-ahmedabad",
+    "name": "St. Xavier's College (Autonomous)"
+  },
+  {
+    "id": "hl-college-commerce",
+    "name": "H.L. College of Commerce"
+  },
+  {
+    "id": "mg-science-ahmedabad",
+    "name": "M.G. Science Institute"
+  },
+  {
+    "id": "indian-institute-of-technology-gandhinagar",
+    "name": "Indian Institute of Technology Gandhinagar"
+  },
+  {
+    "id": "pandit-deendayal-energy-univer-gandhinagar",
+    "name": "Pandit Deendayal Energy University"
+  },
+  {
+    "id": "sardar-vallabhbhai-national-in-surat",
+    "name": "Sardar Vallabhbhai National Institute of Technology"
+  },
+  {
+    "id": "national-institute-of-technolo-surat",
+    "name": "National Institute of Technology Surat"
+  },
+  {
+    "id": "dhirubhai-ambani-institute-of--gandhinagar",
+    "name": "Dhirubhai Ambani Institute of Information and Communication Technology"
+  },
+  {
+    "id": "institute-of-infrastructure-te-ahmedabad",
+    "name": "Institute of Infrastructure Technology Research and Management"
+  }
+]

@@ -174,8 +174,8 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CSE: ~523 | Mech: ~6623 | Elec: ~6076 | Civil: ~13326",
         "source": "Official"
       },
       {
@@ -480,8 +480,8 @@
     "pastCutoffs": [
       {
         "examId": "jee-advanced",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CSE: ~1500 | Elec: ~4000 | Mech: ~6000",
         "source": "Official"
       },
       {
@@ -579,8 +579,8 @@
     "pastCutoffs": [
       {
         "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CSE: ~6800 (HS) | ECE: ~14000 (OS)",
         "source": "Official"
       },
       {
@@ -682,9 +682,10 @@
     ],
     "pastCutoffs": [
       {
-        "examId": "gujcet-acpc",
-        "year": "2023",
-        "cutoff": "Rank ~300 (Computer GIA)"
+        "examId": "gujcet",
+        "year": "2025",
+        "cutoff": "CE: ~351 | EC: 3000-6000 | Chem: 1543-5149",
+        "source": "Official"
       }
     ],
     "topRecruiters": [
@@ -775,8 +776,8 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CSE: 400-1800 | IT: 1800-3500 | ECE: 3500-7500",
         "source": "Official"
       },
       {
@@ -824,6 +825,7 @@
     "acceptedExams": [
       "jee-main",
       "cat",
+      "cmat",
       "clat",
       "gujcet"
     ],
@@ -841,7 +843,8 @@
         "degree": "MBA",
         "duration": "2 years",
         "exams": [
-          "cat"
+          "cat",
+          "cmat"
         ]
       },
       {
@@ -886,7 +889,13 @@
       },
       {
         "examId": "cat",
-        "year": "2024",
+        "year": "2025",
+        "cutoff": "General: 80-85 Percentile",
+        "source": "Official"
+      },
+      {
+        "examId": "cmat",
+        "year": "2025",
         "cutoff": "Check official website",
         "source": "Official"
       }
@@ -927,7 +936,8 @@
     "acceptedExams": [
       "jee-main",
       "cat",
-      "ku-aptitude"
+      "ku-aptitude",
+      "gujcet"
     ],
     "courses": [
       {
@@ -981,15 +991,15 @@
     ],
     "pastCutoffs": [
       {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "examId": "gujcet",
+        "year": "2025",
+        "cutoff": "CSE: ~3886 | Elec: ~5123 | Mech: ~8756",
         "source": "Official"
       },
       {
         "examId": "cat",
         "year": "2024",
-        "cutoff": "Check official website",
+        "cutoff": "80 Percentile",
         "source": "Official"
       }
     ],
@@ -1092,8 +1102,8 @@
     "pastCutoffs": [
       {
         "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CSE: ~14522 (HS) | ICT: ~15913 (HS) | ECE: ~20234 (HS)",
         "source": "Official"
       },
       {
@@ -1194,8 +1204,9 @@
     "pastCutoffs": [
       {
         "examId": "jee-main",
-        "year": "2023",
-        "cutoff": "AIR ~15000 (All India Quota)"
+        "year": "2025",
+        "cutoff": "MnC: ~70-100 | ICT: ~140 (HS) | ICT-CS: ~100 (HS)",
+        "source": "Official"
       }
     ],
     "topRecruiters": [
@@ -1280,14 +1291,8 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      },
-      {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CE: 1500-2000 | IT: 2500-3000",
         "source": "Official"
       }
     ],
@@ -1372,13 +1377,13 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CE: ~35061 | Cyber: ~30473",
         "source": "Official"
       },
       {
         "examId": "jee-main",
-        "year": "2024",
+        "year": "2025",
         "cutoff": "Check official website",
         "source": "Official"
       }
@@ -1471,15 +1476,9 @@
     ],
     "pastCutoffs": [
       {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      },
-      {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CSE: ~12864-36987",
         "source": "Official"
       }
     ],
@@ -1637,9 +1636,10 @@
     ],
     "pastCutoffs": [
       {
-        "examId": "gujcet-acpc",
-        "year": "2024",
-        "cutoff": "Computer: Rank ~700; IT: Rank ~1100"
+        "examId": "gujcet",
+        "year": "2025",
+        "cutoff": "CE: 12-47 | IT: 355-1010 | ECE: 758-2650 | Mech: 692-4802",
+        "source": "Official"
       }
     ],
     "topRecruiters": [
@@ -1750,13 +1750,13 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CE: 1278-1396 | IT: 2582-3126 | EC: 3387-3559",
         "source": "Official"
       },
       {
         "examId": "jee-main",
-        "year": "2024",
+        "year": "2025",
         "cutoff": "Check official website",
         "source": "Official"
       }
@@ -2118,8 +2118,8 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CE: ~8543 | AI: ~10500 | EC: ~20413 | Mech: ~20923",
         "source": "Official"
       }
     ],
@@ -2205,8 +2205,8 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CE: ~4207 | EC: ~13256 | Mech: ~20950 | Elec: ~24164",
         "source": "Official"
       }
     ],
@@ -2307,8 +2307,8 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CE: ~6635 | IT: ~12891 | Mech: ~34413 | EC: ~36372",
         "source": "Official"
       }
     ],
@@ -2411,14 +2411,8 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      },
-      {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CE: 4559 | IT: 6666 | AI: 7056 | EC: 12805",
         "source": "Official"
       }
     ],
@@ -3837,15 +3831,9 @@
     ],
     "pastCutoffs": [
       {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      },
-      {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CSE: ~18713 | IT: ~29299 | CE: ~20849",
         "source": "Official"
       }
     ],
@@ -3929,13 +3917,13 @@
     "pastCutoffs": [
       {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "CE: ~30445 | IT: ~29400",
         "source": "Official"
       },
       {
         "examId": "jee-main",
-        "year": "2024",
+        "year": "2025",
         "cutoff": "Check official website",
         "source": "Official"
       }
@@ -4086,15 +4074,9 @@
     ],
     "pastCutoffs": [
       {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      },
-      {
         "examId": "gujcet",
-        "year": "2024",
-        "cutoff": "Check official website",
+        "year": "2025",
+        "cutoff": "BE: 16742-50295 | IT: ~35000",
         "source": "Official"
       }
     ],
@@ -5048,7 +5030,8 @@
     "campus": "Navrangpura, Ahmedabad",
     "officialUrl": "https://sxca.edu.in",
     "acceptedExams": [
-      "merit-based"
+      "merit-based",
+      "hsc-merit"
     ],
     "courses": [
       {
@@ -5248,434 +5231,6 @@
     }
   },
   {
-    "id": "indian-institute-of-technology-gandhinagar",
-    "name": "Indian Institute of Technology Gandhinagar",
-    "shortName": "Indian Institute of Technology Gandhinagar",
-    "location": "Gandhinagar, Gandhinagar District, Gujarat",
-    "rankingTier": "Tier 1",
-    "overview": "NIRF Ranked Engineering Institute",
-    "campus": "Gandhinagar",
-    "officialUrl": "",
-    "acceptedExams": [
-      "jee-main"
-    ],
-    "courses": [
-      {
-        "name": "Computer Science and Engineering (CSE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Information Technology (IT)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electronics and Communication Engineering (ECE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electrical and Electronics Engineering (EEE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      }
-    ],
-    "pastCutoffs": [
-      {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      }
-    ],
-    "topRecruiters": [
-      "Google",
-      "Microsoft",
-      "Amazon",
-      "Apple",
-      "Meta",
-      "Netflix",
-      "Adobe",
-      "Salesforce",
-      "Goldman Sachs",
-      "Morgan Stanley",
-      "JP Morgan",
-      "Barclays",
-      "Deutsche Bank",
-      "McKinsey",
-      "BCG"
-    ],
-    "tuition": "₹50,000 - 1,50,000 per year",
-    "sources": [],
-    "meta": {
-      "affiliations": [],
-      "ownership": "Government",
-      "establishedYear": "",
-      "district": "Gandhinagar",
-      "sourceType": "official",
-      "sourceName": "NIRF 2024"
-    },
-    "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
-      "placementRate": "85-95%"
-    }
-  },
-  {
-    "id": "pandit-deendayal-energy-univer-gandhinagar",
-    "name": "Pandit Deendayal Energy University",
-    "shortName": "Pandit Deendayal Energy University",
-    "location": "Gandhinagar, Gandhinagar District, Gujarat",
-    "rankingTier": "Tier 2",
-    "overview": "NIRF Ranked Engineering Institute",
-    "campus": "Gandhinagar",
-    "officialUrl": "",
-    "acceptedExams": [
-      "jee-main"
-    ],
-    "courses": [
-      {
-        "name": "Computer Science and Engineering (CSE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Information Technology (IT)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electronics and Communication Engineering (ECE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electrical and Electronics Engineering (EEE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      }
-    ],
-    "pastCutoffs": [
-      {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      }
-    ],
-    "topRecruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Tech Mahindra",
-      "Cognizant",
-      "Accenture",
-      "Capgemini",
-      "IBM",
-      "Oracle",
-      "SAP",
-      "VMware"
-    ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
-    "sources": [],
-    "meta": {
-      "affiliations": [],
-      "ownership": "Private",
-      "establishedYear": "",
-      "district": "Gandhinagar",
-      "sourceType": "official",
-      "sourceName": "NIRF 2024"
-    },
-    "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
-      "placementRate": "70-85%"
-    }
-  },
-  {
-    "id": "sardar-vallabhbhai-national-in-surat",
-    "name": "Sardar Vallabhbhai National Institute of Technology",
-    "shortName": "Sardar Vallabhbhai National Institute of Technolog",
-    "location": "Surat, Surat District, Gujarat",
-    "rankingTier": "Tier 2",
-    "overview": "NIRF Ranked Engineering Institute",
-    "campus": "Surat",
-    "officialUrl": "",
-    "acceptedExams": [
-      "jee-main"
-    ],
-    "courses": [
-      {
-        "name": "Computer Science and Engineering (CSE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Information Technology (IT)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electronics and Communication Engineering (ECE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electrical and Electronics Engineering (EEE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      }
-    ],
-    "pastCutoffs": [
-      {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      }
-    ],
-    "topRecruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Tech Mahindra",
-      "Cognizant",
-      "Accenture",
-      "Capgemini",
-      "IBM",
-      "Oracle",
-      "SAP",
-      "VMware"
-    ],
-    "tuition": "₹50,000 - 1,50,000 per year",
-    "sources": [],
-    "meta": {
-      "affiliations": [],
-      "ownership": "Government",
-      "establishedYear": "",
-      "district": "Surat",
-      "sourceType": "official",
-      "sourceName": "NIRF 2024"
-    },
-    "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
-      "placementRate": "70-85%"
-    }
-  },
-  {
-    "id": "national-institute-of-technolo-surat",
-    "name": "National Institute of Technology Surat",
-    "shortName": "National Institute of Technology Surat",
-    "location": "Surat, Surat District, Gujarat",
-    "rankingTier": "Tier 2",
-    "overview": "NIRF Ranked Engineering Institute",
-    "campus": "Surat",
-    "officialUrl": "",
-    "acceptedExams": [
-      "jee-main"
-    ],
-    "courses": [
-      {
-        "name": "Computer Science and Engineering (CSE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Information Technology (IT)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electronics and Communication Engineering (ECE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electrical and Electronics Engineering (EEE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      }
-    ],
-    "pastCutoffs": [
-      {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      }
-    ],
-    "topRecruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Tech Mahindra",
-      "Cognizant",
-      "Accenture",
-      "Capgemini",
-      "IBM",
-      "Oracle",
-      "SAP",
-      "VMware"
-    ],
-    "tuition": "₹50,000 - 1,50,000 per year",
-    "sources": [],
-    "meta": {
-      "affiliations": [],
-      "ownership": "Government",
-      "establishedYear": "",
-      "district": "Surat",
-      "sourceType": "official",
-      "sourceName": "NIRF 2024"
-    },
-    "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
-      "placementRate": "70-85%"
-    }
-  },
-  {
-    "id": "dhirubhai-ambani-institute-of--gandhinagar",
-    "name": "Dhirubhai Ambani Institute of Information and Communication Technology",
-    "shortName": "Dhirubhai Ambani Institute of Information and Comm",
-    "location": "Gandhinagar, Gandhinagar District, Gujarat",
-    "rankingTier": "Tier 2",
-    "overview": "NIRF Ranked Engineering Institute",
-    "campus": "Gandhinagar",
-    "officialUrl": "",
-    "acceptedExams": [
-      "jee-main"
-    ],
-    "courses": [
-      {
-        "name": "Computer Science and Engineering (CSE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Information Technology (IT)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electronics and Communication Engineering (ECE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "Electrical and Electronics Engineering (EEE)",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      }
-    ],
-    "pastCutoffs": [
-      {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      }
-    ],
-    "topRecruiters": [
-      "TCS",
-      "Infosys",
-      "Wipro",
-      "HCL",
-      "Tech Mahindra",
-      "Cognizant",
-      "Accenture",
-      "Capgemini",
-      "IBM",
-      "Oracle",
-      "SAP",
-      "VMware"
-    ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
-    "sources": [],
-    "meta": {
-      "affiliations": [],
-      "ownership": "Private",
-      "establishedYear": "",
-      "district": "Gandhinagar",
-      "sourceType": "official",
-      "sourceName": "NIRF 2024"
-    },
-    "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
-      "placementRate": "70-85%"
-    }
-  },
-  {
     "id": "institute-of-infrastructure-te-ahmedabad",
     "name": "Institute of Infrastructure Technology Research and Management",
     "shortName": "Institute of Infrastructure Technology Research an",
@@ -5758,6 +5313,674 @@
       "medianPackage": "₹5-9 LPA",
       "highestPackage": "₹20-30 LPA",
       "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "gec-bhuj",
+    "name": "Government Engineering College, Bhuj",
+    "shortName": "GEC, Bhuj",
+    "location": "Bhuj, Gujarat",
+    "type": "Government",
+    "rankingTier": "Tier 2",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gujcet",
+        "year": "2024",
+        "cutoff": "Civil: 37067 | Mech: 38617 | Elec: 38781 | Chem: 50012 | Min: 36497",
+        "source": "ACPC 2024"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Check official website",
+        "source": "Official"
+      }
+    ],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.512Z"
+    }
+  },
+  {
+    "id": "gec-godhra",
+    "name": "Government Engineering College, Godhra",
+    "shortName": "GEC, Godhra",
+    "location": "Godhra, Gujarat",
+    "type": "Government",
+    "rankingTier": "Tier 2",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.513Z"
+    }
+  },
+  {
+    "id": "gec-palanpur",
+    "name": "Government Engineering College, Palanpur",
+    "shortName": "GEC, Palanpur",
+    "location": "Palanpur, Gujarat",
+    "type": "Government",
+    "rankingTier": "Tier 2",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.514Z"
+    }
+  },
+  {
+    "id": "gec-modasa",
+    "name": "Government Engineering College, Modasa",
+    "shortName": "GEC, Modasa",
+    "location": "Modasa, Gujarat",
+    "type": "Government",
+    "rankingTier": "Tier 2",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.514Z"
+    }
+  },
+  {
+    "id": "gec-patan",
+    "name": "Government Engineering College, Patan",
+    "shortName": "GEC, Patan",
+    "location": "Patan, Gujarat",
+    "type": "Government",
+    "rankingTier": "Tier 2",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.514Z"
+    }
+  },
+  {
+    "id": "gec-dahod",
+    "name": "Government Engineering College, Dahod",
+    "shortName": "GEC, Dahod",
+    "location": "Dahod, Gujarat",
+    "type": "Government",
+    "rankingTier": "Tier 2",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.515Z"
+    }
+  },
+  {
+    "id": "gec-bharuch",
+    "name": "Government Engineering College, Bharuch",
+    "shortName": "GEC, Bharuch",
+    "location": "Bharuch, Gujarat",
+    "type": "Government",
+    "rankingTier": "Tier 2",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.515Z"
+    }
+  },
+  {
+    "id": "darshan-university-rajkot",
+    "name": "Darshan Institute of Engineering and Technology",
+    "shortName": "Darshan Institute of Engineering and Technology",
+    "location": "Rajkot, Gujarat",
+    "type": "Private",
+    "rankingTier": "Tier 3",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.516Z"
+    }
+  },
+  {
+    "id": "laxmi-institute-sarigam",
+    "name": "Laxmi Institute of Technology, Sarigam",
+    "shortName": "Laxmi IOT, Sarigam",
+    "location": "Sarigam, Valsad, Gujarat",
+    "type": "Private",
+    "rankingTier": "Tier 3",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.516Z"
+    }
+  },
+  {
+    "id": "ck-pithawalla-surat",
+    "name": "CK Pithawalla College of Engineering and Technology",
+    "shortName": "CK Pithawalla College of Engineering and Technology",
+    "location": "Surat, Gujarat",
+    "type": "Private",
+    "rankingTier": "Tier 3",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.516Z"
+    }
+  },
+  {
+    "id": "sal-institute-ahmedabad",
+    "name": "SAL Institute of Technology and Engineering Research",
+    "shortName": "SAL IOT and Engineering Research",
+    "location": "Ahmedabad, Gujarat",
+    "type": "Private",
+    "rankingTier": "Tier 3",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech Computer Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Mechanical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Civil Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech Electrical Engineering",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.517Z"
+    }
+  },
+  {
+    "id": "adani-uni-ahmedabad",
+    "name": "Adani University",
+    "shortName": "Adani University",
+    "location": "Ahmedabad, Gujarat",
+    "type": "Private",
+    "rankingTier": "Tier 3",
+    "acceptedExams": [
+      "gujcet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech ICT",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech CSE (AI/ML)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "gujcet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "gujcet",
+        "year": "2024",
+        "cutoff": "ICT: 8940 | CSE(AI/ML): 5674",
+        "source": "ACPC 2024"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "ICT: 8940",
+        "source": "Official"
+      }
+    ],
+    "meta": {
+      "seeded": true,
+      "dateAdded": "2026-02-08T17:56:56.517Z"
     }
   }
 ]

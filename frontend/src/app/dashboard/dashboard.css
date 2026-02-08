@@ -1,0 +1,293 @@
+.dashboard-page {
+    min-height: 100vh;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    background: transparent;
+}
+
+.dashboard-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.dashboard-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Global Container Override for wider dashboard */
+.dashboard-page .container {
+    max-width: 1400px !important;
+}
+
+.dashboard-subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* Command Center Grid Layout */
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    min-height: 600px;
+    /* No more horizontal scroll */
+    overflow-x: visible;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+    .kanban-board {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 column (Stack) */
+@media (max-width: 768px) {
+    .kanban-board {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.kanban-column {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.05),
+        0 4px 6px -2px rgba(0, 0, 0, 0.025),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 300px;
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* Stagger Animation */
+.kanban-column:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.kanban-column:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.kanban-column:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.kanban-column:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.kanban-column:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.kanban-column:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.kanban-column:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.kanban-column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.column-title {
+    font-weight: 600;
+    color: #334155;
+    font-size: 1.1rem;
+}
+
+.column-count {
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.kanban-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: grab;
+    position: relative;
+    overflow: hidden;
+}
+
+.kanban-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.kanban-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.kanban-card:hover::before {
+    opacity: 1;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+}
+
+.card-subtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+}
+
+.card-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.tag-tier {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.tag-loc {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+/* Status Colors */
+
+.col-shortlisted .column-count {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.col-applying .column-count {
+    background: #fefce8;
+    color: #ca8a04;
+}
+
+.col-applied .column-count {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.col-interview .column-count {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+.col-offer .column-count {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.col-rejected .column-count {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+/* Tabs */
+.dashboard-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #64748b;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    color: #334155;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.tab-btn.active {
+    background: #1e293b;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Empty State */
+.empty-placeholder {
+    text-align: center;
+    padding: 2rem;
+    color: #94a3b8;
+    font-style: italic;
+    font-size: 0.9rem;
+    border: 2px dashed rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-top: 1rem;
+}

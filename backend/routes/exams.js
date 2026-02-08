@@ -31,7 +31,7 @@ const syllabusById = {
 
 router.get("/exams", async (req, res) => {
   const key = `exams:${JSON.stringify(req.query)}`;
-  const cached = cache.get(key);
+  const cached = await cache.get(key);
   if (cached) return res.json(cached);
 
   let exams = await getExams();

@@ -13,10 +13,16 @@ function normalizeStateName(name) {
     .trim();
 }
 
+function getState(college) {
+  if (!college?.location) return null;
+  const parts = college.location.split(",").map((p) => p.trim());
+  return parts[parts.length - 1];
+}
+
 router.get("/colleges", async (req, res) => {
   try {
     const key = `colleges:${JSON.stringify(req.query)}`;
-    const cached = cache.get(key);
+    const cached = await cache.get(key);
     if (cached) return res.json(cached);
 
     let colleges = await getColleges();
@@ -26,7 +32,7 @@ router.get("/colleges", async (req, res) => {
       console.error("Failed to load colleges - not an array");
       return res.status(500).json({ error: "Failed to load college data" });
     }
-    const { state, district, q, sortBy, order, page, limit } = req.query;
+    const { state, district, q, tier, course, sortBy, order, page, limit } = req.query;
 
     // Filtering
     if (state) {
@@ -42,6 +48,29 @@ router.get("/colleges", async (req, res) => {
         const value = (c.meta?.district || c.district || "").toLowerCase();
         return value === normalized;
       });
+    }
+    if (tier && tier !== 'All') {
+      colleges = colleges.filter((c) => (c.rankingTier || c.ranking) === tier);
+    }
+    if (course && course !== 'All') {
+      const normalizedCourse = course.toLowerCase().trim();
+      // Broad category mapping
+      const categoryMap = {
+        'engineering': ['b.tech', 'b.e', 'm.tech', 'engineering', 'technology'],
+        'management': ['mba', 'pgdm', 'mms', 'management', 'business'],
+        'medical': ['mbbs', 'bds', 'medical', 'medicine', 'pharma', 'health'],
+        'design': ['b.des', 'm.des', 'design'],
+        'commerce': ['b.com', 'm.com', 'commerce', 'accountancy'],
+        'arts': ['b.a', 'm.a', 'arts', 'social sciences', 'humanities']
+      };
+
+      const searchTerms = categoryMap[normalizedCourse] || [normalizedCourse];
+
+      colleges = colleges.filter((c) => (c.courses || []).some(courseObj => {
+        const courseName = (courseObj?.name || "").toLowerCase();
+        const courseDegree = (courseObj?.degree || "").toLowerCase();
+        return searchTerms.some(term => courseName.includes(term) || courseDegree.includes(term));
+      }));
     }
     if (q) {
       const query = q.toLowerCase().trim();
@@ -116,23 +145,51 @@ router.get("/colleges", async (req, res) => {
   }
 });
 
-router.get("/college/:id", (req, res) => {
+router.get("/college/:id", async (req, res) => {
   const { getCollegeById } = require("../services/dataStore");
-  const college = getCollegeById(req.params.id);
-  if (!college) return res.status(404).json({ error: "College not found" });
-  res.json(college);
+  try {
+    const college = await getCollegeById(req.params.id);
+    if (!college) return res.status(404).json({ error: "College not found" });
+    res.json(college);
+  } catch (error) {
+    console.error("Error fetching college:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
-// Get state-wise college counts
-router.get("/states/stats", (req, res) => {
-  const key = "states:stats";
-  const cached = cache.get(key);
+// Get state-wise college counts (with optional filtering)
+router.get("/states/stats", async (req, res) => {
+  const { q, district, tier, course, exam } = req.query;
+  // Create a unique cache key based on filters
+  const key = `states:stats:${JSON.stringify(req.query)}`;
+  const cached = await cache.get(key);
   if (cached) return res.json(cached);
 
-  const colleges = getColleges();
+  let colleges = await getColleges(); // This is cached in dataStore
+
+  // --- Apply Filters (Same logic as /colleges main route) ---
+  if (q) {
+    const query = q.toLowerCase().trim();
+    colleges = colleges.filter((c) => {
+      const nameMatch = c.name.toLowerCase().includes(query);
+      const shortNameMatch = c.shortName && c.shortName.toLowerCase().includes(query);
+      return nameMatch || shortNameMatch;
+    });
+  }
+  if (district && district !== 'All') {
+    const normalized = district.toLowerCase();
+    colleges = colleges.filter((c) => (c.meta?.district || c.district || "").toLowerCase() === normalized);
+  }
+  if (tier && tier !== 'All') {
+    colleges = colleges.filter((c) => (c.rankingTier || c.ranking) === tier);
+  }
+  if (course && course !== 'All') {
+    colleges = colleges.filter((c) => (c.courses || []).some(courseObj => courseObj?.name === course));
+  }
+  // ---------------------------------------------------------
+
   const stateStats = {};
 
-  // Initialize all states/UTs with 0
   const allStates = [
     "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana",
     "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur",
@@ -142,35 +199,22 @@ router.get("/states/stats", (req, res) => {
     "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"
   ];
 
-  // Create normalized state map for lookup
   const normalizedStateMap = {};
   allStates.forEach(state => {
     const normalized = normalizeStateName(state);
     normalizedStateMap[normalized] = state;
-    stateStats[state] = { count: 0 };
+    stateStats[state] = { count: 0, colleges: [] };
   });
 
-  // Add mappings for old separate names to merged UT
-  // Dadra and Nagar Haveli -> Dadra and Nagar Haveli and Daman and Diu
   normalizedStateMap["dadra and nagar haveli"] = "Dadra and Nagar Haveli and Daman and Diu";
-  // Daman and Diu -> Dadra and Nagar Haveli and Daman and Diu
   normalizedStateMap["daman and diu"] = "Dadra and Nagar Haveli and Daman and Diu";
 
-  // Initialize with empty objects instead of arrays
-  Object.keys(stateStats).forEach(state => {
-    stateStats[state] = { count: 0 };
-  });
-
-  // Count colleges by state
   colleges.forEach(college => {
     let stateName = null;
-
     if (college.location) {
       const parts = college.location.split(',').map(p => p.trim());
       const lastPart = parts[parts.length - 1];
       const normalizedLastPart = normalizeStateName(lastPart);
-
-      // Check normalized match
       if (normalizedStateMap[normalizedLastPart]) {
         stateName = normalizedStateMap[normalizedLastPart];
       }
@@ -178,13 +222,16 @@ router.get("/states/stats", (req, res) => {
 
     if (stateName && stateStats[stateName]) {
       stateStats[stateName].count++;
+      if (stateStats[stateName].colleges.length < 3) {
+        stateStats[stateName].colleges.push(college.shortName || college.name);
+      }
     }
   });
 
-  // Convert to array format for easier consumption
   const result = Object.entries(stateStats).map(([name, data]) => ({
     name,
     count: data.count,
+    topColleges: data.colleges,
     type: ["Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu",
       "Delhi", "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"].includes(name) ? "UT" : "State"
   })).sort((a, b) => b.count - a.count);
@@ -196,61 +243,104 @@ router.get("/states/stats", (req, res) => {
     states: result
   };
 
-  cache.set(key, response);
+  await cache.set(key, response, 300); // 5 min cache
   res.json(response);
 });
 
 // Get filter options (unique values for dropdowns)
-router.get("/filters", (req, res) => {
-  const key = "filters:all";
-  const cached = cache.get(key);
-  if (cached) return res.json(cached);
+router.get("/filters", async (req, res) => {
+  try {
+    const { state, district, q, tier, course } = req.query;
+    // We don't use full caching for dynamic filters, or we use a more granular key
+    const key = `filters:dynamic:${JSON.stringify(req.query)}`;
+    const cached = await cache.get(key);
+    if (cached) return res.json(cached);
 
-  const colleges = getColleges();
+    let colleges = await getColleges();
 
-  // Extract unique values
-  const states = new Set();
-  const districts = new Set();
-  const tiers = new Set();
-  const courses = new Set();
-
-  colleges.forEach(college => {
-    // State
-    if (college.location) {
-      const parts = college.location.split(',').map(p => p.trim());
-      const state = parts[parts.length - 1];
-      if (state) states.add(state);
+    // 1. Apply active filters to get the "working set" for drop-downs
+    if (state) {
+      const normalizedState = normalizeStateName(state);
+      colleges = colleges.filter((c) => normalizeStateName(c.state || getState(c)) === normalizedState);
     }
-
-    // District
-    const district = college.meta?.district || college.district;
-    if (district) districts.add(district);
-
-    // Tier
-    const tier = college.rankingTier || college.ranking;
-    if (tier) tiers.add(tier);
-
-    // Courses
-    if (college.courses) {
-      college.courses.forEach(course => {
-        if (course.name) courses.add(course.name);
+    if (district) {
+      const normalized = district.toLowerCase();
+      colleges = colleges.filter((c) => (c.meta?.district || c.district || "").toLowerCase() === normalized);
+    }
+    if (tier && tier !== 'All') {
+      colleges = colleges.filter((c) => (c.rankingTier || c.ranking) === tier);
+    }
+    if (course && course !== 'All') {
+      const normalizedCourse = course.toLowerCase().trim();
+      const categoryMap = {
+        'engineering': ['b.tech', 'b.e', 'm.tech', 'engineering', 'technology'],
+        'management': ['mba', 'pgdm', 'mms', 'management', 'business'],
+        'medical': ['mbbs', 'bds', 'medical', 'medicine', 'pharma', 'health'],
+        'design': ['b.des', 'm.des', 'design'],
+        'commerce': ['b.com', 'm.com', 'commerce', 'accountancy'],
+        'arts': ['b.a', 'm.a', 'arts', 'social sciences', 'humanities']
+      };
+      const searchTerms = categoryMap[normalizedCourse] || [normalizedCourse];
+      colleges = colleges.filter((c) => (c.courses || []).some(courseObj => {
+        const courseName = (courseObj?.name || "").toLowerCase();
+        const courseDegree = (courseObj?.degree || "").toLowerCase();
+        return searchTerms.some(term => courseName.includes(term) || courseDegree.includes(term));
+      }));
+    }
+    if (q) {
+      const query = q.toLowerCase().trim();
+      colleges = colleges.filter((c) => {
+        const nameMatch = c.name.toLowerCase().includes(query);
+        const shortNameMatch = c.shortName && c.shortName.toLowerCase().includes(query);
+        return nameMatch || shortNameMatch;
       });
     }
-  });
 
-  const result = {
-    states: Array.from(states).sort(),
-    districts: Array.from(districts).sort(),
-    tiers: Array.from(tiers).sort(),
-    courses: Array.from(courses).sort()
-  };
+    // 2. Extract unique values from the filtered set
+    const statesSet = new Set();
+    const districtsSet = new Set();
+    const tiersSet = new Set();
+    const coursesSet = new Set();
 
-  cache.set(key, result, 600); // Cache for 10 minutes
-  res.json(result);
+    for (const college of colleges) {
+      // State
+      const stateName = college.state || getState(college);
+      if (stateName) statesSet.add(stateName);
+
+      // District
+      const dist = college.meta?.district || college.district;
+      if (dist) districtsSet.add(dist);
+
+      // Tier
+      const tr = college.rankingTier || college.ranking;
+      if (tr) tiersSet.add(tr);
+
+      // Courses (flattening names)
+      if (Array.isArray(college.courses)) {
+        for (const cNameObject of college.courses) {
+          if (cNameObject?.name) coursesSet.add(cNameObject.name);
+        }
+      }
+    }
+
+    const result = {
+      states: Array.from(statesSet).filter(Boolean).sort(),
+      districts: Array.from(districtsSet).filter(Boolean).sort(),
+      tiers: Array.from(tiersSet).filter(Boolean).sort(),
+      courses: Array.from(coursesSet).filter(Boolean).sort()
+    };
+
+    // Cache dynamic filters for a shorter time (5 mins)
+    await cache.set(key, result, 300);
+    res.json(result);
+  } catch (error) {
+    console.error("Error in dynamic /filters route:", error);
+    res.status(500).json({ error: "Failed to load dynamic filters" });
+  }
 });
 
 // Batch get colleges by IDs
-router.get("/colleges/batch", (req, res) => {
+router.get("/colleges/batch", async (req, res) => {
   const { getCollegeById } = require("../services/dataStore");
   const ids = req.query.ids ? req.query.ids.split(',') : [];
 
@@ -262,8 +352,15 @@ router.get("/colleges/batch", (req, res) => {
     return res.status(400).json({ error: "Maximum 50 colleges per batch request" });
   }
 
-  const colleges = ids.map(id => getCollegeById(id)).filter(Boolean);
-  res.json(colleges);
+  try {
+    const promises = ids.map(id => getCollegeById(id));
+    const colleges = await Promise.all(promises);
+    const validColleges = colleges.filter(Boolean);
+    res.json(validColleges);
+  } catch (error) {
+    console.error("Error in batch fetch:", error);
+    res.status(500).json({ error: "Failed to fetch colleges batch" });
+  }
 });
 
 module.exports = router;

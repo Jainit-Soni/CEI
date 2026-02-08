@@ -84,9 +84,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -157,9 +157,9 @@
       ]
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -174,9 +174,7 @@
     "officialUrl": "https://www.ictmumbai.edu.in",
     "acceptedExams": [
       "mht-cet",
-      "jee-main",
-      "gate",
-      "gpat"
+      "jee-main"
     ],
     "courses": [
       {
@@ -211,7 +209,14 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "99.5+ percentile (Chemical Engg)"
+        "cutoff": "Chemical Engg: 99.85 | Dyestuff: 98.50 | Pharma: 99.10",
+        "source": "CAP Round 1"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "All India: ~99.5 percentile",
+        "source": "Official"
       }
     ],
     "topRecruiters": [
@@ -229,13 +234,15 @@
       "ownership": "Deemed University (State Funded)",
       "district": "Mumbai City",
       "naacGrade": "A++",
-      "sourceType": "official"
+      "sourceType": "official",
+      "dteMappingSource": "automated_search_match"
     },
     "placements": {
-      "averagePackage": "₹10.5 LPA",
-      "medianPackage": "₹8.0 LPA",
-      "highestPackage": "₹18.0 LPA"
-    }
+      "averagePackage": "â‚¹10.5 LPA",
+      "medianPackage": "â‚¹8.0 LPA",
+      "highestPackage": "â‚¹18.0 LPA"
+    },
+    "dteCode": "3036"
   },
   {
     "id": "tiss-mumbai",
@@ -302,9 +309,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -369,9 +376,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹26.12 LPA",
-      "medianPackage": "₹26.4 LPA",
-      "highestPackage": "₹87.12 LPA"
+      "averagePackage": "â‚¹26.12 LPA",
+      "medianPackage": "â‚¹26.4 LPA",
+      "highestPackage": "â‚¹87.12 LPA"
     }
   },
   {
@@ -385,7 +392,8 @@
     "officialUrl": "https://www.coep.org.in",
     "acceptedExams": [
       "mht-cet",
-      "jee-main"
+      "jee-main",
+      "gate"
     ],
     "courses": [
       {
@@ -418,7 +426,14 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "99.8+ percentile (CS)"
+        "cutoff": "CSE: 99.92 | EnTC: 99.80 | Mech: 99.30 | Electrical: 99.34 | Civil: 98.50",
+        "source": "CAP Round 1"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "All India: ~99.8 percentile",
+        "source": "Official"
       }
     ],
     "topRecruiters": [
@@ -436,13 +451,15 @@
       "ownership": "State Unitary University",
       "establishedYear": "1854",
       "district": "Pune",
-      "sourceType": "official"
+      "sourceType": "official",
+      "dteMappingSource": "automated_search_match"
     },
     "placements": {
-      "averagePackage": "₹11.35 LPA",
-      "medianPackage": "₹9.7 LPA",
-      "highestPackage": "₹50.5 LPA"
-    }
+      "averagePackage": "â‚¹11.35 LPA",
+      "medianPackage": "â‚¹9.7 LPA",
+      "highestPackage": "â‚¹50.5 LPA"
+    },
+    "dteCode": "6006"
   },
   {
     "id": "vjti-mumbai",
@@ -455,7 +472,7 @@
     "officialUrl": "https://www.vjti.ac.in",
     "acceptedExams": [
       "mht-cet",
-      "jee-main"
+      "gate"
     ],
     "courses": [
       {
@@ -488,7 +505,14 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "99.7+ percentile (CS)"
+        "cutoff": "CSE: 99.96 | IT: 99.91 | EnTC: 99.72 | Mech: 99.40 | Civil: 98.20",
+        "source": "CAP Round 1"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "Not Applicable (State Quota primarily)",
+        "source": "Official"
       }
     ],
     "topRecruiters": [
@@ -508,13 +532,15 @@
       "ownership": "Government Aided / Autonomous",
       "establishedYear": "1887",
       "district": "Mumbai City",
-      "sourceType": "official"
+      "sourceType": "official",
+      "dteMappingSource": "automated_search_match"
     },
     "placements": {
-      "averagePackage": "₹13.5 LPA",
-      "medianPackage": "₹11.0 LPA",
-      "highestPackage": "₹62.0 LPA"
-    }
+      "averagePackage": "â‚¹13.5 LPA",
+      "medianPackage": "â‚¹11.0 LPA",
+      "highestPackage": "â‚¹62.0 LPA"
+    },
+    "dteCode": "3012"
   },
   {
     "id": "spjimr-mum",
@@ -576,9 +602,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹33.0 LPA",
-      "medianPackage": "₹31.5 LPA",
-      "highestPackage": "₹81.0 LPA"
+      "averagePackage": "â‚¹33.0 LPA",
+      "medianPackage": "â‚¹31.5 LPA",
+      "highestPackage": "â‚¹81.0 LPA"
     }
   },
   {
@@ -650,9 +676,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹11.8 LPA",
-      "medianPackage": "₹9.5 LPA",
-      "highestPackage": "₹35.0 LPA"
+      "averagePackage": "â‚¹11.8 LPA",
+      "medianPackage": "â‚¹9.5 LPA",
+      "highestPackage": "â‚¹35.0 LPA"
     }
   },
   {
@@ -703,6 +729,22 @@
         "exams": [
           "seed"
         ]
+      },
+      {
+        "name": "BCA (SICSR)",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "set"
+        ]
+      },
+      {
+        "name": "MCA (SICSR)",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "mah-mca-cet"
+        ]
       }
     ],
     "pastCutoffs": [
@@ -710,6 +752,16 @@
         "examId": "snap",
         "year": "2023",
         "cutoff": "98.5+ percentile (SIBM Pune)"
+      },
+      {
+        "examId": "set",
+        "year": "2023",
+        "cutoff": "General: 85+ (SICSR BCA)"
+      },
+      {
+        "examId": "mah-mca-cet",
+        "year": "2023",
+        "cutoff": "95+ percentile (SICSR MCA)"
       }
     ],
     "topRecruiters": [
@@ -731,9 +783,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹10.5 LPA",
-      "medianPackage": "₹8.5 LPA",
-      "highestPackage": "₹28.0 LPA"
+      "averagePackage": "â‚¹10.5 LPA",
+      "medianPackage": "â‚¹8.5 LPA",
+      "highestPackage": "â‚¹28.0 LPA"
     }
   },
   {
@@ -814,9 +866,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -884,9 +936,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -971,9 +1023,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1045,9 +1097,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1136,9 +1188,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1197,9 +1249,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1268,9 +1320,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1338,9 +1390,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1407,9 +1459,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1495,9 +1547,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1566,9 +1618,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1627,7 +1679,14 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "99.5+ percentile (CE)"
+        "cutoff": "CSE: 99.85 | EnTC: 99.15",
+        "source": "CAP Round 1"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~99.5 percentile",
+        "source": "Official"
       }
     ],
     "topRecruiters": [
@@ -1647,21 +1706,23 @@
       "ownership": "Private / Autonomous",
       "establishedYear": "2005",
       "district": "Mumbai Suburban",
-      "sourceType": "official"
+      "sourceType": "official",
+      "dteMappingSource": "automated_search_match"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
-    }
+    },
+    "dteCode": "3215"
   },
   {
     "id": "pict-pune",
     "name": "Pune Institute of Computer Technology",
     "shortName": "PICT",
     "location": "Dhankawadi, Pune, Maharashtra",
-    "rankingTier": "Tier 2",
+    "rankingTier": "Tier 1.5",
     "overview": "Known specifically for Computer Science and IT, PICT is one of the most sought-after colleges in Pune.",
     "campus": "Dhankawadi, Pune",
     "officialUrl": "https://pict.edu",
@@ -1702,7 +1763,14 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "99.6+ percentile (CE)"
+        "cutoff": "CSE: 99.70 | IT: 99.55 | EnTC: 99.10",
+        "source": "CAP Round 1"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~99.4 percentile",
+        "source": "Official"
       }
     ],
     "topRecruiters": [
@@ -1722,14 +1790,16 @@
       "ownership": "Private",
       "establishedYear": "1983",
       "district": "Pune",
-      "sourceType": "official"
+      "sourceType": "official",
+      "dteMappingSource": "automated_search_match"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
-    }
+    },
+    "dteCode": "6271"
   },
   {
     "id": "vit-pune",
@@ -1768,13 +1838,13 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 99.37 | IT: 99.10 | EnTC: 98.50",
+        "source": "CAP Round 1"
       },
       {
         "examId": "jee-main",
         "year": "2024",
-        "cutoff": "Check official website",
+        "cutoff": "CSE: ~98.8 percentile",
         "source": "Official"
       }
     ],
@@ -1794,14 +1864,16 @@
       "ownership": "Private / Autonomous",
       "establishedYear": "1983",
       "district": "Pune",
-      "sourceType": "official"
+      "sourceType": "official",
+      "dteMappingSource": "automated_search_match"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
-    }
+    },
+    "dteCode": "6273"
   },
   {
     "id": "walchand-sangli",
@@ -1813,8 +1885,7 @@
     "campus": "Vishrambag, Sangli",
     "officialUrl": "http://www.walchandsangli.ac.in",
     "acceptedExams": [
-      "mht-cet",
-      "jee-main"
+      "mht-cet"
     ],
     "courses": [
       {
@@ -1838,14 +1909,8 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
-      },
-      {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 99.37 | IT: 99.10 | EnTC: 98.10",
+        "source": "CAP Round 1"
       }
     ],
     "topRecruiters": [
@@ -1864,14 +1929,16 @@
       "ownership": "Government Aided / Autonomous",
       "establishedYear": "1947",
       "district": "Sangli",
-      "sourceType": "official"
+      "sourceType": "official",
+      "dteMappingSource": "automated_search_match"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
-    }
+    },
+    "dteCode": "6007"
   },
   {
     "id": "mumbai-university",
@@ -1954,9 +2021,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2033,9 +2100,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -2098,9 +2165,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2165,9 +2232,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -2244,9 +2311,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2312,9 +2379,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2410,9 +2477,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2495,9 +2562,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2576,9 +2643,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2643,9 +2710,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2730,9 +2797,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2800,9 +2867,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -2872,9 +2939,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2934,9 +3001,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3020,9 +3087,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3097,9 +3164,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3156,9 +3223,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -3207,9 +3274,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3259,9 +3326,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3341,9 +3408,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3409,9 +3476,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3493,9 +3560,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3567,9 +3634,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3652,9 +3719,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3737,9 +3804,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3810,9 +3877,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3887,9 +3954,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -3970,9 +4037,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4036,9 +4103,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4120,9 +4187,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4186,9 +4253,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4269,9 +4336,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4335,9 +4402,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4400,9 +4467,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4466,9 +4533,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4544,9 +4611,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4627,9 +4694,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -4695,9 +4762,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4780,9 +4847,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4856,9 +4923,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4930,9 +4997,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5007,9 +5074,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5092,9 +5159,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5178,9 +5245,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5253,9 +5320,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5320,9 +5387,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5385,9 +5452,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -5469,9 +5536,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5535,9 +5602,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5620,9 +5687,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5703,9 +5770,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5788,9 +5855,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5863,9 +5930,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5939,9 +6006,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6025,9 +6092,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6109,9 +6176,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6195,9 +6262,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -6280,9 +6347,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6348,9 +6415,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6431,9 +6498,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6516,9 +6583,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6601,9 +6668,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6687,9 +6754,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6764,9 +6831,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6837,9 +6904,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6912,9 +6979,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6980,9 +7047,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -7056,9 +7123,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7137,9 +7204,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7202,9 +7269,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7269,9 +7336,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7352,9 +7419,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7437,9 +7504,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7503,9 +7570,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7570,9 +7637,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7647,9 +7714,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7715,9 +7782,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -7792,9 +7859,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7877,9 +7944,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7963,9 +8030,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8046,9 +8113,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8114,9 +8181,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8181,9 +8248,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8255,9 +8322,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8339,9 +8406,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8422,9 +8489,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8488,9 +8555,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -8562,9 +8629,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8644,9 +8711,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8709,9 +8776,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8776,9 +8843,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8860,9 +8927,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8943,9 +9010,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9009,9 +9076,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9084,9 +9151,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9169,9 +9236,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9252,9 +9319,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -9330,9 +9397,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9396,9 +9463,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9479,9 +9546,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9554,9 +9621,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9620,9 +9687,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9706,9 +9773,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9774,9 +9841,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9850,9 +9917,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9926,9 +9993,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -10009,9 +10076,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -10092,9 +10159,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -10158,9 +10225,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -10240,9 +10307,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -10306,9 +10373,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -10380,9 +10447,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -10456,9 +10523,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -10532,9 +10599,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -10617,9 +10684,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -10685,9 +10752,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -10760,9 +10827,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -10842,9 +10909,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -10925,9 +10992,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -11002,7 +11069,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11013,9 +11080,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -11090,7 +11157,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11101,9 +11168,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -11178,7 +11245,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11189,9 +11256,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -11200,7 +11267,7 @@
     "name": "College of Engineering Pune",
     "shortName": "College of Engineering Pune",
     "location": "Pune, Pune District, Maharashtra",
-    "rankingTier": "Tier 2",
+    "rankingTier": "Tier 1",
     "overview": "NIRF Ranked Engineering Institute",
     "campus": "Pune",
     "officialUrl": "",
@@ -11243,10 +11310,10 @@
     ],
     "pastCutoffs": [
       {
-        "examId": "jee-main",
+        "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 99.92 | EnTC: 99.80",
+        "source": "CAP Round 1"
       }
     ],
     "topRecruiters": [
@@ -11263,7 +11330,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11274,9 +11341,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11285,7 +11352,7 @@
     "name": "Veermata Jijabai Technological Institute",
     "shortName": "Veermata Jijabai Technological Institute",
     "location": "Mumbai, Mumbai District, Maharashtra",
-    "rankingTier": "Tier 2",
+    "rankingTier": "Tier 1",
     "overview": "NIRF Ranked Engineering Institute",
     "campus": "Mumbai",
     "officialUrl": "",
@@ -11328,10 +11395,10 @@
     ],
     "pastCutoffs": [
       {
-        "examId": "jee-main",
+        "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 99.96 | IT: 99.91",
+        "source": "CAP Round 1"
       }
     ],
     "topRecruiters": [
@@ -11348,7 +11415,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11359,9 +11426,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11433,7 +11500,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11444,9 +11511,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11518,7 +11585,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11529,9 +11596,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11603,7 +11670,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11614,9 +11681,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11664,7 +11731,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11674,9 +11741,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11685,7 +11752,7 @@
     "name": "Pune Institute of Computer Technology",
     "shortName": "Pune Institute of Computer Technology",
     "location": "Pune, Pune District, Maharashtra",
-    "rankingTier": "Tier 2",
+    "rankingTier": "Tier 1.5",
     "overview": "Engineering college in Pune, Maharashtra",
     "campus": "Pune",
     "officialUrl": "",
@@ -11706,8 +11773,8 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 99.70 | IT: 99.55",
+        "source": "CAP Round 1"
       }
     ],
     "topRecruiters": [
@@ -11724,7 +11791,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11734,9 +11801,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11766,8 +11833,8 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 99.37 | IT: 99.10",
+        "source": "CAP Round 1"
       }
     ],
     "topRecruiters": [
@@ -11784,7 +11851,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11794,9 +11861,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11844,7 +11911,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11854,9 +11921,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11904,7 +11971,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11914,9 +11981,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -11964,7 +12031,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -11974,9 +12041,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12024,7 +12091,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12034,9 +12101,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12087,7 +12154,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12097,9 +12164,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -12113,7 +12180,8 @@
     "campus": "Mumbai",
     "officialUrl": "",
     "acceptedExams": [
-      "mht-cet"
+      "mht-cet",
+      "jee-main"
     ],
     "courses": [
       {
@@ -12129,8 +12197,8 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 96.24 | IT: 95.50 | AI-DS: 94.80",
+        "source": "CAP Round 1"
       }
     ],
     "topRecruiters": [
@@ -12147,7 +12215,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12157,9 +12225,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12173,7 +12241,8 @@
     "campus": "Mumbai",
     "officialUrl": "",
     "acceptedExams": [
-      "mht-cet"
+      "mht-cet",
+      "jee-main"
     ],
     "courses": [
       {
@@ -12189,7 +12258,13 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
+        "cutoff": "CSE: 96.34 | AI-DS: 94.50 | ECS: 91.20",
+        "source": "CAP Round 1"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~95.32 percentile",
         "source": "Official"
       }
     ],
@@ -12207,7 +12282,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12217,9 +12292,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12267,7 +12342,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12277,9 +12352,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12327,7 +12402,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12337,9 +12412,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12387,7 +12462,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12397,9 +12472,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12447,7 +12522,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12457,9 +12532,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12507,7 +12582,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12517,9 +12592,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12567,7 +12642,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12577,9 +12652,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12627,7 +12702,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12637,9 +12712,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12687,7 +12762,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12697,9 +12772,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12747,7 +12822,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12757,9 +12832,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12773,7 +12848,8 @@
     "campus": "Navi Mumbai",
     "officialUrl": "",
     "acceptedExams": [
-      "mht-cet"
+      "mht-cet",
+      "jee-main"
     ],
     "courses": [
       {
@@ -12789,8 +12865,8 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 95.07 | IT: 93.50",
+        "source": "CAP Round 1"
       }
     ],
     "topRecruiters": [
@@ -12807,7 +12883,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12817,9 +12893,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12867,7 +12943,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12877,9 +12953,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12927,7 +13003,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12937,9 +13013,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -12987,7 +13063,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -12997,9 +13073,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13047,7 +13123,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13057,9 +13133,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13107,7 +13183,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13117,9 +13193,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13167,7 +13243,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13177,9 +13253,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13227,7 +13303,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13237,9 +13313,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13287,7 +13363,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13297,9 +13373,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13347,7 +13423,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13357,9 +13433,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13407,7 +13483,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13417,9 +13493,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13433,7 +13509,8 @@
     "campus": "Pune",
     "officialUrl": "",
     "acceptedExams": [
-      "mht-cet"
+      "mht-cet",
+      "jee-main"
     ],
     "courses": [
       {
@@ -13449,8 +13526,8 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 95.36 | IT: 94.80 | AI-DS: 93.50",
+        "source": "CAP Round 2"
       }
     ],
     "topRecruiters": [
@@ -13467,7 +13544,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13477,9 +13554,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13527,7 +13604,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13537,9 +13614,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13587,7 +13664,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13597,9 +13674,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13647,7 +13724,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13657,9 +13734,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13707,7 +13784,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13717,9 +13794,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13767,7 +13844,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13777,9 +13854,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13827,7 +13904,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13837,9 +13914,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13887,7 +13964,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13897,9 +13974,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -13947,7 +14024,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -13957,9 +14034,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14007,7 +14084,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14017,9 +14094,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14067,7 +14144,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14077,9 +14154,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14127,7 +14204,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14137,9 +14214,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14187,7 +14264,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14197,9 +14274,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14247,7 +14324,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14257,9 +14334,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14307,7 +14384,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14317,9 +14394,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14367,7 +14444,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14377,9 +14454,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14427,7 +14504,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14437,9 +14514,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14487,7 +14564,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14497,9 +14574,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14547,7 +14624,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14557,9 +14634,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14607,7 +14684,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14617,9 +14694,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14667,7 +14744,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14677,9 +14754,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14727,7 +14804,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14737,9 +14814,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14787,7 +14864,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14797,9 +14874,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14847,7 +14924,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14857,9 +14934,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -14910,7 +14987,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14920,9 +14997,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -14931,7 +15008,7 @@
     "name": "Sardar Patel Institute of Technology",
     "shortName": "Sardar Patel Institute of Technology",
     "location": "Mumbai, Mumbai District, Maharashtra",
-    "rankingTier": "Tier 2",
+    "rankingTier": "Tier 1",
     "overview": "Engineering college in Mumbai, Maharashtra",
     "campus": "Mumbai",
     "officialUrl": "",
@@ -14952,8 +15029,8 @@
       {
         "examId": "mht-cet",
         "year": "2024",
-        "cutoff": "Check official website",
-        "source": "Official"
+        "cutoff": "CSE: 99.85 | EnTC: 99.15",
+        "source": "CAP Round 1"
       }
     ],
     "topRecruiters": [
@@ -14970,7 +15047,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -14980,9 +15057,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15030,7 +15107,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15040,9 +15117,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15090,7 +15167,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15100,9 +15177,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15150,7 +15227,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15160,9 +15237,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15210,7 +15287,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15220,9 +15297,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15270,7 +15347,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15280,9 +15357,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15330,7 +15407,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15340,9 +15417,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15390,7 +15467,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15400,9 +15477,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15450,7 +15527,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15460,9 +15537,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15510,7 +15587,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15520,9 +15597,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15570,7 +15647,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15580,9 +15657,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15630,7 +15707,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15640,9 +15717,9 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -15690,7 +15767,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -15700,10 +15777,323 @@
       "sourceName": "State Admission Committee"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "symbiosis-nagpur",
+    "name": "Symbiosis International University, Nagpur",
+    "shortName": "SIU Nagpur",
+    "location": "Wathoda, Nagpur, Maharashtra",
+    "rankingTier": "Tier 1",
+    "overview": "Nagpur campus of Symbiosis International (Deemed University), housing SCMS, SLS, and SIT campuses.",
+    "campus": "Wathoda",
+    "officialUrl": "https://siunagpur.edu.in",
+    "acceptedExams": [
+      "set",
+      "slat",
+      "siteee",
+      "mah-mca-cet"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (SIT Nagpur)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "siteee",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "BBA (SCMS Nagpur)",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "set"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "mah-mca-cet"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "set",
+        "year": "2023",
+        "cutoff": "General: 75+ marks"
+      }
+    ],
+    "topRecruiters": [
+      "Accenture",
+      "TCS",
+      "Infosys"
+    ],
+    "tuition": "High-tier Private",
+    "sources": [
+      "https://siunagpur.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University",
+      "establishedYear": "2019",
+      "district": "Nagpur",
+      "naacGrade": "A++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹7.5 LPA",
+      "medianPackage": "₹6.0 LPA",
+      "highestPackage": "₹15.0 LPA"
+    }
+  },
+  {
+    "id": "rcoem-nagpur",
+    "name": "Ramdeobaba College of Engineering and Management (RCOEM)",
+    "shortName": "RCOEM",
+    "location": "Katol Road, Nagpur, Maharashtra",
+    "rankingTier": "Tier 2",
+    "type": "Private (Autonomous)",
+    "overview": "Nagpur's most sought-after private engineering college, known for excellent placements and academic rigor.",
+    "officialUrl": "http://www.rknec.edu",
+    "acceptedExams": [
+      "mht-cet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. CSE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "mht-cet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.E. AI & ML",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "mht-cet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "mht-cet",
+        "year": "2023",
+        "cutoff": "CSE: ~98.07%ile (4769 Rank) | AI: ~97.5%ile",
+        "source": "MHT CET 2023"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2023",
+        "cutoff": "CSE: ~3500 (AI Rank)",
+        "source": "JoSAA 2023"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "djsce-mumbai",
+    "name": "Dwarkadas J. Sanghvi College of Engineering",
+    "shortName": "DJSCE",
+    "location": "Vile Parle West, Mumbai, Maharashtra",
+    "rankingTier": "Tier 2",
+    "type": "Private (Autonomous)",
+    "overview": "A premier engineering institute in Mumbai, favored by top rankers for its strong industry connections.",
+    "officialUrl": "https://www.djsce.ac.in",
+    "acceptedExams": [
+      "mht-cet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. Computer Engineering",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "mht-cet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.E. IT",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "mht-cet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "mht-cet",
+        "year": "2024",
+        "cutoff": "CE: ~98.74%ile | IT: ~98.2%ile",
+        "source": "MHT CET 2024"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CE: ~1357 (AI Rank)",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "ycce-nagpur",
+    "name": "Yeshwantrao Chavan College of Engineering",
+    "shortName": "YCCE",
+    "location": "Hingna Road, Nagpur, Maharashtra",
+    "rankingTier": "Tier 2",
+    "type": "Private (Autonomous)",
+    "overview": "Nagpur's first private autonomous engineering college, known for its massive alumni base and campus.",
+    "officialUrl": "https://www.ycce.edu",
+    "acceptedExams": [
+      "mht-cet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. CSE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "mht-cet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.E. IT",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "mht-cet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.E. CTech",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "mht-cet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "mht-cet",
+        "year": "2024",
+        "cutoff": "CSE: ~95.03%ile | IT: ~92.66%ile",
+        "source": "MHT CET 2024"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~7000 (AI Rank)",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "kkwagh-nashik",
+    "name": "K. K. Wagh Institute of Engineering Education and Research",
+    "shortName": "KK Wagh",
+    "location": "Panchavati, Nashik, Maharashtra",
+    "rankingTier": "Tier 2.5",
+    "type": "Private (Autonomous)",
+    "overview": "The top engineering institute in Nashik, offering excellent ROI and consistent TCS/Infosys placements.",
+    "officialUrl": "https://engg.kkwagh.edu.in",
+    "acceptedExams": [
+      "mht-cet",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. Computer Engineering",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "mht-cet",
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.E. IT",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "mht-cet",
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "mht-cet",
+        "year": "2024",
+        "cutoff": "CE: ~92.46%ile - 96%ile",
+        "source": "MHT CET 2024"
+      },
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CE: ~15,000 (AI Rank)",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "iim-nagpur",
+    "name": "Indian Institute of Management Nagpur",
+    "shortName": "IIM Nagpur",
+    "location": "Nagpur, Maharashtra",
+    "rating": 4.3,
+    "ranking": "Tier 2",
+    "rankingTier": "Tier 1",
+    "type": "IIM",
+    "ownership": "Public",
+    "approvedBy": "UGC",
+    "establishedYear": 2015,
+    "campus": "135 Acres",
+    "tuition": "₹ 16 Lakhs",
+    "acceptedExams": [
+      "CAT"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "duration": "2 Years"
+      }
+    ],
+    "placements": {
+      "averagePackage": "₹ 15 LPA",
+      "highestPackage": "₹ 25 LPA"
     }
   }
 ]

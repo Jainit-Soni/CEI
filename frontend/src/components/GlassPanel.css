@@ -1,11 +1,107 @@
 ﻿.glass-panel {
   position: relative;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-l);
-  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.7);
+  /* Lighter, more opaque base */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.2);
+  border-right: 1px solid rgba(200, 200, 200, 0.2);
+  border-radius: var(--radius-xl, 24px);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.02),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  /* Inner highlight */
   overflow: hidden;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Subtle Grain - reduced opacity */
+.glass-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+}
+
+.glass-panel--strong {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 20px 40px -12px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel--subtle {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+}
+
+.glass-panel--dark {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Glow effect on hover */
+.glass-panel--glow:hover {
+  box-shadow:
+    0 25px 50px -12px rgba(60, 100, 255, 0.15),
+    0 0 0 1px rgba(95, 140, 255, 0.3);
+  transform: translateY(-4px);
+  border-color: rgba(95, 140, 255, 0.3);
+}
+
+/* Shimmer Effect */
+.glass-panel-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg,
+      transparent 35%,
+      rgba(255, 255, 255, 0.08) 45%,
+      rgba(255, 255, 255, 0.12) 50%,
+      rgba(255, 255, 255, 0.08) 55%,
+      transparent 65%);
+  width: 200%;
+  transform: translateX(-100%);
+  animation: panelShimmer 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes panelShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  20% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Interactive Panel Hover States */
+.glass-panel[role="button"]:hover,
+a.glass-panel:hover,
+button.glass-panel:hover {
+  transform: translateY(-3px) scale(1.005);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.glass-panel[role="button"]:active,
+a.glass-panel:active,
+button.glass-panel:active {
+  transform: translateY(-1px) scale(1);
 }
 
 .glass-panel--strong {

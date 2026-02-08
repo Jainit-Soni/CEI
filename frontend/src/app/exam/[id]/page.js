@@ -1,8 +1,8 @@
 ﻿import "./page.css";
 import ExamDetailClient from "./ExamDetailClient";
 
-import JsonLd from "../../components/JsonLd";
-import { getExam } from "../../lib/api";
+import JsonLd from "@/components/JsonLd";
+import { getExam } from "@/lib/api";
 
 // Enable dynamic params for exams not in static list
 export const dynamicParams = true;
@@ -43,7 +43,8 @@ export default async function ExamDetail({ params }) {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <ExamDetailClient id={params.id} />
+      <JsonLd data={jsonLd} />
+      <ExamDetailClient id={params.id} initialData={exam} />
     </>
   );
 }

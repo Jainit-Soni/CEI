@@ -2065,5 +2065,40 @@
       "highestPackage": "₹20-30 LPA",
       "placementRate": "70-85%"
     }
+  },
+  {
+    "id": "techno-india-university",
+    "name": "Techno India University",
+    "shortName": "Techno India",
+    "location": "Salt Lake, Kolkata, West Bengal",
+    "rankingTier": "Tier 2",
+    "type": "Private",
+    "overview": "A leading private university in WB, part of the massive Techno India Group. Known for modern infrastructure.",
+    "officialUrl": "https://www.technoindiauniversity.ac.in",
+    "acceptedExams": [
+      "wbjee",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "wbjee"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "wbjee",
+        "year": "2024",
+        "cutoff": "CSE: ~39661",
+        "source": "WBJEE 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
   }
 ]

@@ -1,0 +1,46 @@
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #ecfdf5;
+    color: #059669;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #d1fae5;
+    cursor: help;
+    position: relative;
+}
+
+.trust-badge svg {
+    width: 12px;
+    height: 12px;
+}
+
+.trust-badge:hover .trust-tooltip {
+    display: block;
+}
+
+.trust-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f2937;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    margin-bottom: 6px;
+    z-index: 10;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.trust-badge.unverified {
+    background: #f3f4f6;
+    color: #6b7280;
+    border-color: #e5e7eb;
+}

@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "jee-main",
     "name": "Joint Entrance Examination (Main)",
@@ -418,11 +418,11 @@
     ],
     "officialUrl": "https://cetonline.karnataka.gov.in/kea/",
     "collegesAccepting": [
-      "rvce-bengaluru",
-      "bmsce-bengaluru",
-      "msrit-bengaluru",
+      "rv-college-of-engineering",
+      "bms-college-of-engineering",
+      "ms-ramaiah-institute-of-technology",
       "pes-university",
-      "uvce-bengaluru"
+      "university-visvesvaraya-college-of-engineering"
     ]
   },
   {
@@ -1601,6 +1601,103 @@
     "officialUrl": "https://mitid.edu.in",
     "collegesAccepting": [
       "vit-pune"
+    ]
+  },
+  {
+    "id": "nimcet",
+    "name": "NIT MCA Common Entrance Test",
+    "shortName": "NIMCET",
+    "type": "Management/IT PG",
+    "conductingBody": "National Institute of Technology (Rotational)",
+    "courses": [
+      "MCA"
+    ],
+    "pattern": [
+      "Mathematics (50 Q)",
+      "Analytical Ability & Logical Reasoning (40 Q)",
+      "Computer Awareness (10 Q)",
+      "General English (20 Q)"
+    ],
+    "totalMarks": "1000",
+    "eligibility": "B.Sc/B.Sc(Hons)/BCA/BIT/B.Voc with 60% marks (55% for SC/ST)",
+    "dates": {
+      "registration": "March-April 2026",
+      "examWindow": "June 2026",
+      "result": "July 2026"
+    },
+    "officialUrl": "https://www.nimcet.in",
+    "collegesAccepting": [
+      "nit-trichy",
+      "nit-karnataka-surathkal",
+      "nit-warangal",
+      "nit-allahabad",
+      "nit-bhopal",
+      "nit-kurukshetra",
+      "nit-jamshedpur",
+      "nit-raipur"
+    ]
+  },
+  {
+    "id": "mah-mca-cet",
+    "name": "Maharashtra MCA Common Entrance Test",
+    "shortName": "MAH MCA CET",
+    "type": "Management/IT PG",
+    "conductingBody": "State Common Entrance Test Cell, Maharashtra",
+    "courses": [
+      "MCA"
+    ],
+    "pattern": [
+      "Mathematics & Statistics (30 Q)",
+      "Logical/Abstract Reasoning (30 Q)",
+      "English comprehension & verbal ability (20 Q)",
+      "Computer Concepts (20 Q)"
+    ],
+    "totalMarks": "200",
+    "eligibility": "Passed B.C.A/ B.Sc. (Computer Science)/ B.Sc. (IT)/ B.E. (CSE)/ B.Tech. (CSE) or equivalent Degree",
+    "dates": {
+      "registration": "Feb-March 2026",
+      "examWindow": "March 2026",
+      "result": "April 2026"
+    },
+    "officialUrl": "https://cetcell.mahacet.org",
+    "collegesAccepting": [
+      "veermata-jijabai-technological-institute-vjti-mumbai",
+      "sardar-patel-institute-of-technology-mumbai",
+      "department-of-management-sciences-pumba-pune",
+      "symbiosis-pune"
+    ]
+  },
+  {
+    "id": "set",
+    "name": "Symbiosis Entrance Test",
+    "shortName": "SET",
+    "type": "UG Entrance",
+    "conductingBody": "Symbiosis International (Deemed University)",
+    "courses": [
+      "BCA",
+      "BBA",
+      "B.Sc (CS)",
+      "B.A (Liberal Arts)"
+    ],
+    "pattern": [
+      "General English (16 Q)",
+      "Quantitative (16 Q)",
+      "General Awareness (16 Q)",
+      "Analytical & Logical Reasoning (12 Q)"
+    ],
+    "totalMarks": "60",
+    "eligibility": "12th Standard or equivalent with 50% marks",
+    "dates": {
+      "registration": "Jan-April 2026",
+      "examWindow": "May 2026",
+      "result": "May 2026"
+    },
+    "officialUrl": "https://www.set-test.org",
+    "collegesAccepting": [
+      "symbiosis-pune",
+      "symbiosis-noida",
+      "symbiosis-nagpur",
+      "symbiosis-bengaluru"
     ]
   }
 ]

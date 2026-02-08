@@ -1,4 +1,11 @@
 const nextConfig = {
+    webpack: (config, { isServer }) => {
+        config.ignoreWarnings = [
+            { module: /node_modules\/@opentelemetry\/instrumentation/ },
+            { module: /node_modules\/@prisma\/instrumentation/ }
+        ];
+        return config;
+    },
     images: {
         domains: ['localhost'],
         remotePatterns: [
@@ -39,7 +46,11 @@ const nextConfig = {
                     },
                     {
                         key: 'Content-Security-Policy',
-                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com https://*.sentry.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' blob: data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.sentry.io https://vitals.vercel-insights.com https://frontend-blond-nu-51.vercel.app http://localhost:4000;"
+                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com https://*.sentry.io https://apis.google.com https://www.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' blob: data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.sentry.io https://vitals.vercel-insights.com https://frontend-blond-nu-51.vercel.app http://localhost:4000 https://www.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://*.firebaseio.com https://*.googleapis.com; frame-src 'self' https://accounts.google.com https://content.googleapis.com https://*.firebaseapp.com https://*.firebasejs.com;"
+                    },
+                    {
+                        key: 'Cross-Origin-Opener-Policy',
+                        value: 'same-origin-allow-popups'
                     }
                 ]
             }

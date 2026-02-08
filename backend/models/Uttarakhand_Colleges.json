@@ -137,71 +137,6 @@
     }
   },
   {
-    "id": "nit-uttarakhand",
-    "name": "National Institute of Technology Uttarakhand",
-    "shortName": "NIT Uttarakhand",
-    "location": "Srinagar, Pauri Garhwal, Uttarakhand",
-    "rankingTier": "Tier 1",
-    "overview": "An Institute of National Importance situated in the scenic Garhwal hills. It offers undergraduate, postgraduate, and doctoral programs in engineering.",
-    "campus": "Srinagar (Temporary) / Sumari (Permanent)",
-    "officialUrl": "https://nituk.ac.in",
-    "acceptedExams": [
-      "jee-main",
-      "gate"
-    ],
-    "courses": [
-      {
-        "name": "B.Tech",
-        "degree": "B.Tech",
-        "duration": "4 years",
-        "exams": [
-          "jee-main"
-        ]
-      },
-      {
-        "name": "M.Tech",
-        "degree": "M.Tech",
-        "duration": "2 years",
-        "exams": [
-          "gate"
-        ]
-      }
-    ],
-    "pastCutoffs": [
-      {
-        "examId": "jee-main",
-        "year": "2024",
-        "cutoff": "CSE ~25000 Rank (OS Quota)"
-      }
-    ],
-    "topRecruiters": [
-      "Adobe",
-      "Samsung",
-      "L&T",
-      "Capgemini"
-    ],
-    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
-    "sources": [
-      "https://nituk.ac.in"
-    ],
-    "meta": {
-      "sourceType": [
-        "official"
-      ],
-      "affiliations": [],
-      "ownership": "Central Govt / INI",
-      "establishedYear": "2010",
-      "district": "Pauri Garhwal",
-      "naacGrade": "NA"
-    },
-    "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
-      "placementRate": "85-95%"
-    }
-  },
-  {
     "id": "gb-pant-university-agriculture-technology",
     "name": "Govind Ballabh Pant University of Agriculture and Technology",
     "shortName": "GBPUAT",
@@ -1778,6 +1713,34 @@
       "medianPackage": "₹5-9 LPA",
       "highestPackage": "₹20-30 LPA",
       "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "iim-kashipur",
+    "name": "Indian Institute of Management Kashipur",
+    "shortName": "IIM Kashipur",
+    "location": "Kashipur, Uttarakhand",
+    "rating": 4.4,
+    "ranking": "Tier 1",
+    "rankingTier": "Tier 1",
+    "type": "IIM",
+    "ownership": "Public",
+    "approvedBy": "UGC",
+    "establishedYear": 2011,
+    "campus": "200 Acres",
+    "tuition": "₹ 15 Lakhs",
+    "acceptedExams": [
+      "CAT"
+    ],
+    "courses": [
+      {
+        "name": "MBA",
+        "duration": "2 Years"
+      }
+    ],
+    "placements": {
+      "averagePackage": "₹ 16 LPA",
+      "highestPackage": "₹ 28 LPA"
     }
   }
 ]

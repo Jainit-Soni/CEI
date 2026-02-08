@@ -59,7 +59,7 @@
       "Rolls Royce",
       "ISRO"
     ],
-    "tuition": "₹30,000 per annum (Approx)",
+    "tuition": "â‚¹30,000 per annum (Approx)",
     "sources": [
       "https://iisc.ac.in",
       "https://nirfindia.org"
@@ -78,9 +78,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -131,7 +131,7 @@
       "Amazon",
       "Goldman Sachs"
     ],
-    "tuition": "₹24,50,000 (Approx Total)",
+    "tuition": "â‚¹24,50,000 (Approx Total)",
     "sources": [
       "https://www.iimb.ac.in"
     ],
@@ -146,9 +146,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹35.92 LPA",
-      "medianPackage": "₹32.50 LPA",
-      "highestPackage": "₹1.40 CPA"
+      "averagePackage": "â‚¹35.92 LPA",
+      "medianPackage": "â‚¹32.50 LPA",
+      "highestPackage": "â‚¹1.40 CPA"
     }
   },
   {
@@ -199,7 +199,7 @@
       "DE Shaw",
       "Texas Instruments"
     ],
-    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "tuition": "â‚¹1,25,000 per semester (Income based waivers apply)",
     "sources": [
       "https://www.nitk.ac.in"
     ],
@@ -214,9 +214,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹16.25 LPA",
-      "medianPackage": "₹14.21 LPA",
-      "highestPackage": "₹55.0 LPA"
+      "averagePackage": "â‚¹16.25 LPA",
+      "medianPackage": "â‚¹14.21 LPA",
+      "highestPackage": "â‚¹55.0 LPA"
     }
   },
   {
@@ -276,9 +276,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -325,7 +325,7 @@
       "AZB & Partners",
       "Clifford Chance"
     ],
-    "tuition": "₹3,20,000 per annum (Approx)",
+    "tuition": "â‚¹3,20,000 per annum (Approx)",
     "sources": [
       "https://www.nls.ac.in"
     ],
@@ -342,9 +342,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -392,7 +392,7 @@
       "Apple",
       "Amazon"
     ],
-    "tuition": "₹22,00,000 (5 years approx)",
+    "tuition": "â‚¹22,00,000 (5 years approx)",
     "sources": [
       "https://www.iiitb.ac.in"
     ],
@@ -409,9 +409,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -444,6 +444,24 @@
         "duration": "4 years",
         "exams": [
           "met"
+        ]
+      },
+      {
+        "name": "BCA (Manipal)",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "met",
+          "merit"
+        ]
+      },
+      {
+        "name": "MCA (Manipal)",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "met",
+          "nimcet"
         ]
       }
     ],
@@ -484,9 +502,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹12.59 LPA",
-      "medianPackage": "₹8.5 LPA",
-      "highestPackage": "₹54.75 LPA"
+      "averagePackage": "â‚¹12.59 LPA",
+      "medianPackage": "â‚¹8.5 LPA",
+      "highestPackage": "â‚¹54.75 LPA"
     }
   },
   {
@@ -561,9 +579,9 @@
       "naacGrade": "B++"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -623,9 +641,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹15.3 LPA",
-      "medianPackage": "₹12.5 LPA",
-      "highestPackage": "₹62.0 LPA"
+      "averagePackage": "â‚¹15.3 LPA",
+      "medianPackage": "â‚¹12.5 LPA",
+      "highestPackage": "â‚¹62.0 LPA"
     }
   },
   {
@@ -689,9 +707,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹11.5 LPA",
-      "medianPackage": "₹8.5 LPA",
-      "highestPackage": "₹50.0 LPA"
+      "averagePackage": "â‚¹11.5 LPA",
+      "medianPackage": "â‚¹8.5 LPA",
+      "highestPackage": "â‚¹50.0 LPA"
     }
   },
   {
@@ -755,9 +773,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹10.8 LPA",
-      "medianPackage": "₹7.6 LPA",
-      "highestPackage": "₹50.0 LPA"
+      "averagePackage": "â‚¹10.8 LPA",
+      "medianPackage": "â‚¹7.6 LPA",
+      "highestPackage": "â‚¹50.0 LPA"
     }
   },
   {
@@ -836,9 +854,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -910,9 +928,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -977,9 +995,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1054,9 +1072,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1133,9 +1151,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1211,9 +1229,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1289,9 +1307,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1356,9 +1374,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1422,9 +1440,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1489,9 +1507,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1563,9 +1581,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1637,9 +1655,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1712,9 +1730,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1784,9 +1802,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1850,9 +1868,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1926,9 +1944,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1992,9 +2010,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -2067,9 +2085,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2132,9 +2150,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2207,9 +2225,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2297,9 +2315,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2365,9 +2383,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2444,9 +2462,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -2519,9 +2537,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -2585,9 +2603,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -2665,9 +2683,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2739,9 +2757,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2813,9 +2831,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -2882,9 +2900,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -2948,9 +2966,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -3022,9 +3040,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3094,9 +3112,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3180,9 +3198,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3260,9 +3278,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3340,9 +3358,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -3422,9 +3440,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3508,9 +3526,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3580,9 +3598,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3666,9 +3684,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3746,9 +3764,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -3817,9 +3835,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3895,9 +3913,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3966,9 +3984,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4054,9 +4072,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4143,9 +4161,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -4231,9 +4249,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4307,9 +4325,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4395,9 +4413,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4473,9 +4491,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4540,9 +4558,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -4606,9 +4624,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4690,9 +4708,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4758,9 +4776,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4828,9 +4846,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4897,9 +4915,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -4984,9 +5002,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5073,9 +5091,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5150,9 +5168,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5230,9 +5248,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5300,9 +5318,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -5366,9 +5384,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5434,9 +5452,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5509,9 +5527,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5597,9 +5615,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5673,9 +5691,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -5741,9 +5759,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5831,9 +5849,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5911,9 +5929,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5985,9 +6003,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6063,9 +6081,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -6142,9 +6160,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6220,9 +6238,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6294,9 +6312,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6360,9 +6378,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6426,9 +6444,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -6503,9 +6521,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6582,9 +6600,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6660,9 +6678,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6748,9 +6766,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6830,9 +6848,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -6914,9 +6932,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7002,9 +7020,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7082,9 +7100,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7164,9 +7182,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7255,9 +7273,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -7333,9 +7351,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7403,9 +7421,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7477,9 +7495,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7546,9 +7564,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7614,9 +7632,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -7688,9 +7706,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7771,9 +7789,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7851,9 +7869,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7917,9 +7935,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7998,9 +8016,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -8084,9 +8102,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8154,9 +8172,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8222,9 +8240,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8310,9 +8328,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8387,9 +8405,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -8457,9 +8475,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8542,9 +8560,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8619,9 +8637,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8687,9 +8705,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -8774,9 +8792,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -8860,9 +8878,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8947,9 +8965,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9023,9 +9041,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9100,9 +9118,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9179,9 +9197,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -9269,9 +9287,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9337,9 +9355,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9417,9 +9435,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9504,9 +9522,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9571,9 +9589,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -9650,9 +9668,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9717,9 +9735,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -9805,9 +9823,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9881,9 +9899,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "â‚¹3-6 LPA",
+      "medianPackage": "â‚¹3-5 LPA",
+      "highestPackage": "â‚¹8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -9973,9 +9991,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -10050,7 +10068,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -10061,9 +10079,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "â‚¹15-25 LPA",
+      "medianPackage": "â‚¹12-18 LPA",
+      "highestPackage": "â‚¹50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -10135,7 +10153,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -10146,9 +10164,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -10220,7 +10238,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -10231,9 +10249,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -10305,7 +10323,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -10316,9 +10334,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -10390,7 +10408,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "â‚¹50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -10401,9 +10419,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -10475,7 +10493,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -10486,10 +10504,317 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "â‚¹6-12 LPA",
+      "medianPackage": "â‚¹5-9 LPA",
+      "highestPackage": "â‚¹20-30 LPA",
       "placementRate": "70-85%"
+    }
+  },
+  {
+    "id": "symbiosis-bengaluru",
+    "name": "Symbiosis International University, Bengaluru",
+    "shortName": "SIU Bengaluru",
+    "location": "Electronic City Phase 1, Bengaluru, Karnataka",
+    "rankingTier": "Tier 1",
+    "overview": "Bengaluru campus of Symbiosis International (Deemed University), housing SCMS and SIBM Bengaluru campuses.",
+    "campus": "Electronic City",
+    "officialUrl": "https://sibmbengaluru.edu.in",
+    "acceptedExams": [
+      "set",
+      "snap"
+    ],
+    "courses": [
+      {
+        "name": "MBA (SIBM Bengaluru)",
+        "degree": "MBA",
+        "duration": "2 years",
+        "exams": [
+          "snap"
+        ]
+      },
+      {
+        "name": "BBA (SCMS Bengaluru)",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "set"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "snap",
+        "year": "2023",
+        "cutoff": "90+ percentile (SIBM B)"
+      }
+    ],
+    "topRecruiters": [
+      "JP Morgan",
+      "Morgan Stanley",
+      "Infosys"
+    ],
+    "tuition": "High-tier Private",
+    "sources": [
+      "https://sibmbengaluru.edu.in"
+    ],
+    "meta": {
+      "affiliations": [],
+      "ownership": "Deemed University",
+      "establishedYear": "2008",
+      "district": "Bengaluru Urban",
+      "naacGrade": "A++",
+      "sourceType": "official"
+    },
+    "placements": {
+      "averagePackage": "₹13.0 LPA",
+      "medianPackage": "₹11.0 LPA",
+      "highestPackage": "₹26.5 LPA"
+    }
+  },
+  {
+    "id": "nit-surathkal",
+    "name": "National Institute of Technology Karnataka (NITK), Surathkal",
+    "shortName": "NIT Surathkal",
+    "location": "Surathkal, Mangalore, Karnataka",
+    "rankingTier": "Tier 1",
+    "type": "Public/Government (INI)",
+    "overview": "One of the top NITs in India, located on the NH66 with a private beach. Known for placement records.",
+    "officialUrl": "https://www.nitk.ac.in",
+    "acceptedExams": [
+      "jee-main",
+      "gate",
+      "nimcet",
+      "jam"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech CSE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech IT",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "B.Tech ECE",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "jee-main",
+        "year": "2024",
+        "cutoff": "CSE: ~1920 (AI) | IT: ~3000 | ECE: ~6000",
+        "source": "JoSAA 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Public"
+    }
+  },
+  {
+    "id": "rvce-bangalore",
+    "name": "RV College of Engineering (RVCE)",
+    "shortName": "RVCE",
+    "location": "Mysore Road, Bangalore, Karnataka",
+    "rankingTier": "Tier 1",
+    "type": "Private (Autonomous)",
+    "overview": "Karnataka's top private engineering college, famous for its rigorous academics and 100% placement record.",
+    "officialUrl": "https://rvce.edu.in",
+    "acceptedExams": [
+      "kcet",
+      "comedk-uget",
+      "jee-main"
+    ],
+    "courses": [
+      {
+        "name": "B.E. CSE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "kcet",
+          "comedk-uget"
+        ]
+      },
+      {
+        "name": "B.E. ISE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "kcet",
+          "comedk-uget"
+        ]
+      },
+      {
+        "name": "B.E. ECE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "kcet",
+          "comedk-uget"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "kcet",
+        "year": "2024",
+        "cutoff": "CSE: ~419-501 | ISE: ~1200",
+        "source": "KCET 2024"
+      },
+      {
+        "examId": "comedk-uget",
+        "year": "2024",
+        "cutoff": "CSE: ~434 | ISE: ~800",
+        "source": "COMEDK 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "bit-bangalore",
+    "name": "Bangalore Institute of Technology",
+    "shortName": "BIT Bangalore",
+    "location": "KR Road, VV Puram, Bangalore",
+    "rankingTier": "Tier 2",
+    "type": "Private",
+    "overview": "Located in the heart of Bangalore, BIT is known for its consistent performance and central location.",
+    "officialUrl": "https://bit-bangalore.edu.in",
+    "acceptedExams": [
+      "kcet",
+      "comedk-uget"
+    ],
+    "courses": [
+      {
+        "name": "B.E. CSE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "kcet",
+          "comedk-uget"
+        ]
+      },
+      {
+        "name": "B.E. ISE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "kcet",
+          "comedk-uget"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "kcet",
+        "year": "2024",
+        "cutoff": "CSE: ~5540-7749 | ISE: ~10000",
+        "source": "KCET 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "nmit-bangalore",
+    "name": "Nitte Meenakshi Institute of Technology",
+    "shortName": "NMIT",
+    "location": "Yelahanka, Bangalore",
+    "rankingTier": "Tier 2.5",
+    "type": "Private (Autonomous)",
+    "overview": "A rapidly growing autonomous institute with modern infrastructure and decent placement records.",
+    "officialUrl": "https://www.nmit.ac.in",
+    "acceptedExams": [
+      "kcet",
+      "comedk-uget"
+    ],
+    "courses": [
+      {
+        "name": "B.E. CSE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "kcet",
+          "comedk-uget"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "kcet",
+        "year": "2024",
+        "cutoff": "CSE: ~9800-12200",
+        "source": "KCET 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
+    }
+  },
+  {
+    "id": "sir-mvit-bangalore",
+    "name": "Sir M. Visvesvaraya Institute of Technology",
+    "shortName": "Sir MVIT",
+    "location": "Yelahanka, Bangalore",
+    "rankingTier": "Tier 2",
+    "type": "Private",
+    "overview": "Named after the legendary Sir MV, this college is known for its lush green campus and strict academic discipline.",
+    "officialUrl": "https://www.sirmvit.edu",
+    "acceptedExams": [
+      "kcet",
+      "comedk-uget"
+    ],
+    "courses": [
+      {
+        "name": "B.E. CSE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "kcet",
+          "comedk-uget"
+        ]
+      },
+      {
+        "name": "B.E. ISE",
+        "degree": "B.E.",
+        "duration": "4 years",
+        "exams": [
+          "kcet",
+          "comedk-uget"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "kcet",
+        "year": "2024",
+        "cutoff": "CSE: ~11,277 - 13,464",
+        "source": "KCET 2024"
+      },
+      {
+        "examId": "comedk-uget",
+        "year": "2024",
+        "cutoff": "CSE: ~15,000",
+        "source": "COMEDK 2024"
+      }
+    ],
+    "meta": {
+      "ownership": "Private"
     }
   }
 ]

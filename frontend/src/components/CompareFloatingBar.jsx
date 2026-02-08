@@ -1,45 +1,54 @@
 "use client";
 
-import Link from "next/link";
-import { useCompare } from "@/lib/CompareContext";
+import { useCompare } from "../lib/CompareContext";
+import { useRouter } from "next/navigation";
+import Button from "./Button";
 import "./CompareFloatingBar.css";
 
 export default function CompareFloatingBar() {
-    const { selectedColleges, removeFromCompare, clearCompare } = useCompare();
+    const { compareList, removeFromCompare, setCompareList } = useCompare(); // I'll update context to include setCompareList or clearAll
+    const router = useRouter();
 
-    if (selectedColleges.length === 0) return null;
+    if (compareList.length === 0) return null;
+
+    const clearAll = () => {
+        if (setCompareList) setCompareList([]);
+        else {
+            // Fallback if setCompareList isn't exposed (but I'll add it)
+            compareList.forEach(c => removeFromCompare(c.id));
+        }
+    };
 
     return (
-        <div className="compare-bar">
-            <div className="compare-bar-inner">
-                <div className="compare-info">
-                    <span className="compare-count">{selectedColleges.length} selected</span>
-                    <div className="compare-thumbs">
-                        {selectedColleges.map((c) => (
-                            <div key={c.id} className="compare-thumb">
-                                <span>{c.shortName || c.name.substring(0, 10)}</span>
-                                <button
-                                    onClick={() => removeFromCompare(c.id)}
-                                    className="compare-remove"
-                                    aria-label="Remove"
-                                >
-                                    ×
-                                </button>
-                            </div>
-                        ))}
-                    </div>
+        <div className="compare-bar-container bounceInUp">
+            <div className="compare-bar-glass">
+                <div className="compare-items-scroll">
+                    {compareList.map(item => (
+                        <div key={item.id} className="compare-pill">
+                            <span className="pill-name">{item.shortName || item.name}</span>
+                            <button
+                                className="pill-remove"
+                                onClick={() => removeFromCompare(item.id)}
+                            >
+                                ×
+                            </button>
+                        </div>
+                    ))}
                 </div>
 
-                <div className="compare-actions">
-                    <button onClick={clearCompare} className="compare-clear">
-                        Clear
-                    </button>
-                    <Link href="/compare" className="compare-link">
+                <div className="compare-divider"></div>
+
+                <div className="compare-controls">
+                    <div className="compare-info">
+                        <span className="compare-count">{compareList.length} / 3</span>
+                        <button className="clear-all-btn" onClick={clearAll}>Clear All</button>
+                    </div>
+                    <button
+                        className="compare-submit-btn"
+                        onClick={() => router.push("/compare")}
+                    >
                         Compare Now
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </Link>
+                    </button>
                 </div>
             </div>
         </div>

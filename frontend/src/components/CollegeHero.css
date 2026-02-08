@@ -1,0 +1,209 @@
+.college-detail-page-v2 {
+    padding-top: 6rem;
+    /* Fix header overlap */
+    padding-bottom: 4rem;
+    min-height: 100vh;
+}
+
+.college-hero-container {
+    margin-bottom: 1.5rem;
+    /* Tighter spacing */
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.college-hero-card {
+    padding: 2rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-identity {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.college-logo-wrapper {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.college-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.college-logo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.hero-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hero-name {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hero-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.badge-loc {
+    background: rgba(241, 245, 249, 0.8);
+    color: #475569;
+}
+
+.badge-tier {
+    background: rgba(236, 253, 245, 0.8);
+    color: #059669;
+    border: 1px solid rgba(5, 150, 105, 0.1);
+}
+
+/* Stats Grid */
+.hero-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.25rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.highlight-green {
+    color: #059669;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Actions */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 1.5rem;
+}
+
+.apply-now-btn {
+    background: #1e293b;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.apply-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background: #0f172a;
+}
+
+.hero-shortlist-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-stats-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-name {
+        font-size: 1.75rem;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

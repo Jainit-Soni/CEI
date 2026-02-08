@@ -1,8 +1,8 @@
 .india-map-container {
-    background: #fff;
-    border-radius: 12px;
+    background: #ffffff;
+    border-radius: 16px;
     padding: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -14,50 +14,90 @@
     width: 100%;
     height: auto;
     max-height: 700px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
 }
 
 .map-tooltip {
-    background: rgba(30, 41, 59, 0.95);
-    backdrop-filter: blur(8px);
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    color: white;
+    position: fixed;
     pointer-events: none;
+    z-index: 1000;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+    /* Animation */
+    animation: tooltip-in 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transform-origin: center bottom;
+}
+
+.tooltip-content.glass-panel {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 12px 16px;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
-    min-width: 150px;
+    gap: 8px;
+}
 
-    /* Animation */
-    animation: tooltip-in 0.2s ease-out forwards;
-    transform-origin: center bottom;
+.tooltip-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tooltip-title {
+    font-family: var(--font-display, sans-serif);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+.tooltip-badge {
+    background: #4f46e5;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-family: var(--font-mono, monospace);
+}
+
+.tooltip-colleges {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tooltip-college-item {
+    font-size: 0.8rem;
+    color: #475569;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+.tooltip-more {
+    font-size: 0.75rem;
+    color: #6366f1;
+    font-weight: 500;
+    margin-top: 2px;
 }
 
 @keyframes tooltip-in {
     0% {
         opacity: 0;
-        transform: translateY(10px) scale(0.95);
+        transform: translateY(8px) scale(0.96);
     }
 
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
-}
-
-.tooltip-title {
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: #f8fafc;
-}
-
-.tooltip-count {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #818cf8;
-    font-family: var(--font-mono);
 }
 
 .india-map-loading {
@@ -67,6 +107,7 @@
     justify-content: center;
     height: 400px;
     gap: 1rem;
+    color: #64748b;
 }
 
 .loading-spinner {
@@ -87,5 +128,6 @@
 @media (max-width: 768px) {
     .india-map-container {
         min-height: 300px;
+        padding: 0.5rem;
     }
 }

@@ -37,13 +37,13 @@ export async function suggest(params = {}) {
   return data;
 }
 
-export async function fetchStateStats() {
-  const { data } = await api.get("/api/states/stats");
+export async function fetchStateStats(params = {}) {
+  const { data } = await api.get("/api/states/stats", { params });
   return data;
 }
 
-export async function fetchFilters() {
-  const { data } = await api.get("/api/filters");
+export async function fetchFilters(params = {}) {
+  const { data } = await api.get("/api/filters", { params });
   return data;
 }
 

@@ -1,14 +1,14 @@
 ﻿import "./page.css";
 import CollegeDetailClient from "./CollegeDetailClient";
 
-import JsonLd from "../../components/JsonLd";
-import { getCollege } from "../../lib/api";
+import JsonLd from "@/components/JsonLd";
+import { fetchCollege } from "@/lib/api";
 
 // Enable dynamic params for colleges not in static list
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
-  const college = await getCollege(params.id);
+  const college = await fetchCollege(params.id);
   if (!college) return { title: "College Not Found" };
 
   return {
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function CollegeDetail({ params }) {
-  const college = await getCollege(params.id);
+  const college = await fetchCollege(params.id);
 
   const jsonLd = college ? {
     "@context": "https://schema.org",
@@ -43,7 +43,8 @@ export default async function CollegeDetail({ params }) {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <CollegeDetailClient id={params.id} />
+      <JsonLd data={jsonLd} />
+      <CollegeDetailClient id={params.id} initialData={college} />
     </>
   );
 }

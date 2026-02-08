@@ -2,13 +2,100 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   font-weight: 600;
-  padding: 12px 22px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(80, 102, 140, 0.22);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  padding: 12px 26px;
+  border-radius: 99px;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Variant: Primary (Gradient) */
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 50%, #06b6d4 100%);
+  background-size: 200% 200%;
+  animation: gradientFlow 6s ease infinite;
+  box-shadow:
+    0 10px 20px -8px rgba(59, 130, 246, 0.5),
+    0 4px 6px -4px rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 16px 32px -8px rgba(59, 130, 246, 0.6),
+    0 8px 16px -8px rgba(6, 182, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Variant: Secondary (Glass) */
+.btn-secondary {
+  color: var(--color-ink);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Variant: Ghost (Outline) */
+.btn-ghost {
+  color: var(--color-ink-muted, #64748b);
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.btn-ghost:hover {
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .btn-primary {

@@ -1,435 +1,432 @@
-{
-  "collectedOn": "2026-02-05",
-  "institutions": [
-    {
-      "id": "dbrait-port-blair",
-      "name": "Dr. B.R. Ambedkar Institute of Technology",
-      "shortName": "DBRAIT",
-      "location": "Pahargaon, Port Blair, Andaman and Nicobar Islands",
-      "rankingTier": "Tier 2",
-      "overview": "The premier technical institute in the islands, offering both degree (B.Tech) and diploma programs. It also houses a maritime training center and is the hub for technical education in the UT.",
-      "campus": "Pahargaon",
-      "officialUrl": "https://dbrait.andaman.gov.in",
-      "acceptedExams": [
-        "jee-main",
-        "merit"
-      ],
-      "courses": [
-        {
-          "name": "B.Tech (Civil, CSE, ECE)",
-          "degree": "B.Tech",
-          "duration": "4 years",
-          "exams": [
-            "jee-main"
-          ]
-        },
-        {
-          "name": "Diploma in Engineering",
-          "degree": "Diploma",
-          "duration": "3 years",
-          "exams": [
-            "merit"
-          ]
-        },
-        {
-          "name": "Diploma in Hotel Management",
-          "degree": "Diploma",
-          "duration": "3 years",
-          "exams": [
-            "merit"
-          ]
-        }
-      ],
-      "pastCutoffs": [],
-      "topRecruiters": [
-        "Infosys",
-        "Wipro",
-        "HCL",
-        "Tourism Dept"
-      ],
-      "tuition": "Low (Government)",
-      "sources": [
-        "https://dbrait.andaman.gov.in"
-      ],
-      "meta": {
-        "sourceType": [
-          "official",
-          "regulatory"
-        ],
-        "affiliations": [
-          "Pondicherry University",
-          "AICTE",
-          "MSBTE (for Diploma historically)"
-        ],
-        "ownership": "Government",
-        "establishedYear": "1984",
-        "district": "South Andaman",
-        "naacGrade": "NA"
+[
+  {
+    "id": "dbrait-port-blair",
+    "name": "Dr. B.R. Ambedkar Institute of Technology",
+    "shortName": "DBRAIT",
+    "location": "Pahargaon, Port Blair, Andaman and Nicobar Islands",
+    "rankingTier": "Tier 2",
+    "overview": "The premier technical institute in the islands, offering both degree (B.Tech) and diploma programs. It also houses a maritime training center and is the hub for technical education in the UT.",
+    "campus": "Pahargaon",
+    "officialUrl": "https://dbrait.andaman.gov.in",
+    "acceptedExams": [
+      "jee-main",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Tech (Civil, CSE, ECE)",
+        "degree": "B.Tech",
+        "duration": "4 years",
+        "exams": [
+          "jee-main"
+        ]
+      },
+      {
+        "name": "Diploma in Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "Diploma in Hotel Management",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
       }
-    },
-    {
-      "id": "aniims-port-blair",
-      "name": "Andaman and Nicobar Islands Institute of Medical Sciences",
-      "shortName": "ANIIMS",
-      "location": "Atlanta Point, Port Blair, Andaman and Nicobar Islands",
-      "rankingTier": "Tier 2",
-      "overview": "The first and only medical college in the UT, established to provide tertiary healthcare and medical education. It is attached to the G.B. Pant Hospital.",
-      "campus": "Atlanta Point",
-      "officialUrl": "http://andssw1.and.nic.in/aniims",
-      "acceptedExams": [
-        "neet-ug"
+    ],
+    "pastCutoffs": [],
+    "topRecruiters": [
+      "Infosys",
+      "Wipro",
+      "HCL",
+      "Tourism Dept"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://dbrait.andaman.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
       ],
-      "courses": [
-        {
-          "name": "MBBS",
-          "degree": "MBBS",
-          "duration": "5.5 years",
-          "exams": [
-            "neet-ug"
-          ]
-        }
+      "affiliations": [
+        "Pondicherry University",
+        "AICTE",
+        "MSBTE (for Diploma historically)"
       ],
-      "pastCutoffs": [
-        {
-          "examId": "neet-ug",
-          "year": "2023",
-          "cutoff": "AIQ Rank ~8000-10000"
-        }
-      ],
-      "topRecruiters": [
-        "Government Health Services"
-      ],
-      "tuition": "Low (Government)",
-      "sources": [
-        "http://andssw1.and.nic.in/aniims"
-      ],
-      "meta": {
-        "sourceType": [
-          "official",
-          "regulatory"
-        ],
-        "affiliations": [
-          "Pondicherry University",
-          "NMC"
-        ],
-        "ownership": "Government",
-        "establishedYear": "2015",
-        "district": "South Andaman",
-        "naacGrade": "NA"
-      }
-    },
-    {
-      "id": "jnrm-port-blair",
-      "name": "Jawaharlal Nehru Rajkeeya Mahavidyalaya",
-      "shortName": "JNRM",
-      "location": "Port Blair, Andaman and Nicobar Islands",
-      "rankingTier": "Tier 2",
-      "overview": "The oldest and most prestigious general degree college in the islands, offering a wide range of undergraduate and postgraduate programs in Arts, Science, and Commerce.",
-      "campus": "South Point",
-      "officialUrl": "https://jnrm.and.nic.in",
-      "acceptedExams": [
-        "cuet-ug",
-        "cuet-pg"
-      ],
-      "courses": [
-        {
-          "name": "B.A./B.Sc/B.Com",
-          "degree": "Bachelor",
-          "duration": "3 years",
-          "exams": [
-            "cuet-ug"
-          ]
-        },
-        {
-          "name": "M.A./M.Sc",
-          "degree": "Master",
-          "duration": "2 years",
-          "exams": [
-            "cuet-pg"
-          ]
-        }
-      ],
-      "pastCutoffs": [],
-      "topRecruiters": [],
-      "tuition": "Low (Government)",
-      "sources": [
-        "https://jnrm.and.nic.in"
-      ],
-      "meta": {
-        "sourceType": [
-          "official"
-        ],
-        "affiliations": [
-          "Pondicherry University"
-        ],
-        "ownership": "Government",
-        "establishedYear": "1967",
-        "district": "South Andaman",
-        "naacGrade": "A"
-      }
-    },
-    {
-      "id": "mahatma-gandhi-govt-college-mayabunder",
-      "name": "Mahatma Gandhi Government College",
-      "shortName": "MGGC Mayabunder",
-      "location": "Mayabunder, North and Middle Andaman, Andaman and Nicobar Islands",
-      "rankingTier": "Tier 3",
-      "overview": "Established to serve the higher education needs of the North and Middle Andaman districts, offering courses in Arts and Commerce.",
-      "campus": "Rampur",
-      "officialUrl": "https://mggcm.and.nic.in",
-      "acceptedExams": [
-        "cuet-ug"
-      ],
-      "courses": [
-        {
-          "name": "B.A. (Pol Sc, History, Economics, etc.)",
-          "degree": "Bachelor",
-          "duration": "3 years",
-          "exams": [
-            "cuet-ug"
-          ]
-        },
-        {
-          "name": "B.Com",
-          "degree": "Bachelor",
-          "duration": "3 years",
-          "exams": [
-            "cuet-ug"
-          ]
-        }
-      ],
-      "pastCutoffs": [],
-      "topRecruiters": [],
-      "tuition": "Low (Government)",
-      "sources": [
-        "https://mggcm.and.nic.in"
-      ],
-      "meta": {
-        "sourceType": [
-          "official"
-        ],
-        "affiliations": [
-          "Pondicherry University"
-        ],
-        "ownership": "Government",
-        "establishedYear": "1990",
-        "district": "North and Middle Andaman",
-        "naacGrade": "B"
-      }
-    },
-    {
-      "id": "tagore-govt-college-of-education",
-      "name": "Tagore Government College of Education",
-      "shortName": "TGCE",
-      "location": "Port Blair, Andaman and Nicobar Islands",
-      "rankingTier": "Tier 2",
-      "overview": "The premier teacher training institute in the islands, offering B.Ed and integrated teacher education programs.",
-      "campus": "Middle Point",
-      "officialUrl": "https://tgce.and.nic.in",
-      "acceptedExams": [
-        "cuet-ug",
-        "merit"
-      ],
-      "courses": [
-        {
-          "name": "B.Ed",
-          "degree": "Bachelor of Education",
-          "duration": "2 years",
-          "exams": [
-            "merit"
-          ]
-        },
-        {
-          "name": "B.A. B.Ed / B.Sc B.Ed",
-          "degree": "Integrated B.Ed",
-          "duration": "4 years",
-          "exams": [
-            "cuet-ug"
-          ]
-        }
-      ],
-      "pastCutoffs": [],
-      "topRecruiters": [
-        "Govt Schools",
-        "Private Schools"
-      ],
-      "tuition": "Low (Government)",
-      "sources": [
-        "https://tgce.and.nic.in"
-      ],
-      "meta": {
-        "sourceType": [
-          "official"
-        ],
-        "affiliations": [
-          "Pondicherry University",
-          "NCTE"
-        ],
-        "ownership": "Government",
-        "establishedYear": "1981",
-        "district": "South Andaman",
-        "naacGrade": "NA"
-      }
-    },
-    {
-      "id": "andaman-college-ancol",
-      "name": "Andaman College",
-      "shortName": "ANCOL",
-      "location": "Chakkargaon, Port Blair, Andaman and Nicobar Islands",
-      "rankingTier": "Tier 3",
-      "overview": "A newer government college established to meet the growing demand for higher education, offering specialized courses like Music, Psychology, and Business Administration.",
-      "campus": "Chakkargaon",
-      "officialUrl": "https://ancol.andaman.gov.in",
-      "acceptedExams": [
-        "cuet-ug"
-      ],
-      "courses": [
-        {
-          "name": "BBA",
-          "degree": "BBA",
-          "duration": "3 years",
-          "exams": [
-            "cuet-ug"
-          ]
-        },
-        {
-          "name": "B.P.A. (Music)",
-          "degree": "Bachelor of Performing Arts",
-          "duration": "3 years",
-          "exams": [
-            "cuet-ug"
-          ]
-        },
-        {
-          "name": "B.Sc (Psychology)",
-          "degree": "B.Sc",
-          "duration": "3 years",
-          "exams": [
-            "cuet-ug"
-          ]
-        },
-        {
-          "name": "B.A./B.Com",
-          "degree": "Bachelor",
-          "duration": "3 years",
-          "exams": [
-            "cuet-ug"
-          ]
-        }
-      ],
-      "pastCutoffs": [],
-      "topRecruiters": [],
-      "tuition": "Low (Government)",
-      "sources": [
-        "https://ancol.andaman.gov.in"
-      ],
-      "meta": {
-        "sourceType": [
-          "official"
-        ],
-        "affiliations": [
-          "Pondicherry University"
-        ],
-        "ownership": "Government",
-        "establishedYear": "2014",
-        "district": "South Andaman",
-        "naacGrade": "NA"
-      }
-    },
-    {
-      "id": "andaman-law-college",
-      "name": "Andaman Law College",
-      "shortName": "ALC",
-      "location": "Port Blair, Andaman and Nicobar Islands",
-      "rankingTier": "Tier 2",
-      "overview": "The sole institution for legal education in the islands, managed by the Andaman & Nicobar Islands Legal Education Society (ANILES).",
-      "campus": "Phoenix Bay",
-      "officialUrl": "https://andamanlawcollege.andaman.gov.in",
-      "acceptedExams": [
-        "merit",
-        "clat"
-      ],
-      "courses": [
-        {
-          "name": "B.A. LL.B.",
-          "degree": "Integrated Law",
-          "duration": "5 years",
-          "exams": [
-            "merit"
-          ]
-        }
-      ],
-      "pastCutoffs": [],
-      "topRecruiters": [
-        "Legal Firms",
-        "Judiciary"
-      ],
-      "tuition": "Low (Government)",
-      "sources": [
-        "https://andamanlawcollege.andaman.gov.in"
-      ],
-      "meta": {
-        "sourceType": [
-          "official"
-        ],
-        "affiliations": [
-          "Pondicherry University",
-          "BCI"
-        ],
-        "ownership": "Government (Society)",
-        "establishedYear": "2016",
-        "district": "South Andaman",
-        "naacGrade": "NA"
-      }
-    },
-    {
-      "id": "government-polytechnic-diglipur",
-      "name": "Government Polytechnic, Diglipur",
-      "shortName": "Govt Polytechnic Diglipur",
-      "location": "Diglipur, North and Middle Andaman, Andaman and Nicobar Islands",
-      "rankingTier": "Tier 3",
-      "overview": "A key technical institution in the North Andaman region offering diploma courses in engineering.",
-      "campus": "Diglipur",
-      "officialUrl": "https://dbrait.andaman.gov.in",
-      "acceptedExams": [
-        "merit"
-      ],
-      "courses": [
-        {
-          "name": "Diploma in Civil Engineering",
-          "degree": "Diploma",
-          "duration": "3 years",
-          "exams": [
-            "merit"
-          ]
-        },
-        {
-          "name": "Diploma in Electrical Engineering",
-          "degree": "Diploma",
-          "duration": "3 years",
-          "exams": [
-            "merit"
-          ]
-        }
-      ],
-      "pastCutoffs": [],
-      "topRecruiters": [],
-      "tuition": "Low (Government)",
-      "sources": [
-        "https://dbrait.andaman.gov.in"
-      ],
-      "meta": {
-        "sourceType": [
-          "official"
-        ],
-        "affiliations": [
-          "AICTE"
-        ],
-        "ownership": "Government",
-        "establishedYear": "2017",
-        "district": "North and Middle Andaman",
-        "naacGrade": "NA"
-      }
+      "ownership": "Government",
+      "establishedYear": "1984",
+      "district": "South Andaman",
+      "naacGrade": "NA"
     }
-  ]
-}
+  },
+  {
+    "id": "aniims-port-blair",
+    "name": "Andaman and Nicobar Islands Institute of Medical Sciences",
+    "shortName": "ANIIMS",
+    "location": "Atlanta Point, Port Blair, Andaman and Nicobar Islands",
+    "rankingTier": "Tier 2",
+    "overview": "The first and only medical college in the UT, established to provide tertiary healthcare and medical education. It is attached to the G.B. Pant Hospital.",
+    "campus": "Atlanta Point",
+    "officialUrl": "http://andssw1.and.nic.in/aniims",
+    "acceptedExams": [
+      "neet-ug"
+    ],
+    "courses": [
+      {
+        "name": "MBBS",
+        "degree": "MBBS",
+        "duration": "5.5 years",
+        "exams": [
+          "neet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [
+      {
+        "examId": "neet-ug",
+        "year": "2023",
+        "cutoff": "AIQ Rank ~8000-10000"
+      }
+    ],
+    "topRecruiters": [
+      "Government Health Services"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "http://andssw1.and.nic.in/aniims"
+    ],
+    "meta": {
+      "sourceType": [
+        "official",
+        "regulatory"
+      ],
+      "affiliations": [
+        "Pondicherry University",
+        "NMC"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2015",
+      "district": "South Andaman",
+      "naacGrade": "NA"
+    }
+  },
+  {
+    "id": "jnrm-port-blair",
+    "name": "Jawaharlal Nehru Rajkeeya Mahavidyalaya",
+    "shortName": "JNRM",
+    "location": "Port Blair, Andaman and Nicobar Islands",
+    "rankingTier": "Tier 2",
+    "overview": "The oldest and most prestigious general degree college in the islands, offering a wide range of undergraduate and postgraduate programs in Arts, Science, and Commerce.",
+    "campus": "South Point",
+    "officialUrl": "https://jnrm.and.nic.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "cuet-pg"
+    ],
+    "courses": [
+      {
+        "name": "B.A./B.Sc/B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "M.A./M.Sc",
+        "degree": "Master",
+        "duration": "2 years",
+        "exams": [
+          "cuet-pg"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "topRecruiters": [],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://jnrm.and.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1967",
+      "district": "South Andaman",
+      "naacGrade": "A"
+    }
+  },
+  {
+    "id": "mahatma-gandhi-govt-college-mayabunder",
+    "name": "Mahatma Gandhi Government College",
+    "shortName": "MGGC Mayabunder",
+    "location": "Mayabunder, North and Middle Andaman, Andaman and Nicobar Islands",
+    "rankingTier": "Tier 3",
+    "overview": "Established to serve the higher education needs of the North and Middle Andaman districts, offering courses in Arts and Commerce.",
+    "campus": "Rampur",
+    "officialUrl": "https://mggcm.and.nic.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "B.A. (Pol Sc, History, Economics, etc.)",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "topRecruiters": [],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://mggcm.and.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1990",
+      "district": "North and Middle Andaman",
+      "naacGrade": "B"
+    }
+  },
+  {
+    "id": "tagore-govt-college-of-education",
+    "name": "Tagore Government College of Education",
+    "shortName": "TGCE",
+    "location": "Port Blair, Andaman and Nicobar Islands",
+    "rankingTier": "Tier 2",
+    "overview": "The premier teacher training institute in the islands, offering B.Ed and integrated teacher education programs.",
+    "campus": "Middle Point",
+    "officialUrl": "https://tgce.and.nic.in",
+    "acceptedExams": [
+      "cuet-ug",
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "B.Ed",
+        "degree": "Bachelor of Education",
+        "duration": "2 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "B.A. B.Ed / B.Sc B.Ed",
+        "degree": "Integrated B.Ed",
+        "duration": "4 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "topRecruiters": [
+      "Govt Schools",
+      "Private Schools"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://tgce.and.nic.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University",
+        "NCTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "1981",
+      "district": "South Andaman",
+      "naacGrade": "NA"
+    }
+  },
+  {
+    "id": "andaman-college-ancol",
+    "name": "Andaman College",
+    "shortName": "ANCOL",
+    "location": "Chakkargaon, Port Blair, Andaman and Nicobar Islands",
+    "rankingTier": "Tier 3",
+    "overview": "A newer government college established to meet the growing demand for higher education, offering specialized courses like Music, Psychology, and Business Administration.",
+    "campus": "Chakkargaon",
+    "officialUrl": "https://ancol.andaman.gov.in",
+    "acceptedExams": [
+      "cuet-ug"
+    ],
+    "courses": [
+      {
+        "name": "BBA",
+        "degree": "BBA",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.P.A. (Music)",
+        "degree": "Bachelor of Performing Arts",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.Sc (Psychology)",
+        "degree": "B.Sc",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      },
+      {
+        "name": "B.A./B.Com",
+        "degree": "Bachelor",
+        "duration": "3 years",
+        "exams": [
+          "cuet-ug"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "topRecruiters": [],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://ancol.andaman.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2014",
+      "district": "South Andaman",
+      "naacGrade": "NA"
+    }
+  },
+  {
+    "id": "andaman-law-college",
+    "name": "Andaman Law College",
+    "shortName": "ALC",
+    "location": "Port Blair, Andaman and Nicobar Islands",
+    "rankingTier": "Tier 2",
+    "overview": "The sole institution for legal education in the islands, managed by the Andaman & Nicobar Islands Legal Education Society (ANILES).",
+    "campus": "Phoenix Bay",
+    "officialUrl": "https://andamanlawcollege.andaman.gov.in",
+    "acceptedExams": [
+      "merit",
+      "clat"
+    ],
+    "courses": [
+      {
+        "name": "B.A. LL.B.",
+        "degree": "Integrated Law",
+        "duration": "5 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "topRecruiters": [
+      "Legal Firms",
+      "Judiciary"
+    ],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://andamanlawcollege.andaman.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "Pondicherry University",
+        "BCI"
+      ],
+      "ownership": "Government (Society)",
+      "establishedYear": "2016",
+      "district": "South Andaman",
+      "naacGrade": "NA"
+    }
+  },
+  {
+    "id": "government-polytechnic-diglipur",
+    "name": "Government Polytechnic, Diglipur",
+    "shortName": "Govt Polytechnic Diglipur",
+    "location": "Diglipur, North and Middle Andaman, Andaman and Nicobar Islands",
+    "rankingTier": "Tier 3",
+    "overview": "A key technical institution in the North Andaman region offering diploma courses in engineering.",
+    "campus": "Diglipur",
+    "officialUrl": "https://dbrait.andaman.gov.in",
+    "acceptedExams": [
+      "merit"
+    ],
+    "courses": [
+      {
+        "name": "Diploma in Civil Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "Diploma in Electrical Engineering",
+        "degree": "Diploma",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      }
+    ],
+    "pastCutoffs": [],
+    "topRecruiters": [],
+    "tuition": "Low (Government)",
+    "sources": [
+      "https://dbrait.andaman.gov.in"
+    ],
+    "meta": {
+      "sourceType": [
+        "official"
+      ],
+      "affiliations": [
+        "AICTE"
+      ],
+      "ownership": "Government",
+      "establishedYear": "2017",
+      "district": "North and Middle Andaman",
+      "naacGrade": "NA"
+    }
+  }
+]

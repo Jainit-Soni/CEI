@@ -1,4 +1,5 @@
-"use client";
+// No date usage found in previous view of ExamDetailClient.
+// Proceeding to check GlassPanel.
 
 import { useEffect, useState } from "react";
 import { fetchExam } from "@/lib/api";
@@ -8,12 +9,14 @@ import Button from "@/components/Button";
 import EmptyState from "@/components/EmptyState";
 import { DetailSkeleton } from "@/components/Skeleton";
 
-export default function ExamDetailClient({ id }) {
-    const [exam, setExam] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
+export default function ExamDetailClient({ id, initialData }) {
+    const [exam, setExam] = useState(initialData);
+    const [isLoading, setIsLoading] = useState(!initialData);
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        if (initialData) return;
+
         const load = async () => {
             try {
                 setError(null);
@@ -27,7 +30,7 @@ export default function ExamDetailClient({ id }) {
             }
         };
         load();
-    }, [id]);
+    }, [id, initialData]);
 
     if (isLoading) {
         return (

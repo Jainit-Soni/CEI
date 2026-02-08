@@ -1,4 +1,4 @@
-const express = require("express");
+﻿const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
 const rateLimit = require("express-rate-limit");
@@ -9,6 +9,7 @@ const collegesRoutes = require("./routes/colleges");
 const examsRoutes = require("./routes/exams");
 const searchRoutes = require("./routes/search");
 const statsRoutes = require("./routes/stats");
+const adminRoutes = require("./routes/admin"); // Import admin routes
 
 const app = express();
 
@@ -37,8 +38,8 @@ const corsOptions = {
 // Speed Limiter (Throttling)
 const speedLimiter = slowDown({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  delayAfter: 50, // allow 50 requests per 15 minutes, then...
-  delayMs: 500 // begin adding 500ms of delay per request above 100
+  delayAfter: 250, // allow 250 requests per 15 minutes (relaxed from 50 for smoother exploration)
+  delayMs: () => 500 // begin adding 500ms of delay per request above limits
 });
 
 // Rate limiting configuration
@@ -80,6 +81,7 @@ app.use("/api", collegesRoutes);
 app.use("/api", examsRoutes);
 app.use("/api", searchLimiter, searchRoutes); // Stricter limit for search
 app.use("/api/stats", statsRoutes);
+app.use("/api/admin", adminRoutes);
 
 const PORT = process.env.PORT || 4000;
 

@@ -1,14 +1,16 @@
 ﻿"use client";
 
 import "./page.css";
-import AnimatedHero from "@/components/AnimatedHero";
-import Container from "@/components/Container";
-import GlassPanel from "@/components/GlassPanel";
-import Card from "@/components/Card";
-import Button from "@/components/Button";
-import { RevealOnScroll } from "@/lib/useIntersectionObserver";
+import "../components/DecisionEngine.css"; // Ensure styles are loaded
+import DecisionEngine from "../components/DecisionEngine";
+import AdmissionProbability from "../components/AdmissionProbability";
+import Container from "../components/Container";
+import GlassPanel from "../components/GlassPanel";
+import Card from "../components/Card";
+import Button from "../components/Button";
+import { RevealOnScroll } from "../lib/useIntersectionObserver";
 import { useEffect, useMemo, useState } from "react";
-import { fetchColleges, fetchExams } from "@/lib/api";
+import { fetchColleges, fetchExams } from "../lib/api";
 
 // Dynamic student tips - changes on each refresh
 const studentTips = [
@@ -95,31 +97,47 @@ export default function Home() {
 
   return (
     <div className="home">
-      <AnimatedHero
-        badge="Your College Journey Starts Here"
-        title="Discover. Compare. Decide."
-        subtitle="The smarter way to explore colleges and exams. Built by students, for students."
-        stats={[
-          { value: "999+", label: "Colleges" },
-          { value: "30+", label: "Exams" },
-          { value: "Live", label: "Updates" },
-        ]}
-      >
-        <div className="hero-panel-content">
-          <h3>Ready to find your dream college?</h3>
-          <p>Explore verified data on placements, fees, exams, and more. No noise, just clarity.</p>
-          <div className="hero-panel-actions">
-            <Button href="/colleges">Explore Colleges</Button>
-            <Button href="/exams" variant="secondary">Browse Exams</Button>
-          </div>
-          <div className="hero-pill-grid">
-            <span className="hero-pill">🎯 Cutoff Insights</span>
-            <span className="hero-pill">💼 Placement Data</span>
-            <span className="hero-pill">📊 Smart Compare</span>
-            <span className="hero-pill">⚡ Fast Search</span>
-          </div>
+      <section className="home-hero">
+        <div className="home-hero-bg" aria-hidden="true">
+          <div className="hero-orb hero-orb--1" />
+          <div className="hero-orb hero-orb--2" />
+          <div className="hero-orb hero-orb--3" />
         </div>
-      </AnimatedHero>
+        <Container>
+          <div className="home-hero-content minimal-hero fadeIn">
+            <span className="hero-kicker">Admission matching made simple</span>
+            <h1>Your Future, <span className="text-gradient">Verified.</span></h1>
+            <p>Smart, verified college matching for the next generation of students. No generic results, just plain data.</p>
+            <div className="hero-actions">
+              <Button href="#mentor" icon="🎯">Match My Score</Button>
+              <Button href="/colleges" variant="secondary">Browse 999+ Colleges</Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Interactive Tools Section */}
+      <section id="tools" className="tools-section">
+        <Container>
+          <div className="tools-grid">
+            <div id="mentor" className="tool-block">
+              <div className="tool-info">
+                <h2>College Matcher 🎯</h2>
+                <p>Tell me your background, and I'll find your perfect college matches.</p>
+              </div>
+              <DecisionEngine />
+            </div>
+
+            <div id="probability" className="tool-block">
+              <div className="tool-info">
+                <h2>Admission Probability 🛡️</h2>
+                <p>Check your admission chances based on historical trends.</p>
+              </div>
+              <AdmissionProbability />
+            </div>
+          </div>
+        </Container>
+      </section>
 
       {/* Dynamic Tip Section */}
       {dailyTip && (
@@ -138,41 +156,16 @@ export default function Home() {
         </section>
       )}
 
-      {/* Quick Stats Bar */}
-      <section className="stats-bar">
-        <Container>
-          <div className="stats-grid">
-            {quickStats.map((stat) => (
-              <div key={stat.label} className="stat-item">
-                <span className="stat-icon">{stat.icon}</span>
-                <span className="stat-value">{stat.value}</span>
-                <span className="stat-label">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Why Choose CEI */}
-      <section className="home-section">
+      {/* Featured Discovery */}
+      <section className="home-section discovery-section">
         <Container>
           <RevealOnScroll>
-            <div className="section-heading">
-              <h2>Why students love CEI</h2>
-              <p>Everything you need to make informed admission decisions.</p>
+            <div className="section-heading centered">
+              <span className="badge">Verified Data</span>
+              <h2>Discovery Dashboard</h2>
+              <p>Real-time data from 999+ verified institutions across India.</p>
             </div>
           </RevealOnScroll>
-          <div className="feature-grid">
-            {features.map((feature) => (
-              <RevealOnScroll key={feature.title}>
-                <GlassPanel className="feature-card" variant="strong" glow>
-                  <span className="feature-icon">{feature.icon}</span>
-                  <h3>{feature.title}</h3>
-                  <p>{feature.desc}</p>
-                </GlassPanel>
-              </RevealOnScroll>
-            ))}
-          </div>
         </Container>
       </section>
 
@@ -238,40 +231,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Student Journey Section */}
-      <section className="home-section journey-section">
-        <Container>
-          <RevealOnScroll>
-            <div className="section-heading">
-              <h2>Your journey in 3 steps</h2>
-              <p>From confusion to confident decision-making.</p>
-            </div>
-          </RevealOnScroll>
-          <div className="journey-grid">
-            <RevealOnScroll>
-              <div className="journey-step">
-                <div className="journey-number">1</div>
-                <h3>Discover</h3>
-                <p>Browse 999+ colleges with verified data on placements, fees, and rankings.</p>
-              </div>
-            </RevealOnScroll>
-            <RevealOnScroll>
-              <div className="journey-step">
-                <div className="journey-number">2</div>
-                <h3>Compare</h3>
-                <p>Use our smart compare tool to see colleges side-by-side on key metrics.</p>
-              </div>
-            </RevealOnScroll>
-            <RevealOnScroll>
-              <div className="journey-step">
-                <div className="journey-number">3</div>
-                <h3>Decide</h3>
-                <p>Make data-driven decisions with confidence. Your future, your choice.</p>
-              </div>
-            </RevealOnScroll>
-          </div>
-        </Container>
-      </section>
 
       {/* CTA Section */}
       <section className="home-section">

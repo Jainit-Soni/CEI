@@ -57,31 +57,31 @@ const STATE_NODES = {
     "Lakshadweep": { x: 14, y: 82, connections: ["Kerala"] },
 };
 
-// Get node color based on count
-function getNodeColor(count, max) {
+// Get node color based on absolute count thresholds
+function getNodeColor(count) {
     if (count === 0) return "#64748b";
-    const intensity = count / max;
-    if (intensity > 0.7) return "#fbbf24"; // Gold
-    if (intensity > 0.4) return "#60a5fa"; // Blue
-    if (intensity > 0.2) return "#a78bfa"; // Purple
-    return "#34d399"; // Green
+    if (count >= 40) return "#fbbf24"; // Gold (High)
+    if (count >= 20) return "#60a5fa"; // Blue (Medium)
+    if (count >= 10) return "#a78bfa"; // Purple (Low)
+    return "#34d399"; // Green (Few)
 }
 
 // Get node size based on count
-function getNodeSize(count, max) {
+function getNodeSize(count) {
     const base = 24;
     if (count === 0) return base;
-    const scale = 1 + (count / max) * 1.2;
-    return Math.round(base * scale);
+    if (count >= 40) return 48;
+    if (count >= 20) return 40;
+    if (count >= 10) return 32;
+    return 28;
 }
 
 // Get glow intensity
-function getGlowIntensity(count, max) {
-    if (count === 0) return "0 0 20px rgba(100, 116, 139, 0.5)";
-    const intensity = count / max;
-    if (intensity > 0.7) return "0 0 40px rgba(251, 191, 36, 0.8), 0 0 80px rgba(251, 191, 36, 0.4)";
-    if (intensity > 0.4) return "0 0 35px rgba(96, 165, 250, 0.7), 0 0 70px rgba(96, 165, 250, 0.3)";
-    if (intensity > 0.2) return "0 0 30px rgba(167, 139, 250, 0.6), 0 0 60px rgba(167, 139, 250, 0.2)";
+function getGlowIntensity(count) {
+    if (count === 0) return "0 0 20px rgba(100, 116, 139, 0.4)";
+    if (count >= 40) return "0 0 40px rgba(251, 191, 36, 0.8), 0 0 80px rgba(251, 191, 36, 0.4)";
+    if (count >= 20) return "0 0 35px rgba(96, 165, 250, 0.7), 0 0 70px rgba(96, 165, 250, 0.3)";
+    if (count >= 10) return "0 0 30px rgba(167, 139, 250, 0.6), 0 0 60px rgba(167, 139, 250, 0.2)";
     return "0 0 25px rgba(52, 211, 153, 0.5), 0 0 50px rgba(52, 211, 153, 0.2)";
 }
 
@@ -233,9 +233,9 @@ export default function MapPage() {
                                 const isHovered = hoveredState === stateName;
                                 const isSelected = selectedState === stateName;
                                 const isActive = isHovered || isSelected;
-                                const size = getNodeSize(count, maxCount);
-                                const color = getNodeColor(count, maxCount);
-                                const glow = getGlowIntensity(count, maxCount);
+                                const size = getNodeSize(count);
+                                const color = getNodeColor(count);
+                                const glow = getGlowIntensity(count);
 
                                 return (
                                     <div
@@ -277,7 +277,7 @@ export default function MapPage() {
                                 <h3 className="panel-title">{activeData.name}</h3>
                                 <div
                                     className="panel-indicator"
-                                    style={{ backgroundColor: getNodeColor(activeData.count, maxCount) }}
+                                    style={{ backgroundColor: getNodeColor(activeData.count) }}
                                 />
                             </div>
 

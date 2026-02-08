@@ -1,0 +1,251 @@
+.prob-tool-card {
+    padding: 40px;
+    margin: 40px 0;
+}
+
+.prob-tool-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ecfdf5;
+    color: #059669;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    border: 1px solid #10b98122;
+}
+
+.prob-tool-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.prob-tool-header p {
+    color: #64748b;
+}
+
+.prob-tool-body {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.prob-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.prob-field label {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.95rem;
+}
+
+.search-wrap {
+    position: relative;
+    z-index: 50;
+}
+
+.prob-input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    color: #0f172a;
+}
+
+.prob-input:focus {
+    outline: none;
+    background: white;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.prob-suggestions {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    z-index: 1000 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 8px 0;
+}
+
+.prob-suggestions * {
+    color: #0f172a !important;
+}
+
+.s-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+    transition: all 0.15s ease;
+    background: #ffffff !important;
+}
+
+.s-item:last-child {
+    border-bottom: none;
+}
+
+.s-item:hover,
+.s-item.active {
+    background: #f1f5f9 !important;
+}
+
+.s-name {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.s-item strong {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a !important;
+}
+
+.s-loc {
+    font-size: 0.75rem;
+    color: #475569 !important;
+    font-weight: 500;
+}
+
+.s-type {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #6366f1;
+    background: #eef2ff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.score-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score-switcher {
+    display: flex;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 8px;
+    gap: 4px;
+}
+
+.score-switcher button {
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.score-switcher button.active {
+    background: white;
+    color: #6366f1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.prob-input-row {
+    display: flex;
+    gap: 12px;
+}
+
+.prob-input-row .prob-input {
+    flex: 1;
+}
+
+.prob-results-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.prob-res-item {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.res-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.res-exam {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #6366f1;
+    background: #eef2ff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.res-note {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.res-status {
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    .prob-input-row {
+        flex-direction: column;
+    }
+
+    .prob-tool-card {
+        padding: 24px 16px;
+    }
+}

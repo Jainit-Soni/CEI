@@ -236,6 +236,24 @@
         "exams": [
           "viteee"
         ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit",
+          "vit-entrance"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "vitmee",
+          "mah-mca-cet"
+        ]
       }
     ],
     "pastCutoffs": [
@@ -736,6 +754,23 @@
         "duration": "5.5 years",
         "exams": [
           "neet-ug"
+        ]
+      },
+      {
+        "name": "BCA",
+        "degree": "BCA",
+        "duration": "3 years",
+        "exams": [
+          "merit"
+        ]
+      },
+      {
+        "name": "MCA",
+        "degree": "MCA",
+        "duration": "2 years",
+        "exams": [
+          "srmjee-m",
+          "tancet"
         ]
       }
     ],

@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Government Engineering College, Bhuj",
+        "id": "gec-bhuj",
+        "location": "Bhuj, Gujarat",
+        "type": "Government"
+    },
+    {
+        "name": "Government Engineering College, Godhra",
+        "id": "gec-godhra",
+        "location": "Godhra, Gujarat",
+        "type": "Government"
+    },
+    {
+        "name": "Government Engineering College, Palanpur",
+        "id": "gec-palanpur",
+        "location": "Palanpur, Gujarat",
+        "type": "Government"
+    },
+    {
+        "name": "Government Engineering College, Modasa",
+        "id": "gec-modasa",
+        "location": "Modasa, Gujarat",
+        "type": "Government"
+    },
+    {
+        "name": "Government Engineering College, Patan",
+        "id": "gec-patan",
+        "location": "Patan, Gujarat",
+        "type": "Government"
+    },
+    {
+        "name": "Government Engineering College, Dahod",
+        "id": "gec-dahod",
+        "location": "Dahod, Gujarat",
+        "type": "Government"
+    },
+    {
+        "name": "Government Engineering College, Bharuch",
+        "id": "gec-bharuch",
+        "location": "Bharuch, Gujarat",
+        "type": "Government"
+    },
+    {
+        "name": "Darshan Institute of Engineering and Technology",
+        "id": "darshan-university-rajkot",
+        "location": "Rajkot, Gujarat",
+        "type": "Private"
+    },
+    {
+        "name": "Laxmi Institute of Technology, Sarigam",
+        "id": "laxmi-institute-sarigam",
+        "location": "Sarigam, Valsad, Gujarat",
+        "type": "Private"
+    },
+    {
+        "name": "CK Pithawalla College of Engineering and Technology",
+        "id": "ck-pithawalla-surat",
+        "location": "Surat, Gujarat",
+        "type": "Private"
+    },
+    {
+        "name": "SAL Institute of Technology and Engineering Research",
+        "id": "sal-institute-ahmedabad",
+        "location": "Ahmedabad, Gujarat",
+        "type": "Private"
+    },
+    {
+        "name": "Adani University",
+        "id": "adani-uni-ahmedabad",
+        "location": "Ahmedabad, Gujarat",
+        "type": "Private"
+    }
+]
