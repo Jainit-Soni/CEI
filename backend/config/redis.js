@@ -39,9 +39,29 @@ async function getRedisClient() {
         redisClient = createRedisClient();
     }
 
-    // Ensure connection is established
-    if (redisClient.status !== "ready") {
+    // Check status to avoid "already connecting/connected" errors
+    const status = redisClient.status;
+
+    if (status === "ready" || status === "connect") {
+        return redisClient;
+    }
+
+    if (status === "connecting" || status === "reconnecting") {
+        // Wait for it to be ready
+        return new Promise((resolve) => {
+            redisClient.once("ready", () => resolve(redisClient));
+            // Also handle potential errors during this wait
+            redisClient.once("error", () => resolve(redisClient));
+        });
+    }
+
+    // Only connect if it's actually disconnected/end
+    try {
         await redisClient.connect();
+    } catch (err) {
+        if (!err.message.includes("already connecting")) {
+            throw err;
+        }
     }
 
     return redisClient;
