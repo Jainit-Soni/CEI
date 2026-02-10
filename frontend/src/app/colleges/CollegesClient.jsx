@@ -428,7 +428,21 @@ function CollegesContent({ initialData }) {
                 </Container>
             </section>
 
-            <section className="list-filters-section">
+            {/* Mobile Filter Toggle */}
+            <div className="mobile-filter-toggle-container">
+                <Button
+                    variant="secondary"
+                    className="w-full justify-between"
+                    onClick={() => setIsMobileFiltersOpen(!isMobileFiltersOpen)}
+                >
+                    <span>{isMobileFiltersOpen ? "Hide Filters" : "Show Filters"}</span>
+                    <span className="text-xs bg-gray-100 px-2 py-1 rounded-full">
+                        {displayColleges.length} Results
+                    </span>
+                </Button>
+            </div>
+
+            <section className={`list-filters-section ${isMobileFiltersOpen ? "mobile-open" : ""}`}>
                 <Container>
                     <GlassPanel className="filters-panel" variant="strong">
                         <div className="filter-search">

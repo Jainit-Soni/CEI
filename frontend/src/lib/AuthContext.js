@@ -44,16 +44,19 @@ export function AuthProvider({ children }) {
 
         const initAuth = async () => {
             try {
+                console.log("[Auth] Initializing...");
                 const auth = await getFirebaseAuth();
                 const { onAuthStateChanged } = await import("firebase/auth");
 
                 unsubscribe = onAuthStateChanged(auth, (user) => {
+                    console.log("[Auth] User state changed:", user ? user.uid : "No user");
                     setUser(user);
                     setLoading(false);
                     setAuthInitialized(true);
                 });
             } catch (err) {
-                console.error("Failed to initialize auth:", err);
+                console.error("[Auth] Failed to initialize:", err);
+                // On mobile, this might be due to cookies/storage
                 setLoading(false);
                 setAuthInitialized(true);
             }

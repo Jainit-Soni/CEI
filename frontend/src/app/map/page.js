@@ -85,258 +85,196 @@ function getGlowIntensity(count) {
     return "0 0 25px rgba(52, 211, 153, 0.5), 0 0 50px rgba(52, 211, 153, 0.2)";
 }
 
-export default function MapPage() {
-    const router = useRouter();
-    const [loading, setLoading] = useState(true);
-    const [stateStats, setStateStats] = useState({});
-    const [hoveredState, setHoveredState] = useState(null);
-    const [selectedState, setSelectedState] = useState(null);
-    const [totalStats, setTotalStats] = useState({ states: 0, uts: 0, colleges: 0 });
+// Screen width detection for mobile fallback
+const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-        async function loadData() {
-            try {
-                const statsResponse = await fetchStateStats();
-                const statsMap = {};
-                statsResponse.states.forEach(state => {
-                    statsMap[state.name] = state.count;
-                });
-                setStateStats(statsMap);
-                setTotalStats({
-                    states: statsResponse.totalStates,
-                    uts: statsResponse.totalUTs,
-                    colleges: statsResponse.totalColleges
-                });
-            } catch (err) {
-                console.error("Failed to load map data:", err);
-            } finally {
-                setLoading(false);
-            }
-        }
-        loadData();
-    }, []);
-
-    const maxCount = useMemo(() => {
-        return Math.max(...Object.values(stateStats), 1);
-    }, [stateStats]);
-
-    // Generate connection lines
-    const connections = useMemo(() => {
-        const lines = [];
-        const processed = new Set();
-
-        Object.entries(STATE_NODES).forEach(([stateName, node]) => {
-            node.connections.forEach(targetName => {
-                const key = [stateName, targetName].sort().join("-");
-                if (!processed.has(key)) {
-                    processed.add(key);
-                    const target = STATE_NODES[targetName];
-                    if (target) {
-                        lines.push({
-                            from: stateName,
-                            to: targetName,
-                            x1: node.x,
-                            y1: node.y,
-                            x2: target.x,
-                            y2: target.y,
-                        });
-                    }
-                }
-            });
-        });
-        return lines;
-    }, []);
-
-    const handleStateClick = (stateName) => {
-        setSelectedState(stateName);
-        const stateId = stateName.toLowerCase().replace(/ /g, "-");
-        router.push(`/colleges?state=${stateId}`);
+useEffect(() => {
+    const checkMobile = () => {
+        setIsMobile(window.innerWidth < 900);
     };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+}, []);
 
-    if (loading) {
-        return (
-            <div className="constellation-loading">
-                <Container>
-                    <div className="constellation-loader">
-                        <div className="loader-orbit">
-                            <div className="orbit-dot"></div>
-                        </div>
-                        <p>Initializing Strategic Map...</p>
-                    </div>
-                </Container>
-            </div>
-        );
-    }
+// ... (keep existing imports and STATE_NODES) ...
 
-    const activeState = selectedState || hoveredState;
-    const activeData = activeState ? {
-        name: activeState,
-        count: stateStats[activeState] || 0,
-        connections: STATE_NODES[activeState]?.connections || [],
-    } : null;
+// Import the new list component
+import MobileMapList from "./MobileMapList";
 
-    return (
-        <div className="constellation-page">
-            <Container>
-                {/* Header */}
-                <header className="constellation-header header-fade-in">
-                    <h1 className="constellation-title">
-                        <span className="title-glow">Strategic</span> India Map
-                    </h1>
-                    <p className="constellation-subtitle">
-                        {totalStats.colleges}+ colleges across {totalStats.states} states & {totalStats.uts} UTs
-                    </p>
-                </header>
+// ... (keep existing helper functions and component logic) ...
 
-                {/* Main Map Area */}
-                <div className="constellation-layout">
-                    {/* Constellation Map */}
-                    <div className="constellation-map-container map-fade-in">
-                        <div className="constellation-map">
-                            {/* Connection Lines */}
-                            <svg className="connections-layer">
-                                {connections.map((conn, i) => {
-                                    const isActive = activeState &&
-                                        (conn.from === activeState || conn.to === activeState);
+return (
+    <div className="constellation-page">
+        <Container>
+            {/* Header */}
+            <header className="constellation-header header-fade-in">
+                <h1 className="constellation-title">
+                    <span className="title-glow">Strategic</span> India Map
+                </h1>
+                <p className="constellation-subtitle">
+                    {totalStats.colleges}+ colleges across {totalStats.states} states & {totalStats.uts} UTs
+                </p>
+            </header>
+
+            {/* Main Map Area */}
+            <div className="constellation-layout">
+                {isMobile ? (
+                    <MobileMapList
+                        stateStats={stateStats}
+                        onStateClick={handleStateClick}
+                    />
+                ) : (
+                    <>
+                        {/* Constellation Map */}
+                        <div className="constellation-map-container map-fade-in">
+                            <div className="constellation-map">
+                                {/* Connection Lines */}
+                                <svg className="connections-layer">
+                                    {connections.map((conn, i) => {
+                                        const isActive = activeState &&
+                                            (conn.from === activeState || conn.to === activeState);
+
+                                        return (
+                                            <line
+                                                key={`${conn.from}-${conn.to}`}
+                                                x1={`${conn.x1}%`}
+                                                y1={`${conn.y1}%`}
+                                                x2={`${conn.x2}%`}
+                                                y2={`${conn.y2}%`}
+                                                stroke={isActive ? "url(#activeGradient)" : "url(#lineGradient)"}
+                                                strokeWidth={isActive ? 3 : 1}
+                                                strokeOpacity={isActive ? 1 : 0.3}
+                                                className="connection-line"
+                                            />
+                                        );
+                                    })}
+                                    <defs>
+                                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.2" />
+                                            <stop offset="50%" stopColor="#7c3aed" stopOpacity="0.4" />
+                                            <stop offset="100%" stopColor="#4f46e5" stopOpacity="0.2" />
+                                        </linearGradient>
+                                        <linearGradient id="activeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stopColor="#fbbf24" stopOpacity="1" />
+                                            <stop offset="50%" stopColor="#f59e0b" stopOpacity="1" />
+                                            <stop offset="100%" stopColor="#fbbf24" stopOpacity="1" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+
+                                {/* State Nodes */}
+                                {Object.entries(STATE_NODES).map(([stateName, node], index) => {
+                                    const count = stateStats[stateName] || 0;
+                                    const isHovered = hoveredState === stateName;
+                                    const isSelected = selectedState === stateName;
+                                    const isActive = isHovered || isSelected;
+                                    const size = getNodeSize(count);
+                                    const color = getNodeColor(count);
+                                    const glow = getGlowIntensity(count);
 
                                     return (
-                                        <line
-                                            key={`${conn.from}-${conn.to}`}
-                                            x1={`${conn.x1}%`}
-                                            y1={`${conn.y1}%`}
-                                            x2={`${conn.x2}%`}
-                                            y2={`${conn.y2}%`}
-                                            stroke={isActive ? "url(#activeGradient)" : "url(#lineGradient)"}
-                                            strokeWidth={isActive ? 3 : 1}
-                                            strokeOpacity={isActive ? 1 : 0.3}
-                                            className="connection-line"
-                                        />
+                                        <div
+                                            key={stateName}
+                                            className={`state-node ${isActive ? "active" : ""} ${count === 0 ? "empty" : ""}`}
+                                            style={{
+                                                left: `${node.x}%`,
+                                                top: `${node.y}%`,
+                                                width: size,
+                                                height: size,
+                                                backgroundColor: color,
+                                                boxShadow: glow,
+                                                transform: isActive ? 'scale(1.3)' : 'scale(1)',
+                                            }}
+                                            onMouseEnter={() => setHoveredState(stateName)}
+                                            onMouseLeave={() => setHoveredState(null)}
+                                            onClick={() => handleStateClick(stateName)}
+                                        >
+                                            {/* Inner pulse */}
+                                            <div className="node-pulse" />
+
+                                            {/* Count badge */}
+                                            {count > 0 && (
+                                                <span className="node-count">{count}</span>
+                                            )}
+                                        </div>
                                     );
                                 })}
-                                <defs>
-                                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.2" />
-                                        <stop offset="50%" stopColor="#7c3aed" stopOpacity="0.4" />
-                                        <stop offset="100%" stopColor="#4f46e5" stopOpacity="0.2" />
-                                    </linearGradient>
-                                    <linearGradient id="activeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stopColor="#fbbf24" stopOpacity="1" />
-                                        <stop offset="50%" stopColor="#f59e0b" stopOpacity="1" />
-                                        <stop offset="100%" stopColor="#fbbf24" stopOpacity="1" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
+                            </div>
+                        </div>
 
-                            {/* State Nodes */}
-                            {Object.entries(STATE_NODES).map(([stateName, node], index) => {
-                                const count = stateStats[stateName] || 0;
-                                const isHovered = hoveredState === stateName;
-                                const isSelected = selectedState === stateName;
-                                const isActive = isHovered || isSelected;
-                                const size = getNodeSize(count);
-                                const color = getNodeColor(count);
-                                const glow = getGlowIntensity(count);
-
-                                return (
+                        {/* Info Panel - Fixed position, no cutoff issues */}
+                        {activeData && (
+                            <div
+                                key={activeData.name}
+                                className="info-panel info-panel-slide-in"
+                            >
+                                <div className="panel-header">
+                                    <h3 className="panel-title">{activeData.name}</h3>
                                     <div
-                                        key={stateName}
-                                        className={`state-node ${isActive ? "active" : ""} ${count === 0 ? "empty" : ""}`}
-                                        style={{
-                                            left: `${node.x}%`,
-                                            top: `${node.y}%`,
-                                            width: size,
-                                            height: size,
-                                            backgroundColor: color,
-                                            boxShadow: glow,
-                                            transform: isActive ? 'scale(1.3)' : 'scale(1)',
-                                        }}
-                                        onMouseEnter={() => setHoveredState(stateName)}
-                                        onMouseLeave={() => setHoveredState(null)}
-                                        onClick={() => handleStateClick(stateName)}
-                                    >
-                                        {/* Inner pulse */}
-                                        <div className="node-pulse" />
+                                        className="panel-indicator"
+                                        style={{ backgroundColor: getNodeColor(activeData.count) }}
+                                    />
+                                </div>
 
-                                        {/* Count badge */}
-                                        {count > 0 && (
-                                            <span className="node-count">{count}</span>
-                                        )}
+                                <div className="panel-stats">
+                                    <div className="stat-item">
+                                        <span className="stat-value">{activeData.count}</span>
+                                        <span className="stat-label">Colleges</span>
                                     </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-
-                    {/* Info Panel - Fixed position, no cutoff issues */}
-                    {activeData && (
-                        <div
-                            key={activeData.name}
-                            className="info-panel info-panel-slide-in"
-                        >
-                            <div className="panel-header">
-                                <h3 className="panel-title">{activeData.name}</h3>
-                                <div
-                                    className="panel-indicator"
-                                    style={{ backgroundColor: getNodeColor(activeData.count) }}
-                                />
-                            </div>
-
-                            <div className="panel-stats">
-                                <div className="stat-item">
-                                    <span className="stat-value">{activeData.count}</span>
-                                    <span className="stat-label">Colleges</span>
-                                </div>
-                                <div className="stat-item">
-                                    <span className="stat-value">{activeData.connections.length}</span>
-                                    <span className="stat-label">Neighbors</span>
-                                </div>
-                            </div>
-
-                            {activeData.connections.length > 0 && (
-                                <div className="panel-connections">
-                                    <span className="connections-label">Connected to:</span>
-                                    <div className="connections-list">
-                                        {activeData.connections.map(conn => (
-                                            <span key={conn} className="connection-tag">{conn}</span>
-                                        ))}
+                                    <div className="stat-item">
+                                        <span className="stat-value">{activeData.connections.length}</span>
+                                        <span className="stat-label">Neighbors</span>
                                     </div>
                                 </div>
-                            )}
 
-                            <button className="explore-btn" onClick={() => handleStateClick(activeData.name)}>
-                                Explore Colleges →
-                            </button>
-                        </div>
-                    )}
-                </div>
+                                {activeData.connections.length > 0 && (
+                                    <div className="panel-connections">
+                                        <span className="connections-label">Connected to:</span>
+                                        <div className="connections-list">
+                                            {activeData.connections.map(conn => (
+                                                <span key={conn} className="connection-tag">{conn}</span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
 
-                {/* Legend */}
-                <div className="constellation-legend legend-fade-in">
-                    <div className="legend-title">College Density</div>
-                    <div className="legend-nodes">
-                        <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#fbbf24", boxShadow: "0 0 20px #fbbf24" }}></span>
-                            <span>High (40+)</span>
-                        </div>
-                        <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#60a5fa", boxShadow: "0 0 20px #60a5fa" }}></span>
-                            <span>Medium (20-40)</span>
-                        </div>
-                        <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#a78bfa", boxShadow: "0 0 20px #a78bfa" }}></span>
-                            <span>Low (10-20)</span>
-                        </div>
-                        <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#34d399", boxShadow: "0 0 20px #34d399" }}></span>
-                            <span>Few (1-10)</span>
-                        </div>
-                        <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#64748b", boxShadow: "0 0 20px #64748b" }}></span>
-                            <span>None</span>
-                        </div>
+                                <button className="explore-btn" onClick={() => handleStateClick(activeData.name)}>
+                                    Explore Colleges →
+                                </button>
+                            </div>
+                        )}
+                    </>
+                )}
+            </div>
+
+            {/* Legend */}
+            <div className="constellation-legend legend-fade-in">
+                <div className="legend-title">College Density</div>
+                <div className="legend-nodes">
+                    <div className="legend-node">
+                        <span className="node-dot" style={{ background: "#fbbf24", boxShadow: "0 0 20px #fbbf24" }}></span>
+                        <span>High (40+)</span>
+                    </div>
+                    <div className="legend-node">
+                        <span className="node-dot" style={{ background: "#60a5fa", boxShadow: "0 0 20px #60a5fa" }}></span>
+                        <span>Medium (20-40)</span>
+                    </div>
+                    <div className="legend-node">
+                        <span className="node-dot" style={{ background: "#a78bfa", boxShadow: "0 0 20px #a78bfa" }}></span>
+                        <span>Low (10-20)</span>
+                    </div>
+                    <div className="legend-node">
+                        <span className="node-dot" style={{ background: "#34d399", boxShadow: "0 0 20px #34d399" }}></span>
+                        <span>Few (1-10)</span>
+                    </div>
+                    <div className="legend-node">
+                        <span className="node-dot" style={{ background: "#64748b", boxShadow: "0 0 20px #64748b" }}></span>
+                        <span>None</span>
                     </div>
                 </div>
-            </Container >
-        </div >
-    );
+            </div>
+        </Container >
+    </div >
+);
 }

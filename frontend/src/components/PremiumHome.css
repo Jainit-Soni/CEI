@@ -170,23 +170,75 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .premium-home {
+        padding: 0 24px;
+        /* Prevent horizontal overflow */
+        height: auto;
+        min-height: 100vh;
+        padding-top: 110px;
+        /* Space from top */
+    }
+
+    .premium-container {
+        padding-bottom: 80px;
+    }
+
+    .premium-kicker {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        margin-bottom: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .premium-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
+        /* Further reduced for safety */
+        line-height: 1.05;
+        margin-bottom: 20px;
+        letter-spacing: -0.02em;
     }
 
     .premium-mission {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        padding: 0 4px;
+        margin-bottom: 40px;
+        font-weight: 400;
+    }
+
+    .premium-actions {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        max-width: 400px;
+        /* Constrain width */
+        margin: 0 auto;
     }
 
     .btn-premium-goal {
-        padding: 20px 32px;
-        font-size: 0.8rem;
+        width: 100%;
+        justify-content: center;
+        padding: 18px 30px;
+        font-size: 0.9rem;
     }
 
     .premium-badges {
+        margin-top: 50px;
         flex-direction: column;
         gap: 20px;
         align-items: center;
+        width: 100%;
+    }
+
+    .badge-item {
+        background: rgba(255, 255, 255, 0.6);
+        padding: 10px 20px;
+        border-radius: 99px;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+        backdrop-filter: blur(8px);
     }
 }
