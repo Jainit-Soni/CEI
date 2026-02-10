@@ -205,7 +205,7 @@
     margin-top: var(--space-4);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .dashboard-content {
         grid-template-columns: 1fr;
     }
@@ -214,12 +214,16 @@
         flex-direction: row;
         overflow-x: auto;
         padding-bottom: var(--space-2);
+        gap: var(--space-2);
+        border-bottom: 1px solid var(--color-stroke);
+        margin-bottom: var(--space-6);
     }
 
     .dashboard-nav-item {
         white-space: nowrap;
         border-left: none;
         border-bottom: 3px solid transparent;
+        padding: var(--space-3) var(--space-4);
     }
 
     .dashboard-nav-item.active {

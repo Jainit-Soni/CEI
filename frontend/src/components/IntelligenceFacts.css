@@ -223,9 +223,9 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .intel-facts-section {
-        padding: 60px 20px;
+        padding: 60px 24px;
     }
 
     .intel-header {
@@ -233,21 +233,23 @@
     }
 
     .intel-main-title {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 8vw, 3rem);
     }
 
     .intel-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     .intel-card {
-        padding: 24px;
-        border-radius: 24px;
+        padding: 28px;
+        border-radius: 32px;
     }
 
     .intel-value {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .intel-banner {
@@ -268,5 +270,19 @@
 
     .banner-text p {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .intel-facts-section {
+        padding: 40px 16px;
+    }
+
+    .intel-card {
+        padding: 20px;
+    }
+
+    .intel-value {
+        font-size: 1.8rem;
     }
 }

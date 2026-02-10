@@ -155,7 +155,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .header {
     top: 10px;
     padding: 0 16px;
@@ -223,14 +223,14 @@
   }
 
   .mobile-nav-links a:active {
-    background: rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.05);
   }
 
   .mobile-nav-links a.active {
     color: #3b82f6;
     background: rgba(59, 130, 246, 0.05);
   }
-  
+
   .mobile-badge {
     font-size: 1rem;
     color: #ef4444;

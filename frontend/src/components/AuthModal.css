@@ -283,21 +283,41 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .auth-modal-glass {
         flex-direction: column;
         width: 100%;
         height: auto;
-        max-width: 400px;
+        min-height: 100vh;
+        border-radius: 0;
+        max-width: none;
     }
 
     .auth-brand-glass {
         padding: 2rem;
         flex: none;
-        height: 200px;
+        height: 240px;
     }
 
     .auth-form-glass {
-        padding: 2rem;
+        padding: 3rem 2rem;
+        flex: 1;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .auth-close-glass {
+        top: 1rem;
+        right: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-header-glass h2 {
+        font-size: 1.75rem;
+    }
+
+    .brand-copy-glass h3 {
+        font-size: 1.35rem;
     }
 }

@@ -170,7 +170,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .premium-home {
         padding: 0 24px;
         /* Prevent horizontal overflow */
@@ -193,8 +193,7 @@
     }
 
     .premium-title {
-        font-size: 3rem;
-        /* Further reduced for safety */
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
         line-height: 1.05;
         margin-bottom: 20px;
         letter-spacing: -0.02em;
@@ -226,19 +225,28 @@
 
     .premium-badges {
         margin-top: 50px;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
-        align-items: center;
         width: 100%;
+        max-width: 600px;
     }
 
     .badge-item {
         background: rgba(255, 255, 255, 0.6);
-        padding: 10px 20px;
+        padding: 12px 20px;
         border-radius: 99px;
-        width: 100%;
-        max-width: 300px;
         justify-content: center;
         backdrop-filter: blur(8px);
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-title {
+        font-size: 2.2rem;
+    }
+
+    .premium-badges {
+        grid-template-columns: 1fr;
     }
 }

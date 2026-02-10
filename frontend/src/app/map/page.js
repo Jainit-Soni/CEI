@@ -90,7 +90,7 @@ const [isMobile, setIsMobile] = useState(false);
 
 useEffect(() => {
     const checkMobile = () => {
-        setIsMobile(window.innerWidth < 900);
+        setIsMobile(window.innerWidth < 1024);
     };
     checkMobile();
     window.addEventListener('resize', checkMobile);

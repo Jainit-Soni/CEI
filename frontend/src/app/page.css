@@ -284,9 +284,9 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-@media (min-width: 900px) {
+@media (max-width: 1024px) {
   .card-grid-4 {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -383,7 +383,13 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .home-hero {
+    padding-top: 100px;
+    height: auto;
+    min-height: 80vh;
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -422,5 +428,11 @@
 
   .tip-content {
     align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .home-hero {
+    padding-top: 80px;
   }
 }

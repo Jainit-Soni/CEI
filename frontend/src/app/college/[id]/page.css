@@ -233,7 +233,7 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .college-hero {
     padding-top: 100px;
     padding-bottom: 40px;

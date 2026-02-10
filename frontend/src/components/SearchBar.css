@@ -34,8 +34,22 @@
   background: linear-gradient(135deg, #3b82f6, #6366f1);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .search-bar {
     grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar input {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+
+  .scope button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 }

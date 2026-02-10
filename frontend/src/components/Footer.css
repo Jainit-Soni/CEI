@@ -217,7 +217,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -229,9 +229,19 @@
     gap: 32px;
   }
 
+  .footer-logo-text {
+    font-size: 1.8rem;
+  }
+
   .footer-bottom-bar {
     flex-direction: column;
     gap: 16px;
     text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-premium {
+    padding: 60px 16px 30px;
   }
 }
