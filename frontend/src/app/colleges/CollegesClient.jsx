@@ -418,9 +418,11 @@ function CollegesContent({ initialData }) {
                     className="w-full justify-between"
                     onClick={() => setIsMobileFiltersOpen(!isMobileFiltersOpen)}
                 >
-                    <span>{isMobileFiltersOpen ? "Hide Filters" : "Show Filters"}</span>
-                    <span className="text-xs bg-gray-100 px-2 py-1 rounded-full">
-                        {displayColleges.length} Results
+                    <div className="flex items-center gap-2">
+                        <span>{isMobileFiltersOpen ? "Hide Filters" : "Filter Colleges"}</span>
+                    </div>
+                    <span className="text-xs bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full">
+                        {pagination?.totalCount || displayColleges.length} Results
                     </span>
                 </Button>
             </div>
@@ -467,7 +469,7 @@ function CollegesContent({ initialData }) {
 
                         <div className="filter-meta">
                             <span className="filter-count">
-                                Showing <strong>{displayColleges.length}</strong> {pagination?.totalCount > displayColleges.length ? `of ${pagination.totalCount}` : ""} Results
+                                <strong>{pagination?.totalCount || displayColleges.length}</strong> Colleges Found Matching
                             </span>
                             {hasActiveFilters && (
                                 <Button variant="secondary" onClick={clearFilters}>

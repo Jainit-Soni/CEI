@@ -465,9 +465,16 @@ export default function ApplicationBoard() {
 
                 .list-header-row, .mylist-row {
                     display: grid;
-                    grid-template-columns: 60px minmax(0, 2.5fr) minmax(0, 1.2fr) 100px;
-                    gap: 20px;
+                    grid-template-columns: 60px minmax(0, 1fr) 100px;
+                    gap: 12px;
                     align-items: center;
+                }
+
+                @media (min-width: 768px) {
+                    .list-header-row, .mylist-row {
+                        grid-template-columns: 60px minmax(0, 2.5fr) minmax(0, 1.2fr) 100px;
+                        gap: 20px;
+                    }
                 }
 
                 .list-header-row {
@@ -479,6 +486,16 @@ export default function ApplicationBoard() {
                     letter-spacing: 0.1em;
                     border-bottom: 2px solid #f1f5f9;
                     margin-bottom: 16px;
+                }
+
+                .list-header-row .col-stats {
+                    display: none;
+                }
+
+                @media (min-width: 768px) {
+                    .list-header-row .col-stats {
+                        display: block;
+                    }
                 }
 
                 .mylist-row {
@@ -521,13 +538,16 @@ export default function ApplicationBoard() {
                 }
 
                 .row-title {
-                    font-size: 1.15rem;
+                    font-size: 1.1rem;
                     font-weight: 700;
                     color: #1e40af;
                     margin: 0 0 4px 0;
-                    white-space: nowrap;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    line-height: 1.25;
                 }
 
                 .row-meta {

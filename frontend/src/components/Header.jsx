@@ -2,17 +2,18 @@
 import "./Header.css";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Button from "./Button";
 import AuthModal from "./AuthModal";
 import UserDropdown from "./UserDropdown";
 import { useAuth } from "@/lib/AuthContext";
-import { Heart, Menu, X } from "lucide-react";
+import { Heart, Menu, X, ArrowLeft } from "lucide-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const { user, loading } = useAuth();
   const [choiceCount, setChoiceCount] = useState(0);
 
@@ -71,8 +72,19 @@ export default function Header() {
     <>
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="header-inner">
-          {/* Logo */}
-          <Link href="/" className="logo">CEI</Link>
+          {/* Logo & Back Button */}
+          <div className="logo-group">
+            {pathname !== "/" && (
+              <button
+                className="back-button"
+                onClick={() => router.back()}
+                aria-label="Go Back"
+              >
+                <ArrowLeft size={20} />
+              </button>
+            )}
+            <Link href="/" className="logo">CEI</Link>
+          </div>
 
           {/* Desktop Nav */}
           <nav className="nav desktop-nav">

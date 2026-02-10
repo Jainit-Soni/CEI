@@ -290,6 +290,14 @@
 
   .list-filters-section.mobile-open {
     display: block;
+    padding-bottom: 40px;
+  }
+
+  .list-filters-section .filters-panel {
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background: transparent;
   }
 }
 

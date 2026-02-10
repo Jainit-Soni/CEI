@@ -287,10 +287,13 @@
     .auth-modal-glass {
         flex-direction: column;
         width: 100%;
-        height: auto;
-        min-height: 100vh;
+        height: 100vh;
+        /* Force full height */
         border-radius: 0;
         max-width: none;
+        overflow-y: auto;
+        /* Allow internal scroll */
+        -webkit-overflow-scrolling: touch;
     }
 
     .auth-brand-glass {
@@ -300,10 +303,13 @@
     }
 
     .auth-form-glass {
-        padding: 3rem 2rem;
+        padding: 3rem 2rem 5rem;
+        /* Extra bottom padding for mobile scroll safety */
         flex: 1;
         border-left: none;
         border-top: 1px solid rgba(255, 255, 255, 0.5);
+        background: white;
+        /* Ensure solid bg on mobile */
     }
 
     .auth-close-glass {

@@ -58,6 +58,35 @@
   padding-left: 8px;
 }
 
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0f172a;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.back-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 1024px) {
+  .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* Desktop Nav */
 .desktop-nav {
   display: flex;
