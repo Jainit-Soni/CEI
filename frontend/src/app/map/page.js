@@ -1,4 +1,5 @@
 "use client";
+// Build Trigger: Finalizing Neural Map Structure
 
 import { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
