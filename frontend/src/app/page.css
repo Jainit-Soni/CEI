@@ -25,6 +25,20 @@
   gap: 120px;
 }
 
+.tools-solo-layout {
+  display: flex;
+  justify-content: center;
+}
+
+.tool-block.centered {
+  max-width: 900px;
+  width: 100%;
+}
+
+.centered-text {
+  text-align: center;
+}
+
 .tool-info {
   text-align: center;
   margin-bottom: 40px;

@@ -36,7 +36,7 @@ export default function CollegeDetailClient({ id, initialData }) {
 
     if (isLoading) {
         return (
-            <div className="detail-page">
+            <div className="detail-page-loading">
                 <Container>
                     <DetailSkeleton />
                 </Container>
@@ -46,7 +46,7 @@ export default function CollegeDetailClient({ id, initialData }) {
 
     if (error || !college) {
         return (
-            <div className="detail-page">
+            <div className="detail-page-error">
                 <Container>
                     <div className="detail-back-row">
                         <Button href="/colleges" variant="ghost">← Back to Colleges</Button>
@@ -66,18 +66,15 @@ export default function CollegeDetailClient({ id, initialData }) {
     }
 
     return (
-        <div className="college-detail-page-v2">
+        <div className="college-profile-v3">
+            {/* 1. Cinematic Hero (Full Width) */}
+            <CollegeHero college={college} />
+
             <Container>
-                {/* 1. Back Nav */}
-                <div style={{ padding: '0.5rem 0' }}>
-                    <Button href="/colleges" variant="ghost" className="back-btn-simple">← Back to Colleges</Button>
+                {/* 2. Tabbed Content Area */}
+                <div className="profile-content-wrapper">
+                    <CollegeTabs college={college} />
                 </div>
-
-                {/* 2. Hero Section (Premium) */}
-                <CollegeHero college={college} />
-
-                {/* 3. Tabbed Content Area */}
-                <CollegeTabs college={college} />
             </Container>
         </div>
     );

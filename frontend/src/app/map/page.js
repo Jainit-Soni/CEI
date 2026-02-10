@@ -161,7 +161,7 @@ export default function MapPage() {
                         <div className="loader-orbit">
                             <div className="orbit-dot"></div>
                         </div>
-                        <p>Initializing Neural Map...</p>
+                        <p>Initializing Strategic Map...</p>
                     </div>
                 </Container>
             </div>
@@ -181,7 +181,7 @@ export default function MapPage() {
                 {/* Header */}
                 <header className="constellation-header header-fade-in">
                     <h1 className="constellation-title">
-                        <span className="title-glow">Neural</span> India Map
+                        <span className="title-glow">Strategic</span> India Map
                     </h1>
                     <p className="constellation-subtitle">
                         {totalStats.colleges}+ colleges across {totalStats.states} states & {totalStats.uts} UTs

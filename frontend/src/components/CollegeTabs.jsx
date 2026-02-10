@@ -34,6 +34,15 @@ const parseCurrency = (str) => {
 export default function CollegeTabs({ college }) {
     const [activeTab, setActiveTab] = useState("overview");
 
+    const sanitizeCurrency = (val) => {
+        if (!val) return "N/A";
+        // Convert to string and replace mangled UTF-8 bytes (E2 82 B9 interpreted as ISO-8859-1) or literal ₹
+        return val.toString().replace(/[^\x20-\x7E₹]/g, '').replace(/₹/g, 'INR ').replace(/â‚¹/g, 'INR ').trim();
+    };
+
+    const avgPkg = sanitizeCurrency(college.placements?.averagePackage);
+    const highPkg = sanitizeCurrency(college.placements?.highestPackage);
+
     const tabs = [
         { id: "overview", label: "Overview", icon: "🏢" },
         { id: "cutoffs", label: "Cutoffs", icon: "📊" },
@@ -43,18 +52,20 @@ export default function CollegeTabs({ college }) {
 
     return (
         <div className="college-tabs-container">
-            {/* Tab Navigation */}
-            <div className="tabs-nav">
-                {tabs.map(tab => (
-                    <button
-                        key={tab.id}
-                        className={`tab-item ${activeTab === tab.id ? "active" : ""}`}
-                        onClick={() => setActiveTab(tab.id)}
-                    >
-                        <span className="tab-icon">{tab.icon}</span>
-                        {tab.label}
-                    </button>
-                ))}
+            {/* Sticky Tab Navigation */}
+            <div className="tabs-sticky-wrapper">
+                <div className="tabs-nav">
+                    {tabs.map(tab => (
+                        <button
+                            key={tab.id}
+                            className={`tab-item ${activeTab === tab.id ? "active" : ""}`}
+                            onClick={() => setActiveTab(tab.id)}
+                        >
+                            <span className="tab-icon">{tab.icon}</span>
+                            {tab.label}
+                        </button>
+                    ))}
+                </div>
             </div>
 
             {/* Tab Content */}
@@ -62,52 +73,54 @@ export default function CollegeTabs({ college }) {
 
                 {activeTab === "overview" && (
                     <div className="tab-pane fade-in">
-                        <div className="overview-grid">
-                            <GlassPanel className="ov-panel" variant="soft">
-                                <h3>About {college.shortName || "Institute"}</h3>
-                                <p className="overview-text">
-                                    {college.overview || `${college.name} is a premier institute located in ${college.location}. It offers a wide range of programs and has a strong reputation for academic excellence.`}
-                                </p>
+                        <div className="premium-tab-card">
+                            <h3 className="tab-heading">About {college.shortName || "Institute"}</h3>
+                            <p className="overview-text">
+                                {college.overview || `${college.name} is a premier institute located in ${college.location}. It offers a wide range of programs and has a strong reputation for academic excellence.`}
+                            </p>
 
-                                <div className="detail-meta-blocks">
-                                    <div className="meta-block">
-                                        <strong>Campus Size</strong>
-                                        <span>{college.campus || "N/A"}</span>
-                                    </div>
-                                    <div className="meta-block">
-                                        <strong>ownership</strong>
-                                        <span>{college.meta?.ownership || "Private"}</span>
-                                    </div>
-                                    <div className="meta-block">
-                                        <strong>Estd. Year</strong>
-                                        <span>{college.meta?.establishedYear || "—"}</span>
-                                    </div>
+                            <div className="detail-meta-blocks">
+                                <div className="meta-block">
+                                    <strong>Campus Size</strong>
+                                    {/* Use meta.campusSize if available, otherwise check if campus field looks like a size, else N/A */}
+                                    <span>{college.meta?.campusSize || (college.campus && college.campus.includes("Acres") ? college.campus : "N/A")}</span>
                                 </div>
-                            </GlassPanel>
+                                <div className="meta-block">
+                                    <strong>Ownership</strong>
+                                    <span>{college.meta?.ownership || "Private"}</span>
+                                </div>
+                                <div className="meta-block">
+                                    <strong>Estd. Year</strong>
+                                    <span>{college.meta?.establishedYear || "—"}</span>
+                                </div>
+                            </div>
+                        </div>
 
-                            <GlassPanel className="ov-panel" variant="soft">
-                                <h3>Programs Offered</h3>
-                                <ul className="program-list-compact">
-                                    {(college.courses || []).map((course, idx) => (
-                                        <li key={idx}>
-                                            <span className="prog-name">{course.name}</span>
-                                            <span className="prog-dur">{course.duration}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </GlassPanel>
+                        <div className="premium-tab-card">
+                            <h3 className="tab-heading">Programs Offered</h3>
+                            <ul className="program-list-compact">
+                                {(college.courses || []).map((course, idx) => (
+                                    <li key={idx}>
+                                        <span className="prog-name">{course.name}</span>
+                                        <span className="prog-dur">{course.duration}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 )}
 
                 {activeTab === "cutoffs" && (
                     <div className="tab-pane fade-in">
-                        <GlassPanel variant="soft">
+                        <div className="premium-tab-card">
                             <div className="cutoff-header">
-                                <h3>Accepted Exams & Cutoffs</h3>
+                                <h3 className="tab-heading" style={{ margin: 0 }}>Accepted Exams</h3>
                                 <div className="exam-badges">
                                     {(college.acceptedExams || []).map(e => (
-                                        <span key={e} className="exam-badge">{e.toUpperCase()}</span>
+                                        <span key={e} className="exam-badge">
+                                            {/* Clean exam name: remove year patterns like 2024, 2023 */}
+                                            {e.replace(/\s*20\d\d\s*/, "").toUpperCase()}
+                                        </span>
                                     ))}
                                 </div>
                             </div>
@@ -116,11 +129,23 @@ export default function CollegeTabs({ college }) {
                                 <div className="cutoff-list">
                                     {college.pastCutoffs.map((cutoff, idx) => (
                                         <div key={idx} className="cutoff-row">
-                                            <div className="cutoff-exam">{cutoff.examId.toUpperCase()} {cutoff.year}</div>
+                                            <div className="cutoff-exam">{cutoff.examId.replace(/\s*20\d\d\s*/, "").toUpperCase()} {cutoff.year}</div>
                                             <div className="cutoff-data">
-                                                {cutoff.cutoff.split('|').map((c, i) => (
-                                                    <span key={i} className="cutoff-chip">{c.trim()}</span>
-                                                ))}
+                                                {cutoff.cutoff.toLowerCase().includes("check official website") ? (
+                                                    <a
+                                                        href={college.officialUrl}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="cutoff-link"
+                                                        style={{ color: '#2563eb', textDecoration: 'underline', cursor: 'pointer' }}
+                                                    >
+                                                        Check Official Website ↗
+                                                    </a>
+                                                ) : (
+                                                    cutoff.cutoff.split('|').map((c, i) => (
+                                                        <span key={i} className="cutoff-chip">{c.trim()}</span>
+                                                    ))
+                                                )}
                                             </div>
                                         </div>
                                     ))}
@@ -130,37 +155,37 @@ export default function CollegeTabs({ college }) {
                                     Detailed cutoff data is being aggregated. Please check back soon.
                                 </div>
                             )}
-                        </GlassPanel>
+                        </div>
                     </div>
                 )}
 
                 {activeTab === "placements" && (
                     <div className="tab-pane fade-in">
                         {college.placements ? (
-                            <GlassPanel variant="soft">
-                                <h3>Placement Highlights 🚀</h3>
+                            <div className="premium-tab-card">
+                                <h3 className="tab-heading">Placement Highlights 🚀</h3>
                                 <div className="placement-grid-premium">
                                     <div className="placement-card highlight">
                                         <span className="p-label">Average Package</span>
-                                        <span className="p-value">{college.placements.averagePackage}</span>
+                                        <span className="p-value">{avgPkg}</span>
                                     </div>
                                     <div className="placement-card">
                                         <span className="p-label">Highest Package</span>
-                                        <span className="p-value">{college.placements.highestPackage}</span>
+                                        <span className="p-value">{highPkg}</span>
                                     </div>
                                 </div>
 
                                 <div className="recruiters-section">
-                                    <h4>Top Recruiters</h4>
+                                    <h4 style={{ marginBottom: '16px', fontWeight: '600', color: '#334155' }}>Top Recruiters</h4>
                                     <div className="recruiters-cloud">
                                         {(college.topRecruiters || []).map((r, i) => (
                                             <span key={i} className="recruiter-tag">{r}</span>
                                         ))}
                                     </div>
                                 </div>
-                            </GlassPanel>
+                            </div>
                         ) : (
-                            <div className="empty-tab-state">
+                            <div className="premium-tab-card empty-tab-state">
                                 Placement reports are yet to be verified for this institute.
                             </div>
                         )}

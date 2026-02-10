@@ -2,13 +2,13 @@
 import ExamDetailClient from "./ExamDetailClient";
 
 import JsonLd from "@/components/JsonLd";
-import { getExam } from "@/lib/api";
+import { fetchExam } from "@/lib/api";
 
 // Enable dynamic params for exams not in static list
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
-  const exam = await getExam(params.id);
+  const exam = await fetchExam(params.id);
   if (!exam) return { title: "Exam Not Found" };
 
   return {
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ExamDetail({ params }) {
-  const exam = await getExam(params.id);
+  const exam = await fetchExam(params.id);
 
   const jsonLd = exam ? {
     "@context": "https://schema.org",

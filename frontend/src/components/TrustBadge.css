@@ -2,24 +2,29 @@
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    background: #ecfdf5;
-    color: #059669;
-    padding: 2px 8px;
-    border-radius: 12px;
+    padding: 2px 0;
     font-size: 0.75rem;
     font-weight: 600;
-    border: 1px solid #d1fae5;
+    color: #059669;
+    /* Emerald 600 */
     cursor: help;
     position: relative;
+    /* transition: all 0.2s ease; */
 }
 
 .trust-badge svg {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    /* Slightly larger icon */
+    height: 16px;
 }
 
-.trust-badge:hover .trust-tooltip {
-    display: block;
+.trust-badge span {
+    /* Hide text by default for cleaner look, only show checkmark */
+    display: none;
+}
+
+.trust-badge:hover span {
+    display: inline;
 }
 
 .trust-tooltip {
@@ -28,19 +33,35 @@
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: #1f2937;
+    background: var(--color-ink);
     color: white;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 0.7rem;
+    padding: 8px 12px;
+    border-radius: var(--radius-m);
+    font-size: 0.75rem;
     white-space: nowrap;
-    margin-bottom: 6px;
-    z-index: 10;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+    z-index: 20;
+    box-shadow: var(--shadow-md);
+}
+
+.trust-badge:hover .trust-tooltip {
+    display: block;
+    animation: tooltipFade 0.2s ease;
+}
+
+@keyframes tooltipFade {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
 .trust-badge.unverified {
-    background: #f3f4f6;
-    color: #6b7280;
-    border-color: #e5e7eb;
+    color: #9ca3af;
+    /* Gray 400 */
 }

@@ -213,7 +213,7 @@ export default function AdmissionProbability() {
 
                     const parts = cp.cutoff.split("|");
                     parts.forEach(p => {
-                        const match = p.match(/(.*?):\s*(\d+(\.\d+)?)/);
+                        const match = p.match(/(.*?):\s*(?:Rank\s*|AIR\s*)?(\d+(\.\d+)?)/i);
                         if (match) {
                             const branch = match[1].trim();
                             const threshold = parseFloat(match[2]);

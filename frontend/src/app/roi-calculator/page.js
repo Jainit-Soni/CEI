@@ -9,18 +9,15 @@ export const metadata = {
 
 export default function ROICalculatorPage() {
     return (
-        <div className="roi-page" style={{ paddingTop: '8rem', paddingBottom: '4rem', position: 'relative', zIndex: 1 }}>
+        <div className="roi-page" style={{ marginTop: '8rem', paddingBottom: '4rem', position: 'relative' }}>
             <Container>
                 <div style={{ maxWidth: '800px', margin: '0 auto' }}>
                     <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
-                        <Button href="/" variant="ghost" style={{ marginBottom: '1rem' }}>← Back to Home</Button>
                         <h1 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#0f172a', marginBottom: '0.5rem', fontFamily: 'var(--font-display)' }}>
-                            True ROI <span style={{ color: '#059669' }}>Calculator</span>
+                            True ROI <span style={{ color: '#0ea5e9' }}>Simulator</span>
                         </h1>
                         <p style={{ color: '#64748b', fontSize: '1.1rem', lineHeight: '1.6' }}>
-                            Most students only look at the placement package. We help you look at the <strong>investment</strong>.
-                            <br />
-                            Calculate how long it will take to be debt-free and profitable.
+                            Simulate your financial future. Calculate break-even time and real disposable income.
                         </p>
                     </div>
 

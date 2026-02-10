@@ -1,10 +1,23 @@
 ﻿import TrustBadge from "./TrustBadge";
 import AddToCompareButton from "./AddToCompareButton";
+import FavoriteButton from "./FavoriteButton";
+import AddToChoiceButton from "./AddToChoiceButton";
+import "./Card.css";
 
-export default function Card({ title, subtitle, tags = [], meta = [], type = "default", variant, href, trust, badge }) {
+export default function Card({ title, subtitle, tags = [], meta = [], type = "default", variant, href, trust, badge, data = {} }) {
   const resolvedType = variant || type;
   const metaList = Array.isArray(meta) ? meta : meta ? [meta] : [];
   const isExternal = href && (href.startsWith('http') || href.startsWith('//'));
+
+  // Common Props for buttons - Merge full data if provided
+  const collegeData = {
+    ...data,
+    id: href?.split('/').pop() || data?.id,
+    name: title || data?.name,
+    title: title || data?.title,
+    subtitle: subtitle || data?.subtitle,
+    shortName: title || data?.shortName || data?.name
+  };
 
   const card = (
     <div className={`card card-${resolvedType}`}>
@@ -34,8 +47,21 @@ export default function Card({ title, subtitle, tags = [], meta = [], type = "de
           ))}
         </div>
       )}
+
       {resolvedType === "college" && (
-        <AddToCompareButton college={{ title, subtitle, id: href?.split('/').pop(), name: title, shortName: title }} className="card-compare-btn" />
+        <div
+          className="card-footer"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          }}
+        >
+          <div className="card-footer-left">
+            <FavoriteButton type="colleges" id={collegeData.id} item={collegeData} size="sm" />
+            <AddToCompareButton college={collegeData} />
+          </div>
+          <AddToChoiceButton college={collegeData} />
+        </div>
       )}
     </div>
   );
@@ -43,6 +69,7 @@ export default function Card({ title, subtitle, tags = [], meta = [], type = "de
     <a
       href={href}
       {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
+      style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}
     >
       {card}
     </a>

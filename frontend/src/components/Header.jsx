@@ -7,7 +7,7 @@ import Button from "./Button";
 import AuthModal from "./AuthModal";
 import UserDropdown from "./UserDropdown";
 import { useAuth } from "@/lib/AuthContext";
-import { Heart } from "lucide-react";
+import { Heart, Menu, X } from "lucide-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -15,6 +15,16 @@ export default function Header() {
   const pathname = usePathname();
   const { user, loading } = useAuth();
   const [choiceCount, setChoiceCount] = useState(0);
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const updateCount = () => {
@@ -37,7 +47,6 @@ export default function Header() {
 
   // Close menu on route change
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     setOpen(false);
   }, [pathname]);
 
@@ -60,43 +69,65 @@ export default function Header() {
 
   return (
     <>
-      <header className="header">
+      <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="header-inner">
+          {/* Logo */}
           <Link href="/" className="logo">CEI</Link>
-          <nav className={`nav ${open ? "open" : ""}`}>
+
+          {/* Desktop Nav */}
+          <nav className="nav desktop-nav">
+            <Link href="/" className={isActive("/") ? "active" : ""}>Home</Link>
+            <Link href="/colleges" className={isActive("/colleges") ? "active" : ""}>Colleges</Link>
+            <Link href="/exams" className={isActive("/exams") ? "active" : ""}>Exams</Link>
+            <Link href="/map" className={isActive("/map") ? "active" : ""}>Map</Link>
+            <Link href="/roi-calculator" className={isActive("/roi-calculator") ? "active" : ""}>ROI Tool</Link>
+            <Link href="/my-list" className={`nav-link icon-link ${isActive("/my-list") ? "active" : ""}`} data-count={choiceCount}>
+              <span>My List</span>
+              {choiceCount > 0 && <span className="nav-badge">{choiceCount}</span>}
+            </Link>
+          </nav>
+
+          {/* Actions */}
+          <div className="header-actions">
+            {!loading && (
+              user ? (
+                <div className="user-area">
+                  <Link href="/dashboard" className={`dashboard-link-nav ${isActive("/dashboard") ? "active" : ""}`}>
+                    Dashboard
+                  </Link>
+                  <UserDropdown />
+                </div>
+              ) : (
+                <Button variant="primary" size="sm" onClick={() => setShowAuthModal(true)}>Login</Button>
+              )
+            )}
+
+            {/* Mobile Menu Toggle */}
+            <button
+              className="menu-toggle"
+              onClick={() => setOpen((v) => !v)}
+              aria-label="Toggle Menu"
+            >
+              {open ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Nav Overlay */}
+        <div className={`mobile-nav-overlay ${open ? "open" : ""}`}>
+          <nav className="mobile-nav-links">
             <Link href="/" className={isActive("/") ? "active" : ""} onClick={() => setOpen(false)}>Home</Link>
             <Link href="/colleges" className={isActive("/colleges") ? "active" : ""} onClick={() => setOpen(false)}>Colleges</Link>
             <Link href="/exams" className={isActive("/exams") ? "active" : ""} onClick={() => setOpen(false)}>Exams</Link>
             <Link href="/map" className={isActive("/map") ? "active" : ""} onClick={() => setOpen(false)}>Map</Link>
             <Link href="/roi-calculator" className={isActive("/roi-calculator") ? "active" : ""} onClick={() => setOpen(false)}>ROI Tool</Link>
-            <Link href="/dashboard" className="nav-link icon-link" data-count={choiceCount} onClick={() => setOpen(false)}>
-              <Heart size={20} />
-              <span>My List</span>
-              {choiceCount > 0 && <span className="nav-badge">{choiceCount}</span>}
+            <Link href="/my-list" className={isActive("/my-list") ? "active" : ""} onClick={() => setOpen(false)}>
+              My List {choiceCount > 0 && <span className="mobile-badge">({choiceCount})</span>}
             </Link>
           </nav>
-          <div className="header-actions">
-            {!loading && (
-              user ? (
-                <UserDropdown />
-              ) : (
-                <Button onClick={() => setShowAuthModal(true)}>Login</Button>
-              )
-            )}
-            <button
-              className={`menu ${open ? "menu-open" : ""}`}
-              onClick={() => setOpen((v) => !v)}
-              aria-label="Toggle Menu"
-              aria-expanded={open}
-            >
-              <span />
-              <span />
-              <span />
-            </button>
-          </div>
         </div>
       </header>
-      {open && <div className="nav-overlay" onClick={() => setOpen(false)} />}
+
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </>
   );

@@ -38,17 +38,18 @@ const getPopularityScore = (college) => {
 
 const SORT_OPTIONS = ["Most Popular", "Relevance", "Name A-Z", "Name Z-A", "Top Tier", "Most Exams"];
 
-function CollegesContent() {
+function CollegesContent({ initialData }) {
     const searchParams = useSearchParams();
     const stateFilter = searchParams.get("state");
 
-    const [colleges, setColleges] = useState([]);
+    const [colleges, setColleges] = useState(initialData?.data || []);
     const [filterOptions, setFilterOptions] = useState({
         districts: ["All"],
         courses: ["All"],
         tiers: ["All"]
     });
-    const [isLoading, setIsLoading] = useState(true);
+    // If we have initial data, we aren't loading!
+    const [isLoading, setIsLoading] = useState(!initialData?.data?.length);
     const [error, setError] = useState(null);
     const [query, setQuery] = useState("");
     const [sortBy, setSortBy] = useState("Most Popular");
@@ -61,10 +62,11 @@ function CollegesContent() {
 
     const router = useRouter();
     const [page, setPage] = useState(1);
-    const [pagination, setPagination] = useState(null);
+    const [pagination, setPagination] = useState(initialData?.pagination || null);
     const [suggestions, setSuggestions] = useState([]);
     const [mapStatsData, setMapStatsData] = useState({ states: [] });
     const [viewMode, setViewMode] = useState("list"); // 'list' only
+    const [isInitialized, setIsInitialized] = useState(false);
     const ITEMS_PER_PAGE = 18;
 
     // Initialize state from URL params
@@ -81,10 +83,13 @@ function CollegesContent() {
         setFilters({ state, district, course, tier });
         setSortBy(sort);
         setPage(p);
+        setIsInitialized(true);
     }, [searchParams]);
 
     // Sync state to URL
     useEffect(() => {
+        if (!isInitialized) return;
+
         const params = new URLSearchParams();
         if (query) params.set("q", query);
         if (filters.state !== "All") params.set("state", filters.state);
@@ -100,7 +105,7 @@ function CollegesContent() {
         }
 
         router.replace(`?${params.toString()}`, { scroll: false });
-    }, [query, filters, sortBy, page, stateFilter, router]);
+    }, [query, filters, sortBy, page, stateFilter, router, isInitialized]);
 
     // Load filter options based on active filters
     useEffect(() => {
@@ -129,6 +134,8 @@ function CollegesContent() {
 
     useEffect(() => {
         const load = async () => {
+            if (!isInitialized) return; // Wait for init
+
             setIsLoading(true);
             try {
                 const params = { page, limit: ITEMS_PER_PAGE };
@@ -144,6 +151,9 @@ function CollegesContent() {
                     params.order = "desc";
                 } else if (sortBy === "Most Exams") {
                     params.sortBy = "exams";
+                    params.order = "desc";
+                } else if (sortBy === "Most Popular") {
+                    params.sortBy = "popularity";
                     params.order = "desc";
                 }
 
@@ -190,7 +200,7 @@ function CollegesContent() {
             }
         };
         load();
-    }, [page, query, sortBy, filters.state, filters.district, filters.course, filters.tier, stateFilter]);
+    }, [page, query, sortBy, filters.state, filters.district, filters.course, filters.tier, stateFilter, isInitialized]);
 
     // Map stats removed as per user request
 
@@ -342,13 +352,6 @@ function CollegesContent() {
                     {displayColleges.map((college, index) => (
                         <RevealOnScroll key={college.id} delay={index * 30}>
                             <div className="card-wrapper">
-                                <FavoriteButton
-                                    type="colleges"
-                                    id={college.id}
-                                    item={college}
-                                    size="sm"
-                                    className="card-favorite"
-                                />
                                 <Card
                                     type="college"
                                     title={college.shortName || college.name}
@@ -362,6 +365,7 @@ function CollegesContent() {
                                         college.meta?.ownership,
                                     ].filter(Boolean)}
                                     href={`/college/${college.id}`}
+                                    data={college}
                                     trust={{
                                         source: college.source || "Official Website",
                                         lastUpdated: college.lastUpdated || new Date().toISOString()
@@ -487,7 +491,7 @@ function CollegesContent() {
     );
 }
 
-export default function CollegesClient() {
+export default function CollegesClient({ initialData }) {
     return (
         <Suspense fallback={
             <div className="list-page">
@@ -498,7 +502,7 @@ export default function CollegesClient() {
                 </Container>
             </div>
         }>
-            <CollegesContent />
+            <CollegesContent initialData={initialData} />
         </Suspense>
     );
 }

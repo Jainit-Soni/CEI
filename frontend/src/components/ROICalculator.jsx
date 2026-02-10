@@ -1,142 +1,214 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import GlassPanel from "./GlassPanel";
 import "./ROICalculator.css";
 
-export default function ROICalculator({ initialData = {}, title = "True ROI Calculator" }) {
-    // Defaults
-    const [tuitionPerYear, setTuitionPerYear] = useState(initialData.tuition || 150000);
-    const [duration, setDuration] = useState(initialData.duration || 4); // years
-    const [livingPerMonth, setLivingPerMonth] = useState(12000);
-    const [avgPackage, setAvgPackage] = useState(initialData.avgPackage || 600000); // LPA
-    const [loanInterest, setLoanInterest] = useState(9.5); // %
+const DEFAULT_INITIAL_DATA = {};
 
-    const [results, setResults] = useState(null);
+export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, title = "True ROI Simulator" }) {
+    // Hidden defaults
+    const [duration, setDuration] = useState(initialData.duration || 2); // MBA usually 2 years
+    // NEW: Projection horizon
+    const [projectionYears, setProjectionYears] = useState(5);
+
+    // Active Inputs
+    const [tuitionPerYear, setTuitionPerYear] = useState(initialData.tuition || 800000);
+    const [livingPerMonth, setLivingPerMonth] = useState(15000);
+    const [avgPackage, setAvgPackage] = useState(initialData.avgPackage || 1200000);
+
+    const [stats, setStats] = useState(null);
 
     useEffect(() => {
-        calculateROI();
-    }, [initialData]); // Recalculate if props change
+        calculateStats();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [initialData]);
 
-    const calculateROI = () => {
-        // 1. Total Cost
-        const totalTuition = tuitionPerYear * duration;
+    useEffect(() => {
+        calculateStats();
+    }, [tuitionPerYear, livingPerMonth, avgPackage, duration, projectionYears]);
+
+    const calculateStats = () => {
+        // Costs
+        const totalFees = tuitionPerYear * duration;
         const totalLiving = livingPerMonth * 12 * duration;
-        const principal = totalTuition + totalLiving;
+        const totalInvest = totalFees + totalLiving;
 
-        // 2. Loan Dynamics (Simple Amortization Estimate)
-        // Assuming loan for 100% of cost for worst case, or user can adjust.
-        // Let's assume standard loan for total cost.
-        const monthlyRate = loanInterest / 12 / 100;
-        // Standard tenure 7 years (84 months) for calculation of EMI obligation
-        const tenureMonths = 84;
-        const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, tenureMonths)) / (Math.pow(1 + monthlyRate, tenureMonths) - 1);
+        // Returns
+        const monthlyInHand = (avgPackage * 0.85) / 12; // 15% tax/deductions approx
+        const annualInHand = monthlyInHand * 12;
 
-        // 3. Earnings
-        const inHandMonthly = (avgPackage * 0.85) / 12; // Deducting ~15% for tax/PF roughly
-        const disposableIncomeString = inHandMonthly - Math.max(15000, livingPerMonth * 1.2); // Living cost increases after college
-        const disposableIncome = Math.max(0, disposableIncomeString);
+        // Dynamic Horizon
+        const yearsToProject = projectionYears;
+        let totalEarnings = 0;
+        for (let i = 0; i < yearsToProject; i++) {
+            totalEarnings += annualInHand * Math.pow(1.1, i); // 10% hike
+        }
 
-        // 4. Break Even
-        // How many months of *Disposable Income* to pay back the Principal + Interest accrued *during college*?
-        // Actually, simpler metric: How many months of *Full In-Hand Salary* to recover Total Cost? (Standard ROI metric)
-        const monthsToRecoverCost = principal / inHandMonthly;
-        const yearsToRecover = monthsToRecoverCost / 12;
+        // Multiplier
+        const multiplier = (totalEarnings / totalInvest).toFixed(1);
 
-        setResults({
-            totalCost: principal,
-            breakEvenYears: yearsToRecover.toFixed(1),
-            emi: Math.round(emi),
-            inHand: Math.round(inHandMonthly),
-            verdict: getVerdict(yearsToRecover)
+        // ROI Score (0-100 for gauge)
+        // Normalize: Expecting roughly 1x per year as "good"?
+        const score = Math.min(100, Math.max(0, (multiplier / projectionYears) * 100));
+
+        setStats({
+            totalInvest,
+            monthlyInHand,
+            multiplier,
+            score,
+            totalEarnings: Math.round(totalEarnings)
         });
     };
 
-    const getVerdict = (years) => {
-        if (years < 1.5) return { text: "💎 Excellent Investment", color: "text-emerald-600", bg: "bg-emerald-50" };
-        if (years < 3) return { text: "✅ Good Returns", color: "text-blue-600", bg: "bg-blue-50" };
-        if (years < 5) return { text: "⚠️ Moderate Risk", color: "text-yellow-600", bg: "bg-yellow-50" };
-        return { text: "🛑 High Financial Burden", color: "text-red-600", bg: "bg-red-50" };
+    const formatMoney = (amount) => {
+        if (amount >= 10000000) return `₹${(amount / 10000000).toFixed(2)} Cr`;
+        if (amount >= 100000) return `₹${(amount / 100000).toFixed(2)} L`;
+        return `₹${amount.toLocaleString()}`;
+    };
+
+    // Scenarios
+    const setScenario = (type) => {
+        const basePkg = initialData.avgPackage || 1200000;
+        if (type === 'opt') setAvgPackage(basePkg * 1.3);
+        else if (type === 'pes') setAvgPackage(basePkg * 0.8);
+        else setAvgPackage(basePkg);
     };
 
     return (
-        <GlassPanel className="roi-calculator" variant="subtle">
+        <div className="premium-tab-card roi-container">
             <div className="roi-header">
-                <h3>{title}</h3>
-                <span className="roi-badge">Financial Intelligence</span>
+                <div>
+                    <h3>{title}</h3>
+                    <p className="roi-subtitle">Simulate your financial future. Calculate break-even time and real disposable income.</p>
+                </div>
+                <div className="roi-toggles">
+                    <button onClick={() => setScenario('pes')} className="toggle-btn pes">Conservative</button>
+                    <button onClick={() => setScenario('std')} className="toggle-btn std">Realistic</button>
+                    <button onClick={() => setScenario('opt')} className="toggle-btn opt">Optimistic</button>
+                </div>
             </div>
 
             <div className="roi-grid">
-                {/* Left: Inputs */}
-                <div className="roi-inputs">
-                    <div className="input-group">
-                        <label>Tuition Fees (Yearly)</label>
-                        <input
-                            type="number"
-                            value={tuitionPerYear}
-                            onChange={(e) => setTuitionPerYear(Number(e.target.value))}
-                        />
+                {/* Visual Card */}
+                <div className="roi-visual-card">
+                    <div className="multiplier-badge">
+                        <span className="mult-label">{projectionYears}-Year Wealth Multiplier</span>
+                        <div className="mult-value">{stats?.multiplier || "0.0"}x</div>
+                        <span className="mult-sub">Returns {stats?.multiplier}x your investment</span>
                     </div>
-                    <div className="input-group">
-                        <label>Course Duration (Years)</label>
-                        <input
-                            type="number"
-                            value={duration}
-                            onChange={(e) => setDuration(Number(e.target.value))}
-                            min="1"
-                            max="6"
-                        />
+
+                    <div className="gauge-container">
+                        <div className="gauge-bg"></div>
+                        <div className="gauge-fill" style={{ transform: `rotate(${((stats?.score || 0) * 1.8) - 90}deg)` }}></div>
+                        <div className="gauge-center">
+                            <span className="emoji">{stats?.multiplier > (projectionYears * 0.6) ? '🚀' : '⚖️'}</span>
+                        </div>
                     </div>
-                    <div className="input-group">
-                        <label>Living Cost (Monthly)</label>
-                        <input
-                            type="number"
-                            value={livingPerMonth}
-                            onChange={(e) => setLivingPerMonth(Number(e.target.value))}
-                        />
-                    </div>
-                    <div className="input-group">
-                        <label>Avg Package (LPA)</label>
-                        <input
-                            type="number"
-                            value={avgPackage}
-                            onChange={(e) => setAvgPackage(Number(e.target.value))}
-                        />
-                    </div>
-                    <button className="btn-calc" onClick={calculateROI}>Recalculate</button>
                 </div>
 
-                {/* Right: Results */}
-                {results && (
-                    <div className="roi-results">
-                        <div className={`verdict-box ${results.verdict.bg}`}>
-                            <span className={`verdict-text ${results.verdict.color}`}>
-                                {results.verdict.text}
-                            </span>
-                            <span className="verdict-sub">Based on estimated break-even time</span>
+                {/* Stats & Inputs */}
+                <div className="roi-details">
+                    <div className="stat-row">
+                        <div className="stat-item red">
+                            <span className="s-lbl">Total Investment</span>
+                            <span className="s-val">{formatMoney(stats?.totalInvest || 0)}</span>
+                        </div>
+                        <div className="stat-arrow">➔</div>
+                        <div className="stat-item green">
+                            <span className="s-lbl">{projectionYears}-Year Earnings</span>
+                            <span className="s-val">{formatMoney(stats?.totalEarnings || 0)}</span>
+                        </div>
+                    </div>
+
+                    <div className="roi-inputs">
+                        <div className="input-group">
+                            <label>Avg Package (LPA)</label>
+                            <div className="range-row">
+                                <input
+                                    type="range" min="300000" max="5000000" step="50000"
+                                    value={avgPackage} onChange={e => setAvgPackage(Number(e.target.value))}
+                                />
+                                <span className="range-val">{formatMoney(avgPackage)}</span>
+                            </div>
                         </div>
 
-                        <div className="metrics-grid">
-                            <div className="metric">
-                                <span className="metric-label">Total Investment</span>
-                                <span className="metric-value">₹{(results.totalCost / 100000).toFixed(2)} Lakhs</span>
+                        <div className="input-group">
+                            <label>Total Tuition (Yearly)</label>
+                            <div className="range-row">
+                                <input
+                                    type="range" min="50000" max="1500000" step="10000"
+                                    value={tuitionPerYear} onChange={e => setTuitionPerYear(Number(e.target.value))}
+                                />
+                                <span className="range-val">{formatMoney(tuitionPerYear)}</span>
                             </div>
-                            <div className="metric">
-                                <span className="metric-label">Break-Even Time</span>
-                                <span className="metric-value highlight">{results.breakEvenYears} Years</span>
+                        </div>
+
+                        <div className="input-group">
+                            <label>Time Horizon (Years)</label>
+                            <div className="range-row">
+                                <input
+                                    type="range" min="1" max="15" step="1"
+                                    value={projectionYears} onChange={e => setProjectionYears(Number(e.target.value))}
+                                    style={{ accentColor: '#8b5cf6' }}
+                                />
+                                <span className="range-val">{projectionYears} Years</span>
                             </div>
-                            <div className="metric">
-                                <span className="metric-label">Est. Monthly In-Hand</span>
-                                <span className="metric-value">₹{results.inHand.toLocaleString()}</span>
+                        </div>
+
+                        <div className="input-split-row">
+                            <div className="input-group">
+                                <label>Monthly Living</label>
+                                <div className="range-row compact">
+                                    <input
+                                        type="range" min="5000" max="50000" step="1000"
+                                        value={livingPerMonth} onChange={e => setLivingPerMonth(Number(e.target.value))}
+                                    />
+                                    <span className="range-val">{formatMoney(livingPerMonth)}</span>
+                                </div>
                             </div>
-                            <div className="metric">
-                                <span className="metric-label">Est. Loan EMI</span>
-                                <span className="metric-value">₹{results.emi.toLocaleString()}</span>
+                            <div className="input-group">
+                                <label>Course Duration</label>
+                                <div className="range-row compact">
+                                    <input
+                                        type="number" min="1" max="5"
+                                        value={duration} onChange={e => setDuration(Number(e.target.value))}
+                                        className="num-input"
+                                    />
+                                    <span className="range-val-static">Years</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                )}
+
+                    <div className="roi-note">
+                        *Projection includes 10% annual salary hike and inflation adjustments.
+                    </div>
+                </div>
             </div>
-        </GlassPanel>
+
+            {/* Why This Matters Section */}
+            <div className="roi-education">
+                <h4>Why this matters?</h4>
+                <p className="roi-edu-intro">
+                    A high placement package (e.g., 10 LPA) might seem great, but if the fees are astronomical (e.g., 25 Lakhs),
+                    your <strong>Real Income</strong> after EMI might be lower than someone with a 6 LPA package from a cheaper college.
+                </p>
+
+                <div className="roi-definitions">
+                    <div className="def-item">
+                        <strong>Break-Even Point:</strong>
+                        <p>The moment you recover your total investment (Fees + Living).</p>
+                    </div>
+                    <div className="def-item">
+                        <strong>Disposable Income:</strong>
+                        <p>What you actually take home after paying your Loan EMI and Taxes.</p>
+                    </div>
+                    <div className="def-item">
+                        <strong>Opportunity Cost:</strong>
+                        <p>The income you lost while studying (relevant for Masters/MBA).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }

@@ -1,107 +1,74 @@
 ﻿import Link from "next/link";
 import "./Footer.css";
-import Button from "./Button";
-
-const quickLinks = [
-  { label: "Colleges", href: "/colleges" },
-  { label: "Exams", href: "/exams" },
-  { label: "Compare", href: "/compare" },
-  { label: "Dashboard", href: "/dashboard" },
-];
-
-const resourceLinks = [
-  { label: "How it Works", href: "/" },
-  { label: "Admission Calendar", href: "/" },
-  { label: "Career Guidance", href: "/" },
-  { label: "FAQs", href: "/" },
-];
-
-const stateLinks = [
-  { label: "Andhra Pradesh", href: "/colleges?state=andhra-pradesh" },
-  { label: "Telangana", href: "/colleges?state=telangana" },
-  { label: "Karnataka", href: "/colleges?state=karnataka" },
-  { label: "Tamil Nadu", href: "/colleges?state=tamil-nadu" },
-];
+import { Twitter, Linkedin, Instagram, ArrowRight, Heart, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-inner">
-        {/* Brand Column */}
-        <div className="footer-brand">
-          <div className="footer-logo">
-            <span className="logo-text">CEI</span>
-            <span className="logo-badge">Beta</span>
+    <footer className="footer-premium">
+      <div className="footer-container">
+        <div className="footer-grid">
+          {/* Column 1: Brand & Kicker */}
+          <div className="footer-col brand-col">
+            <h2 className="footer-logo-text">CEI</h2>
+            <p className="footer-tagline">
+              The intelligence layer for your academic future. Verified data, zero noise.
+            </p>
+            <div className="footer-social-links">
+              <a href="#" className="social-icon" aria-label="Twitter"><Twitter size={18} /></a>
+              <a href="#" className="social-icon" aria-label="LinkedIn"><Linkedin size={18} /></a>
+              <a href="#" className="social-icon" aria-label="Instagram"><Instagram size={18} /></a>
+            </div>
           </div>
-          <p className="footer-tagline">
-            College & Exam Intelligence — helping students make confident admission decisions with verified data.
-          </p>
-          <div className="social-links">
-            <a href="#" aria-label="Twitter" className="social-link">𝕏</a>
-            <a href="#" aria-label="LinkedIn" className="social-link">in</a>
-            <a href="#" aria-label="Instagram" className="social-link">📷</a>
+
+          {/* Column 2: Explore */}
+          <div className="footer-col">
+            <h3 className="footer-heading">Explore</h3>
+            <ul className="footer-links">
+              <li><Link href="/colleges">Colleges</Link></li>
+              <li><Link href="/exams">Entrance Exams</Link></li>
+              <li><Link href="/map">Interactive Map</Link></li>
+              <li><Link href="/roi-calculator">ROI Simulator</Link></li>
+            </ul>
           </div>
-        </div>
 
-        {/* Quick Links */}
-        <div className="footer-column">
-          <h4>Quick Links</h4>
-          <ul>
-            {quickLinks.map((link) => (
-              <li key={link.label}>
-                <Link href={link.href}>{link.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+          {/* Column 3: Tools */}
+          <div className="footer-col">
+            <h3 className="footer-heading">Student Tools</h3>
+            <ul className="footer-links">
+              <li><Link href="/my-list">Strategic Priority List</Link></li>
+              <li><Link href="/dashboard">Analytics Dashboard</Link></li>
+              <li><Link href="/compare">College Matcher</Link></li>
+              <li><Link href="/guide">Admission Guide</Link></li>
+            </ul>
+          </div>
 
-        {/* Resources */}
-        <div className="footer-column">
-          <h4>Resources</h4>
-          <ul>
-            {resourceLinks.map((link) => (
-              <li key={link.label}>
-                <Link href={link.href}>{link.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* States */}
-        <div className="footer-column">
-          <h4>By State</h4>
-          <ul>
-            {stateLinks.map((link) => (
-              <li key={link.label}>
-                <Link href={link.href}>{link.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Newsletter */}
-        <div className="footer-newsletter">
-          <h4>Stay Updated</h4>
-          <p>Get exam dates, cutoffs & admission alerts.</p>
-          <div className="newsletter-form">
-            <input
-              type="email"
-              placeholder="Your email address"
-              suppressHydrationWarning={true}
-            />
-            <Button size="sm">Subscribe</Button>
+          {/* Column 4: Newsletter/Waitlist */}
+          <div className="footer-col newsletter-col">
+            <h3 className="footer-heading">Stay Updated</h3>
+            <p className="newsletter-text">Get the latest on cutoffs and deadlines.</p>
+            <div className="footer-input-group">
+              <input type="email" placeholder="Your email address" className="footer-input" />
+              <button className="footer-btn" aria-label="Subscribe">
+                <ArrowRight size={18} />
+              </button>
+            </div>
+            <div className="system-status">
+              <span className="status-dot"></span>
+              System Operational
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="footer-bottom">
-        <div className="footer-bottom-inner">
-          <p>© 2026 College Exam Intelligence. All rights reserved.</p>
-          <div className="footer-legal">
-            <Link href="/">Privacy Policy</Link>
-            <Link href="/">Terms of Service</Link>
-            <Link href="/">Contact Us</Link>
+        <div className="footer-bottom-bar">
+          <div className="footer-copyright">
+            © {new Date().getFullYear()} CEI Intelligence. All rights reserved.
+          </div>
+          <div className="footer-love">
+            Made with <Heart size={14} className="heart-icon" /> for the future of Indian students.
+          </div>
+          <div className="footer-legal-links">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,246 @@
+.intel-facts-section {
+    padding: 120px 40px;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.intel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.intel-header {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.intel-kicker {
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #2563eb;
+    letter-spacing: 0.3em;
+    display: block;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.intel-main-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 950;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #0f172a;
+}
+
+.serif-italic {
+    font-family: 'Ibarra Real Nova', 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.intel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.intel-card {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 20px 40px -4px rgba(0, 0, 0, 0.02);
+}
+
+.intel-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow:
+        0 40px 80px -15px rgba(0, 0, 0, 0.1),
+        0 20px 40px -10px rgba(0, 0, 0, 0.05);
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+.intel-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 36px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.intel-icon-wrapper.blue {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.intel-icon-wrapper.purple {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+.intel-icon-wrapper.emerald {
+    background: #ecfdf5;
+    color: #10b981;
+}
+
+.intel-icon-wrapper.slate {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.intel-icon-wrapper svg {
+    width: 28px;
+    height: 28px;
+}
+
+.intel-value {
+    font-size: 3rem;
+    font-weight: 950;
+    color: #0f172a;
+    letter-spacing: -0.04em;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.intel-label {
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #64748b;
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.intel-desc {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Banner Section (Refined Glass) */
+.intel-banner {
+    margin-top: 80px;
+    padding: 80px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 56px;
+    color: #0f172a;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.04);
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.banner-icon {
+    color: #2563eb;
+    flex-shrink: 0;
+    filter: drop-shadow(0 10px 20px rgba(37, 99, 235, 0.2));
+}
+
+.banner-text h3 {
+    font-size: 2.2rem;
+    font-weight: 950;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.banner-text p {
+    font-size: 1.35rem;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Base Styles (Staggered Animation) */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: reveal-key 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-0 {
+    animation-delay: 0.1s;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.3s;
+}
+
+.delay-3 {
+    animation-delay: 0.4s;
+}
+
+.delay-4 {
+    animation-delay: 0.5s;
+}
+
+@keyframes reveal-key {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .intel-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intel-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intel-banner {
+        padding: 40px;
+    }
+
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .intel-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .intel-grid {
+        grid-template-columns: 1fr;
+    }
+}

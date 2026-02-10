@@ -1,0 +1,912 @@
+[
+    {
+        "id": "coep-pune",
+        "name": "College of Engineering, Pune (COEP)",
+        "shortName": "COEP",
+        "location": "Pune, Maharashtra",
+        "state": "Maharashtra",
+        "type": "Public/Government",
+        "ranking": "Tier 1",
+        "rankingTier": "Tier 1",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/COEP_Logo.png/220px-COEP_Logo.png",
+        "courses": [
+            {
+                "name": "B.Tech Computer Engineering",
+                "duration": "4 Years",
+                "fees": "₹90,000/year"
+            },
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 Years",
+                "fees": "₹90,000/year"
+            },
+            {
+                "name": "B.Tech E&TC",
+                "duration": "4 Years",
+                "fees": "₹90,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "mhcet",
+            "jee-main"
+        ],
+        "cutoff": {
+            "mhcet": "99.8 %ile",
+            "jee-main": "98.5 %ile"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "exam": "MHT-CET",
+                "cutoff": "Computer Engineering: 99.85 %ile"
+            },
+            {
+                "year": 2024,
+                "exam": "MHT-CET",
+                "cutoff": "Mechanical: 98.2 %ile"
+            }
+        ],
+        "placements": {
+            "average": "₹11.5 LPA",
+            "highest": "₹50.5 LPA"
+        },
+        "meta": {
+            "district": "Pune",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "vjti-mumbai",
+        "name": "Veermata Jijabai Technological Institute (VJTI)",
+        "shortName": "VJTI",
+        "location": "Mumbai, Maharashtra",
+        "state": "Maharashtra",
+        "type": "Government Aided",
+        "ranking": "Tier 1",
+        "rankingTier": "Tier 1",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/VJTI_Logo.png/220px-VJTI_Logo.png",
+        "courses": [
+            {
+                "name": "B.Tech Computer Engineering",
+                "duration": "4 Years",
+                "fees": "₹85,000/year"
+            },
+            {
+                "name": "B.Tech IT",
+                "duration": "4 Years",
+                "fees": "₹85,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "mhcet",
+            "jee-main"
+        ],
+        "cutoff": {
+            "mhcet": "99.9 %ile"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "mhcet",
+                "cutoff": "Computer Engineering: 99.96 | Information Technology: 99.91"
+            },
+            {
+                "year": 2024,
+                "examId": "jee-main",
+                "cutoff": "Computer Engineering: Rank 850 | Information Technology: Rank 1200"
+            }
+        ],
+        "placements": {
+            "average": "₹13.5 LPA",
+            "highest": "₹62 LPA"
+        },
+        "meta": {
+            "district": "Mumbai City",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "spit-mumbai",
+        "name": "Sardar Patel Institute of Technology (SPIT)",
+        "shortName": "SPIT",
+        "location": "Mumbai, Maharashtra",
+        "state": "Maharashtra",
+        "type": "Private (Autonomous)",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Sardar_Patel_Institute_of_Technology_logo.png/200px-Sardar_Patel_Institute_of_Technology_logo.png",
+        "courses": [
+            {
+                "name": "B.Tech Computer Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,70,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "mhcet",
+            "jee-main"
+        ],
+        "cutoff": {
+            "mhcet": "99.5 %ile",
+            "jee-main": "98.0 %ile"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "mhcet",
+                "cutoff": "Computer Science: 99.7 | CSE (AI&ML): 99.5"
+            },
+            {
+                "year": 2024,
+                "examId": "jee-main",
+                "cutoff": "Computer Engineering: Rank 22056 | CSE (AI&ML): Rank 8307"
+            }
+        ],
+        "placements": {
+            "average": "₹15 LPA",
+            "highest": "₹42 LPA"
+        },
+        "meta": {
+            "district": "Mumbai Suburban",
+            "ownership": "Private"
+        }
+    },
+    {
+        "id": "pict-pune",
+        "name": "Pune Institute of Computer Technology (PICT)",
+        "shortName": "PICT",
+        "location": "Pune, Maharashtra",
+        "state": "Maharashtra",
+        "type": "Private",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://pict.edu/images/pict-logo.png",
+        "courses": [
+            {
+                "name": "B.E. Computer Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,10,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "mhcet",
+            "jee-main"
+        ],
+        "cutoff": {
+            "mhcet": "99.2 %ile",
+            "jee-main": "97.5 %ile"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "mhcet",
+                "cutoff": "Computer Engineering: 99.71 | Information Technology: 99.56"
+            },
+            {
+                "year": 2024,
+                "examId": "jee-main",
+                "cutoff": "Computer Engineering: Rank 22608 | Information Technology: Rank 27804"
+            }
+        ],
+        "placements": {
+            "average": "₹12.5 LPA",
+            "highest": "₹45 LPA"
+        },
+        "meta": {
+            "district": "Pune",
+            "ownership": "Private"
+        }
+    },
+    {
+        "id": "rvce-bangalore",
+        "name": "R.V. College of Engineering (RVCE)",
+        "shortName": "RVCE",
+        "location": "Bengaluru, Karnataka",
+        "state": "Karnataka",
+        "type": "Private (Autonomous)",
+        "ranking": "Tier 1",
+        "rankingTier": "Tier 1",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/RV_College_of_Engineering_logo.png/220px-RV_College_of_Engineering_logo.png",
+        "courses": [
+            {
+                "name": "B.E. Computer Science",
+                "duration": "4 Years",
+                "fees": "₹2,50,000/year"
+            },
+            {
+                "name": "B.E. ISE",
+                "duration": "4 Years",
+                "fees": "₹2,50,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "kcet",
+            "comedk"
+        ],
+        "cutoff": {
+            "kcet": "Top 200 Rank",
+            "comedk": "Top 500 Rank"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "comedk",
+                "cutoff": "Computer Science: Rank 434 | Information Science: Rank 700"
+            },
+            {
+                "year": 2024,
+                "examId": "kcet",
+                "cutoff": "Computer Science: Rank 419 | Information Science: Rank 657"
+            }
+        ],
+        "placements": {
+            "average": "₹14 LPA",
+            "highest": "₹92 LPA"
+        },
+        "meta": {
+            "district": "Bengaluru Urban",
+            "ownership": "Private"
+        }
+    },
+    {
+        "id": "bmsce-bangalore",
+        "name": "BMS College of Engineering (BMSCE)",
+        "shortName": "BMSCE",
+        "location": "Bengaluru, Karnataka",
+        "state": "Karnataka",
+        "type": "Private (Autonomous)",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://bmsce.ac.in/assets/images/logo.png",
+        "courses": [
+            {
+                "name": "B.E. Computer Science",
+                "duration": "4 Years",
+                "fees": "₹2,50,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "kcet",
+            "comedk"
+        ],
+        "cutoff": {
+            "comedk": "Top 1500 Rank"
+        },
+        "placements": {
+            "average": "₹10 LPA",
+            "highest": "₹50 LPA"
+        },
+        "meta": {
+            "district": "Bengaluru Urban",
+            "ownership": "Private"
+        }
+    },
+    {
+        "id": "msrit-bangalore",
+        "name": "Ramaiah Institute of Technology (MSRIT)",
+        "shortName": "MSRIT",
+        "location": "Bengaluru, Karnataka",
+        "state": "Karnataka",
+        "type": "Private (Autonomous)",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/M.S._Ramaiah_Institute_of_Technology_logo.png/220px-M.S._Ramaiah_Institute_of_Technology_logo.png",
+        "courses": [
+            {
+                "name": "B.E. Computer Science",
+                "duration": "4 Years",
+                "fees": "₹2,50,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "kcet",
+            "comedk"
+        ],
+        "cutoff": {
+            "comedk": "Top 2000 Rank"
+        },
+        "placements": {
+            "average": "₹11 LPA",
+            "highest": "₹50 LPA"
+        },
+        "meta": {
+            "district": "Bengaluru Urban",
+            "ownership": "Private"
+        }
+    },
+    {
+        "id": "pes-university",
+        "name": "PES University (PESU)",
+        "shortName": "PESU",
+        "location": "Bengaluru, Karnataka",
+        "state": "Karnataka",
+        "type": "Private University",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/9/98/PES_University_logo.png/220px-PES_University_logo.png",
+        "courses": [
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 Years",
+                "fees": "₹4,50,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "pessat",
+            "kcet",
+            "jee-main"
+        ],
+        "cutoff": {
+            "pessat": "Top 500 Rank",
+            "kcet": "Top 1000 Rank"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "pessat",
+                "cutoff": "Computer Science: Rank 1023 | CSE (AI&ML): Rank 3119"
+            },
+            {
+                "year": 2024,
+                "examId": "kcet",
+                "cutoff": "Computer Science: Rank 2009 | CSE (AI&ML): Rank 4296"
+            }
+        ],
+        "placements": {
+            "average": "₹13 LPA",
+            "highest": "₹65 LPA"
+        },
+        "meta": {
+            "district": "Bengaluru Urban",
+            "ownership": "Private"
+        }
+    },
+    {
+        "id": "usict-delhi",
+        "name": "University School of Information, Communication and Technology (USICT)",
+        "shortName": "USICT",
+        "location": "Dwarka, Delhi",
+        "state": "Delhi",
+        "type": "Public/Government",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "http://www.ipu.ac.in/style/head_foot_img/GGSIPU-logo.png",
+        "courses": [
+            {
+                "name": "B.Tech+M.Tech (Dual Degree)",
+                "duration": "5 Years",
+                "fees": "₹70,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "jee-main"
+        ],
+        "cutoff": {
+            "jee-main": "AIR 35,000"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "jee-main",
+                "cutoff": "CSE (Out of State): Rank 31202 | IT (Out of State): Rank 40696 | CSE (Home State): Rank 48952"
+            }
+        ],
+        "placements": {
+            "average": "₹10 LPA",
+            "highest": "₹35 LPA"
+        },
+        "meta": {
+            "district": "South West Delhi",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "mait-delhi",
+        "name": "Maharaja Agrasen Institute of Technology (MAIT)",
+        "shortName": "MAIT",
+        "location": "Rohini, Delhi",
+        "state": "Delhi",
+        "type": "Private",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://mait.ac.in/images/logo.png",
+        "courses": [
+            {
+                "name": "B.Tech CSE",
+                "duration": "4 Years",
+                "fees": "₹1,40,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "jee-main"
+        ],
+        "cutoff": {
+            "jee-main": "AIR 50,000"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "jee-main",
+                "cutoff": "CSE (Round 1): Rank 37928 | CSE (Final): Rank 47478 | AIML: Rank 50398"
+            }
+        ],
+        "placements": {
+            "average": "₹8 LPA",
+            "highest": "₹50 LPA"
+        },
+        "meta": {
+            "district": "North West Delhi",
+            "ownership": "Private"
+        }
+    },
+    {
+        "id": "msit-delhi",
+        "name": "Maharaja Surajmal Institute of Technology (MSIT)",
+        "shortName": "MSIT",
+        "location": "Janakpuri, Delhi",
+        "state": "Delhi",
+        "type": "Private",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://www.msit.in/static/img/logo.png",
+        "courses": [
+            {
+                "name": "B.Tech CSE",
+                "duration": "4 Years",
+                "fees": "₹1,50,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "jee-main"
+        ],
+        "cutoff": {
+            "jee-main": "AIR 60,000"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "jee-main",
+                "cutoff": "CSE (Delhi Region): Rank 109334 | CSE (Other State): Rank 60293 | IT: Rank 63321"
+            }
+        ],
+        "placements": {
+            "average": "₹7 LPA",
+            "highest": "₹40 LPA"
+        },
+        "meta": {
+            "district": "West Delhi",
+            "ownership": "Private"
+        }
+    },
+    {
+        "id": "iet-lucknow",
+        "name": "Institute of Engineering and Technology (IET Lucknow)",
+        "shortName": "IET Lucknow",
+        "location": "Lucknow, Uttar Pradesh",
+        "state": "Uttar Pradesh",
+        "type": "Public/Government",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://ietlucknow.ac.in/images/logo.png",
+        "courses": [
+            {
+                "name": "B.Tech CSE",
+                "duration": "4 Years",
+                "fees": "₹90,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "jee-main"
+        ],
+        "cutoff": {
+            "jee-main": "AIR 60,000"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "jee-main",
+                "cutoff": "CSE (Home State): Rank 47000 | CSE (All India): Rank 30752"
+            }
+        ],
+        "placements": {
+            "average": "₹8.5 LPA",
+            "highest": "₹38 LPA"
+        },
+        "meta": {
+            "district": "Lucknow",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "hbtu-kanpur",
+        "name": "Harcourt Butler Technical University (HBTU)",
+        "shortName": "HBTU",
+        "location": "Kanpur, Uttar Pradesh",
+        "state": "Uttar Pradesh",
+        "type": "State University",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://hbtu.ac.in/wp-content/uploads/2021/05/hbtu-logo.png",
+        "courses": [
+            {
+                "name": "B.Tech CSE",
+                "duration": "4 Years",
+                "fees": "₹1,35,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "jee-main"
+        ],
+        "cutoff": {
+            "jee-main": "AIR 25,000"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "jee-main",
+                "cutoff": "CSE (All India): Rank 24000 | CSE (Home State): Rank 41629"
+            }
+        ],
+        "placements": {
+            "average": "₹10 LPA",
+            "highest": "₹45 LPA"
+        },
+        "meta": {
+            "district": "Kanpur Nagar",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "mmm-gorakhpur",
+        "name": "Madan Mohan Malaviya University of Technology (MMMUT)",
+        "shortName": "MMMUT",
+        "location": "Gorakhpur, Uttar Pradesh",
+        "state": "Uttar Pradesh",
+        "type": "State University",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "http://www.mmmut.ac.in/images/mmmut_logo.png",
+        "courses": [
+            {
+                "name": "B.Tech CSE",
+                "duration": "4 Years",
+                "fees": "₹90,000/year"
+            }
+        ],
+        "acceptedExams": [
+            "jee-main"
+        ],
+        "cutoff": {
+            "jee-main": "AIR 55,000"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "jee-main",
+                "cutoff": "CSE (All India): Rank 66331 | CSE (Home State): Rank 46000"
+            }
+        ],
+        "placements": {
+            "average": "₹7 LPA",
+            "highest": "₹40 LPA"
+        },
+        "meta": {
+            "district": "Gorakhpur",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "gec-rajkot",
+        "name": "Government Engineering College, Rajkot",
+        "shortName": "GEC Rajkot",
+        "location": "Rajkot, Gujarat",
+        "state": "Gujarat",
+        "type": "Public/Government",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://gecrj.cteguj.in/uploads/gecrj/logo/logo_1619676579.png",
+        "courses": [
+            {
+                "name": "B.E. Computer Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            },
+            {
+                "name": "B.E. Electronics & Communication",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            }
+        ],
+        "acceptedExams": [
+            "gujcet",
+            "jee-main"
+        ],
+        "cutoff": {
+            "gujcet": "90+ %ile",
+            "jee-main": "AWS Rank 25,000"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "gujcet",
+                "cutoff": "Computer Engineering: Rank 6593 | AI & Data Science: Rank 9500"
+            }
+        ],
+        "placements": {
+            "average": "₹4.5 LPA",
+            "highest": "₹12 LPA"
+        },
+        "meta": {
+            "district": "Rajkot",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "gec-surat",
+        "name": "Dr. S. & S. S. Ghandhy Government Engineering College, Surat",
+        "shortName": "GEC Surat",
+        "location": "Surat, Gujarat",
+        "state": "Gujarat",
+        "type": "Public/Government",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://gecsu.cteguj.in/uploads/gecsu/logo/1699077274_logo.png",
+        "courses": [
+            {
+                "name": "B.E. Civil Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            },
+            {
+                "name": "B.E. Mechanical Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            }
+        ],
+        "acceptedExams": [
+            "gujcet",
+            "jee-main"
+        ],
+        "cutoff": {
+            "gujcet": "85+ %ile",
+            "jee-main": "AWS Rank 30,000"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "gujcet",
+                "cutoff": "Computer Engineering: Rank 30021 | EC Engineering: Rank 45000"
+            }
+        ],
+        "placements": {
+            "average": "₹5 LPA",
+            "highest": "₹10 LPA"
+        },
+        "meta": {
+            "district": "Surat",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "shantilal-shah-bhavnagar",
+        "name": "Shantilal Shah Engineering College (SSEC)",
+        "shortName": "SSEC Bhavnagar",
+        "location": "Bhavnagar, Gujarat",
+        "state": "Gujarat",
+        "type": "Public/Government",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://ssgec.cteguj.in/uploads/ssgec/logo/logo_1615967060.png",
+        "courses": [
+            {
+                "name": "B.E. Information Technology",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            },
+            {
+                "name": "B.E. Civil Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            }
+        ],
+        "acceptedExams": [
+            "gujcet",
+            "jee-main"
+        ],
+        "cutoff": {
+            "gujcet": "80+ %ile"
+        },
+        "placements": {
+            "average": "₹4 LPA",
+            "highest": "₹9 LPA"
+        },
+        "meta": {
+            "district": "Bhavnagar",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "gec-gandhinagar",
+        "name": "Government Engineering College, Gandhinagar",
+        "shortName": "GEC Gandhinagar",
+        "location": "Gandhinagar, Gujarat",
+        "state": "Gujarat",
+        "type": "Public/Government",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://gecgn.cteguj.in/uploads/gecgn/logo/logo_1617173678.png",
+        "courses": [
+            {
+                "name": "B.E. Computer Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            },
+            {
+                "name": "B.E. EC Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            }
+        ],
+        "acceptedExams": [
+            "gujcet",
+            "jee-main"
+        ],
+        "cutoff": {
+            "gujcet": "92+ %ile",
+            "jee-main": "AWS Rank 20,000"
+        },
+        "pastCutoffs": [
+            {
+                "year": 2024,
+                "examId": "gujcet",
+                "cutoff": "Computer Engineering: Rank 2460 | Information Technology: Rank 4018"
+            }
+        ],
+        "placements": {
+            "average": "₹5.5 LPA",
+            "highest": "₹15 LPA"
+        },
+        "meta": {
+            "district": "Gandhinagar",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "gec-patan",
+        "name": "Government Engineering College, Patan",
+        "shortName": "GEC Patan",
+        "location": "Patan, Gujarat",
+        "state": "Gujarat",
+        "type": "Public/Government",
+        "ranking": "Tier 3",
+        "rankingTier": "Tier 3",
+        "logo": "https://gecpatan.cteguj.in/uploads/gecpatan/logo/logo_1615965934.jpg",
+        "courses": [
+            {
+                "name": "B.E. Computer Science",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            }
+        ],
+        "acceptedExams": [
+            "gujcet"
+        ],
+        "cutoff": {
+            "gujcet": "75+ %ile"
+        },
+        "placements": {
+            "average": "₹3.5 LPA",
+            "highest": "₹7 LPA"
+        },
+        "meta": {
+            "district": "Patan",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "gec-dahod",
+        "name": "Government Engineering College, Dahod",
+        "shortName": "GEC Dahod",
+        "location": "Dahod, Gujarat",
+        "state": "Gujarat",
+        "type": "Public/Government",
+        "ranking": "Tier 3",
+        "rankingTier": "Tier 3",
+        "logo": "https://gecdahod.cteguj.in/uploads/gecdahod/logo/logo_1615966324.jpg",
+        "courses": [
+            {
+                "name": "B.E. Computer Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            }
+        ],
+        "acceptedExams": [
+            "gujcet"
+        ],
+        "cutoff": {
+            "gujcet": "70+ %ile"
+        },
+        "placements": {
+            "average": "₹3 LPA",
+            "highest": "₹6 LPA"
+        },
+        "meta": {
+            "district": "Dahod",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "gec-bharuch",
+        "name": "Government Engineering College, Bharuch",
+        "shortName": "GEC Bharuch",
+        "location": "Bharuch, Gujarat",
+        "state": "Gujarat",
+        "type": "Public/Government",
+        "ranking": "Tier 2",
+        "rankingTier": "Tier 2",
+        "logo": "https://gecbh.cteguj.in/uploads/gecbh/logo/logo_1615967733.jpg",
+        "courses": [
+            {
+                "name": "B.E. Chemical Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            },
+            {
+                "name": "B.E. Electrical Engineering",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            }
+        ],
+        "acceptedExams": [
+            "gujcet"
+        ],
+        "cutoff": {
+            "gujcet": "82+ %ile"
+        },
+        "placements": {
+            "average": "₹4.5 LPA",
+            "highest": "₹11 LPA"
+        },
+        "meta": {
+            "district": "Bharuch",
+            "ownership": "Government"
+        }
+    },
+    {
+        "id": "gec-modasa",
+        "name": "Government Engineering College, Modasa",
+        "shortName": "GEC Modasa",
+        "location": "Modasa, Gujarat",
+        "state": "Gujarat",
+        "type": "Public/Government",
+        "ranking": "Tier 3",
+        "rankingTier": "Tier 3",
+        "logo": "https://gecmodasa.cteguj.in/uploads/gecmodasa/logo/logo_1615968252.jpg",
+        "courses": [
+            {
+                "name": "B.E. IT",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            },
+            {
+                "name": "B.E. Automobile",
+                "duration": "4 Years",
+                "fees": "₹1,500/year"
+            }
+        ],
+        "acceptedExams": [
+            "gujcet"
+        ],
+        "cutoff": {
+            "gujcet": "78+ %ile"
+        },
+        "placements": {
+            "average": "₹4 LPA",
+            "highest": "₹8 LPA"
+        },
+        "meta": {
+            "district": "Aravalli",
+            "ownership": "Government"
+        }
+    }
+]

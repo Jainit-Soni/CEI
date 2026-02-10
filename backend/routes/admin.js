@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { saveCollege, deleteCollege, getColleges } = require("../services/dataStore");
+const { saveCollege, deleteCollege, getColleges, invalidateCache } = require("../services/dataStore");
 
 // Simple Admin Middleware
 const requireAdmin = (req, res, next) => {
@@ -45,6 +45,15 @@ router.delete("/colleges/:id", requireAdmin, async (req, res) => {
         const { id } = req.params;
         await deleteCollege(id);
         res.json({ success: true, id });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+// Invalidate/Refresh Cache
+router.post("/cache/invalidate", requireAdmin, async (req, res) => {
+    try {
+        await invalidateCache();
+        res.json({ success: true, message: "Cache invalidated and reloaded from disk" });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

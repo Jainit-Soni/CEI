@@ -104,6 +104,24 @@ router.get("/colleges", async (req, res) => {
             aVal = tierScore(a.rankingTier || a.ranking);
             bVal = tierScore(b.rankingTier || b.ranking);
             return sortOrder * (bVal - aVal);
+          case "popularity":
+            // Custom Weighting: Tier (High impact) + Exam Count (Secondary)
+            const getPopScore = (c) => {
+              let score = 0;
+              const tier = (c.rankingTier || c.ranking || "").toString().toLowerCase();
+              if (tier.includes("tier 1")) score += 1000;
+              else if (tier.includes("tier 2")) score += 500;
+              else if (tier.includes("tier 3")) score += 100;
+
+              // Bonus for verified/official source
+              if (c.source === "Official Website" || c.source?.includes("Admin")) score += 50;
+
+              // Bonus for accepting many exams (indicates accessibility)
+              score += (c.acceptedExams || []).length * 5;
+
+              return score;
+            };
+            return sortOrder * (getPopScore(b) - getPopScore(a));
           case "exams":
             aVal = (a.acceptedExams || []).length;
             bVal = (b.acceptedExams || []).length;
@@ -160,6 +178,15 @@ router.get("/college/:id", async (req, res) => {
 // Get state-wise college counts (with optional filtering)
 router.get("/states/stats", async (req, res) => {
   const { q, district, tier, course, exam } = req.query;
+  const { getGlobalStats } = require("../services/dataStore");
+
+  // FAST PATH: If no filters, return pre-computed stats
+  if (!q && !district && !tier && (!course || course === 'All') && !exam) {
+    const globalStats = getGlobalStats();
+    if (globalStats) return res.json(globalStats);
+  }
+
+  // ... (FALLBACK TO SLOW CALCULATION IF FILTERS EXIST) ...
   // Create a unique cache key based on filters
   const key = `states:stats:${JSON.stringify(req.query)}`;
   const cached = await cache.get(key);
@@ -251,6 +278,15 @@ router.get("/states/stats", async (req, res) => {
 router.get("/filters", async (req, res) => {
   try {
     const { state, district, q, tier, course } = req.query;
+    const { getGlobalFilters } = require("../services/dataStore");
+
+    // FAST PATH: If no active filters (initial load), return global pre-computed filters
+    if (!state && !district && !q && !tier && !course) {
+      const globalFilters = getGlobalFilters();
+      if (globalFilters) return res.json(globalFilters);
+    }
+
+    // ... (FALLBACK TO DYNAMIC CALCULATION) ...
     // We don't use full caching for dynamic filters, or we use a more granular key
     const key = `filters:dynamic:${JSON.stringify(req.query)}`;
     const cached = await cache.get(key);

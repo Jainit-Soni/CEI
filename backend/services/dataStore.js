@@ -144,8 +144,108 @@ async function initializeCache() {
   await redis.set(CACHE_KEYS.LAST_UPDATE, LOCAL_LAST_UPDATE);
   // Set the sentinel key to indicate successful initialization
   await redis.set(CACHE_KEYS.COLLEGES_INITIALIZED, "true", "EX", TTL.COLLEGES); // Use TTL for consistency
+
+  // --- PRE-COMPUTE HEAVY DATA (PERFORMANCE BOOST) ---
+  console.log("Pre-computing filters and stats...");
+  preComputeGlobalData();
   // console.log(`Cache hydrated: ${colleges.length} colleges, ${exams.length} exams`);
 }
+
+// Global In-Memory Data (Zero Latency)
+let GLOBAL_FILTERS = null;
+let GLOBAL_STATS = null;
+
+function preComputeGlobalData() {
+  if (!LOCAL_CACHE || LOCAL_CACHE.length === 0) return;
+
+  // 1. FILTERS
+  const statesSet = new Set();
+  const districtsSet = new Set();
+  const tiersSet = new Set();
+  const coursesSet = new Set();
+
+  LOCAL_CACHE.forEach(c => {
+    // State
+    let state = c.state;
+    if (!state && c.location) {
+      const parts = c.location.split(",").map(p => p.trim());
+      state = parts[parts.length - 1];
+    }
+    if (state) statesSet.add(state);
+
+    // District
+    const dist = c.meta?.district || c.district;
+    if (dist) districtsSet.add(dist);
+
+    // Tier
+    const tr = c.rankingTier || c.ranking;
+    if (tr) tiersSet.add(tr);
+
+    // Courses
+    if (Array.isArray(c.courses)) {
+      c.courses.forEach(co => {
+        if (co.name) coursesSet.add(co.name);
+      });
+    }
+  });
+
+  GLOBAL_FILTERS = {
+    states: Array.from(statesSet).filter(Boolean).sort(),
+    districts: Array.from(districtsSet).filter(Boolean).sort(),
+    tiers: Array.from(tiersSet).filter(Boolean).sort(),
+    courses: Array.from(coursesSet).filter(Boolean).sort()
+  };
+
+  // 2. STATS (State-wise)
+  const statsMap = {};
+  const allStates = [
+    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana",
+    "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur",
+    "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
+    "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal",
+    "Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi",
+    "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"
+  ];
+
+  allStates.forEach(s => statsMap[s.toLowerCase()] = { name: s, count: 0, colleges: [] });
+
+  LOCAL_CACHE.forEach(c => {
+    let state = c.state;
+    if (!state && c.location) {
+      const parts = c.location.split(",").map(p => p.trim());
+      state = parts[parts.length - 1];
+    }
+    if (state) {
+      const key = state.toLowerCase();
+      // Try matching normalized
+      const foundKey = Object.keys(statsMap).find(k => k === key || k === key.replace(/&/g, 'and'));
+      if (foundKey) {
+        statsMap[foundKey].count++;
+        if (statsMap[foundKey].colleges.length < 3) {
+          statsMap[foundKey].colleges.push(c.shortName || c.name);
+        }
+      }
+    }
+  });
+
+  const statsResult = Object.values(statsMap)
+    .filter(s => s.count > 0)
+    .sort((a, b) => b.count - a.count);
+
+  GLOBAL_STATS = {
+    totalStates: statsResult.length, // Simplified
+    totalColleges: LOCAL_CACHE.length,
+    states: statsResult.map(s => ({
+      ...s,
+      type: ["Delhi", "Chandigarh", "Puducherry"].includes(s.name) ? "UT" : "State"
+    }))
+  };
+
+  console.log("Global data pre-computed.");
+}
+
+function getGlobalFilters() { return GLOBAL_FILTERS; }
+function getGlobalStats() { return GLOBAL_STATS; }
 
 // Get all colleges
 async function getColleges() {
@@ -352,5 +452,7 @@ module.exports = {
   getExams,
   invalidateCache,
   saveCollege,
-  deleteCollege
+  deleteCollege,
+  getGlobalFilters,
+  getGlobalStats
 };

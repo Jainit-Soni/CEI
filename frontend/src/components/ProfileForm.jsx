@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import GlassPanel from "./GlassPanel"; // Assuming this exists or use a div
 import Button from "./Button";
 
 export default function ProfileForm() {
@@ -42,106 +41,160 @@ export default function ProfileForm() {
     const handleSave = () => {
         localStorage.setItem("student-profile", JSON.stringify(profile));
         setSaved(true);
-        // Dispatch event for other components if needed
         window.dispatchEvent(new Event("profile-update"));
-
         setTimeout(() => setSaved(false), 2000);
     };
 
     return (
-        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-            <div style={{ background: 'white', padding: '2rem', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-                <h3 style={{ marginBottom: '1.5rem', fontSize: '1.25rem', fontWeight: '600', color: '#1e293b' }}>
-                    Student Profile
-                </h3>
+        <div className="profile-form-wrapper">
+            <h3 className="profile-form-title">Personal Strategy Profile</h3>
 
-                <div style={{ display: 'grid', gap: '1.5rem' }}>
-                    <div>
-                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#475569' }}>Full Name</label>
-                        <input
-                            type="text"
-                            value={profile.name}
-                            onChange={(e) => handleChange("name", e.target.value)}
-                            placeholder="Enter your name"
-                            style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}
-                        />
-                    </div>
+            <div className="profile-form-grid">
+                <div className="form-group">
+                    <label>Full Name</label>
+                    <input
+                        type="text"
+                        className="form-input"
+                        value={profile.name}
+                        onChange={(e) => handleChange("name", e.target.value)}
+                        placeholder="Enter your full name"
+                    />
+                </div>
 
-                    <div>
-                        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: '#475569' }}>Target Degree</label>
-                        <select
-                            value={profile.targetDegree}
-                            onChange={(e) => handleChange("targetDegree", e.target.value)}
-                            style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}
-                        >
-                            <option value="MBA">MBA / PGDM</option>
-                            <option value="B.Tech">B.Tech / B.E.</option>
-                            <option value="M.Tech">M.Tech</option>
-                        </select>
-                    </div>
+                <div className="form-group">
+                    <label>Target Degree</label>
+                    <select
+                        className="form-select"
+                        value={profile.targetDegree}
+                        onChange={(e) => handleChange("targetDegree", e.target.value)}
+                    >
+                        <option value="MBA">MBA / PGDM</option>
+                        <option value="B.Tech">B.Tech / B.E.</option>
+                        <option value="M.Tech">M.Tech</option>
+                    </select>
+                </div>
 
-                    <div>
-                        <h4 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '1rem', color: '#334155' }}>Exam Scores (Percentile/Rank)</h4>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                            {profile.targetDegree.includes("MBA") && (
-                                <>
-                                    <div>
-                                        <label style={{ fontSize: '0.875rem', marginBottom: '0.25rem', display: 'block' }}>CAT %ile</label>
-                                        <input
-                                            type="number"
-                                            value={profile.exams.cat}
-                                            onChange={(e) => handleExamChange("cat", e.target.value)}
-                                            placeholder="99.5"
-                                            style={{ width: '100%', padding: '0.5rem', borderRadius: '6px', border: '1px solid #cbd5e1' }}
-                                        />
-                                    </div>
-                                    <div>
-                                        <label style={{ fontSize: '0.875rem', marginBottom: '0.25rem', display: 'block' }}>CMAT %ile</label>
-                                        <input
-                                            type="number"
-                                            value={profile.exams.cmat}
-                                            onChange={(e) => handleExamChange("cmat", e.target.value)}
-                                            placeholder="98.0"
-                                            style={{ width: '100%', padding: '0.5rem', borderRadius: '6px', border: '1px solid #cbd5e1' }}
-                                        />
-                                    </div>
-                                </>
-                            )}
+                <div className="form-section">
+                    <h4>Exam Scores (Percentile/Rank)</h4>
+                    <div className="exam-grid">
+                        {profile.targetDegree.includes("MBA") && (
+                            <>
+                                <div className="form-group">
+                                    <label>CAT Percentile</label>
+                                    <input
+                                        type="number"
+                                        className="form-input"
+                                        value={profile.exams.cat}
+                                        onChange={(e) => handleExamChange("cat", e.target.value)}
+                                        placeholder="e.g. 99.5"
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label>CMAT Percentile</label>
+                                    <input
+                                        type="number"
+                                        className="form-input"
+                                        value={profile.exams.cmat}
+                                        onChange={(e) => handleExamChange("cmat", e.target.value)}
+                                        placeholder="e.g. 98.0"
+                                    />
+                                </div>
+                            </>
+                        )}
 
-                            {profile.targetDegree.includes("Tech") && (
-                                <>
-                                    <div>
-                                        <label style={{ fontSize: '0.875rem', marginBottom: '0.25rem', display: 'block' }}>JEE Main Rank</label>
-                                        <input
-                                            type="number"
-                                            value={profile.exams.jee}
-                                            onChange={(e) => handleExamChange("jee", e.target.value)}
-                                            placeholder="Rank"
-                                            style={{ width: '100%', padding: '0.5rem', borderRadius: '6px', border: '1px solid #cbd5e1' }}
-                                        />
-                                    </div>
-                                    <div>
-                                        <label style={{ fontSize: '0.875rem', marginBottom: '0.25rem', display: 'block' }}>GATE Score</label>
-                                        <input
-                                            type="number"
-                                            value={profile.exams.gate}
-                                            onChange={(e) => handleExamChange("gate", e.target.value)}
-                                            placeholder="Score"
-                                            style={{ width: '100%', padding: '0.5rem', borderRadius: '6px', border: '1px solid #cbd5e1' }}
-                                        />
-                                    </div>
-                                </>
-                            )}
-                        </div>
-                    </div>
-
-                    <div style={{ textAlign: 'right' }}>
-                        <Button onClick={handleSave} variant="primary">
-                            {saved ? "Saved ✨" : "Save Profile"}
-                        </Button>
+                        {profile.targetDegree.includes("Tech") && (
+                            <>
+                                <div className="form-group">
+                                    <label>JEE Main Rank</label>
+                                    <input
+                                        type="number"
+                                        className="form-input"
+                                        value={profile.exams.jee}
+                                        onChange={(e) => handleExamChange("jee", e.target.value)}
+                                        placeholder="e.g. 1500"
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label>GATE Score</label>
+                                    <input
+                                        type="number"
+                                        className="form-input"
+                                        value={profile.exams.gate}
+                                        onChange={(e) => handleExamChange("gate", e.target.value)}
+                                        placeholder="e.g. 750"
+                                    />
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
+
+                <div className="form-actions">
+                    <Button onClick={handleSave} variant="primary">
+                        {saved ? "Profile Saved ✨" : "Save Strategy Profile"}
+                    </Button>
+                </div>
             </div>
+
+            <style jsx>{`
+                .profile-form-wrapper {
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+                .profile-form-title {
+                    margin-bottom: 24px;
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    color: #1e368a;
+                    letter-spacing: -0.02em;
+                }
+                .profile-form-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                }
+                .form-group label {
+                    display: block;
+                    margin-bottom: 8px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    color: #475569;
+                }
+                .form-input, .form-select {
+                    width: 100%;
+                    padding: 12px 16px;
+                    border-radius: 12px;
+                    border: 1px solid #e2e8f0;
+                    background: white;
+                    font-size: 1rem;
+                    color: #1e293b;
+                    transition: all 0.2s;
+                    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+                }
+                .form-input:focus, .form-select:focus {
+                    outline: none;
+                    border-color: #3b82f6;
+                    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+                }
+                .form-section h4 {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: #334155;
+                    margin-bottom: 16px;
+                    padding-bottom: 8px;
+                    border-bottom: 1px solid #f1f5f9;
+                }
+                .exam-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 16px;
+                }
+                .form-actions {
+                    margin-top: 12px;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            `}</style>
         </div>
     );
 }
