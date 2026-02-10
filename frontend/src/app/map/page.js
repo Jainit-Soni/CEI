@@ -131,9 +131,12 @@ export default function MapPage() {
 
     const activeData = useMemo(() => {
         if (!activeState) return null;
+        const st = stateStats[activeState];
+        const count = typeof st === 'object' ? (st.count || 0) : (st || 0);
+
         return {
             name: activeState,
-            count: stateStats[activeState] || 0,
+            count: count,
             connections: STATE_NODES[activeState]?.connections || []
         };
     }, [activeState, stateStats]);
@@ -159,7 +162,7 @@ export default function MapPage() {
     }, []);
 
     const totalStats = useMemo(() => {
-        const counts = Object.values(stateStats);
+        const counts = Object.values(stateStats).map(st => typeof st === 'object' ? (st.count || 0) : (st || 0));
         return {
             colleges: counts.reduce((a, b) => a + b, 0),
             states: Object.keys(STATE_NODES).filter(s => !["Delhi", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", "Puducherry", "Andaman and Nicobar Islands", "Lakshadweep", "Ladakh"].includes(s)).length,
@@ -237,7 +240,8 @@ export default function MapPage() {
 
                                     {/* State Nodes */}
                                     {Object.entries(STATE_NODES).map(([stateName, node], index) => {
-                                        const count = stateStats[stateName] || 0;
+                                        const st = stateStats[stateName];
+                                        const count = typeof st === 'object' ? (st.count || 0) : (st || 0);
                                         const isHovered = hoveredState === stateName;
                                         const isSelected = selectedState === stateName;
                                         const isActive = isHovered || isSelected;

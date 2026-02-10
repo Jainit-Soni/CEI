@@ -67,6 +67,7 @@ function CollegesContent({ initialData }) {
     const [mapStatsData, setMapStatsData] = useState({ states: [] });
     const [viewMode, setViewMode] = useState("list"); // 'list' only
     const [isInitialized, setIsInitialized] = useState(false);
+    const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
     const ITEMS_PER_PAGE = 18;
 
     // Initialize state from URL params
@@ -204,8 +205,6 @@ function CollegesContent({ initialData }) {
 
     // Map stats removed as per user request
 
-
-
     // No more client-side filtering needed!
     const displayColleges = colleges;
 
@@ -216,22 +215,6 @@ function CollegesContent({ initialData }) {
             word.charAt(0).toUpperCase() + word.slice(1)
         ).join(' ');
     }, [stateFilter]);
-
-    // Compute stats for map based on API data instead of filtered list
-    const stateStats = useMemo(() => {
-        const stats = {};
-        if (!mapStatsData?.states) return stats;
-
-        mapStatsData.states.forEach(state => {
-            // Normalize state name keys
-            const key = state.name.toLowerCase().replace(/\s+/g, "");
-            stats[key] = {
-                count: state.count,
-                topColleges: state.topColleges || []
-            };
-        });
-        return stats;
-    }, [mapStatsData]);
 
     const handleFilterChange = useCallback((id, value) => {
         setFilters((prev) => ({ ...prev, [id]: value }));
