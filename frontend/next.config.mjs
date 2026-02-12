@@ -1,3 +1,5 @@
+import { withSentryConfig } from "@sentry/nextjs";
+
 const nextConfig = {
     webpack: (config, { isServer }) => {
         config.ignoreWarnings = [
@@ -56,14 +58,27 @@ const nextConfig = {
             }
         ]
     },
-    // Rewrites only for local development if needed, but we use direct URL now
-    // async rewrites() {
-    //     return [
-    //         {
-    //             source: '/api/:path*',
-    //             destination: 'http://localhost:4000/api/:path*',
-    //         },
-    //     ];
-    // },
 };
-export default nextConfig;
+
+export default withSentryConfig(nextConfig, {
+    // Suppresses source map uploading logs during build
+    silent: true,
+
+    // For all available options, see:
+    // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+    org: process.env.SENTRY_ORG,
+    project: process.env.SENTRY_PROJECT,
+
+    // Only enable Sentry webpack plugin when DSN is configured
+    disableServerWebpackPlugin: !process.env.NEXT_PUBLIC_SENTRY_DSN,
+    disableClientWebpackPlugin: !process.env.NEXT_PUBLIC_SENTRY_DSN,
+
+    // Automatically tree-shake Sentry logger statements to reduce bundle size
+    disableLogger: true,
+
+    // Hides source maps from generated client bundles
+    hideSourceMaps: true,
+
+    // Route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers
+    tunnelRoute: "/monitoring",
+});

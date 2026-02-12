@@ -43,7 +43,6 @@ export default async function ExamDetail({ params }) {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <JsonLd data={jsonLd} />
       <ExamDetailClient id={params.id} initialData={exam} />
     </>
   );

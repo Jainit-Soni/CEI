@@ -43,7 +43,6 @@ export default async function CollegeDetail({ params }) {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <JsonLd data={jsonLd} />
       <CollegeDetailClient id={params.id} initialData={college} />
     </>
   );
