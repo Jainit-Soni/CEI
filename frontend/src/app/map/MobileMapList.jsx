@@ -12,7 +12,7 @@ function getNodeColor(count) {
     return "#34d399"; // Green
 }
 
-export default function MobileMapList({ stateStats, onStateClick }) {
+export default function MobileMapList({ stateStats, totalStats, onStateClick }) {
     // Sort states by count (High to Low)
     const sortedStates = useMemo(() => {
         return Object.entries(stateStats)
@@ -26,8 +26,15 @@ export default function MobileMapList({ stateStats, onStateClick }) {
     return (
         <div className="mobile-map-list">
             <div className="mobile-list-header">
-                <h3>State Density Index</h3>
-                <p>Select a region to explore colleges</p>
+                <h3 className="title-glow">Strategic Priority Index</h3>
+                <p>{totalStats?.colleges}+ colleges across {totalStats?.states} states & {totalStats?.uts} UTs</p>
+
+                <div className="mobile-legend-compact">
+                    <div className="legend-item"><span className="dot" style={{ background: '#fbbf24' }}></span> 40+</div>
+                    <div className="legend-item"><span className="dot" style={{ background: '#60a5fa' }}></span> 20+</div>
+                    <div className="legend-item"><span className="dot" style={{ background: '#a78bfa' }}></span> 10+</div>
+                    <div className="legend-item"><span className="dot" style={{ background: '#34d399' }}></span> 1+</div>
+                </div>
             </div>
 
             <div className="mobile-states-grid">

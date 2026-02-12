@@ -127,6 +127,16 @@ export default function Header() {
 
         {/* Mobile Nav Overlay */}
         <div className={`mobile-nav-overlay ${open ? "open" : ""}`}>
+          <div className="mobile-nav-header">
+            <button
+              className="mobile-back-button"
+              onClick={() => setOpen(false)}
+              aria-label="Close Menu"
+            >
+              <ArrowLeft size={24} />
+              <span>Back</span>
+            </button>
+          </div>
           <nav className="mobile-nav-links">
             <Link href="/" className={isActive("/") ? "active" : ""} onClick={() => setOpen(false)}>Home</Link>
             <Link href="/colleges" className={isActive("/colleges") ? "active" : ""} onClick={() => setOpen(false)}>Colleges</Link>

@@ -13,20 +13,48 @@
 }
 
 .mobile-list-header {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     text-align: center;
+    padding: 20px 0;
 }
 
 .mobile-list-header h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 8px;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.03em;
+    font-family: var(--font-display);
 }
 
 .mobile-list-header p {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     color: #64748b;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.mobile-legend-compact {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.legend-item .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }
 
 .mobile-states-grid {

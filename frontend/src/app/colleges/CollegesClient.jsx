@@ -8,6 +8,7 @@ import GlassPanel from "@/components/GlassPanel";
 import Button from "@/components/Button";
 import FancySelect from "@/components/FancySelect";
 import EmptyState from "@/components/EmptyState";
+import { Heart, Search, X } from "lucide-react";
 import { CardSkeleton } from "@/components/Skeleton";
 import Pagination from "@/components/Pagination";
 import FavoriteButton from "@/components/FavoriteButton";

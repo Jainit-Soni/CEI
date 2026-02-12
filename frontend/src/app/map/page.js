@@ -197,6 +197,7 @@ export default function MapPage() {
                     {isMobile ? (
                         <MobileMapList
                             stateStats={stateStats}
+                            totalStats={totalStats}
                             onStateClick={handleStateClick}
                         />
                     ) : (
