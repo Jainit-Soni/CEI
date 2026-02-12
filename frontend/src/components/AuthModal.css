@@ -289,7 +289,6 @@
     .auth-overlay-glass {
         padding: 0;
         align-items: flex-start;
-        /* Start from top on mobile */
     }
 
     .auth-modal-glass {
@@ -301,9 +300,7 @@
         max-width: none;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        /* Let overlay or body handle it */
         transform: translateY(100dvh);
-        /* Slide from bottom */
         transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -312,14 +309,14 @@
     }
 
     .auth-brand-glass {
-        padding: 4rem 2rem 2rem;
+        padding: 2.5rem 1.5rem 1.5rem;
         flex: none;
         height: auto;
-        min-height: 200px;
+        min-height: 140px;
     }
 
     .auth-form-glass {
-        padding: 2.5rem 1.5rem 5rem;
+        padding: 1.5rem 1.25rem 2rem;
         flex: 1;
         border-left: none;
         border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -331,14 +328,45 @@
         top: 1rem;
         right: 1.5rem;
     }
-}
 
-@media (max-width: 480px) {
+    .auth-header-glass {
+        margin-bottom: 1.5rem;
+    }
+
     .auth-header-glass h2 {
         font-size: 1.75rem;
     }
+}
+
+@media (max-width: 480px) {
+    .auth-brand-glass {
+        padding: 2rem 1rem 1rem;
+        min-height: 100px;
+    }
+
+    .auth-header-glass h2 {
+        font-size: 1.5rem;
+    }
 
     .brand-copy-glass h3 {
-        font-size: 1.35rem;
+        font-size: 1.2rem;
+    }
+
+    .brand-copy-glass p {
+        font-size: 0.85rem;
+    }
+
+    .auth-form-glass {
+        padding: 1.25rem 1rem 1.5rem;
+    }
+
+    .glass-input {
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .auth-btn-main-glass,
+    .auth-btn-google-glass {
+        padding: 0.75rem;
     }
 }

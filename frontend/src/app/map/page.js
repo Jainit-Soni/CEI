@@ -99,7 +99,15 @@ export default function MapPage() {
         const loadStats = async () => {
             try {
                 const data = await fetchStateStats();
-                setStateStats(data || {});
+                // API returns { states: [{ name, count, topColleges, type }] }
+                // Transform to { stateName: { count, topColleges, type } } for node lookup
+                if (data?.states && Array.isArray(data.states)) {
+                    const map = {};
+                    data.states.forEach(s => { map[s.name] = s; });
+                    setStateStats(map);
+                } else {
+                    setStateStats(data || {});
+                }
             } catch (error) {
                 console.error("Failed to fetch map stats:", error);
             } finally {
