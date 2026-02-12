@@ -465,8 +465,8 @@ export default function ApplicationBoard() {
 
                 .list-header-row, .mylist-row {
                     display: grid;
-                    grid-template-columns: 60px minmax(0, 1fr) 100px;
-                    gap: 12px;
+                    grid-template-columns: 48px minmax(0, 1fr) 100px;
+                    gap: 8px;
                     align-items: center;
                 }
 
@@ -502,7 +502,7 @@ export default function ApplicationBoard() {
                     background: white;
                     border: 1px solid #f1f5f9;
                     border-radius: 16px;
-                    padding: 12px 20px;
+                    padding: 12px;
                     margin-bottom: 12px;
                     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 }
@@ -552,7 +552,8 @@ export default function ApplicationBoard() {
 
                 .row-meta {
                     display: flex;
-                    gap: 8px;
+                    gap: 6px;
+                    flex-wrap: wrap;
                 }
 
                 .meta-tag {

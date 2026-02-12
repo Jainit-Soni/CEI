@@ -16,8 +16,11 @@ export default function MobileMapList({ stateStats, onStateClick }) {
     // Sort states by count (High to Low)
     const sortedStates = useMemo(() => {
         return Object.entries(stateStats)
-            .sort(([, countA], [, countB]) => countB - countA)
-            .map(([name, count]) => ({ name, count }));
+            .map(([name, data]) => {
+                const count = typeof data === 'object' ? (data.count || 0) : (data || 0);
+                return { name, count };
+            })
+            .sort((a, b) => b.count - a.count);
     }, [stateStats]);
 
     return (

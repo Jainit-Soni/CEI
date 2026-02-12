@@ -59,7 +59,18 @@ function loadStateCollegeFiles() {
       console.warn(`Failed to read ${file}:`, err.message);
     }
   }
-  return combined;
+  // Deduplicate by ID to ensure accuracy
+  const uniqueMap = new Map();
+  combined.forEach(c => {
+    if (c && c.id) {
+      // Only keep the most complete one if IDs clash
+      if (!uniqueMap.has(c.id) || (c.courses?.length > (uniqueMap.get(c.id).courses?.length || 0))) {
+        uniqueMap.set(c.id, c);
+      }
+    }
+  });
+
+  return Array.from(uniqueMap.values());
 }
 
 // --- L1 IN-MEMORY CACHE ---
@@ -127,6 +138,12 @@ async function initializeCache() {
         LOCAL_CACHE.push(c);
       }
     });
+
+    // Deduplicate LOCAL_CACHE one last time for safety
+    const finalMap = new Map();
+    LOCAL_CACHE.forEach(c => finalMap.set(c.id, c));
+    LOCAL_CACHE = Array.from(finalMap.values());
+
     await redis.hmset(CACHE_KEYS.COLLEGES_MAP, updateMap);
   }
 

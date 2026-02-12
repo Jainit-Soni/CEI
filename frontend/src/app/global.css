@@ -127,8 +127,9 @@ body {
 .chromatic-band-4 {
   content: "";
   position: absolute;
-  width: 200%;
-  height: 300px;
+  width: 300%;
+  height: 400px;
+  left: -100%;
   transform-origin: center;
   will-change: transform;
 }
@@ -219,41 +220,41 @@ body {
 
 @keyframes bandDrift1 {
   0% {
-    transform: translateX(-30%) rotate(-8deg);
+    transform: translateX(-20%) rotate(-8deg);
   }
 
   100% {
-    transform: translateX(80%) rotate(-8deg);
+    transform: translateX(20%) rotate(-8deg);
   }
 }
 
 @keyframes bandDrift2 {
   0% {
-    transform: translateX(-20%) rotate(-5deg);
+    transform: translateX(-15%) rotate(-5deg);
   }
 
   100% {
-    transform: translateX(70%) rotate(-5deg);
+    transform: translateX(15%) rotate(-5deg);
   }
 }
 
 @keyframes bandDrift3 {
   0% {
-    transform: translateX(-40%) rotate(-3deg);
+    transform: translateX(-25%) rotate(-3deg);
   }
 
   100% {
-    transform: translateX(60%) rotate(-3deg);
+    transform: translateX(25%) rotate(-3deg);
   }
 }
 
 @keyframes bandDrift4 {
   0% {
-    transform: translateX(-25%) rotate(-10deg);
+    transform: translateX(-10%) rotate(-10deg);
   }
 
   100% {
-    transform: translateX(75%) rotate(-10deg);
+    transform: translateX(10%) rotate(-10deg);
   }
 }
 

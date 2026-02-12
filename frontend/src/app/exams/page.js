@@ -23,6 +23,7 @@ export default function ExamsPage() {
     type: "All",
     section: "All",
   });
+  const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
   useEffect(() => {
     const load = async () => {
@@ -187,9 +188,35 @@ export default function ExamsPage() {
         </Container>
       </section>
 
-      <section className="list-filters-section">
+      {/* Mobile Filter Toggle */}
+      <div className="mobile-filter-toggle-container">
+        <Button
+          variant="secondary"
+          className="w-full justify-between"
+          onClick={() => setIsMobileFiltersOpen(!isMobileFiltersOpen)}
+        >
+          <div className="flex items-center gap-2">
+            <span>{isMobileFiltersOpen ? "Hide Filters" : "Filter Exams"}</span>
+          </div>
+          <span className="text-xs bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full">
+            {filteredExams.length} Results
+          </span>
+        </Button>
+      </div>
+
+      <section className={`list-filters-section ${isMobileFiltersOpen ? "mobile-open" : ""}`}>
         <Container>
           <GlassPanel className="filters-panel" variant="strong">
+            {/* Mobile Header */}
+            <div className="mobile-filter-header">
+              <h3>Filters</h3>
+              <button className="filter-close-btn" onClick={() => setIsMobileFiltersOpen(false)}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
             <div className="filter-search">
               <svg
                 className="filter-search-icon"
@@ -235,6 +262,23 @@ export default function ExamsPage() {
               {hasActiveFilters && (
                 <Button variant="secondary" onClick={clearFilters}>Reset filters</Button>
               )}
+            </div>
+
+            {/* Mobile Sticky Actions */}
+            <div className="mobile-filter-actions">
+              <Button
+                variant="secondary"
+                className="flex-1"
+                onClick={clearFilters}
+              >
+                Clear All
+              </Button>
+              <Button
+                className="flex-1"
+                onClick={() => setIsMobileFiltersOpen(false)}
+              >
+                Apply Filters
+              </Button>
             </div>
           </GlassPanel>
         </Container>

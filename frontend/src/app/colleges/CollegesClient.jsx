@@ -302,6 +302,22 @@ function CollegesContent({ initialData }) {
                             </div>
                         </div>
                     )}
+                    {/* Mobile Sticky Actions */}
+                    <div className="mobile-filter-actions">
+                        <button
+                            className="filter-btn-reset"
+                            onClick={() => {
+                                setFilters({ state: 'All', district: 'All', course: 'All', tier: 'All' });
+                                setQuery(""); // Assuming 'q' is for query
+                                setIsMobileFiltersOpen(false);
+                            }}
+                        >
+                            Clear All
+                        </button>
+                        <button className="filter-btn-apply" onClick={() => setIsMobileFiltersOpen(false)}>
+                            Apply Filters
+                        </button>
+                    </div>
                 </EmptyState>
             );
         }
@@ -430,6 +446,14 @@ function CollegesContent({ initialData }) {
             <section className={`list-filters-section ${isMobileFiltersOpen ? "mobile-open" : ""}`}>
                 <Container>
                     <GlassPanel className="filters-panel" variant="strong">
+                        {/* Mobile Header */}
+                        <div className="mobile-filter-header">
+                            <h3>Filters</h3>
+                            <button className="filter-close-btn" onClick={() => setIsMobileFiltersOpen(false)}>
+                                <X size={20} />
+                            </button>
+                        </div>
+
                         <div className="filter-search">
                             <input
                                 type="search"
@@ -476,6 +500,23 @@ function CollegesContent({ initialData }) {
                                     Reset filters
                                 </Button>
                             )}
+                        </div>
+
+                        {/* Mobile Sticky Actions */}
+                        <div className="mobile-filter-actions">
+                            <Button
+                                variant="secondary"
+                                className="flex-1"
+                                onClick={clearFilters}
+                            >
+                                Clear All
+                            </Button>
+                            <Button
+                                className="flex-1"
+                                onClick={() => setIsMobileFiltersOpen(false)}
+                            >
+                                Apply Filters
+                            </Button>
                         </div>
                     </GlassPanel>
                 </Container>
