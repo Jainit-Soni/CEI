@@ -13,12 +13,15 @@ const adminRoutes = require("./routes/admin"); // Import admin routes
 
 const app = express();
 
-// CORS configuration for production
-const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:3030",
-  ...(process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [])
-];
+// CORS configuration
+const isProduction = process.env.NODE_ENV === 'production';
+
+const rawOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
+const normalizedOrigins = rawOrigins.map(o => o.trim().replace(/\/$/, ""));
+
+const allowedOrigins = isProduction
+  ? normalizedOrigins
+  : ["http://localhost:3000", "http://localhost:3030", ...normalizedOrigins];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -27,6 +30,7 @@ const corsOptions = {
     if (allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.includes("*")) {
       callback(null, true);
     } else {
+      console.warn(`CORS Reject: Origin [${origin}] not in allowed list: [${allowedOrigins.join(", ")}]`);
       callback(new Error("Not allowed by CORS"));
     }
   },

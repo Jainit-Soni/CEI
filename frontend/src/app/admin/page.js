@@ -2,82 +2,55 @@
 
 import { useState, useEffect } from "react";
 import { useAuth } from "@/lib/AuthContext";
-import { api } from "@/lib/api";
-import { useRouter } from "next/navigation";
 import "./admin.css";
+import AdminGuard from "@/components/AdminGuard";
 
-export default function AdminPage() {
-    const { user, loading, error: authError, signInWithGoogle, logout } = useAuth();
-    const [adminKey, setAdminKey] = useState("");
+function AdminDashboard() {
+    const { user, logout } = useAuth();
     const [colleges, setColleges] = useState([]);
     const [view, setView] = useState("list"); // list, form
     const [editingCollege, setEditingCollege] = useState(null);
     const [formData, setFormData] = useState({});
     const [status, setStatus] = useState("");
-    const router = useRouter();
 
-    const [isUnlocked, setIsUnlocked] = useState(false);
-
-    // Load Admin Key from LocalStorage
-    useEffect(() => {
-        const stored = localStorage.getItem("admin_key");
-        if (stored) {
-            setAdminKey(stored);
-            // Don't auto-unlock to force re-verification or at least click
-            // Actually, auto-unlock is fine if key works.
-            // Let's verify key by making a call
-            verifyKey(stored);
-        }
-    }, []);
-
-    // Fetch Colleges on Load (if user & key exist) - This useEffect is now redundant as verifyKey calls fetchColleges
-    // useEffect(() => {
-    //     if (user && adminKey) {
-    //         fetchColleges();
-    //     }
-    // }, [user, adminKey]);
-
-    const verifyKey = async (key) => {
+    // Helper to call our Next.js Proxy
+    const secureCall = async (action, endpoint, data = {}) => {
         try {
-            setStatus("Verifying...");
-            // Simple check or fetch colleges to verify
-            await api.get("/admin/colleges", {
-                headers: { "x-admin-secret": key }
+            const res = await fetch("/api/admin-proxy", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    action,
+                    endpoint,
+                    data,
+                    userEmail: user.email
+                })
             });
-            setIsUnlocked(true);
-            fetchColleges(key);
-            setStatus("");
+            const json = await res.json();
+            if (!res.ok) throw new Error(json.error || "Request failed");
+            return json;
         } catch (err) {
-            setStatus("Invalid Admin Key");
-            setIsUnlocked(false);
+            throw err;
         }
     };
 
-    const fetchColleges = async (key) => {
+    // Load data on mount
+    useEffect(() => {
+        if (user) fetchColleges();
+    }, [user]);
+
+    const fetchColleges = async () => {
         try {
             setStatus("Loading data...");
-            const res = await api.get("/admin/colleges", {
-                headers: { "x-admin-secret": key || adminKey }
-            });
-            setColleges(res.data);
+            const data = await secureCall("GET", "/admin/colleges");
+            // API might return { data: [...] } or just [...]
+            setColleges(Array.isArray(data) ? data : (data.data || []));
             setStatus("");
         } catch (err) {
             console.error(err);
-            setStatus("Error loading data.");
+            setStatus("Error: " + err.message);
         }
     };
-
-    const handleUnlock = (e) => {
-        e.preventDefault();
-        localStorage.setItem("admin_key", adminKey);
-        verifyKey(adminKey);
-    };
-
-    // handleSaveKey is no longer needed as handleUnlock handles saving and verifying
-    // const handleSaveKey = () => {
-    //     localStorage.setItem("admin_key", adminKey);
-    //     fetchColleges();
-    // };
 
     const handleEdit = (college) => {
         setEditingCollege(college);
@@ -103,125 +76,54 @@ export default function AdminPage() {
     const handleDelete = async (id) => {
         if (!confirm("Are you sure?")) return;
         try {
-            await api.delete(`/admin/colleges/${id}`, {
-                headers: { "x-admin-secret": adminKey }
-            });
+            await secureCall("DELETE", `/admin/colleges/${id}`);
             fetchColleges();
         } catch (err) {
-            alert("Failed to delete");
+            alert("Failed to delete: " + err.message);
         }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await api.post("/admin/colleges", formData, {
-                headers: { "x-admin-secret": adminKey }
-            });
+            await secureCall("POST", "/admin/colleges", formData);
             alert("Saved!");
             setView("list");
             fetchColleges();
         } catch (err) {
-            alert("Failed to save: " + err.response?.data?.error || err.message);
+            alert("Failed to save: " + err.message);
         }
     };
 
-    if (loading) return <div className="status-msg status-loading">Loading auth...</div>;
-
-    if (!user) {
-        return (
-            <div className="admin-login-screen">
-                <div className="admin-card">
-                    <h2 className="admin-title">Admin Access</h2>
-                    <p style={{ marginBottom: '1.5rem', textAlign: 'center', color: '#666' }}>
-                        Sign in to manage colleges and exam data.
-                    </p>
-
-                    {authError && (
-                        <div className="status-msg status-error" style={{ textAlign: 'left', fontSize: '0.9rem' }}>
-                            <strong>Login Failed:</strong> {authError.message || "Unknown error"}
-                            <br />
-                            <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>Code: {authError.code}</span>
-                        </div>
-                    )}
-
-                    <button
-                        onClick={signInWithGoogle}
-                        className="admin-btn btn-primary btn-full"
-                    >
-                        Sign in with Google
-                    </button>
-
-                    <div style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.8rem', color: '#999' }}>
-                        Protected Area. Authorized Personnel Only.
-                    </div>
-                </div>
-            </div>
-        );
-    }
-
-    if (!isUnlocked) {
-        return (
-            <div className="admin-login-screen">
-                <div className="admin-card">
-                    <h2 className="admin-title">Enter Admin Key</h2>
-                    <p style={{ textAlign: 'center', marginBottom: '1rem', color: '#666' }}>
-                        Hello, {user.displayName}. Please verify your privileges.
-                    </p>
-                    <form onSubmit={handleUnlock}>
-                        <input
-                            type="password"
-                            placeholder="Admin Secret Key"
-                            value={adminKey}
-                            onChange={(e) => setAdminKey(e.target.value)}
-                            className="admin-input"
-                            autoFocus
-                        />
-                        <button
-                            type="submit"
-                            className="admin-btn btn-primary btn-full"
-                        >
-                            Unlock Dashboard
-                        </button>
-                    </form>
-                    {status && <p className="status-msg status-error">{status}</p>}
-                    <button onClick={logout} style={{ marginTop: '1rem', width: '100%', border: 'none', background: 'none', color: '#666', cursor: 'pointer' }}>Logout</button>
-                </div>
-            </div>
-        );
-    }
-
     return (
         <div className="admin-container">
-            <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <div className="admin-wrapper">
                 {/* Header */}
                 <div className="admin-header">
-                    <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Admin Dashboard</h1>
-                    <div className="admin-header-actions">
-                        <span style={{ fontSize: '0.9rem', color: '#666' }}>Logged in as {user.displayName}</span>
-                        <button onClick={() => {
-                            localStorage.removeItem("admin_key");
-                            setIsUnlocked(false);
-                            setAdminKey("");
-                        }} className="admin-btn btn-secondary">Lock</button>
+                    <div className="admin-brand">
+                        <h1>Admin Portal</h1>
+                        <span className="admin-badge">Secure Mode</span>
+                    </div>
+                    <div className="admin-user-info">
+                        <div className="user-pill">
+                            <span className="status-dot"></span>
+                            {user?.email}
+                        </div>
                         <button onClick={logout} className="admin-btn btn-danger">Logout</button>
                     </div>
                 </div>
 
-                {/* Status Message */}
-                {status && <div className="status-msg status-loading">{status}</div>}
-
                 {/* Content */}
                 {view === "list" ? (
-                    <div>
-                        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1rem' }}>
-                            <button
-                                onClick={handleAddNew}
-                                className="admin-btn btn-primary"
-                            >
-                                + Add New College
+                    <div className="admin-content card-glass">
+                        <div className="admin-toolbar">
+                            <h2>College Database</h2>
+                            <button onClick={handleAddNew} className="admin-btn btn-primary">
+                                + Add College
                             </button>
                         </div>
+
+                        {status && <div className="status-bar">{status}</div>}
 
                         <div className="admin-table-container">
                             <table className="admin-table">
@@ -229,44 +131,37 @@ export default function AdminPage() {
                                     <tr>
                                         <th>Name</th>
                                         <th>Location</th>
-                                        <th style={{ textAlign: 'right' }}>Actions</th>
+                                        <th align="right">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {colleges.map((c) => (
                                         <tr key={c.id}>
-                                            <td style={{ fontWeight: 500 }}>{c.name}</td>
-                                            <td style={{ color: '#666' }}>{c.city}, {c.state}</td>
-                                            <td className="admin-actions-cell">
-                                                <button
-                                                    onClick={() => handleEdit(c)}
-                                                    className="admin-btn btn-secondary"
-                                                >
-                                                    Edit
-                                                </button>
-                                                <button
-                                                    onClick={() => handleDelete(c.id)}
-                                                    className="admin-btn btn-danger"
-                                                >
-                                                    Delete
-                                                </button>
+                                            <td>
+                                                <div className="fw-500">{c.name}</div>
+                                                <div className="sub-text">ID: {c.id}</div>
+                                            </td>
+                                            <td>{c.city}, {c.state}</td>
+                                            <td className="actions-cell">
+                                                <button onClick={() => handleEdit(c)} className="icon-btn">Edit</button>
+                                                <button onClick={() => handleDelete(c.id)} className="icon-btn text-red">Delete</button>
                                             </td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
                             {colleges.length === 0 && !status && (
-                                <div style={{ padding: '2rem', textAlign: 'center', color: '#666' }}>
-                                    No colleges loaded.
-                                </div>
+                                <div className="empty-state">No colleges found.</div>
                             )}
                         </div>
                     </div>
                 ) : (
-                    <div className="admin-form-container">
-                        <h2 className="admin-title" style={{ textAlign: 'left' }}>{editingCollege ? "Edit College" : "Add New College"}</h2>
-                        <form onSubmit={handleSubmit}>
-                            <div className="form-grid">
+                    <div className="admin-content card-glass">
+                        <div className="admin-toolbar">
+                            <h2>{editingCollege ? "Edit College" : "Add New College"}</h2>
+                        </div>
+                        <form onSubmit={handleSubmit} className="admin-form">
+                            <div className="form-grid-2">
                                 <div className="form-group">
                                     <label>College Name</label>
                                     <input
@@ -286,7 +181,7 @@ export default function AdminPage() {
                                 </div>
                             </div>
 
-                            <div className="form-grid">
+                            <div className="form-grid-2">
                                 <div className="form-group">
                                     <label>City</label>
                                     <input
@@ -306,33 +201,22 @@ export default function AdminPage() {
                             </div>
 
                             <div className="form-group">
-                                <label>Raw Data (JSON Edit)</label>
+                                <label>Raw JSON Data</label>
                                 <textarea
                                     className="admin-input json-editor"
                                     value={JSON.stringify(formData, null, 2)}
                                     onChange={e => {
-                                        try {
-                                            setFormData(JSON.parse(e.target.value))
-                                        } catch (err) {
-                                            // Allow typing
-                                        }
+                                        try { setFormData(JSON.parse(e.target.value)) } catch (err) { }
                                     }}
                                 />
                             </div>
 
-                            <div className="admin-actions-cell" style={{ marginTop: '1rem' }}>
-                                <button
-                                    type="button"
-                                    onClick={() => setView("list")}
-                                    className="admin-btn btn-secondary"
-                                >
+                            <div className="form-actions">
+                                <button type="button" onClick={() => setView("list")} className="admin-btn btn-secondary">
                                     Cancel
                                 </button>
-                                <button
-                                    type="submit"
-                                    className="admin-btn btn-primary"
-                                >
-                                    Save College
+                                <button type="submit" className="admin-btn btn-primary">
+                                    Save Changes
                                 </button>
                             </div>
                         </form>
@@ -340,5 +224,28 @@ export default function AdminPage() {
                 )}
             </div>
         </div>
+    );
+}
+
+// Wrap with the Guard
+export default function AdminPage() {
+    const { user, signInWithGoogle } = useAuth();
+
+    return (
+        <AdminGuard>
+            {!user ? (
+                <div className="admin-login-screen">
+                    <div className="admin-card glass-panel">
+                        <h2 className="admin-title">Portal Access</h2>
+                        <p className="admin-desc">Restricted to authorized personnel.</p>
+                        <button onClick={signInWithGoogle} className="admin-btn btn-google">
+                            Sign in with Google
+                        </button>
+                    </div>
+                </div>
+            ) : (
+                <AdminDashboard />
+            )}
+        </AdminGuard>
     );
 }

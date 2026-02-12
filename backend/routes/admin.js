@@ -7,9 +7,15 @@ const requireAdmin = (req, res, next) => {
     const adminSecret = req.headers["x-admin-secret"];
     // For now, hardcoded secret or env var. 
     // In production, this should be validated properly or use Firebase Auth token verification.
-    const VALID_SECRET = process.env.ADMIN_SECRET || "admin123";
+    // STRICT SECURITY: No fallback allowed in production
+    const { ADMIN_SECRET } = process.env;
 
-    if (adminSecret !== VALID_SECRET) {
+    if (!ADMIN_SECRET) {
+        console.error("CRITICAL: ADMIN_SECRET is not set in environment variables.");
+        return res.status(500).json({ error: "Server configuration error" });
+    }
+
+    if (adminSecret !== ADMIN_SECRET) {
         return res.status(403).json({ error: "Unauthorized" });
     }
     next();

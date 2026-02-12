@@ -130,25 +130,30 @@ export default function ApplicationBoard() {
 
         const sanitize = (val, type) => {
             if (!val) return "-";
-            let s = val.toString().replace(/[^\x20-\x7E]/g, '').trim();
+            let s = val.toString().trim();
 
             if (type === 'tuition') {
                 if (s.toLowerCase().includes("verify") || s.toLowerCase().includes("official") || s.length > 25) {
                     return "See Website";
                 }
-                s = s.replace(/Rs\.|INR|¹|~|\(Approx\)/gi, '').trim();
+                // Convert symbols to "INR" for better PDF font support
+                s = s.replace(/Rs\.|INR|¹|~|₹|\(Approx\)/gi, '').trim();
                 if (s === "-" || !s) return "See Website";
-                // If it already includes "Lakh", keep it, otherwise prefix INR
                 return s.toLowerCase().includes("lakh") ? s : `INR ${s}`;
             }
 
             if (type === 'package') {
-                s = s.replace(/LPA|INR|Rs\.|¹|~|\(Approx\)/gi, '').trim();
+                s = s.replace(/LPA|INR|Rs\.|¹|~|₹|\(Approx\)/gi, '').trim();
                 if (s === "-" || !s) return "N/A";
                 return `${s} LPA`;
             }
 
-            return s;
+            // For names/locations, allow basic extended Latin but strip exotic control chars
+            return s.replace(/[^\x20-\x7E\s]/g, (char) => {
+                // Map common characters if needed, otherwise ignore exotic ones for PDF stability
+                const map = { '₹': 'Rs' };
+                return map[char] || '';
+            });
         };
 
         const tableData = items.map((item) => [item]);

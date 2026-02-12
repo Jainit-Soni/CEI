@@ -281,6 +281,88 @@
     text-align: center;
 }
 
+/* Analysis Breakdown */
+.roi-breakdown {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+}
+
+.roi-breakdown h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: var(--color-ink);
+}
+
+.breakdown-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.breakdown-col h5 {
+    font-size: 0.9rem;
+    color: var(--color-ink-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+}
+
+.math-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.math-list li {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.math-op {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-ink-muted);
+}
+
+.math-total {
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1.5px solid var(--color-border);
+    color: var(--color-accent) !important;
+    font-size: 1.1rem !important;
+}
+
+.negative {
+    color: #ef4444;
+}
+
+.calculation-logic {
+    margin-top: 32px;
+    padding: 16px 20px;
+    background: var(--color-surface-subtle);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--color-ink-secondary);
+    border-left: 4px solid var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .breakdown-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
 /* Educational Section */
 .roi-education {
     background: #f8fafc;

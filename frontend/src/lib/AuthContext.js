@@ -5,6 +5,7 @@ import { createContext, useContext, useEffect, useState, useCallback } from "rea
 // Lazy-loaded Firebase instances
 let firebaseApp = null;
 let firebaseAuth = null;
+let initPromise = null;
 
 const AuthContext = createContext({
     user: null,
@@ -16,20 +17,30 @@ const AuthContext = createContext({
     logout: async () => { },
 });
 
-// Lazy initialize Firebase
+// Lazy initialize Firebase with singleton lock
 async function getFirebaseAuth() {
     if (firebaseAuth) return firebaseAuth;
+    if (initPromise) return initPromise;
 
-    const [{ initializeApp, getApps }, { getAuth }] = await Promise.all([
-        import("firebase/app"),
-        import("firebase/auth")
-    ]);
+    initPromise = (async () => {
+        try {
+            const [{ initializeApp, getApps }, { getAuth }] = await Promise.all([
+                import("firebase/app"),
+                import("firebase/auth")
+            ]);
 
-    const firebaseConfig = (await import("./firebase.config")).default;
+            const firebaseConfig = (await import("./firebase.config")).default;
 
-    firebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
-    firebaseAuth = getAuth(firebaseApp);
-    return firebaseAuth;
+            firebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+            firebaseAuth = getAuth(firebaseApp);
+            return firebaseAuth;
+        } catch (err) {
+            initPromise = null; // Reset on failure so it can retry
+            throw err;
+        }
+    })();
+
+    return initPromise;
 }
 
 export function AuthProvider({ children }) {

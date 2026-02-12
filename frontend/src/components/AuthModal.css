@@ -22,6 +22,7 @@
     display: flex;
     width: 900px;
     height: 600px;
+    max-height: 90vh;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(40px) saturate(180%);
     border-radius: 28px;
@@ -295,12 +296,13 @@
         flex-direction: column;
         width: 100vw;
         height: auto;
-        min-height: 100vh;
+        min-height: 100dvh;
         border-radius: 0;
         max-width: none;
-        overflow-y: visible;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         /* Let overlay or body handle it */
-        transform: translateY(100vh);
+        transform: translateY(100dvh);
         /* Slide from bottom */
         transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }

@@ -224,6 +224,17 @@ export default function AdmissionProbability() {
                             const isDbPercentile = threshold <= 100;
                             const userVal = rank;
 
+                            // Exam-specific weights (Approximate candidate counts)
+                            const getExamWeight = (examId) => {
+                                const id = examId?.toLowerCase() || "";
+                                if (id.includes("jee")) return 1200000;
+                                if (id.includes("cat")) return 250000;
+                                if (id.includes("cmat")) return 75000;
+                                if (id.includes("gate")) return 700000;
+                                if (id.includes("neet")) return 2000000;
+                                return 100000; // Default fallback
+                            };
+
                             if (scoreType === "percentile") {
                                 if (isDbPercentile) {
                                     // Percentile vs Percentile
@@ -239,7 +250,9 @@ export default function AdmissionProbability() {
                                     }
                                 } else {
                                     // Percentile vs Rank (Convert)
-                                    const estRank = (100 - userVal) * 1000;
+                                    const totalCandidates = getExamWeight(selectedExam);
+                                    const estRank = ((100 - userVal) / 100) * totalCandidates;
+
                                     if (estRank <= threshold) {
                                         status = "High Chance";
                                         color = "#10b981";

@@ -7,7 +7,7 @@ import Button from "./Button";
 import AuthModal from "./AuthModal";
 import UserDropdown from "./UserDropdown";
 import { useAuth } from "@/lib/AuthContext";
-import { Heart, Menu, X, ArrowLeft } from "lucide-react";
+import { Heart, Menu, ArrowLeft } from "lucide-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -120,7 +120,12 @@ export default function Header() {
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle Menu"
             >
-              {open ? <X size={24} /> : <Menu size={24} />}
+              {open ? (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              ) : <Menu size={24} />}
             </button>
           </div>
         </div>

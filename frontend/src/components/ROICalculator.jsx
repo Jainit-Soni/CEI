@@ -33,30 +33,51 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
         const totalLiving = livingPerMonth * 12 * duration;
         const totalInvest = totalFees + totalLiving;
 
-        // Returns
-        const monthlyInHand = (avgPackage * 0.85) / 12; // 15% tax/deductions approx
-        const annualInHand = monthlyInHand * 12;
+        // Progressive Tax Logic
+        const calculateInHand = (annual) => {
+            if (annual <= 500000) return annual; // No tax
+            if (annual <= 1000000) return annual * 0.90; // 10% approx
+            if (annual <= 2000000) return annual * 0.80; // 20%
+            return annual * 0.70; // 30% for high earners
+        };
 
-        // Dynamic Horizon
+        const annualInHand = calculateInHand(avgPackage);
+        const monthlyInHand = annualInHand / 12;
+
+        // Dynamic Horizon with Inflation Discounting (6%)
         const yearsToProject = projectionYears;
+        const inflationRate = 0.06;
+        const hikeRate = 0.10;
+
         let totalEarnings = 0;
+        let nominalEarnings = 0;
+
         for (let i = 0; i < yearsToProject; i++) {
-            totalEarnings += annualInHand * Math.pow(1.1, i); // 10% hike
+            const currentYearNominal = annualInHand * Math.pow(1 + hikeRate, i);
+            nominalEarnings += currentYearNominal;
+
+            // Discount back to present value (Real Value)
+            const currentYearReal = currentYearNominal / Math.pow(1 + inflationRate, i);
+            totalEarnings += currentYearReal;
         }
 
-        // Multiplier
+        // Multiplier based on Real Value
         const multiplier = (totalEarnings / totalInvest).toFixed(1);
 
-        // ROI Score (0-100 for gauge)
-        // Normalize: Expecting roughly 1x per year as "good"?
+        // ROI Score
         const score = Math.min(100, Math.max(0, (multiplier / projectionYears) * 100));
 
         setStats({
             totalInvest,
+            totalFees,
+            totalLiving,
             monthlyInHand,
+            annualInHand,
             multiplier,
             score,
-            totalEarnings: Math.round(totalEarnings)
+            totalEarnings: Math.round(totalEarnings),
+            nominalEarnings: Math.round(nominalEarnings),
+            taxRate: Math.round((1 - (annualInHand / avgPackage)) * 100)
         });
     };
 
@@ -92,9 +113,9 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
                 {/* Visual Card */}
                 <div className="roi-visual-card">
                     <div className="multiplier-badge">
-                        <span className="mult-label">{projectionYears}-Year Wealth Multiplier</span>
+                        <span className="mult-label">{projectionYears}-Year Wealth Multiplier (Real)</span>
                         <div className="mult-value">{stats?.multiplier || "0.0"}x</div>
-                        <span className="mult-sub">Returns {stats?.multiplier}x your investment</span>
+                        <span className="mult-sub">Returns {stats?.multiplier}x your investment in real value</span>
                     </div>
 
                     <div className="gauge-container">
@@ -115,7 +136,7 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
                         </div>
                         <div className="stat-arrow">➔</div>
                         <div className="stat-item green">
-                            <span className="s-lbl">{projectionYears}-Year Earnings</span>
+                            <span className="s-lbl">{projectionYears}-Year Real Wealth</span>
                             <span className="s-val">{formatMoney(stats?.totalEarnings || 0)}</span>
                         </div>
                     </div>
@@ -183,6 +204,35 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
                     <div className="roi-note">
                         *Projection includes 10% annual salary hike and inflation adjustments.
                     </div>
+                </div>
+            </div>
+
+            {/* Analysis Breakdown Section */}
+            <div className="roi-breakdown">
+                <h4>Calculation Analysis 📊</h4>
+                <div className="breakdown-grid">
+                    <div className="breakdown-col">
+                        <h5>Investment (Cost)</h5>
+                        <ul className="math-list">
+                            <li>Tuition: {formatMoney(stats?.totalFees || 0)} <span className="math-op">(Yearly x {duration})</span></li>
+                            <li>Living: {formatMoney(stats?.totalLiving || 0)} <span className="math-op">(Monthly x 12 x {duration})</span></li>
+                            <li className="math-total">Total Invested: {formatMoney(stats?.totalInvest || 0)}</li>
+                        </ul>
+                    </div>
+                    <div className="breakdown-col">
+                        <h5>Earnings (Real Return)</h5>
+                        <ul className="math-list">
+                            <li>Package: {formatMoney(avgPackage)} <span className="math-op">(Nominal)</span></li>
+                            <li>Tax/Deductions: <span className="negative">-{stats?.taxRate}%</span> <span className="math-op">(Effective)</span></li>
+                            <li>Inflation Discount: <span className="negative">-6%</span> <span className="math-op">(Compounded)</span></li>
+                            <li className="math-total">Real Asset Value: {formatMoney(stats?.totalEarnings || 0)}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="calculation-logic">
+                    <strong>The Logic:</strong> We project your income with a 10% annual hike (Nominal: {formatMoney(stats?.nominalEarnings || 0)}),
+                    but adjust it for 6% inflation to show you the <strong>Real value</strong> in today's money.
+                    This is why our Multiplier may seem lower than basic calculators—it shows the truth.
                 </div>
             </div>
 

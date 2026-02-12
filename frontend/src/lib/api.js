@@ -48,8 +48,28 @@ export async function fetchFilters(params = {}) {
 }
 
 export async function fetchCollegesBatch(ids) {
-  const { data } = await api.get("/api/colleges/batch", {
-    params: { ids: ids.join(',') }
-  });
-  return data;
+  if (!ids || ids.length === 0) return [];
+
+  // Chunking to prevent URL overflow (max 40 IDs per request)
+  const CHUNK_SIZE = 40;
+  const chunks = [];
+  for (let i = 0; i < ids.length; i += CHUNK_SIZE) {
+    chunks.push(ids.slice(i, i + CHUNK_SIZE));
+  }
+
+  try {
+    const results = await Promise.all(
+      chunks.map(chunk =>
+        api.get("/api/colleges/batch", {
+          params: { ids: chunk.join(',') }
+        })
+      )
+    );
+
+    // Merge all data arrays
+    return results.flatMap(res => res.data || res);
+  } catch (err) {
+    console.error("Batch fetch failed", err);
+    throw err;
+  }
 }

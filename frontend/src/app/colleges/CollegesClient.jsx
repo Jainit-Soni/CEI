@@ -8,7 +8,7 @@ import GlassPanel from "@/components/GlassPanel";
 import Button from "@/components/Button";
 import FancySelect from "@/components/FancySelect";
 import EmptyState from "@/components/EmptyState";
-import { Heart, Search, X } from "lucide-react";
+import { Heart, Search } from "lucide-react";
 import { CardSkeleton } from "@/components/Skeleton";
 import Pagination from "@/components/Pagination";
 import FavoriteButton from "@/components/FavoriteButton";
@@ -451,7 +451,10 @@ function CollegesContent({ initialData }) {
                         <div className="mobile-filter-header">
                             <h3>Filters</h3>
                             <button className="filter-close-btn" onClick={() => setIsMobileFiltersOpen(false)}>
-                                <X size={20} />
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
                             </button>
                         </div>
 
