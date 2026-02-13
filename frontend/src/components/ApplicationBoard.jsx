@@ -140,27 +140,29 @@ export default function ApplicationBoard() {
         // Body Content
         const tableData = items.map((item, index) => [
             `#${index + 1}`,
-            item.name,
-            item.rankingTier || "N/A",
+            item.name || item.shortName,
+            `Tier ${item.rankingTier || "1"}`,
             item.location,
-            item.tuition || item.fees || "N/A",
-            item.placements?.averagePackage || "N/A"
+            item.tuition || item.fees || "See Website",
+            item.placements?.averagePackage || "High",
+            (item.acceptedExams || []).map(e => (typeof e === 'object' ? (e.code || e.name) : e)).join(", ")
         ]);
 
         autoTable(doc, {
             startY: 140,
-            head: [['Priority', 'Institution', 'Tier', 'Location', 'Fees (Est.)', 'Avg Pkg']],
+            head: [['#', 'Institution', 'Strategic Tier', 'Location', 'EST. TUITION', 'AVG Pkg', 'Key Exams']],
             body: tableData,
             theme: 'striped',
             headStyles: { fillColor: [37, 99, 235], textColor: 255, fontStyle: 'bold' },
-            styles: { fontSize: 9, cellPadding: 6 },
+            styles: { fontSize: 8, cellPadding: 4 },
             columnStyles: {
-                0: { cellWidth: 20 },
-                1: { cellWidth: 'auto' },
+                0: { cellWidth: 10 },
+                1: { cellWidth: 40 },
                 2: { cellWidth: 25 },
-                3: { cellWidth: 35 },
-                4: { cellWidth: 30 },
-                5: { cellWidth: 30 }
+                3: { cellWidth: 30 },
+                4: { cellWidth: 25 },
+                5: { cellWidth: 25 },
+                6: { cellWidth: 'auto' }
             }
         });
 
@@ -254,36 +256,44 @@ export default function ApplicationBoard() {
                                                     <span className="rank-num">#{index + 1}</span>
                                                 </div>
 
-                                                <div className="college-main">
-                                                    <div className="college-identity">
-                                                        <h3 className="college-name">{item.shortName || item.name}</h3>
-                                                        <div className="college-meta">
-                                                            <span className="meta-tag tier">{item.rankingTier || "Unranked"}</span>
-                                                            <span className="meta-tag loc">{item.location?.split(',')[0]}</span>
+                                                <div className="college-main-modern">
+                                                    <div className="report-header">
+                                                        <div className="identity">
+                                                            <h3 className="name">{item.name || item.shortName}</h3>
+                                                            <p className="loc">{item.location}</p>
+                                                        </div>
+                                                        <div className="tier-badge">
+                                                            Strategic Choice: Tier {item.rankingTier || "1"}
                                                         </div>
                                                     </div>
 
-                                                    <div className="row-stats">
-                                                        <div className="stat-pill">
-                                                            <span className="lbl">FEES</span>
-                                                            <span className="val">{item.tuition || item.fees || "N/A"}</span>
+                                                    <div className="report-details-grid">
+                                                        <div className="detail-item">
+                                                            <span className="label">EST. TUITION</span>
+                                                            <span className="value">{item.tuition || "See Website"}</span>
                                                         </div>
-                                                        <div className="stat-pill">
-                                                            <span className="lbl">AVG PKG</span>
-                                                            <span className="val">{item.placements?.averagePackage || "N/A"}</span>
+                                                        <div className="detail-item">
+                                                            <span className="label">AVG PACKAGE</span>
+                                                            <span className="value green">{item.placements?.averagePackage || "High ROI"}</span>
+                                                        </div>
+                                                        <div className="detail-item full-width">
+                                                            <span className="label">KEY EXAMS</span>
+                                                            <span className="value">
+                                                                {(item.acceptedExams || []).map(e => (typeof e === 'object' ? (e.code || e.name) : e)).join(", ") || "CAT, CMAT"}
+                                                            </span>
                                                         </div>
                                                     </div>
 
-                                                    <div className="row-actions">
-                                                        <Link href={`/college/${item.id}`} className="btn-icon view" title="View Details">
-                                                            <FileText size={18} />
+                                                    <div className="row-actions-modern">
+                                                        <Link href={`/college/${item.id}`} className="action-btn-mini" title="View Details">
+                                                            <FileText size={16} /> Details
                                                         </Link>
                                                         <button
-                                                            className="btn-icon remove"
+                                                            className="action-btn-mini remove"
                                                             onClick={() => removeItem(item.id)}
                                                             title="Remove"
                                                         >
-                                                            <Trash2 size={18} />
+                                                            <Trash2 size={16} /> Remove
                                                         </button>
                                                     </div>
                                                 </div>
@@ -387,71 +397,99 @@ export default function ApplicationBoard() {
 
                 .college-row-card {
                     background: white;
-                    border: 1px solid #f1f5f9;
-                    border-radius: 16px;
-                    padding: 12px;
-                    margin-bottom: 12px;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 20px;
+                    padding: 0;
+                    margin-bottom: 24px;
                     display: flex;
-                    align-items: center;
-                    gap: 16px;
+                    overflow: hidden;
                     transition: all 0.2s;
                 }
-                .college-row-card.dragging { box-shadow: var(--shadow-lg); border-color: #3b82f6; }
+                .college-row-card.dragging { box-shadow: var(--shadow-lg); border-color: #2563eb; }
 
                 .drag-handle {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    color: #94a3b8;
-                    cursor: grab;
-                }
-                .rank-num { font-weight: 800; color: #1e3a8a; font-size: 1.1rem; }
-
-                .college-main {
-                    flex: 1;
-                    display: grid;
-                    grid-template-columns: 2fr 1.5fr 100px;
-                    gap: 20px;
-                    align-items: center;
-                }
-
-                .college-name { font-size: 1.05rem; font-weight: 700; color: #1e40af; margin-bottom: 4px; }
-                .college-meta { display: flex; gap: 8px; }
-                .meta-tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: 600; text-transform: uppercase; }
-                .meta-tag.tier { background: #ecfdf5; color: #059669; }
-                .meta-tag.loc { background: #f1f5f9; color: #64748b; }
-
-                .row-stats { display: flex; gap: 12px; }
-                .stat-pill {
+                    width: 60px;
                     background: #f8fafc;
-                    padding: 6px 12px;
-                    border-radius: 8px;
                     display: flex;
                     flex-direction: column;
-                    min-width: 110px;
-                }
-                .stat-pill .lbl { font-size: 0.65rem; color: #64748b; font-weight: 700; }
-                .stat-pill .val { font-size: 0.9rem; font-weight: 700; color: #1e293b; }
-
-                .row-actions { display: flex; gap: 8px; justify-content: flex-end; }
-                .btn-icon {
-                    width: 36px;
-                    height: 36px;
-                    display: flex;
                     align-items: center;
                     justify-content: center;
+                    color: #94a3b8;
+                    cursor: grab;
+                    border-right: 1px solid #f1f5f9;
+                }
+                .rank-num { font-weight: 800; color: #1e3a8a; font-size: 1.1rem; margin-top: 4px; }
+
+                .college-main-modern {
+                    flex: 1;
+                    padding: 24px;
+                }
+
+                .report-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-bottom: 20px;
+                    gap: 16px;
+                }
+                .identity .name { font-size: 1.4rem; font-weight: 800; color: #1e3a8a; margin: 0 0 4px; }
+                .identity .loc { color: #64748b; font-size: 1rem; margin: 0; }
+
+                .tier-badge {
+                    background: #eff6ff;
+                    color: #2563eb;
+                    padding: 6px 16px;
+                    border-radius: 99px;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    white-space: nowrap;
+                }
+
+                .report-details-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 16px;
+                    margin-bottom: 20px;
+                }
+
+                .detail-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                }
+                .detail-item.full-width { grid-column: span 2; }
+                .detail-item .label { font-size: 0.65rem; font-weight: 800; color: #94a3b8; letter-spacing: 0.05em; }
+                .detail-item .value { font-size: 1.1rem; font-weight: 700; color: #1e293b; }
+                .detail-item .value.green { color: #059669; }
+
+                .row-actions-modern {
+                    display: flex;
+                    gap: 12px;
+                    padding-top: 20px;
+                    border-top: 1px solid #f1f5f9;
+                }
+                .action-btn-mini {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 8px 16px;
                     border-radius: 8px;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    background: #f1f5f9;
+                    color: #475569;
+                    border: none;
+                    cursor: pointer;
                     transition: all 0.2s;
                 }
-                .btn-icon.view { background: #eff6ff; color: #2563eb; }
-                .btn-icon.remove { color: #94a3b8; }
-                .btn-icon.remove:hover { color: #ef4444; background: #fef2f2; }
+                .action-btn-mini:hover { background: #e2e8f0; }
+                .action-btn-mini.remove:hover { background: #fef2f2; color: #ef4444; }
 
                 @media (max-width: 768px) {
-                    .board-header { flex-direction: column; text-align: center; gap: 20px; }
-                    .college-main { grid-template-columns: 1fr; gap: 12px; }
-                    .row-stats { display: none; }
-                    .row-actions { justify-content: flex-start; }
+                    .report-header { flex-direction: column; align-items: flex-start; }
+                    .report-details-grid { grid-template-columns: 1fr; }
+                    .detail-item.full-width { grid-column: auto; }
                 }
 
                 .mylist-empty {

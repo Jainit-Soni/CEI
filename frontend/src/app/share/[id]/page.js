@@ -78,98 +78,137 @@ export default function SharePage() {
                 </div>
 
                 {/* List Content */}
-                <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-                    {data.choices.map((item, index) => (
-                        <div key={index} style={{
-                            background: 'white',
-                            borderRadius: '24px',
-                            padding: '32px',
-                            marginBottom: '20px',
-                            border: '1px solid #e2e8f0',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '24px',
-                            boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)'
-                        }}>
-                            <div style={{
-                                width: '40px',
-                                height: '40px',
-                                background: '#1e3a8a',
-                                color: 'white',
-                                borderRadius: '12px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                fontSize: '1.2rem',
-                                fontWeight: 800
+                <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    {data.choices.map((item, index) => {
+                        // Helper to format exams properly and avoid [object Object]
+                        const formatExams = (exams) => {
+                            if (!exams) return "N/A";
+                            if (Array.isArray(exams)) {
+                                return exams.map(e => (typeof e === 'object' ? (e.name || e.code || JSON.stringify(e)) : e)).join(", ");
+                            }
+                            return typeof exams === 'object' ? (exams.name || "Multiple") : exams;
+                        };
+
+                        const avgPackage = item.placements?.averagePackage || item.avgPackage || "N/A";
+                        const tuition = item.tuition || item.fees || "See Website";
+
+                        return (
+                            <div key={index} style={{
+                                background: 'white',
+                                borderRadius: '24px',
+                                padding: '40px',
+                                marginBottom: '32px',
+                                border: '1px solid #e2e8f0',
+                                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.03)',
+                                position: 'relative',
+                                overflow: 'hidden'
                             }}>
-                                {index + 1}
-                            </div>
-
-                            <div style={{ flex: 1 }}>
-                                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1e293b', marginBottom: '8px' }}>
-                                    {item.name}
-                                </h3>
-                                <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', color: '#64748b' }}>
-                                        <MapPin size={14} /> {item.location}
-                                    </span>
-                                    <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', color: '#059669', fontWeight: 600 }}>
-                                        <TrendingUp size={14} /> ROI Projection: {item.placements?.averagePackage || "High"}
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div style={{ textAlign: 'right' }}>
+                                {/* Decorative Index Accent */}
                                 <div style={{
-                                    background: '#f1f5f9',
-                                    padding: '6px 12px',
-                                    borderRadius: '8px',
-                                    fontSize: '0.75rem',
-                                    fontWeight: 700,
-                                    color: '#475569',
-                                    textTransform: 'uppercase'
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '6px',
+                                    height: '100%',
+                                    background: '#1e3a8a'
+                                }} />
+
+                                <div style={{ marginBottom: '32px' }}>
+                                    <h3 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#1e3a8a', marginBottom: '8px' }}>
+                                        {index + 1}. {item.name || item.shortName}
+                                    </h3>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#64748b', fontSize: '1.1rem' }}>
+                                        <MapPin size={18} />
+                                        <span>{item.location}</span>
+                                    </div>
+                                </div>
+
+                                <div style={{
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                                    gap: '32px',
+                                    borderTop: '1px solid #f1f5f9',
+                                    paddingTop: '32px'
                                 }}>
-                                    {item.rankingTier || "Tier 1"}
+                                    <div className="report-field">
+                                        <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.05em', textTransform: 'uppercase' }}>EST. TUITION</span>
+                                        <p style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1e293b', marginTop: '4px' }}>
+                                            {typeof tuition === 'object' ? "Variable" : tuition}
+                                        </p>
+                                    </div>
+
+                                    <div className="report-field">
+                                        <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.05em', textTransform: 'uppercase' }}>AVG PACKAGE</span>
+                                        <p style={{ fontSize: '1.25rem', fontWeight: 700, color: '#059669', marginTop: '4px' }}>
+                                            {typeof avgPackage === 'object' ? "High ROI" : avgPackage}
+                                        </p>
+                                    </div>
+
+                                    <div className="report-field">
+                                        <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.05em', textTransform: 'uppercase' }}>KEY EXAMS</span>
+                                        <p style={{ fontSize: '1.1rem', fontWeight: 700, color: '#1e293b', marginTop: '4px' }}>
+                                            {formatExams(item.acceptedExams)}
+                                        </p>
+                                    </div>
+
+                                    <div className="report-field">
+                                        <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#94a3b8', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Strategic Choice</span>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '4px' }}>
+                                            <Shield size={16} color="#2563eb" />
+                                            <span style={{ fontSize: '1.1rem', fontWeight: 700, color: '#2563eb' }}>
+                                                Tier {item.rankingTier || "Tier 1"}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 {/* CTA / Footer */}
                 <div style={{
-                    marginTop: '60px',
+                    marginTop: '80px',
                     textAlign: 'center',
-                    padding: '40px',
-                    background: '#1e3a8a',
-                    borderRadius: '32px',
-                    color: 'white'
+                    padding: '60px 40px',
+                    background: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%)',
+                    borderRadius: '40px',
+                    color: 'white',
+                    boxShadow: '0 20px 25px -5px rgba(30, 58, 138, 0.2)'
                 }}>
-                    <h2 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '16px' }}>Build Your Own Roadmap</h2>
-                    <p style={{ opacity: 0.8, marginBottom: '32px', maxWidth: '500px', margin: '0 auto 32px' }}>
-                        Join 2,000+ students using CEI Intelligence to architect their academic futures.
+                    <TrendingUp size={48} style={{ marginBottom: '24px', opacity: 0.9 }} />
+                    <h2 style={{ fontSize: '2.25rem', fontWeight: 800, marginBottom: '20px' }}>Build Your Own Roadmap</h2>
+                    <p style={{ fontSize: '1.1rem', opacity: 0.8, marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
+                        Architect your future with CEI Intelligence. Get verified data, real-time sync, and strategic ROI projections.
                     </p>
                     <Link href="/colleges" style={{
                         background: 'white',
                         color: '#1e3a8a',
-                        padding: '16px 32px',
+                        padding: '20px 48px',
                         borderRadius: '99px',
-                        fontWeight: 700,
+                        fontWeight: 800,
                         textDecoration: 'none',
-                        display: 'inline-block'
-                    }}>
-                        Get Started with CEI
+                        fontSize: '1.1rem',
+                        display: 'inline-block',
+                        transition: 'transform 0.2s',
+                    }}
+                        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                    >
+                        Start Your Journey
                     </Link>
                 </div>
             </Container>
 
             <style jsx>{`
+                .report-field p {
+                    margin: 0;
+                }
                 .spinner {
-                    width: 40px;
-                    height: 40px;
-                    border: 4px solid #e2e8f0;
-                    border-top: 4px solid #2563eb;
+                    width: 48px;
+                    height: 48px;
+                    border: 5px solid #e2e8f0;
+                    border-top: 5px solid #2563eb;
                     border-radius: 50%;
                     animation: spin 1s linear infinite;
                 }
