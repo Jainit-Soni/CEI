@@ -18,7 +18,10 @@ const app = express();
 const isProduction = process.env.NODE_ENV === 'production';
 
 const rawOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
-const normalizedOrigins = rawOrigins.map(o => o.trim().replace(/\/$/, ""));
+const normalizedOrigins = rawOrigins
+  .map(o => o.trim())
+  .filter(Boolean)
+  .map(o => o.replace(/\/$/, ""));
 
 const allowedOrigins = isProduction
   ? normalizedOrigins
@@ -28,11 +31,20 @@ const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.includes("*")) {
+
+    const isAllowed = allowedOrigins.some(allowed => {
+      if (allowed === "*") return true;
+      return allowed.toLowerCase() === origin.toLowerCase().replace(/\/$/, "");
+    });
+
+    if (isAllowed) {
       callback(null, true);
     } else {
       console.warn(`CORS Reject: Origin [${origin}] not in allowed list: [${allowedOrigins.join(", ")}]`);
-      callback(new Error("Not allowed by CORS"));
+      // Calling callback(null, false) allows the cors middleware to handle the rejection
+      // by simply not adding the Access-Control-Allow-Origin header, which is the standard behavior.
+      // Throwing an Error here (as it was before) crashes the request before headers are set correctly.
+      callback(null, false);
     }
   },
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
