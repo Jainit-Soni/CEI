@@ -225,6 +225,44 @@ export default function CompareClient() {
                             </tr>
                         </tbody>
                     </table>
+
+                    {/* Mobile View Placeholder (Rendered via CSS hidden/block) */}
+                    <div className="compare-mobile-view">
+                        <div className="mobile-colleges-nav">
+                            {displayList.map(c => (
+                                <div key={c.id} className="college-header-mobile">
+                                    <div className="mobile-college-info">
+                                        <h3>{c.shortName || c.name}</h3>
+                                        <p className="college-loc">{c.location}</p>
+                                    </div>
+                                    <Button onClick={() => removeFromCompare(c.id)} variant="ghost" size="xs" className="remove-btn">Remove</Button>
+                                </div>
+                            ))}
+                        </div>
+
+                        {[
+                            { title: "General Info", fields: ['rank', 'naac', 'ownership'] },
+                            { title: "Financials", fields: ['fees', 'hostel'] },
+                            { title: "Placements", fields: ['avgPackage', 'highestPackage'] }
+                        ].map(section => (
+                            <div key={section.title} className="feature-group">
+                                <h4 className="feature-group-title">{section.title}</h4>
+                                {displayList.map(c => (
+                                    <div key={c.id} style={{ marginBottom: '12px', borderBottom: '1px solid #f1f5f9', paddingBottom: '8px' }}>
+                                        <p style={{ fontSize: '0.7rem', color: '#3b82f6', fontWeight: 800, textTransform: 'uppercase', marginBottom: '4px' }}>
+                                            {c.shortName || c.name}
+                                        </p>
+                                        {section.fields.map(f => (
+                                            <div key={f} className="compare-item-mobile">
+                                                <span className="mobile-college-label">{f.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</span>
+                                                <span className="mobile-college-value">{getVal(c, f) || "—"}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="compare-footer-note">

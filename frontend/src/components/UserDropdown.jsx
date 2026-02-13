@@ -1,6 +1,4 @@
-"use client";
-
-import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { useAuth } from "@/lib/AuthContext";
 import "./UserDropdown.css";
@@ -49,11 +47,13 @@ export default function UserDropdown() {
                 aria-haspopup="true"
             >
                 {user.photoURL ? (
-                    <img
+                    <Image
                         src={user.photoURL}
                         alt={displayName}
                         className="user-avatar"
-                        referrerPolicy="no-referrer"
+                        width={32}
+                        height={32}
+                        unoptimized={true} // Google avatar URLs can be tricky with resizing proxies
                     />
                 ) : (
                     <span className="user-avatar-placeholder">{initial}</span>
@@ -85,13 +85,6 @@ export default function UserDropdown() {
                             <rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
                         </svg>
                         Dashboard
-                    </Link>
-
-                    <Link href="/profile" className="user-dropdown-item" onClick={() => setIsOpen(false)}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
-                        </svg>
-                        Edit Profile
                     </Link>
 
                     <div className="user-dropdown-divider" />

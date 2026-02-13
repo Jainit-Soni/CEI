@@ -16,7 +16,11 @@ import { RevealOnScroll } from "@/lib/useIntersectionObserver";
 import { fetchColleges, fetchFilters, suggest, fetchStateStats } from "@/lib/api";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import IndiaMap from "@/components/IndiaMap";
+import dynamic from "next/dynamic";
+const IndiaMap = dynamic(() => import("@/components/IndiaMap"), {
+    ssr: false,
+    loading: () => <div className="india-map-loading"><div className="loading-spinner"></div><p>Loading Intelligence Map...</p></div>
+});
 import "./page.css";
 
 const getDistrict = (college) =>
@@ -66,7 +70,6 @@ function CollegesContent({ initialData }) {
     const [pagination, setPagination] = useState(initialData?.pagination || null);
     const [suggestions, setSuggestions] = useState([]);
     const [mapStatsData, setMapStatsData] = useState({ states: [] });
-    const [viewMode, setViewMode] = useState("list"); // 'list' only
     const [isInitialized, setIsInitialized] = useState(false);
     const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
     const ITEMS_PER_PAGE = 18;

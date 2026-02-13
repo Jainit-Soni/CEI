@@ -183,4 +183,87 @@
         align-items: flex-start;
         gap: 1rem;
     }
+
+    .compare-table-wrapper {
+        background: transparent;
+        box-shadow: none;
+        overflow-x: visible;
+    }
+
+    .compare-table {
+        display: none;
+        /* Hide table on mobile */
+    }
+
+    /* Vertical Mobile View */
+    .compare-mobile-view {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .feature-group {
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid #e5e7eb;
+    }
+
+    .feature-group-title {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #1e3a8a;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #eff6ff;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .compare-item-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #f3f4f6;
+    }
+
+    .compare-item-mobile:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-college-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #64748b;
+        max-width: 40%;
+    }
+
+    .mobile-college-value {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #1e293b;
+        text-align: right;
+        flex: 1;
+    }
+
+    .college-header-mobile {
+        background: white;
+        border-radius: 16px;
+        padding: 16px;
+        margin-bottom: 12px;
+        border: 1px solid #e2e8f0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-college-info h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 2px;
+    }
 }

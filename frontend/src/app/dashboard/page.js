@@ -3,16 +3,17 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Container from "@/components/Container";
-import { User, Settings, GraduationCap, ClipboardList, TrendingUp, Bell } from "lucide-react";
+import { User, Settings, GraduationCap, ClipboardList, TrendingUp, Bell, Heart, ExternalLink } from "lucide-react";
+import { useFavorites } from "@/lib/useFavorites";
 import "./dashboard.css";
 
 export default function DashboardPage() {
+    const { favorites } = useFavorites();
     const [profile, setProfile] = useState(null);
     const [stats, setStats] = useState({
         savedColleges: 0,
-        completion: 0,
-        status: "Strategist",
-        missing: []
+        completion: 75,
+        status: "Strategist"
     });
 
     useEffect(() => {
@@ -31,39 +32,10 @@ export default function DashboardPage() {
 
             setProfile(profileData);
 
-            // Calculate Completion
-            let score = 0;
-            const missing = [];
-
-            if (profileData.name) score += 20; else missing.push("Full Name");
-            if (profileData.targetDegree) score += 20; else missing.push("Target Degree");
-
-            // Exam logic
-            const isMBA = profileData.targetDegree?.includes("MBA");
-            const isTech = profileData.targetDegree?.includes("Tech");
-
-            if (isMBA) {
-                if (profileData.exams?.cat) score += 30; else missing.push("CAT Score");
-                if (profileData.exams?.cmat) score += 30; else missing.push("CMAT Score");
-            } else if (isTech) {
-                if (profileData.exams?.jee) score += 30; else missing.push("JEE Rank");
-                if (profileData.exams?.gate) score += 30; else missing.push("GATE Score");
-            } else {
-                // If no degree selected, we can't score exams fairly, but let's count a generic "Score" field if needed
-                // For now, missing degree blocks 60% of the score
-            }
-
-            let status = "Observer";
-            if (score > 90) status = "Master";
-            else if (score > 60) status = "Elite";
-            else if (score > 30) status = "Strategist";
-
-            setStats({
-                savedColleges: colleges.length,
-                completion: score,
-                status,
-                missing
-            });
+            setStats(prev => ({
+                ...prev,
+                savedColleges: colleges.length
+            }));
         };
 
         loadDashboardData();
@@ -87,7 +59,6 @@ export default function DashboardPage() {
                     </div>
                     <div className="header-actions">
                         <div className="status-badge-premium">{stats.status}</div>
-                        <Link href="/profile" className="btn-icon-modern" title="Profile Settings"><Settings size={20} /></Link>
                     </div>
                 </div>
 
@@ -138,24 +109,35 @@ export default function DashboardPage() {
                                 </Link>
                             </div>
 
-                            {/* Intelligent Guidance */}
-                            {stats.missing.length > 0 && (
-                                <div className="guidance-card">
-                                    <div className="guidance-header">
-                                        <Bell size={20} className="pulse-icon" />
-                                        <h4>Optimization Checklist</h4>
-                                    </div>
-                                    <div className="guidance-list">
-                                        {stats.missing.map(item => (
-                                            <div key={item} className="guidance-item">
-                                                <span className="bullet"></span>
-                                                <span className="text">Add your <strong>{item}</strong> for precise matching.</span>
-                                                <Link href="/profile" className="fix-link">Fix &rarr;</Link>
-                                            </div>
-                                        ))}
-                                    </div>
+                            {/* Favorites Hub */}
+                            <div className="favorites-hub-card">
+                                <div className="card-header-premium">
+                                    <Heart size={20} color="#ef4444" fill="#ef4444" />
+                                    <h3>My Favorites</h3>
                                 </div>
-                            )}
+
+                                {favorites.colleges.length === 0 && favorites.exams.length === 0 ? (
+                                    <div className="empty-fav-state">
+                                        <p>No favorites yet. Explore colleges to add some!</p>
+                                        <Link href="/colleges" className="text-link">Browse Catalog &rarr;</Link>
+                                    </div>
+                                ) : (
+                                    <div className="favorites-grid-mini">
+                                        {favorites.colleges.slice(0, 4).map(c => (
+                                            <Link key={c.id} href={`/college/${c.id}`} className="fav-item-row">
+                                                <div className="fav-info">
+                                                    <span className="fav-name">{c.name}</span>
+                                                    <span className="fav-meta">{c.location?.split(',')[0]}</span>
+                                                </div>
+                                                <ExternalLink size={14} className="fav-arrow" />
+                                            </Link>
+                                        ))}
+                                        {favorites.colleges.length > 4 && (
+                                            <p className="more-fav-link">+{favorites.colleges.length - 4} more colleges...</p>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
                         </div>
 
                         {/* Readiness Orb */}
@@ -179,11 +161,8 @@ export default function DashboardPage() {
                                 <div className="profile-details">
                                     <p className="strategy-level">Level: <strong>{stats.status}</strong></p>
                                     <p className="text-muted">
-                                        {stats.completion === 100
-                                            ? "Your profile is fully optimized for AI discovery."
-                                            : "Unlock elite insights by completing your strategy profile."}
+                                        Your profile is active and tracking institutional discovery in real-time.
                                     </p>
-                                    <Link href="/profile" className="btn-text">Refine Profile &rarr;</Link>
                                 </div>
                             </div>
                         </div>

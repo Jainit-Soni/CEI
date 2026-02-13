@@ -73,3 +73,25 @@ export async function fetchCollegesBatch(ids) {
     throw err;
   }
 }
+
+export async function fetchUserChoices(uid) {
+  if (!uid) return [];
+  const { data } = await api.get("/api/user/choices", { params: { uid } });
+  return data;
+}
+
+export async function saveUserChoices(uid, choices) {
+  if (!uid) return;
+  const { data } = await api.post("/api/user/choices", { uid, choices });
+  return data;
+}
+
+export async function shareUserChoices(choices, userName) {
+  const { data } = await api.post("/api/user/share", { choices, userName });
+  return data;
+}
+
+export async function fetchSharedList(shareId) {
+  const { data } = await api.get(`/api/user/share/${shareId}`);
+  return data;
+}

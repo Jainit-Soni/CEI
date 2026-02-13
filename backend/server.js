@@ -10,6 +10,7 @@ const examsRoutes = require("./routes/exams");
 const searchRoutes = require("./routes/search");
 const statsRoutes = require("./routes/stats");
 const adminRoutes = require("./routes/admin"); // Import admin routes
+const userRoutes = require("./routes/user");
 
 const app = express();
 
@@ -86,6 +87,7 @@ app.use("/api", examsRoutes);
 app.use("/api", searchLimiter, searchRoutes); // Stricter limit for search
 app.use("/api/stats", statsRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api", userRoutes);
 
 const PORT = process.env.PORT || 4000;
 

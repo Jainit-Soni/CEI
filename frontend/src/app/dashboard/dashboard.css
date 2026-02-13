@@ -19,6 +19,90 @@
     letter-spacing: -0.02em;
 }
 
+/* Favorites Hub Card */
+.favorites-hub-card {
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid #f1f5f9;
+    box-shadow: var(--shadow-sm);
+}
+
+.card-header-premium {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.card-header-premium h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1e3a8a;
+}
+
+.fav-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.fav-item-row:hover {
+    background: white;
+    border-color: #dbeafe;
+    transform: translateX(4px);
+    box-shadow: var(--shadow-sm);
+}
+
+.fav-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.fav-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e40af;
+}
+
+.fav-meta {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.fav-arrow {
+    color: #94a3b8;
+}
+
+.empty-fav-state {
+    text-align: center;
+    padding: 24px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.text-link {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.more-fav-link {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    text-align: center;
+    margin-top: 8px;
+}
+
 .welcome-section p {
     font-size: 1.1rem;
     color: #64748b;

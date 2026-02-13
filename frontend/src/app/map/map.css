@@ -745,6 +745,7 @@
 
     .constellation-map-container {
         aspect-ratio: 1/1;
+        touch-action: pan-y;
     }
 
     .constellation-title {
