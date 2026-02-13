@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "iit-kanpur",
     "name": "Indian Institute of Technology Kanpur",
@@ -75,9 +75,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹26.27 LPA",
-      "medianPackage": "â‚¹22.0 LPA",
-      "highestPackage": "â‚¹1.90 CPA"
+      "averagePackage": "â‚26.27 LPA",
+      "medianPackage": "â‚22.0 LPA",
+      "highestPackage": "â‚1.90 CPA"
     }
   },
   {
@@ -152,9 +152,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹20.5 LPA",
-      "medianPackage": "â‚¹18.0 LPA",
-      "highestPackage": "â‚¹1.80 CPA"
+      "averagePackage": "â‚20.5 LPA",
+      "medianPackage": "â‚18.0 LPA",
+      "highestPackage": "â‚1.80 CPA"
     }
   },
   {
@@ -213,9 +213,9 @@
     ],
     "tuition": "~INR 20-21 Lakhs",
     "placements": {
-      "averagePackage": "â‚¹30.0 LPA",
-      "medianPackage": "â‚¹27.0 LPA",
-      "highestPackage": "â‚¹1.23 CPA"
+      "averagePackage": "â‚30.0 LPA",
+      "medianPackage": "â‚27.0 LPA",
+      "highestPackage": "â‚1.23 CPA"
     },
     "sources": [
       "https://www.iiml.ac.in"
@@ -316,9 +316,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -404,9 +404,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -483,9 +483,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹20.34 LPA",
-      "medianPackage": "â‚¹14.0 LPA",
-      "highestPackage": "â‚¹1.35 CPA"
+      "averagePackage": "â‚20.34 LPA",
+      "medianPackage": "â‚14.0 LPA",
+      "highestPackage": "â‚1.35 CPA"
     }
   },
   {
@@ -560,9 +560,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -639,9 +639,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹9.3 LPA",
-      "medianPackage": "â‚¹7.5 LPA",
-      "highestPackage": "â‚¹44.5 LPA"
+      "averagePackage": "â‚9.3 LPA",
+      "medianPackage": "â‚7.5 LPA",
+      "highestPackage": "â‚44.5 LPA"
     }
   },
   {
@@ -718,9 +718,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -788,9 +788,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹8.2 LPA",
-      "medianPackage": "â‚¹6.0 LPA",
-      "highestPackage": "â‚¹35.0 LPA"
+      "averagePackage": "â‚8.2 LPA",
+      "medianPackage": "â‚6.0 LPA",
+      "highestPackage": "â‚35.0 LPA"
     }
   },
   {
@@ -870,9 +870,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -960,9 +960,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1048,9 +1048,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1115,9 +1115,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1201,9 +1201,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1287,9 +1287,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1373,9 +1373,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1463,9 +1463,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1550,9 +1550,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1619,9 +1619,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1708,9 +1708,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1796,9 +1796,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1883,9 +1883,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1963,9 +1963,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2050,9 +2050,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2120,9 +2120,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2182,9 +2182,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2261,9 +2261,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2323,9 +2323,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -2386,9 +2386,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2447,9 +2447,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -2513,9 +2513,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -2575,9 +2575,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2659,9 +2659,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2745,9 +2745,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2831,9 +2831,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2910,9 +2910,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2981,9 +2981,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3067,9 +3067,9 @@
       "sourceType": "official"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3149,9 +3149,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3217,9 +3217,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3301,9 +3301,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3375,9 +3375,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3457,9 +3457,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3535,9 +3535,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3608,9 +3608,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3685,9 +3685,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3768,9 +3768,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3834,9 +3834,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3918,9 +3918,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3984,9 +3984,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4067,9 +4067,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4133,9 +4133,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4200,9 +4200,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4275,9 +4275,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4353,9 +4353,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4438,9 +4438,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4524,9 +4524,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4609,9 +4609,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4674,9 +4674,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4751,9 +4751,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4818,9 +4818,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4892,9 +4892,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4969,9 +4969,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5053,9 +5053,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5120,9 +5120,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5187,9 +5187,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5252,9 +5252,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5336,9 +5336,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5405,9 +5405,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5489,9 +5489,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5572,9 +5572,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5657,9 +5657,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5732,9 +5732,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5814,9 +5814,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5900,9 +5900,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -5984,9 +5984,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6052,9 +6052,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6127,9 +6127,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6209,9 +6209,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6276,9 +6276,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6359,9 +6359,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6444,9 +6444,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6528,9 +6528,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6611,9 +6611,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -6687,9 +6687,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6771,9 +6771,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6840,9 +6840,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -6925,9 +6925,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7003,9 +7003,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7086,9 +7086,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7169,9 +7169,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7252,9 +7252,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7337,9 +7337,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7405,9 +7405,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7490,9 +7490,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7558,9 +7558,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7624,9 +7624,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹3-6 LPA",
-      "medianPackage": "â‚¹3-5 LPA",
-      "highestPackage": "â‚¹8-15 LPA",
+      "averagePackage": "â‚3-6 LPA",
+      "medianPackage": "â‚3-5 LPA",
+      "highestPackage": "â‚8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -7691,9 +7691,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7775,9 +7775,9 @@
       "sourceType": "generated"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -7852,7 +7852,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "â‚¹50,000 - 1,50,000 per year",
+    "tuition": "â‚50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -7863,9 +7863,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -7940,7 +7940,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "â‚¹50,000 - 1,50,000 per year",
+    "tuition": "â‚50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -7951,9 +7951,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -8028,7 +8028,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -8039,9 +8039,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -8116,7 +8116,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -8127,9 +8127,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -8204,7 +8204,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "â‚¹50,000 - 1,50,000 per year",
+    "tuition": "â‚50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -8215,9 +8215,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "â‚¹15-25 LPA",
-      "medianPackage": "â‚¹12-18 LPA",
-      "highestPackage": "â‚¹50+ LPA",
+      "averagePackage": "â‚15-25 LPA",
+      "medianPackage": "â‚12-18 LPA",
+      "highestPackage": "â‚50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -8289,7 +8289,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -8300,9 +8300,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8374,7 +8374,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "â‚¹50,000 - 1,50,000 per year",
+    "tuition": "â‚50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -8385,9 +8385,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8459,7 +8459,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -8470,9 +8470,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -8544,7 +8544,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "â‚¹1,50,000 - 3,00,000 per year",
+    "tuition": "â‚1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -8555,9 +8555,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "â‚¹6-12 LPA",
-      "medianPackage": "â‚¹5-9 LPA",
-      "highestPackage": "â‚¹20-30 LPA",
+      "averagePackage": "â‚6-12 LPA",
+      "medianPackage": "â‚5-9 LPA",
+      "highestPackage": "â‚20-30 LPA",
       "placementRate": "70-85%"
     }
   },

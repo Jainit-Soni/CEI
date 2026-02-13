@@ -141,28 +141,24 @@ export default function ApplicationBoard() {
         const tableData = items.map((item, index) => [
             `#${index + 1}`,
             item.name || item.shortName,
-            `Tier ${item.rankingTier || "1"}`,
-            item.location,
             item.tuition || item.fees || "See Website",
-            item.placements?.averagePackage || "High",
+            (item.placements?.averagePackage || "High").toString().replace(/¹/g, ''),
             (item.acceptedExams || []).map(e => (typeof e === 'object' ? (e.code || e.name) : e)).join(", ")
         ]);
 
         autoTable(doc, {
             startY: 140,
-            head: [['#', 'Institution', 'Strategic Tier', 'Location', 'EST. TUITION', 'AVG Pkg', 'Key Exams']],
+            head: [['#', 'Institution', 'EST. TUITION', 'AVG Pkg', 'Key Exams']],
             body: tableData,
             theme: 'striped',
             headStyles: { fillColor: [37, 99, 235], textColor: 255, fontStyle: 'bold' },
             styles: { fontSize: 8, cellPadding: 4 },
             columnStyles: {
                 0: { cellWidth: 10 },
-                1: { cellWidth: 40 },
-                2: { cellWidth: 25 },
+                1: { cellWidth: 70 },
+                2: { cellWidth: 30 },
                 3: { cellWidth: 30 },
-                4: { cellWidth: 25 },
-                5: { cellWidth: 25 },
-                6: { cellWidth: 'auto' }
+                4: { cellWidth: 'auto' }
             }
         });
 

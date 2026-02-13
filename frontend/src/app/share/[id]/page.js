@@ -89,7 +89,7 @@ export default function SharePage() {
                             return typeof exams === 'object' ? (exams.name || "Multiple") : exams;
                         };
 
-                        const avgPackage = item.placements?.averagePackage || item.avgPackage || "N/A";
+                        const avgPackage = (item.placements?.averagePackage || item.avgPackage || "N/A").toString().replace(/¹/g, '');
                         const tuition = item.tuition || item.fees || "See Website";
 
                         return (
