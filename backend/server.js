@@ -34,6 +34,8 @@ const corsOptions = {
 
     const isAllowed = allowedOrigins.some(allowed => {
       if (allowed === "*") return true;
+      // Fail-safe: Allow any .vercel.app origin to prevent deployment blocking
+      if (origin.endsWith(".vercel.app") || origin.includes("--ce-intelligence-")) return true;
       return allowed.toLowerCase() === origin.toLowerCase().replace(/\/$/, "");
     });
 
