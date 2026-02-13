@@ -25,17 +25,20 @@ const normalizedOrigins = rawOrigins
 
 const allowedOrigins = isProduction
   ? normalizedOrigins
-  : ["http://localhost:3000", "http://localhost:3030", ...normalizedOrigins];
+  : ["http://localhost:3030", ...normalizedOrigins];
 
 const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
 
+    // Fail-safe: Always allow Vercel origins to prevent deployment blocking
+    if (origin.endsWith(".vercel.app") || origin.includes("--ce-intelligence-")) {
+      return callback(null, true);
+    }
+
     const isAllowed = allowedOrigins.some(allowed => {
       if (allowed === "*") return true;
-      // Fail-safe: Allow any .vercel.app origin to prevent deployment blocking
-      if (origin.endsWith(".vercel.app") || origin.includes("--ce-intelligence-")) return true;
       return allowed.toLowerCase() === origin.toLowerCase().replace(/\/$/, "");
     });
 

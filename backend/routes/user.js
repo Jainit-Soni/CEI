@@ -1,3 +1,9 @@
+const express = require("express");
+const router = express.Router();
+const path = require("path");
+const fs = require("fs").promises;
+
+const DATA_PATH = path.join(__dirname, "../models/user_choices.json");
 const SHARED_PATH = path.join(__dirname, "../models/shared_lists.json");
 
 // Helper to load all choices
