@@ -12,6 +12,7 @@ export default function AuthModal({ isOpen, onClose }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [localError, setLocalError] = useState("");
+    const [agreedToTerms, setAgreedToTerms] = useState(false);
 
     // Canvas Refs
     const canvasRef = useRef(null);
@@ -282,9 +283,21 @@ export default function AuthModal({ isOpen, onClose }) {
                                 />
                             </div>
 
+                            <div className="auth-terms-group">
+                                <label className="auth-checkbox-label">
+                                    <input
+                                        type="checkbox"
+                                        checked={agreedToTerms}
+                                        onChange={(e) => setAgreedToTerms(e.target.checked)}
+                                        required
+                                    />
+                                    <span>I agree to the <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms & Conditions</a> and Privacy Policy</span>
+                                </label>
+                            </div>
+
                             {activeError && <div className="auth-error-glass">{activeError}</div>}
 
-                            <button type="submit" className="auth-btn-main-glass" disabled={isSubmitting || isSuccess}>
+                            <button type="submit" className="auth-btn-main-glass" disabled={isSubmitting || isSuccess || !agreedToTerms}>
                                 {isSuccess ? "Success! 🎉" : isSubmitting ? "Loading..." : mode === "login" ? "Sign In" : "Create Account"}
                             </button>
                         </form>

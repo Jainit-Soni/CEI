@@ -9,7 +9,7 @@
     "conductingBody": "National Testing Agency (NTA)",
     "stats": {
       "applicants": "12.5 Lakhs",
-      "fee": "₹ 1000",
+      "fee": " 1000",
       "duration": "3 Hours",
       "mode": "Online (CBT)"
     },
@@ -73,7 +73,7 @@
     "conductingBody": "IITs (Rotational)",
     "stats": {
       "applicants": "1.9 Lakhs",
-      "fee": "₹ 3200",
+      "fee": " 3200",
       "duration": "6 Hours (2 Papers)",
       "mode": "Online (CBT)"
     },
@@ -127,7 +127,7 @@
     "conductingBody": "National Testing Agency (NTA)",
     "stats": {
       "applicants": "24 Lakhs",
-      "fee": "₹ 1700",
+      "fee": " 1700",
       "duration": "3 Hours 20 Mins",
       "mode": "Offline (Pen & Paper)"
     },
@@ -183,7 +183,7 @@
     "conductingBody": "National Testing Agency (NTA)",
     "stats": {
       "applicants": "15 Lakhs",
-      "fee": "₹ 800 (per subject)",
+      "fee": " 800 (per subject)",
       "duration": "Various Slots",
       "mode": "Hybrid (CBT + Pen Paper)"
     },
@@ -238,7 +238,7 @@
     "conductingBody": "IISc & IITs (Rotational)",
     "stats": {
       "applicants": "8.5 Lakhs",
-      "fee": "₹ 1800",
+      "fee": " 1800",
       "duration": "3 Hours",
       "mode": "Online (CBT)"
     },
@@ -290,7 +290,7 @@
     "conductingBody": "IIMs (Rotational)",
     "stats": {
       "applicants": "3.3 Lakhs",
-      "fee": "₹ 2400",
+      "fee": " 2400",
       "duration": "2 Hours",
       "mode": "Online (CBT)"
     },
@@ -344,7 +344,7 @@
     "conductingBody": "Consortium of NLUs",
     "stats": {
       "applicants": "60,000+",
-      "fee": "₹ 4000",
+      "fee": " 4000",
       "duration": "2 Hours",
       "mode": "Offline"
     },
@@ -399,7 +399,7 @@
     "conductingBody": "BITS Pilani",
     "stats": {
       "applicants": "3 Lakhs",
-      "fee": "₹ 5400 (Both Sessions)",
+      "fee": " 5400 (Both Sessions)",
       "duration": "3 Hours",
       "mode": "Online (CBT)"
     },
@@ -443,7 +443,7 @@
     "conductingBody": "Vellore Institute of Technology",
     "stats": {
       "applicants": "2 Lakhs+",
-      "fee": "₹ 1350",
+      "fee": " 1350",
       "duration": "2.5 Hours",
       "mode": "Online (CBT)"
     },
@@ -486,7 +486,7 @@
     "conductingBody": "WBJEEB",
     "stats": {
       "applicants": "1 Lakh+",
-      "fee": "₹ 500",
+      "fee": " 500",
       "duration": "4 Hours (2 Papers)",
       "mode": "Offline"
     },

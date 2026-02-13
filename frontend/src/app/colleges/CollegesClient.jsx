@@ -97,20 +97,23 @@ function CollegesContent({ initialData }) {
 
         const params = new URLSearchParams();
         if (query) params.set("q", query);
-        if (filters.state !== "All") params.set("state", filters.state);
+
+        // Use the actual state filter value, allow it to be "All" even if stateFilter from URL exists
+        if (filters.state !== "All") {
+            params.set("state", filters.state);
+        } else if (!searchParams.has("state")) {
+            // Only if state is NOT in URL and filter is NOT "All" would we add nothing
+            // But if it IS in URL and we set to "All", we don't add it to params, thus clearing it on replace
+        }
+
         if (filters.district !== "All") params.set("district", filters.district);
         if (filters.course !== "All") params.set("course", filters.course);
         if (filters.tier !== "All") params.set("tier", filters.tier);
         if (sortBy !== "Most Popular") params.set("sortBy", sortBy);
         if (page > 1) params.set("page", page.toString());
-        // If stateFilter exists but we haven't set a state yet, we should respect it
-        // However, if we've explicitly set filters.state to "All", we should NOT re-add it
-        if (stateFilter && filters.state === "All" && !params.has("state")) {
-            // Only add if we aren't explicitly clearing it
-        }
 
         router.replace(`?${params.toString()}`, { scroll: false });
-    }, [query, filters, sortBy, page, stateFilter, router, isInitialized]);
+    }, [query, filters, sortBy, page, router, isInitialized, searchParams]);
 
     // Load filter options based on active filters
     useEffect(() => {
@@ -163,12 +166,10 @@ function CollegesContent({ initialData }) {
                 }
 
                 if (query) params.q = query;
+                if (filters.state !== "All") params.state = filters.state;
                 if (filters.district !== "All") params.district = filters.district;
                 if (filters.course !== "All") params.course = filters.course;
                 if (filters.tier !== "All") params.tier = filters.tier;
-
-                const activeState = filters.state !== "All" ? filters.state : stateFilter;
-                if (activeState) params.state = activeState;
 
                 const response = await fetchColleges(params);
 
@@ -221,7 +222,14 @@ function CollegesContent({ initialData }) {
     }, [stateFilter]);
 
     const handleFilterChange = useCallback((id, value) => {
-        setFilters((prev) => ({ ...prev, [id]: value }));
+        setFilters((prev) => {
+            const newFilters = { ...prev, [id]: value };
+            // Auto-reset district if state changes to avoid mismatched filters
+            if (id === "state") {
+                newFilters.district = "All";
+            }
+            return newFilters;
+        });
         setPage(1);
     }, []);
 
@@ -240,6 +248,7 @@ function CollegesContent({ initialData }) {
         setSortBy("Most Popular");
         setFilters({ state: "All", district: "All", course: "All", tier: "All" });
         setPage(1);
+        setIsMobileFiltersOpen(false); // Close mobile panel
         router.push("/colleges");
     }, [router]);
 
@@ -318,7 +327,10 @@ function CollegesContent({ initialData }) {
                         >
                             Clear All
                         </button>
-                        <button className="filter-btn-apply" onClick={() => setIsMobileFiltersOpen(false)}>
+                        <button className="filter-btn-apply" onClick={() => {
+                            setIsMobileFiltersOpen(false);
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}>
                             Apply Filters
                         </button>
                     </div>
@@ -520,7 +532,10 @@ function CollegesContent({ initialData }) {
                             </Button>
                             <Button
                                 className="flex-1"
-                                onClick={() => setIsMobileFiltersOpen(false)}
+                                onClick={() => {
+                                    setIsMobileFiltersOpen(false);
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }}
                             >
                                 Apply Filters
                             </Button>

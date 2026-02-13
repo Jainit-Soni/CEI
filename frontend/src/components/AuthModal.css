@@ -236,6 +236,45 @@
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
 }
 
+.auth-terms-group {
+    margin: 1.5rem 0;
+    padding: 0.5rem 0;
+}
+
+.auth-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: #64748b;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.auth-checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+.auth-checkbox-label a {
+    color: #2563eb;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+.auth-btn-main-glass:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
 .auth-error-glass {
     padding: 0.75rem;
     background: #fee2e2;

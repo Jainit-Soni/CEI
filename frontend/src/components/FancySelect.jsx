@@ -15,7 +15,7 @@ function useDebouncedValue(value, delay) {
   return debouncedValue;
 }
 
-const MAX_VISIBLE_OPTIONS = 50;
+const MAX_VISIBLE_OPTIONS = 100;
 
 export default function FancySelect({
   label,
@@ -91,7 +91,7 @@ export default function FancySelect({
               placeholder={`Search ${label || "options"}`}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              autoFocus
+              autoFocus={typeof window !== 'undefined' && window.innerWidth > 768}
               suppressHydrationWarning={true}
             />
           )}

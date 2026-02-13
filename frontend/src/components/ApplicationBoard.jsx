@@ -139,23 +139,28 @@ export default function ApplicationBoard() {
 
         // Body Content
         const tableData = items.map((item, index) => [
-            `#${index + 1}`,
+            `${index + 1}`,
             item.name || item.shortName,
             item.tuition || item.fees || "See Website",
-            (item.placements?.averagePackage || "High").toString().replace(/¹/g, ''),
+            (item.placements?.averagePackage || "High").toString().replace(/[^\x00-\x7F]/g, "").replace(/\s+/g, " "), // Remove non-ASCII/superscripts
             (item.acceptedExams || []).map(e => (typeof e === 'object' ? (e.code || e.name) : e)).join(", ")
         ]);
 
+        // Add premium blue side-stripe
+        doc.setFillColor(37, 99, 235);
+        doc.rect(0, 0, 8, doc.internal.pageSize.height, 'F');
+
         autoTable(doc, {
             startY: 140,
-            head: [['#', 'Institution', 'EST. TUITION', 'AVG Pkg', 'Key Exams']],
+            margin: { left: 20 },
+            head: [['Sr No.', 'Institution', 'EST. TUITION', 'AVG Pkg', 'Key Exams']],
             body: tableData,
             theme: 'striped',
             headStyles: { fillColor: [37, 99, 235], textColor: 255, fontStyle: 'bold' },
             styles: { fontSize: 8, cellPadding: 4 },
             columnStyles: {
-                0: { cellWidth: 10 },
-                1: { cellWidth: 70 },
+                0: { cellWidth: 15 },
+                1: { cellWidth: 65 },
                 2: { cellWidth: 30 },
                 3: { cellWidth: 30 },
                 4: { cellWidth: 'auto' }

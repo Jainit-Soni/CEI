@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "iim-ahm",
     "name": "Indian Institute of Management Ahmedabad",
@@ -90,9 +90,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹36.41 LPA",
-      "medianPackage": "₹35.0 LPA",
-      "highestPackage": "₹1.50 CPA"
+      "averagePackage": "36.41 LPA",
+      "medianPackage": "35.0 LPA",
+      "highestPackage": "1.50 CPA"
     }
   },
   {
@@ -203,9 +203,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -299,9 +299,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -391,9 +391,9 @@
       "district": "Gandhinagar"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -507,9 +507,9 @@
       "district": "Gandhinagar"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -606,9 +606,9 @@
       "district": "Surat"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -704,9 +704,9 @@
       "district": "Kheda"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -807,9 +807,9 @@
       "district": "Anand"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -918,9 +918,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1027,9 +1027,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1131,9 +1131,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1225,9 +1225,9 @@
       "district": "Gandhinagar"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1313,9 +1313,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1404,9 +1404,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1499,9 +1499,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1662,9 +1662,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1778,9 +1778,9 @@
       "district": "Gandhinagar"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1877,9 +1877,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1978,9 +1978,9 @@
       "district": "Anand"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2071,9 +2071,9 @@
       "district": "Anand"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2142,9 +2142,9 @@
       "district": "Rajkot"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -2236,9 +2236,9 @@
       "district": "Surat"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2331,9 +2331,9 @@
       "district": "Bhavnagar"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -2434,9 +2434,9 @@
       "district": "Surat"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2522,9 +2522,9 @@
       "district": "Vadodara"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -2602,9 +2602,9 @@
       "district": "Rajkot"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -2672,9 +2672,9 @@
       "district": "Gandhinagar"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2762,9 +2762,9 @@
       "district": "Anand"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2853,9 +2853,9 @@
       "district": "Junagadh"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2936,9 +2936,9 @@
       "district": "Navsari"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3004,9 +3004,9 @@
       "district": "Banaskantha"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3106,9 +3106,9 @@
       "district": "Gandhinagar"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -3180,9 +3180,9 @@
       "district": "Gandhinagar"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3267,9 +3267,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3352,9 +3352,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3428,9 +3428,9 @@
       "district": "Rajkot"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3504,9 +3504,9 @@
       "district": "Surat"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3572,9 +3572,9 @@
       "district": "Patan"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3640,9 +3640,9 @@
       "district": "Bhavnagar"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3693,9 +3693,9 @@
       "district": "Kutch"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -3783,9 +3783,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3861,9 +3861,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -3943,9 +3943,9 @@
       "district": "Mehsana"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4027,9 +4027,9 @@
       "district": "Gandhinagar"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4095,9 +4095,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4171,9 +4171,9 @@
       "district": "Gandhinagar"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4262,9 +4262,9 @@
       "district": "Vadodara"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4327,9 +4327,9 @@
       "district": "Vadodara"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4403,9 +4403,9 @@
       "district": "Rajkot"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4479,9 +4479,9 @@
       "district": "Rajkot"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4562,9 +4562,9 @@
       "district": "Surat"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -4623,9 +4623,9 @@
       "district": "Surendranagar"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4676,9 +4676,9 @@
       "district": "Patan"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4744,9 +4744,9 @@
       "district": "Mehsana"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4805,9 +4805,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4866,9 +4866,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹3-6 LPA",
-      "medianPackage": "₹3-5 LPA",
-      "highestPackage": "₹8-15 LPA",
+      "averagePackage": "3-6 LPA",
+      "medianPackage": "3-5 LPA",
+      "highestPackage": "8-15 LPA",
       "placementRate": "50-70%"
     }
   },
@@ -4941,9 +4941,9 @@
       "district": "Vadodara"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5014,9 +5014,9 @@
       "district": "Bharuch"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5084,9 +5084,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5154,9 +5154,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5224,9 +5224,9 @@
       "district": "Ahmedabad"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -5298,7 +5298,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -5309,9 +5309,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },

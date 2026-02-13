@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "iit-hyderabad",
     "name": "Indian Institute of Technology Hyderabad",
@@ -69,9 +69,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -153,9 +153,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -214,7 +214,7 @@
       "DE Shaw",
       "Qualcomm"
     ],
-    "tuition": "₹1,25,000 per semester (Income based waivers apply)",
+    "tuition": "1,25,000 per semester (Income based waivers apply)",
     "sources": [
       "https://www.nitw.ac.in"
     ],
@@ -229,9 +229,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹29.94 LPA",
-      "medianPackage": "₹18.0 LPA",
-      "highestPackage": "₹88.0 LPA"
+      "averagePackage": "29.94 LPA",
+      "medianPackage": "18.0 LPA",
+      "highestPackage": "88.0 LPA"
     }
   },
   {
@@ -279,7 +279,7 @@
       "Facebook",
       "Tower Research"
     ],
-    "tuition": "High (~₹3-4 Lakhs/Year)",
+    "tuition": "High (~3-4 Lakhs/Year)",
     "sources": [
       "https://www.iiit.ac.in"
     ],
@@ -296,9 +296,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹30.0 LPA",
-      "medianPackage": "₹28.0 LPA",
-      "highestPackage": "₹69.0 LPA"
+      "averagePackage": "30.0 LPA",
+      "medianPackage": "28.0 LPA",
+      "highestPackage": "69.0 LPA"
     }
   },
   {
@@ -372,9 +372,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6.5 LPA",
-      "medianPackage": "₹5.0 LPA",
-      "highestPackage": "₹24.0 LPA"
+      "averagePackage": "6.5 LPA",
+      "medianPackage": "5.0 LPA",
+      "highestPackage": "24.0 LPA"
     }
   },
   {
@@ -441,9 +441,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -490,7 +490,7 @@
       "Uber",
       "Nvidia"
     ],
-    "tuition": "High (~₹5-6 Lakhs/Year)",
+    "tuition": "High (~5-6 Lakhs/Year)",
     "sources": [
       "https://www.bits-pilani.ac.in/hyderabad"
     ],
@@ -507,9 +507,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹19.7 LPA",
-      "medianPackage": "₹16.0 LPA",
-      "highestPackage": "₹60.0 LPA"
+      "averagePackage": "19.7 LPA",
+      "medianPackage": "16.0 LPA",
+      "highestPackage": "60.0 LPA"
     }
   },
   {
@@ -575,9 +575,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -648,9 +648,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -714,9 +714,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -774,9 +774,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -832,9 +832,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -890,9 +890,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -981,9 +981,9 @@
       "naacGrade": "A+"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1060,9 +1060,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1146,9 +1146,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1224,9 +1224,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1297,9 +1297,9 @@
       "naacGrade": "NA"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1379,9 +1379,9 @@
       "naacGrade": "A"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1465,9 +1465,9 @@
       "naacGrade": "A++"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1542,7 +1542,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -1553,9 +1553,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1630,7 +1630,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -1641,9 +1641,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1718,7 +1718,7 @@
       "McKinsey",
       "BCG"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -1729,9 +1729,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹15-25 LPA",
-      "medianPackage": "₹12-18 LPA",
-      "highestPackage": "₹50+ LPA",
+      "averagePackage": "15-25 LPA",
+      "medianPackage": "12-18 LPA",
+      "highestPackage": "50+ LPA",
       "placementRate": "85-95%"
     }
   },
@@ -1803,7 +1803,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -1814,9 +1814,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1888,7 +1888,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -1899,9 +1899,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -1973,7 +1973,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹1,50,000 - 3,00,000 per year",
+    "tuition": "1,50,000 - 3,00,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -1984,9 +1984,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   },
@@ -2058,7 +2058,7 @@
       "SAP",
       "VMware"
     ],
-    "tuition": "₹50,000 - 1,50,000 per year",
+    "tuition": "50,000 - 1,50,000 per year",
     "sources": [],
     "meta": {
       "affiliations": [],
@@ -2069,9 +2069,9 @@
       "sourceName": "NIRF 2024"
     },
     "placements": {
-      "averagePackage": "₹6-12 LPA",
-      "medianPackage": "₹5-9 LPA",
-      "highestPackage": "₹20-30 LPA",
+      "averagePackage": "6-12 LPA",
+      "medianPackage": "5-9 LPA",
+      "highestPackage": "20-30 LPA",
       "placementRate": "70-85%"
     }
   }
