@@ -1,4 +1,6 @@
-﻿import { useState, useEffect } from "react";
+﻿"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Button from "./Button";
@@ -110,8 +112,8 @@ export default function Header() {
             <button
               onClick={() => setShowScoreModal(true)}
               className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${hasScores
-                  ? "bg-green-100 text-green-700 hover:bg-green-200"
-                  : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                ? "bg-green-100 text-green-700 hover:bg-green-200"
+                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                 }`}
             >
               <Trophy size={16} />
