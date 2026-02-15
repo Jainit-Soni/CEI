@@ -115,29 +115,33 @@ function CollegesContent({ initialData }) {
         router.replace(`?${params.toString()}`, { scroll: false });
     }, [query, filters, sortBy, page, router, isInitialized, searchParams]);
 
-    // Load filter options based on active filters
+    // Load filter options based on active filters (Debounced)
     useEffect(() => {
-        const loadFilters = async () => {
-            try {
-                const params = {};
-                if (filters.state !== "All") params.state = filters.state;
-                if (filters.district !== "All") params.district = filters.district;
-                if (filters.course !== "All") params.course = filters.course;
-                if (filters.tier !== "All") params.tier = filters.tier;
-                if (query) params.q = query;
+        const timer = setTimeout(() => {
+            const loadFilters = async () => {
+                try {
+                    const params = {};
+                    if (filters.state !== "All") params.state = filters.state;
+                    if (filters.district !== "All") params.district = filters.district;
+                    if (filters.course !== "All") params.course = filters.course;
+                    if (filters.tier !== "All") params.tier = filters.tier;
+                    if (query) params.q = query;
 
-                const data = await fetchFilters(params);
-                setFilterOptions({
-                    states: ["All", ...(data?.states || [])],
-                    districts: ["All", ...(data?.districts || [])],
-                    courses: ["All", ...(data?.courses || [])],
-                    tiers: ["All", ...(data?.tiers || [])]
-                });
-            } catch (err) {
-                console.error("Failed to load filters", err);
-            }
-        };
-        loadFilters();
+                    const data = await fetchFilters(params);
+                    setFilterOptions({
+                        states: ["All", ...(data?.states || [])],
+                        districts: ["All", ...(data?.districts || [])],
+                        courses: ["All", ...(data?.courses || [])],
+                        tiers: ["All", ...(data?.tiers || [])]
+                    });
+                } catch (err) {
+                    console.error("Failed to load filters", err);
+                }
+            };
+            loadFilters();
+        }, 400); // 400ms debounce
+
+        return () => clearTimeout(timer);
     }, [filters.state, filters.district, filters.course, filters.tier, query]);
 
     useEffect(() => {

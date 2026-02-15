@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { PlusCircle, CheckCircle2 } from "lucide-react";
+import { useAuth } from "@/lib/AuthContext";
+import { saveUserChoices } from "@/lib/api";
 import "./AddToChoiceButton.css";
 
 export default function AddToChoiceButton({ college, className = "" }) {
     const [added, setAdded] = useState(false);
+    const { user } = useAuth();
 
     useEffect(() => {
         // Check if already in list
@@ -63,8 +66,15 @@ export default function AddToChoiceButton({ college, className = "" }) {
             }
         }
 
-        // Dispatch Event
+        // Dispatch Event for same-window updates (e.g., Header count)
         window.dispatchEvent(new Event("local-storage-update"));
+
+        // Cloud Push (Instant)
+        if (user) {
+            saveUserChoices(user.uid, list).catch(err => {
+                console.error("Cloud sync failed on add/remove:", err);
+            });
+        }
     };
 
     return (

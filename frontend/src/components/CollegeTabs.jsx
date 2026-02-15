@@ -195,7 +195,7 @@ export default function CollegeTabs({ college }) {
                 {activeTab === "roi" && (
                     <div className="tab-pane fade-in">
                         <ROICalculator
-                            title={`Is ${college.shortName || college.name} worth it?`}
+                            title={`ROI Analysis Breakdown for ${college.shortName || college.name}`}
                             initialData={{
                                 tuition: parseCurrency(college.tuition) || 150000,
                                 avgPackage: parseCurrency(college.placements?.averagePackage) || 600000,

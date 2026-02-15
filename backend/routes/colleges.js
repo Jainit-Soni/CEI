@@ -8,6 +8,7 @@ const router = express.Router();
 function normalizeStateName(name) {
   if (!name) return "";
   return name.toLowerCase()
+    .replace(/-/g, " ")    // Replace dashes with spaces
     .replace(/&/g, "and")  // Replace & with "and"
     .replace(/\s+/g, " ")   // Normalize whitespace
     .trim();

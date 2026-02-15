@@ -45,13 +45,18 @@ export default function ApplicationBoard() {
             setIsSyncing(true);
             try {
                 const cloudChoices = await fetchUserChoices(user.uid);
+                const localStored = localStorage.getItem("choice-filling-cart");
+                const localItems = localStored ? JSON.parse(localStored) : [];
 
-                if (cloudChoices && cloudChoices.length > 0) {
-                    // Cloud wins if it has data
+                if (localItems.length > 0) {
+                    // Local data takes precedence (Zombie Fix)
+                    // If local exists, we push to cloud to ensure cloud matches local reality
+                    await saveUserChoices(user.uid, localItems);
+                    setItems(localItems);
+                } else if (cloudChoices && cloudChoices.length > 0) {
+                    // Only fetch from cloud if local is empty (New Device Scenario)
                     setItems(cloudChoices);
-                } else if (items.length > 0) {
-                    // If cloud is empty but local has data, push local to cloud
-                    await saveUserChoices(user.uid, items);
+                    localStorage.setItem("choice-filling-cart", JSON.stringify(cloudChoices));
                 }
             } catch (err) {
                 console.error("Sync failed:", err);
@@ -153,7 +158,10 @@ export default function ApplicationBoard() {
         autoTable(doc, {
             startY: 140,
             margin: { left: 20 },
+            margin: { left: 20 },
             head: [['Sr No.', 'Institution', 'EST. TUITION', 'AVG Pkg', 'Key Exams']],
+            body: tableData,
+            theme: 'striped',
             body: tableData,
             theme: 'striped',
             headStyles: { fillColor: [37, 99, 235], textColor: 255, fontStyle: 'bold' },
