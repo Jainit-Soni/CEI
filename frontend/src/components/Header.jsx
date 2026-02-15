@@ -6,31 +6,32 @@ import { usePathname, useRouter } from "next/navigation";
 import Button from "./Button";
 import AuthModal from "./AuthModal";
 import UserDropdown from "./UserDropdown";
-import ScoreInputModal from "./ScoreInputModal"; // New
+import ScoreInputModal from "./ScoreInputModal";
 import { useAuth } from "@/lib/AuthContext";
-import { useScores } from "@/lib/ScoreContext"; // New
-import { Heart, Menu, ArrowLeft, Trophy } from "lucide-react";
+import { useScores } from "@/lib/ScoreContext";
+import { Menu, X, ArrowLeft, Trophy, Heart } from "lucide-react";
+import "./Header.css";
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const [showScoreModal, setShowScoreModal] = useState(false); // New
+  const [showScoreModal, setShowScoreModal] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [choiceCount, setChoiceCount] = useState(0);
+
   const pathname = usePathname();
   const router = useRouter();
   const { user, loading } = useAuth();
-  const { scores, saveScores } = useScores(); // New
-  const [choiceCount, setChoiceCount] = useState(0);
+  const { scores, saveScores } = useScores();
 
-  const [scrolled, setScrolled] = useState(false);
-
+  // Scroll effect
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Cart count
   useEffect(() => {
     const updateCount = () => {
       if (typeof window !== "undefined") {
@@ -38,149 +39,140 @@ export default function Header() {
         setChoiceCount(stored ? JSON.parse(stored).length : 0);
       }
     };
-
     updateCount();
     window.addEventListener("storage", updateCount);
-    // Custom event for same-window updates
     window.addEventListener("local-storage-update", updateCount);
-
     return () => {
       window.removeEventListener("storage", updateCount);
       window.removeEventListener("local-storage-update", updateCount);
     };
   }, []);
 
-  // Close menu on route change
+  // Close mobile menu on route change
   useEffect(() => {
-    setOpen(false);
+    setIsMobileMenuOpen(false);
   }, [pathname]);
 
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [open]);
-
-  const isActive = (href) => {
-    if (href === "/") return pathname === "/";
-    return pathname?.startsWith(href);
-  };
-
+  const isActive = (path) => pathname === path || (path !== "/" && pathname?.startsWith(path));
   const hasScores = Object.values(scores || {}).some(v => v > 0);
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Colleges", path: "/colleges" },
+    { name: "Exams", path: "/exams" },
+    { name: "Map", path: "/map" },
+    { name: "ROI Tool", path: "/roi-calculator" },
+  ];
 
   return (
     <>
-      <header className={`header ${scrolled ? "scrolled" : ""}`}>
-        <div className="header-inner">
-          {/* Logo & Back Button */}
-          <div className="logo-group">
-            {pathname !== "/" && (
-              <button
-                className="back-button"
-                onClick={() => router.back()}
-                aria-label="Go Back"
-              >
-                <ArrowLeft size={20} />
-              </button>
-            )}
-            <Link href="/" className="logo">CEI</Link>
+      <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
+        <div className="header-container">
+
+          {/* LEFT: Logo */}
+          <div className="header-left">
+            <Link href="/" className="brand-logo">CEI</Link>
           </div>
 
-          {/* Desktop Nav */}
-          <nav className="nav desktop-nav">
-            <Link href="/" className={isActive("/") ? "active" : ""}>Home</Link>
-            <Link href="/colleges" className={isActive("/colleges") ? "active" : ""}>Colleges</Link>
-            <Link href="/exams" className={isActive("/exams") ? "active" : ""}>Exams</Link>
-            <Link href="/map" className={isActive("/map") ? "active" : ""}>Map</Link>
-            <Link href="/roi-calculator" className={isActive("/roi-calculator") ? "active" : ""}>ROI Tool</Link>
-            <Link href="/my-list" className={`nav-link icon-link ${isActive("/my-list") ? "active" : ""}`} data-count={choiceCount}>
-              <span>My List</span>
-              {choiceCount > 0 && <span className="nav-badge">{choiceCount}</span>}
+          {/* CENTER: Desktop Navigation */}
+          <nav className="header-nav desktop-only">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                href={link.path}
+                className={`nav-item ${isActive(link.path) ? "active" : ""}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link
+              href="/my-list"
+              className={`nav-item ${isActive("/my-list") ? "active" : ""}`}
+            >
+              My List
+              {choiceCount > 0 && <span className="badge-count">{choiceCount}</span>}
             </Link>
           </nav>
 
-          {/* Actions */}
-          <div className="header-actions">
+          {/* RIGHT: Actions */}
+          <div className="header-right">
 
-            {/* Score Trigger */}
+            {/* Score Button (Desktop) */}
             <button
               onClick={() => setShowScoreModal(true)}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${hasScores
-                ? "bg-green-100 text-green-700 hover:bg-green-200"
-                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                }`}
+              className={`score-btn desktop-only ${hasScores ? "has-scores" : ""}`}
             >
               <Trophy size={16} />
-              <span className="hidden sm:inline">{hasScores ? "Scores Active" : "Add Scores"}</span>
+              <span>{hasScores ? "Scores Active" : "Add Scores"}</span>
             </button>
 
+            {/* User Auth */}
             {!loading && (
               user ? (
-                <div className="user-area">
-                  <Link href="/dashboard" className={`dashboard-link-nav ${isActive("/dashboard") ? "active" : ""}`}>
+                <div className="user-menu">
+                  <Link href="/dashboard" className="dashboard-btn desktop-only">
                     Dashboard
                   </Link>
                   <UserDropdown />
                 </div>
               ) : (
-                <Button variant="primary" size="sm" onClick={() => setShowAuthModal(true)}>Login</Button>
+                <Button variant="primary" size="sm" onClick={() => setShowAuthModal(true)}>
+                  Login
+                </Button>
               )
             )}
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile Toggle */}
             <button
-              className="menu-toggle"
-              onClick={() => setOpen((v) => !v)}
-              aria-label="Toggle Menu"
+              className="mobile-toggle"
+              onClick={() => setIsMobileMenuOpen(true)}
+              aria-label="Open Menu"
             >
-              {open ? (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              ) : <Menu size={24} />}
+              <Menu size={24} />
             </button>
           </div>
-        </div>
-
-        {/* Mobile Nav Overlay */}
-        <div className={`mobile-nav-overlay ${open ? "open" : ""}`}>
-          <div className="mobile-nav-header">
-            <button
-              className="mobile-back-button"
-              onClick={() => setOpen(false)}
-              aria-label="Close Menu"
-            >
-              <ArrowLeft size={24} />
-              <span>Back</span>
-            </button>
-          </div>
-          <nav className="mobile-nav-links">
-            <Link href="/" className={isActive("/") ? "active" : ""} onClick={() => setOpen(false)}>Home</Link>
-            <Link href="/colleges" className={isActive("/colleges") ? "active" : ""} onClick={() => setOpen(false)}>Colleges</Link>
-            <Link href="/exams" className={isActive("/exams") ? "active" : ""} onClick={() => setOpen(false)}>Exams</Link>
-            <Link href="/map" className={isActive("/map") ? "active" : ""} onClick={() => setOpen(false)}>Map</Link>
-            <Link href="/roi-calculator" className={isActive("/roi-calculator") ? "active" : ""} onClick={() => setOpen(false)}>ROI Tool</Link>
-            <Link href="/my-list" className={isActive("/my-list") ? "active" : ""} onClick={() => setOpen(false)}>
-              My List {choiceCount > 0 && <span className="mobile-badge">({choiceCount})</span>}
-            </Link>
-            <button
-              onClick={() => { setShowScoreModal(true); setOpen(false); }}
-              className="flex items-center gap-3 px-4 py-3 text-lg font-medium text-slate-600 hover:text-blue-600"
-            >
-              <Trophy size={20} />
-              {hasScores ? "Update Scores" : "Predict Chances"}
-            </button>
-          </nav>
         </div>
       </header>
 
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu-overlay">
+          <div className="mobile-menu-content">
+            <div className="mobile-header">
+              <span className="brand-logo">CEI</span>
+              <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close Menu">
+                <X size={24} />
+              </button>
+            </div>
+
+            <nav className="mobile-nav">
+              {navLinks.map((link) => (
+                <Link key={link.path} href={link.path} className="mobile-link">
+                  {link.name}
+                </Link>
+              ))}
+              <Link href="/my-list" className="mobile-link">
+                My List {choiceCount > 0 && `(${choiceCount})`}
+              </Link>
+
+              <hr className="mobile-divider" />
+
+              <button onClick={() => setShowScoreModal(true)} className="mobile-link">
+                <Trophy size={18} />
+                {hasScores ? "Update Scores" : "Predict Chances"}
+              </button>
+
+              {user && (
+                <Link href="/dashboard" className="mobile-link highlight">
+                  Dashboard
+                </Link>
+              )}
+            </nav>
+          </div>
+        </div>
+      )}
+
+      {/* Modals */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
       <ScoreInputModal
         isOpen={showScoreModal}
