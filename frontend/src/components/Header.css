@@ -6,7 +6,6 @@
   z-index: 9999;
   padding: 0 24px;
   pointer-events: none;
-  /* Allow clicks to pass through sides */
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -16,29 +15,35 @@
 
 .header-inner {
   pointer-events: auto;
-  /* Re-enable clicks */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.75);
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.01),
+    0 4px 6px -1px rgba(0, 0, 0, 0.02),
     0 12px 24px -4px rgba(0, 0, 0, 0.05),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
   border-radius: 999px;
-  /* Capsule */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  /* Added gap to prevent squishing */
   transition: all 0.3s ease;
+}
+
+/* Ensure flex items don't shrink too much */
+.logo-group,
+.header-actions {
+  flex-shrink: 0;
 }
 
 .header.scrolled .header-inner {
   padding: 8px 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   box-shadow:
     0 10px 30px -4px rgba(0, 0, 0, 0.1),
     inset 0 0 0 1px rgba(255, 255, 255, 0.5);
@@ -90,20 +95,27 @@
 /* Desktop Nav */
 .desktop-nav {
   display: flex;
-  gap: 6px;
+  gap: 4px;
+  /* Reduced gap */
   background: rgba(0, 0, 0, 0.03);
   padding: 4px;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.02);
+  flex-shrink: 1;
+  /* Allow shrinking if needed */
+  overflow: hidden;
+  /* Prevent overflow */
 }
 
 .desktop-nav a {
   font-family: var(--font-body, sans-serif);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  /* Slightly smaller font */
   color: #64748b;
   text-decoration: none;
-  padding: 8px 18px;
+  padding: 6px 14px;
+  /* Reduced padding */
   border-radius: 999px;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -137,7 +149,8 @@
 .user-area {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  /* Reduced gap */
 }
 
 .dashboard-link-nav {
@@ -150,6 +163,7 @@
   padding: 6px 14px;
   border-radius: 99px;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .dashboard-link-nav:hover {
@@ -166,7 +180,8 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  /* Reduced from 16px */
 }
 
 .menu-toggle {
@@ -183,7 +198,17 @@
   display: none;
 }
 
-/* Responsive */
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+
+  /* Hide non-essential links on medium screens */
+  .desktop-nav a[href="/map"],
+  .desktop-nav a[href="/roi-calculator"] {
+    display: none;
+    /* They will be available in mobile menu if we switch to mobile menu sooner, or need a "More" dropdown */
+  }
+}
+
 @media (max-width: 1024px) {
   .header {
     top: 10px;
@@ -269,6 +294,7 @@
 
   .mobile-nav-links {
     display: flex;
+    flex-direction: center;
     flex-direction: column;
     align-items: center;
     gap: 24px;
