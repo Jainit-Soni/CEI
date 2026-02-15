@@ -83,13 +83,25 @@ export default function ApplicationBoard() {
         }
     }, [items, isLoaded, user]);
 
-    const removeItem = (id) => {
-        setItems(prev => prev.filter(item => item.id !== id));
+    const removeItem = async (id) => {
+        const newItems = items.filter(item => item.id !== id);
+        setItems(newItems);
+        // Immediate sync to prevent zombie items
+        if (user) {
+            try {
+                await saveUserChoices(user.uid, newItems);
+            } catch (err) {
+                console.error("Failed to sync removal:", err);
+            }
+        }
     };
 
-    const clearAll = () => {
+    const clearAll = async () => {
         if (window.confirm("Are you sure you want to clear your entire selection list? This cannot be undone.")) {
             setItems([]);
+            if (user) {
+                await saveUserChoices(user.uid, []);
+            }
         }
     };
 
@@ -496,9 +508,48 @@ export default function ApplicationBoard() {
                 .action-btn-mini.remove:hover { background: #fef2f2; color: #ef4444; }
 
                 @media (max-width: 768px) {
-                    .report-header { flex-direction: column; align-items: flex-start; }
-                    .report-details-grid { grid-template-columns: 1fr; }
+                    .college-row-card {
+                        flex-direction: column;
+                        position: relative;
+                        padding-left: 0;
+                        height: auto;
+                    }
+                    .drag-handle {
+                        width: 100%;
+                        height: 36px;
+                        flex-direction: row;
+                        border-right: none;
+                        border-bottom: 1px solid #f1f5f9;
+                        gap: 8px;
+                    }
+                    .rank-num { margin-top: 0; font-size: 0.9rem; }
+                    
+                    .college-main-modern { padding: 16px; }
+
+                    .report-header { 
+                        flex-direction: column; 
+                        align-items: flex-start; 
+                        gap: 8px;
+                    }
+                    
+                    .report-details-grid { 
+                        grid-template-columns: 1fr; 
+                        gap: 12px;
+                    }
                     .detail-item.full-width { grid-column: auto; }
+
+                    .row-actions-modern {
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 8px;
+                    }
+                    .action-btn-mini {
+                        justify-content: center;
+                        width: 100%;
+                        padding: 12px;
+                        background: #f8fafc;
+                        border: 1px solid #e2e8f0;
+                    }
                 }
 
                 .mylist-empty {

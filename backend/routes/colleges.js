@@ -23,8 +23,19 @@ function getState(college) {
 router.get("/colleges", async (req, res) => {
   try {
     const key = `colleges:${JSON.stringify(req.query)}`;
+
+    /* 
+      SCALE MODE: Stale-While-Revalidate Pattern 
+      - Try to get fresh data
+      - If fails or slow, use stale data if available? 
+      - Actually, for this project, a simple aggressive TTL (5 min) is enough.
+      - We rely on Redis being fast.
+    */
     const cached = await cache.get(key);
-    if (cached) return res.json(cached);
+    if (cached) {
+      // Background revalidation could go here if needed
+      return res.json(cached);
+    }
 
     let colleges = await getColleges();
 
@@ -72,6 +83,12 @@ router.get("/colleges", async (req, res) => {
         const courseDegree = (courseObj?.degree || "").toLowerCase();
         return searchTerms.some(term => courseName.includes(term) || courseDegree.includes(term));
       }));
+    }
+    if (req.query.exam) {
+      const examQuery = req.query.exam.toLowerCase().trim();
+      colleges = colleges.filter((c) =>
+        (c.acceptedExams || []).some(e => e.toLowerCase().includes(examQuery))
+      );
     }
     if (q) {
       const query = q.toLowerCase().trim();

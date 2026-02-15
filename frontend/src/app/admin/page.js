@@ -1,251 +1,77 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/lib/AuthContext";
-import "./admin.css";
-import AdminGuard from "@/components/AdminGuard";
+import { useState } from "react";
+import Button from "@/components/Button";
+import GlassPanel from "@/components/GlassPanel";
+import { Lock } from "lucide-react";
 
-function AdminDashboard() {
-    const { user, logout } = useAuth();
-    const [colleges, setColleges] = useState([]);
-    const [view, setView] = useState("list"); // list, form
-    const [editingCollege, setEditingCollege] = useState(null);
-    const [formData, setFormData] = useState({});
-    const [status, setStatus] = useState("");
+export default function AdminPage() {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [password, setPassword] = useState("");
 
-    // Helper to call our Next.js Proxy
-    const secureCall = async (action, endpoint, data = {}) => {
-        try {
-            const res = await fetch("/api/admin-proxy", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    action,
-                    endpoint,
-                    data,
-                    userEmail: user.email
-                })
-            });
-            const json = await res.json();
-            if (!res.ok) throw new Error(json.error || "Request failed");
-            return json;
-        } catch (err) {
-            throw err;
-        }
-    };
-
-    // Load data on mount
-    useEffect(() => {
-        if (user) fetchColleges();
-    }, [user]);
-
-    const fetchColleges = async () => {
-        try {
-            setStatus("Loading data...");
-            const data = await secureCall("GET", "/admin/colleges");
-            // API might return { data: [...] } or just [...]
-            setColleges(Array.isArray(data) ? data : (data.data || []));
-            setStatus("");
-        } catch (err) {
-            console.error(err);
-            setStatus("Error: " + err.message);
-        }
-    };
-
-    const handleEdit = (college) => {
-        setEditingCollege(college);
-        setFormData(college);
-        setView("form");
-    };
-
-    const handleAddNew = () => {
-        setEditingCollege(null);
-        setFormData({
-            name: "",
-            city: "",
-            state: "",
-            rating: "",
-            ranking: "",
-            fees: "",
-            placement: "",
-            exams: []
-        });
-        setView("form");
-    };
-
-    const handleDelete = async (id) => {
-        if (!confirm("Are you sure?")) return;
-        try {
-            await secureCall("DELETE", `/admin/colleges/${id}`);
-            fetchColleges();
-        } catch (err) {
-            alert("Failed to delete: " + err.message);
-        }
-    };
-
-    const handleSubmit = async (e) => {
+    const handleLogin = (e) => {
         e.preventDefault();
-        try {
-            await secureCall("POST", "/admin/colleges", formData);
-            alert("Saved!");
-            setView("list");
-            fetchColleges();
-        } catch (err) {
-            alert("Failed to save: " + err.message);
+        // Super simple client-side check for MVP (Replace with real auth later)
+        if (password === "admin123") {
+            setIsAuthenticated(true);
+        } else {
+            alert("Invalid Password");
         }
     };
+
+    if (!isAuthenticated) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-slate-50">
+                <GlassPanel className="p-8 w-full max-w-sm text-center">
+                    <div className="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-500">
+                        <Lock size={32} />
+                    </div>
+                    <h1 className="text-2xl font-bold mb-6">Admin Access</h1>
+                    <form onSubmit={handleLogin} className="space-y-4">
+                        <input
+                            type="password"
+                            placeholder="Enter Admin Password"
+                            className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <Button className="w-full justify-center">Unlock Dashboard</Button>
+                    </form>
+                </GlassPanel>
+            </div>
+        );
+    }
 
     return (
-        <div className="admin-container">
-            <div className="admin-wrapper">
-                {/* Header */}
-                <div className="admin-header">
-                    <div className="admin-brand">
-                        <h1>Admin Portal</h1>
-                        <span className="admin-badge">Secure Mode</span>
+        <div className="min-h-screen bg-slate-50 p-6">
+            <div className="max-w-7xl mx-auto">
+                <div className="flex items-center justify-between mb-8">
+                    <h1 className="text-3xl font-bold text-slate-900">Admin Dashboard</h1>
+                    <Button variant="secondary" onClick={() => setIsAuthenticated(false)}>Logout</Button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h3 className="text-sm font-medium text-slate-500">Total Colleges</h3>
+                        <p className="text-3xl font-bold text-slate-900 mt-2">2,140</p>
                     </div>
-                    <div className="admin-user-info">
-                        <div className="user-pill">
-                            <span className="status-dot"></span>
-                            {user?.email}
-                        </div>
-                        <button onClick={logout} className="admin-btn btn-danger">Logout</button>
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h3 className="text-sm font-medium text-slate-500">Pending Reviews</h3>
+                        <p className="text-3xl font-bold text-amber-500 mt-2">12</p>
+                    </div>
+                    <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h3 className="text-sm font-medium text-slate-500">Users</h3>
+                        <p className="text-3xl font-bold text-blue-500 mt-2">845</p>
                     </div>
                 </div>
 
-                {/* Content */}
-                {view === "list" ? (
-                    <div className="admin-content card-glass">
-                        <div className="admin-toolbar">
-                            <h2>College Database</h2>
-                            <button onClick={handleAddNew} className="admin-btn btn-primary">
-                                + Add College
-                            </button>
-                        </div>
-
-                        {status && <div className="status-bar">{status}</div>}
-
-                        <div className="admin-table-container">
-                            <table className="admin-table">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Location</th>
-                                        <th align="right">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {colleges.map((c) => (
-                                        <tr key={c.id}>
-                                            <td>
-                                                <div className="fw-500">{c.name}</div>
-                                                <div className="sub-text">ID: {c.id}</div>
-                                            </td>
-                                            <td>{c.city}, {c.state}</td>
-                                            <td className="actions-cell">
-                                                <button onClick={() => handleEdit(c)} className="icon-btn">Edit</button>
-                                                <button onClick={() => handleDelete(c.id)} className="icon-btn text-red">Delete</button>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                            {colleges.length === 0 && !status && (
-                                <div className="empty-state">No colleges found.</div>
-                            )}
-                        </div>
+                <GlassPanel variant="strong" className="p-6">
+                    <h2 className="text-xl font-bold mb-4">Content Management</h2>
+                    <div className="p-12 text-center border-2 border-dashed border-slate-200 rounded-xl">
+                        <p className="text-slate-400">Content management table coming next...</p>
                     </div>
-                ) : (
-                    <div className="admin-content card-glass">
-                        <div className="admin-toolbar">
-                            <h2>{editingCollege ? "Edit College" : "Add New College"}</h2>
-                        </div>
-                        <form onSubmit={handleSubmit} className="admin-form">
-                            <div className="form-grid-2">
-                                <div className="form-group">
-                                    <label>College Name</label>
-                                    <input
-                                        className="admin-input"
-                                        value={formData.name || ""}
-                                        onChange={e => setFormData({ ...formData, name: e.target.value })}
-                                        required
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label>State</label>
-                                    <input
-                                        className="admin-input"
-                                        value={formData.state || ""}
-                                        onChange={e => setFormData({ ...formData, state: e.target.value })}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="form-grid-2">
-                                <div className="form-group">
-                                    <label>City</label>
-                                    <input
-                                        className="admin-input"
-                                        value={formData.city || ""}
-                                        onChange={e => setFormData({ ...formData, city: e.target.value })}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label>Fees</label>
-                                    <input
-                                        className="admin-input"
-                                        value={formData.fees || ""}
-                                        onChange={e => setFormData({ ...formData, fees: e.target.value })}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="form-group">
-                                <label>Raw JSON Data</label>
-                                <textarea
-                                    className="admin-input json-editor"
-                                    value={JSON.stringify(formData, null, 2)}
-                                    onChange={e => {
-                                        try { setFormData(JSON.parse(e.target.value)) } catch (err) { }
-                                    }}
-                                />
-                            </div>
-
-                            <div className="form-actions">
-                                <button type="button" onClick={() => setView("list")} className="admin-btn btn-secondary">
-                                    Cancel
-                                </button>
-                                <button type="submit" className="admin-btn btn-primary">
-                                    Save Changes
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                )}
+                </GlassPanel>
             </div>
         </div>
-    );
-}
-
-// Wrap with the Guard
-export default function AdminPage() {
-    const { user, signInWithGoogle } = useAuth();
-
-    return (
-        <AdminGuard>
-            {!user ? (
-                <div className="admin-login-screen">
-                    <div className="admin-card glass-panel">
-                        <h2 className="admin-title">Portal Access</h2>
-                        <p className="admin-desc">Restricted to authorized personnel.</p>
-                        <button onClick={signInWithGoogle} className="admin-btn btn-google">
-                            Sign in with Google
-                        </button>
-                    </div>
-                </div>
-            ) : (
-                <AdminDashboard />
-            )}
-        </AdminGuard>
     );
 }

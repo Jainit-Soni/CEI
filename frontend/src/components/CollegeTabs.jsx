@@ -1,9 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import GlassPanel from "./GlassPanel";
-import ROICalculator from "./ROICalculator";
+import dynamic from "next/dynamic";
+import ReviewList from "./ReviewList";
+import ReviewModal from "./ReviewModal";
+import Button from "./Button";
 import "./CollegeTabs.css";
+
+const ROICalculator = dynamic(() => import("./ROICalculator"), {
+    loading: () => <div className="p-8 text-center text-slate-500">Loading Calculator...</div>
+});
 
 const parseCurrency = (str) => {
     if (!str) return 0;
@@ -33,6 +41,8 @@ const parseCurrency = (str) => {
 
 export default function CollegeTabs({ college }) {
     const [activeTab, setActiveTab] = useState("overview");
+    const [reviewsData, setReviewsData] = useState({ reviews: [], avgRating: 0, totalReviews: 0 });
+    const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
 
     const sanitizeCurrency = (val) => {
         if (!val) return "N/A";
@@ -47,8 +57,27 @@ export default function CollegeTabs({ college }) {
         { id: "overview", label: "Overview", icon: "🏢" },
         { id: "cutoffs", label: "Cutoffs", icon: "📊" },
         { id: "placements", label: "Placements", icon: "💼" },
-        { id: "roi", label: "ROI Analysis", icon: "💰" }
+        { id: "roi", label: "ROI Analysis", icon: "💰" },
+        { id: "reviews", label: "Reviews", icon: "⭐" }
     ];
+
+    const fetchReviews = async () => {
+        try {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/reviews/${college.id}`);
+            if (res.ok) {
+                const data = await res.json();
+                setReviewsData(data);
+            }
+        } catch (error) {
+            console.error("Failed to fetch reviews", error);
+        }
+    };
+
+    useEffect(() => {
+        if (activeTab === "reviews") {
+            fetchReviews();
+        }
+    }, [activeTab, college.id]);
 
     return (
         <div className="college-tabs-container">
@@ -205,7 +234,37 @@ export default function CollegeTabs({ college }) {
                     </div>
                 )}
 
+                {/* New Reviews Tab */}
+                {activeTab === "reviews" && (
+                    <div className="tab-pane fade-in">
+                        <div className="premium-tab-card">
+                            <div className="flex items-center justify-between mb-6">
+                                <div>
+                                    <h3 className="tab-heading mb-1">Student Reviews</h3>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-2xl font-bold text-slate-800">{reviewsData.avgRating}</span>
+                                        <div className="flex text-amber-400">
+                                            <span className="text-sm">★</span>
+                                        </div>
+                                        <span className="text-sm text-slate-500">({reviewsData.totalReviews} reviews)</span>
+                                    </div>
+                                </div>
+                                <Button onClick={() => setIsReviewModalOpen(true)}>Write a Review</Button>
+                            </div>
+
+                            <ReviewList reviews={reviewsData.reviews} />
+                        </div>
+                    </div>
+                )}
+
             </div>
+
+            <ReviewModal
+                isOpen={isReviewModalOpen}
+                onClose={() => setIsReviewModalOpen(false)}
+                collegeId={college.id}
+                onReviewSubmitted={fetchReviews}
+            />
         </div>
     );
 }

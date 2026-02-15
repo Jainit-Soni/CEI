@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './Button';
 import TrustBadge from './TrustBadge';
 import AddToChoiceButton from './AddToChoiceButton';
+import PredictionBadge from './PredictionBadge'; // New
 import './CollegeHero.css';
 
 export default function CollegeHero({ college }) {
@@ -20,10 +21,11 @@ export default function CollegeHero({ college }) {
 
             <div className="cinematic-content">
                 <div className="hero-container">
-                    <div className="hero-badge-row">
+                    <div className="hero-badge-row gap-3">
                         <Button href="/colleges" variant="ghost" size="sm" className="hero-back-btn">
                             ← Back
                         </Button>
+                        <PredictionBadge college={college} />
                         <TrustBadge
                             source={college.source}
                             lastUpdated={college.lastUpdated}

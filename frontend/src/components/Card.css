@@ -1,22 +1,97 @@
-﻿/* Base Card */
+﻿/* ============================================
+   CARD — Premium Living Surface
+   ============================================ */
 .card {
   background: white;
   border-radius: 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(226, 232, 240, 0.8);
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
-  border-color: #cbd5e1;
+/* Colored top accent bar */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #a78bfa);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Shimmer sweep on hover */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 60%);
+  transform: translateX(-100%);
+  transition: none;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.card:hover::after {
+  animation: cardShimmer 1.2s ease forwards;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    0 20px 40px -12px rgba(99, 102, 241, 0.15),
+    0 8px 16px -8px rgba(0, 0, 0, 0.08);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* --- Tier-specific accent colors --- */
+.card[data-tier="Tier 1"]::before {
+  background: linear-gradient(90deg, var(--tier-1), #818cf8);
+}
+
+.card[data-tier="Tier 1"]:hover {
+  border-color: var(--tier-1-border);
+  box-shadow:
+    0 20px 40px -12px rgba(99, 102, 241, 0.18),
+    0 8px 16px -8px rgba(0, 0, 0, 0.06);
+}
+
+.card[data-tier="Tier 2"]::before {
+  background: linear-gradient(90deg, var(--tier-2), #34d399);
+}
+
+.card[data-tier="Tier 2"]:hover {
+  border-color: var(--tier-2-border);
+  box-shadow:
+    0 20px 40px -12px rgba(16, 185, 129, 0.18),
+    0 8px 16px -8px rgba(0, 0, 0, 0.06);
+}
+
+.card[data-tier="Tier 3"]::before {
+  background: linear-gradient(90deg, var(--tier-3), #fbbf24);
+}
+
+.card[data-tier="Tier 3"]:hover {
+  border-color: var(--tier-3-border);
+  box-shadow:
+    0 20px 40px -12px rgba(245, 158, 11, 0.18),
+    0 8px 16px -8px rgba(0, 0, 0, 0.06);
+}
+
+/* ---- Card Top ---- */
 .card-top {
   padding: 20px 20px 12px 20px;
 }
@@ -41,6 +116,7 @@
   font-weight: 500;
 }
 
+/* ---- Tags — Color-Coded ---- */
 .card-tags {
   padding: 0 20px 12px 20px;
   display: flex;
@@ -49,20 +125,46 @@
 }
 
 .card-tags span {
-  background: #f1f5f9;
-  color: #475569;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 4px 8px;
+  font-size: 0.73rem;
+  font-weight: 650;
+  padding: 4px 10px;
   border-radius: 6px;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 
+/* Default tag style */
+.card-tags span {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* Tier-specific tag colors */
+.card[data-tier="Tier 1"] .card-tags span:first-child {
+  background: var(--tier-1-bg);
+  color: var(--tier-1);
+  border-color: var(--tier-1-border);
+}
+
+.card[data-tier="Tier 2"] .card-tags span:first-child {
+  background: var(--tier-2-bg);
+  color: var(--tier-2);
+  border-color: var(--tier-2-border);
+}
+
+.card[data-tier="Tier 3"] .card-tags span:first-child {
+  background: var(--tier-3-bg);
+  color: var(--tier-3);
+  border-color: var(--tier-3-border);
+}
+
+/* ---- Meta Row ---- */
 .card-meta {
   padding: 0 20px 20px 20px;
   border-top: 1px solid #f1f5f9;
-  background: #fcfcfc;
+  background: linear-gradient(to bottom, #fcfcfd, #f8fafc);
   display: flex;
   gap: 12px;
   margin-top: auto;
@@ -76,6 +178,7 @@
   font-weight: 500;
 }
 
+/* ---- Badge ---- */
 .card-badge {
   position: absolute;
   top: 16px;
@@ -90,7 +193,7 @@
   z-index: 10;
 }
 
-/* Card Footer - Minimalist Icons */
+/* ---- Card Footer ---- */
 .card-footer {
   display: flex;
   align-items: center;
@@ -119,7 +222,7 @@
   background: transparent !important;
   border: 1px solid transparent !important;
   color: #94a3b8 !important;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   padding: 0 !important;
   cursor: pointer;
 }
@@ -128,7 +231,7 @@
 .card-footer-left :global(.favorite-btn):hover {
   background: #fef2f2 !important;
   color: #ef4444 !important;
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .card-footer-left :global(.favorite-btn--active),
@@ -140,7 +243,7 @@
 .card-footer-left :global(.compare-btn):hover {
   background: #f1f5f9 !important;
   color: #0f172a !important;
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .card-footer-left :global(.compare-btn.active) {
@@ -148,10 +251,6 @@
   background: #334155 !important;
   border-color: #334155 !important;
 }
-
-/* Add to List Button (Right Side) - Styles moved to AddToChoiceButton.css */
-
-
 
 .add-list-btn.added:hover {
   background: #059669;

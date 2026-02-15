@@ -4,6 +4,7 @@ import { AuthProvider } from "@/lib/AuthContext";
 import { ToastProvider } from "./Toast";
 import { FavoritesProvider } from "@/lib/useFavorites";
 import { CompareProvider } from "@/lib/CompareContext";
+import { ScoreProvider } from "@/lib/ScoreContext";
 
 export default function ClientProviders({ children }) {
     return (
@@ -11,7 +12,9 @@ export default function ClientProviders({ children }) {
             <AuthProvider>
                 <FavoritesProvider>
                     <CompareProvider>
-                        {children}
+                        <ScoreProvider>
+                            {children}
+                        </ScoreProvider>
                     </CompareProvider>
                 </FavoritesProvider>
             </AuthProvider>

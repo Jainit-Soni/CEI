@@ -1,20 +1,22 @@
-﻿"use client";
-import "./Header.css";
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Button from "./Button";
 import AuthModal from "./AuthModal";
 import UserDropdown from "./UserDropdown";
+import ScoreInputModal from "./ScoreInputModal"; // New
 import { useAuth } from "@/lib/AuthContext";
-import { Heart, Menu, ArrowLeft } from "lucide-react";
+import { useScores } from "@/lib/ScoreContext"; // New
+import { Heart, Menu, ArrowLeft, Trophy } from "lucide-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showScoreModal, setShowScoreModal] = useState(false); // New
   const pathname = usePathname();
   const router = useRouter();
   const { user, loading } = useAuth();
+  const { scores, saveScores } = useScores(); // New
   const [choiceCount, setChoiceCount] = useState(0);
 
   const [scrolled, setScrolled] = useState(false);
@@ -68,6 +70,8 @@ export default function Header() {
     return pathname?.startsWith(href);
   };
 
+  const hasScores = Object.values(scores || {}).some(v => v > 0);
+
   return (
     <>
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
@@ -101,6 +105,19 @@ export default function Header() {
 
           {/* Actions */}
           <div className="header-actions">
+
+            {/* Score Trigger */}
+            <button
+              onClick={() => setShowScoreModal(true)}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${hasScores
+                  ? "bg-green-100 text-green-700 hover:bg-green-200"
+                  : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                }`}
+            >
+              <Trophy size={16} />
+              <span className="hidden sm:inline">{hasScores ? "Scores Active" : "Add Scores"}</span>
+            </button>
+
             {!loading && (
               user ? (
                 <div className="user-area">
@@ -151,11 +168,24 @@ export default function Header() {
             <Link href="/my-list" className={isActive("/my-list") ? "active" : ""} onClick={() => setOpen(false)}>
               My List {choiceCount > 0 && <span className="mobile-badge">({choiceCount})</span>}
             </Link>
+            <button
+              onClick={() => { setShowScoreModal(true); setOpen(false); }}
+              className="flex items-center gap-3 px-4 py-3 text-lg font-medium text-slate-600 hover:text-blue-600"
+            >
+              <Trophy size={20} />
+              {hasScores ? "Update Scores" : "Predict Chances"}
+            </button>
           </nav>
         </div>
       </header>
 
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+      <ScoreInputModal
+        isOpen={showScoreModal}
+        onClose={() => setShowScoreModal(false)}
+        currentScores={scores}
+        onSave={saveScores}
+      />
     </>
   );
 }

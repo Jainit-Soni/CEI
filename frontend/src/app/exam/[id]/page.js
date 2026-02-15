@@ -24,20 +24,45 @@ export async function generateMetadata({ params }) {
 export default async function ExamDetail({ params }) {
   const exam = await fetchExam(params.id);
 
+  /*
+    SEO DOMINANCE: Exam Events
+    - Event (Shows "Exam Date" in Google)
+    - EducationalOccupationalCredential
+  */
   const jsonLd = exam ? {
     "@context": "https://schema.org",
-    "@type": "Exam",
-    "name": exam.name,
-    "description": `Entrance exam for ${exam.type} courses.`,
-    "startDate": exam.examDate,
-    "location": {
-      "@type": "Place",
-      "name": "India"
-    },
-    "organizer": {
-      "@type": "Organization",
-      "name": exam.conductingBody || "Exam Authority"
-    }
+    "@graph": [
+      {
+        "@type": "Exam",
+        "name": exam.name,
+        "description": `Entrance exam for ${exam.type} courses.`,
+        "url": `https://frontend-blond-nu-51.vercel.app/exam/${params.id}`,
+        "provider": {
+          "@type": "Organization",
+          "name": exam.conductingBody || "Exam Authority"
+        }
+      },
+      {
+        "@type": "Event",
+        "name": `${exam.shortName || exam.name} Exam Date ${new Date().getFullYear()}`,
+        "startDate": exam.examDate || new Date().toISOString(),
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Pan India Centers",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+          }
+        },
+        "description": `Official exam date for ${exam.name}.`,
+        "organizer": {
+          "@type": "Organization",
+          "name": exam.conductingBody || "Exam Authority"
+        }
+      }
+    ]
   } : null;
 
   return (

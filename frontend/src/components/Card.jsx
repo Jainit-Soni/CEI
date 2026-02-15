@@ -2,12 +2,16 @@
 import AddToCompareButton from "./AddToCompareButton";
 import FavoriteButton from "./FavoriteButton";
 import AddToChoiceButton from "./AddToChoiceButton";
+import PredictionBadge from "./PredictionBadge"; // New
 import "./Card.css";
 
 export default function Card({ title, subtitle, tags = [], meta = [], type = "default", variant, href, trust, badge, data = {} }) {
   const resolvedType = variant || type;
   const metaList = Array.isArray(meta) ? meta : meta ? [meta] : [];
   const isExternal = href && (href.startsWith('http') || href.startsWith('//'));
+
+  // Detect tier from tags or data for CSS color-coding
+  const tierTag = tags.find(t => /tier\s*\d/i.test(t)) || data?.rankingTier || data?.ranking || "";
 
   // Common Props for buttons - Merge full data if provided
   const collegeData = {
@@ -20,8 +24,12 @@ export default function Card({ title, subtitle, tags = [], meta = [], type = "de
   };
 
   const card = (
-    <div className={`card card-${resolvedType}`}>
-      {badge && (
+    <div className={`card card-${resolvedType}`} data-tier={tierTag || undefined}>
+      {/* 1. AI Prediction Badge (Top Priority) */}
+      {resolvedType === "college" && <PredictionBadge college={collegeData} />}
+
+      {/* 2. Manual Badge (e.g. "Admissions Open") */}
+      {badge && !(<PredictionBadge college={collegeData} />) && (
         <div className="card-badge" style={{ backgroundColor: badge.color }}>
           {badge.text}
         </div>

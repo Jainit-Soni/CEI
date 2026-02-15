@@ -17,6 +17,8 @@ import { fetchColleges, fetchFilters, suggest, fetchStateStats } from "@/lib/api
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+
+// Performance: Heavy map loaded lazily
 const IndiaMap = dynamic(() => import("@/components/IndiaMap"), {
     ssr: false,
     loading: () => <div className="india-map-loading"><div className="loading-spinner"></div><p>Loading Intelligence Map...</p></div>

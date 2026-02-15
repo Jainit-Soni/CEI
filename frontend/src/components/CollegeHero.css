@@ -1,13 +1,27 @@
+/* ============================================
+   COLLEGE HERO — Cinematic Rich Gradient
+   ============================================ */
 .cinematic-hero {
     position: relative;
     width: 100%;
     padding: 120px 0 80px;
-    background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
-    /* Light Theme */
+    background: linear-gradient(135deg, #f0f0ff 0%, #e8e0f0 25%, #dde4f8 50%, #e0ecf8 75%, #f0f4ff 100%);
     overflow: hidden;
     color: #0f172a;
-    /* Dark Text */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: none;
+}
+
+/* Animated gradient mesh overlay */
+.cinematic-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.10) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .cinematic-bg {
@@ -19,37 +33,36 @@
 .cinematic-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(100px);
-    /* Softer blur */
-    opacity: 0.4;
+    filter: blur(80px);
+    opacity: 0.6;
 }
 
 .orb-1 {
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
-    /* Indigo tint */
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, transparent 70%);
     top: -200px;
     left: -200px;
+    animation: orbFloat1 15s ease-in-out infinite;
 }
 
 .orb-2 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
-    /* Pink tint */
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 70%);
     bottom: -100px;
     right: -100px;
+    animation: orbFloat2 18s ease-in-out infinite;
 }
 
 .cinematic-grid {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .cinematic-content {
@@ -62,7 +75,6 @@
     max-width: var(--container);
     margin: 0 auto;
     padding: 0 32px;
-    /* Increased padding */
     display: flex;
     flex-direction: column;
     gap: var(--space-6);
@@ -76,12 +88,11 @@
 
 .hero-back-btn {
     color: #64748b !important;
-    /* Darker back button */
 }
 
 .hero-back-btn:hover {
     color: #0f172a !important;
-    background: rgba(0, 0, 0, 0.05) !important;
+    background: rgba(99, 102, 241, 0.08) !important;
 }
 
 .hero-main {
@@ -96,7 +107,6 @@
     display: flex;
     align-items: center;
     gap: 32px;
-    /* More breathing room */
     flex: 1;
     min-width: 300px;
 }
@@ -104,13 +114,13 @@
 .hero-logo,
 .hero-logo-placeholder {
     width: 100px;
-    /* Larger logo */
     height: 100px;
     border-radius: 24px;
     object-fit: contain;
     background: white;
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
-    /* Soft shadow */
+    box-shadow:
+        0 20px 40px -10px rgba(99, 102, 241, 0.2),
+        0 0 0 1px rgba(99, 102, 241, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,7 +128,15 @@
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--color-accent);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    transition: box-shadow 0.4s ease;
+}
+
+.hero-logo:hover,
+.hero-logo-placeholder:hover {
+    box-shadow:
+        0 24px 48px -10px rgba(99, 102, 241, 0.3),
+        0 0 0 1px rgba(99, 102, 241, 0.2);
 }
 
 .hero-title {
@@ -129,15 +147,12 @@
     line-height: 1.1;
     letter-spacing: -0.02em;
     color: #0f172a;
-    /* Solid dark color for readability */
-    /* Remove gradient text for cleaner look on light bg */
 }
 
 .hero-subtitle {
     margin: 8px 0 0;
     font-size: 1.2rem;
     color: #475569;
-    /* Slate 600 */
     font-weight: 500;
 }
 
@@ -145,22 +160,20 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #0f172a;
-    /* Dark button */
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
     color: white;
     font-weight: 600;
     padding: 14px 28px;
     border-radius: var(--radius-pill);
     text-decoration: none;
     font-size: 1rem;
-    box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.3);
-    transition: all var(--transition-medium);
+    box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.4);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .official-link-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px -5px rgba(15, 23, 42, 0.4);
-    background: #1e293b;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 18px 40px -5px rgba(79, 70, 229, 0.5);
 }
 
 @media (max-width: 768px) {

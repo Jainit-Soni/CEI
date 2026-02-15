@@ -24,18 +24,18 @@ export default function ExamHero({ exam }) {
                         <div className="mission-identity">
                             <div className="mission-badge">
                                 <span className="status-dot pulse"></span>
-                                MISSION: {exam.shortName || "EXAM"}
+                                {exam.shortName || "EXAM DETAILS"}
                             </div>
                             <h1 className="mission-title">{exam.name}</h1>
                             <div className="mission-subtitle">
-                                <span className="label">OPERATOR:</span> {exam.conductingBody}
+                                <span className="label">CONDUCTED BY:</span> {exam.conductingBody}
                                 <span className="sep">|</span>
                                 <span className="label">MODE:</span> {exam.stats?.mode || "OFFLINE/ONLINE"}
                             </div>
 
                             <div className="mission-actions">
                                 <Button href={exam.officialUrl || "#"} variant="accent" className="mission-btn-primary">
-                                    INITIATE APPLICATION ↗
+                                    APPLY NOW ↗
                                 </Button>
                             </div>
                         </div>
