@@ -71,6 +71,7 @@ export default function TermsPage() {
                                 © {new Date().getFullYear()} College Essentials of India. All rights reserved.
                             </p>
                         </div>
+                    </GlassPanel>
                 </div>
             </Container>
             <style jsx>{`
