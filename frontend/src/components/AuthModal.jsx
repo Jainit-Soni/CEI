@@ -250,7 +250,7 @@ export default function AuthModal({ isOpen, onClose }) {
                             <span>or with email</span>
                         </div>
 
-                        <form onSubmit={handleEmailSubmit} className="auth-form-stack">
+                        <button type="submit" className="auth-btn-main-glass" disabled={isSubmitting || isSuccess || !agreedToTerms}>
                             {isSuccess ? "Success! 🎉" : isSubmitting ? "Loading..." : mode === "login" ? "Sign In" : "Create Account"}
                         </button>
                     </form>
