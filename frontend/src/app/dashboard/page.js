@@ -18,9 +18,14 @@ export default function DashboardPage() {
 
     useEffect(() => {
         const loadDashboardData = () => {
-            // Load Saved Colleges
+            // Load Saved Colleges (Cart)
             const storedCart = localStorage.getItem("choice-filling-cart");
             const colleges = storedCart ? JSON.parse(storedCart) : [];
+
+            // Load Scores
+            const storedScores = localStorage.getItem("user_exam_scores");
+            const scores = storedScores ? JSON.parse(storedScores) : {};
+            const scoreCount = Object.keys(scores).length;
 
             // Load Profile
             const storedProfile = localStorage.getItem("student-profile");
@@ -32,10 +37,24 @@ export default function DashboardPage() {
 
             setProfile(profileData);
 
-            setStats(prev => ({
-                ...prev,
-                savedColleges: colleges.length
-            }));
+            // Calculate Completion Code
+            let completionScore = 0;
+            if (profileData.name) completionScore += 20;
+            if (colleges.length > 0) completionScore += 30; // Cart usage
+            if (scoreCount > 0) completionScore += 30; // Scores entered
+            if (favorites?.colleges?.length > 0) completionScore += 20; // Favorites used
+
+            let statusLabel = "Novice";
+            if (completionScore > 30) statusLabel = "Explorer";
+            if (completionScore > 60) statusLabel = "Strategist";
+            if (completionScore > 90) statusLabel = "Master";
+
+            setStats({
+                savedColleges: colleges.length,
+                completion: completionScore || 15,
+                status: statusLabel,
+                scoreCount: scoreCount
+            });
         };
 
         loadDashboardData();
@@ -45,7 +64,7 @@ export default function DashboardPage() {
             window.removeEventListener("profile-update", loadDashboardData);
             window.removeEventListener("local-storage-update", loadDashboardData);
         };
-    }, []);
+    }, [favorites]);
 
     const firstName = profile?.name ? profile.name.split(" ")[0] : "Academic";
 
@@ -75,8 +94,8 @@ export default function DashboardPage() {
                         <div className="stat-card-modern">
                             <div className="stat-icon green"><ClipboardList /></div>
                             <div className="stat-info">
-                                <span className="stat-label">Strategy Status</span>
-                                <span className="stat-value">{stats.status}</span>
+                                <span className="stat-label">Exams Tracked</span>
+                                <span className="stat-value">{stats.scoreCount || 0} Exams</span>
                             </div>
                         </div>
                         <div className="stat-card-modern">

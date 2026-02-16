@@ -111,6 +111,13 @@
     min-width: 300px;
 }
 
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
 .hero-logo,
 .hero-logo-placeholder {
     width: 100px;

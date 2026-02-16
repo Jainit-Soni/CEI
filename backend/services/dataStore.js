@@ -196,7 +196,7 @@ function preComputeGlobalData() {
 
     // Tier
     const tr = c.rankingTier || c.ranking;
-    if (tr) tiersSet.add(tr);
+    if (tr && tr !== "Tier 1.5" && tr !== "Tier 2.5") tiersSet.add(tr);
 
     // Courses
     if (Array.isArray(c.courses)) {

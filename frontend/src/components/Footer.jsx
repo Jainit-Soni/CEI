@@ -42,16 +42,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Newsletter/Waitlist */}
+          {/* Column 4: Stay Updated */}
           <div className="footer-col newsletter-col">
             <h3 className="footer-heading">Stay Updated</h3>
-            <p className="newsletter-text">Get the latest on cutoffs and deadlines.</p>
-            <div className="footer-input-group">
-              <input type="email" placeholder="Your email address" className="footer-input" />
-              <button className="footer-btn" aria-label="Subscribe">
-                <ArrowRight size={18} />
-              </button>
-            </div>
+            <p className="newsletter-text">Detailed cutoffs and exam schedules are updated in real-time.</p>
             <div className="system-status">
               <span className="status-dot"></span>
               System Operational

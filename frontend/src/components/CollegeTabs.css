@@ -285,6 +285,41 @@ h3.tab-heading {
     border: 2px dashed #e2e8f0;
 }
 
+
+/* Reviews Header */
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.review-stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rating-badge {
+    background: #f59e0b;
+    color: white;
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.review-count {
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
 @media (max-width: 768px) {
     .premium-tab-card {
         padding: 24px;
@@ -295,11 +330,22 @@ h3.tab-heading {
         border-radius: 0;
     }
 
+    .tabs-nav {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 4px;
+    }
+
     .detail-meta-blocks {
         grid-template-columns: 1fr 1fr;
     }
 
     .placement-grid-premium {
         grid-template-columns: 1fr;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

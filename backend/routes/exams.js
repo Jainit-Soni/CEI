@@ -51,26 +51,25 @@ router.get("/exams", async (req, res) => {
   }
 
   const normalizedExams = exams.map((exam) => {
+    // Source 1: JSON collegesAccepting (static subset)
     const rawList = exam.collegesAccepting || exam.acceptedColleges || [];
-    const resolved = rawList
+    const fromJson = rawList
       .map((item) => collegeIdToName.get(item) || item)
       .filter(Boolean);
 
-    let acceptedCount = resolved.length;
-    let acceptedCollegesResolved = resolved;
+    // Source 2: Live DB — colleges whose acceptedExams includes this exam
+    const examKeys = [
+      exam.id, exam.shortName, exam.name
+    ].filter(Boolean).map(k => k.toLowerCase().trim());
 
-    if (acceptedCount === 0) {
-      const examKey = (exam.id || exam.shortName || exam.name || "").toLowerCase();
-      const matches = colleges.filter((college) =>
-        (college.acceptedExams || []).some(
-          (e) => e.toLowerCase() === examKey
-        )
-      );
-      acceptedCollegesResolved = matches.map(
-        (college) => college.shortName || college.name
-      );
-      acceptedCount = acceptedCollegesResolved.length;
-    }
+    const fromDb = colleges.filter((college) =>
+      (college.acceptedExams || []).some(
+        (e) => examKeys.includes(e.toLowerCase().trim())
+      )
+    ).map((college) => college.shortName || college.name);
+
+    // Merge & deduplicate
+    const merged = [...new Set([...fromJson, ...fromDb])];
 
     const syllabus = exam.syllabus && exam.syllabus.length > 0
       ? exam.syllabus
@@ -79,8 +78,8 @@ router.get("/exams", async (req, res) => {
     return {
       ...exam,
       syllabus,
-      acceptedCount,
-      acceptedCollegesResolved,
+      acceptedCount: merged.length,
+      acceptedCollegesResolved: merged,
     };
   });
 
@@ -98,26 +97,27 @@ router.get("/exam/:id", async (req, res) => {
   const exam = exams.find((e) => e.id === req.params.id);
   if (!exam) return res.status(404).json({ error: "Exam not found" });
 
+  // Source 1: JSON collegesAccepting
   const rawList = exam.collegesAccepting || exam.acceptedColleges || [];
-  const resolved = rawList
+  const fromJson = rawList
     .map((item) => collegeIdToName.get(item) || item)
     .filter(Boolean);
 
-  let acceptedCount = resolved.length;
-  let acceptedCollegesResolved = resolved;
+  // Source 2: Live DB
+  const examKeys = [
+    exam.id, exam.shortName, exam.name
+  ].filter(Boolean).map(k => k.toLowerCase().trim());
 
-  if (acceptedCount === 0) {
-    const examKey = (exam.id || exam.shortName || exam.name || "").toLowerCase();
-    const matches = colleges.filter((college) =>
-      (college.acceptedExams || []).some(
-        (e) => e.toLowerCase() === examKey
-      )
-    );
-    acceptedCollegesResolved = matches.map(
-      (college) => college.shortName || college.name
-    );
-    acceptedCount = acceptedCollegesResolved.length;
-  }
+  const fromDb = colleges.filter((college) =>
+    (college.acceptedExams || []).some(
+      (e) => examKeys.includes(e.toLowerCase().trim())
+    )
+  ).map((college) => college.shortName || college.name);
+
+  // Merge & deduplicate
+  const merged = [...new Set([...fromJson, ...fromDb])];
+  const acceptedCount = merged.length;
+  const acceptedCollegesResolved = merged;
 
   const syllabus = exam.syllabus && exam.syllabus.length > 0
     ? exam.syllabus

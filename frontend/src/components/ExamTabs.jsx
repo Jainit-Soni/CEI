@@ -160,19 +160,26 @@ export default function ExamTabs({ exam }) {
                     <div className="tab-pane fade-in">
                         <div className="mission-grid-2">
                             <div className="mission-card">
-                                <h3 className="card-header">Execution Pattern</h3>
-                                <ul className="custom-list">
-                                    {(exam.pattern || []).map((p, i) => <li key={i}>{p}</li>)}
-                                </ul>
+                                <h3 className="card-header">Exam Pattern</h3>
+                                {exam.pattern && exam.pattern.length > 0 ? (
+                                    <ul className="custom-list">
+                                        {exam.pattern.map((p, i) => <li key={i}>{p}</li>)}
+                                    </ul>
+                                ) : (
+                                    <p className="no-data">Pattern details not available yet.</p>
+                                )}
                             </div>
-                            <div className="mission-card">
-                                <h3 className="card-header">Required Intel (Syllabus)</h3>
-                                <div className="syllabus-tags">
-                                    {(exam.syllabus || ["Physics", "Chemistry", "Maths/Bio", "Aptitude"]).map(s => (
-                                        <span key={s} className="mission-chip">{s}</span>
-                                    ))}
+                            {/* Only show syllabus card if syllabus is genuinely different from pattern */}
+                            {exam.syllabus && exam.syllabus.length > 0 && JSON.stringify(exam.syllabus) !== JSON.stringify(exam.pattern) && (
+                                <div className="mission-card">
+                                    <h3 className="card-header">Syllabus Sections</h3>
+                                    <div className="syllabus-tags">
+                                        {exam.syllabus.map(s => (
+                                            <span key={s} className="mission-chip">{s}</span>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                     </div>
                 )}
@@ -181,14 +188,43 @@ export default function ExamTabs({ exam }) {
                 {activeTab === 'prep' && (
                     <div className="tab-pane fade-in">
                         <div className="mission-grid-2">
-                            <div className="mission-card">
-                                <h3 className="card-header">Training Protocols</h3>
-                                <ul className="check-list">
-                                    {(exam.prepResources || [{ title: "Solve Previous Year Papers" }, { title: "Focus on NCERT" }]).map((r, i) => (
-                                        <li key={i}><strong>{r.type ? r.type + ": " : ""}</strong>{r.title}</li>
-                                    ))}
-                                </ul>
-                            </div>
+                            {exam.prepResources && exam.prepResources.length > 0 ? (
+                                <div className="mission-card">
+                                    <h3 className="card-header">Preparation Resources</h3>
+                                    <ul className="check-list">
+                                        {exam.prepResources.map((r, i) => (
+                                            <li key={i}><strong>{r.type ? r.type + ": " : ""}</strong>{r.title}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ) : (
+                                <div className="mission-card">
+                                    <h3 className="card-header">Preparation Resources</h3>
+                                    <p className="no-data">Exam-specific preparation resources are being curated. Check back soon.</p>
+                                </div>
+                            )}
+                            {exam.pastPapers && exam.pastPapers.length > 0 && (
+                                <div className="mission-card">
+                                    <h3 className="card-header">Past Papers & Resources</h3>
+                                    <ul className="check-list">
+                                        {exam.pastPapers.map((p, i) => (
+                                            <li key={i}>
+                                                <a href={p.url} target="_blank" rel="noopener noreferrer" className="mini-college-card" style={{ display: 'inline-block', textDecoration: 'none' }}>
+                                                    {p.label} ↗
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+                            {exam.officialUrl && (
+                                <div className="mission-card">
+                                    <h3 className="card-header">Official Resources</h3>
+                                    <a href={exam.officialUrl} target="_blank" rel="noopener noreferrer" className="mini-college-card" style={{ display: 'inline-block', textDecoration: 'none' }}>
+                                        Visit Official Website ↗
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     </div>
                 )}

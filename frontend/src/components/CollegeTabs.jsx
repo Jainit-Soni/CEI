@@ -238,15 +238,12 @@ export default function CollegeTabs({ college }) {
                 {activeTab === "reviews" && (
                     <div className="tab-pane fade-in">
                         <div className="premium-tab-card">
-                            <div className="flex items-center justify-between mb-6">
+                            <div className="review-header">
                                 <div>
                                     <h3 className="tab-heading mb-1">Student Reviews</h3>
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-2xl font-bold text-slate-800">{reviewsData.avgRating}</span>
-                                        <div className="flex text-amber-400">
-                                            <span className="text-sm">★</span>
-                                        </div>
-                                        <span className="text-sm text-slate-500">({reviewsData.totalReviews} reviews)</span>
+                                    <div className="review-stats">
+                                        <span className="rating-badge">{reviewsData.avgRating} ★</span>
+                                        <span className="review-count">({reviewsData.totalReviews} reviews)</span>
                                     </div>
                                 </div>
                                 <Button onClick={() => setIsReviewModalOpen(true)}>Write a Review</Button>
