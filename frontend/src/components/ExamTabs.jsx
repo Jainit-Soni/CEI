@@ -192,9 +192,12 @@ export default function ExamTabs({ exam }) {
                                 <div className="mission-card">
                                     <h3 className="card-header">Preparation Resources</h3>
                                     <ul className="check-list">
-                                        {exam.prepResources.map((r, i) => (
+                                        {exam.prepResources.slice(0, 5).map((r, i) => (
                                             <li key={i}><strong>{r.type ? r.type + ": " : ""}</strong>{r.title}</li>
                                         ))}
+                                        {exam.prepResources.length > 5 && (
+                                            <li className="more-items">+{exam.prepResources.length - 5} more resources availabe in full guide</li>
+                                        )}
                                     </ul>
                                 </div>
                             ) : (

@@ -60,21 +60,7 @@ export default function CompareClient() {
     const displayList = fullColleges.length > 0 ? fullColleges : compareList;
 
     const getHighlightClass = (type, value, allValues) => {
-        if (!value) return "";
-        const numVal = parseFloat(value.toString().replace(/[^0-9.]/g, ''));
-        if (isNaN(numVal)) return "";
-
-        const validNums = allValues.map(v => parseFloat(v?.toString().replace(/[^0-9.]/g, ''))).filter(n => !isNaN(n));
-        if (validNums.length < 2) return "";
-
-        if (type === 'fees' || type === 'rank') {
-            const min = Math.min(...validNums);
-            return numVal === min ? "winner-cell" : "";
-        }
-        if (type === 'salary') {
-            const max = Math.max(...validNums);
-            return numVal === max ? "winner-cell" : "";
-        }
+        // User requested removing "green recommended" highlights
         return "";
     };
 
@@ -97,7 +83,9 @@ export default function CompareClient() {
                         <h1>Compare Colleges</h1>
                         {isLoading && <span className="loading-tag">Updating data...</span>}
                     </div>
-                    <Button href="/colleges" variant="secondary" size="sm">Add More +</Button>
+                    {displayList.length < 3 && (
+                        <Button href="/colleges" variant="secondary" size="sm">Add More +</Button>
+                    )}
                 </div>
 
                 <div className="compare-table-wrapper">

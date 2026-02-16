@@ -43,7 +43,7 @@ const getPopularityScore = (college) => {
     return examsCount + (tierScore * 2);
 };
 
-const SORT_OPTIONS = ["Most Popular", "Relevance", "Name A-Z", "Name Z-A", "Top Tier", "Most Exams"];
+const SORT_OPTIONS = ["Highest Placement", "Most Popular", "Top Tier", "Name A-Z", "Name Z-A", "Most Exams"];
 
 function CollegesContent({ initialData }) {
     const searchParams = useSearchParams();
@@ -59,7 +59,7 @@ function CollegesContent({ initialData }) {
     const [isLoading, setIsLoading] = useState(!initialData?.data?.length);
     const [error, setError] = useState(null);
     const [query, setQuery] = useState("");
-    const [sortBy, setSortBy] = useState("Most Popular");
+    const [sortBy, setSortBy] = useState("Highest Placement");
     const [filters, setFilters] = useState({
         state: "All",
         district: "All",
@@ -83,7 +83,7 @@ function CollegesContent({ initialData }) {
         const district = searchParams.get("district") || "All";
         const course = searchParams.get("course") || "All";
         const tier = searchParams.get("tier") || "All";
-        const sort = searchParams.get("sortBy") || "Most Popular";
+        const sort = searchParams.get("sortBy") || "Highest Placement";
         const p = parseInt(searchParams.get("page")) || 1;
 
         setQuery(q);
@@ -111,7 +111,7 @@ function CollegesContent({ initialData }) {
         if (filters.district !== "All") params.set("district", filters.district);
         if (filters.course !== "All") params.set("course", filters.course);
         if (filters.tier !== "All") params.set("tier", filters.tier);
-        if (sortBy !== "Most Popular") params.set("sortBy", sortBy);
+        if (sortBy !== "Highest Placement") params.set("sortBy", sortBy);
         if (page > 1) params.set("page", page.toString());
 
         router.replace(`?${params.toString()}`, { scroll: false });
@@ -168,6 +168,9 @@ function CollegesContent({ initialData }) {
                     params.order = "desc";
                 } else if (sortBy === "Most Popular") {
                     params.sortBy = "popularity";
+                    params.order = "desc";
+                } else if (sortBy === "Highest Placement") {
+                    params.sortBy = "placement";
                     params.order = "desc";
                 }
 

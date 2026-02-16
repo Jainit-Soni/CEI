@@ -141,7 +141,8 @@ export default function Header() {
             <div className="mobile-header">
               <span className="brand-logo">CEI</span>
               <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close Menu">
-                <X size={24} />
+                <ArrowLeft size={18} />
+                <span>Close</span>
               </button>
             </div>
 
@@ -158,14 +159,18 @@ export default function Header() {
               <hr className="mobile-divider" />
 
               <button onClick={() => setShowScoreModal(true)} className="mobile-link">
-                <Trophy size={18} />
+                <Trophy size={20} />
                 {hasScores ? "Update Scores" : "Predict Chances"}
               </button>
 
-              {user && (
+              {user ? (
                 <Link href="/dashboard" className="mobile-link highlight">
                   Dashboard
                 </Link>
+              ) : (
+                <button onClick={() => setShowAuthModal(true)} className="mobile-link highlight">
+                  Login / Signup
+                </button>
               )}
             </nav>
           </div>

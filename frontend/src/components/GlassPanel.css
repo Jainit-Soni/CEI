@@ -169,3 +169,18 @@ a.glass-panel:active,
 button.glass-panel:active {
   transform: translateY(0);
 }
+
+/* Mobile Performance Optimization */
+@media (max-width: 600px) {
+  .glass-panel {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.95);
+    /* More opaque */
+  }
+
+  /* Disable shimmer on mobile for performance */
+  .glass-panel-shimmer {
+    display: none;
+  }
+}

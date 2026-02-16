@@ -114,20 +114,20 @@ export default function DashboardPage() {
 
                         {/* Quick Actions */}
                         <div className="quick-actions-grid">
-                            <Link href="/my-list" className="qa-card blue-gradient">
-                                <div className="qa-icon"><ClipboardList size={24} /></div>
-                                <div className="qa-text">
-                                    <h3>Priority Roadmap</h3>
-                                    <p>Manage your strategic college list & PDF report</p>
-                                </div>
-                                <div className="qa-arrow">&rarr;</div>
-                            </Link>
-
                             <Link href="/colleges" className="qa-card purple-gradient">
                                 <div className="qa-icon"><Search size={24} /></div>
                                 <div className="qa-text">
                                     <h3>College Finder</h3>
                                     <p>Browse 100+ verified Tier 1 & 2 institutes</p>
+                                </div>
+                                <div className="qa-arrow">&rarr;</div>
+                            </Link>
+
+                            <Link href="/compare" className="qa-card blue-gradient">
+                                <div className="qa-icon"><ClipboardList size={24} /></div>
+                                <div className="qa-text">
+                                    <h3>Compare Tool</h3>
+                                    <p>Side-by-side analysis of top colleges</p>
                                 </div>
                                 <div className="qa-arrow">&rarr;</div>
                             </Link>

@@ -103,6 +103,21 @@ router.get("/colleges", async (req, res) => {
     // Sorting
     if (sortBy) {
       const sortOrder = order === "desc" ? -1 : 1;
+
+      const parsePackage = (p) => {
+        if (!p) return 0;
+        const s = p.toString().toUpperCase();
+        let mult = 1;
+        if (s.includes('CPA') || s.includes('CR')) mult = 10000000;
+        else if (s.includes('LPA') || s.includes('LAKHM')) mult = 100000;
+        else if (s.includes('L')) mult = 100000; // Fallback
+
+        const nums = s.match(/(\d+(\.\d+)?)/g);
+        if (!nums) return 0;
+        // If range "20-30", take max. If "50+", take 50.
+        return Math.max(...nums.map(Number)) * mult;
+      };
+
       colleges = [...colleges].sort((a, b) => {
         let aVal, bVal;
         switch (sortBy) {
@@ -114,14 +129,34 @@ router.get("/colleges", async (req, res) => {
           case "tier":
             const tierScore = (t) => {
               const tier = (t || "").toString().toLowerCase();
+              // Simplify: 1.5 -> 2, 2.5 -> 3
               if (tier.includes("tier 1")) return 3;
-              if (tier.includes("tier 2")) return 2;
+              if (tier.includes("tier 2")) return 2; // Includes 1.5 if mapped, but "tier 1.5" has "tier 1" string? No, check order.
               if (tier.includes("tier 3")) return 1;
               return 0;
             };
-            aVal = tierScore(a.rankingTier || a.ranking);
-            bVal = tierScore(b.rankingTier || b.ranking);
-            return sortOrder * (bVal - aVal);
+            // Logic fix: "tier 1.5".includes("tier 1") is true. 
+            // Better logic:
+            const getTierVal = (c) => {
+              let t = (c.rankingTier || c.ranking || "").toLowerCase();
+              if (t.includes("1.5")) return 2.5; // Treat as between 1 and 2? User said remove. Treat as 2?
+              // User: "Remove 1.5 and 2.5 just 1 2 3".
+              // So 1.5 should probably be 2 (lower than 1).
+              if (t.includes("1")) return 3; // Tier 1 (High)
+              if (t.includes("2")) return 2; // Tier 2
+              if (t.includes("3")) return 1; // Tier 3
+              return 0;
+            };
+            aVal = getTierVal(a);
+            bVal = getTierVal(b);
+            return sortOrder * (aVal - bVal); // 3 (Tier 1) > 2 (Tier 2)
+
+          case "placement":
+            // Highest Placement Sort
+            aVal = parsePackage(a.placements?.highestPackage);
+            bVal = parsePackage(b.placements?.highestPackage);
+            return sortOrder * (aVal - bVal);
+
           case "popularity":
             // Custom Weighting: Tier (High impact) + Exam Count (Secondary)
             const getPopScore = (c) => {

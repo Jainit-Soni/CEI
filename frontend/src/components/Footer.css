@@ -229,6 +229,23 @@
   text-decoration: none;
 }
 
+.footer-legal-link.terms-link {
+  color: #f59e0b;
+  /* Premium Gold */
+  font-weight: 600;
+  background: none;
+  /* Override gradient */
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
+.footer-legal-link.terms-link:hover {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+  opacity: 1;
+  /* Ensure full opacity on hover */
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .footer-grid {
