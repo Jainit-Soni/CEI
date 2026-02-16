@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Container from "@/components/Container";
-import { User, Settings, GraduationCap, ClipboardList, TrendingUp, Bell, Heart, ExternalLink } from "lucide-react";
+import { User, Settings, GraduationCap, ClipboardList, TrendingUp, Bell, Heart, ExternalLink, Search } from "lucide-react";
 import { useFavorites } from "@/lib/useFavorites";
 import "./dashboard.css";
 
