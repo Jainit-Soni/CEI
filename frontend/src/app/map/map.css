@@ -2,7 +2,7 @@
 .constellation-page {
     min-height: 100vh;
     padding: 80px 0 40px;
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+    background: transparent;
     color: #1e293b;
     position: relative;
     z-index: 1;

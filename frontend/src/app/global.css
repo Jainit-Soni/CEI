@@ -106,7 +106,7 @@ body {
   margin: 0;
   color: var(--color-ink);
   font-family: var(--font-body), system-ui, -apple-system, sans-serif;
-  background: var(--color-bg);
+  background: transparent;
   min-height: 100vh;
   scroll-behavior: smooth;
   overflow-x: hidden;

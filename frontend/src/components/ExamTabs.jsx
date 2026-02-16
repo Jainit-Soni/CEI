@@ -199,11 +199,11 @@ export default function ExamTabs({ exam }) {
                         <div className="mission-card">
                             <h3 className="card-header">Target Institutes (Accepting {exam.shortName})</h3>
                             {isLoadingColleges ? (
-                                <div className="p-4 text-center text-gray-500">Loading affiliated institutes...</div>
+                                <div className="loading-colleges">Loading affiliated institutes...</div>
                             ) : (
                                 <div className="colleges-grid-mini">
                                     {targetColleges.length > 0 ? targetColleges.map(c => (
-                                        <a href={`/college/${c.id}`} key={c.id} className="mini-college-card hover:bg-blue-50 transition-colors block text-center no-underline text-current">
+                                        <a href={`/college/${c.id}`} key={c.id} className="mini-college-card">
                                             {c.shortName || c.name}
                                         </a>
                                     )) : (

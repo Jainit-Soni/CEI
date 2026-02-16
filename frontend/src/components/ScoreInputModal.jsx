@@ -1,30 +1,52 @@
-
 "use client";
 
 import { useState } from "react";
-import GlassPanel from "./GlassPanel";
-import Button from "./Button";
 import { X, Trophy, Save } from "lucide-react";
+import "./ScoreInputModal.css";
 
 export default function ScoreInputModal({ isOpen, onClose, currentScores, onSave }) {
-    // Local state for the form
     const [scores, setScores] = useState(currentScores || {});
+    const [selectedExams, setSelectedExams] = useState(() => {
+        // Pre-select exams that already have scores
+        const initial = new Set();
+        if (currentScores) {
+            Object.keys(currentScores).forEach(k => {
+                if (currentScores[k] > 0) initial.add(k);
+            });
+        }
+        return initial;
+    });
 
     if (!isOpen) return null;
 
-    const exams = ["CAT", "CMAT", "XAT", "MAT", "GMAT", "NMAT"];
+    const availableExams = [
+        { id: "CAT", name: "CAT", desc: "IIMs & top B-schools" },
+        { id: "CMAT", name: "CMAT", desc: "AICTE approved colleges" },
+        { id: "XAT", name: "XAT", desc: "XLRI & associate institutes" },
+        { id: "MAT", name: "MAT", desc: "AIMA affiliated colleges" },
+        { id: "GMAT", name: "GMAT", desc: "Global MBA programs" },
+        { id: "NMAT", name: "NMAT", desc: "NMIMS & partner colleges" },
+    ];
+
+    const toggleExam = (examId) => {
+        setSelectedExams(prev => {
+            const next = new Set(prev);
+            if (next.has(examId)) {
+                next.delete(examId);
+                setScores(s => { const copy = { ...s }; delete copy[examId]; return copy; });
+            } else {
+                next.add(examId);
+            }
+            return next;
+        });
+    };
 
     const handleChange = (exam, value) => {
-        // validate percentile 0-100
         let val = parseFloat(value);
         if (isNaN(val)) val = "";
         if (val > 100) val = 100;
         if (val < 0) val = 0;
-
-        setScores(prev => ({
-            ...prev,
-            [exam]: val
-        }));
+        setScores(prev => ({ ...prev, [exam]: val }));
     };
 
     const handleSave = () => {
@@ -33,65 +55,73 @@ export default function ScoreInputModal({ isOpen, onClose, currentScores, onSave
     };
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+        <div className="score-modal-overlay" onClick={onClose}>
+            <div className="score-modal" onClick={(e) => e.stopPropagation()}>
 
-            <div className="relative w-full max-w-md animate-in fade-in zoom-in duration-200">
-                <GlassPanel variant="strong" className="p-6">
-                    <div className="flex items-center justify-between mb-6">
-                        <div className="flex items-center gap-3">
-                            <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
-                                <Trophy size={24} />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-slate-800">Your Exam Scores</h3>
-                                <p className="text-sm text-slate-500">Unlock admission predictions</p>
-                            </div>
-                        </div>
-                        <button onClick={onClose} className="p-2 hover:bg-slate-100 rounded-full transition-colors">
-                            <X size={20} className="text-slate-400" />
-                        </button>
+                {/* Header */}
+                <div className="score-modal-header">
+                    <div className="score-modal-icon">
+                        <Trophy size={22} />
                     </div>
+                    <div>
+                        <h3 className="score-modal-title">Your Exam Scores</h3>
+                        <p className="score-modal-desc">Select exams you took, then enter percentiles</p>
+                    </div>
+                    <button className="score-modal-close" onClick={onClose}>
+                        <X size={18} />
+                    </button>
+                </div>
 
-                    <div className="space-y-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
-                        {exams.map(exam => (
-                            <div key={exam} className="flex items-center gap-4">
-                                <div className="w-16 font-mono font-bold text-slate-700 bg-slate-50 py-2 text-center rounded">
-                                    {exam}
-                                </div>
-                                <div className="flex-1 relative">
+                {/* Step 1: Exam Selection */}
+                <div className="score-exam-grid">
+                    {availableExams.map(exam => (
+                        <button
+                            key={exam.id}
+                            className={`score-exam-chip ${selectedExams.has(exam.id) ? "selected" : ""}`}
+                            onClick={() => toggleExam(exam.id)}
+                        >
+                            <span className="chip-name">{exam.name}</span>
+                            <span className="chip-desc">{exam.desc}</span>
+                        </button>
+                    ))}
+                </div>
+
+                {/* Step 2: Score Inputs (only selected exams) */}
+                {selectedExams.size > 0 && (
+                    <div className="score-inputs">
+                        {[...selectedExams].map(examId => (
+                            <div key={examId} className="score-input-row">
+                                <label className="score-input-label">{examId}</label>
+                                <div className="score-input-wrapper">
                                     <input
                                         type="number"
-                                        placeholder="Percentile (0-100)"
-                                        className="w-full px-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all font-mono"
-                                        value={scores[exam] || ""}
-                                        onChange={(e) => handleChange(exam, e.target.value)}
+                                        placeholder="Percentile"
+                                        className="score-input-field"
+                                        value={scores[examId] || ""}
+                                        onChange={(e) => handleChange(examId, e.target.value)}
                                         max="100"
                                         min="0"
                                         step="0.1"
                                     />
-                                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">
-                                        %ile
-                                    </span>
+                                    <span className="score-input-suffix">%ile</span>
                                 </div>
                             </div>
                         ))}
                     </div>
+                )}
 
-                    <div className="mt-8 flex gap-3">
-                        <Button variant="ghost" className="flex-1" onClick={onClose}>
-                            Cancel
-                        </Button>
-                        <Button className="flex-1 gap-2" onClick={handleSave}>
-                            <Save size={18} />
-                            Save Scores
-                        </Button>
-                    </div>
+                {/* Actions */}
+                <div className="score-modal-actions">
+                    <button className="score-btn-cancel" onClick={onClose}>Cancel</button>
+                    <button className="score-btn-save" onClick={handleSave}>
+                        <Save size={16} />
+                        Save Scores
+                    </button>
+                </div>
 
-                    <p className="mt-4 text-xs text-center text-slate-400">
-                        *Scores are stored locally and effectively used to predict SAFE, TARGET, or DREAM colleges.
-                    </p>
-                </GlassPanel>
+                <p className="score-modal-note">
+                    *Scores are stored locally and used to predict SAFE, TARGET, or DREAM colleges.
+                </p>
             </div>
         </div>
     );
