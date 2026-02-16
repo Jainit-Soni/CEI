@@ -15,13 +15,22 @@ export default function TermsPage() {
                         Last Updated: February 2026
                     </p>
 
-                    <GlassPanel className="terms-content" style={{ padding: "2.5rem" }}>
+                    <GlassPanel className="terms-content" style={{ padding: "1.5rem" }}>
                         <section style={{ marginBottom: "2rem" }}>
                             <h2 style={{ fontSize: "1.5rem", fontWeight: "700", marginBottom: "1rem", color: "#334155" }}>1. Introduction</h2>
                             <p style={{ lineHeight: "1.7", color: "#475569" }}>
                                 Welcome to College Explorer India (CEI). By accessing our website and using our services, you agree to comply with and be bound by the following terms and conditions. If you do not agree to these terms, you should not use this platform.
                             </p>
                         </section>
+
+                        <div className="liability-alert" style={{ background: "#fff1f2", borderLeft: "4px solid #f43f5e", padding: "1.5rem", borderRadius: "8px", marginBottom: "2rem" }}>
+                            <h2 style={{ fontSize: "1.25rem", fontWeight: "700", marginBottom: "0.5rem", color: "#be123c", display: "flex", alignItems: "center", gap: "8px" }}>
+                                ⚠️ NO LIABILITY CLAUSE
+                            </h2>
+                            <p style={{ lineHeight: "1.6", color: "#881337", fontWeight: "500" }}>
+                                CEI aggregates data from various sources (official websites, NIRF, student reports) to provide a unified view. <strong>We strictly claim NO LIABILITY for the accuracy, completeness, or timeliness of this data.</strong> Admission policies, fee structures, and placement statistics change frequently. Users MUST verify all details directly with the official institute websites before making any financial or academic decisions. CEI is an information facilitator, not an admission authority.
+                            </p>
+                        </div>
 
                         <section style={{ marginBottom: "2rem" }}>
                             <h2 style={{ fontSize: "1.5rem", fontWeight: "700", marginBottom: "1rem", color: "#334155" }}>2. Accuracy of Data</h2>
@@ -60,6 +69,16 @@ export default function TermsPage() {
                     </GlassPanel>
                 </div>
             </Container>
+            <style jsx>{`
+                @media (max-width: 768px) {
+                    .terms-content {
+                        padding: 1.5rem !important;
+                    }
+                    .liability-alert {
+                        padding: 1rem !important;
+                    }
+                }
+            `}</style>
         </div>
     );
 }

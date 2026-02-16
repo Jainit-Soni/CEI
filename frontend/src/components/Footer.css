@@ -230,14 +230,16 @@
 }
 
 .footer-legal-link.terms-link {
-  color: #f59e0b;
-  /* Premium Gold */
-  font-weight: 600;
+  color: #f8fafc;
+  /* Premium White/Off-White */
+  font-weight: 500;
   background: none;
   /* Override gradient */
   -webkit-background-clip: unset;
   background-clip: unset;
   -webkit-text-fill-color: unset;
+  opacity: 0.8;
+  transition: opacity 0.2s;
 }
 
 .footer-legal-link.terms-link:hover {

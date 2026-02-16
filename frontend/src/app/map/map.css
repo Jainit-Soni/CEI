@@ -45,12 +45,16 @@
 
 .spotlight-scroll {
     display: flex;
+    flex-wrap: nowrap;
     gap: 14px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 12px;
+    padding-right: 20px;
+    /* Ensure last item is visible */
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    width: 100%;
 }
 
 .spotlight-scroll::-webkit-scrollbar {

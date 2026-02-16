@@ -191,15 +191,23 @@ export default function ApplicationBoard() {
     };
 
     const handleShare = async () => {
-        if (!items || items.length === 0) return;
+        if (!items || items.length === 0) {
+            alert("Your list is empty. Add some colleges first!");
+            return;
+        }
         setIsSharing(true);
         try {
+            console.log("Generating share link...");
             const { shareId } = await shareUserChoices(items, user?.displayName || "Anonymous Student");
-            const url = `${window.location.origin}/share/${shareId}`;
-            setShareUrl(url);
+            if (shareId) {
+                const url = `${window.location.origin}/share/${shareId}`;
+                setShareUrl(url);
+            } else {
+                throw new Error("No share ID returned");
+            }
         } catch (err) {
             console.error("Sharing failed", err);
-            alert("Failed to generate share link. Please try again.");
+            alert("Failed to generate share link. Please try again or check your connection.");
         } finally {
             setIsSharing(false);
         }

@@ -167,6 +167,10 @@ export default function AuthModal({ isOpen, onClose }) {
     };
 
     const handleGoogleSignIn = async () => {
+        if (!agreedToTerms) {
+            setLocalError("Please agree to the Terms & Conditions to continue.");
+            return;
+        }
         setIsSubmitting(true);
         setLocalError("");
         try {

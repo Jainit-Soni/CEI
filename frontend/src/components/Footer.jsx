@@ -46,11 +46,8 @@ export default function Footer() {
             <h3 className="footer-heading">Status</h3>
             <div className="system-status">
               <span className="status-dot"></span>
-              <span>All Systems Operational</span>
+              <span>Online</span>
             </div>
-            <p className="newsletter-text" style={{ marginTop: '12px' }}>
-              Data updated in real-time.
-            </p>
           </div>
         </div>
 

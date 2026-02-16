@@ -272,3 +272,21 @@
         margin-bottom: 2px;
     }
 }
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background: #eef2ff;
+    color: #4f46e5;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
