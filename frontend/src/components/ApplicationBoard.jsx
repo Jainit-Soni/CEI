@@ -9,7 +9,6 @@ import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { useAuth } from "@/lib/AuthContext";
 import { fetchUserChoices, saveUserChoices, shareUserChoices } from "@/lib/api";
 import AuthModal from "./AuthModal";
-import Button from "./Button";
 import "../app/dashboard/dashboard.css";
 
 export default function ApplicationBoard() {
@@ -325,42 +324,6 @@ export default function ApplicationBoard() {
                                                         >
                                                             <Trash2 size={16} /> Remove
                                                         </button>
-                                                    </div>
-                                                    {/* Share Roadmap Button */}
-                                                    <div className="share-section" style={{ marginTop: '16px' }}>
-                                                        <Button
-                                                            variant="outline"
-                                                            className="w-full flex items-center justify-center gap-2"
-                                                            onClick={handleShare}
-                                                            disabled={isSharing}
-                                                        >
-                                                            {isSharing ? <Loader2 className="animate-spin" size={16} /> : <Share2 size={16} />}
-                                                            {isSharing ? "Generating Link..." : "Share Roadmap"}
-                                                        </Button>
-
-                                                        {/* Inline Share Link Display */}
-                                                        {shareUrl && (
-                                                            <div className="share-link-box fade-in" style={{ marginTop: '12px', background: '#f8fafc', padding: '12px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                                                                <p style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '8px' }}>Anyone with this link can view your list:</p>
-                                                                <div className="flex gap-2">
-                                                                    <input
-                                                                        type="text"
-                                                                        readOnly
-                                                                        value={shareUrl}
-                                                                        style={{ flex: 1, padding: '8px', borderRadius: '6px', border: '1px solid #cbd5e1', fontSize: '0.9rem', color: '#334155' }}
-                                                                    />
-                                                                    <Button
-                                                                        size="sm"
-                                                                        onClick={() => {
-                                                                            navigator.clipboard.writeText(shareUrl);
-                                                                            alert("Link copied!");
-                                                                        }}
-                                                                    >
-                                                                        Copy
-                                                                    </Button>
-                                                                </div>
-                                                            </div>
-                                                        )}
                                                     </div>
                                                 </div>
                                             </div>
