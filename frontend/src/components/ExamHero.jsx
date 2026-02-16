@@ -43,24 +43,32 @@ export default function ExamHero({ exam }) {
                         {/* RIGHT: Intel Grid */}
                         <div className="mission-intel">
                             <div className="intel-row">
-                                <div className="intel-box">
-                                    <span className="intel-label">APPLICANTS</span>
-                                    <span className="intel-value mono">{exam.stats?.applicants || "N/A"}</span>
-                                </div>
-                                <div className="intel-box">
-                                    <span className="intel-label">FEE INTEL</span>
-                                    <span className="intel-value mono">{exam.stats?.fee || "N/A"}</span>
-                                </div>
+                                {(exam.stats?.applicants && exam.stats.applicants !== "N/A") && (
+                                    <div className="intel-box">
+                                        <span className="intel-label">APPLICANTS</span>
+                                        <span className="intel-value mono">{exam.stats.applicants}</span>
+                                    </div>
+                                )}
+                                {(exam.stats?.fee && exam.stats.fee !== "N/A") && (
+                                    <div className="intel-box">
+                                        <span className="intel-label">FEE INTEL</span>
+                                        <span className="intel-value mono">{exam.stats.fee}</span>
+                                    </div>
+                                )}
                             </div>
                             <div className="intel-row">
-                                <div className="intel-box">
-                                    <span className="intel-label">TIME LIMIT</span>
-                                    <span className="intel-value mono">{exam.stats?.duration || "N/A"}</span>
-                                </div>
-                                <div className="intel-box highlight">
-                                    <span className="intel-label">MAX SCORE</span>
-                                    <span className="intel-value mono">{exam.totalMarks ? exam.totalMarks.split(' ')[0] : "N/A"}</span>
-                                </div>
+                                {(exam.stats?.duration && exam.stats.duration !== "N/A") && (
+                                    <div className="intel-box">
+                                        <span className="intel-label">TIME LIMIT</span>
+                                        <span className="intel-value mono">{exam.stats.duration}</span>
+                                    </div>
+                                )}
+                                {exam.totalMarks && (
+                                    <div className="intel-box highlight">
+                                        <span className="intel-label">MAX SCORE</span>
+                                        <span className="intel-value mono">{exam.totalMarks.split(' ')[0]}</span>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

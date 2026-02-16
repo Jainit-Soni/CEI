@@ -19,9 +19,11 @@
 }
 
 .compare-btn.active {
-    background: var(--color-accent-blue);
-    border-color: var(--color-accent-blue);
-    color: white;
+    background: #2563eb !important;
+    /* Force blue */
+    border-color: #2563eb !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .compare-btn svg {

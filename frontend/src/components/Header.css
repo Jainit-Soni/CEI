@@ -59,21 +59,25 @@
 
 .brand-logo {
   font-family: var(--font-display, sans-serif);
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.85rem;
+  /* Increased from 1.5rem */
+  font-weight: 900;
   color: #0f172a;
   text-decoration: none;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
 }
 
+/* --- CENTER: Navigation Pill --- */
 /* --- CENTER: Navigation Pill --- */
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   background: rgba(0, 0, 0, 0.04);
-  padding: 4px;
+  padding: 5px;
   border-radius: 999px;
+  height: 48px;
+  /* Fixed height for alignment */
 }
 
 .site-header.scrolled .header-nav {
@@ -81,16 +85,21 @@
 }
 
 .nav-item {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  /* Increased from 0.85rem */
   font-weight: 500;
   color: #475569;
   text-decoration: none;
-  padding: 6px 14px;
+  padding: 0 18px;
+  height: 100%;
+  /* Fill height */
   border-radius: 999px;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  /* Centered text */
+  gap: 8px;
   white-space: nowrap;
 }
 
@@ -102,7 +111,7 @@
 .nav-item.active {
   background: #fff;
   color: #0f172a;
-  font-weight: 600;
+  font-weight: 700;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 

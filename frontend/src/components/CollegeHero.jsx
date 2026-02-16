@@ -21,7 +21,7 @@ export default function CollegeHero({ college }) {
 
             <div className="cinematic-content">
                 <div className="hero-container">
-                    <div className="hero-badge-row gap-3">
+                    <div className="hero-badge-row gap-4 mb-3">
                         <Button href="/colleges" variant="ghost" size="sm" className="hero-back-btn">
                             ← Back
                         </Button>
@@ -50,7 +50,7 @@ export default function CollegeHero({ college }) {
                             </div>
                         </div>
 
-                        <div className="hero-actions">
+                        <div className="hero-actions gap-4">
                             <AddToChoiceButton college={college} />
 
                             {college.officialUrl && (
@@ -58,7 +58,7 @@ export default function CollegeHero({ college }) {
                                     href={college.officialUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="official-link-btn"
+                                    className="official-link-btn ml-3"
                                 >
                                     Visit Official Website
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

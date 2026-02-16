@@ -71,119 +71,152 @@ export default function DashboardPage() {
     return (
         <div className="dashboard-page">
             <Container>
-                <div className="dashboard-header-modern">
-                    <div className="welcome-section">
+                {/* 1. Welcome Header */}
+                <div className="dashboard-header-v2">
+                    <div className="welcome-text">
                         <h1>Expert Dashboard</h1>
                         <p>Welcome back, <span className="text-highlight">{firstName}!</span> Your {stats.status} strategy is active.</p>
                     </div>
-                    <div className="header-actions">
-                        <div className="status-badge-premium">{stats.status}</div>
+                    <div className="header-status">
+                        <div className="status-badge-v2">{stats.status}</div>
                     </div>
                 </div>
 
-                <div className="dashboard-grid">
-                    {/* Top Tier Metrics */}
-                    <div className="stats-row">
-                        <div className="stat-card-modern">
-                            <div className="stat-icon blue"><GraduationCap /></div>
-                            <div className="stat-info">
-                                <span className="stat-label">Discovery List</span>
-                                <span className="stat-value">{stats.savedColleges} Colleges</span>
-                            </div>
-                        </div>
-                        <div className="stat-card-modern">
-                            <div className="stat-icon green"><ClipboardList /></div>
-                            <div className="stat-info">
-                                <span className="stat-label">Exams Tracked</span>
-                                <span className="stat-value">{stats.scoreCount || 0} Exams</span>
-                            </div>
-                        </div>
-                        <div className="stat-card-modern">
-                            <div className="stat-icon purple"><TrendingUp /></div>
-                            <div className="stat-info">
-                                <span className="stat-label">Admission readiness</span>
-                                <span className="stat-value">{stats.completion}%</span>
-                            </div>
+                {/* 2. Key Metrics Row */}
+                <div className="stats-row-v2">
+                    <div className="stat-card-v2 blue">
+                        <div className="stat-icon-wrapper"><GraduationCap /></div>
+                        <div className="stat-content">
+                            <span className="sc-value">{stats.savedColleges}</span>
+                            <span className="sc-label">Discovery List</span>
                         </div>
                     </div>
+                    <div className="stat-card-v2 green">
+                        <div className="stat-icon-wrapper"><ClipboardList /></div>
+                        <div className="stat-content">
+                            <span className="sc-value">{stats.scoreCount || 0}</span>
+                            <span className="sc-label">Exams Tracked</span>
+                        </div>
+                    </div>
+                    <div className="stat-card-v2 purple">
+                        <div className="stat-icon-wrapper"><TrendingUp /></div>
+                        <div className="stat-content">
+                            <span className="sc-value">{stats.completion}%</span>
+                            <span className="sc-label">Readiness Score</span>
+                        </div>
+                    </div>
+                </div>
 
-                    {/* Content Hub */}
-                    <div className="dashboard-main-area">
-                        <div className="action-cards">
-                            <div className="intelligence-group">
-                                <Link href="/my-list" className="action-card-link">
-                                    <div className="action-card gradient-blue">
-                                        <h3>Strategic Selection 🎯</h3>
-                                        <p>Rank your preferred institutions and generate your final PDF report.</p>
-                                        <span className="action-btn">Manage Priority List &rarr;</span>
-                                    </div>
-                                </Link>
+                {/* 3. Main Dashboard Grid */}
+                <div className="dashboard-grid-v2">
+                    {/* LEFT COLUMN: Actions & Favorites */}
+                    <div className="main-col">
 
-                                <Link href="/colleges" className="action-card-link">
-                                    <div className="action-card gradient-purple">
-                                        <h3>Institutional Discovery 🏢</h3>
-                                        <p>AI-driven matching against 100+ verified Tier 1 & 2 universities.</p>
-                                        <span className="action-btn">Find More Matches &rarr;</span>
-                                    </div>
-                                </Link>
-                            </div>
-
-                            {/* Favorites Hub */}
-                            <div className="favorites-hub-card">
-                                <div className="card-header-premium">
-                                    <Heart size={20} color="#ef4444" fill="#ef4444" />
-                                    <h3>My Favorites</h3>
+                        {/* Quick Actions */}
+                        <div className="quick-actions-grid">
+                            <Link href="/my-list" className="qa-card blue-gradient">
+                                <div className="qa-icon"><ClipboardList size={24} /></div>
+                                <div className="qa-text">
+                                    <h3>Priority Roadmap</h3>
+                                    <p>Manage your strategic college list & PDF report</p>
                                 </div>
+                                <div className="qa-arrow">&rarr;</div>
+                            </Link>
 
-                                {favorites.colleges.length === 0 && favorites.exams.length === 0 ? (
-                                    <div className="empty-fav-state">
-                                        <p>No favorites yet. Explore colleges to add some!</p>
-                                        <Link href="/colleges" className="text-link">Browse Catalog &rarr;</Link>
-                                    </div>
-                                ) : (
-                                    <div className="favorites-grid-mini">
-                                        {favorites.colleges.slice(0, 4).map(c => (
-                                            <Link key={c.id} href={`/college/${c.id}`} className="fav-item-row">
-                                                <div className="fav-info">
-                                                    <span className="fav-name">{c.name}</span>
-                                                    <span className="fav-meta">{c.location?.split(',')[0]}</span>
-                                                </div>
-                                                <ExternalLink size={14} className="fav-arrow" />
-                                            </Link>
-                                        ))}
-                                        {favorites.colleges.length > 4 && (
-                                            <p className="more-fav-link">+{favorites.colleges.length - 4} more colleges...</p>
-                                        )}
-                                    </div>
-                                )}
-                            </div>
+                            <Link href="/colleges" className="qa-card purple-gradient">
+                                <div className="qa-icon"><Search size={24} /></div>
+                                <div className="qa-text">
+                                    <h3>College Finder</h3>
+                                    <p>Browse 100+ verified Tier 1 & 2 institutes</p>
+                                </div>
+                                <div className="qa-arrow">&rarr;</div>
+                            </Link>
                         </div>
 
-                        {/* Readiness Orb */}
-                        <div className="profile-summary-card">
-                            <div className="card-header">
-                                <User size={20} />
-                                <h3>Strategy Strength</h3>
+                        {/* Full Favorites Grid */}
+                        <div className="section-header">
+                            <h2>My Saved Colleges</h2>
+                            <span className="badge-count">{favorites.colleges.length}</span>
+                        </div>
+
+                        {favorites.colleges.length === 0 ? (
+                            <div className="empty-favorites-v2">
+                                <div className="empty-icon-circle">❤️</div>
+                                <h3>No favorites yet</h3>
+                                <p>Start exploring colleges to build your personal shortlist.</p>
+                                <Link href="/colleges" className="btn-explore">Browse Catalog</Link>
                             </div>
-                            <div className="profile-content">
-                                <div className="profile-orbit">
-                                    <div className="orbit-text">{stats.completion}%</div>
-                                    <svg viewBox="0 0 36 36" className="circular-chart">
+                        ) : (
+                            <div className="favorites-grid-v2">
+                                {favorites.colleges.map((college) => (
+                                    <Link key={college.id} href={`/college/${college.id}`} className="fav-card-v2">
+                                        <div className="fav-card-header">
+                                            <div className="fav-card-icon">{college.name.charAt(0)}</div>
+                                            <div className="fav-card-tier">Tier {college.rankingTier || "1"}</div>
+                                        </div>
+                                        <div className="fav-card-body">
+                                            <h3>{college.name}</h3>
+                                            <p className="fav-location">{college.location?.split(',')[0]}</p>
+                                        </div>
+                                        <div className="fav-card-footer">
+                                            <span>View Details</span>
+                                            <ExternalLink size={14} />
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* RIGHT COLUMN: Sidebar (Profile & Updates) */}
+                    <div className="sidebar-col">
+                        {/* Profile Strength Card */}
+                        <div className="sidebar-card">
+                            <div className="sidebar-header">
+                                <User size={18} />
+                                <h3>Profile Strength</h3>
+                            </div>
+                            <div className="profile-chart-container">
+                                <div className="chart-circle">
+                                    <svg viewBox="0 0 36 36" className="circular-chart-v2">
                                         <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                                         <path
-                                            className="circle"
+                                            className="circle-v2"
                                             strokeDasharray={`${stats.completion}, 100`}
                                             d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                                         />
                                     </svg>
+                                    <div className="chart-text">
+                                        <span className="percent">{stats.completion}%</span>
+                                    </div>
                                 </div>
-                                <div className="profile-details">
-                                    <p className="strategy-level">Level: <strong>{stats.status}</strong></p>
-                                    <p className="text-muted">
-                                        Your profile is active and tracking institutional discovery in real-time.
-                                    </p>
+                                <div className="profile-steps">
+                                    <div className={`step-item ${profile?.name ? 'done' : ''}`}>
+                                        <div className="step-dot"></div>
+                                        <span>Personal Details</span>
+                                    </div>
+                                    <div className={`step-item ${stats.scoreCount > 0 ? 'done' : ''}`}>
+                                        <div className="step-dot"></div>
+                                        <span>Exam Scores</span>
+                                    </div>
+                                    <div className={`step-item ${favorites.colleges.length > 0 ? 'done' : ''}`}>
+                                        <div className="step-dot"></div>
+                                        <span>First Favorite</span>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+
+                        {/* Recent Activity / Tip */}
+                        <div className="sidebar-card tip-card">
+                            <div className="sidebar-header">
+                                <Bell size={18} />
+                                <h3>Pro Tip</h3>
+                            </div>
+                            <p className="tip-text">
+                                Did you know? Comparing colleges side-by-side helps you spot subtle differences in ROI and placement stats.
+                            </p>
+                            <Link href="/compare" className="tip-link">Go to Compare Tool &rarr;</Link>
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,13 @@
 .compare-page {
     padding-top: 120px;
     padding-bottom: var(--space-10);
-    background: #f9fafb;
+    /* Bands/Gradient Background */
+    background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #f8fafc 40%, #ffffff 100%);
     min-height: 80vh;
+}
+
+.compare-mobile-view {
+    display: none;
 }
 
 .compare-header {

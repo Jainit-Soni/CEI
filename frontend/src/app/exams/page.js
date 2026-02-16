@@ -69,17 +69,15 @@ export default function ExamsPage() {
   }, [exams, query, filters]);
 
   const sortedExams = useMemo(() => {
-    const score = (exam) => {
-      const accepted =
-        exam.acceptedCount ??
-        (exam.acceptedColleges || exam.collegesAccepting || []).length;
-      const sections = (exam.syllabus || exam.pattern || []).length;
-      return accepted * 5 + sections;
-    };
-
+    // Default Sort: Popularity (Accepted Count)
     return [...filteredExams].sort((a, b) => {
-      const diff = score(b) - score(a);
-      if (diff !== 0) return diff;
+      const countA = a.acceptedCount ?? (a.acceptedColleges || a.collegesAccepting || []).length;
+      const countB = b.acceptedCount ?? (b.acceptedColleges || b.collegesAccepting || []).length;
+
+      // If counts differ, sort by count descending
+      if (countB !== countA) return countB - countA;
+
+      // Fallback to name
       return (a.name || "").localeCompare(b.name || "");
     });
   }, [filteredExams]);

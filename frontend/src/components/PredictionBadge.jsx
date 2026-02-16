@@ -37,7 +37,7 @@ export default function PredictionBadge({ college }) {
     const style = config[prediction.status] || config["Dream ✨"];
 
     return (
-        <div className={`score-badge flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-bold shadow-sm ${style.bg} ${style.text} ${style.border}`}>
+        <div className={`score-badge flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold shadow-sm ${style.bg} ${style.text} ${style.border} mt-2 mb-1`}>
             {style.icon}
             <span>{prediction.status.split(" ")[0]}</span>
             <span className="text-[10px] opacity-75 font-medium ml-0.5">

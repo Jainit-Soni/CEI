@@ -507,6 +507,34 @@ export default function ApplicationBoard() {
                 .action-btn-mini:hover { background: #e2e8f0; }
                 .action-btn-mini.remove:hover { background: #fef2f2; color: #ef4444; }
 
+                /* Responsive Board Header */
+                @media (max-width: 768px) {
+                    .board-header {
+                        flex-direction: column;
+                        gap: 20px;
+                        padding: 20px;
+                        text-align: center;
+                    }
+
+                    .board-info {
+                        width: 100%;
+                    }
+
+                    .board-actions {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 1fr; /* Stack buttons vertically */
+                        gap: 12px;
+                    }
+
+                    .btn-download-report, 
+                    .btn-share-roadmap, 
+                    .btn-clear-list {
+                        justify-content: center;
+                        width: 100%;
+                    }
+                }
+
                 @media (max-width: 768px) {
                     .college-row-card {
                         flex-direction: column;

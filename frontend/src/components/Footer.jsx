@@ -7,62 +7,64 @@ export default function Footer() {
     <footer className="footer-premium">
       <div className="footer-container">
         <div className="footer-grid">
-          {/* Column 1: Brand & Kicker */}
+          {/* Brand Column */}
           <div className="footer-col brand-col">
             <h2 className="footer-logo-text">CEI</h2>
             <p className="footer-tagline">
               The intelligence layer for your academic future. Verified data, zero noise.
             </p>
             <div className="footer-social-links">
-              <a href="#" className="social-icon" aria-label="Twitter"><Twitter size={18} /></a>
-              <a href="#" className="social-icon" aria-label="LinkedIn"><Linkedin size={18} /></a>
-              <a href="#" className="social-icon" aria-label="Instagram"><Instagram size={18} /></a>
+              <a href="#" className="social-icon" aria-label="Twitter"><Twitter size={20} /></a>
+              <a href="#" className="social-icon" aria-label="LinkedIn"><Linkedin size={20} /></a>
+              <a href="#" className="social-icon" aria-label="Instagram"><Instagram size={20} /></a>
             </div>
           </div>
 
-          {/* Column 2: Explore */}
-          <div className="footer-col">
-            <h3 className="footer-heading">Explore</h3>
+          {/* Links Column */}
+          <div className="footer-col links-col">
+            <h3 className="footer-heading">Platform</h3>
             <ul className="footer-links">
               <li><Link href="/colleges">Colleges</Link></li>
-              <li><Link href="/exams">Entrance Exams</Link></li>
-              <li><Link href="/map">Interactive Map</Link></li>
-              <li><Link href="/roi-calculator">ROI Simulator</Link></li>
+              <li><Link href="/exams">Exams</Link></li>
+              <li><Link href="/compare">Compare</Link></li>
+              <li><Link href="/roi-calculator">ROI Tool</Link></li>
             </ul>
           </div>
 
-          {/* Column 3: Tools */}
-          <div className="footer-col">
-            <h3 className="footer-heading">Student Tools</h3>
+          {/* Tools Column */}
+          <div className="footer-col tools-col">
+            <h3 className="footer-heading">Account</h3>
             <ul className="footer-links">
-              <li><Link href="/my-list">Strategic Priority List</Link></li>
-              <li><Link href="/dashboard">Analytics Dashboard</Link></li>
-              <li><Link href="/compare">College Matcher</Link></li>
+              <li><Link href="/dashboard">Dashboard</Link></li>
+              <li><Link href="/my-list">My Priority List</Link></li>
               <li><Link href="/guide">Admission Guide</Link></li>
             </ul>
           </div>
 
-          {/* Column 4: Stay Updated */}
-          <div className="footer-col newsletter-col">
-            <h3 className="footer-heading">Stay Updated</h3>
-            <p className="newsletter-text">Detailed cutoffs and exam schedules are updated in real-time.</p>
+          {/* Status Column */}
+          <div className="footer-col status-col">
+            <h3 className="footer-heading">Status</h3>
             <div className="system-status">
               <span className="status-dot"></span>
-              System Operational
+              <span>All Systems Operational</span>
             </div>
+            <p className="newsletter-text" style={{ marginTop: '12px' }}>
+              Data updated in real-time.
+            </p>
           </div>
         </div>
 
         <div className="footer-bottom-bar">
           <div className="footer-copyright">
-            © {new Date().getFullYear()} CEI Intelligence. All rights reserved.
+            © {new Date().getFullYear()} CEI Intelligence.
           </div>
+
           <div className="footer-love">
-            Made with <Heart size={14} className="heart-icon" /> for the future of Indian students.
+            Made with <Heart size={14} className="heart-icon" fill="#ef4444" /> in India.
           </div>
+
           <div className="footer-legal-links">
-            <Link href="/privacy">Privacy</Link>
-            <Link href="/terms">Terms</Link>
+            <Link href="/terms-and-conditions">Terms & Conditions</Link>
           </div>
         </div>
       </div>
