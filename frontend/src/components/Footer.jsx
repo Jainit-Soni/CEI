@@ -3,6 +3,7 @@ import "./Footer.css";
 import { Twitter, Linkedin, Instagram, ArrowRight, Heart, Mail } from "lucide-react";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="footer-premium">
       <div className="footer-container">
