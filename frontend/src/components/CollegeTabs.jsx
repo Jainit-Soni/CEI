@@ -5,7 +5,7 @@ import Link from "next/link";
 import GlassPanel from "./GlassPanel";
 import dynamic from "next/dynamic";
 import ReviewList from "./ReviewList";
-import ReviewSection from "./ReviewSection";
+
 import PremiumReviews from "./PremiumReviews"; // New Premium Reviews
 import "./CollegeTabs.css";
 
