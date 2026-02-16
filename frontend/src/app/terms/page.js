@@ -46,27 +46,31 @@ export default function TermsPage() {
                             </p>
                         </section>
 
-                        <section style={{ marginBottom: "2rem" }}>
-                            <h2 style={{ fontSize: "1.5rem", fontWeight: "700", marginBottom: "1rem", color: "#334155" }}>4. Intellectual Property</h2>
-                            <p style={{ lineHeight: "1.7", color: "#475569" }}>
-                                All content on this platform, including text, graphics, logos, and software, is the property of CEI or its content suppliers and is protected by international copyright laws. Unauthorized reproduction or redistribution of this content is strictly prohibited.
-                            </p>
-                        </section>
-
-                        <section style={{ marginBottom: "2rem" }}>
-                            <h2 style={{ fontSize: "1.5rem", fontWeight: "700", marginBottom: "1rem", color: "#334155" }}>5. Limitation of Liability</h2>
-                            <p style={{ lineHeight: "1.7", color: "#475569" }}>
-                                CEI shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use our services. This includes, but is not limited to, damages for loss of data, profits, or goodwill.
+                        <section>
+                            <h2 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                                <span className="w-1 h-6 bg-blue-600 rounded-full"></span>
+                                3. User Conduct
+                            </h2>
+                            <p className="text-slate-600 leading-relaxed">
+                                You agree to use the site only for lawful purposes. You are prohibited from posting on or transmitting through the site any material that differs from our community standards, including but not limited to unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, sexually explicit, profane, hateful, racially, ethnically, or otherwise objectionable material of any kind.
                             </p>
                         </section>
 
                         <section>
-                            <h2 style={{ fontSize: "1.5rem", fontWeight: "700", marginBottom: "1rem", color: "#334155" }}>6. Contact Us</h2>
-                            <p style={{ lineHeight: "1.7", color: "#475569" }}>
-                                If you have any questions regarding these terms, please contact us at <a href="mailto:support@cei.edu.in" style={{ color: "#2563eb", textDecoration: "underline" }}>support@cei.edu.in</a>.
+                            <h2 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                                <span className="w-1 h-6 bg-blue-600 rounded-full"></span>
+                                4. Intellectual Property
+                            </h2>
+                            <p className="text-slate-600 leading-relaxed">
+                                All content included on this site, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software, is the property of the site owner or its content suppliers and protected by international copyright laws.
                             </p>
                         </section>
-                    </GlassPanel>
+
+                        <div className="pt-8 border-t border-slate-200 mt-8">
+                            <p className="text-sm text-slate-400 text-center">
+                                © {new Date().getFullYear()} College Essentials of India. All rights reserved.
+                            </p>
+                        </div>
                 </div>
             </Container>
             <style jsx>{`

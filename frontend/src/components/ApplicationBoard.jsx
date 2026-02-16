@@ -325,6 +325,42 @@ export default function ApplicationBoard() {
                                                             <Trash2 size={16} /> Remove
                                                         </button>
                                                     </div>
+                                                    {/* Share Roadmap Button */}
+                                                    <div className="share-section" style={{ marginTop: '16px' }}>
+                                                        <Button
+                                                            variant="outline"
+                                                            className="w-full flex items-center justify-center gap-2"
+                                                            onClick={handleShare}
+                                                            disabled={isSharing}
+                                                        >
+                                                            {isSharing ? <Loader2 className="animate-spin" size={16} /> : <Share2 size={16} />}
+                                                            {isSharing ? "Generating Link..." : "Share Roadmap"}
+                                                        </Button>
+
+                                                        {/* Inline Share Link Display */}
+                                                        {shareUrl && (
+                                                            <div className="share-link-box fade-in" style={{ marginTop: '12px', background: '#f8fafc', padding: '12px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                                                                <p style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '8px' }}>Anyone with this link can view your list:</p>
+                                                                <div className="flex gap-2">
+                                                                    <input
+                                                                        type="text"
+                                                                        readOnly
+                                                                        value={shareUrl}
+                                                                        style={{ flex: 1, padding: '8px', borderRadius: '6px', border: '1px solid #cbd5e1', fontSize: '0.9rem', color: '#334155' }}
+                                                                    />
+                                                                    <Button
+                                                                        size="sm"
+                                                                        onClick={() => {
+                                                                            navigator.clipboard.writeText(shareUrl);
+                                                                            alert("Link copied!");
+                                                                        }}
+                                                                    >
+                                                                        Copy
+                                                                    </Button>
+                                                                </div>
+                                                            </div>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
                                         )}
@@ -436,6 +472,8 @@ export default function ApplicationBoard() {
                 }
                 .college-row-card.dragging { box-shadow: var(--shadow-lg); border-color: #2563eb; }
 
+                
+                /* Large Drag Handle */
                 .drag-handle {
                     width: 60px;
                     background: #f8fafc;
@@ -446,12 +484,26 @@ export default function ApplicationBoard() {
                     color: #94a3b8;
                     cursor: grab;
                     border-right: 1px solid #f1f5f9;
+                    transition: background 0.2s;
                 }
+                .drag-handle:hover { background: #f1f5f9; color: #64748b; }
                 .rank-num { font-weight: 800; color: #1e3a8a; font-size: 1.1rem; margin-top: 4px; }
 
-                .college-main-modern {
-                    flex: 1;
-                    padding: 24px;
+                /* Mobile Optimizations */
+                @media (max-width: 768px) {
+                    .drag-handle {
+                        width: 100%;
+                        height: 48px; /* Taller touch target */
+                        flex-direction: row;
+                        border-right: none;
+                        border-bottom: 1px solid #f1f5f9;
+                        gap: 12px;
+                        background: #f8fafc;
+                    }
+                    .drag-handle:active { background: #e2e8f0; cursor: grabbing; }
+                    
+                    /* Prevent text selection while dragging */
+                    .college-row-card { user-select: none; -webkit-user-select: none; }
                 }
 
                 .report-header {

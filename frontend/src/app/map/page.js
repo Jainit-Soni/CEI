@@ -289,7 +289,51 @@ export default function MapPage() {
                             </div>
 
                             {/* Info Panel - Fixed position, no cutoff issues */}
-                            {activeData && (
+                            {/* Mobile Swipeable Cards Overlay */}
+                            {selectedState && isMobile && (
+                                <div className="mobile-swipe-overlay">
+                                    <div className="mobile-swipe-header">
+                                        <h3>{selectedState}</h3>
+                                        <button className="close-swipe-btn" onClick={() => setSelectedState(null)}>
+                                            Close
+                                        </button>
+                                    </div>
+
+                                    <div className="mobile-cards-container">
+                                        {colleges
+                                            .filter(c => c.state === selectedState)
+                                            .map(college => (
+                                                <div key={college.id} className="mobile-college-card">
+                                                    <div className="mcc-header">
+                                                        <h4>{college.shortName || college.name}</h4>
+                                                        <span className="mcc-tier">Tier {college.rankingTier || 1}</span>
+                                                    </div>
+                                                    <div className="mcc-stats">
+                                                        <div>
+                                                            <span>Avg Pkg</span>
+                                                            <strong>{college.placements?.averagePackage || "N/A"}</strong>
+                                                        </div>
+                                                        <div>
+                                                            <span>Fees</span>
+                                                            <strong>{college.tuition || "N/A"}</strong>
+                                                        </div>
+                                                    </div>
+                                                    <Button href={`/college/${college.id}`} className="w-full mt-3" size="sm">
+                                                        View Details
+                                                    </Button>
+                                                </div>
+                                            ))}
+                                        {colleges.filter(c => c.state === selectedState).length === 0 && (
+                                            <div className="mobile-empty-state">
+                                                No colleges listed for {selectedState} yet.
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Desktop List Panel */}
+                            {!isMobile && activeData && (
                                 <div
                                     key={activeData.name}
                                     className="info-panel info-panel-slide-in"

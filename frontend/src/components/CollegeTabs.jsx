@@ -5,8 +5,8 @@ import Link from "next/link";
 import GlassPanel from "./GlassPanel";
 import dynamic from "next/dynamic";
 import ReviewList from "./ReviewList";
-import ReviewModal from "./ReviewModal";
-import Button from "./Button";
+import ReviewSection from "./ReviewSection";
+import PremiumReviews from "./PremiumReviews"; // New Premium Reviews
 import "./CollegeTabs.css";
 
 const ROICalculator = dynamic(() => import("./ROICalculator"), {

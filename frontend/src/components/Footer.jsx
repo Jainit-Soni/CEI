@@ -51,20 +51,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-bottom-bar">
-          <div className="footer-copyright">
-            © {new Date().getFullYear()} CEI Intelligence.
-          </div>
-
-          <div className="footer-love">
-            Made with <Heart size={14} className="heart-icon" fill="#ef4444" /> in India.
-          </div>
-
+        {/* Bottom Bar */}
+        <div className="footer-bottom">
+          <p className="copyright">
+            &copy; {currentYear} College Essentials of India. All rights reserved.
+          </p>
           <div className="footer-legal-links">
-            <Link href="/terms-and-conditions">Terms & Conditions</Link>
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms & Conditions</Link>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+```

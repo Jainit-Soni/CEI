@@ -50,8 +50,8 @@ export default function Card({ title, subtitle, tags = [], meta = [], type = "de
       )}
       {metaList.length > 0 && (
         <div className="card-meta">
-          {metaList.map((m) => (
-            <span key={m}>{m}</span>
+          {metaList.map((m, i) => (
+            <span key={i}>{m}</span>
           ))}
         </div>
       )}

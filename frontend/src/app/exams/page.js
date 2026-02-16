@@ -140,7 +140,7 @@ export default function ExamsPage() {
                 type="exam"
                 title={exam.shortName || exam.name}
                 subtitle={exam.type}
-                tags={(exam.syllabus || []).slice(0, 4)}
+                tags={[exam.type]} // Replaced syllabus with just Type
                 meta={`Accepted by ${exam.acceptedCount ?? (exam.acceptedColleges || exam.collegesAccepting || []).length} colleges`}
                 href={`/exam/${exam.id}`}
               />
