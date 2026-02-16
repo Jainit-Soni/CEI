@@ -58,8 +58,7 @@ export default function Footer() {
             &copy; {currentYear} College Essentials of India. All rights reserved.
           </p>
           <div className="footer-legal-links">
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms & Conditions</Link>
+            <Link href="/terms-and-conditions">Terms & Conditions</Link>
           </div>
         </div>
       </div>

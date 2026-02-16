@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
-import { Trash2, GripVertical, FileText, Download, Cloud, CloudOff, Share2, Copy, Check } from "lucide-react";
+import { Trash2, GripVertical, FileText, Download, Cloud, CloudOff, Share2, Copy, Check, Loader2 } from "lucide-react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { useAuth } from "@/lib/AuthContext";
 import { fetchUserChoices, saveUserChoices, shareUserChoices } from "@/lib/api";
 import AuthModal from "./AuthModal";
+import Button from "./Button";
 import "../app/dashboard/dashboard.css";
 
 export default function ApplicationBoard() {
