@@ -250,21 +250,72 @@ export default function AuthModal({ isOpen, onClose }) {
                             <span>or with email</span>
                         </div>
 
-                        <button type="submit" className="auth-btn-main-glass" disabled={isSubmitting || isSuccess || !agreedToTerms}>
-                            {isSuccess ? "Success! 🎉" : isSubmitting ? "Loading..." : mode === "login" ? "Sign In" : "Create Account"}
-                        </button>
-                    </form>
+                        <form onSubmit={handleEmailSubmit} className="auth-form-stack">
+                            {mode === "signup" && (
+                                <div className="glass-field-group">
+                                    <input
+                                        type="text"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                        placeholder="Full Name"
+                                        required={mode === "signup"}
+                                        className="glass-input"
+                                    />
+                                </div>
+                            )}
 
-                    <div className="auth-footer-glass">
-                        {mode === "login" ? (
-                            <p>New here? <button type="button" onClick={toggleMode}>Create account</button></p>
-                        ) : (
-                            <p>Already registered? <button type="button" onClick={toggleMode}>Sign in</button></p>
-                        )}
+                            <div className="glass-field-group">
+                                <input
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Email Address"
+                                    required
+                                    className="glass-input"
+                                />
+                            </div>
+
+                            <div className="glass-field-group">
+                                <input
+                                    type="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder="Password"
+                                    required
+                                    minLength={6}
+                                    className="glass-input"
+                                />
+                            </div>
+
+                            <div className="auth-terms-group">
+                                <label className="auth-checkbox-label">
+                                    <input
+                                        type="checkbox"
+                                        checked={agreedToTerms}
+                                        onChange={(e) => setAgreedToTerms(e.target.checked)}
+                                        required
+                                    />
+                                    <span>I agree to the <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms & Conditions</a> and Privacy Policy</span>
+                                </label>
+                            </div>
+
+                            {activeError && <div className="auth-error-glass">{activeError}</div>}
+
+                            <button type="submit" className="auth-btn-main-glass" disabled={isSubmitting || isSuccess || !agreedToTerms}>
+                                {isSuccess ? "Success! 🎉" : isSubmitting ? "Loading..." : mode === "login" ? "Sign In" : "Create Account"}
+                            </button>
+                        </form>
+
+                        <div className="auth-footer-glass">
+                            {mode === "login" ? (
+                                <p>New here? <button type="button" onClick={toggleMode}>Create account</button></p>
+                            ) : (
+                                <p>Already registered? <button type="button" onClick={toggleMode}>Sign in</button></p>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div >
     );
 }
