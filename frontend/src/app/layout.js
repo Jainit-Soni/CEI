@@ -69,19 +69,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrains.variable}`}>
       <body>
-        <ErrorBoundary>
-          <div className="flex flex-col min-h-screen">
-            {/* Universal Header */}
-            <Header />
+        <ClientProviders>
+          <ErrorBoundary>
+            <div className="flex flex-col min-h-screen">
+              {/* Universal Header */}
+              <Header />
 
-            <main className="flex-grow pt-20">
-              {children}
-            </main>
+              <main className="flex-grow pt-20">
+                {children}
+              </main>
 
-            {/* Universal Footer */}
-            <Footer />
-          </div>
-        </ErrorBoundary>
+              {/* Universal Footer */}
+              <Footer />
+            </div>
+          </ErrorBoundary>
+        </ClientProviders>
         <Analytics />
         <SpeedInsights />
       </body>

@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const ActivityLog = require("../models/ActivityLog");
-const College = require("../models/College");
 
 // @route   POST /api/activity/ping
 // @desc    Log a view for a college

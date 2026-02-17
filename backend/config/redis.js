@@ -58,13 +58,14 @@ async function getRedisClient() {
     // Only connect if it's actually disconnected/end
     try {
         await redisClient.connect();
+        return redisClient;
     } catch (err) {
-        if (!err.message.includes("already connecting")) {
-            throw err;
+        if (err.message.includes("already connecting")) {
+            return redisClient;
         }
+        console.warn("⚠️  Redis could not connect. Proceeding without cache.");
+        return null;
     }
-
-    return redisClient;
 }
 
 // Graceful shutdown
