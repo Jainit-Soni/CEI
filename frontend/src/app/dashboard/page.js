@@ -17,7 +17,6 @@ import {
     Sparkles,
     MapPin,
     GraduationCap,
-    GraduationCap,
     Clock
 } from "lucide-react";
 import DeadlineWatchtower from "@/components/DeadlineWatchtower";
