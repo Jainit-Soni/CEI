@@ -1,0 +1,52 @@
+[
+    {
+        "id": "jee-main-2026-dates",
+        "title": "JEE Main 2026 Exam Dates Announced",
+        "summary": "NTA has released the official schedule for JEE Main 2026 Session 1. Registration starts Nov 1st.",
+        "category": "Exam Alert",
+        "date": "2025-10-15T10:00:00.000Z",
+        "source": "NTA Official",
+        "url": "https://jeemain.nta.nic.in",
+        "urgent": true
+    },
+    {
+        "id": "neet-ug-counselling",
+        "title": "NEET UG Counselling Round 2 Results",
+        "summary": "MCC has declared the provisional seat allotment result for Round 2 of NEET UG Counselling.",
+        "category": "Admissions",
+        "date": "2025-09-20T14:30:00.000Z",
+        "source": "MCC",
+        "url": "https://mcc.nic.in",
+        "urgent": false
+    },
+    {
+        "id": "cbse-datesheet",
+        "title": "CBSE Class 12 Date Sheet Released",
+        "summary": "Central Board of Secondary Education has released the date sheet for Class 10 and 12 board exams.",
+        "category": "Policy",
+        "date": "2025-12-01T09:00:00.000Z",
+        "source": "CBSE",
+        "url": "https://cbse.gov.in",
+        "urgent": true
+    },
+    {
+        "id": "cat-2025-admit-card",
+        "title": "CAT 2025 Admit Card Download Live",
+        "summary": "IIM Calcutta has enabled the download link for CAT 2025 admit cards. Exam on Nov 26th.",
+        "category": "Exam Alert",
+        "date": "2025-10-25T11:00:00.000Z",
+        "source": "IIM CAT",
+        "url": "https://iimcat.ac.in",
+        "urgent": true
+    },
+    {
+        "id": "bitsat-application",
+        "title": "BITSAT 2026 Application Window Opens",
+        "summary": "BITS Pilani invites applications for integrated first degree programmes. Last date Feb 2026.",
+        "category": "Admissions",
+        "date": "2025-12-15T10:00:00.000Z",
+        "source": "BITS Admission",
+        "url": "https://bitsadmission.com",
+        "urgent": false
+    }
+]

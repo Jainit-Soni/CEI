@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from './Button';
 import TrustBadge from './TrustBadge';
 import AddToChoiceButton from './AddToChoiceButton';
-import PredictionBadge from './PredictionBadge'; // New
+import PredictionBadge from './PredictionBadge';
+import { Users } from 'lucide-react';
 import './CollegeHero.css';
 
 export default function CollegeHero({ college }) {
-    if (!college) return null;
+    const [liveViewers, setLiveViewers] = useState(0);
 
-    // Fallback gradient if no image (using consistent brand colors)
-    // In a real app, we'd map college IDs to specific cover images
+    useEffect(() => {
+        if (!college?._id && !college?.id) return;
+
+        const collegeId = college._id || college.id;
+
+        // 1. Log the view
+        fetch('/api/activity/ping', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ collegeId })
+        }).catch(err => console.error("Ping failed", err));
+
+        // 2. Fetch stats
+        fetch(`/api/activity/stats?collegeId=${collegeId}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.viewers > 0) setLiveViewers(data.viewers);
+            })
+            .catch(err => console.error("Stats failed", err));
+
+    }, [college]);
+
+    if (!college) return null;
 
     return (
         <div className="cinematic-hero">
@@ -26,6 +48,15 @@ export default function CollegeHero({ college }) {
                             ← Back
                         </Button>
                         <PredictionBadge college={college} />
+
+                        {liveViewers > 1 && (
+                            <div className="live-pulse-badge">
+                                <span className="pulse-dot"></span>
+                                <Users size={12} className="mr-1" />
+                                {liveViewers} viewing now
+                            </div>
+                        )}
+
                         <TrustBadge
                             source={college.source}
                             lastUpdated={college.lastUpdated}

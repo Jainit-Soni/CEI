@@ -1,0 +1,82 @@
+[
+    {
+        "collegeId": "iit-bombay",
+        "collegeName": "IIT Bombay",
+        "exam": "JEE Advanced",
+        "program": "Computer Science",
+        "closingRank": 65,
+        "category": "General"
+    },
+    {
+        "collegeId": "iit-delhi",
+        "collegeName": "IIT Delhi",
+        "exam": "JEE Advanced",
+        "program": "Computer Science",
+        "closingRank": 115,
+        "category": "General"
+    },
+    {
+        "collegeId": "iit-madras",
+        "collegeName": "IIT Madras",
+        "exam": "JEE Advanced",
+        "program": "Computer Science",
+        "closingRank": 175,
+        "category": "General"
+    },
+    {
+        "collegeId": "iit-kanpur",
+        "collegeName": "IIT Kanpur",
+        "exam": "JEE Advanced",
+        "program": "Computer Science",
+        "closingRank": 230,
+        "category": "General"
+    },
+    {
+        "collegeId": "iit-kharagpur",
+        "collegeName": "IIT Kharagpur",
+        "exam": "JEE Advanced",
+        "program": "Computer Science",
+        "closingRank": 290,
+        "category": "General"
+    },
+    {
+        "collegeId": "nit-trichy",
+        "collegeName": "NIT Trichy",
+        "exam": "JEE Main",
+        "program": "Computer Science",
+        "closingRank": 1500,
+        "category": "General"
+    },
+    {
+        "collegeId": "nit-warangal",
+        "collegeName": "NIT Warangal",
+        "exam": "JEE Main",
+        "program": "Computer Science",
+        "closingRank": 2100,
+        "category": "General"
+    },
+    {
+        "collegeId": "bits-pilani",
+        "collegeName": "BITS Pilani",
+        "exam": "BITSAT",
+        "program": "Computer Science",
+        "closingRank": 320,
+        "category": "General"
+    },
+    {
+        "collegeId": "iit-guwahati",
+        "collegeName": "IIT Guwahati",
+        "exam": "JEE Advanced",
+        "program": "Computer Science",
+        "closingRank": 600,
+        "category": "General"
+    },
+    {
+        "collegeId": "iiit-hyderabad",
+        "collegeName": "IIIT Hyderabad",
+        "exam": "JEE Main",
+        "program": "Computer Science",
+        "closingRank": 800,
+        "category": "General"
+    }
+]

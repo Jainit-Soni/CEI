@@ -1,6 +1,8 @@
-﻿import "./global.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+﻿import Link from "next/link";
+import "./global.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import ClientProviders from "../components/ClientProviders";
 import CompareFloatingBar from "../components/CompareFloatingBar";
 import { Analytics } from '@vercel/analytics/react';
@@ -67,18 +69,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrains.variable}`}>
       <body>
-        {/* Chromatic Pulse: Animated spectral bands */}
-        <div className="chromatic-bands" aria-hidden="true">
-          <div className="chromatic-band-3" />
-          <div className="chromatic-band-4" />
-        </div>
+        <ErrorBoundary>
+          <div className="flex flex-col min-h-screen">
+            {/* Universal Header */}
+            <Header />
 
-        <ClientProviders>
-          <Header />
-          <main>{children}</main>
-          <CompareFloatingBar />
-          <Footer />
-        </ClientProviders>
+            <main className="flex-grow pt-20">
+              {children}
+            </main>
+
+            {/* Universal Footer */}
+            <Footer />
+          </div>
+        </ErrorBoundary>
         <Analytics />
         <SpeedInsights />
       </body>

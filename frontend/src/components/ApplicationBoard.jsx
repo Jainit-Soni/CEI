@@ -240,18 +240,7 @@ export default function ApplicationBoard() {
                 <div className="board-info">
                     <h2>Priority Roadmap</h2>
                     <p className="subtitle">
-                        {items.length} {items.length === 1 ? "Institution" : "Institutions"} Selected •
-                        {user ? (
-                            <span style={{ color: '#059669', fontSize: '0.85rem', fontWeight: 600 }}>
-                                <Cloud size={14} style={{ marginBottom: -2, marginRight: 4 }} />
-                                Sync: Active
-                            </span>
-                        ) : (
-                            <span style={{ color: '#64748b', fontSize: '0.85rem', fontWeight: 500 }}>
-                                <CloudOff size={14} style={{ marginBottom: -2, marginRight: 4 }} />
-                                Sync: Guest Mode
-                            </span>
-                        )}
+                        Drag to reorder your selections and export your strategic report 📑
                     </p>
                 </div>
                 <div className="board-actions">
@@ -292,7 +281,7 @@ export default function ApplicationBoard() {
                                                             <p className="loc">{item.location}</p>
                                                         </div>
                                                         <div className="tier-badge">
-                                                            Strategic Choice: Tier {item.rankingTier || "1"}
+                                                            Strategic Choice: {item.rankingTier && item.rankingTier.toString().toLowerCase().includes('tier') ? item.rankingTier : `Tier ${item.rankingTier || "1"}`}
                                                         </div>
                                                     </div>
 

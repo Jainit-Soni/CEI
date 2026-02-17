@@ -11,9 +11,27 @@ const searchRoutes = require("./routes/search");
 const statsRoutes = require("./routes/stats");
 const adminRoutes = require("./routes/admin"); // Import admin routes
 const userRoutes = require("./routes/user");
+const activityRoutes = require("./routes/activity");
+const scholarshipRoutes = require("./routes/scholarships");
+const newsRoutes = require("./routes/news");
+const hypeRoutes = require("./routes/hype");
+const predictorRoutes = require("./routes/predictor");
 
 const app = express();
+const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
 
+// Security Middleware
+app.use(helmet());
+
+// Rate Limiting
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use("/api", limiter);
 // CORS configuration
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -104,6 +122,11 @@ app.use("/api", examsRoutes);
 app.use("/api", searchLimiter, searchRoutes); // Stricter limit for search
 app.use("/api/stats", statsRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/activity", activityRoutes);
+app.use("/api/scholarships", scholarshipRoutes);
+app.use("/api/news", newsRoutes);
+app.use("/api/hype", hypeRoutes);
+app.use("/api/predict", predictorRoutes);
 app.use("/api", userRoutes);
 
 const PORT = process.env.PORT || 4000;

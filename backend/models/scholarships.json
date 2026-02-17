@@ -1,0 +1,287 @@
+[
+    {
+        "id": "nsp-central-sector",
+        "name": "Central Sector Scheme of Scholarship",
+        "provider": "Government of India (NSP)",
+        "category": "Merit-Based",
+        "amount": "₹10,000 - ₹20,000 per annum",
+        "eligibility": [
+            "Class 12th percentile > 80%",
+            "Family Income < ₹8 Lakhs",
+            "Pursuing regular college course"
+        ],
+        "deadline": "31st Dec 2025",
+        "applicationUrl": "https://scholarships.gov.in",
+        "logo": "https://scholarships.gov.in/public/assets/img/new-logo.png"
+    },
+    {
+        "id": "pm-uss",
+        "name": "PM Uchchatar Shiksha Protsahan (PM-USP)",
+        "provider": "Ministry of Education",
+        "category": "Merit-cum-Means",
+        "amount": "Full Tuition Fee + Stipend",
+        "eligibility": [
+            "Top 500 Rankers in University",
+            "Valid Income Certificate"
+        ],
+        "deadline": "15th Jan 2026",
+        "applicationUrl": "https://scholarships.gov.in"
+    },
+    {
+        "id": "tata-trust-means-grant",
+        "name": "Tata Trusts Means Grant",
+        "provider": "Tata Trusts",
+        "category": "Private",
+        "amount": "Upto ₹50,000 (Based on need)",
+        "eligibility": [
+            "Students pursuing Medical/Engineering",
+            "Family Income reflects need",
+            "Must have secured admission"
+        ],
+        "deadline": "31st Jan 2026",
+        "applicationUrl": "https://www.tatatrusts.org",
+        "logo": "https://www.tatatrusts.org/images/logo_tata_trusts.jpg"
+    },
+    {
+        "id": "hdfc-badhte-kadam",
+        "name": "HDFC Badhte Kadam Scholarship",
+        "provider": "HDFC Bank",
+        "category": "Private",
+        "amount": "₹1,00,000 per year",
+        "eligibility": [
+            "Rank holders in Board Exams",
+            "Underprivileged background",
+            "Active bank account"
+        ],
+        "deadline": "Limited Seats",
+        "applicationUrl": "https://www.hdfcbank.com/personal/borrow/popular-loans/educational-loan/educational-loan-scholarship",
+        "logo": "https://www.hdfcbank.com/content/api/contentstream-id/723fb80a-2dde-42a3-9793-7ae1be57c87f/c6f78b17-062e-4b48-963c-396264936d5c/Footer/Common/Footer/Logo/logo.png"
+    },
+    {
+        "id": "aditya-birla-scholarship",
+        "name": "Aditya Birla Capital Scholarship",
+        "provider": "Aditya Birla Group",
+        "category": "Merit-Based",
+        "amount": "₹60,000 One-time",
+        "eligibility": [
+            "Class 1 - 12 & Undergraduate",
+            "Lost parent due to COVID-19 (Special priority)",
+            "Merit record"
+        ],
+        "deadline": "Rolling Basis",
+        "applicationUrl": "https://www.adityabirlacapital.com",
+        "logo": "https://www.adityabirlacapital.com/assets/images/logo.png"
+    },
+    {
+        "id": "aikyatha",
+        "name": "Aikyatha Scholarship",
+        "provider": "Infosys Foundation",
+        "category": "Women in Tech",
+        "amount": "₹1,50,000 per annum",
+        "eligibility": [
+            "Women pursuing STEM",
+            "Family Income < ₹6 Lakhs",
+            "First year Engineering/Medical"
+        ],
+        "deadline": "Oct 2025",
+        "applicationUrl": "https://www.infosys.com/infosys-foundation.html",
+        "logo": "https://www.infosys.com/content/dam/infosys-web/en/global-resource/media-resources/infosys-logo-png.png"
+    },
+    {
+        "id": "reliance-foundation",
+        "name": "Reliance Foundation Undergraduate Scholarship",
+        "provider": "Reliance Foundation",
+        "category": "Merit-cum-Means",
+        "amount": "Upto ₹2 Lakhs",
+        "eligibility": [
+            "Any UG stream",
+            "Household income < ₹15 Lakhs",
+            "Top 10% in Class 12"
+        ],
+        "deadline": "15th Oct 2025",
+        "applicationUrl": "https://scholarships.reliancefoundation.org/",
+        "logo": "https://scholarships.reliancefoundation.org/static/media/RF_Logo.d8e9e1e8.svg"
+    },
+    {
+        "id": "kvenkatesh",
+        "name": "K. Venkatesh Scholarship",
+        "provider": "Private Trust",
+        "category": "Sports",
+        "amount": "₹25,000",
+        "eligibility": [
+            "State level sports player",
+            "Maintaining 60% academics"
+        ],
+        "deadline": "Dec 2025",
+        "applicationUrl": "https://www.buddy4study.com"
+    },
+    {
+        "id": "ongc-scholarship",
+        "name": "ONGC Scholarship for SC/ST",
+        "provider": "ONGC",
+        "category": "Minority",
+        "amount": "₹48,000 per annum",
+        "eligibility": [
+            "Engineering/MBBS/MBA Students",
+            "SC/ST Category",
+            "Family Income < ₹4.5 Lakhs"
+        ],
+        "deadline": "Feb 2026",
+        "applicationUrl": "https://ongcindia.com",
+        "logo": "https://ongcindia.com/wps/wcm/connect/ongc/e795c479-502a-463e-b7d1-678a3c8f8e02/logo.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-e795c479-502a-463e-b7d1-678a3c8f8e02-n.6.4g-"
+    },
+    {
+        "id": "lic-hfl",
+        "name": "LIC HFL Vidyadhan Scholarship",
+        "provider": "LIC Housing Finance",
+        "category": "Low Income",
+        "amount": "₹20,000 per year",
+        "eligibility": [
+            "Class 11, 12, UG, PG",
+            "Family income < ₹3.6 Lakhs",
+            "Crisis situation preference"
+        ],
+        "deadline": "Sept 2025",
+        "applicationUrl": "https://www.buddy4study.com/page/lic-hfl-vidyadhan-scholarship",
+        "logo": "https://www.lichousing.com/static/media/logo.8d0b27d4.svg"
+    },
+    {
+        "id": "inspire-she",
+        "name": "INSPIRE Scholarship (SHE)",
+        "provider": "DST, Govt of India",
+        "category": "Science",
+        "amount": "₹80,000 per annum",
+        "eligibility": [
+            "Top 1% in Class 12 Board",
+            "Pursuing Basic/Natural Sciences (B.Sc/M.Sc)"
+        ],
+        "deadline": "Nov 2025",
+        "applicationUrl": "https://online-inspire.gov.in",
+        "logo": "https://online-inspire.gov.in/Content/img/logo.png"
+    },
+    {
+        "id": "dr-ambedkar-post-matric",
+        "name": "Dr. Ambedkar Post Matric Scholarship",
+        "provider": "Ministry of Social Justice",
+        "category": "EBC",
+        "amount": "Full Fee Reimbursement",
+        "eligibility": [
+            "EBC Students",
+            "Income limits apply",
+            "Domicile requirements"
+        ],
+        "deadline": "31st Mar 2026",
+        "applicationUrl": "https://socialjustice.gov.in"
+    },
+    {
+        "id": "santoor-women",
+        "name": "Santoor Scholarship for Women",
+        "provider": "Wipro Consumer Care",
+        "category": "Girls Only",
+        "amount": "₹24,000 per annum",
+        "eligibility": [
+            "Girls from AP/Telangana/Karnataka",
+            "Completed Class 12 from Govt School",
+            "Family Income < ₹3 Lakhs"
+        ],
+        "deadline": "Sept 2025",
+        "applicationUrl": "https://www.santoorscholarships.com"
+    },
+    {
+        "id": "nsdl-shiksha",
+        "name": "NSDL Shiksha Sahyog",
+        "provider": "NSDL",
+        "category": "Private",
+        "amount": "₹10,000 - ₹50,000",
+        "eligibility": [
+            "Min 60% in previous Class",
+            "Undergraduate/Postgraduate",
+            "Income < ₹5 Lakhs"
+        ],
+        "deadline": "Rolling",
+        "applicationUrl": "https://www.vidyasaarathi.co.in"
+    },
+    {
+        "id": "keep-india-smiling",
+        "name": "Colgate Keep India Smiling",
+        "provider": "Colgate-Palmolive",
+        "category": "General",
+        "amount": "₹30,000 per annum",
+        "eligibility": [
+            "Class 11, Diploma, UG, BDS",
+            "Meritorious students",
+            "EWS Category"
+        ],
+        "deadline": "Dec 2025",
+        "applicationUrl": "https://www.buddy4study.com/page/colgate-keep-india-smiling-foundational-scholarship-programme"
+    },
+    {
+        "id": "kind-circle",
+        "name": "Kind Circle Scholarship",
+        "provider": "Kind Circle",
+        "category": "Merit-Based",
+        "amount": "Minimum ₹6,000",
+        "eligibility": [
+            "School to College students",
+            "Score > 75% in last exam",
+            "Income < ₹6 Lakhs"
+        ],
+        "deadline": "Open",
+        "applicationUrl": "https://www.kindcircle.org"
+    },
+    {
+        "id": "swami-vivekananda-wb",
+        "name": "Swami Vivekananda MCM Scholarship",
+        "provider": "Govt of West Bengal",
+        "category": "State Govt",
+        "amount": "₹1,000 - ₹5,000 per month",
+        "eligibility": [
+            "Resident of West Bengal",
+            "Family Income < ₹2.5 Lakhs",
+            "Score > 60% in Last Exam"
+        ],
+        "deadline": "Nov 2025",
+        "applicationUrl": "https://svmcm.wbhed.gov.in"
+    },
+    {
+        "id": "mahadbt",
+        "name": "MahaDBT Rajarshi Shahu Maharaj Scheme",
+        "provider": "Govt of Maharashtra",
+        "category": "State Govt",
+        "amount": "50% of Tuition Fee",
+        "eligibility": [
+            "Domicile of Maharashtra",
+            "EBC Category",
+            "Through CAP Rounds"
+        ],
+        "deadline": "31st Mar 2026",
+        "applicationUrl": "https://mahadbt.maharashtra.gov.in"
+    },
+    {
+        "id": "kerala-vidyakiranam",
+        "name": "Vidyakiranam Scholarship",
+        "provider": "Govt of Kerala",
+        "category": "Disability",
+        "amount": "Variable",
+        "eligibility": [
+            "Children of differently-abled parents",
+            "BPL Category"
+        ],
+        "deadline": "Feb 2026",
+        "applicationUrl": "http://sjd.kerala.gov.in"
+    },
+    {
+        "id": "post-matric-bihar",
+        "name": "PMS Bihar (Post Matric)",
+        "provider": "Govt of Bihar",
+        "category": "State Govt",
+        "amount": "Variable (Course-wise)",
+        "eligibility": [
+            "Bihar Domicile",
+            "BC/EBC/SC/ST",
+            "Studying in Recog. Institution"
+        ],
+        "deadline": "Dec 2025",
+        "applicationUrl": "https://pmsonline.bih.nic.in"
+    }
+]

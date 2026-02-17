@@ -17,8 +17,10 @@ import {
     Sparkles,
     MapPin,
     GraduationCap,
+    GraduationCap,
     Clock
 } from "lucide-react";
+import DeadlineWatchtower from "@/components/DeadlineWatchtower";
 import "./dashboard.css"; // We'll update this next
 
 export default function Dashboard() {
@@ -103,75 +105,75 @@ export default function Dashboard() {
                     <Button variant="outline" href="/colleges">Explore Colleges</Button>
                 </header>
 
-                {/* Quick Stats Row */}
-                <div className="stats-grid">
-                    <GlassPanel className="stat-card">
-                        <div className="stat-icon" style={{ background: 'rgba(236, 72, 153, 0.1)', color: '#ec4899' }}>
-                            <Heart size={24} />
-                        </div>
-                        <div className="stat-info">
-                            <span className="stat-value">{stats.favorites}</span>
-                            <span className="stat-label">Favorites</span>
-                        </div>
-                    </GlassPanel>
+                {/* Main Content Area: Stats + Watchtower */}
+                <div className="dashboard-grid">
+                    <div className="stats-column">
+                        {/* Quick Stats Row */}
+                        <div className="stats-grid-row">
+                            <GlassPanel className="stat-card">
+                                <div className="stat-icon" style={{ background: 'rgba(236, 72, 153, 0.1)', color: '#ec4899' }}>
+                                    <Heart size={24} />
+                                </div>
+                                <div className="stat-info">
+                                    <span className="stat-value">{stats.favorites}</span>
+                                    <span className="stat-label">Favorites</span>
+                                </div>
+                            </GlassPanel>
 
-                    <GlassPanel className="stat-card">
-                        <div className="stat-icon" style={{ background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6' }}>
-                            <Sparkles size={24} />
+                            <GlassPanel className="stat-card">
+                                <div className="stat-icon" style={{ background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6' }}>
+                                    <Sparkles size={24} />
+                                </div>
+                                <div className="stat-info">
+                                    <span className="stat-value">{stats.predicted}%</span>
+                                    <span className="stat-label">Profile Score</span>
+                                </div>
+                            </GlassPanel>
                         </div>
-                        <div className="stat-info">
-                            <span className="stat-value">{stats.predicted}%</span>
-                            <span className="stat-label">Profile Score</span>
-                        </div>
-                    </GlassPanel>
 
-                    <GlassPanel className="stat-card">
-                        <div className="stat-icon" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981' }}>
-                            <Clock size={24} />
-                        </div>
-                        <div className="stat-info">
-                            <span className="stat-value">Active</span>
-                            <span className="stat-label">Status</span>
-                        </div>
-                    </GlassPanel>
-                </div>
+                        {/* Quick Actions */}
+                        <section className="dashboard-section">
+                            <h2>Quick Actions</h2>
+                            <div className="quick-links-grid">
+                                {quickLinks.map((link, idx) => (
+                                    <Link key={idx} href={link.href} className="quick-link-card">
+                                        <div className="ql-icon" style={{ color: link.color }}>{link.icon}</div>
+                                        <span>{link.label}</span>
+                                        <ChevronRight size={16} className="ql-arrow" />
+                                    </Link>
+                                ))}
+                            </div>
+                        </section>
 
-                {/* Quick Actions */}
-                <section className="dashboard-section">
-                    <h2>Quick Actions</h2>
-                    <div className="quick-links-grid">
-                        {quickLinks.map((link, idx) => (
-                            <Link key={idx} href={link.href} className="quick-link-card">
-                                <div className="ql-icon" style={{ color: link.color }}>{link.icon}</div>
-                                <span>{link.label}</span>
-                                <ChevronRight size={16} className="ql-arrow" />
-                            </Link>
-                        ))}
-                    </div>
-                </section>
-
-                {/* Recommended Section (Placeholder for AI) */}
-                <section className="dashboard-section">
-                    <div className="section-header">
-                        <h2>Recommended for You</h2>
-                        <span className="ai-badge"><Sparkles size={12} /> AI Picked</span>
-                    </div>
-                    <div className="rec-grid">
-                        {[1, 2].map((i) => (
-                            <div key={i} className="rec-card-skeleton">
-                                <div className="sk-img" />
-                                <div className="sk-content">
-                                    <div className="sk-line w-3/4" />
-                                    <div className="sk-line w-1/2" />
+                        {/* Recommended Section (Placeholder for AI) */}
+                        <section className="dashboard-section">
+                            <div className="section-header">
+                                <h2>Recommended for You</h2>
+                                <span className="ai-badge"><Sparkles size={12} /> AI Picked</span>
+                            </div>
+                            <div className="rec-grid">
+                                {[1, 2].map((i) => (
+                                    <div key={i} className="rec-card-skeleton">
+                                        <div className="sk-img" />
+                                        <div className="sk-content">
+                                            <div className="sk-line w-3/4" />
+                                            <div className="sk-line w-1/2" />
+                                        </div>
+                                    </div>
+                                ))}
+                                <div className="rec-cta">
+                                    <p>Complete your profile to get personalized college recommendations.</p>
+                                    <Button size="sm">Update Profile</Button>
                                 </div>
                             </div>
-                        ))}
-                        <div className="rec-cta">
-                            <p>Complete your profile to get personalized college recommendations.</p>
-                            <Button size="sm">Update Profile</Button>
-                        </div>
+                        </section>
                     </div>
-                </section>
+
+                    {/* Right Column: Watchtower */}
+                    <div className="watchtower-column">
+                        <DeadlineWatchtower />
+                    </div>
+                </div>
             </main>
         </div>
     );
