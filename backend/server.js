@@ -18,8 +18,7 @@ const hypeRoutes = require("./routes/hype");
 const predictorRoutes = require("./routes/predictor");
 
 const app = express();
-const helmet = require("helmet");
-const rateLimit = require("express-rate-limit");
+
 
 // Security Middleware
 app.use(helmet());
