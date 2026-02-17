@@ -24,13 +24,13 @@ const app = express();
 app.use(helmet());
 
 // Rate Limiting
-const limiter = rateLimit({
+const globalLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // limit each IP to 100 requests per windowMs
   standardHeaders: true,
   legacyHeaders: false,
 });
-app.use("/api", limiter);
+app.use("/api", globalLimiter);
 // CORS configuration
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -82,7 +82,7 @@ const speedLimiter = slowDown({
 });
 
 // Rate limiting configuration
-const limiter = rateLimit({
+const standardLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per windowMs
   message: "Too many requests from this IP, please try again later.",
@@ -106,7 +106,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(apiKeyAuth);   // Check for API Key first
 app.use(speedLimiter); // Then throttle
-app.use(limiter);      // Then IP rate limit (if no key)
+app.use(standardLimiter);      // Then IP rate limit (if no key)
 
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
