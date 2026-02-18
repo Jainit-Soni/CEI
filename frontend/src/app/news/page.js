@@ -16,7 +16,7 @@ export default function NewsPage() {
     const [news, setNews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [query, setQuery] = useState("");
+    // Removed query state as per user request
     const [filters, setFilters] = useState({
         category: "All",
     });
@@ -44,24 +44,21 @@ export default function NewsPage() {
     }, [news]);
 
     const filteredNews = useMemo(() => {
-        const normalized = query.toLowerCase();
         return news.filter((item) => {
-            const matchesQuery = `${item.title} ${item.summary}`.toLowerCase().includes(normalized);
             const matchesCategory = filters.category === "All" || item.category === filters.category;
-            return matchesQuery && matchesCategory;
+            return matchesCategory;
         });
-    }, [news, query, filters]);
+    }, [news, filters]);
 
     const handleFilterChange = (id, value) => {
         setFilters((prev) => ({ ...prev, [id]: value }));
     };
 
     const clearFilters = () => {
-        setQuery("");
         setFilters({ category: "All" });
     };
 
-    const hasActiveFilters = query || filters.category !== "All";
+    const hasActiveFilters = filters.category !== "All";
 
     const renderContent = () => {
         if (isLoading) {
@@ -175,16 +172,7 @@ export default function NewsPage() {
                             </button>
                         </div>
 
-                        <div className="filter-search">
-                            <svg className="filter-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
-                            <input
-                                type="search"
-                                className="filter-search-input"
-                                value={query}
-                                onChange={(e) => setQuery(e.target.value)}
-                                placeholder="Search headlines..."
-                            />
-                        </div>
+                        {/* Removed Search Input as requested */}
 
                         <div className="filter-row">
                             <FancySelect

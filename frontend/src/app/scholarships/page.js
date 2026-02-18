@@ -17,7 +17,7 @@ export default function ScholarshipsPage() {
     const [scholarships, setScholarships] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [query, setQuery] = useState("");
+    // Removed query state as per user request
     const [filters, setFilters] = useState({
         category: "All",
         provider: "All",
@@ -51,25 +51,22 @@ export default function ScholarshipsPage() {
     }, [scholarships]);
 
     const filteredScholarships = useMemo(() => {
-        const normalized = query.toLowerCase();
         return scholarships.filter((s) => {
-            const matchesQuery = `${s.name} ${s.provider}`.toLowerCase().includes(normalized);
             const matchesCategory = filters.category === "All" || s.category === filters.category;
             const matchesProvider = filters.provider === "All" || s.provider === filters.provider;
-            return matchesQuery && matchesCategory && matchesProvider;
+            return matchesCategory && matchesProvider;
         });
-    }, [scholarships, query, filters]);
+    }, [scholarships, filters]);
 
     const handleFilterChange = (id, value) => {
         setFilters((prev) => ({ ...prev, [id]: value }));
     };
 
     const clearFilters = () => {
-        setQuery("");
         setFilters({ category: "All", provider: "All" });
     };
 
-    const hasActiveFilters = query || filters.category !== "All" || filters.provider !== "All";
+    const hasActiveFilters = filters.category !== "All" || filters.provider !== "All";
 
     const renderContent = () => {
         if (isLoading) {
@@ -100,7 +97,7 @@ export default function ScholarshipsPage() {
                     icon="🎓"
                     title="No scholarships found"
                     description={hasActiveFilters
-                        ? "Try adjusting your search or filters"
+                        ? "Try adjusting your filters"
                         : "No scholarships available at the moment"}
                     actionLabel={hasActiveFilters ? "Clear Filters" : undefined}
                     onAction={hasActiveFilters ? clearFilters : undefined}
@@ -190,16 +187,7 @@ export default function ScholarshipsPage() {
                             </button>
                         </div>
 
-                        <div className="filter-search">
-                            <svg className="filter-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
-                            <input
-                                type="search"
-                                className="filter-search-input"
-                                value={query}
-                                onChange={(e) => setQuery(e.target.value)}
-                                placeholder="Search scholarships..."
-                            />
-                        </div>
+                        {/* Removed Search Input as requested */}
 
                         <div className="filter-row">
                             <FancySelect
