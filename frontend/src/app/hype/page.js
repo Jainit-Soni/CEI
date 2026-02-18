@@ -44,7 +44,7 @@ export default function HypePage() {
             }
             try {
                 const data = await searchAll({ q: searchQuery });
-                setSearchResults(data.colleges || []);
+                setSearchResults((data.colleges || []).slice(0, 8)); // Limit to 8
             } catch (err) {
                 console.error("Search failed:", err);
             }
@@ -145,7 +145,7 @@ export default function HypePage() {
                             />
                             {/* SEARCH DROPDOWN */}
                             {searchQuery && (
-                                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden z-50 max-h-80 overflow-y-auto">
+                                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden z-50 overflow-y-auto" style={{ maxHeight: '300px' }}>
                                     {searchResults.length > 0 ? (
                                         searchResults.map(college => (
                                             <div
@@ -179,7 +179,7 @@ export default function HypePage() {
             <section className="list-results pt-12 pb-24">
                 <Container>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {stats.leaderboard.map((college, index) => {
+                        {stats.leaderboard.slice(0, 50).map((college, index) => {
                             // Determine Badge
                             let badge = null;
                             if (index === 0) badge = { text: "🏆 CHAMPION", color: "#f59e0b" }; // Amber 500
