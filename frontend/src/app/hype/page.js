@@ -246,6 +246,15 @@ export default function HypePage() {
 
         const userName = user.displayName || user.email.split('@')[0] || "User";
 
+        // Logic V29: Payload preparation with fallbacks
+        const payload = {
+            collegeId,
+            collegeName: college.name || "Unknown College",
+            uid: user.uid,      // Standard
+            userId: user.uid,   // Fallback for older backend logic
+            userName
+        };
+
         // Optimistic Update
         setStats(prev => {
             const newLeaderboard = [...prev.leaderboard];
@@ -275,20 +284,20 @@ export default function HypePage() {
         }
 
         try {
-            // Fix: Backend likely expects 'uid' consistent with other APIs
-            await postHypeVote({
-                collegeId,
-                collegeName: college.name,
-                uid: user.uid,
-                userName
-            });
+            console.log("Voting Payload:", payload); // Debugging
+            await postHypeVote(payload);
 
             addToast(`Vote cast for ${college.name}!`, "success"); // Success feedback
             setSearchQuery("");
             setSearchResults([]);
         } catch (err) {
             console.error("Vote failed:", err);
-            addToast("Vote failed. Server error.", "error");
+            // 400 Bad Request usually means validation failed
+            const errorMsg = err.response?.status === 400
+                ? "Vote rejected. Please refresh and try again."
+                : "Vote failed. Server error.";
+
+            addToast(errorMsg, "error");
 
             // Optional: Rollback state here if needed, but for now just notify
             // strict rollback is hard without deep cloning or re-fetching
@@ -478,9 +487,9 @@ export default function HypePage() {
                 </Container>
             </div>
 
-            {/* VERSION MARKER - V27 POLISHED */}
+            {/* VERSION MARKER - V29 ROBUST */}
             <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v2.7-infinite-polished
+                v2.9-robust-fix
             </div>
         </div>
     );
