@@ -5,9 +5,7 @@ import ScholarshipCard from '@/components/ScholarshipCard';
 import Spinner from '@/components/Spinner';
 import Container from '@/components/Container';
 import { fetchScholarships } from '@/lib/api';
-import { RevealOnScroll } from '@/lib/useIntersectionObserver';
-import { BookOpen, Filter, ArrowRight } from 'lucide-react';
-import "../colleges/page.css"; // Ensure global styles are loaded
+// NO EXTERNAL CSS IMPORT to ensure perfect control
 
 const CATEGORIES = ["All", "State Govt", "Central Govt", "Private", "Merit-Based", "Means-Based"];
 
@@ -33,30 +31,28 @@ export default function ScholarshipsPage() {
         : scholarships.filter(s => s.category?.toLowerCase() === filter.toLowerCase() || s.category === filter);
 
     return (
-        <div className="min-h-screen bg-transparent pt-32 pb-20">
-            {/* Header - Minimalist */}
+        <div className="min-h-screen bg-transparent pt-32 pb-32">
             <Container>
-                <RevealOnScroll>
-                    <div className="text-center mb-20">
-                        <h1 className="text-5xl md:text-7xl font-semibold tracking-tight text-slate-900 mb-6">
-                            The Grant Ledger
-                        </h1>
-                        <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
-                            Curated financial opportunities for the ambitious student.
-                        </p>
-                    </div>
-                </RevealOnScroll>
+                {/* 1. Minimalist Header */}
+                <div className="text-center mb-20 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 font-display">
+                        The Grant Ledger.
+                    </h1>
+                    <p className="text-lg md:text-xl text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
+                        Curated financial opportunities for the ambitious student.
+                    </p>
+                </div>
 
-                {/* Filters - Floating Pills */}
-                <div className="flex justify-center mb-16">
-                    <div className="flex flex-wrap gap-3 justify-center">
+                {/* 2. Floating Filter Pills */}
+                <div className="flex justify-center mb-20 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+                    <div className="inline-flex flex-wrap justify-center gap-3 p-2 bg-white/50 backdrop-blur-xl rounded-full border border-slate-200/60 shadow-sm">
                         {CATEGORIES.map(cat => (
                             <button
                                 key={cat}
                                 onClick={() => setFilter(cat)}
-                                className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${filter === cat
-                                        ? 'bg-slate-900 text-white border-slate-900 shadow-lg'
-                                        : 'bg-white/50 text-slate-500 border-transparent hover:bg-white hover:shadow-sm'
+                                className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${filter === cat
+                                        ? 'bg-slate-900 text-white shadow-md transform scale-105'
+                                        : 'text-slate-500 hover:text-slate-900 hover:bg-white/80'
                                     }`}
                             >
                                 {cat}
@@ -65,19 +61,17 @@ export default function ScholarshipsPage() {
                     </div>
                 </div>
 
-                {/* Grid - Clean & Structured */}
+                {/* 3. The Crystal Grid */}
                 {loading ? (
-                    <div className="flex justify-center py-20"><Spinner /></div>
+                    <div className="flex justify-center py-32"><Spinner /></div>
                 ) : filteredScholarships.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {filteredScholarships.map((scholarship, idx) => (
-                            <RevealOnScroll key={scholarship.id} delay={idx * 50}>
-                                <ScholarshipCard scholarship={scholarship} />
-                            </RevealOnScroll>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+                        {filteredScholarships.map((scholarship) => (
+                            <ScholarshipCard key={scholarship.id} scholarship={scholarship} />
                         ))}
                     </div>
                 ) : (
-                    <div className="text-center py-24">
+                    <div className="text-center py-32">
                         <p className="text-slate-400 text-lg">No entries found for "{filter}".</p>
                         <button
                             onClick={() => setFilter("All")}
@@ -88,27 +82,20 @@ export default function ScholarshipsPage() {
                     </div>
                 )}
 
-                {/* Internal Directory - Sleek Bottom Banner */}
-                <div className="mt-32">
-                    <RevealOnScroll>
-                        <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-white p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
-                            <div className="relative z-10">
-                                <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Exclusive Access</div>
-                                <h2 className="text-3xl md:text-4xl font-bold mb-4">The Internal Database</h2>
-                                <p className="text-slate-400 max-w-md text-lg">
-                                    Our proprietary list of micro-scholarships and alumni grants.
-                                </p>
-                            </div>
-                            <div className="relative z-10 flex-shrink-0">
-                                <button className="px-8 py-4 bg-white text-slate-900 rounded-xl font-bold hover:bg-slate-100 transition-colors flex items-center gap-3">
-                                    Access Database <ArrowRight size={18} />
-                                </button>
-                            </div>
+                {/* 4. Directory Access (Bottom Banner) - Minimalist */}
+                <div className="mt-40 animate-in fade-in duration-1000 delay-500">
+                    <div className="group relative overflow-hidden rounded-3xl bg-slate-900 text-white p-12 md:p-20 text-center shadow-2xl transition-transform hover:scale-[1.01] duration-500">
+                        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%,100%_100%] animate-[shimmer_8s_infinite] pointer-events-none" />
 
-                            {/* Subtle texture */}
-                            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10" />
-                        </div>
-                    </RevealOnScroll>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight relative z-10">The Internal Database</h2>
+                        <p className="text-slate-400 max-w-xl mx-auto text-lg mb-10 relative z-10">
+                            Access our proprietary list of micro-scholarships and alumni grants not listed publicly.
+                        </p>
+
+                        <button className="relative z-10 px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                            Request Access
+                        </button>
+                    </div>
                 </div>
             </Container>
         </div>

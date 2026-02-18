@@ -5,7 +5,7 @@ import Combobox from '@/components/Combobox';
 import Container from '@/components/Container';
 import { fetchColleges } from '@/lib/api';
 import { Trophy, Zap, ArrowRight, Swords } from 'lucide-react';
-import "../colleges/page.css";
+// NO EXTERNAL CSS
 
 export default function BattlePage() {
     const [colleges, setColleges] = useState([]);
@@ -18,11 +18,6 @@ export default function BattlePage() {
         fetchColleges().then(setColleges).catch(console.error);
     }, []);
 
-    const resetBattle = () => {
-        setWinner(null);
-        setBattling(false);
-    };
-
     const startBattle = () => {
         if (!college1 || !college2) return;
         setBattling(true);
@@ -31,7 +26,12 @@ export default function BattlePage() {
             const score2 = calculateScore(college2);
             setWinner(score1 > score2 ? college1 : college2);
             setBattling(false);
-        }, 2000);
+        }, 2500); // Slightly longer for dramatic effect
+    };
+
+    const resetBattle = () => {
+        setWinner(null);
+        setBattling(false);
     };
 
     const calculateScore = (college) => {
@@ -42,104 +42,102 @@ export default function BattlePage() {
     };
 
     return (
-        <div className="min-h-screen bg-transparent pt-32 pb-20 overflow-hidden">
+        <div className="min-h-screen bg-transparent pt-32 pb-20 overflow-x-hidden">
             <Container>
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-4">
-                        <Swords size={12} /> Comparison Engine
-                    </div>
-                    <h1 className="text-6xl md:text-8xl font-black text-slate-900 tracking-tighter mb-4">
-                        VS
+                {/* 1. Ultra Minimal Header */}
+                <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                    <h1 className="text-8xl md:text-[10rem] font-black text-slate-900 tracking-tighter leading-none opacity-10 select-none pointer-events-none fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+                        VERSUS
                     </h1>
-                    <p className="text-xl text-slate-500">The Arena.</p>
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-4">
+                        The Duel.
+                    </h1>
+                    <p className="text-xl text-slate-500 font-medium">Compare. Contrast. Decide.</p>
                 </div>
 
-                {/* The Split Arena */}
-                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 min-h-[600px] flex flex-col md:flex-row">
+                {/* 2. The Split Stage */}
+                <div className="relative w-full max-w-6xl mx-auto min-h-[600px] flex flex-col md:flex-row rounded-[40px] overflow-hidden shadow-2xl border border-slate-200 bg-white">
 
-                    {/* Floating VS Button (Absolute Center) */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                        {!winner && college1 && college2 ? (
+                    {/* Center Action Orb */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+                        {college1 && college2 && !winner ? (
                             <button
                                 onClick={startBattle}
                                 disabled={battling}
-                                className={`w-24 h-24 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 ${battling ? 'animate-ping' : ''}`}
+                                className={`w-28 h-28 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-[0_0_40px_rgba(0,0,0,0.3)] border-4 border-white transition-all duration-500 hover:scale-110 active:scale-95 ${battling ? 'animate-[spin_1s_linear_infinite]' : ''}`}
                             >
-                                <Zap size={32} fill="currentColor" />
+                                {battling ? <Zap size={32} /> : <span className="font-black text-2xl tracking-tighter italic">VS</span>}
+                            </button>
+                        ) : winner ? (
+                            <button onClick={resetBattle} className="px-6 py-2 bg-slate-900 text-white rounded-full text-xs font-bold uppercase tracking-widest shadow-lg hover:bg-slate-800 transition-colors">
+                                Reset
                             </button>
                         ) : (
-                            <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center text-slate-300 font-black">VS</div>
+                            <div className="w-16 h-16 rounded-full bg-slate-100 border-4 border-white flex items-center justify-center text-slate-300 font-black shadow-inner">VS</div>
                         )}
                     </div>
 
-                    {/* Left Side */}
-                    <div className={`relative flex-1 p-8 md:p-16 flex flex-col justify-center transition-all duration-700 ${winner?.id === college1?.id ? 'bg-amber-50' : 'bg-white'}`}>
+                    {/* Left Challenger */}
+                    <div className={`relative flex-1 p-8 md:p-16 flex flex-col transition-all duration-1000 ${winner?.id === college1?.id ? 'bg-indigo-50/50' : 'bg-white'} ${battling ? 'translate-x-4 opacity-50' : ''}`}>
                         {winner?.id === college1?.id && (
-                            <div className="absolute top-8 left-8 text-amber-500 flex items-center gap-2 font-black uppercase tracking-widest animate-in slide-in-from-bottom-4">
-                                <Trophy size={18} /> Winner
+                            <div className="absolute top-0 right-0 p-8">
+                                <Trophy size={48} className="text-indigo-600 animate-bounce" />
                             </div>
                         )}
 
-                        <div className="mb-auto">
-                            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Challenger 01</h3>
+                        <div className="flex-1 flex flex-col justify-center">
+                            <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 text-center">Challenger 01</h2>
                             <Combobox
                                 options={colleges}
                                 value={college1?._id || college1?.id}
                                 onChange={setCollege1}
-                                placeholder="Select College"
+                                placeholder="Select Institute"
                             />
-                        </div>
 
-                        {college1 && (
-                            <div className="mt-12 animate-in fade-in slide-in-from-bottom-8">
-                                <div className="w-32 h-32 bg-white rounded-2xl shadow-sm border border-slate-100 p-4 mb-6 flex items-center justify-center">
-                                    <img src={college1.logo || "/placeholder-logo.png"} className="max-w-full max-h-full object-contain" />
+                            {college1 && (
+                                <div className="mt-12 text-center animate-in fade-in slide-in-from-bottom-8">
+                                    <div className="w-40 h-40 mx-auto bg-white rounded-full shadow-xl border border-slate-100 p-6 mb-8 flex items-center justify-center relative">
+                                        <img src={college1.logo || "/placeholder-logo.png"} className="max-w-full max-h-full object-contain" />
+                                        {winner?.id === college1?.id && <div className="absolute -bottom-2 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Winner</div>}
+                                    </div>
+                                    <h3 className="text-3xl font-black text-slate-900 mb-2 leading-tight">{college1.name}</h3>
+                                    <p className="text-lg text-slate-500">{college1.location}</p>
                                 </div>
-                                <h2 className="text-4xl font-black text-slate-900 mb-2">{college1.name}</h2>
-                                <p className="text-lg text-slate-500 font-medium">{college1.location}</p>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
 
-                    {/* Right Side */}
-                    <div className={`relative flex-1 p-8 md:p-16 flex flex-col justify-center border-t md:border-t-0 md:border-l border-slate-100 transition-all duration-700 ${winner?.id === college2?.id ? 'bg-amber-50' : 'bg-white'}`}>
+                    {/* Right Challenger */}
+                    <div className={`relative flex-1 p-8 md:p-16 flex flex-col transition-all duration-1000 border-t md:border-t-0 md:border-l border-slate-100 ${winner?.id === college2?.id ? 'bg-indigo-50/50' : 'bg-white'} ${battling ? '-translate-x-4 opacity-50' : ''}`}>
                         {winner?.id === college2?.id && (
-                            <div className="absolute top-8 right-8 text-amber-500 flex items-center gap-2 font-black uppercase tracking-widest animate-in slide-in-from-bottom-4">
-                                <Trophy size={18} /> Winner
+                            <div className="absolute top-0 left-0 p-8">
+                                <Trophy size={48} className="text-indigo-600 animate-bounce" />
                             </div>
                         )}
 
-                        <div className="mb-auto">
-                            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 text-right">Challenger 02</h3>
+                        <div className="flex-1 flex flex-col justify-center">
+                            <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 text-center">Challenger 02</h2>
                             <Combobox
                                 options={colleges}
                                 value={college2?._id || college2?.id}
                                 onChange={setCollege2}
-                                placeholder="Select College"
+                                placeholder="Select Institute"
                             />
-                        </div>
 
-                        {college2 && (
-                            <div className="mt-12 text-right animate-in fade-in slide-in-from-bottom-8">
-                                <div className="w-32 h-32 bg-white rounded-2xl shadow-sm border border-slate-100 p-4 mb-6 flex items-center justify-center ml-auto">
-                                    <img src={college2.logo || "/placeholder-logo.png"} className="max-w-full max-h-full object-contain" />
+                            {college2 && (
+                                <div className="mt-12 text-center animate-in fade-in slide-in-from-bottom-8">
+                                    <div className="w-40 h-40 mx-auto bg-white rounded-full shadow-xl border border-slate-100 p-6 mb-8 flex items-center justify-center relative">
+                                        <img src={college2.logo || "/placeholder-logo.png"} className="max-w-full max-h-full object-contain" />
+                                        {winner?.id === college2?.id && <div className="absolute -bottom-2 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Winner</div>}
+                                    </div>
+                                    <h3 className="text-3xl font-black text-slate-900 mb-2 leading-tight">{college2.name}</h3>
+                                    <p className="text-lg text-slate-500">{college2.location}</p>
                                 </div>
-                                <h2 className="text-4xl font-black text-slate-900 mb-2">{college2.name}</h2>
-                                <p className="text-lg text-slate-500 font-medium">{college2.location}</p>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
 
                 </div>
-
-                {winner && (
-                    <div className="text-center mt-12">
-                        <button onClick={resetBattle} className="text-slate-400 hover:text-slate-900 font-bold transition-colors">
-                            Reset Verification
-                        </button>
-                    </div>
-                )}
             </Container>
         </div>
     );
