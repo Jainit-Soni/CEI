@@ -9,12 +9,112 @@ import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
 import { Search, Flame, ArrowUp, Zap, Lock, Filter } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
-import "@/app/colleges/page.css"; // Ensure we inherit global college styles
+
+// -----------------------------------------------------------------------------
+// V19-PREMIUM: Specialized Podium Components
+// -----------------------------------------------------------------------------
+
+function PodiumCard({ college, rank, onVote, isVoting }) {
+    if (!college) return null;
+
+    const isGold = rank === 1;
+    const isSilver = rank === 2;
+    const isBronze = rank === 3;
+
+    let glowColor = "rgba(255, 255, 255, 0)";
+    if (isGold) glowColor = "rgba(245, 158, 11, 0.4)"; // Amber
+    if (isSilver) glowColor = "rgba(148, 163, 184, 0.4)"; // Slate
+    if (isBronze) glowColor = "rgba(253, 186, 116, 0.4)"; // Orange
+
+    return (
+        <div className={`relative group ${isGold ? 'order-2 -mt-10 z-20' : isSilver ? 'order-1 mt-4 z-10' : 'order-3 mt-8 z-0'}`}>
+            {/* Ambient Glow */}
+            <div
+                className="absolute inset-0 blur-3xl rounded-full opacity-60 pointer-events-none transition-all duration-1000 group-hover:opacity-100"
+                style={{ background: glowColor, transform: 'scale(1.2)' }}
+            />
+
+            <div className={`relative flex flex-col items-center text-center p-6 rounded-3xl border backdrop-blur-2xl transition-all duration-300 group-hover:-translate-y-2
+                ${isGold ? 'bg-white/60 border-amber-200/50 w-[320px] h-[400px] shadow-[0_20px_60px_-15px_rgba(245,158,11,0.3)]' : ''}
+                ${isSilver ? 'bg-white/40 border-slate-200/50 w-[280px] h-[360px] shadow-[0_20px_60px_-15px_rgba(148,163,184,0.2)]' : ''}
+                ${isBronze ? 'bg-white/40 border-orange-200/50 w-[280px] h-[340px] shadow-[0_20px_60px_-15px_rgba(253,186,116,0.2)]' : ''}
+            `}>
+                {/* RANK BADGE */}
+                <div className={`absolute -top-6 px-6 py-2 rounded-full text-xs font-bold tracking-widest shadow-lg uppercase
+                    ${isGold ? 'bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-white' : ''}
+                    ${isSilver ? 'bg-gradient-to-r from-slate-300 via-slate-400 to-slate-500 text-white' : ''}
+                    ${isBronze ? 'bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 text-white' : ''}
+                `}>
+                    {isGold ? 'Champion #1' : isSilver ? 'Silver #2' : 'Bronze #3'}
+                </div>
+
+                {/* CONTENT */}
+                <div className="flex-1 flex flex-col justify-center items-center w-full mt-4">
+                    <h3 className={`font-bold leading-tight line-clamp-2 mb-2 ${isGold ? 'text-2xl text-slate-800' : 'text-xl text-slate-700'}`}>
+                        {college.name}
+                    </h3>
+                    <div className="flex items-center gap-2 text-sm text-slate-500 font-medium mb-6">
+                        <span className="w-1 h-1 rounded-full bg-slate-300" />
+                        {college.location || "India"}
+                        <span className="w-1 h-1 rounded-full bg-slate-300" />
+                    </div>
+
+                    <div className="flex flex-col items-center gap-1 mb-8">
+                        <span className={`text-5xl font-black tracking-tighter ${isGold ? 'text-amber-500' : isSilver ? 'text-slate-500' : 'text-orange-500'}`}>
+                            {college.votes}
+                        </span>
+                        <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Votes</span>
+                    </div>
+                </div>
+
+                {/* VOTE BUTTON (FLOATING OVER EDGE) */}
+                <button
+                    onClick={(e) => onVote(e, college)}
+                    disabled={isVoting}
+                    className={`absolute -bottom-6 flex items-center gap-2 px-8 py-4 rounded-full text-sm font-bold shadow-xl transition-all active:scale-95 hover:shadow-2xl
+                        ${isGold ? 'bg-slate-900 text-white hover:bg-black' : 'bg-white text-slate-900 border border-slate-100 hover:bg-slate-50'}
+                    `}
+                >
+                    <ArrowUp size={16} className={isVoting ? 'animate-bounce' : ''} />
+                    {isVoting ? 'Voting...' : 'VOTE NOW'}
+                </button>
+            </div>
+        </div>
+    );
+}
+
+function RankRow({ college, index, onVote, isVoting }) {
+    return (
+        <div className="group relative flex items-center gap-4 p-4 rounded-2xl bg-white/40 border border-white/40 backdrop-blur-md shadow-sm hover:bg-white/60 hover:shadow-md hover:scale-[1.01] transition-all duration-300">
+            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 text-slate-500 font-bold text-lg">
+                #{index + 4}
+            </div>
+
+            <div className="flex-1 min-w-0">
+                <div className="font-bold text-slate-800 truncate text-lg">{college.name}</div>
+                <div className="text-sm text-slate-500 flex items-center gap-2">
+                    {college.location}
+                    <span className="w-1 h-1 bg-slate-300 rounded-full" />
+                    <span className="text-slate-400">{college.votes} Votes</span> // Fixed syntax error here
+                </div>
+            </div>
+
+            <button
+                onClick={(e) => onVote(e, college)}
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
+                title="Vote"
+            >
+                <ArrowUp size={18} />
+            </button>
+        </div>
+    );
+}
 
 export default function HypePage() {
     const { user, signInWithGoogle } = useAuth();
     const [stats, setStats] = useState({ leaderboard: [], recentVotes: [] });
     const [searchQuery, setSearchQuery] = useState("");
+    const [debouncedSearchQuery, setDebouncedSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [isVoting, setIsVoting] = useState(false);
 
@@ -35,23 +135,30 @@ export default function HypePage() {
         return () => clearInterval(interval);
     }, []);
 
+    // Debounce Search
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedSearchQuery(searchQuery);
+        }, 300);
+        return () => clearTimeout(handler);
+    }, [searchQuery]);
+
     // Search Logic
     useEffect(() => {
         const performSearch = async () => {
-            if (!searchQuery.trim()) {
+            if (!debouncedSearchQuery.trim()) {
                 setSearchResults([]);
                 return;
             }
             try {
-                const data = await searchAll({ q: searchQuery });
+                const data = await searchAll({ q: debouncedSearchQuery });
                 setSearchResults((data.colleges || []).slice(0, 8)); // Limit to 8
             } catch (err) {
                 console.error("Search failed:", err);
             }
         };
-        const timeoutId = setTimeout(performSearch, 300);
-        return () => clearTimeout(timeoutId);
-    }, [searchQuery]);
+        performSearch();
+    }, [debouncedSearchQuery]);
 
     const handleVote = async (e, college) => {
         e.preventDefault();
@@ -102,133 +209,125 @@ export default function HypePage() {
         }
     };
 
+    const top3 = stats.leaderboard.slice(0, 3);
+    const rest = stats.leaderboard.slice(3, 50); // Limit total to 50
+
     return (
-        <div className="list-page min-h-screen">
-            {/* 1. HERO SECTION - MATCHING COLLEGES PAGE EXACTLY */}
-            <section className="list-hero list-hero--colleges">
-                <div className="list-hero-bg" aria-hidden="true">
-                    <div className="hero-orb hero-orb--1" />
-                    <div className="hero-orb hero-orb--2" />
-                </div>
+        <div className="min-h-screen bg-[#F8FAFC] relative overflow-hidden font-sans text-slate-900 selection:bg-amber-100 selection:text-amber-900">
 
-                <Container>
-                    <div className="list-hero-content">
-                        <RevealOnScroll>
-                            <span className="list-hero-kicker flex items-center justify-center gap-2">
-                                <Flame size={14} className="text-orange-500 fill-orange-500" /> Live Leaderboard
+            {/* GLOBAL BACKGROUND FX */}
+            <div className="fixed inset-0 pointer-events-none z-0">
+                <div className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vw] bg-purple-200/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob"></div>
+                <div className="absolute top-[-20%] right-[-10%] w-[70vw] h-[70vw] bg-blue-200/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000"></div>
+                <div className="absolute bottom-[-20%] left-[20%] w-[70vw] h-[70vw] bg-pink-200/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000"></div>
+            </div>
+
+            <div className="relative z-10 pb-32">
+                {/* 1. HERO - PREVIOUSLY V20 PHOENIX */}
+                <section className="pt-32 pb-12 flex flex-col items-center text-center px-4">
+                    <RevealOnScroll>
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 border border-white/50 backdrop-blur-md shadow-sm mb-8">
+                            <span className="relative flex h-3 w-3">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
                             </span>
-                            <h1 className="list-hero-title">
-                                Campus Legends
-                            </h1>
-                            <p className="list-hero-subtitle">
-                                The ultimate popularity contest. Vote for your college to prove which campus has the strongest community in India.
-                            </p>
-                        </RevealOnScroll>
-                    </div>
-                </Container>
-            </section>
+                            <span className="text-xs font-bold tracking-widest uppercase text-slate-500">Live Popularity Contest</span>
+                        </div>
 
-            {/* 2. SEARCH BAR - MATCHING GLASS PANEL STANDARDS */}
-            <section className="list-filters-section" style={{ display: 'block', position: 'relative', marginTop: '-40px', zIndex: 20 }}>
-                <Container>
-                    <GlassPanel className="filter-bar !p-2" variant="default">
-                        <div className="flex-1 relative">
-                            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
-                                <Search size={20} />
-                            </div>
+                        <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-slate-900 via-slate-800 to-slate-500 drop-shadow-sm">
+                            Campus Legends
+                        </h1>
+                        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                            Who runs this city? Vote for your college and prove that your campus has the strongest community in India.
+                        </p>
+                    </RevealOnScroll>
+                </section>
+
+                {/* 2. FLOATING SEARCH - THE PILL */}
+                <div className="sticky top-6 z-40 px-4 mb-16 flex justify-center">
+                    <div className="w-full max-w-2xl relative group">
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                        <div className="relative flex items-center bg-white/80 backdrop-blur-2xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-full h-16 px-6 transition-all focus-within:ring-2 focus-within:ring-indigo-500/20 focus-within:scale-[1.01] overflow-visible">
+                            <Search className="text-slate-400 w-5 h-5 shrink-0" />
                             <input
-                                type="search"
-                                className="w-full h-12 pl-12 pr-4 bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-400 font-medium"
-                                placeholder="Search for your college to vote..."
+                                type="text"
+                                className="w-full bg-transparent border-none focus:ring-0 text-lg font-medium placeholder-slate-400 text-slate-800 h-full ml-4"
+                                placeholder="Find your college & cast your vote..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                             />
-                            {/* SEARCH DROPDOWN */}
+                            {/* DROPDOWN RESULTS */}
                             {searchQuery && (
-                                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden z-50 overflow-y-auto" style={{ maxHeight: '300px' }}>
+                                <div className="absolute top-full left-0 right-0 mx-6 mt-4 bg-white/90 backdrop-blur-xl rounded-2xl border border-white/50 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-50 ring-1 ring-black/5" style={{ maxHeight: '300px', overflowY: 'auto' }}>
                                     {searchResults.length > 0 ? (
                                         searchResults.map(college => (
                                             <div
                                                 key={college.id}
                                                 onClick={(e) => handleVote(e, college)}
-                                                className="p-3 hover:bg-slate-50 cursor-pointer flex justify-between items-center border-b border-slate-50 last:border-0"
+                                                className="p-4 hover:bg-slate-50 cursor-pointer flex justify-between items-center border-b border-slate-100/50 last:border-0 group/item transition-colors"
                                             >
                                                 <div>
-                                                    <div className="font-bold text-slate-800">{college.name}</div>
+                                                    <div className="font-bold text-slate-800 group-hover/item:text-indigo-600 transition-colors">{college.name}</div>
                                                     <div className="text-xs text-slate-500">{college.location}</div>
                                                 </div>
-                                                <div className="text-xs font-bold text-indigo-600">Vote</div>
+                                                <div className="px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-bold rounded-lg opacity-0 group-hover/item:opacity-100 transition-opacity">
+                                                    VOTE
+                                                </div>
                                             </div>
                                         ))
                                     ) : (
-                                        <div className="p-4 text-center text-slate-500">No colleges found</div>
+                                        <div className="p-8 text-center text-slate-400">
+                                            No colleges found matching "{searchQuery}"
+                                        </div>
                                     )}
                                 </div>
                             )}
                         </div>
-                        {!user && (
-                            <div className="hidden md:flex items-center gap-2 px-4 py-2 bg-amber-50 text-amber-700 text-xs font-bold rounded-lg border border-amber-100 whitespace-nowrap">
-                                <Lock size={12} /> Login to Vote
-                            </div>
-                        )}
-                    </GlassPanel>
-                </Container>
-            </section>
+                    </div>
+                </div>
 
-            {/* 3. RESULTS GRID - MATCHING COLLEGES PAGE GRID */}
-            <section className="list-results pt-12 pb-24">
-                <Container>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {stats.leaderboard.slice(0, 50).map((college, index) => {
-                            // Determine Badge
-                            let badge = null;
-                            if (index === 0) badge = { text: "🏆 CHAMPION", color: "#f59e0b" }; // Amber 500
-                            else if (index === 1) badge = { text: "🥈 SILVER", color: "#94a3b8" }; // Slate 400
-                            else if (index === 2) badge = { text: "🥉 BRONZE", color: "#fdba74" }; // Orange 300
-                            else badge = { text: `#${index + 1}`, color: "#e2e8f0", textColor: "#64748b" }; // Slate 200
+                <Container className="max-w-6xl">
+                    {/* 3. THE PODIUM (TOP 3) */}
+                    {top3.length > 0 && (
+                        <div className="mb-24 flex flex-col md:flex-row justify-center items-end gap-6 md:gap-8 min-h-[450px]">
+                            {/* SILVER (2) */}
+                            {top3[1] && <PodiumCard college={top3[1]} rank={2} onVote={handleVote} isVoting={isVoting} />}
 
-                            return (
-                                <RevealOnScroll key={college.id} delay={index * 50}>
-                                    <div className="relative group h-full">
-                                        <Card
-                                            type="college"
-                                            title={college.name}
-                                            subtitle={college.location || "India"}
-                                            href={`/college/${college.id}`}
-                                            badge={badge}
-                                            data={college}
-                                            // Customizing the subtitle area to show votes clearly
-                                            tags={[`${college.votes} Votes`]}
-                                            hideFooter={index < 3} // Hide footer for top 3 to focus on winning
-                                        />
+                            {/* GOLD (1) */}
+                            <RevealOnScroll>
+                                <PodiumCard college={top3[0]} rank={1} onVote={handleVote} isVoting={isVoting} />
+                            </RevealOnScroll>
 
-                                        {/* Floating Vote Button for ALL cards for consistency */}
-                                        <div className="absolute bottom-4 right-4 z-20">
-                                            <button
-                                                onClick={(e) => handleVote(e, college)}
-                                                className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-bold shadow-lg hover:scale-105 active:scale-95 transition-transform"
-                                            >
-                                                <ArrowUp size={14} /> Vote
-                                            </button>
-                                        </div>
-                                    </div>
-                                </RevealOnScroll>
-                            );
-                        })}
+                            {/* BRONZE (3) */}
+                            {top3[2] && <PodiumCard college={top3[2]} rank={3} onVote={handleVote} isVoting={isVoting} />}
+                        </div>
+                    )}
+
+                    {/* 4. THE REST (#4 - #50) */}
+                    <div className="max-w-4xl mx-auto space-y-3">
+                        {rest.map((college, i) => (
+                            <RevealOnScroll key={college.id} delay={i * 30}>
+                                <RankRow college={college} index={i} onVote={handleVote} isVoting={isVoting} />
+                            </RevealOnScroll>
+                        ))}
 
                         {stats.leaderboard.length === 0 && (
-                            <div className="col-span-full py-20 text-center text-slate-400">
-                                <p>Loading the leaderboard...</p>
+                            <div className="py-20 text-center text-slate-400 animate-pulse">
+                                Calculating popularity scores...
                             </div>
                         )}
                     </div>
                 </Container>
-            </section>
+            </div>
 
-            {/* VERSION MARKER - V21 CONSISTENCY */}
+            {/* VERSION MARKER - V24 RESTORED */}
             <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v2.1-consistent
+                v2.4-premium-fixed
             </div>
         </div>
     );
 }
+
+// Add these animations to tailwind.config or global css if not present
+// animate-blob, animation-delay-2000, etc.
