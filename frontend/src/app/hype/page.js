@@ -153,7 +153,7 @@ export default function HypePage() {
             <section className="list-filters-section" style={{ display: 'block', position: 'relative', marginTop: '-40px' }}>
                 <Container>
                     {/* Strict max-width for Search to prevent it looking too wide */}
-                    <div className="max-w-3xl mx-auto">
+                    <div className="mx-auto" style={{ maxWidth: '700px' }}>
                         <GlassPanel className="!p-3 !gap-2" variant="strong">
                             <div className="filter-search mb-0">
                                 <input
@@ -218,7 +218,7 @@ export default function HypePage() {
 
                         {/* SILVER (#2) */}
                         {top3[1] && (
-                            <div className="order-1 w-full md:w-[350px] shrink-0 relative group">
+                            <div className="order-1 shrink-0 relative group" style={{ width: '350px', maxWidth: '100%' }}>
                                 <div className="absolute -top-3 left-4 z-10 bg-slate-100 text-slate-600 font-black text-xs px-2 py-1 rounded border border-slate-200 shadow-sm">#2 SILVER</div>
                                 <Card
                                     type="college"
@@ -241,7 +241,7 @@ export default function HypePage() {
 
                         {/* GOLD (#1) - STRICT WIDTH */}
                         {top3[0] && (
-                            <div className="order-2 w-full md:w-[380px] shrink-0 relative group -mt-8 md:-mt-12 z-10">
+                            <div className="order-2 shrink-0 relative group -mt-8 md:-mt-12 z-10 transform md:scale-105" style={{ width: '360px', maxWidth: '100%' }}>
                                 <div className="absolute -top-3 left-4 z-10 bg-amber-400 text-amber-950 font-black text-xs px-2 py-1 rounded border border-amber-500 shadow-sm">#1 GOLD</div>
                                 <Card
                                     type="college"
@@ -264,7 +264,7 @@ export default function HypePage() {
 
                         {/* BRONZE (#3) */}
                         {top3[2] && (
-                            <div className="order-3 w-full md:w-[350px] shrink-0 relative group">
+                            <div className="order-3 shrink-0 relative group" style={{ width: '350px', maxWidth: '100%' }}>
                                 <div className="absolute -top-3 left-4 z-10 bg-orange-100 text-orange-800 font-black text-xs px-2 py-1 rounded border border-orange-200 shadow-sm">#3 BRONZE</div>
                                 <Card
                                     type="college"
@@ -347,6 +347,11 @@ export default function HypePage() {
                     </div>
                 </Container>
             </section>
+
+            {/* DEBUG FOOTER - TO CONFIRM DEPLOYMENT */}
+            <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
+                v1.7-fix
+            </div>
         </div>
     );
 }
