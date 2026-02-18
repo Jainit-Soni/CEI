@@ -1,17 +1,13 @@
 "use client";
 
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '@/components/Container';
-import GlassPanel from '@/components/GlassPanel';
-import Card from '@/components/Card'; // Import Premium Card
-import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api'; // Added searchAll
-import { Trophy, Search, Flame, ArrowUp, Activity } from 'lucide-react';
+import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
+import { Trophy, Search, Flame, ArrowUp, Zap, Activity } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
-
 import "../colleges/page.css";
 
-// Simple debounce function if lodash is not available, but usually it is in Next.js projects or we can write one.
-// Writing a simple hook-friendly debounce here to be safe and dependency-free for this file.
+// Simple debounce hook
 function useDebounce(value, delay) {
     const [debouncedValue, setDebouncedValue] = useState(value);
     useEffect(() => {
@@ -27,13 +23,11 @@ function useDebounce(value, delay) {
 
 export default function HypePage() {
     const [stats, setStats] = useState({ leaderboard: [], recentVotes: [] });
-    // Removed allColleges (client-side list)
     const [searchQuery, setSearchQuery] = useState("");
-    const [searchResults, setSearchResults] = useState([]); // Server-side results
+    const [searchResults, setSearchResults] = useState([]);
     const [isVoting, setIsVoting] = useState(false);
     const [isSearching, setIsSearching] = useState(false);
 
-    // Debounce search query
     const debouncedSearchQuery = useDebounce(searchQuery, 300);
 
     // Initial Data Load
@@ -47,26 +41,22 @@ export default function HypePage() {
             }
         };
         load();
-
         const interval = setInterval(() => {
             fetchHypeStats().then(setStats).catch(console.error);
-        }, 10000);
+        }, 10000); // 10s refresh
         return () => clearInterval(interval);
     }, []);
 
-    // Perform Server-Side Search
+    // Server-Side Search
     useEffect(() => {
         const performSearch = async () => {
             if (!debouncedSearchQuery.trim()) {
                 setSearchResults([]);
                 return;
             }
-
             setIsSearching(true);
             try {
-                // Use the main search API which searches the FULL database
                 const data = await searchAll({ q: debouncedSearchQuery });
-                // API returns { colleges: [], exams: [] }
                 setSearchResults(data.colleges || []);
             } catch (err) {
                 console.error("Search failed:", err);
@@ -74,45 +64,29 @@ export default function HypePage() {
                 setIsSearching(false);
             }
         };
-
         performSearch();
     }, [debouncedSearchQuery]);
 
-
-    // Handle Vote
+    // Vote Handler
     const handleVote = async (college) => {
         if (isVoting) return;
         setIsVoting(true);
-
         const collegeId = college.id || college._id;
 
         // Optimistic Update
         setStats(prev => {
             const newLeaderboard = [...prev.leaderboard];
             const existingIndex = newLeaderboard.findIndex(c => c.id === collegeId);
-
             if (existingIndex >= 0) {
-                newLeaderboard[existingIndex] = {
-                    ...newLeaderboard[existingIndex],
-                    votes: newLeaderboard[existingIndex].votes + 1
-                };
+                newLeaderboard[existingIndex] = { ...newLeaderboard[existingIndex], votes: newLeaderboard[existingIndex].votes + 1 };
             } else {
                 newLeaderboard.push({ id: collegeId, name: college.name, votes: 1 });
             }
-
             newLeaderboard.sort((a, b) => b.votes - a.votes);
-
             return {
                 ...prev,
                 leaderboard: newLeaderboard,
-                recentVotes: [
-                    {
-                        collegeName: college.name,
-                        userName: "You",
-                        timestamp: new Date().toISOString()
-                    },
-                    ...prev.recentVotes
-                ].slice(0, 10)
+                recentVotes: [{ collegeName: college.name, userName: "You", timestamp: new Date().toISOString() }, ...prev.recentVotes].slice(0, 10)
             };
         });
 
@@ -121,9 +95,9 @@ export default function HypePage() {
                 collegeId: collegeId,
                 collegeName: college.name,
                 userId: "session-user-" + Date.now(),
-                userName: "Anonymous Student"
+                userName: "Anonymous"
             });
-            setSearchQuery(""); // Clear search
+            setSearchQuery("");
             setSearchResults([]);
         } catch (err) {
             console.error("Vote failed:", err);
@@ -133,205 +107,183 @@ export default function HypePage() {
     };
 
     const top3 = stats.leaderboard.slice(0, 3);
-    const rest = stats.leaderboard.slice(3, 15); // Show Top 4-15 (smaller batch for cleaner UI)
+    const rest = stats.leaderboard.slice(3, 20);
 
     return (
-        <div className="list-page min-h-screen bg-slate-50">
-            {/* 1. HERO: Huge Search Input */}
-            <section className="relative pt-24 pb-12 px-4 overflow-visible">
-                <div className="absolute inset-0 z-0 bg-gradient-to-b from-indigo-900 via-slate-900 to-slate-900 rounded-b-[3rem] overflow-hidden">
-                    <div className="hero-orb hero-orb--1 opacity-40" />
-                    <div className="hero-orb hero-orb--2 opacity-40" />
-                </div>
+        <div className="min-h-screen bg-[#020617] text-white selection:bg-indigo-500 selection:text-white font-sans overflow-hidden">
+            {/* BACKGROUND EFFECTS */}
+            <div className="fixed inset-0 z-0 pointer-events-none">
+                <div className="absolute top-[-20%] left-[20%] w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] mix-blend-screen animate-pulse-slow" />
+                <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] mix-blend-screen" />
+            </div>
 
-                <Container className="relative z-10">
-                    <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="relative z-10">
+                <Container>
+                    {/* HEADER & SEARCH */}
+                    <div className="pt-24 pb-12 flex flex-col items-center text-center">
                         <RevealOnScroll>
-                            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-indigo-300 text-xs font-bold uppercase tracking-widest backdrop-blur-md border border-white/10 mb-6">
-                                <Flame size={12} className="text-orange-500" /> Live Popularity Contest
+                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-indigo-400 text-xs font-black uppercase tracking-widest backdrop-blur-md mb-8 shadow-lg shadow-indigo-900/20">
+                                <Flame size={12} className="text-orange-500 fill-orange-500 animate-pulse" /> Global Live Leaderboard
                             </span>
-                            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-                                Who runs the campus?
+
+                            <h1 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 mb-6 tracking-tight drop-shadow-sm">
+                                Campus Legends
                             </h1>
-                            <p className="text-lg text-slate-300 mb-10">
-                                Real-time votes. No fake numbers. Search your college from the <b>entire database</b> and push it to the top.
+                            <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
+                                Vote for your college and push it to the top. Real-time global rankings.
                             </p>
 
-                            {/* SEARCH BAR */}
-                            <div className="relative group">
-                                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl blur opacity-25 group-focus-within:opacity-75 transition duration-500"></div>
-                                <div className="relative flex items-center bg-white rounded-2xl shadow-2xl p-2 transition-transform transform group-focus-within:scale-[1.02]">
-                                    <Search className={`text-slate-400 ml-4 w-6 h-6 ${isSearching ? 'animate-pulse text-indigo-500' : ''}`} />
+                            {/* NEON SEARCH BAR */}
+                            <div className="relative w-full max-w-2xl mx-auto group z-50">
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500 group-focus-within:opacity-100 group-focus-within:blur-md"></div>
+                                <div className="relative flex items-center bg-[#0B1121] rounded-2xl border border-white/10 shadow-2xl">
+                                    <Search className={`ml-5 w-6 h-6 ${isSearching ? 'text-indigo-400 animate-pulse' : 'text-slate-500'}`} />
                                     <input
                                         type="text"
-                                        className="w-full bg-transparent border-none text-xl p-4 placeholder-slate-400 focus:ring-0 text-slate-900 font-bold"
-                                        placeholder="Search any college to vote..."
+                                        className="w-full bg-transparent border-none text-xl py-5 px-4 placeholder-slate-600 focus:ring-0 text-white font-bold"
+                                        placeholder="Type your college name..."
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         autoFocus
                                     />
                                 </div>
 
-                                {/* Results Dropdown */}
+                                {/* SEARCH DROPDOWN */}
                                 {searchQuery && (
-                                    <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 max-h-[400px] overflow-y-auto custom-scrollbar">
+                                    <div className="absolute top-full left-0 right-0 mt-3 bg-[#0B1121]/95 backdrop-blur-xl rounded-xl border border-white/10 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 ring-1 ring-white/5">
                                         {searchResults.length > 0 ? (
-                                            searchResults.map(college => (
-                                                <button
-                                                    key={college.id || college._id}
-                                                    onClick={() => handleVote(college)}
-                                                    disabled={isVoting}
-                                                    className="w-full text-left p-4 hover:bg-indigo-50 flex items-center justify-between group/item transition-colors border-b border-slate-50 last:border-0"
-                                                >
-                                                    <div>
-                                                        <div className="font-bold text-slate-900 text-lg">{college.name}</div>
-                                                        <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">{college.location || "India"}</div>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 text-indigo-600 font-bold opacity-0 group-hover/item:opacity-100 transition-opacity translate-x-2 group-hover/item:translate-x-0">
-                                                        <span>Vote</span>
-                                                        <ArrowUp size={16} />
-                                                    </div>
-                                                </button>
-                                            ))
+                                            <div className="max-h-[300px] overflow-y-auto custom-scrollbar">
+                                                {searchResults.map((college) => (
+                                                    <button
+                                                        key={college.id}
+                                                        onClick={() => handleVote(college)}
+                                                        className="w-full text-left p-4 hover:bg-white/5 flex items-center justify-between group/item transition-colors border-b border-white/5 last:border-0"
+                                                    >
+                                                        <div className="pr-4 min-w-0">
+                                                            <div className="font-bold text-slate-100 truncate">{college.name}</div>
+                                                            <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">{college.location || "India"}</div>
+                                                        </div>
+                                                        <div className="shrink-0 flex items-center gap-2 text-indigo-400 font-bold opacity-0 group-hover/item:opacity-100 transition-opacity translate-x-2 group-hover/item:translate-x-0">
+                                                            <span>VOTE</span>
+                                                            <ArrowUp size={16} />
+                                                        </div>
+                                                    </button>
+                                                ))}
+                                            </div>
                                         ) : (
                                             !isSearching && (
                                                 <div className="p-8 text-center text-slate-500">
-                                                    <p className="font-bold text-slate-700 mb-1">No colleges found</p>
-                                                    <p className="text-xs">Try searching for the full name or city.</p>
+                                                    <p className="text-sm font-medium">No colleges found matching "{searchQuery}"</p>
                                                 </div>
                                             )
                                         )}
                                         {isSearching && (
-                                            <div className="p-4 text-center text-slate-400 text-sm animate-pulse">Searching database...</div>
+                                            <div className="p-4 text-center text-indigo-400 text-sm font-bold animate-pulse">Searching global database...</div>
                                         )}
                                     </div>
                                 )}
                             </div>
                         </RevealOnScroll>
                     </div>
-                </Container>
-            </section>
 
-            {/* 2. PODIUM (Top 3) */}
-            <section className="pt-20 pb-12 -mt-20 relative z-20">
-                <Container>
-                    {top3.length > 0 ? (
-                        <div className="flex flex-col md:flex-row items-end justify-center gap-4 md:gap-8 min-h-[300px] mb-16">
-                            {/* Silver */}
-                            {top3[1] && (
-                                <div className="order-2 md:order-1 w-full md:w-1/3 max-w-[280px] animate-in slide-in-from-bottom-8 duration-700 delay-100">
-                                    <div className="relative bg-white/80 backdrop-blur-md rounded-2xl p-6 border border-slate-200 shadow-xl flex flex-col items-center hover:scale-105 transition-transform">
-                                        <div className="absolute -top-6 w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-black text-slate-600 border-4 border-white shadow-md">2</div>
-                                        <div className="h-16 w-16 mb-4 rounded-full bg-slate-50 border border-slate-100 p-2 flex items-center justify-center">
-                                            <span className="text-4xl">🥈</span>
+                    {/* PODIUM SECTION */}
+                    <div className="py-12 md:py-20 relative">
+                        {top3.length > 0 ? (
+                            <div className="flex flex-col md:flex-row items-end justify-center gap-6 md:gap-12 min-h-[350px]">
+                                {/* 2ND PLACE (SILVER) */}
+                                {top3[1] && (
+                                    <div className="order-2 md:order-1 flex-1 max-w-[300px] group animate-in slide-in-from-bottom-8 duration-700 delay-100">
+                                        <div className="relative bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700/50 rounded-2xl p-6 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
+                                            <div className="absolute -top-5 bg-slate-700 text-slate-300 font-black text-sm px-3 py-1 rounded-full border border-slate-600 shadow-xl">#2</div>
+                                            <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-4 text-3xl shadow-inner shadow-black/50">🥈</div>
+                                            <h3 className="text-slate-100 font-bold text-center leading-tight mb-3 line-clamp-2 min-h-[3rem] w-full">{top3[1].name}</h3>
+                                            <div className="px-4 py-1.5 bg-slate-800 rounded-lg text-slate-300 font-mono font-bold">{top3[1].votes}</div>
                                         </div>
-                                        <h3 className="font-bold text-slate-900 text-center leading-tight mb-2">{top3[1].name}</h3>
-                                        <span className="font-black text-2xl text-slate-700">{top3[1].votes}</span>
-                                        <span className="text-xs text-slate-500 uppercase tracking-wider font-bold">Votes</span>
                                     </div>
-                                </div>
-                            )}
+                                )}
 
-                            {/* Gold */}
-                            {top3[0] && (
-                                <div className="order-1 md:order-2 w-full md:w-1/3 max-w-[300px] z-10 -mt-12 md:-mt-16 animate-in slide-in-from-bottom-12 duration-700">
-                                    <div className="relative bg-gradient-to-b from-yellow-50 to-white rounded-2xl p-8 border border-yellow-100 shadow-2xl shadow-yellow-500/10 flex flex-col items-center transform md:scale-110 hover:scale-115 transition-transform">
-                                        <div className="absolute -top-8 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center font-black text-yellow-900 border-4 border-white shadow-lg text-2xl">1</div>
-                                        <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-50"></div>
-                                        <div className="mt-6 mb-4">
-                                            <Trophy size={56} className="text-yellow-500 drop-shadow-sm" />
+                                {/* 1ST PLACE (GOLD) */}
+                                {top3[0] && (
+                                    <div className="order-1 md:order-2 flex-1 max-w-[340px] z-10 -mt-12 md:-mt-16 group animate-in slide-in-from-bottom-12 duration-700">
+                                        <div className="relative bg-gradient-to-b from-amber-900/40 to-[#1a1205] border border-amber-500/30 rounded-3xl p-8 flex flex-col items-center shadow-2xl shadow-amber-900/20 hover:-translate-y-3 transition-transform duration-300">
+                                            <div className="absolute -inset-1 bg-gradient-to-b from-amber-500/20 to-transparent rounded-3xl blur-md opacity-50"></div>
+                                            <div className="absolute -top-6 bg-amber-500 text-amber-950 font-black text-lg px-4 py-2 rounded-full border border-amber-400 shadow-xl shadow-amber-500/40">#1</div>
+                                            <div className="relative mb-6">
+                                                <Trophy size={64} className="text-amber-400 drop-shadow-[0_0_15px_rgba(251,191,36,0.5)]" />
+                                            </div>
+                                            <h3 className="text-white text-xl md:text-2xl font-black text-center leading-tight mb-4 max-w-full break-words">{top3[0].name}</h3>
+                                            <div className="px-6 py-2 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-xl font-mono text-3xl font-black tracking-tight">{top3[0].votes}</div>
                                         </div>
-                                        <h3 className="text-2xl font-black text-slate-900 text-center leading-tight mb-3">{top3[0].name}</h3>
-                                        <div className="bg-yellow-100 text-yellow-800 px-6 py-2 rounded-full font-black text-3xl mb-1">{top3[0].votes}</div>
-                                        <span className="text-xs text-yellow-700 uppercase tracking-wider font-bold">Votes</span>
                                     </div>
-                                </div>
-                            )}
+                                )}
 
-                            {/* Bronze */}
-                            {top3[2] && (
-                                <div className="order-3 md:order-3 w-full md:w-1/3 max-w-[280px] animate-in slide-in-from-bottom-8 duration-700 delay-200">
-                                    <div className="relative bg-white/80 backdrop-blur-md rounded-2xl p-6 border border-orange-100 shadow-xl flex flex-col items-center hover:scale-105 transition-transform">
-                                        <div className="absolute -top-6 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center font-black text-orange-700 border-4 border-white shadow-md">3</div>
-                                        <div className="h-16 w-16 mb-4 rounded-full bg-orange-50 border border-orange-100 p-2 flex items-center justify-center">
-                                            <span className="text-4xl">🥉</span>
+                                {/* 3RD PLACE (BRONZE) */}
+                                {top3[2] && (
+                                    <div className="order-3 flex-1 max-w-[300px] group animate-in slide-in-from-bottom-8 duration-700 delay-200">
+                                        <div className="relative bg-gradient-to-b from-[#3a2018] to-[#1a0f0d] border border-orange-800/50 rounded-2xl p-6 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
+                                            <div className="absolute -top-5 bg-orange-800 text-orange-200 font-black text-sm px-3 py-1 rounded-full border border-orange-700 shadow-xl">#3</div>
+                                            <div className="w-16 h-16 rounded-full bg-orange-900/30 flex items-center justify-center mb-4 text-3xl shadow-inner shadow-black/50">🥉</div>
+                                            <h3 className="text-slate-100 font-bold text-center leading-tight mb-3 line-clamp-2 min-h-[3rem] w-full">{top3[2].name}</h3>
+                                            <div className="px-4 py-1.5 bg-orange-900/20 rounded-lg text-orange-300 font-mono font-bold">{top3[2].votes}</div>
                                         </div>
-                                        <h3 className="font-bold text-slate-900 text-center leading-tight mb-2">{top3[2].name}</h3>
-                                        <span className="font-black text-2xl text-slate-700">{top3[2].votes}</span>
-                                        <span className="text-xs text-slate-500 uppercase tracking-wider font-bold">Votes</span>
                                     </div>
-                                </div>
-                            )}
-                        </div>
-                    ) : (
-                        <div className="text-center py-12 text-slate-400 bg-white rounded-2xl border border-slate-100 shadow-sm">
-                            <Activity className="mx-auto mb-2 opacity-50" />
-                            <p>Leaderboard loading or empty...</p>
-                        </div>
-                    )}
-                </Container>
-            </section>
-
-            {/* 3. TRENDING GRID (Like Colleges Page) & TICKER */}
-            <section className="pb-24">
-                <Container>
-                    <div className="flex flex-col lg:flex-row gap-8">
-                        {/* Main Grid: Top 4+ */}
-                        <div className="flex-1">
-                            <h3 className="font-bold text-slate-900 text-xl mb-6 flex items-center gap-2">
-                                <ArrowUp className="text-green-500" /> Trending Campuses
-                            </h3>
-
-                            <div className="results-grid">
-                                {rest.map((college, idx) => (
-                                    <div key={college.id} className="card-wrapper">
-                                        <Card
-                                            title={college.name}
-                                            subtitle={`Rank #${idx + 4}`}
-                                            // Using 'tags' to show vote count prominently
-                                            tags={[`${college.votes} Votes`]}
-                                            meta={"Trending Now"}
-                                            // Mock generic image or no image, Card handles placeholder
-                                            href="#"
-                                        />
-                                    </div>
-                                ))}
+                                )}
                             </div>
+                        ) : (
+                            <div className="text-slate-600 text-center italic py-20">Leaderboard is waiting for the first champion...</div>
+                        )}
+                    </div>
 
+                    {/* MAIN LIST & TICKER */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-24">
+                        {/* LEFT: RANK LIST */}
+                        <div className="lg:col-span-2 space-y-3">
+                            <h3 className="text-slate-400 font-bold uppercase tracking-widest text-xs mb-4 pl-2">The Challengers</h3>
+                            {rest.map((college, idx) => (
+                                <div key={college.id} className="group relative">
+                                    <div className="absolute inset-0 bg-indigo-500/0 group-hover:bg-indigo-500/5 rounded-xl transition-colors"></div>
+                                    <div className="relative flex items-center gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.02] hover:border-indigo-500/30 transition-all">
+                                        <div className="w-10 text-center font-mono font-bold text-slate-500 group-hover:text-indigo-400">#{idx + 4}</div>
+                                        <div className="flex-1 min-w-0">
+                                            <h4 className="font-bold text-slate-200 truncate group-hover:text-white transition-colors">{college.name}</h4>
+                                        </div>
+                                        <div className="shrink-0 flex items-center gap-4">
+                                            <span className="font-mono font-bold text-slate-400">{college.votes} <span className="text-[10px] uppercase">votes</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                             {rest.length === 0 && top3.length === 0 && (
-                                <div className="p-12 text-center text-slate-400">No data found</div>
+                                <div className="p-8 text-center text-slate-600 border border-white/5 rounded-xl bg-white/[0.02]">
+                                    No data available.
+                                </div>
                             )}
                         </div>
 
-                        {/* Sidebar: Live Ticker */}
-                        <div className="w-full lg:w-80 space-y-6">
-                            <GlassPanel className="p-6 sticky top-24" variant="strong">
-                                <h3 className="text-sm font-black uppercase tracking-widest text-slate-500 mb-4 flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" /> Live Activity
-                                </h3>
+                        {/* RIGHT: LIVE FEED */}
+                        <div>
+                            <h3 className="text-slate-400 font-bold uppercase tracking-widest text-xs mb-4 pl-2 flex items-center gap-2">
+                                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Live Feed
+                            </h3>
+                            <div className="bg-[#0f172a] border border-white/5 rounded-2xl p-4 space-y-4 max-h-[600px] overflow-hidden relative">
+                                <div className="absolute top-0 inset-x-0 h-8 bg-gradient-to-b from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
                                 <div className="space-y-4">
-                                    {stats.recentVotes.slice(0, 8).map((vote, i) => (
-                                        <div key={i} className="flex gap-3 text-sm animate-in fade-in slide-in-from-right-4 border-b border-slate-100/50 last:border-0 pb-2 last:pb-0">
-                                            <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold text-xs shrink-0">
-                                                {vote.userName ? vote.userName.charAt(0) : "A"}
-                                            </div>
-                                            <div>
-                                                <p className="text-slate-700 leading-snug">
-                                                    <span className="font-bold">{vote.userName || "User"}</span> voted for <span className="font-bold text-indigo-600">{vote.collegeName}</span>
-                                                </p>
-                                                <span className="text-xs text-slate-400 flex items-center gap-1 mt-0.5">Just now</span>
-                                            </div>
+                                    {stats.recentVotes.map((vote, i) => (
+                                        <div key={i} className="flex gap-3 text-sm animate-in fade-in slide-in-from-right-4">
+                                            <div className="text-indigo-400 mt-0.5"><Zap size={14} /></div>
+                                            <p className="text-slate-400 leading-snug">
+                                                <span className="text-slate-200 font-bold">{vote.userName || "Someone"}</span> just voted for <span className="text-indigo-300 font-bold">{vote.collegeName}</span>
+                                            </p>
                                         </div>
                                     ))}
-                                    {stats.recentVotes.length === 0 && (
-                                        <div className="text-slate-400 text-sm italic">No recent votes. Start the fire!</div>
-                                    )}
                                 </div>
-                            </GlassPanel>
+                                <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
+                            </div>
                         </div>
                     </div>
+
                 </Container>
-            </section>
+            </div>
         </div>
     );
 }
