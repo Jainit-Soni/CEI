@@ -7,7 +7,7 @@ import Card from '@/components/Card'; // Import Premium Card
 import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api'; // Added searchAll
 import { Trophy, Search, Flame, ArrowUp, Activity } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
-import debounce from 'lodash.debounce'; // You might need to install this or write a simple debounce
+
 import "../colleges/page.css";
 
 // Simple debounce function if lodash is not available, but usually it is in Next.js projects or we can write one.
