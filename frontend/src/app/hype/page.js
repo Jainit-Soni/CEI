@@ -9,9 +9,10 @@ import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
 import { Search, Flame, ArrowUp, Zap, Lock, Filter } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
+import "@/app/colleges/page.css"; // Ensure we inherit global college styles
 
 // -----------------------------------------------------------------------------
-// V19-PREMIUM: Specialized Podium Components
+// V19-PREMIUM COMPONENTS (Restored & Enhanced)
 // -----------------------------------------------------------------------------
 
 function PodiumCard({ college, rank, onVote, isVoting }) {
@@ -95,7 +96,7 @@ function RankRow({ college, index, onVote, isVoting }) {
                 <div className="text-sm text-slate-500 flex items-center gap-2">
                     {college.location}
                     <span className="w-1 h-1 bg-slate-300 rounded-full" />
-                    <span className="text-slate-400">{college.votes} Votes</span> // Fixed syntax error here
+                    <span className="text-slate-400">{college.votes} Votes</span>
                 </div>
             </div>
 
@@ -109,6 +110,10 @@ function RankRow({ college, index, onVote, isVoting }) {
         </div>
     );
 }
+
+// -----------------------------------------------------------------------------
+// MAIN PAGE
+// -----------------------------------------------------------------------------
 
 export default function HypePage() {
     const { user, signInWithGoogle } = useAuth();
@@ -212,6 +217,11 @@ export default function HypePage() {
     const top3 = stats.leaderboard.slice(0, 3);
     const rest = stats.leaderboard.slice(3, 50); // Limit total to 50
 
+    // DERIVED STATS FOR TICKER
+    const totalVotes = stats.leaderboard.reduce((acc, curr) => acc + (curr.votes || 0), 0);
+    const activeColleges = stats.leaderboard.length;
+    const topState = top3[0]?.location?.split(',').pop()?.trim() || "India";
+
     return (
         <div className="min-h-screen bg-[#F8FAFC] relative overflow-hidden font-sans text-slate-900 selection:bg-amber-100 selection:text-amber-900">
 
@@ -223,7 +233,7 @@ export default function HypePage() {
             </div>
 
             <div className="relative z-10 pb-32">
-                {/* 1. HERO - PREVIOUSLY V20 PHOENIX */}
+                {/* 1. HERO - ENHANCED WITH STATS (EXAMS STYLE) */}
                 <section className="pt-32 pb-12 flex flex-col items-center text-center px-4">
                     <RevealOnScroll>
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 border border-white/50 backdrop-blur-md shadow-sm mb-8">
@@ -237,14 +247,32 @@ export default function HypePage() {
                         <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-slate-900 via-slate-800 to-slate-500 drop-shadow-sm">
                             Campus Legends
                         </h1>
-                        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed mb-12">
                             Who runs this city? Vote for your college and prove that your campus has the strongest community in India.
                         </p>
+
+                        {/* LIVE STATS TICKER (EXAMS STYLE) */}
+                        <div className="flex flex-wrap justify-center gap-8 md:gap-16 border-t border-slate-200/60 pt-8 max-w-4xl mx-auto">
+                            <div className="flex flex-col items-center gap-1">
+                                <span className="text-3xl font-black text-slate-800 tracking-tight">{totalVotes.toLocaleString()}</span>
+                                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Votes</span>
+                            </div>
+                            <div className="w-px h-12 bg-slate-200/60 hidden md:block"></div>
+                            <div className="flex flex-col items-center gap-1">
+                                <span className="text-3xl font-black text-slate-800 tracking-tight">{activeColleges}</span>
+                                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Colleges Active</span>
+                            </div>
+                            <div className="w-px h-12 bg-slate-200/60 hidden md:block"></div>
+                            <div className="flex flex-col items-center gap-1">
+                                <span className="text-3xl font-black text-amber-500 tracking-tight">{topState}</span>
+                                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Leading Region</span>
+                            </div>
+                        </div>
                     </RevealOnScroll>
                 </section>
 
-                {/* 2. FLOATING SEARCH - THE PILL */}
-                <div className="sticky top-6 z-40 px-4 mb-16 flex justify-center">
+                {/* 2. FLOATING SEARCH - THE PILL (UNCHANGED) */}
+                <div className="sticky top-6 z-40 px-4 mb-24 flex justify-center">
                     <div className="w-full max-w-2xl relative group">
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -304,30 +332,36 @@ export default function HypePage() {
                         </div>
                     )}
 
-                    {/* 4. THE REST (#4 - #50) */}
-                    <div className="max-w-4xl mx-auto space-y-3">
-                        {rest.map((college, i) => (
-                            <RevealOnScroll key={college.id} delay={i * 30}>
-                                <RankRow college={college} index={i} onVote={handleVote} isVoting={isVoting} />
-                            </RevealOnScroll>
-                        ))}
-
-                        {stats.leaderboard.length === 0 && (
-                            <div className="py-20 text-center text-slate-400 animate-pulse">
-                                Calculating popularity scores...
+                    {/* 4. THE REST (#4 - #50) - BENTO WRAPPED (EXAMS STYLE) */}
+                    <RevealOnScroll>
+                        <GlassPanel className="filters-panel !p-8 !rounded-[2.5rem] !bg-white/40 !border-white/50 !backdrop-blur-xl !shadow-sm" variant="strong">
+                            <div className="flex items-center justify-between mb-8 px-4">
+                                <h3 className="text-2xl font-bold text-slate-800 tracking-tight">Challengers</h3>
+                                <div className="text-sm font-medium text-slate-500">
+                                    Showing Top {rest.length}
+                                </div>
                             </div>
-                        )}
-                    </div>
+
+                            <div className="space-y-3">
+                                {rest.map((college, i) => (
+                                    <RankRow key={college.id} college={college} index={i} onVote={handleVote} isVoting={isVoting} />
+                                ))}
+
+                                {stats.leaderboard.length === 0 && (
+                                    <div className="py-20 text-center text-slate-400 animate-pulse">
+                                        Calculating popularity scores...
+                                    </div>
+                                )}
+                            </div>
+                        </GlassPanel>
+                    </RevealOnScroll>
                 </Container>
             </div>
 
-            {/* VERSION MARKER - V24 RESTORED */}
+            {/* VERSION MARKER - V25 ENHANCED */}
             <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v2.4-premium-fixed
+                v2.5-exam-enhanced
             </div>
         </div>
     );
 }
-
-// Add these animations to tailwind.config or global css if not present
-// animate-blob, animation-delay-2000, etc.
