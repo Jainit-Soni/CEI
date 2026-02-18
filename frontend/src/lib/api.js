@@ -95,3 +95,60 @@ export async function fetchSharedList(shareId) {
   const { data } = await api.get(`/api/user/share/${shareId}`);
   return data;
 }
+
+// News API
+export async function fetchNews() {
+  const { data } = await api.get("/api/news");
+  return data;
+}
+
+export async function postNews(newsData) {
+  const { data } = await api.post("/api/news", newsData);
+  return data;
+}
+
+// Hype API
+export async function fetchHypeStats() {
+  const { data } = await api.get("/api/hype/stats");
+  return data;
+}
+
+export async function postHypeVote(voteData) {
+  const { data } = await api.post("/api/hype/vote", voteData);
+  return data;
+}
+
+// Predictor API
+export async function postPredict(scoreData) {
+  const { data } = await api.post("/api/predict", scoreData);
+  return data;
+}
+
+// Scholarships API
+export async function fetchScholarships() {
+  const { data } = await api.get("/api/scholarships");
+  return data;
+}
+
+export async function fetchScholarship(id) {
+  const { data } = await api.get(`/api/scholarships/${id}`);
+  return data;
+}
+
+// Activity / Live Pulse API
+export async function fetchLiveActivity(collegeId) {
+  const { data } = await api.get("/api/activity/stats", { params: { collegeId } });
+  return data;
+}
+
+export async function postActivityPing(collegeId) {
+  const { data } = await api.post("/api/activity/ping", { collegeId });
+  return data;
+}
+
+// Battle Arena API
+export async function fetchBattleData() {
+  // Assuming battle has its own data endpoint or uses hype stats
+  const { data } = await api.get("/api/hype/stats");
+  return data;
+}

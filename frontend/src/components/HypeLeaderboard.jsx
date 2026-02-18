@@ -10,37 +10,52 @@ export default function HypeLeaderboard({ data }) {
     const maxVotes = Math.max(...data.map(d => d.votes));
 
     return (
-        <div className="hype-leaderboard glass-panel">
-            <h3 className="leaderboard-title">
-                <Trophy className="text-yellow-400 mr-2" size={20} />
+        <div className="hype-leaderboard-container">
+            <h3 className="flex items-center gap-2 text-xl font-extrabold text-slate-800 mb-8">
+                <Trophy className="text-amber-400" size={24} />
                 Live Standings
             </h3>
 
-            <div className="leaderboard-list">
+            <div className="flex flex-col gap-6">
                 {data.map((item, index) => {
                     const widthStart = (item.votes / maxVotes) * 100;
                     const rank = index + 1;
 
-                    // Simulate trend for demo (Randomize for now, would be real data later)
+                    // Simulate trend
                     const trend = item.votes % 3 === 0 ? "up" : item.votes % 3 === 1 ? "down" : "flat";
 
                     return (
-                        <div key={item.id} className={`leaderboard-item ${rank <= 3 ? 'top-rank' : ''}`}>
-                            <div className="rank-col">
-                                <span className={`rank-badge rank-${rank}`}>{rank}</span>
-                                {trend === "up" && <TrendingUp size={14} className="text-green-400" />}
-                                {trend === "down" && <TrendingDown size={14} className="text-red-400" />}
-                                {trend === "flat" && <Minus size={14} className="text-slate-500" />}
+                        <div key={item.id} className="flex items-center gap-6 group">
+                            <div className="flex flex-col items-center gap-1 w-12 flex-shrink-0">
+                                <span className={`w-10 h-10 rounded-full flex items-center justify-center font-black text-lg shadow-sm border ${rank === 1 ? 'bg-amber-50 border-amber-200 text-amber-600 shadow-amber-100' :
+                                        rank === 2 ? 'bg-slate-50 border-slate-200 text-slate-500 shadow-slate-100' :
+                                            rank === 3 ? 'bg-orange-50 border-orange-200 text-orange-600 shadow-orange-100' :
+                                                'bg-white border-slate-100 text-slate-400'
+                                    }`}>
+                                    {rank}
+                                </span>
+                                {trend === "up" && <TrendingUp size={14} className="text-emerald-500" />}
+                                {trend === "down" && <TrendingDown size={14} className="text-rose-500" />}
+                                {trend === "flat" && <Minus size={14} className="text-slate-300" />}
                             </div>
 
-                            <div className="info-col">
-                                <div className="name-row">
-                                    <span className="college-name">{item.name}</span>
-                                    <span className="vote-count">{item.votes} Votes</span>
+                            <div className="flex-1">
+                                <div className="flex justify-between items-end mb-2">
+                                    <span className="font-extrabold text-slate-700 text-lg group-hover:text-indigo-600 transition-colors">
+                                        {item.name}
+                                    </span>
+                                    <div className="flex flex-col items-end">
+                                        <span className="text-indigo-600 font-black text-lg">{item.votes}</span>
+                                        <span className="text-[10px] uppercase tracking-widest font-bold text-slate-400">Total Votes</span>
+                                    </div>
                                 </div>
-                                <div className="bar-bg">
+                                <div className="h-2.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50">
                                     <div
-                                        className={`bar-fill rank-${rank}`}
+                                        className={`h-full rounded-full transition-all duration-1000 ease-out ${rank === 1 ? 'bg-gradient-to-r from-amber-400 to-yellow-500' :
+                                                rank === 2 ? 'bg-gradient-to-r from-slate-400 to-slate-500' :
+                                                    rank === 3 ? 'bg-gradient-to-r from-orange-400 to-orange-500' :
+                                                        'bg-gradient-to-r from-indigo-400 to-indigo-500'
+                                            }`}
                                         style={{ width: `${widthStart}%` }}
                                     ></div>
                                 </div>
@@ -49,89 +64,6 @@ export default function HypeLeaderboard({ data }) {
                     );
                 })}
             </div>
-
-            <style jsx>{`
-                .hype-leaderboard {
-                    padding: 24px;
-                    border-radius: 16px;
-                    background: rgba(255,255,255,0.03);
-                    border: 1px solid rgba(255,255,255,0.1);
-                }
-
-                .leaderboard-title {
-                    font-family: var(--font-display);
-                    font-size: 1.25rem;
-                    margin-bottom: 24px;
-                    display: flex;
-                    align-items: center;
-                    color: white;
-                }
-
-                .leaderboard-list {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 16px;
-                }
-
-                .leaderboard-item {
-                    display: flex;
-                    align-items: center;
-                    gap: 16px;
-                }
-
-                .rank-col {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 4px;
-                    width: 30px;
-                }
-
-                .rank-badge {
-                    font-size: 1rem;
-                    font-weight: 800;
-                    color: #64748b;
-                    width: 24px;
-                    height: 24px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .rank-badge.rank-1 { color: #facc15; font-size: 1.2rem; }
-                .rank-badge.rank-2 { color: #94a3b8; font-size: 1.1rem; }
-                .rank-badge.rank-3 { color: #b45309; font-size: 1.1rem; }
-
-                .info-col {
-                    flex: 1;
-                }
-
-                .name-row {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 6px;
-                    font-size: 0.95rem;
-                }
-                .college-name { color: white; font-weight: 600; }
-                .vote-count { color: #94a3b8; font-size: 0.85rem; }
-
-                .bar-bg {
-                    height: 8px;
-                    background: rgba(255,255,255,0.05);
-                    border-radius: 4px;
-                    overflow: hidden;
-                }
-
-                .bar-fill {
-                    height: 100%;
-                    border-radius: 4px;
-                    background: #3b82f6;
-                    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-                }
-                .bar-fill.rank-1 { background: linear-gradient(90deg, #facc15, #eab308); }
-                .bar-fill.rank-2 { background: linear-gradient(90deg, #94a3b8, #64748b); }
-                .bar-fill.rank-3 { background: linear-gradient(90deg, #fdba74, #ea580c); }
-
-            `}</style>
         </div>
     );
 }

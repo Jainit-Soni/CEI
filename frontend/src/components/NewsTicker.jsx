@@ -2,13 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { fetchNews } from '@/lib/api';
 
 export default function NewsTicker() {
     const [breakingNews, setBreakingNews] = useState([]);
 
     useEffect(() => {
-        fetch('/api/news')
-            .then(res => res.json())
+        fetchNews()
             .then(data => {
                 // Filter for urgent items only
                 const urgentItems = data.filter(item => item.urgent);
@@ -46,29 +46,32 @@ export default function NewsTicker() {
 
             <style jsx>{`
                 .news-ticker-container {
-                    background: #0f172a;
-                    border-bottom: 1px solid rgba(239, 68, 68, 0.3);
-                    height: 40px;
+                    background: rgba(255, 255, 255, 0.8);
+                    backdrop-filter: blur(12px);
+                    border-bottom: 1px solid rgba(79, 70, 229, 0.1);
+                    height: 44px;
                     display: flex;
                     align-items: center;
                     position: relative;
                     overflow: hidden;
                     z-index: 50;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
                 }
 
                 .ticker-label {
-                    background: #ef4444;
+                    background: var(--color-accent, #4f46e5);
                     color: white;
-                    font-weight: 800;
-                    font-size: 0.75rem;
+                    font-weight: 900;
+                    font-size: 0.7rem;
                     padding: 0 16px;
                     height: 100%;
                     display: flex;
                     align-items: center;
-                    letter-spacing: 1px;
+                    letter-spacing: 2px;
                     position: relative;
-                    z-index: 2;
-                    box-shadow: 4px 0 10px rgba(0,0,0,0.5);
+                    z-index: 10;
+                    box-shadow: 8px 0 20px rgba(79, 70, 229, 0.2);
+                    text-transform: uppercase;
                 }
 
                 .ticker-content {
@@ -82,12 +85,11 @@ export default function NewsTicker() {
 
                 .ticker-track {
                     display: flex;
-                    animation: ticker-scroll 30s linear infinite;
+                    animation: ticker-scroll 45s linear infinite;
                     white-space: nowrap;
-                    padding-left: 20px;
+                    padding-left: 30px;
                 }
                 
-                /* Pause on hover */
                 .ticker-content:hover .ticker-track {
                     animation-play-state: paused;
                 }
@@ -95,27 +97,30 @@ export default function NewsTicker() {
                 .ticker-item {
                     display: flex;
                     align-items: center;
-                    margin-right: 40px;
+                    margin-right: 50px;
                 }
 
                 .dot {
                     width: 6px;
                     height: 6px;
-                    background: #ef4444;
+                    background: var(--color-accent, #4f46e5);
                     border-radius: 50%;
-                    margin-right: 10px;
+                    margin-right: 12px;
+                    opacity: 0.5;
                 }
 
                 .ticker-link {
-                    color: #cbd5e1;
-                    font-size: 0.9rem;
-                    font-weight: 500;
+                    color: var(--color-slate-700, #334155);
+                    font-size: 0.85rem;
+                    font-weight: 700;
                     text-decoration: none;
-                    transition: color 0.2s;
+                    transition: all 0.2s;
+                    letter-spacing: -0.01em;
                 }
                 .ticker-link:hover {
-                    color: white;
-                    text-decoration: underline;
+                    color: var(--color-accent);
+                    text-decoration: none;
+                    transform: translateY(-1px);
                 }
 
                 @keyframes ticker-scroll {

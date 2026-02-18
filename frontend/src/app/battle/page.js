@@ -1,9 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Swords } from 'lucide-react';
+import { Swords, Info } from 'lucide-react';
 import BattleArena from '@/components/BattleArena';
 import Spinner from '@/components/Spinner';
+import Container from '@/components/Container';
+import GlassPanel from '@/components/GlassPanel';
+import { fetchColleges } from '@/lib/api';
+import { RevealOnScroll } from '@/lib/useIntersectionObserver';
+import "../colleges/page.css";
 
 export default function BattlePage() {
     const [colleges, setColleges] = useState([]);
@@ -15,8 +20,7 @@ export default function BattlePage() {
 
     // Load Colleges
     useEffect(() => {
-        fetch('/api/colleges')
-            .then(res => res.json())
+        fetchColleges()
             .then(data => {
                 setColleges(data.filter(c => c.rankingTier === 'Tier 1' || c.rankingTier === 'Tier 2')); // Pre-filter for better battles
                 setLoading(false);
@@ -33,144 +37,91 @@ export default function BattlePage() {
         else setFighter2(selected);
     };
 
-    if (loading) return <div className="min-h-screen flex items-center justify-center bg-slate-900"><Spinner /></div>;
+    if (loading) return <div className="min-h-screen flex items-center justify-center bg-transparent"><Spinner /></div>;
 
     return (
-        <div className="battle-page">
-            <h1 className="battle-title">COLLEGE BATTLE ROYALE ⚔️</h1>
-            <p className="battle-subtitle">Pick two fighters. The AI decides the winner.</p>
+import Combobox from '@/components/Combobox';
 
-            <div className="selectors-container">
-                <div className="selector-group">
-                    <label className="text-blue-400 font-bold mb-2 block">Choose Fighter 1</label>
-                    <select
-                        className="battle-select"
-                        onChange={(e) => handleSelect(1, e.target.value)}
-                        value={fighter1?._id || fighter1?.id || ""}
-                    >
-                        <option value="">Select College...</option>
-                        {colleges.map(c => (
-                            <option key={c._id || c.id} value={c._id || c.id}>{c.name}</option>
-                        ))}
-                    </select>
-                </div>
+    // ... (imports remain matching file)
 
-                <div className="vs-text">VS</div>
+    // ... inside component
 
-                <div className="selector-group">
-                    <label className="text-pink-400 font-bold mb-2 block">Choose Fighter 2</label>
-                    <select
-                        className="battle-select"
-                        onChange={(e) => handleSelect(2, e.target.value)}
-                        value={fighter2?._id || fighter2?.id || ""}
-                    >
-                        <option value="">Select College...</option>
-                        {colleges.map(c => (
-                            <option key={c._id || c.id} value={c._id || c.id}>{c.name}</option>
-                        ))}
-                    </select>
-                </div>
-            </div>
+    return (
+        <div className="list-page min-h-screen bg-transparent">
+            <section className="relative pt-32 pb-20 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-indigo-500/5 pointer-events-none" />
+                <Container className="relative z-10 text-center">
+                    <RevealOnScroll>
+                        <span className="inline-block py-1 px-3 rounded-full bg-red-100 text-red-600 text-[10px] font-black uppercase tracking-widest mb-4 border border-red-200">
+                            Updates Live
+                        </span>
+                        <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-6">
+                            College <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-indigo-600">Battle Royale</span> ⚔️
+                        </h1>
+                        <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
+                            The ultimate AI-powered showdown. Select two elite institutions and let the data decide the victor.
+                        </p>
+                    </RevealOnScroll>
+                </Container>
+            </section>
 
-            <div className="arena-container">
-                {fighter1 && fighter2 ? (
-                    <BattleArena college1={fighter1} college2={fighter2} />
-                ) : (
-                    <div className="empty-arena">
-                        <Swords size={60} className="text-slate-600 mb-4" />
-                        <h3>Arena Empty</h3>
-                        <p>Select two colleges above to start the fight.</p>
+            <section className="relative z-20 -mt-10 mb-12">
+                <Container>
+                    <GlassPanel className="p-8 shadow-2xl border-white/60 bg-white/80 backdrop-blur-xl" variant="strong">
+                        <div className="grid grid-cols-1 md:grid-cols-[1fr,auto,1fr] items-center gap-8">
+
+                            {/* Fighter 1 */}
+                            <div className="text-indigo-600">
+                                <Combobox
+                                    label="Challenger 1"
+                                    options={colleges}
+                                    value={fighter1?._id || fighter1?.id || ""}
+                                    onChange={(val) => handleSelect(1, val)}
+                                    placeholder="Select College..."
+                                />
+                            </div>
+
+                            {/* VS Badge */}
+                            <div className="flex justify-center md:pt-6">
+                                <div className="w-16 h-16 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-black italic text-xl shadow-lg rotate-3 hover:rotate-0 transition-transform duration-300 border-4 border-white ring-1 ring-slate-200">
+                                    VS
+                                </div>
+                            </div>
+
+                            {/* Fighter 2 */}
+                            <div className="text-rose-500">
+                                <Combobox
+                                    label="Challenger 2"
+                                    options={colleges}
+                                    value={fighter2?._id || fighter2?.id || ""}
+                                    onChange={(val) => handleSelect(2, val)}
+                                    placeholder="Select College..."
+                                />
+                            </div>
+                        </div>
+                    </GlassPanel>
+                </Container>
+            </section>
+
+            <section className="arena-wrapper py-12">
+                <Container>
+                    <div className="max-w-5xl mx-auto">
+                        {fighter1 && fighter2 ? (
+                            <BattleArena college1={fighter1} college2={fighter2} />
+                        ) : (
+                            <div className="h-[400px] rounded-[32px] border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-slate-400 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                                <div className="p-8 rounded-full bg-white shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <Swords size={48} className="text-slate-300 group-hover:text-indigo-500 transition-colors" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-slate-800 mb-2">Arena Empty</h3>
+                                <p className="max-w-xs text-center text-sm font-medium text-slate-500">
+                                    Select two colleges above to initiate the comparison engine.
+                                </p>
+                            </div>
+                        )}
                     </div>
-                )}
-            </div>
-
-            <style jsx>{`
-                .battle-page {
-                    min-height: 100vh;
-                    background: #0f172a;
-                    padding: 40px 20px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-                .battle-title {
-                    font-family: var(--font-display);
-                    font-size: 3rem;
-                    background: linear-gradient(135deg, #f59e0b, #fbbf24);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-                    margin-bottom: 8px;
-                    text-align: center;
-                    text-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
-                }
-
-                .battle-subtitle {
-                    color: #94a3b8;
-                    font-size: 1.1rem;
-                    margin-bottom: 40px;
-                }
-
-                .selectors-container {
-                    display: flex;
-                    align-items: center;
-                    gap: 20px;
-                    margin-bottom: 40px;
-                    background: rgba(255,255,255,0.05);
-                    padding: 20px;
-                    border-radius: 16px;
-                    border: 1px solid rgba(255,255,255,0.1);
-                    width: 100%;
-                    max-width: 800px;
-                }
-
-                .selector-group { flex: 1; }
-
-                .battle-select {
-                    width: 100%;
-                    background: #1e293b;
-                    border: 1px solid #334155;
-                    color: white;
-                    padding: 12px;
-                    border-radius: 8px;
-                    font-size: 1rem;
-                    outline: none;
-                }
-                .battle-select:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); }
-
-                .vs-text {
-                    font-size: 1.5rem;
-                    font-weight: 900;
-                    color: #475569;
-                    font-style: italic;
-                }
-
-                .arena-container {
-                    width: 100%;
-                    max-width: 800px;
-                }
-
-                .empty-arena {
-                    height: 300px;
-                    background: rgba(255,255,255,0.03);
-                    border: 2px dashed rgba(255,255,255,0.1);
-                    border-radius: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    color: #475569;
-                }
-                .empty-arena h3 { font-size: 1.5rem; margin-bottom: 4px; color: #64748b; font-weight: 700; }
-
-                @media (max-width: 768px) {
-                    .battle-title { font-size: 2rem; }
-                    .selectors-container { flex-direction: column; gap: 10px; }
-                    .vs-text { margin: 10px 0; font-size: 1rem; }
-                }
-            `}</style>
+                </Container>
+            </section>
         </div>
     );
 }

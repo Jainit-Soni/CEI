@@ -72,6 +72,60 @@ export default function RootLayout({ children }) {
         <ClientProviders>
           <ErrorBoundary>
             <div className="flex flex-col min-h-screen">
+              {/* Universal Background */}
+              <div className="chromatic-bands">
+                <div className="chromatic-band-3"></div>
+                <div className="chromatic-band-4"></div>
+              </div>
+
+              {/* Universal Premium Orbs (Moved from HomeClient) */}
+              <div className="cinematic-backdrop" aria-hidden="true" style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                zIndex: -1, // Behind content, but on top of bands if needed (bands are -1 too, so let's check stacking context)
+                pointerEvents: 'none',
+                overflow: 'hidden'
+              }}>
+                {/* Indigo Orb 1 - Top Left */}
+                <div style={{
+                  position: 'absolute',
+                  width: '600px',
+                  height: '600px',
+                  background: 'radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, transparent 70%)',
+                  filter: 'blur(80px)',
+                  top: '-15%',
+                  left: '-10%',
+                  animation: 'orbFloat1 20s ease-in-out infinite'
+                }} />
+
+                {/* Indigo Orb 2 - Middle Right */}
+                <div style={{
+                  position: 'absolute',
+                  width: '500px',
+                  height: '500px',
+                  background: 'radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%)',
+                  bottom: '20%',
+                  right: '-5%',
+                  filter: 'blur(70px)',
+                  animation: 'orbFloat2 25s ease-in-out infinite'
+                }} />
+
+                {/* Sky Orb 3 - Soft Bottom Left */}
+                <div style={{
+                  position: 'absolute',
+                  width: '400px',
+                  height: '400px',
+                  background: 'radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%)',
+                  bottom: '-10%',
+                  left: '15%',
+                  filter: 'blur(60px)',
+                  animation: 'orbFloat1 22s ease-in-out infinite reverse'
+                }} />
+              </div>
+
               {/* Universal Header */}
               <Header />
 

@@ -80,6 +80,14 @@ let LOCAL_LAST_UPDATE = 0;
 // Initialize Redis Cache from disk
 async function initializeCache() {
   const redis = await getRedisClient();
+  if (!redis) {
+    console.warn("⚠️  Redis unavailable. Loading data to memory only.");
+    const colleges = loadStateCollegeFiles();
+    LOCAL_CACHE = colleges;
+    LOCAL_LAST_UPDATE = Date.now();
+    preComputeGlobalData();
+    return;
+  }
   // Check for the sentinel key to see if initialization is complete
   const initialized = await redis.exists(CACHE_KEYS.COLLEGES_INITIALIZED);
 
@@ -270,8 +278,8 @@ async function getColleges() {
 
   // 1. FAST PATH: Check Local In-Memory Cache
   if (LOCAL_CACHE) {
-    // Optional: Check staleness occasionally (e.g. every 5 seconds) or rely on Redis events
-    // For now, let's minimally check Redis LAST_UPDATE to ensure sync across potential instances
+    if (!redis) return LOCAL_CACHE;
+
     const remoteLastUpdate = await redis.get(CACHE_KEYS.LAST_UPDATE);
     if (remoteLastUpdate && parseInt(remoteLastUpdate) > LOCAL_LAST_UPDATE) {
       console.log("Local cache stale, refreshing...");
@@ -279,6 +287,13 @@ async function getColleges() {
     } else {
       return LOCAL_CACHE; // ZERO-LATENCY RETURN
     }
+  }
+
+  if (!redis) {
+    if (!LOCAL_CACHE) {
+      LOCAL_CACHE = loadStateCollegeFiles();
+    }
+    return LOCAL_CACHE;
   }
 
   // Check for the sentinel key
@@ -318,6 +333,10 @@ async function getCollegeById(id) {
   }
 
   const redis = await getRedisClient();
+  if (!redis) {
+    if (!LOCAL_CACHE) LOCAL_CACHE = loadStateCollegeFiles();
+    return LOCAL_CACHE.find(c => c.id === id) || null;
+  }
   // Check for the sentinel key
   const initialized = await redis.exists(CACHE_KEYS.COLLEGES_INITIALIZED);
 
@@ -336,6 +355,9 @@ async function getCollegeById(id) {
 // Get all exams
 async function getExams() {
   const redis = await getRedisClient();
+  if (!redis) {
+    return loadJson("exams.json") || [];
+  }
   // Check for the sentinel key
   const initialized = await redis.exists(CACHE_KEYS.COLLEGES_INITIALIZED);
 
@@ -412,12 +434,14 @@ async function saveCollege(collegeData) {
 
   // Update Redis
   const redis = await getRedisClient();
-  await redis.hset(CACHE_KEYS.COLLEGES_MAP, collegeData.id, JSON.stringify(collegeData));
+  if (redis) {
+    await redis.hset(CACHE_KEYS.COLLEGES_MAP, collegeData.id, JSON.stringify(collegeData));
 
-  // Update Timestamp
-  const now = Date.now();
-  await redis.set(CACHE_KEYS.LAST_UPDATE, now);
-  LOCAL_LAST_UPDATE = now;
+    // Update Timestamp
+    const now = Date.now();
+    await redis.set(CACHE_KEYS.LAST_UPDATE, now);
+    LOCAL_LAST_UPDATE = now;
+  }
 
   // Update Local Cache
   if (LOCAL_CACHE) {
@@ -448,12 +472,14 @@ async function deleteCollege(id) {
 
   // Update Redis
   const redis = await getRedisClient();
-  await redis.hdel(CACHE_KEYS.COLLEGES_MAP, id);
+  if (redis) {
+    await redis.hdel(CACHE_KEYS.COLLEGES_MAP, id);
 
-  // Update Timestamp
-  const now = Date.now();
-  await redis.set(CACHE_KEYS.LAST_UPDATE, now);
-  LOCAL_LAST_UPDATE = now;
+    // Update Timestamp
+    const now = Date.now();
+    await redis.set(CACHE_KEYS.LAST_UPDATE, now);
+    LOCAL_LAST_UPDATE = now;
+  }
 
   // Update Local Cache
   if (LOCAL_CACHE) {

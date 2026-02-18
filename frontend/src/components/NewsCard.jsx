@@ -1,121 +1,204 @@
 "use client";
 
 import React from 'react';
-import { Calendar, ExternalLink, AlertCircle } from 'lucide-react';
-import Button from './Button';
+import Link from 'next/link';
+import { Calendar, ArrowUpRight, Clock, Tag, ExternalLink, AlertCircle } from 'lucide-react';
 
-export default function NewsCard({ item }) {
+export default function NewsCard({ item, variant = "standard" }) {
+    // Variants: "standard", "featured", "compact"
+
+    const isFeatured = variant === "featured";
     const isUrgent = item.urgent;
 
     return (
-        <div className={`news-card glass-panel ${isUrgent ? 'urgent' : ''}`}>
-            <div className="card-meta">
-                <span className={`cat-badge ${isUrgent ? 'bg-red-500/20 text-red-500' : 'bg-blue-500/20 text-blue-400'}`}>
-                    {isUrgent && <AlertCircle size={14} className="mr-1" />}
-                    {item.category}
-                </span>
-                <span className="date">
-                    <Calendar size={14} className="mr-1" />
-                    {new Date(item.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
-                </span>
-            </div>
+        <article className={`news-card group ${isFeatured ? 'featured' : ''} ${isUrgent ? 'urgent' : ''}`}>
+            {item.image && (
+                <div className="news-image-wrapper">
+                    <img src={item.image} alt={item.title} className="news-image" />
+                    <div className="news-overlay" />
+                </div>
+            )}
 
-            <h3 className="news-title">{item.title}</h3>
-            <p className="news-summary">{item.summary}</p>
+            <div className="news-content">
+                <div className="news-meta-top">
+                    <span className={`news-category ${item.category.toLowerCase().replace(" ", "-")}`}>
+                        {isUrgent && <AlertCircle size={12} className="mr-1" />}
+                        {item.category}
+                    </span>
+                    <span className="news-date">
+                        <Clock size={12} className="mr-1" />
+                        {new Date(item.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}
+                    </span>
+                </div>
 
-            <div className="card-footer">
-                <span className="source">Source: {item.source}</span>
-                {item.url && (
-                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="read-more">
-                        Read More <ExternalLink size={14} />
-                    </a>
-                )}
+                <h3 className="news-title">
+                    <Link href={item.url || `/news/${item.id}`} className="hover:text-indigo-600 transition-colors">
+                        {item.title}
+                    </Link>
+                </h3>
+
+                <p className="news-excerpt">{item.summary}</p>
+
+                <div className="news-footer">
+                    <span className="source-tag">{item.source}</span>
+                    <Link href={item.url || `/news/${item.id}`} className="read-more-btn">
+                        Read Story <ArrowUpRight size={16} />
+                    </Link>
+                </div>
             </div>
 
             <style jsx>{`
                 .news-card {
-                    padding: 24px;
-                    border-radius: 16px;
-                    background: rgba(255, 255, 255, 0.03);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                    transition: transform 0.2s;
-                    position: relative;
+                    background: #ffffff;
+                    border: 1px solid rgba(226, 232, 240, 0.8);
+                    border-radius: 20px;
                     overflow: hidden;
-                }
-                .news-card:hover {
-                    transform: translateY(-2px);
-                    background: rgba(255, 255, 255, 0.05);
-                }
-                .news-card.urgent {
-                    border-color: rgba(239, 68, 68, 0.3);
-                    background: linear-gradient(to bottom right, rgba(239, 68, 68, 0.05), rgba(0,0,0,0));
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+                    position: relative;
                 }
 
-                .card-meta {
+                .news-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                    border-color: #6366f1;
+                }
+                
+                .news-card.urgent {
+                    border-left: 4px solid #ef4444;
+                    background: #fffafa;
+                }
+
+                .news-image-wrapper {
+                    position: relative;
+                    height: 220px;
+                    overflow: hidden;
+                }
+                
+                .featured .news-image-wrapper {
+                    height: 400px;
+                }
+
+                .news-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+
+                .news-card:hover .news-image {
+                    transform: scale(1.05);
+                }
+
+                .news-content {
+                    padding: 28px;
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                }
+
+                .news-meta-top {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     margin-bottom: 16px;
                 }
-                .cat-badge {
-                    padding: 4px 10px;
-                    border-radius: 20px;
-                    font-size: 0.75rem;
-                    font-weight: 600;
+
+                .news-category {
+                    font-size: 0.7rem;
+                    font-weight: 800;
                     text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    padding: 6px 12px;
+                    border-radius: 8px;
+                    background: #f1f5f9;
+                    color: #475569;
                     display: flex;
                     align-items: center;
                 }
-                .date {
-                    font-size: 0.85rem;
+
+                .news-category.exam-alert { background: #fee2e2; color: #b91c1c; }
+                .news-category.results { background: #ebf8ff; color: #2b6cb0; }
+                .news-category.admissions { background: #f0fdf4; color: #15803d; }
+
+                .news-date {
+                    font-size: 0.8rem;
                     color: #94a3b8;
+                    font-weight: 600;
                     display: flex;
                     align-items: center;
                 }
 
                 .news-title {
                     font-family: var(--font-display);
-                    font-size: 1.25rem;
-                    color: white;
+                    font-size: 1.35rem;
+                    font-weight: 800;
+                    line-height: 1.35;
+                    color: #1e293b;
                     margin-bottom: 12px;
-                    line-height: 1.4;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    letter-spacing: -0.02em;
+                }
+                
+                .featured .news-title {
+                    font-size: 2.5rem;
+                    line-height: 1.1;
+                    letter-spacing: -0.03em;
                 }
 
-                .news-summary {
-                    color: #cbd5e1;
-                    font-size: 0.95rem;
+                .news-excerpt {
+                    font-size: 1rem;
+                    color: #64748b;
                     line-height: 1.6;
-                    margin-bottom: 20px;
+                    margin-bottom: 24px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    flex: 1;
                 }
 
-                .card-footer {
+                .news-footer {
+                    margin-top: auto;
+                    padding-top: 24px;
+                    border-top: 1px solid #f1f5f9;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    border-top: 1px solid rgba(255, 255, 255, 0.05);
-                    padding-top: 16px;
+                }
+                
+                .source-tag {
+                    font-size: 0.75rem;
+                    color: #94a3b8;
+                    font-weight: 700;
+                    text-transform: uppercase;
                 }
 
-                .source {
-                    font-size: 0.8rem;
-                    color: #64748b;
-                    font-weight: 500;
-                }
-
-                .read-more {
-                    display: flex;
+                .read-more-btn {
+                    display: inline-flex;
                     align-items: center;
                     gap: 6px;
-                    color: #60a5fa;
                     font-size: 0.9rem;
-                    font-weight: 600;
-                    transition: color 0.2s;
+                    font-weight: 700;
+                    color: #4f46e5;
+                    transition: all 0.2s;
+                    padding: 8px 16px;
+                    border-radius: 8px;
+                    background: #eef2ff;
                 }
-                .read-more:hover {
-                    color: #93c5fd;
-                    text-decoration: underline;
+
+                .read-more-btn:hover {
+                    gap: 8px;
+                    color: #4338ca;
+                    background: #e0e7ff;
                 }
             `}</style>
-        </div>
+        </article>
     );
 }

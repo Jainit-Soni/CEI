@@ -283,5 +283,19 @@
         ],
         "deadline": "Dec 2025",
         "applicationUrl": "https://pmsonline.bih.nic.in"
+    },
+    {
+        "id": "mysy-gujarat",
+        "name": "MYSY Scheme",
+        "provider": "Govt of Gujarat",
+        "category": "State Govt",
+        "amount": "Up to 50% Tuition Fee",
+        "eligibility": [
+            "Min 80% in 12th Std",
+            "Family Income < ₹6 Lakhs",
+            "Gujarat Domicile"
+        ],
+        "deadline": "31st Dec 2025",
+        "applicationUrl": "https://mysy.guj.nic.in"
     }
 ]

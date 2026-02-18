@@ -7,8 +7,16 @@ import { Star, X } from "lucide-react";
 import { useAuth } from "@/lib/AuthContext";
 import { useToast } from "./Toast";
 
+const SENTIMENTS = {
+    1: "Terrible 😡",
+    2: "Bad 😞",
+    3: "Okay 😐",
+    4: "Good 🙂",
+    5: "Excellent! 🤩"
+};
+
 export default function ReviewModal({ isOpen, onClose, collegeId, onReviewSubmitted }) {
-    const { user, login } = useAuth(); // Assuming login method or similar triggered from here
+    const { user } = useAuth();
     const { addToast } = useToast();
     const [rating, setRating] = useState(0);
     const [hoverRating, setHoverRating] = useState(0);
@@ -37,7 +45,6 @@ export default function ReviewModal({ isOpen, onClose, collegeId, onReviewSubmit
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    // "Authorization": `Bearer ${token}` // If auth implemented
                 },
                 body: JSON.stringify({
                     collegeId,
@@ -62,55 +69,76 @@ export default function ReviewModal({ isOpen, onClose, collegeId, onReviewSubmit
     };
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+        <div className="fixed inset-0 z-[2000] flex items-center justify-center p-4">
+            <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-md transition-opacity" onClick={onClose} />
 
-            <div className="relative w-full max-w-md animate-in fade-in zoom-in duration-200">
-                <GlassPanel variant="strong" className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-xl font-bold text-slate-800">Write a Review</h3>
-                        <button onClick={onClose} className="p-2 hover:bg-slate-100 rounded-full transition-colors">
-                            <X size={20} className="text-slate-400" />
+            <div className="relative w-full max-w-lg transform transition-all animate-in fade-in zoom-in-95 duration-200">
+                <GlassPanel variant="strong" className="p-8 border-white/40 shadow-2xl">
+                    <div className="flex items-center justify-between mb-8">
+                        <div>
+                            <h3 className="text-2xl font-black text-slate-800 tracking-tight">Write a Review</h3>
+                            <p className="text-slate-500 font-medium text-sm">Share your experience with the community</p>
+                        </div>
+                        <button
+                            onClick={onClose}
+                            className="p-2 hover:bg-slate-100 rounded-full transition-colors text-slate-400 hover:text-slate-600"
+                        >
+                            <X size={24} />
                         </button>
                     </div>
 
-                    <div className="flex flex-col items-center mb-6">
-                        <span className="text-sm font-medium text-slate-500 mb-2">How would you rate your experience?</span>
-                        <div className="flex gap-2">
+                    <div className="flex flex-col items-center mb-8 gap-3">
+                        <div className="flex gap-3 relative z-10">
                             {[1, 2, 3, 4, 5].map((star) => (
                                 <button
                                     key={star}
                                     onMouseEnter={() => setHoverRating(star)}
                                     onMouseLeave={() => setHoverRating(0)}
                                     onClick={() => setRating(star)}
-                                    className="p-1 transition-transform hover:scale-110 focus:outline-none"
+                                    className="p-1 transition-transform hover:scale-125 focus:outline-none active:scale-95"
+                                    type="button"
                                 >
                                     <Star
-                                        size={32}
-                                        className={`${star <= (hoverRating || rating) ? "fill-amber-400 text-amber-400" : "fill-slate-100 text-slate-300"}`}
+                                        size={42}
+                                        className={`transition-colors duration-200 ${star <= (hoverRating || rating)
+                                                ? "fill-amber-400 text-amber-400 drop-shadow-md"
+                                                : "fill-slate-100 text-slate-200"
+                                            }`}
+                                        strokeWidth={1.5}
                                     />
                                 </button>
                             ))}
                         </div>
+                        <div className={`h-6 text-sm font-bold uppercase tracking-widest transition-all duration-300 ${rating || hoverRating ? 'text-indigo-600 opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-2'}`}>
+                            {SENTIMENTS[hoverRating || rating]}
+                        </div>
                     </div>
 
-                    <div className="space-y-3">
-                        <label className="text-sm font-medium text-slate-700">Your Review</label>
-                        <textarea
-                            className="w-full h-32 px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm resize-none"
-                            placeholder="Share details about campus life, faculty, or placements..."
-                            value={comment}
-                            onChange={(e) => setComment(e.target.value)}
-                        />
+                    <div className="space-y-4">
+                        <div className="relative">
+                            <label className="text-xs font-black text-slate-400 uppercase tracking-wider mb-2 block ml-1">Your detailed review</label>
+                            <textarea
+                                className="w-full h-36 px-5 py-4 bg-white/50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:bg-white transition-all text-slate-700 font-medium resize-none placeholder:text-slate-400"
+                                placeholder="Tell us about the campus vibe, faculty quality, placements, and infrastructure..."
+                                value={comment}
+                                onChange={(e) => setComment(e.target.value)}
+                            />
+                        </div>
                     </div>
 
-                    <div className="mt-6">
+                    <div className="mt-8 flex gap-3">
+                        <button
+                            onClick={onClose}
+                            className="flex-1 py-3.5 rounded-xl font-bold text-slate-500 hover:bg-slate-100 transition-colors"
+                        >
+                            Cancel
+                        </button>
                         <Button
-                            className="w-full justify-center"
+                            className="flex-[2] justify-center py-3.5 text-base shadow-xl shadow-indigo-200"
                             onClick={handleSubmit}
                             disabled={isSubmitting}
                         >
-                            {isSubmitting ? "Submitting..." : "Post Review"}
+                            {isSubmitting ? "Posting..." : "Post Review"}
                         </Button>
                     </div>
                 </GlassPanel>

@@ -1,5 +1,24 @@
 [
     {
+        "id": "hero-news-1",
+        "title": "NEET UG 2026 Exam Date Announced: Major Changes in Pattern",
+        "summary": "NTA has officially released the schedule for NEET UG 2026. Experts predict a slight increase in difficulty level this year. Check the official notification for detailed subject-wise breakdown.",
+        "category": "Exam Alert",
+        "date": "2026-02-18T09:00:00Z",
+        "source": "NTA Official",
+        "image": "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070&auto=format&fit=crop",
+        "urgent": true
+    },
+    {
+        "id": "hero-news-2",
+        "title": "JEE Main Session 2 Results declared; Cutoffs likely to rise",
+        "summary": "The long wait is over! Session 2 results are out. Early analysis suggests a higher cutoff for the General category compared to last year.",
+        "category": "Results",
+        "date": "2026-02-17T14:30:00Z",
+        "source": "Ministry of Education",
+        "image": "https://images.unsplash.com/photo-1564981797816-1043664bf78d?q=80&w=1974&auto=format&fit=crop"
+    },
+    {
         "id": "jee-main-2026-dates",
         "title": "JEE Main 2026 Exam Dates Announced",
         "summary": "NTA has released the official schedule for JEE Main 2026 Session 1. Registration starts Nov 1st.",

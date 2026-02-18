@@ -3,21 +3,26 @@
 import React, { useState, useEffect } from 'react';
 import ScholarshipCard from '@/components/ScholarshipCard';
 import Spinner from '@/components/Spinner';
-import { Search, Filter } from 'lucide-react';
+import Container from '@/components/Container';
+import GlassPanel from '@/components/GlassPanel';
+import { fetchScholarships } from '@/lib/api';
+import { RevealOnScroll } from '@/lib/useIntersectionObserver';
+import { GraduationCap, Search, Globe, Award, BookOpen } from 'lucide-react';
+import "../colleges/page.css";
 
-const CATEGORIES = ["All", "Government", "Private", "Merit-Based", "Minority", "Girls Only", "Sports"];
+const CATEGORIES = ["All", "State Govt", "Central Govt", "Private", "Merit-based", "Means-based"];
 
 export default function ScholarshipsPage() {
     const [scholarships, setScholarships] = useState([]);
+    const [filteredScholarships, setFilteredScholarships] = useState([]);
     const [loading, setLoading] = useState(true);
     const [filter, setFilter] = useState("All");
-    const [search, setSearch] = useState("");
 
     useEffect(() => {
-        fetch('/api/scholarships')
-            .then(res => res.json())
+        fetchScholarships()
             .then(data => {
                 setScholarships(data);
+                setFilteredScholarships(data);
                 setLoading(false);
             })
             .catch(err => {
@@ -26,213 +31,71 @@ export default function ScholarshipsPage() {
             });
     }, []);
 
-    const filteredScholarships = scholarships.filter(s => {
-        const matchesCategory = filter === "All" || s.category.toLowerCase().includes(filter.toLowerCase()) ||
-            (filter === "Government" && (s.provider.includes("Govt") || s.provider.includes("Ministry")));
-        const matchesSearch = s.name.toLowerCase().includes(search.toLowerCase()) ||
-            s.provider.toLowerCase().includes(search.toLowerCase());
-        return matchesCategory && matchesSearch;
-    });
+    useEffect(() => {
+        let result = scholarships;
+        if (filter !== "All") {
+            result = result.filter(s => s.category?.includes(filter) || s.type === filter);
+        }
+        setFilteredScholarships(result);
+    }, [filter, scholarships]);
 
     return (
-        <div className="scholarships-page">
+        <div className="list-page min-h-screen bg-transparent">
             {/* Hero Section */}
-            <div className="scholarship-hero">
-                <div className="content-wrapper">
-                    <h1 className="hero-title">Find Your <span className="text-gradient">Financial Aid</span></h1>
-                    <p className="hero-subtitle">Explore curated scholarships to fund your education. From government schemes to private grants.</p>
+            <section className="relative pt-32 pb-20 overflow-hidden">
+                {/* Global orbs provide background */}
 
-                    <div className="search-bar-container">
-                        <Search className="search-icon" size={20} />
-                        <input
-                            type="text"
-                            placeholder="Search scholarships (e.g., Tata, NSP, Merit)..."
-                            className="search-input"
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
-                        />
-                    </div>
-                </div>
-                <div className="hero-glow"></div>
-            </div>
+                <Container className="relative z-10 text-center">
+                    <RevealOnScroll>
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-slate-200 text-emerald-600 text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md shadow-sm">
+                            <Award size={14} /> Financial Aid Portal
+                        </div>
+                        <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-8">
+                            Scholarship <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-cyan-500">Directory</span>
+                        </h1>
+                        <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
+                            Access over ₹500 Cr+ in educational grants. From government schemes to private fellowships.
+                        </p>
 
-            {/* Filters */}
-            <div className="filters-container">
-                <div className="filter-scroll">
-                    {CATEGORIES.map(cat => (
-                        <button
-                            key={cat}
-                            className={`filter-chip ${filter === cat ? 'active' : ''}`}
-                            onClick={() => setFilter(cat)}
-                        >
-                            {cat}
+                        <button className="px-8 py-4 rounded-full bg-slate-900 text-white font-bold tracking-wide hover:bg-slate-800 transition-all shadow-lg hover:shadow-slate-900/25 flex items-center gap-2 mx-auto">
+                            <BookOpen size={18} /> Internal Directory
                         </button>
-                    ))}
-                </div>
-            </div>
+                    </RevealOnScroll>
+                </Container>
+            </section>
 
-            {/* Grid */}
-            <div className="scholarships-grid container mx-auto px-4 py-8">
+            <Container className="pb-24">
+                {/* Filter Bar */}
+                <div className="mb-12 sticky top-24 z-30">
+                    <GlassPanel className="p-2 border-white/60 backdrop-blur-xl bg-white/80 shadow-2xl flex justify-center" variant="strong">
+                        <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto custom-scrollbar justify-center">
+                            {CATEGORIES.map(cat => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setFilter(cat)}
+                                    className={`px-6 py-3 rounded-xl text-sm font-bold whitespace-nowrap transition-all duration-300 ${filter === cat
+                                        ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 scale-105'
+                                        : 'bg-transparent text-slate-500 hover:bg-slate-100 hover:text-slate-900'
+                                        }`}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
+                    </GlassPanel>
+                </div>
+
+                {/* All Scholarships Grid */}
                 {loading ? (
-                    <div className="flex justify-center p-20"><Spinner /></div>
-                ) : filteredScholarships.length > 0 ? (
-                    filteredScholarships.map(s => (
-                        <ScholarshipCard key={s.id} scholarship={s} />
-                    ))
+                    <div className="flex justify-center py-20"><Spinner /></div>
                 ) : (
-                    <div className="empty-state">
-                        <h3>No scholarships found</h3>
-                        <p>Try adjusting your search or filters.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {filteredScholarships.map(scholarship => (
+                            <ScholarshipCard key={scholarship.id} scholarship={scholarship} />
+                        ))}
                     </div>
                 )}
-            </div>
-
-            <style jsx>{`
-                .scholarships-page {
-                    min-height: 100vh;
-                    background: #0f172a;
-                    padding-bottom: 80px;
-                }
-
-                .scholarship-hero {
-                    position: relative;
-                    padding: 80px 20px;
-                    text-align: center;
-                    overflow: hidden;
-                    background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 100%);
-                    border-bottom: 1px solid rgba(255,255,255,0.05);
-                }
-
-                .content-wrapper {
-                    position: relative;
-                    z-index: 2;
-                    max-width: 800px;
-                    margin: 0 auto;
-                }
-
-                .hero-title {
-                    font-family: var(--font-display);
-                    font-size: 3.5rem;
-                    color: white;
-                    margin-bottom: 16px;
-                    letter-spacing: -1px;
-                }
-
-                .text-gradient {
-                    background: linear-gradient(135deg, #60a5fa, #a855f7);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-
-                .hero-subtitle {
-                    color: #94a3b8;
-                    font-size: 1.2rem;
-                    margin-bottom: 40px;
-                }
-
-                .search-bar-container {
-                    position: relative;
-                    max-width: 600px;
-                    margin: 0 auto;
-                }
-
-                .search-icon {
-                    position: absolute;
-                    left: 16px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: #64748b;
-                }
-
-                .search-input {
-                    width: 100%;
-                    background: rgba(255,255,255,0.05);
-                    border: 1px solid rgba(255,255,255,0.1);
-                    padding: 16px 16px 16px 48px;
-                    border-radius: 50px;
-                    color: white;
-                    font-size: 1.1rem;
-                    outline: none;
-                    backdrop-filter: blur(10px);
-                    transition: border-color 0.3s, background 0.3s;
-                }
-                .search-input:focus {
-                    border-color: #3b82f6;
-                    background: rgba(255,255,255,0.1);
-                }
-
-                .hero-glow {
-                    position: absolute;
-                    top: -50%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 800px;
-                    height: 800px;
-                    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-                    z-index: 1;
-                    pointer-events: none;
-                }
-
-                /* Filters */
-                .filters-container {
-                    position: sticky;
-                    top: 0; /* Or header height */
-                    z-index: 10;
-                    background: rgba(15, 23, 42, 0.8);
-                    backdrop-filter: blur(10px);
-                    border-bottom: 1px solid rgba(255,255,255,0.05);
-                    padding: 16px 0;
-                }
-
-                .filter-scroll {
-                    display: flex;
-                    justify-content: center;
-                    gap: 12px;
-                    overflow-x: auto;
-                    padding: 0 20px;
-                    scrollbar-width: none;
-                }
-                .filter-scroll::-webkit-scrollbar { display: none; }
-
-                .filter-chip {
-                    background: rgba(255,255,255,0.05);
-                    border: 1px solid rgba(255,255,255,0.1);
-                    color: #94a3b8;
-                    padding: 8px 20px;
-                    border-radius: 20px;
-                    font-size: 0.9rem;
-                    white-space: nowrap;
-                    transition: all 0.2s;
-                }
-                .filter-chip:hover {
-                    background: rgba(255,255,255,0.1);
-                    color: white;
-                }
-                .filter-chip.active {
-                    background: #3b82f6;
-                    border-color: #3b82f6;
-                    color: white;
-                }
-
-                .scholarships-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                    gap: 24px;
-                }
-
-                .empty-state {
-                    grid-column: 1 / -1;
-                    text-align: center;
-                    padding: 60px;
-                    color: #64748b;
-                }
-                .empty-state h3 { font-size: 1.5rem; margin-bottom: 8px; color: white; }
-
-                @media (max-width: 768px) {
-                    .hero-title { font-size: 2.5rem; }
-                    .filter-scroll { justify-content: flex-start; }
-                }
-            `}</style>
+            </Container>
         </div>
     );
 }

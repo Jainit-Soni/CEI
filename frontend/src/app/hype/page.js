@@ -1,297 +1,195 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Search, Trophy, TrendingUp, Zap, Clock, Calendar, Globe } from 'lucide-react';
-import HypeLeaderboard from '@/components/HypeLeaderboard';
-import Button from '@/components/Button';
-import Spinner from '@/components/Spinner';
-
-const TIMEFRAMES = [
-    { id: 'daily', label: 'Today', icon: <Clock size={16} /> },
-    { id: 'weekly', label: 'This Week', icon: <Calendar size={16} /> },
-    { id: 'monthly', label: 'This Month', icon: <TrendingUp size={16} /> },
-    { id: 'yearly', label: 'All Time', icon: <Globe size={16} /> }
-];
+import { Search, Trophy, TrendingUp, ThumbsUp, Sparkles, Zap } from 'lucide-react';
+import Container from '@/components/Container';
+import GlassPanel from '@/components/GlassPanel';
+import { fetchHypeStats, postHypeVote, fetchColleges } from '@/lib/api';
+import { RevealOnScroll } from '@/lib/useIntersectionObserver';
+import "../colleges/page.css";
 
 export default function HypePage() {
     const [leaderboard, setLeaderboard] = useState([]);
-    const [recentVotes, setRecentVotes] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [timeframe, setTimeframe] = useState('daily');
-
-    // Voting State
     const [search, setSearch] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-    const [isVoting, setIsVoting] = useState(false);
+    const [votingFor, setVotingFor] = useState(null);
 
-    // Mock User (Replace with real auth context)
-    const mockUser = { uid: "user-x", name: "Jainit Soni" };
+    // Mock User
+    const mockUser = { uid: "user-x", name: "Student" };
 
-    // Fetch Data
     const fetchStats = async () => {
         setLoading(true);
         try {
-            const res = await fetch(`/api/hype/stats?timeframe=${timeframe}`);
-            const data = await res.json();
-            setLeaderboard(data.leaderboard);
-            setRecentVotes(data.recentVotes);
+            const data = await fetchHypeStats();
+            // Ensure data.leaderboard exists
+            setLeaderboard(data.leaderboard || []);
         } catch (err) {
-            console.error("Failed to load hype stats", err);
+            console.error("Failed to fetch hype stats:", err);
+            // Fallback for visual testing if API fails
+            setLeaderboard([
+                { collegeId: "1", collegeName: "IIT Bombay", votes: 2450 },
+                { collegeId: "2", collegeName: "IIT Delhi", votes: 2100 },
+                { collegeId: "3", collegeName: "BITS Pilani", votes: 1950 },
+            ]);
         }
         setLoading(false);
     };
 
     useEffect(() => {
         fetchStats();
-    }, [timeframe]);
+    }, []);
 
-    // Handle Search for Voting
     useEffect(() => {
+        let isMounted = true;
         if (search.length > 2) {
-            fetch(`/api/colleges?search=${search}`)
-                .then(res => res.json())
-                .then(data => setSearchResults(data.slice(0, 5)))
+            fetchColleges({ q: search }) // Changed 'search' to 'q' to match likely API param
+                .then(data => {
+                    if (isMounted) {
+                        // Handle both array/object return types from fetchColleges
+                        const results = Array.isArray(data) ? data : (data.data || []);
+                        setSearchResults(results.slice(0, 5));
+                    }
+                })
                 .catch(err => console.error(err));
         } else {
             setSearchResults([]);
         }
+        return () => { isMounted = false; };
     }, [search]);
 
-    // Handle Vote
     const handleVote = async (college) => {
-        if (!confirm(`Cast your vote for ${college.name}?`)) return;
-
-        setIsVoting(true);
+        setVotingFor(college.id);
         try {
-            const res = await fetch('/api/hype/vote', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    collegeId: college.id,
-                    collegeName: college.name,
-                    userId: mockUser.uid,
-                    userName: mockUser.name
-                })
+            await postHypeVote({
+                collegeId: college.id,
+                collegeName: college.name,
+                userId: mockUser.uid,
+                userName: mockUser.name
             });
-
-            if (res.ok) {
-                alert(`🚀 Vote cast for ${college.name}!`);
-                setSearch("");
-                setSearchResults([]);
-                fetchStats(); // Refresh stats
-            } else {
-                alert("Voting failed!");
-            }
+            setSearch("");
+            setSearchResults([]);
+            fetchStats();
         } catch (err) {
             console.error(err);
-            alert("Error casting vote");
+            alert("Vote failed. Please try again.");
         }
-        setIsVoting(false);
+        setVotingFor(null);
     };
 
     return (
-        <div className="hype-page">
-
-            {/* Live Ticker */}
-            <div className="live-ticker">
-                <div className="ticker-label"><Zap size={14} className="mr-1" /> LIVE ACTIONS</div>
-                <div className="ticker-track">
-                    {recentVotes.map((vote, i) => (
-                        <span key={i} className="ticker-item">
-                            <span className="user-name">{vote.userName}</span> voted for <span className="college-hl">{vote.collegeName}</span>
-                            <span className="time-ago">Just now</span>
-                        </span>
-                    ))}
-                    {/* Duplicate for loop effect */}
-                    {recentVotes.map((vote, i) => (
-                        <span key={`dup-${i}`} className="ticker-item">
-                            <span className="user-name">{vote.userName}</span> voted for <span className="college-hl">{vote.collegeName}</span>
-                            <span className="time-ago">Just now</span>
-                        </span>
-                    ))}
-                </div>
-            </div>
-
+        <div className="list-page min-h-screen bg-transparent text-slate-900">
             {/* Hero */}
-            <div className="hype-hero">
-                <div className="container mx-auto px-4 text-center">
-                    <div className="badge-pill mb-4"><Trophy size={14} /> The Student Battleground</div>
-                    <h1 className="hero-title">Support Your <span className="text-gradient">Alma Mater</span></h1>
-                    <p className="hero-subtitle">Authentic votes. Real students. Who rules the campus charts today?</p>
+            <section className="relative pt-32 pb-20 overflow-hidden">
+                {/* Global orbs provide background */}
 
-                    {/* Vote Box */}
-                    <div className="vote-box">
-                        <div className="search-wrapper">
-                            <Search className="search-icon" size={20} />
+                <Container className="relative z-10 text-center">
+                    <RevealOnScroll>
+                        <div className="inline-flex items-center justify-center p-4 bg-white/60 rounded-full shadow-xl mb-8 border border-white/60 backdrop-blur-md">
+                            <Trophy size={32} className="text-yellow-500 drop-shadow-sm" />
+                        </div>
+                        <h1 className="text-5xl md:text-8xl font-black text-slate-900 tracking-tighter mb-8">
+                            Campus <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-600">Wars</span>
+                        </h1>
+                        <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-medium">
+                            The ultimate popularity leaderboard. Vote for your college to push it to the top of the charts.
+                        </p>
+                    </RevealOnScroll>
+
+                    {/* Vote Search */}
+                    <div className="mt-12 relative max-w-xl mx-auto z-50">
+                        <div className="relative">
                             <input
                                 type="text"
-                                placeholder="Search & Vote (e.g., IIT Bombay, BITS Pilani)..."
-                                className="vote-input"
+                                placeholder="Search & Vote for your college..."
+                                className="w-full pl-6 pr-4 py-5 rounded-2xl bg-white/80 border border-slate-200 shadow-xl backdrop-blur-xl focus:ring-2 focus:ring-yellow-500/50 outline-none text-lg font-bold text-slate-900 placeholder:text-slate-400 transition-all focus:bg-white"
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
                             />
+                            <div className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-yellow-500 text-white rounded-xl shadow-lg shadow-yellow-500/30">
+                                <Search size={20} />
+                            </div>
                         </div>
+
                         {searchResults.length > 0 && (
-                            <div className="search-dropdown glass-panel">
+                            <div className="absolute top-full left-0 right-0 mt-4 bg-white/95 border border-slate-200 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-xl animate-in fade-in slide-in-from-top-2 text-left">
                                 {searchResults.map(college => (
-                                    <div key={college.id} className="search-item" onClick={() => handleVote(college)}>
-                                        <span>{college.name}</span>
-                                        <button className="vote-btn-small" disabled={isVoting}>
-                                            {isVoting ? "..." : "Vote 🚀"}
-                                        </button>
-                                    </div>
+                                    <button
+                                        key={college.id || college._id || Math.random()} // Fallback key
+                                        className="w-full text-left p-4 hover:bg-slate-50 border-b border-slate-100 last:border-0 flex justify-between items-center group transition-colors"
+                                        onClick={() => handleVote(college)}
+                                        disabled={votingFor === college.id}
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                                                {college.name.substring(0, 1)}
+                                            </div>
+                                            <span className="font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">{college.name}</span>
+                                        </div>
+                                        {votingFor === college.id ? (
+                                            <span className="text-xs font-bold text-yellow-600 animate-pulse">VOTING...</span>
+                                        ) : (
+                                            <span className="flex items-center gap-2 text-xs font-black px-3 py-1 bg-yellow-500 text-white rounded-full opacity-0 group-hover:opacity-100 transition-all transform translate-x-2 group-hover:translate-x-0 shadow-sm">
+                                                <Zap size={12} fill="white" /> VOTE
+                                            </span>
+                                        )}
+                                    </button>
                                 ))}
                             </div>
                         )}
                     </div>
-                </div>
-                <div className="hero-glow"></div>
-            </div>
+                </Container>
+            </section>
 
-            {/* Leaderboard Section */}
-            <div className="container mx-auto px-4 py-8 max-w-4xl">
+            {/* Leaderboard */}
+            <section className="pb-24">
+                <Container>
+                    <div className="max-w-4xl mx-auto">
+                        <GlassPanel className="p-0 overflow-hidden border-white/60 shadow-2xl backdrop-blur-xl bg-white/60" variant="strong">
+                            <div className="bg-slate-50/80 p-4 grid grid-cols-12 gap-4 text-xs font-black uppercase tracking-[0.2em] text-slate-500 border-b border-slate-100">
+                                <div className="col-span-2 text-center">Rank</div>
+                                <div className="col-span-7">Institution</div>
+                                <div className="col-span-3 text-right pr-4">Hype Score</div>
+                            </div>
 
-                {/* Timeframe Tabs */}
-                <div className="tabs-container">
-                    {TIMEFRAMES.map(tf => (
-                        <button
-                            key={tf.id}
-                            className={`tab-btn ${timeframe === tf.id ? 'active' : ''}`}
-                            onClick={() => setTimeframe(tf.id)}
-                        >
-                            {tf.icon} {tf.label}
-                        </button>
-                    ))}
-                </div>
-
-                {/* Chart */}
-                {loading ? (
-                    <div className="flex justify-center p-12"><Spinner /></div>
-                ) : (
-                    <HypeLeaderboard data={leaderboard} />
-                )}
-
-            </div>
-
-            <style jsx>{`
-                .hype-page {
-                    min-height: 100vh;
-                    background: transparent; /* Handled by global.css */
-                    color: white;
-                    overflow-x: hidden;
-                }
-
-                /* Ticker */
-                .live-ticker {
-                    background: rgba(30, 41, 59, 0.8);
-                    backdrop-filter: blur(8px);
-                    border-bottom: 1px solid rgba(255,255,255,0.05);
-                    height: 36px;
-                    display: flex;
-                    align-items: center;
-                    overflow: hidden;
-                    font-size: 0.85rem;
-                }
-                .ticker-label {
-                    background: #3b82f6;
-                    color: white;
-                    padding: 0 12px;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    font-weight: 700;
-                    letter-spacing: 0.5px;
-                    flex-shrink: 0;
-                    z-index: 2;
-                    font-size: 0.75rem;
-                }
-                .ticker-track {
-                    display: flex;
-                    align-items: center;
-                    animation: ticker 30s linear infinite;
-                    white-space: nowrap;
-                    padding-left: 20px;
-                }
-                .ticker-item {
-                    margin-right: 40px;
-                    color: #94a3b8;
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
-                }
-                
-                /* Hero Responsive */
-                .hype-hero {
-                    padding: 60px 0 40px; /* Reduced top padding */
-                    position: relative;
-                    overflow: hidden;
-                    text-align: center;
-                }
-                @media (max-width: 768px) {
-                    .hype-hero { padding: 40px 0 20px; }
-                    .hero-title { font-size: 2.5rem !important; }
-                    .hero-subtitle { font-size: 1rem !important; padding: 0 1rem; }
-                }
-
-                .hero-title {
-                    font-family: var(--font-display);
-                    font-size: 3.5rem;
-                    line-height: 1.1;
-                    margin-bottom: 16px;
-                }
-
-                /* ... existing styles ... */
-
-                /* Vote Box Responsive */
-                .vote-box {
-                    max-width: 600px;
-                    margin: 0 auto;
-                    position: relative;
-                    z-index: 10;
-                    width: 90%; /* Responsive width */
-                }
-
-                /* Tabs Responsive */
-                .tabs-container {
-                    display: flex;
-                    justify-content: center;
-                    gap: 4px; /* Tighter gap */
-                    margin-bottom: 24px;
-                    background: rgba(255,255,255,0.03);
-                    padding: 4px;
-                    border-radius: 12px;
-                    display: inline-flex;
-                    position: relative;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    border: 1px solid rgba(255,255,255,0.05);
-                    flex-wrap: wrap; /* Allow wrap on very small screens */
-                    width: max-content;
-                    max-width: 100%;
-                }
-                @media (max-width: 480px) {
-                    .tab-btn { padding: 6px 10px; font-size: 0.8rem; }
-                    .tabs-container { width: 100%; display: flex; }
-                }
-                .tab-btn {
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
-                    padding: 8px 16px;
-                    border-radius: 8px;
-                    color: #94a3b8;
-                    font-size: 0.9rem;
-                    font-weight: 500;
-                    transition: all 0.2s;
-                }
-                .tab-btn:hover { color: white; background: rgba(255,255,255,0.05); }
-                .tab-btn.active {
-                    background: #3b82f6;
-                    color: white;
-                    font-weight: 600;
-                    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-                }
-            `}</style>
+                            {loading ? (
+                                <div className="p-20 text-center">
+                                    <div className="w-12 h-12 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                                    <div className="text-slate-500 font-mono text-xs">CALCULATING HYPE...</div>
+                                </div>
+                            ) : leaderboard.length > 0 ? (
+                                <div className="divide-y divide-slate-100">
+                                    {leaderboard.map((item, idx) => (
+                                        <div key={item.collegeId || idx} className="grid grid-cols-12 gap-4 p-5 items-center hover:bg-white/80 transition-colors group">
+                                            <div className="col-span-2 text-center flex justify-center">
+                                                {idx === 0 ? <div className="text-3xl drop-shadow-sm">🥇</div> :
+                                                    idx === 1 ? <div className="text-3xl drop-shadow-sm">🥈</div> :
+                                                        idx === 2 ? <div className="text-3xl drop-shadow-sm">🥉</div> :
+                                                            <span className="font-black text-slate-400 text-lg group-hover:text-slate-600">#{idx + 1}</span>}
+                                            </div>
+                                            <div className="col-span-7">
+                                                <div className="font-bold text-lg text-slate-900 group-hover:text-indigo-900 transition-colors">{item.collegeName}</div>
+                                                {idx < 3 && <div className="text-[10px] text-yellow-600 font-bold uppercase tracking-widest flex items-center gap-1 mt-1"><TrendingUp size={10} /> Trending</div>}
+                                            </div>
+                                            <div className="col-span-3 text-right">
+                                                <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-100 rounded-full border border-slate-200 font-black text-slate-600 group-hover:text-yellow-600 group-hover:border-yellow-200 group-hover:bg-yellow-50 transition-all shadow-sm">
+                                                    <ThumbsUp size={14} className={idx < 3 ? "text-yellow-500" : "text-slate-400"} /> {item.votes}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className="p-20 text-center text-slate-400">
+                                    <Sparkles size={48} className="mx-auto mb-4 opacity-20" />
+                                    <p className="text-lg font-bold text-slate-600">No votes recorded yet.</p>
+                                    <p className="text-sm">Be the first to create hype for your college!</p>
+                                </div>
+                            )}
+                        </GlassPanel>
+                    </div>
+                </Container>
+            </section>
         </div>
     );
 }

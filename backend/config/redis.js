@@ -1,6 +1,8 @@
 const Redis = require("ioredis");
 
 let redisClient = null;
+let lastError = null;
+let lastClose = false;
 
 function createRedisClient() {
     if (redisClient) {
@@ -14,21 +16,30 @@ function createRedisClient() {
             const delay = Math.min(times * 50, 2000);
             return delay;
         },
-        maxRetriesPerRequest: 3,
+        maxRetriesPerRequest: null,
         enableReadyCheck: true,
         lazyConnect: true,
     });
 
     redisClient.on("connect", () => {
         console.log("✅ Redis connected");
+        lastError = null;
+        lastClose = false;
     });
 
     redisClient.on("error", (err) => {
-        console.error("❌ Redis error:", err.message);
+        // Only log unique errors once to avoid spamming the console in fail-safe mode
+        if (err.message !== lastError) {
+            console.error("❌ Redis error:", err.message);
+            lastError = err.message;
+        }
     });
 
     redisClient.on("close", () => {
-        console.log("⚠️  Redis connection closed");
+        if (!lastClose) {
+            console.log("⚠️  Redis connection closed. (Warnings silenced for this session)");
+            lastClose = true;
+        }
     });
 
     return redisClient;
@@ -47,23 +58,50 @@ async function getRedisClient() {
     }
 
     if (status === "connecting" || status === "reconnecting") {
-        // Wait for it to be ready
+        // Wait for it to be ready with a timeout
         return new Promise((resolve) => {
-            redisClient.once("ready", () => resolve(redisClient));
-            // Also handle potential errors during this wait
-            redisClient.once("error", () => resolve(redisClient));
+            const timeout = setTimeout(() => {
+                // Only warn once about timeout
+                if (!lastError) {
+                    console.warn("⚠️  Redis ready timeout. Proceeding without cache.");
+                }
+                resolve(null);
+            }, 2000);
+
+            redisClient.once("ready", () => {
+                clearTimeout(timeout);
+                resolve(redisClient);
+            });
+
+            redisClient.once("error", (err) => {
+                clearTimeout(timeout);
+                if (err.message !== lastError) {
+                    console.warn(`⚠️  Redis error during wait: ${err.message}`);
+                    lastError = err.message;
+                }
+                resolve(null);
+            });
         });
     }
 
     // Only connect if it's actually disconnected/end
     try {
-        await redisClient.connect();
+        // Add a 2s timeout to the connection attempt
+        const connectionPromise = redisClient.connect();
+        const timeoutPromise = new Promise((_, reject) =>
+            setTimeout(() => reject(new Error("Redis connection timeout")), 2000)
+        );
+
+        await Promise.race([connectionPromise, timeoutPromise]);
         return redisClient;
     } catch (err) {
         if (err.message.includes("already connecting")) {
             return redisClient;
         }
-        console.warn("⚠️  Redis could not connect. Proceeding without cache.");
+        if (err.message !== lastError) {
+            console.warn(`⚠️  Redis connection issue: ${err.message}. Proceeding without cache.`);
+            lastError = err.message;
+        }
         return null;
     }
 }

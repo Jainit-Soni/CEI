@@ -5,6 +5,7 @@ import AddToChoiceButton from './AddToChoiceButton';
 import PredictionBadge from './PredictionBadge';
 import { Users } from 'lucide-react';
 import './CollegeHero.css';
+import { postActivityPing, fetchLiveActivity } from '@/lib/api';
 
 export default function CollegeHero({ college }) {
     const [liveViewers, setLiveViewers] = useState(0);
@@ -15,15 +16,10 @@ export default function CollegeHero({ college }) {
         const collegeId = college._id || college.id;
 
         // 1. Log the view
-        fetch('/api/activity/ping', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ collegeId })
-        }).catch(err => console.error("Ping failed", err));
+        postActivityPing(collegeId).catch(err => console.error("Ping failed", err));
 
         // 2. Fetch stats
-        fetch(`/api/activity/stats?collegeId=${collegeId}`)
-            .then(res => res.json())
+        fetchLiveActivity(collegeId)
             .then(data => {
                 if (data.viewers > 0) setLiveViewers(data.viewers);
             })
