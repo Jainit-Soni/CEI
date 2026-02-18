@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Combobox from '@/components/Combobox';
 import Container from '@/components/Container';
-import GlassPanel from '@/components/GlassPanel'; // Added for consistent paneling
+import GlassPanel from '@/components/GlassPanel';
 import { fetchColleges } from '@/lib/api';
 import { Trophy, Zap } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
-import "../colleges/page.css"; // Import shared list styles
+import "../colleges/page.css";
 
 export default function BattlePage() {
     const [colleges, setColleges] = useState([]);
@@ -17,7 +17,19 @@ export default function BattlePage() {
     const [battling, setBattling] = useState(false);
 
     useEffect(() => {
-        fetchColleges().then(setColleges).catch(console.error);
+        // Fix for "t.find is not a function": Ensure we extract the array from the response object
+        const load = async () => {
+            try {
+                const data = await fetchColleges();
+                // Handle both { data: [...] } and [...] response formats safely
+                const list = Array.isArray(data) ? data : (Array.isArray(data?.data) ? data.data : []);
+                setColleges(list);
+            } catch (err) {
+                console.error("Failed to load colleges for battle:", err);
+                setColleges([]);
+            }
+        };
+        load();
     }, []);
 
     const startBattle = () => {

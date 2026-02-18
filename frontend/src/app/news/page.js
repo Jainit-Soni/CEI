@@ -1,11 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "@/components/Card";
 import Container from "@/components/Container";
-import GlassPanel from "@/components/GlassPanel";
-import Button from "@/components/Button";
-import FancySelect from "@/components/FancySelect";
 import EmptyState from "@/components/EmptyState";
 import { CardSkeleton } from "@/components/Skeleton";
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
@@ -16,11 +13,6 @@ export default function NewsPage() {
     const [news, setNews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    // Removed query state as per user request
-    const [filters, setFilters] = useState({
-        category: "All",
-    });
-    const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
     useEffect(() => {
         const load = async () => {
@@ -37,28 +29,6 @@ export default function NewsPage() {
         };
         load();
     }, []);
-
-    const categoryOptions = useMemo(() => {
-        const unique = new Set(news.map((item) => item.category).filter(Boolean));
-        return ["All", ...Array.from(unique)];
-    }, [news]);
-
-    const filteredNews = useMemo(() => {
-        return news.filter((item) => {
-            const matchesCategory = filters.category === "All" || item.category === filters.category;
-            return matchesCategory;
-        });
-    }, [news, filters]);
-
-    const handleFilterChange = (id, value) => {
-        setFilters((prev) => ({ ...prev, [id]: value }));
-    };
-
-    const clearFilters = () => {
-        setFilters({ category: "All" });
-    };
-
-    const hasActiveFilters = filters.category !== "All";
 
     const renderContent = () => {
         if (isLoading) {
@@ -83,21 +53,19 @@ export default function NewsPage() {
             );
         }
 
-        if (filteredNews.length === 0) {
+        if (news.length === 0) {
             return (
                 <EmptyState
                     icon="📰"
                     title="No news found"
-                    description={"Try adjusting your search criteria"}
-                    actionLabel={hasActiveFilters ? "Clear Filters" : undefined}
-                    onAction={hasActiveFilters ? clearFilters : undefined}
+                    description={"Check back later for updates."}
                 />
             );
         }
 
         return (
             <div className="results-grid">
-                {filteredNews.map((item, index) => (
+                {news.map((item, index) => (
                     <RevealOnScroll key={item.id} delay={index * 40}>
                         <div className="card-wrapper">
                             <Card
@@ -106,7 +74,8 @@ export default function NewsPage() {
                                 subtitle={item.summary}
                                 tags={[item.category]}
                                 meta={[`Date: ${new Date(item.date).toLocaleDateString()}`, item.source]}
-                                href="#"
+                                // Fix: Use real link if available, fallback to #
+                                href={item.url || item.link || "#"}
                             />
                         </div>
                     </RevealOnScroll>
@@ -145,63 +114,9 @@ export default function NewsPage() {
                 </Container>
             </section>
 
-            {/* Mobile Filter Toggle */}
-            <div className="mobile-filter-toggle-container">
-                <Button
-                    variant="secondary"
-                    className="w-full justify-between"
-                    onClick={() => setIsMobileFiltersOpen(!isMobileFiltersOpen)}
-                >
-                    <div className="flex items-center gap-2">
-                        <span>{isMobileFiltersOpen ? "Hide Filters" : "Filter News"}</span>
-                    </div>
-                    <span className="text-xs bg-rose-100 text-rose-700 font-bold px-3 py-1 rounded-full">
-                        {filteredNews.length} Results
-                    </span>
-                </Button>
-            </div>
+            {/* Removed Filter Section Entirely as per user request */}
 
-            <section className={`list-filters-section ${isMobileFiltersOpen ? "mobile-open" : ""}`}>
-                <Container>
-                    <GlassPanel className="filters-panel" variant="strong">
-                        {/* Mobile Header */}
-                        <div className="mobile-filter-header">
-                            <h3>Filters</h3>
-                            <button className="filter-close-btn" onClick={() => setIsMobileFiltersOpen(false)}>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
-                            </button>
-                        </div>
-
-                        {/* Removed Search Input as requested */}
-
-                        <div className="filter-row">
-                            <FancySelect
-                                label="Category"
-                                value={filters.category}
-                                options={categoryOptions}
-                                onChange={(val) => handleFilterChange("category", val)}
-                            />
-                        </div>
-
-                        <div className="filter-meta">
-                            <span className="filter-count">
-                                Showing <strong>{filteredNews.length}</strong> updates
-                            </span>
-                            {hasActiveFilters && (
-                                <Button variant="secondary" onClick={clearFilters}>Reset filters</Button>
-                            )}
-                        </div>
-
-                        {/* Mobile Sticky Actions */}
-                        <div className="mobile-filter-actions">
-                            <Button variant="secondary" className="flex-1" onClick={clearFilters}>Clear All</Button>
-                            <Button className="flex-1" onClick={() => setIsMobileFiltersOpen(false)}>Apply Filters</Button>
-                        </div>
-                    </GlassPanel>
-                </Container>
-            </section>
-
-            <section className="list-results">
+            <section className="list-results pt-12">
                 <Container>
                     {renderContent()}
                 </Container>
