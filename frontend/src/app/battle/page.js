@@ -1,127 +1,146 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Swords, Info } from 'lucide-react';
-import BattleArena from '@/components/BattleArena';
-import Spinner from '@/components/Spinner';
+import Combobox from '@/components/Combobox';
 import Container from '@/components/Container';
-import GlassPanel from '@/components/GlassPanel';
 import { fetchColleges } from '@/lib/api';
-import { RevealOnScroll } from '@/lib/useIntersectionObserver';
+import { Trophy, Zap, ArrowRight, Swords } from 'lucide-react';
 import "../colleges/page.css";
 
 export default function BattlePage() {
     const [colleges, setColleges] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [college1, setCollege1] = useState(null);
+    const [college2, setCollege2] = useState(null);
+    const [winner, setWinner] = useState(null);
+    const [battling, setBattling] = useState(false);
 
-    // Selections
-    const [fighter1, setFighter1] = useState(null);
-    const [fighter2, setFighter2] = useState(null);
-
-    // Load Colleges
     useEffect(() => {
-        fetchColleges()
-            .then(data => {
-                setColleges(data.filter(c => c.rankingTier === 'Tier 1' || c.rankingTier === 'Tier 2')); // Pre-filter for better battles
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error("Failed to load battle data:", err);
-                setLoading(false);
-            });
+        fetchColleges().then(setColleges).catch(console.error);
     }, []);
 
-    const handleSelect = (idx, id) => {
-        const selected = colleges.find(c => c._id === id || c.id === id);
-        if (idx === 1) setFighter1(selected);
-        else setFighter2(selected);
+    const resetBattle = () => {
+        setWinner(null);
+        setBattling(false);
     };
 
-    if (loading) return <div className="min-h-screen flex items-center justify-center bg-transparent"><Spinner /></div>;
+    const startBattle = () => {
+        if (!college1 || !college2) return;
+        setBattling(true);
+        setTimeout(() => {
+            const score1 = calculateScore(college1);
+            const score2 = calculateScore(college2);
+            setWinner(score1 > score2 ? college1 : college2);
+            setBattling(false);
+        }, 2000);
+    };
+
+    const calculateScore = (college) => {
+        let score = 0;
+        if (college.rating) score += college.rating * 20;
+        if (college.placementAverage) score += parseInt(college.placementAverage) / 1000;
+        return score;
+    };
 
     return (
-import Combobox from '@/components/Combobox';
+        <div className="min-h-screen bg-transparent pt-32 pb-20 overflow-hidden">
+            <Container>
+                {/* Header */}
+                <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-4">
+                        <Swords size={12} /> Comparison Engine
+                    </div>
+                    <h1 className="text-6xl md:text-8xl font-black text-slate-900 tracking-tighter mb-4">
+                        VS
+                    </h1>
+                    <p className="text-xl text-slate-500">The Arena.</p>
+                </div>
 
-    // ... (imports remain matching file)
+                {/* The Split Arena */}
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 min-h-[600px] flex flex-col md:flex-row">
 
-    // ... inside component
-
-    return (
-        <div className="list-page min-h-screen bg-transparent">
-            <section className="relative pt-32 pb-20 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-indigo-500/5 pointer-events-none" />
-                <Container className="relative z-10 text-center">
-                    <RevealOnScroll>
-                        <span className="inline-block py-1 px-3 rounded-full bg-red-100 text-red-600 text-[10px] font-black uppercase tracking-widest mb-4 border border-red-200">
-                            Updates Live
-                        </span>
-                        <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-6">
-                            College <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-indigo-600">Battle Royale</span> ⚔️
-                        </h1>
-                        <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
-                            The ultimate AI-powered showdown. Select two elite institutions and let the data decide the victor.
-                        </p>
-                    </RevealOnScroll>
-                </Container>
-            </section>
-
-            <section className="relative z-20 -mt-10 mb-12">
-                <Container>
-                    <GlassPanel className="p-8 shadow-2xl border-white/60 bg-white/80 backdrop-blur-xl" variant="strong">
-                        <div className="grid grid-cols-1 md:grid-cols-[1fr,auto,1fr] items-center gap-8">
-
-                            {/* Fighter 1 */}
-                            <div className="text-indigo-600">
-                                <Combobox
-                                    label="Challenger 1"
-                                    options={colleges}
-                                    value={fighter1?._id || fighter1?.id || ""}
-                                    onChange={(val) => handleSelect(1, val)}
-                                    placeholder="Select College..."
-                                />
-                            </div>
-
-                            {/* VS Badge */}
-                            <div className="flex justify-center md:pt-6">
-                                <div className="w-16 h-16 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-black italic text-xl shadow-lg rotate-3 hover:rotate-0 transition-transform duration-300 border-4 border-white ring-1 ring-slate-200">
-                                    VS
-                                </div>
-                            </div>
-
-                            {/* Fighter 2 */}
-                            <div className="text-rose-500">
-                                <Combobox
-                                    label="Challenger 2"
-                                    options={colleges}
-                                    value={fighter2?._id || fighter2?.id || ""}
-                                    onChange={(val) => handleSelect(2, val)}
-                                    placeholder="Select College..."
-                                />
-                            </div>
-                        </div>
-                    </GlassPanel>
-                </Container>
-            </section>
-
-            <section className="arena-wrapper py-12">
-                <Container>
-                    <div className="max-w-5xl mx-auto">
-                        {fighter1 && fighter2 ? (
-                            <BattleArena college1={fighter1} college2={fighter2} />
+                    {/* Floating VS Button (Absolute Center) */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                        {!winner && college1 && college2 ? (
+                            <button
+                                onClick={startBattle}
+                                disabled={battling}
+                                className={`w-24 h-24 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 ${battling ? 'animate-ping' : ''}`}
+                            >
+                                <Zap size={32} fill="currentColor" />
+                            </button>
                         ) : (
-                            <div className="h-[400px] rounded-[32px] border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-slate-400 group bg-slate-50/50 hover:bg-slate-50 transition-colors">
-                                <div className="p-8 rounded-full bg-white shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <Swords size={48} className="text-slate-300 group-hover:text-indigo-500 transition-colors" />
+                            <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center text-slate-300 font-black">VS</div>
+                        )}
+                    </div>
+
+                    {/* Left Side */}
+                    <div className={`relative flex-1 p-8 md:p-16 flex flex-col justify-center transition-all duration-700 ${winner?.id === college1?.id ? 'bg-amber-50' : 'bg-white'}`}>
+                        {winner?.id === college1?.id && (
+                            <div className="absolute top-8 left-8 text-amber-500 flex items-center gap-2 font-black uppercase tracking-widest animate-in slide-in-from-bottom-4">
+                                <Trophy size={18} /> Winner
+                            </div>
+                        )}
+
+                        <div className="mb-auto">
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Challenger 01</h3>
+                            <Combobox
+                                options={colleges}
+                                value={college1?._id || college1?.id}
+                                onChange={setCollege1}
+                                placeholder="Select College"
+                            />
+                        </div>
+
+                        {college1 && (
+                            <div className="mt-12 animate-in fade-in slide-in-from-bottom-8">
+                                <div className="w-32 h-32 bg-white rounded-2xl shadow-sm border border-slate-100 p-4 mb-6 flex items-center justify-center">
+                                    <img src={college1.logo || "/placeholder-logo.png"} className="max-w-full max-h-full object-contain" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-slate-800 mb-2">Arena Empty</h3>
-                                <p className="max-w-xs text-center text-sm font-medium text-slate-500">
-                                    Select two colleges above to initiate the comparison engine.
-                                </p>
+                                <h2 className="text-4xl font-black text-slate-900 mb-2">{college1.name}</h2>
+                                <p className="text-lg text-slate-500 font-medium">{college1.location}</p>
                             </div>
                         )}
                     </div>
-                </Container>
-            </section>
+
+                    {/* Right Side */}
+                    <div className={`relative flex-1 p-8 md:p-16 flex flex-col justify-center border-t md:border-t-0 md:border-l border-slate-100 transition-all duration-700 ${winner?.id === college2?.id ? 'bg-amber-50' : 'bg-white'}`}>
+                        {winner?.id === college2?.id && (
+                            <div className="absolute top-8 right-8 text-amber-500 flex items-center gap-2 font-black uppercase tracking-widest animate-in slide-in-from-bottom-4">
+                                <Trophy size={18} /> Winner
+                            </div>
+                        )}
+
+                        <div className="mb-auto">
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 text-right">Challenger 02</h3>
+                            <Combobox
+                                options={colleges}
+                                value={college2?._id || college2?.id}
+                                onChange={setCollege2}
+                                placeholder="Select College"
+                            />
+                        </div>
+
+                        {college2 && (
+                            <div className="mt-12 text-right animate-in fade-in slide-in-from-bottom-8">
+                                <div className="w-32 h-32 bg-white rounded-2xl shadow-sm border border-slate-100 p-4 mb-6 flex items-center justify-center ml-auto">
+                                    <img src={college2.logo || "/placeholder-logo.png"} className="max-w-full max-h-full object-contain" />
+                                </div>
+                                <h2 className="text-4xl font-black text-slate-900 mb-2">{college2.name}</h2>
+                                <p className="text-lg text-slate-500 font-medium">{college2.location}</p>
+                            </div>
+                        )}
+                    </div>
+
+                </div>
+
+                {winner && (
+                    <div className="text-center mt-12">
+                        <button onClick={resetBattle} className="text-slate-400 hover:text-slate-900 font-bold transition-colors">
+                            Reset Verification
+                        </button>
+                    </div>
+                )}
+            </Container>
         </div>
     );
 }

@@ -62,7 +62,6 @@ export default function Header() {
     { name: "Exams", path: "/exams" },
     { name: "Scholarships", path: "/scholarships" },
     { name: "News", path: "/news" },
-    { name: "Predictor", path: "/predictor" },
     { name: "Fan Wars", path: "/hype" },
     { name: "Map", path: "/map" },
     { name: "ROI Tool", path: "/roi-calculator" },
