@@ -149,76 +149,76 @@ export default function HypePage() {
                 </Container>
             </section>
 
-            {/* SEARCH SECTION - COMPACT */}
+            {/* SEARCH SECTION - ULTRA COMPACT & CENTERED */}
             <section className="list-filters-section" style={{ display: 'block', position: 'relative', marginTop: '-40px' }}>
                 <Container>
-                    {/* Added !py-4 for compact vertical padding */}
-                    <GlassPanel className="filters-panel !py-4" variant="strong">
-                        <div className="filter-search">
-                            <input
-                                type="search"
-                                className="filter-search-input"
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                                placeholder="Search college to vote..."
-                            />
-                            {!user && searchQuery.length > 0 && (
-                                <div className="text-xs text-amber-600 font-bold flex items-center gap-1 bg-amber-50 px-2 py-1 rounded">
-                                    <Lock size={12} /> Login to Vote
-                                </div>
-                            )}
-                        </div>
-
-                        {/* DROPDOWN RESULTS */}
-                        {searchQuery && (
-                            <div className="absolute top-full left-0 right-0 mx-6 mt-2 bg-white rounded-xl border border-slate-100 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-50">
-                                {searchResults.length > 0 ? (
-                                    <div className="max-h-[300px] overflow-y-auto custom-scrollbar">
-                                        {searchResults.map((college) => (
-                                            <div
-                                                key={college.id}
-                                                className="w-full text-left p-4 hover:bg-slate-50 flex items-center justify-between group/item transition-colors border-b border-slate-100 last:border-0 cursor-pointer"
-                                                onClick={(e) => handleVote(e, college)}
-                                            >
-                                                <div className="pr-4 min-w-0 flex-1">
-                                                    <div className="font-bold text-slate-900 truncate">{college.name}</div>
-                                                    <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">{college.location || "India"}</div>
-                                                </div>
-                                                <button
-                                                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-600 font-bold hover:bg-indigo-600 hover:text-white transition-all"
-                                                    onClick={(e) => handleVote(e, college)}
-                                                >
-                                                    <span>Vote</span>
-                                                    <ArrowUp size={16} />
-                                                </button>
-                                            </div>
-                                        ))}
+                    {/* Strict max-width for Search to prevent it looking too wide */}
+                    <div className="max-w-3xl mx-auto">
+                        <GlassPanel className="!p-3 !gap-2" variant="strong">
+                            <div className="filter-search mb-0">
+                                <input
+                                    type="search"
+                                    className="filter-search-input !py-3 !text-base" // Tighter padding
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    placeholder="Search college to vote..."
+                                />
+                                {!user && searchQuery.length > 0 && (
+                                    <div className="hidden sm:flex text-xs text-amber-600 font-bold items-center gap-1 bg-amber-50 px-2 py-1 rounded">
+                                        <Lock size={12} /> Login to Vote
                                     </div>
-                                ) : (
-                                    <div className="p-4 text-center text-slate-500 text-sm">No matches found.</div>
                                 )}
                             </div>
-                        )}
 
-                        <div className="filter-meta justify-center mt-2">
-                            <span className="text-xs text-slate-400 font-medium">
+                            {/* DROPDOWN RESULTS */}
+                            {searchQuery && (
+                                <div className="absolute top-full left-0 right-0 mx-6 mt-2 bg-white rounded-xl border border-slate-100 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-50">
+                                    {searchResults.length > 0 ? (
+                                        <div className="max-h-[300px] overflow-y-auto custom-scrollbar">
+                                            {searchResults.map((college) => (
+                                                <div
+                                                    key={college.id}
+                                                    className="w-full text-left p-4 hover:bg-slate-50 flex items-center justify-between group/item transition-colors border-b border-slate-100 last:border-0 cursor-pointer"
+                                                    onClick={(e) => handleVote(e, college)}
+                                                >
+                                                    <div className="pr-4 min-w-0 flex-1">
+                                                        <div className="font-bold text-slate-900 truncate">{college.name}</div>
+                                                        <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">{college.location || "India"}</div>
+                                                    </div>
+                                                    <button
+                                                        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-600 font-bold hover:bg-indigo-600 hover:text-white transition-all"
+                                                        onClick={(e) => handleVote(e, college)}
+                                                    >
+                                                        <span>Vote</span>
+                                                        <ArrowUp size={16} />
+                                                    </button>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <div className="p-4 text-center text-slate-500 text-sm">No matches found.</div>
+                                    )}
+                                </div>
+                            )}
+                        </GlassPanel>
+                        <div className="text-center mt-3">
+                            <span className="text-xs text-slate-400 font-medium bg-white/50 px-3 py-1 rounded-full border border-slate-100">
                                 <strong>{stats.recentVotes.length > 0 ? stats.recentVotes.length : "0"}</strong> votes cast recently
                             </span>
                         </div>
-                    </GlassPanel>
+                    </div>
                 </Container>
             </section>
 
             {/* RESULTS SECTION */}
             <section className="list-results pt-12">
                 <Container>
-                    {/* TOP 3 AS FLEXBOX (SMART CENTERING) */}
-                    {/* Using flex-wrap justify-center items-end ensures if only 1 exists, it's centered. */}
+                    {/* TOP 3 AS FLEXBOX - STRICTLY CENTERED & SIZED */}
                     <div className="flex flex-wrap justify-center items-end gap-6 md:gap-8 mb-16 min-h-[300px]">
 
-                        {/* SILVER (#2) - Order 1 */}
+                        {/* SILVER (#2) */}
                         {top3[1] && (
-                            <div className="order-1 flex-1 min-w-[300px] max-w-[350px] relative group">
+                            <div className="order-1 w-full md:w-[350px] shrink-0 relative group">
                                 <div className="absolute -top-3 left-4 z-10 bg-slate-100 text-slate-600 font-black text-xs px-2 py-1 rounded border border-slate-200 shadow-sm">#2 SILVER</div>
                                 <Card
                                     type="college"
@@ -239,9 +239,9 @@ export default function HypePage() {
                             </div>
                         )}
 
-                        {/* GOLD (#1) - Order 2 (Center) */}
+                        {/* GOLD (#1) - STRICT WIDTH */}
                         {top3[0] && (
-                            <div className="order-2 flex-1 min-w-[320px] max-w-[400px] relative group -mt-8 md:-mt-12 z-10">
+                            <div className="order-2 w-full md:w-[380px] shrink-0 relative group -mt-8 md:-mt-12 z-10">
                                 <div className="absolute -top-3 left-4 z-10 bg-amber-400 text-amber-950 font-black text-xs px-2 py-1 rounded border border-amber-500 shadow-sm">#1 GOLD</div>
                                 <Card
                                     type="college"
@@ -262,9 +262,9 @@ export default function HypePage() {
                             </div>
                         )}
 
-                        {/* BRONZE (#3) - Order 3 */}
+                        {/* BRONZE (#3) */}
                         {top3[2] && (
-                            <div className="order-3 flex-1 min-w-[300px] max-w-[350px] relative group">
+                            <div className="order-3 w-full md:w-[350px] shrink-0 relative group">
                                 <div className="absolute -top-3 left-4 z-10 bg-orange-100 text-orange-800 font-black text-xs px-2 py-1 rounded border border-orange-200 shadow-sm">#3 BRONZE</div>
                                 <Card
                                     type="college"
@@ -322,7 +322,7 @@ export default function HypePage() {
                         </div>
 
                         {/* RIGHT: LIVE FEED */}
-                        <div>
+                        <div className="lg:sticky lg:top-8 h-fit">
                             <h3 className="text-slate-400 font-bold uppercase tracking-widest text-xs mb-4 pl-2 flex items-center gap-2">
                                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Live Feed
                             </h3>
