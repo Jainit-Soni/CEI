@@ -1,0 +1,282 @@
+[
+    {
+        "id": "cmat",
+        "name": "Common Management Admission Test",
+        "shortName": "CMAT",
+        "conductingBody": "NTA",
+        "website": "cmat.nta.nic.in",
+        "dates": {
+            "notification": "2025-02-15",
+            "registration": "2025-03-15",
+            "admitCard": "2025-04-25",
+            "examWindow": "2025-05-05",
+            "result": "2025-05-25"
+        }
+    },
+    {
+        "id": "cat",
+        "name": "Common Admission Test",
+        "shortName": "CAT",
+        "conductingBody": "IIMs",
+        "website": "iimcat.ac.in",
+        "dates": {
+            "notification": "2024-07-30",
+            "registration": "2024-09-13",
+            "admitCard": "2024-11-05",
+            "examWindow": "2024-11-24",
+            "result": "2025-01-05"
+        }
+    },
+    {
+        "id": "mat",
+        "name": "Management Aptitude Test",
+        "shortName": "MAT",
+        "conductingBody": "AIMA",
+        "website": "mat.aima.in",
+        "dates": {
+            "notification": "2025-01-01",
+            "registration": "2025-02-20",
+            "admitCard": "2025-02-25",
+            "examWindow": "2025-03-02",
+            "result": "2025-03-20"
+        }
+    },
+    {
+        "id": "xat",
+        "name": "Xavier Aptitude Test",
+        "shortName": "XAT",
+        "conductingBody": "XLRI",
+        "website": "xatonline.in",
+        "dates": {
+            "notification": "2024-07-15",
+            "registration": "2024-11-30",
+            "admitCard": "2024-12-20",
+            "examWindow": "2025-01-05",
+            "result": "2025-01-20"
+        }
+    },
+    {
+        "id": "snap",
+        "name": "Symbiosis National Aptitude Test",
+        "shortName": "SNAP",
+        "conductingBody": "SIU",
+        "website": "snaptest.org",
+        "dates": {
+            "notification": "2024-08-05",
+            "registration": "2024-11-22",
+            "admitCard": "2024-12-04",
+            "examWindow": "2024-12-10",
+            "result": "2025-01-08"
+        }
+    },
+    {
+        "id": "nmat",
+        "name": "NMIMS Management Aptitude Test",
+        "shortName": "NMAT",
+        "conductingBody": "GMAC",
+        "website": "nmat.org",
+        "dates": {
+            "notification": "2024-08-01",
+            "registration": "2024-10-10",
+            "admitCard": "2024-10-10",
+            "examWindow": "2024-12-19",
+            "result": "2025-01-15"
+        }
+    },
+    {
+        "id": "mah-cet",
+        "name": "Maharashtra MBA Common Entrance Test",
+        "shortName": "MAH CET",
+        "conductingBody": "State CET Cell",
+        "website": "cetcell.mahacet.org",
+        "dates": {
+            "notification": "2025-01-10",
+            "registration": "2025-02-12",
+            "admitCard": "2025-03-01",
+            "examWindow": "2025-03-09",
+            "result": "2025-03-30"
+        }
+    },
+    {
+        "id": "tissnet",
+        "name": "TISS National Entrance Test",
+        "shortName": "TISSNET",
+        "conductingBody": "TISS",
+        "website": "tiss.edu",
+        "dates": {
+            "notification": "2024-12-10",
+            "registration": "2025-01-20",
+            "admitCard": "2025-02-15",
+            "examWindow": "2025-02-24",
+            "result": "2025-03-25"
+        }
+    },
+    {
+        "id": "iift",
+        "name": "Indian Institute of Foreign Trade Exam",
+        "shortName": "IIFT",
+        "conductingBody": "NTA",
+        "website": "iift.nta.nic.in",
+        "dates": {
+            "notification": "2024-09-01",
+            "registration": "2024-11-14",
+            "admitCard": "2024-12-05",
+            "examWindow": "2024-12-18",
+            "result": "2025-01-10"
+        }
+    },
+    {
+        "id": "micat",
+        "name": "MICA Admission Test",
+        "shortName": "MICAT",
+        "conductingBody": "MICA",
+        "website": "mica.ac.in",
+        "dates": {
+            "notification": "2024-09-15",
+            "registration": "2024-11-20",
+            "admitCard": "2024-11-29",
+            "examWindow": "2024-12-02",
+            "result": "2024-12-21"
+        }
+    },
+    {
+        "id": "atma",
+        "name": "AIMS Test for Management Admissions",
+        "shortName": "ATMA",
+        "conductingBody": "AIMS",
+        "website": "atmaaims.com",
+        "dates": {
+            "notification": "2024-12-25",
+            "registration": "2025-02-11",
+            "admitCard": "2025-02-14",
+            "examWindow": "2025-02-18",
+            "result": "2025-02-23"
+        }
+    },
+    {
+        "id": "kmat",
+        "name": "Karnataka Management Aptitude Test",
+        "shortName": "KMAT",
+        "conductingBody": "KPPGCA",
+        "website": "kmatindia.com",
+        "dates": {
+            "notification": "2025-06-05",
+            "registration": "2025-08-31",
+            "admitCard": "2025-10-25",
+            "examWindow": "2025-11-05",
+            "result": "2025-11-20"
+        }
+    },
+    {
+        "id": "ts-icet",
+        "name": "Telangana State Integrated Common Entrance Test",
+        "shortName": "TS ICET",
+        "conductingBody": "Kakatiya University",
+        "website": "icet.tsche.ac.in",
+        "dates": {
+            "notification": "2025-02-28",
+            "registration": "2025-04-30",
+            "admitCard": "2025-05-20",
+            "examWindow": "2025-05-25",
+            "result": "2025-06-15"
+        }
+    },
+    {
+        "id": "ap-icet",
+        "name": "Andhra Pradesh Integrated Common Entrance Test",
+        "shortName": "AP ICET",
+        "conductingBody": "Sri Krishnadevaraya University",
+        "website": "cets.apsche.ap.gov.in",
+        "dates": {
+            "notification": "2025-03-05",
+            "registration": "2025-04-15",
+            "admitCard": "2025-05-15",
+            "examWindow": "2025-05-20",
+            "result": "2025-06-10"
+        }
+    },
+    {
+        "id": "tancet",
+        "name": "Tamil Nadu Common Entrance Test",
+        "shortName": "TANCET",
+        "conductingBody": "Anna University",
+        "website": "tancet.annauniv.edu",
+        "dates": {
+            "notification": "2025-01-10",
+            "registration": "2025-02-15",
+            "admitCard": "2025-03-10",
+            "examWindow": "2025-03-25",
+            "result": "2025-04-10"
+        }
+    },
+    {
+        "id": "gmat",
+        "name": "Graduate Management Admission Test",
+        "shortName": "GMAT",
+        "conductingBody": "GMAC",
+        "website": "mba.com",
+        "dates": {
+            "notification": "Rolling",
+            "registration": "Rolling",
+            "admitCard": "Immediate",
+            "examWindow": "Year-round",
+            "result": "Immediate"
+        }
+    },
+    {
+        "id": "gre",
+        "name": "Graduate Record Examination",
+        "shortName": "GRE",
+        "conductingBody": "ETS",
+        "website": "ets.org/gre",
+        "dates": {
+            "notification": "Rolling",
+            "registration": "Rolling",
+            "admitCard": "Immediate",
+            "examWindow": "Year-round",
+            "result": "Immediate"
+        }
+    },
+    {
+        "id": "ibsat",
+        "name": "ICFAI Business School Aptitude Test",
+        "shortName": "IBSAT",
+        "conductingBody": "ICFAI",
+        "website": "ibsindia.org",
+        "dates": {
+            "notification": "2024-07-01",
+            "registration": "2024-12-16",
+            "admitCard": "2024-12-20",
+            "examWindow": "2024-12-23",
+            "result": "2024-12-27"
+        }
+    },
+    {
+        "id": "srmjee-m",
+        "name": "SRM Joint Entrance Examination for Management",
+        "shortName": "SRMJEE-M",
+        "conductingBody": "SRM Group",
+        "website": "srmist.edu.in",
+        "dates": {
+            "notification": "2024-11-10",
+            "registration": "2025-04-18",
+            "admitCard": "2025-04-20",
+            "examWindow": "2025-04-25",
+            "result": "2025-05-01"
+        }
+    },
+    {
+        "id": "ojee",
+        "name": "Odisha Joint Entrance Examination",
+        "shortName": "OJEE",
+        "conductingBody": "OJEE Board",
+        "website": "ojee.nic.in",
+        "dates": {
+            "notification": "2025-01-25",
+            "registration": "2025-03-20",
+            "admitCard": "2025-04-20",
+            "examWindow": "2025-05-08",
+            "result": "2025-06-02"
+        }
+    }
+]

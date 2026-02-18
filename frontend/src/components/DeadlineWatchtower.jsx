@@ -6,7 +6,7 @@ import { Clock, Calendar, AlertCircle, ArrowRight, Loader2 } from "lucide-react"
 import { parseExamDate, sortTimelineEvents } from "@/utils/dateParser";
 import { useAuth } from "@/lib/AuthContext";
 // Import static exam data (in a real app, this might come from an API)
-import examsData from "@/../backend/models/exams.json";
+import examsData from "@/data/exams.json";
 
 export default function DeadlineWatchtower() {
     const [events, setEvents] = useState([]);
