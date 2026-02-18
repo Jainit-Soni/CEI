@@ -275,13 +275,24 @@ export default function HypePage() {
         }
 
         try {
-            await postHypeVote({ collegeId, collegeName: college.name, userId: user.uid, userName });
+            // Fix: Backend likely expects 'uid' consistent with other APIs
+            await postHypeVote({
+                collegeId,
+                collegeName: college.name,
+                uid: user.uid,
+                userName
+            });
+
             addToast(`Vote cast for ${college.name}!`, "success"); // Success feedback
             setSearchQuery("");
             setSearchResults([]);
         } catch (err) {
             console.error("Vote failed:", err);
-            addToast("Vote failed. Please try again.", "error");
+            addToast("Vote failed. Server error.", "error");
+
+            // Optional: Rollback state here if needed, but for now just notify
+            // strict rollback is hard without deep cloning or re-fetching
+            fetchHypeStats().then(setStats); // Re-fetch to sync truth
         } finally {
             setIsVoting(false);
         }
