@@ -1,103 +1,244 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import ScholarshipCard from '@/components/ScholarshipCard';
-import Spinner from '@/components/Spinner';
-import Container from '@/components/Container';
-import { fetchScholarships } from '@/lib/api';
-// NO EXTERNAL CSS IMPORT to ensure perfect control
-
-const CATEGORIES = ["All", "State Govt", "Central Govt", "Private", "Merit-Based", "Means-Based"];
+import { useEffect, useMemo, useState } from "react";
+import Card from "@/components/Card";
+import Container from "@/components/Container";
+import GlassPanel from "@/components/GlassPanel";
+import Button from "@/components/Button";
+import FancySelect from "@/components/FancySelect";
+import EmptyState from "@/components/EmptyState";
+import { CardSkeleton } from "@/components/Skeleton";
+import { RevealOnScroll } from "@/lib/useIntersectionObserver";
+import { fetchScholarships } from "@/lib/api";
+// Shared CSS to ensure perfect harmonization
+import "../colleges/page.css";
 
 export default function ScholarshipsPage() {
     const [scholarships, setScholarships] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [filter, setFilter] = useState("All");
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [query, setQuery] = useState("");
+    const [filters, setFilters] = useState({
+        category: "All",
+        provider: "All",
+    });
+    const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
     useEffect(() => {
-        fetchScholarships()
-            .then(data => {
-                setScholarships(data);
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error("Failed to load scholarships:", err);
-                setLoading(false);
-            });
+        const load = async () => {
+            try {
+                setError(null);
+                const data = await fetchScholarships();
+                setScholarships(Array.isArray(data) ? data : []);
+            } catch (err) {
+                console.error("Failed to load scholarships", err);
+                setError("Failed to load scholarships. Please try again.");
+            } finally {
+                setIsLoading(false);
+            }
+        };
+        load();
     }, []);
 
-    const filteredScholarships = filter === "All"
-        ? scholarships
-        : scholarships.filter(s => s.category?.toLowerCase() === filter.toLowerCase() || s.category === filter);
+    const categoryOptions = useMemo(() => {
+        const unique = new Set(scholarships.map((s) => s.category).filter(Boolean));
+        return ["All", ...Array.from(unique)];
+    }, [scholarships]);
+
+    const providerOptions = useMemo(() => {
+        const unique = new Set(scholarships.map((s) => s.provider).filter(Boolean));
+        return ["All", ...Array.from(unique)];
+    }, [scholarships]);
+
+    const filteredScholarships = useMemo(() => {
+        const normalized = query.toLowerCase();
+        return scholarships.filter((s) => {
+            const matchesQuery = `${s.name} ${s.provider}`.toLowerCase().includes(normalized);
+            const matchesCategory = filters.category === "All" || s.category === filters.category;
+            const matchesProvider = filters.provider === "All" || s.provider === filters.provider;
+            return matchesQuery && matchesCategory && matchesProvider;
+        });
+    }, [scholarships, query, filters]);
+
+    const handleFilterChange = (id, value) => {
+        setFilters((prev) => ({ ...prev, [id]: value }));
+    };
+
+    const clearFilters = () => {
+        setQuery("");
+        setFilters({ category: "All", provider: "All" });
+    };
+
+    const hasActiveFilters = query || filters.category !== "All" || filters.provider !== "All";
+
+    const renderContent = () => {
+        if (isLoading) {
+            return (
+                <div className="results-grid">
+                    <CardSkeleton count={6} />
+                </div>
+            );
+        }
+
+        if (error) {
+            return (
+                <div className="error-state">
+                    <EmptyState
+                        icon="⚠️"
+                        title="Something went wrong"
+                        description={error}
+                        actionLabel="Try Again"
+                        onAction={() => window.location.reload()}
+                    />
+                </div>
+            );
+        }
+
+        if (filteredScholarships.length === 0) {
+            return (
+                <EmptyState
+                    icon="🎓"
+                    title="No scholarships found"
+                    description={hasActiveFilters
+                        ? "Try adjusting your search or filters"
+                        : "No scholarships available at the moment"}
+                    actionLabel={hasActiveFilters ? "Clear Filters" : undefined}
+                    onAction={hasActiveFilters ? clearFilters : undefined}
+                />
+            );
+        }
+
+        return (
+            <div className="results-grid">
+                {filteredScholarships.map((scholarship, index) => (
+                    <RevealOnScroll key={scholarship.id} delay={index * 40}>
+                        <div className="card-wrapper">
+                            <Card
+                                type="scholarship"
+                                title={scholarship.name}
+                                subtitle={scholarship.provider}
+                                tags={[scholarship.category, scholarship.amount]}
+                                meta={`Deadline: ${scholarship.deadline}`}
+                                href={`/scholarship/${scholarship.id}`}
+                            />
+                        </div>
+                    </RevealOnScroll>
+                ))}
+            </div>
+        );
+    };
 
     return (
-        <div className="min-h-screen bg-transparent pt-32 pb-32">
-            <Container>
-                {/* 1. Minimalist Header */}
-                <div className="text-center mb-20 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6 font-display">
-                        The Grant Ledger.
-                    </h1>
-                    <p className="text-lg md:text-xl text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
-                        Curated financial opportunities for the ambitious student.
-                    </p>
+        <div className="list-page">
+            <section className="list-hero list-hero--scholarships">
+                <div className="list-hero-bg" aria-hidden="true">
+                    <div className="hero-orb hero-orb--1" />
+                    <div className="hero-orb hero-orb--2" />
                 </div>
 
-                {/* 2. Floating Filter Pills */}
-                <div className="flex justify-center mb-20 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
-                    <div className="inline-flex flex-wrap justify-center gap-3 p-2 bg-white/50 backdrop-blur-xl rounded-full border border-slate-200/60 shadow-sm">
-                        {CATEGORIES.map(cat => (
-                            <button
-                                key={cat}
-                                onClick={() => setFilter(cat)}
-                                className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${filter === cat
-                                        ? 'bg-slate-900 text-white shadow-md transform scale-105'
-                                        : 'text-slate-500 hover:text-slate-900 hover:bg-white/80'
-                                    }`}
-                            >
-                                {cat}
+                <Container>
+                    <div className="list-hero-content">
+                        <RevealOnScroll>
+                            <span className="list-hero-kicker">Financial Aid</span>
+                            <h1 className="list-hero-title">Scholarships, Grants & Aid</h1>
+                            <p className="list-hero-subtitle">
+                                Discover funding opportunities to support your education journey, filtered for your needs.
+                            </p>
+                        </RevealOnScroll>
+
+                        {/* Stats */}
+                        <RevealOnScroll delay={100}>
+                            <div className="list-stats">
+                                <div className="list-stat">
+                                    <span className="list-stat-value mono">{scholarships.length || "--"}</span>
+                                    <span className="list-stat-label">Grants</span>
+                                </div>
+                                <div className="list-stat">
+                                    <span className="list-stat-value mono">₹{scholarships.reduce((acc, curr) => acc + (parseInt(curr.amount?.replace(/[^0-9]/g, '')) || 0), 0).toLocaleString()}</span>
+                                    <span className="list-stat-label">Total Value</span>
+                                </div>
+                            </div>
+                        </RevealOnScroll>
+                    </div>
+                </Container>
+            </section>
+
+            {/* Mobile Filter Toggle */}
+            <div className="mobile-filter-toggle-container">
+                <Button
+                    variant="secondary"
+                    className="w-full justify-between"
+                    onClick={() => setIsMobileFiltersOpen(!isMobileFiltersOpen)}
+                >
+                    <div className="flex items-center gap-2">
+                        <span>{isMobileFiltersOpen ? "Hide Filters" : "Filter Scholarships"}</span>
+                    </div>
+                    <span className="text-xs bg-emerald-100 text-emerald-700 font-bold px-3 py-1 rounded-full">
+                        {filteredScholarships.length} Results
+                    </span>
+                </Button>
+            </div>
+
+            <section className={`list-filters-section ${isMobileFiltersOpen ? "mobile-open" : ""}`}>
+                <Container>
+                    <GlassPanel className="filters-panel" variant="strong">
+                        {/* Mobile Header */}
+                        <div className="mobile-filter-header">
+                            <h3>Filters</h3>
+                            <button className="filter-close-btn" onClick={() => setIsMobileFiltersOpen(false)}>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
                             </button>
-                        ))}
-                    </div>
-                </div>
+                        </div>
 
-                {/* 3. The Crystal Grid */}
-                {loading ? (
-                    <div className="flex justify-center py-32"><Spinner /></div>
-                ) : filteredScholarships.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-                        {filteredScholarships.map((scholarship) => (
-                            <ScholarshipCard key={scholarship.id} scholarship={scholarship} />
-                        ))}
-                    </div>
-                ) : (
-                    <div className="text-center py-32">
-                        <p className="text-slate-400 text-lg">No entries found for "{filter}".</p>
-                        <button
-                            onClick={() => setFilter("All")}
-                            className="mt-4 text-slate-900 font-bold hover:underline"
-                        >
-                            Reset View
-                        </button>
-                    </div>
-                )}
+                        <div className="filter-search">
+                            <svg className="filter-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
+                            <input
+                                type="search"
+                                className="filter-search-input"
+                                value={query}
+                                onChange={(e) => setQuery(e.target.value)}
+                                placeholder="Search scholarships..."
+                            />
+                        </div>
 
-                {/* 4. Directory Access (Bottom Banner) - Minimalist */}
-                <div className="mt-40 animate-in fade-in duration-1000 delay-500">
-                    <div className="group relative overflow-hidden rounded-3xl bg-slate-900 text-white p-12 md:p-20 text-center shadow-2xl transition-transform hover:scale-[1.01] duration-500">
-                        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%,100%_100%] animate-[shimmer_8s_infinite] pointer-events-none" />
+                        <div className="filter-row">
+                            <FancySelect
+                                label="Category"
+                                value={filters.category}
+                                options={categoryOptions}
+                                onChange={(val) => handleFilterChange("category", val)}
+                            />
+                            <FancySelect
+                                label="Provider"
+                                value={filters.provider}
+                                options={providerOptions}
+                                onChange={(val) => handleFilterChange("provider", val)}
+                            />
+                        </div>
 
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight relative z-10">The Internal Database</h2>
-                        <p className="text-slate-400 max-w-xl mx-auto text-lg mb-10 relative z-10">
-                            Access our proprietary list of micro-scholarships and alumni grants not listed publicly.
-                        </p>
+                        <div className="filter-meta">
+                            <span className="filter-count">
+                                Showing <strong>{filteredScholarships.length}</strong> matches
+                            </span>
+                            {hasActiveFilters && (
+                                <Button variant="secondary" onClick={clearFilters}>Reset filters</Button>
+                            )}
+                        </div>
 
-                        <button className="relative z-10 px-8 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
-                            Request Access
-                        </button>
-                    </div>
-                </div>
-            </Container>
+                        {/* Mobile Sticky Actions */}
+                        <div className="mobile-filter-actions">
+                            <Button variant="secondary" className="flex-1" onClick={clearFilters}>Clear All</Button>
+                            <Button className="flex-1" onClick={() => setIsMobileFiltersOpen(false)}>Apply Filters</Button>
+                        </div>
+                    </GlassPanel>
+                </Container>
+            </section>
+
+            <section className="list-results">
+                <Container>
+                    {renderContent()}
+                </Container>
+            </section>
         </div>
     );
 }

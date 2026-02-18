@@ -91,6 +91,33 @@
     0 8px 16px -8px rgba(0, 0, 0, 0.06);
 }
 
+/* --- NEW: Semantic Type Accents (V3) --- */
+
+/* Scholarship: Emerald/Teal (Money/Growth) */
+.card[data-type="scholarship"]::before {
+  background: linear-gradient(90deg, #10b981, #34d399, #6ee7b7);
+}
+
+.card[data-type="scholarship"]:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow:
+    0 20px 40px -12px rgba(16, 185, 129, 0.2),
+    0 8px 16px -8px rgba(0, 0, 0, 0.08);
+}
+
+/* News: Rose/Red (Urgency/LIVE) */
+.card[data-type="news"]::before {
+  background: linear-gradient(90deg, #f43f5e, #fb7185, #fda4af);
+}
+
+.card[data-type="news"]:hover {
+  border-color: rgba(244, 63, 94, 0.3);
+  box-shadow:
+    0 20px 40px -12px rgba(244, 63, 94, 0.2),
+    0 8px 16px -8px rgba(0, 0, 0, 0.08);
+}
+
+
 /* ---- Card Top ---- */
 .card-top {
   padding: 20px 20px 12px 20px;
@@ -159,6 +186,20 @@
   color: var(--tier-3);
   border-color: var(--tier-3-border);
 }
+
+/* Semanitc tag colors */
+.card[data-type="scholarship"] .card-tags span:first-child {
+  background: #ecfdf5;
+  color: #059669;
+  border-color: #d1fae5;
+}
+
+.card[data-type="news"] .card-tags span:first-child {
+  background: #fff1f2;
+  color: #be123c;
+  border-color: #ffe4e6;
+}
+
 
 /* ---- Meta Row ---- */
 .card-meta {

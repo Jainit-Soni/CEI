@@ -24,7 +24,7 @@ export default function Card({ title, subtitle, tags = [], meta = [], type = "de
   };
 
   const card = (
-    <div className={`card card-${resolvedType}`} data-tier={tierTag || undefined}>
+    <div className={`card card-${resolvedType}`} data-tier={tierTag || undefined} data-type={resolvedType}>
       {/* 1. AI Prediction Badge (Top Priority) */}
       {resolvedType === "college" && <PredictionBadge college={collegeData} />}
 
