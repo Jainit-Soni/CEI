@@ -1,15 +1,52 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Container from '@/components/Container';
 import GlassPanel from '@/components/GlassPanel';
 import Card from '@/components/Card';
 import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
+import { useToast } from "@/components/Toast";
 import { Search, Flame, ArrowUp, Zap, Lock, Filter } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
-import "@/app/colleges/page.css"; // Ensure we inherit global college styles
+import "@/app/colleges/page.css";
+
+// -----------------------------------------------------------------------------
+// ANIMATED COUNTER COMPONENT
+// -----------------------------------------------------------------------------
+function AnimatedCounter({ value }) {
+    const [displayValue, setDisplayValue] = useState(value);
+
+    useEffect(() => {
+        let start = displayValue;
+        const end = value;
+        if (start === end) return;
+
+        const range = end - start;
+        const duration = 500; // ms
+        const startTime = Date.now();
+
+        const animate = () => {
+            const now = Date.now();
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Ease out cubic
+            const ease = 1 - Math.pow(1 - progress, 3);
+
+            const current = Math.floor(start + (range * ease));
+            setDisplayValue(current);
+
+            if (progress < 1) requestAnimationFrame(animate);
+        };
+
+        requestAnimationFrame(animate);
+    }, [value]); // Intentional dependency on value only
+
+    return <span className="tabular-nums">{displayValue.toLocaleString()}</span>;
+}
+
 
 // -----------------------------------------------------------------------------
 // V19-PREMIUM COMPONENTS (Restored & Enhanced)
@@ -22,23 +59,28 @@ function PodiumCard({ college, rank, onVote, isVoting }) {
     const isSilver = rank === 2;
     const isBronze = rank === 3;
 
-    let glowColor = "rgba(255, 255, 255, 0)";
-    if (isGold) glowColor = "rgba(245, 158, 11, 0.4)"; // Amber
-    if (isSilver) glowColor = "rgba(148, 163, 184, 0.4)"; // Slate
-    if (isBronze) glowColor = "rgba(253, 186, 116, 0.4)"; // Orange
+    // Gradient Backgrounds (V27 Polish)
+    let bgGradient = "bg-white/40";
+    if (isGold) bgGradient = "bg-gradient-to-br from-amber-50/80 via-white/60 to-amber-100/40 border-amber-200/60";
+    if (isSilver) bgGradient = "bg-gradient-to-br from-slate-50/80 via-white/60 to-slate-200/40 border-slate-200/60";
+    if (isBronze) bgGradient = "bg-gradient-to-br from-orange-50/80 via-white/60 to-orange-100/40 border-orange-200/60";
 
     return (
         <div className={`relative group ${isGold ? 'order-2 -mt-10 z-20' : isSilver ? 'order-1 mt-4 z-10' : 'order-3 mt-8 z-0'}`}>
             {/* Ambient Glow */}
             <div
                 className="absolute inset-0 blur-3xl rounded-full opacity-60 pointer-events-none transition-all duration-1000 group-hover:opacity-100"
-                style={{ background: glowColor, transform: 'scale(1.2)' }}
+                style={{
+                    background: isGold ? "rgba(245, 158, 11, 0.3)" : isSilver ? "rgba(148, 163, 184, 0.3)" : "rgba(253, 186, 116, 0.3)",
+                    transform: 'scale(1.2)'
+                }}
             />
 
             <div className={`relative flex flex-col items-center text-center p-6 rounded-3xl border backdrop-blur-2xl transition-all duration-300 group-hover:-translate-y-2
-                ${isGold ? 'bg-white/60 border-amber-200/50 w-[320px] h-[400px] shadow-[0_20px_60px_-15px_rgba(245,158,11,0.3)]' : ''}
-                ${isSilver ? 'bg-white/40 border-slate-200/50 w-[280px] h-[360px] shadow-[0_20px_60px_-15px_rgba(148,163,184,0.2)]' : ''}
-                ${isBronze ? 'bg-white/40 border-orange-200/50 w-[280px] h-[340px] shadow-[0_20px_60px_-15px_rgba(253,186,116,0.2)]' : ''}
+                ${bgGradient}
+                ${isGold ? 'w-[320px] h-[400px] shadow-[0_20px_60px_-15px_rgba(245,158,11,0.3)]' : ''}
+                ${isSilver ? 'w-[280px] h-[360px] shadow-[0_20px_60px_-15px_rgba(148,163,184,0.2)]' : ''}
+                ${isBronze ? 'w-[280px] h-[340px] shadow-[0_20px_60px_-15px_rgba(253,186,116,0.2)]' : ''}
             `}>
                 {/* RANK BADGE */}
                 <div className={`absolute -top-6 px-6 py-2 rounded-full text-xs font-bold tracking-widest shadow-lg uppercase
@@ -62,22 +104,25 @@ function PodiumCard({ college, rank, onVote, isVoting }) {
 
                     <div className="flex flex-col items-center gap-1 mb-8">
                         <span className={`text-5xl font-black tracking-tighter ${isGold ? 'text-amber-500' : isSilver ? 'text-slate-500' : 'text-orange-500'}`}>
-                            {college.votes}
+                            <AnimatedCounter value={college.votes} />
                         </span>
                         <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Votes</span>
                     </div>
                 </div>
 
-                {/* VOTE BUTTON (FLOATING OVER EDGE) */}
+                {/* VOTE BUTTON */}
                 <button
                     onClick={(e) => onVote(e, college)}
                     disabled={isVoting}
-                    className={`absolute -bottom-6 flex items-center gap-2 px-8 py-4 rounded-full text-sm font-bold shadow-xl transition-all active:scale-95 hover:shadow-2xl
+                    className={`absolute -bottom-6 flex items-center gap-2 px-8 py-4 rounded-full text-sm font-bold shadow-xl transition-all active:scale-90 hover:shadow-2xl overflow-hidden relative
                         ${isGold ? 'bg-slate-900 text-white hover:bg-black' : 'bg-white text-slate-900 border border-slate-100 hover:bg-slate-50'}
                     `}
                 >
                     <ArrowUp size={16} className={isVoting ? 'animate-bounce' : ''} />
                     {isVoting ? 'Voting...' : 'VOTE NOW'}
+
+                    {/* Ripple Effect Container */}
+                    <span className="absolute inset-0 rounded-full bg-white/20 scale-0 active:scale-150 transition-transform duration-300 origin-center pointer-events-none" />
                 </button>
             </div>
         </div>
@@ -96,13 +141,15 @@ function RankRow({ college, index, onVote, isVoting }) {
                 <div className="text-sm text-slate-500 flex items-center gap-2">
                     {college.location}
                     <span className="w-1 h-1 bg-slate-300 rounded-full" />
-                    <span className="text-slate-400">{college.votes} Votes</span>
+                    <span className="text-slate-400 font-medium">
+                        <AnimatedCounter value={college.votes} /> Votes
+                    </span>
                 </div>
             </div>
 
             <button
                 onClick={(e) => onVote(e, college)}
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-colors"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-all active:scale-90"
                 title="Vote"
             >
                 <ArrowUp size={18} />
@@ -117,6 +164,7 @@ function RankRow({ college, index, onVote, isVoting }) {
 
 export default function HypePage() {
     const { user, signInWithGoogle } = useAuth();
+    const { addToast } = useToast();
     const [stats, setStats] = useState({ leaderboard: [], recentVotes: [] });
     const [searchQuery, setSearchQuery] = useState("");
     const [debouncedSearchQuery, setDebouncedSearchQuery] = useState("");
@@ -165,6 +213,15 @@ export default function HypePage() {
         performSearch();
     }, [debouncedSearchQuery]);
 
+    // CHECK IF ALREADY VOTED (LocalStorage + User check)
+    const hasUserVoted = (collegeId) => {
+        if (typeof window === 'undefined') return false;
+
+        // Check session votes
+        const sessionVotes = JSON.parse(localStorage.getItem('hype_votes') || '[]');
+        return sessionVotes.includes(collegeId);
+    };
+
     const handleVote = async (e, college) => {
         e.preventDefault();
         e.stopPropagation();
@@ -176,10 +233,17 @@ export default function HypePage() {
             return;
         }
 
+        const collegeId = college.id || college._id;
+
+        // 1. DUPLICATE VOTE CHECK
+        if (hasUserVoted(collegeId)) {
+            addToast("You have already voted for this college!", "error");
+            return;
+        }
+
         if (isVoting) return;
         setIsVoting(true);
 
-        const collegeId = college.id || college._id;
         const userName = user.displayName || user.email.split('@')[0] || "User";
 
         // Optimistic Update
@@ -199,16 +263,25 @@ export default function HypePage() {
             return {
                 ...prev,
                 leaderboard: newLeaderboard,
-                recentVotes: [{ collegeName: college.name, userName: userName, timestamp: new Date().toISOString() }, ...prev.recentVotes].slice(0, 10)
+                recentVotes: [{ collegeName: college.name, userName: userName, timestamp: new Date().toISOString() }, ...prev.recentVotes].slice(0, 20) // Keep more for infinite scroll
             };
         });
 
+        // Save to LocalStorage to prevent re-vote
+        const sessionVotes = JSON.parse(localStorage.getItem('hype_votes') || '[]');
+        if (!sessionVotes.includes(collegeId)) {
+            sessionVotes.push(collegeId);
+            localStorage.setItem('hype_votes', JSON.stringify(sessionVotes));
+        }
+
         try {
             await postHypeVote({ collegeId, collegeName: college.name, userId: user.uid, userName });
+            addToast(`Vote cast for ${college.name}!`, "success"); // Success feedback
             setSearchQuery("");
             setSearchResults([]);
         } catch (err) {
             console.error("Vote failed:", err);
+            addToast("Vote failed. Please try again.", "error");
         } finally {
             setIsVoting(false);
         }
@@ -220,7 +293,12 @@ export default function HypePage() {
     // DERIVED STATS FOR TICKER
     const totalVotes = stats.leaderboard.reduce((acc, curr) => acc + (curr.votes || 0), 0);
     const activeColleges = stats.leaderboard.length;
-    // const topState = top3[0]?.location?.split(',').pop()?.trim() || "India"; // REMOVED as per user request
+
+    // INFINITE SCROLL DATA PREP
+    // Ensure we have enough items to scroll smoothly. If list is small, multiply it.
+    const recentVotesDisplay = stats.recentVotes.length > 0
+        ? [...stats.recentVotes, ...stats.recentVotes, ...stats.recentVotes, ...stats.recentVotes, ...stats.recentVotes] // 5x duplication
+        : [];
 
     return (
         <div className="min-h-screen bg-[#F8FAFC] relative overflow-hidden font-sans text-slate-900 selection:bg-amber-100 selection:text-amber-900">
@@ -255,7 +333,9 @@ export default function HypePage() {
                         <div className="flex flex-col items-center w-full">
                             <div className="flex flex-wrap justify-center gap-8 md:gap-16 border-t border-slate-200/60 pt-8 max-w-4xl mx-auto mb-8">
                                 <div className="flex flex-col items-center gap-1">
-                                    <span className="text-3xl font-black text-slate-800 tracking-tight">{totalVotes.toLocaleString()}</span>
+                                    <span className="text-3xl font-black text-slate-800 tracking-tight">
+                                        <AnimatedCounter value={totalVotes} />
+                                    </span>
                                     <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Votes</span>
                                 </div>
                                 <div className="w-px h-12 bg-slate-200/60 hidden md:block"></div>
@@ -265,29 +345,34 @@ export default function HypePage() {
                                 </div>
                             </div>
 
-                            {/* DOPAMINE TICKER (MARQUEE) */}
-                            {stats.recentVotes && stats.recentVotes.length > 0 && (
+                            {/* DOPAMINE TICKER (MARQUEE) - Enhanced Infinite Scroll */}
+                            {recentVotesDisplay.length > 0 && (
                                 <div className="w-full overflow-hidden bg-slate-900/5 py-3 border-y border-slate-200/50 backdrop-blur-sm">
-                                    <div className="relative flex items-center gap-8 whitespace-nowrap animate-marquee">
-                                        {[...stats.recentVotes, ...stats.recentVotes, ...stats.recentVotes].map((vote, i) => (
-                                            <div key={i} className="flex items-center gap-2 text-sm text-slate-600 font-medium">
-                                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                    <div className="relative flex items-center gap-12 whitespace-nowrap animate-marquee">
+                                        {recentVotesDisplay.map((vote, i) => (
+                                            <div key={i} className="flex items-center gap-3 text-sm text-slate-600 font-medium">
+                                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse box-shadow-green"></span>
                                                 <span className="font-bold text-slate-900">{vote.userName}</span>
-                                                <span className="text-slate-400">voted for</span>
-                                                <span className="font-bold text-indigo-600">{vote.collegeName}</span>
+                                                <span className="text-slate-400 text-xs uppercase tracking-wide">supported</span>
+                                                <span className="font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">{vote.collegeName}</span>
                                             </div>
                                         ))}
                                     </div>
                                     <style jsx>{`
                                         @keyframes marquee {
                                             0% { transform: translateX(0); }
-                                            100% { transform: translateX(-50%); }
+                                            100% { transform: translateX(-50%); } 
                                         }
                                         .animate-marquee {
-                                            animation: marquee 30s linear infinite;
+                                            animation: marquee 60s linear infinite; /* Slower, smoother */
+                                            width: max-content; /* Ensure width fits content */
+                                            will-change: transform;
                                         }
                                         .animate-marquee:hover {
                                             animation-play-state: paused;
+                                        }
+                                        .box-shadow-green {
+                                            box-shadow: 0 0 8px 2px rgba(34, 197, 94, 0.4);
                                         }
                                     `}</style>
                                 </div>
@@ -298,7 +383,7 @@ export default function HypePage() {
 
                 <Container className="max-w-6xl">
 
-                    {/* 2. STANDARD SEARCH PANEL (Reverted from Floating Pill) */}
+                    {/* 2. STANDARD SEARCH PANEL */}
                     <div className="mb-12">
                         <GlassPanel className="filters-panel !p-6" variant="strong">
                             <div className="filter-search">
@@ -382,9 +467,9 @@ export default function HypePage() {
                 </Container>
             </div>
 
-            {/* VERSION MARKER - V26 DOPAMINE */}
+            {/* VERSION MARKER - V27 POLISHED */}
             <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v2.6-dopamine-fixed
+                v2.7-infinite-polished
             </div>
         </div>
     );
