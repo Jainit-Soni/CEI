@@ -9,7 +9,7 @@ import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
 import { Search, Flame, ArrowUp, Zap, Lock } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
-import "../colleges/page.css"; // IMPORTANT: Inherit all styles from Colleges page
+import "../colleges/page.css";
 
 // Simple debounce hook
 function useDebounce(value, delay) {
@@ -125,7 +125,7 @@ export default function HypePage() {
 
     return (
         <div className="list-page min-h-screen">
-            {/* HERO SECTION MATCHING COLLEGES PAGE EXACTLY */}
+            {/* HERO SECTION */}
             <section className="list-hero list-hero--colleges">
                 <div className="list-hero-bg" aria-hidden="true">
                     <div className="hero-orb hero-orb--1" />
@@ -149,11 +149,11 @@ export default function HypePage() {
                 </Container>
             </section>
 
-            {/* SEARCH SECTION - MIRRORING COLLEGES FILTERS PANEL */}
+            {/* SEARCH SECTION - COMPACT */}
             <section className="list-filters-section" style={{ display: 'block', position: 'relative', marginTop: '-40px' }}>
                 <Container>
-                    <GlassPanel className="filters-panel" variant="strong">
-                        {/* EXACT SEARCH STRUCTURE FROM COLLEGES PAGE */}
+                    {/* Added !py-4 for compact vertical padding */}
+                    <GlassPanel className="filters-panel !py-4" variant="strong">
                         <div className="filter-search">
                             <input
                                 type="search"
@@ -169,7 +169,7 @@ export default function HypePage() {
                             )}
                         </div>
 
-                        {/* DROPDOWN RESULTS (If searching) */}
+                        {/* DROPDOWN RESULTS */}
                         {searchQuery && (
                             <div className="absolute top-full left-0 right-0 mx-6 mt-2 bg-white rounded-xl border border-slate-100 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-50">
                                 {searchResults.length > 0 ? (
@@ -200,9 +200,9 @@ export default function HypePage() {
                             </div>
                         )}
 
-                        <div className="filter-meta justify-center mt-4">
-                            <span className="filter-count text-center w-full">
-                                <strong>{stats.recentVotes.length > 0 ? stats.recentVotes.length : "0"}</strong> Recent Votes Cast
+                        <div className="filter-meta justify-center mt-2">
+                            <span className="text-xs text-slate-400 font-medium">
+                                <strong>{stats.recentVotes.length > 0 ? stats.recentVotes.length : "0"}</strong> votes cast recently
                             </span>
                         </div>
                     </GlassPanel>
@@ -212,11 +212,13 @@ export default function HypePage() {
             {/* RESULTS SECTION */}
             <section className="list-results pt-12">
                 <Container>
-                    {/* TOP 3 AS CARDS (Fixed Grid) */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 items-end">
-                        {/* 2ND PLACE */}
+                    {/* TOP 3 AS FLEXBOX (SMART CENTERING) */}
+                    {/* Using flex-wrap justify-center items-end ensures if only 1 exists, it's centered. */}
+                    <div className="flex flex-wrap justify-center items-end gap-6 md:gap-8 mb-16 min-h-[300px]">
+
+                        {/* SILVER (#2) - Order 1 */}
                         {top3[1] && (
-                            <div className="order-2 md:order-1 relative group">
+                            <div className="order-1 flex-1 min-w-[300px] max-w-[350px] relative group">
                                 <div className="absolute -top-3 left-4 z-10 bg-slate-100 text-slate-600 font-black text-xs px-2 py-1 rounded border border-slate-200 shadow-sm">#2 SILVER</div>
                                 <Card
                                     type="college"
@@ -226,18 +228,20 @@ export default function HypePage() {
                                     data={top3[1]}
                                     badge={{ text: "Silver", color: "#94a3b8" }}
                                 />
-                                <button
-                                    onClick={(e) => handleVote(e, top3[1])}
-                                    className="absolute bottom-4 right-4 z-20 px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded shadow-lg hover:bg-indigo-600 transition-colors"
-                                >
-                                    VOTE
-                                </button>
+                                <div className="p-2">
+                                    <button
+                                        onClick={(e) => handleVote(e, top3[1])}
+                                        className="w-full py-2 bg-white border border-slate-200 text-slate-600 text-sm font-bold rounded-lg shadow-sm hover:border-indigo-500 hover:text-indigo-600 transition-all flex items-center justify-center gap-2"
+                                    >
+                                        <ArrowUp size={14} /> Vote
+                                    </button>
+                                </div>
                             </div>
                         )}
 
-                        {/* 1ST PLACE */}
+                        {/* GOLD (#1) - Order 2 (Center) */}
                         {top3[0] && (
-                            <div className="order-1 md:order-2 relative group -mt-8 md:-mt-12 z-10 transform scale-105">
+                            <div className="order-2 flex-1 min-w-[320px] max-w-[400px] relative group -mt-8 md:-mt-12 z-10">
                                 <div className="absolute -top-3 left-4 z-10 bg-amber-400 text-amber-950 font-black text-xs px-2 py-1 rounded border border-amber-500 shadow-sm">#1 GOLD</div>
                                 <Card
                                     type="college"
@@ -247,18 +251,20 @@ export default function HypePage() {
                                     data={top3[0]}
                                     badge={{ text: "CHAMPION", color: "#f59e0b" }}
                                 />
-                                <button
-                                    onClick={(e) => handleVote(e, top3[0])}
-                                    className="absolute bottom-4 right-4 z-20 px-4 py-2 bg-amber-500 text-white text-sm font-black roundedShadow-lg hover:bg-amber-600 transition-colors shadow-amber-500/20"
-                                >
-                                    VOTE +1
-                                </button>
+                                <div className="p-2">
+                                    <button
+                                        onClick={(e) => handleVote(e, top3[0])}
+                                        className="w-full py-3 bg-amber-400 text-amber-950 text-sm font-black rounded-lg shadow-lg hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-amber-400/20"
+                                    >
+                                        <ArrowUp size={16} /> VOTE +1
+                                    </button>
+                                </div>
                             </div>
                         )}
 
-                        {/* 3RD PLACE */}
+                        {/* BRONZE (#3) - Order 3 */}
                         {top3[2] && (
-                            <div className="order-3 md:order-3 relative group">
+                            <div className="order-3 flex-1 min-w-[300px] max-w-[350px] relative group">
                                 <div className="absolute -top-3 left-4 z-10 bg-orange-100 text-orange-800 font-black text-xs px-2 py-1 rounded border border-orange-200 shadow-sm">#3 BRONZE</div>
                                 <Card
                                     type="college"
@@ -268,18 +274,20 @@ export default function HypePage() {
                                     data={top3[2]}
                                     badge={{ text: "Bronze", color: "#fdba74" }}
                                 />
-                                <button
-                                    onClick={(e) => handleVote(e, top3[2])}
-                                    className="absolute bottom-4 right-4 z-20 px-3 py-1 bg-slate-900 text-white text-xs font-bold rounded shadow-lg hover:bg-indigo-600 transition-colors"
-                                >
-                                    VOTE
-                                </button>
+                                <div className="p-2">
+                                    <button
+                                        onClick={(e) => handleVote(e, top3[2])}
+                                        className="w-full py-2 bg-white border border-slate-200 text-slate-600 text-sm font-bold rounded-lg shadow-sm hover:border-indigo-500 hover:text-indigo-600 transition-all flex items-center justify-center gap-2"
+                                    >
+                                        <ArrowUp size={14} /> Vote
+                                    </button>
+                                </div>
                             </div>
                         )}
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-24">
-                        {/* LEFT: RANK LIST (Compact Rows) */}
+                        {/* LEFT: RANK LIST */}
                         <div className="lg:col-span-2 space-y-4">
                             <h3 className="text-slate-400 font-bold uppercase tracking-widest text-xs mb-4 pl-2">The Challengers</h3>
                             {rest.map((college, idx) => (
