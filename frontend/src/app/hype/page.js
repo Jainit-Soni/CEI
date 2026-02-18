@@ -86,7 +86,7 @@ function PodiumCard({ college, rank, onVote, isVoting }) {
 
 function RankRow({ college, index, onVote, isVoting }) {
     return (
-        <div className="group relative flex items-center gap-4 p-4 rounded-2xl bg-white/40 border border-white/40 backdrop-blur-md shadow-sm hover:bg-white/60 hover:shadow-md hover:scale-[1.01] transition-all duration-300">
+        <div className="group relative flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
             <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 text-slate-500 font-bold text-lg">
                 #{index + 4}
             </div>
@@ -220,7 +220,7 @@ export default function HypePage() {
     // DERIVED STATS FOR TICKER
     const totalVotes = stats.leaderboard.reduce((acc, curr) => acc + (curr.votes || 0), 0);
     const activeColleges = stats.leaderboard.length;
-    const topState = top3[0]?.location?.split(',').pop()?.trim() || "India";
+    // const topState = top3[0]?.location?.split(',').pop()?.trim() || "India"; // REMOVED as per user request
 
     return (
         <div className="min-h-screen bg-[#F8FAFC] relative overflow-hidden font-sans text-slate-900 selection:bg-amber-100 selection:text-amber-900">
@@ -234,7 +234,7 @@ export default function HypePage() {
 
             <div className="relative z-10 pb-32">
                 {/* 1. HERO - ENHANCED WITH STATS (EXAMS STYLE) */}
-                <section className="pt-32 pb-12 flex flex-col items-center text-center px-4">
+                <section className="pt-32 pb-12 flex flex-col items-center text-center px-4 overflow-hidden">
                     <RevealOnScroll>
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 border border-white/50 backdrop-blur-md shadow-sm mb-8">
                             <span className="relative flex h-3 w-3">
@@ -252,48 +252,74 @@ export default function HypePage() {
                         </p>
 
                         {/* LIVE STATS TICKER (EXAMS STYLE) */}
-                        <div className="flex flex-wrap justify-center gap-8 md:gap-16 border-t border-slate-200/60 pt-8 max-w-4xl mx-auto">
-                            <div className="flex flex-col items-center gap-1">
-                                <span className="text-3xl font-black text-slate-800 tracking-tight">{totalVotes.toLocaleString()}</span>
-                                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Votes</span>
+                        <div className="flex flex-col items-center w-full">
+                            <div className="flex flex-wrap justify-center gap-8 md:gap-16 border-t border-slate-200/60 pt-8 max-w-4xl mx-auto mb-8">
+                                <div className="flex flex-col items-center gap-1">
+                                    <span className="text-3xl font-black text-slate-800 tracking-tight">{totalVotes.toLocaleString()}</span>
+                                    <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Votes</span>
+                                </div>
+                                <div className="w-px h-12 bg-slate-200/60 hidden md:block"></div>
+                                <div className="flex flex-col items-center gap-1">
+                                    <span className="text-3xl font-black text-slate-800 tracking-tight">{activeColleges}</span>
+                                    <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Colleges Active</span>
+                                </div>
                             </div>
-                            <div className="w-px h-12 bg-slate-200/60 hidden md:block"></div>
-                            <div className="flex flex-col items-center gap-1">
-                                <span className="text-3xl font-black text-slate-800 tracking-tight">{activeColleges}</span>
-                                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Colleges Active</span>
-                            </div>
-                            <div className="w-px h-12 bg-slate-200/60 hidden md:block"></div>
-                            <div className="flex flex-col items-center gap-1">
-                                <span className="text-3xl font-black text-amber-500 tracking-tight">{topState}</span>
-                                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Leading Region</span>
-                            </div>
+
+                            {/* DOPAMINE TICKER (MARQUEE) */}
+                            {stats.recentVotes && stats.recentVotes.length > 0 && (
+                                <div className="w-full overflow-hidden bg-slate-900/5 py-3 border-y border-slate-200/50 backdrop-blur-sm">
+                                    <div className="relative flex items-center gap-8 whitespace-nowrap animate-marquee">
+                                        {[...stats.recentVotes, ...stats.recentVotes, ...stats.recentVotes].map((vote, i) => (
+                                            <div key={i} className="flex items-center gap-2 text-sm text-slate-600 font-medium">
+                                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                                <span className="font-bold text-slate-900">{vote.userName}</span>
+                                                <span className="text-slate-400">voted for</span>
+                                                <span className="font-bold text-indigo-600">{vote.collegeName}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <style jsx>{`
+                                        @keyframes marquee {
+                                            0% { transform: translateX(0); }
+                                            100% { transform: translateX(-50%); }
+                                        }
+                                        .animate-marquee {
+                                            animation: marquee 30s linear infinite;
+                                        }
+                                        .animate-marquee:hover {
+                                            animation-play-state: paused;
+                                        }
+                                    `}</style>
+                                </div>
+                            )}
                         </div>
                     </RevealOnScroll>
                 </section>
 
-                {/* 2. FLOATING SEARCH - THE PILL (UNCHANGED) */}
-                <div className="sticky top-6 z-40 px-4 mb-24 flex justify-center">
-                    <div className="w-full max-w-2xl relative group">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Container className="max-w-6xl">
 
-                        <div className="relative flex items-center bg-white/80 backdrop-blur-2xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-full h-16 px-6 transition-all focus-within:ring-2 focus-within:ring-indigo-500/20 focus-within:scale-[1.01] overflow-visible">
-                            <Search className="text-slate-400 w-5 h-5 shrink-0" />
-                            <input
-                                type="text"
-                                className="w-full bg-transparent border-none focus:ring-0 text-lg font-medium placeholder-slate-400 text-slate-800 h-full ml-4"
-                                placeholder="Find your college & cast your vote..."
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                            />
+                    {/* 2. STANDARD SEARCH PANEL (Reverted from Floating Pill) */}
+                    <div className="mb-12">
+                        <GlassPanel className="filters-panel !p-6" variant="strong">
+                            <div className="filter-search">
+                                <Search className="text-slate-400 w-5 h-5 shrink-0" />
+                                <input
+                                    type="text"
+                                    className="filter-search-input w-full bg-transparent border-none focus:ring-0 text-lg font-medium placeholder-slate-400 text-slate-800 ml-4"
+                                    placeholder="Search for your college to vote..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                />
+                            </div>
                             {/* DROPDOWN RESULTS */}
                             {searchQuery && (
-                                <div className="absolute top-full left-0 right-0 mx-6 mt-4 bg-white/90 backdrop-blur-xl rounded-2xl border border-white/50 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-50 ring-1 ring-black/5" style={{ maxHeight: '300px', overflowY: 'auto' }}>
+                                <div className="mt-2 bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200" style={{ maxHeight: '300px', overflowY: 'auto' }}>
                                     {searchResults.length > 0 ? (
                                         searchResults.map(college => (
                                             <div
                                                 key={college.id}
                                                 onClick={(e) => handleVote(e, college)}
-                                                className="p-4 hover:bg-slate-50 cursor-pointer flex justify-between items-center border-b border-slate-100/50 last:border-0 group/item transition-colors"
+                                                className="p-4 hover:bg-slate-50 cursor-pointer flex justify-between items-center border-b border-slate-100 last:border-0 group/item transition-colors"
                                             >
                                                 <div>
                                                     <div className="font-bold text-slate-800 group-hover/item:text-indigo-600 transition-colors">{college.name}</div>
@@ -311,11 +337,9 @@ export default function HypePage() {
                                     )}
                                 </div>
                             )}
-                        </div>
+                        </GlassPanel>
                     </div>
-                </div>
 
-                <Container className="max-w-6xl">
                     {/* 3. THE PODIUM (TOP 3) */}
                     {top3.length > 0 && (
                         <div className="mb-24 flex flex-col md:flex-row justify-center items-end gap-6 md:gap-8 min-h-[450px]">
@@ -338,7 +362,7 @@ export default function HypePage() {
                             <div className="flex items-center justify-between mb-8 px-4">
                                 <h3 className="text-2xl font-bold text-slate-800 tracking-tight">Challengers</h3>
                                 <div className="text-sm font-medium text-slate-500">
-                                    Showing Top {rest.length}
+                                    {rest.length > 0 ? `Showing Top ${rest.length}` : 'Loading Challengers...'}
                                 </div>
                             </div>
 
@@ -358,9 +382,9 @@ export default function HypePage() {
                 </Container>
             </div>
 
-            {/* VERSION MARKER - V25 ENHANCED */}
+            {/* VERSION MARKER - V26 DOPAMINE */}
             <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v2.5-exam-enhanced
+                v2.6-dopamine-fixed
             </div>
         </div>
     );
