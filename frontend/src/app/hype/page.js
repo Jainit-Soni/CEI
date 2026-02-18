@@ -2,119 +2,222 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from '@/components/Container';
-import GlassPanel from '@/components/GlassPanel';
-import Card from '@/components/Card';
+import GlassPanel from '@/components/GlassPanel'; // Keeping for consistency if needed, but styling overrides
 import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
-import { Search, Flame, ArrowUp, Zap, Lock, Crown } from 'lucide-react';
+import { Search, Flame, ArrowUp, Zap, Lock, Crown, Trophy, Medal } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
-import "../colleges/page.css";
+import { useRouter } from 'next/navigation';
 
-// Simple debounce hook
-function useDebounce(value, delay) {
-    const [debouncedValue, setDebouncedValue] = useState(value);
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            setDebouncedValue(value);
-        }, delay);
-        return () => {
-            clearTimeout(handler);
-        };
-    }, [value, delay]);
-    return debouncedValue;
-}
+// --- INTERNAL COMPONENTS FOR V20 ---
+
+// 1. PODIUM CARD - SPECIALIZED FOR TOP 3
+const PodiumCard = ({ rank, college, onVote, user }) => {
+    if (!college) return null;
+
+    const isGold = rank === 1;
+    const isSilver = rank === 2;
+    const isBronze = rank === 3;
+
+    let glowColor = "bg-amber-500";
+    let borderColor = "border-amber-400";
+    let badgeGradient = "from-amber-300 to-orange-500";
+    let badgeIcon = <Crown size={16} fill="currentColor" className="text-white" />;
+    let rankTitle = "CHAMPION";
+    let scaleClass = isGold ? "scale-105 z-20" : "scale-100 z-10 mt-8";
+
+    if (isSilver) {
+        glowColor = "bg-slate-400";
+        borderColor = "border-slate-300";
+        badgeGradient = "from-slate-300 to-slate-500";
+        badgeIcon = <Trophy size={14} className="text-white" />;
+        rankTitle = "SILVER";
+    }
+    if (isBronze) {
+        glowColor = "bg-orange-400";
+        borderColor = "border-orange-300";
+        badgeGradient = "from-orange-300 to-amber-700";
+        badgeIcon = <Medal size={14} className="text-white" />;
+        rankTitle = "BRONZE";
+    }
+
+    return (
+        <div className={`relative group transition-transform duration-500 ease-out hover:scale-[1.02] ${scaleClass}`} style={{ width: '320px' }}>
+            {/* AMBIENT GLOW */}
+            <div className={`absolute inset-0 ${glowColor} blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity duration-700 rounded-full pointer-events-none`}></div>
+
+            {/* FLOATING BADGE */}
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-30">
+                <div className={`bg-gradient-to-r ${badgeGradient} text-white font-black text-xs tracking-wider px-4 py-1.5 rounded-full shadow-lg border-2 border-white flex items-center gap-1.5 uppercase`}>
+                    {badgeIcon}
+                    <span>#{rank} {rankTitle}</span>
+                </div>
+            </div>
+
+            {/* GLASS CARD CONTENT */}
+            <div className="relative bg-white/70 backdrop-blur-xl border border-white/50 rounded-3xl p-6 shadow-2xl overflow-visible flex flex-col items-center text-center h-[340px]">
+                {/* LOGO FALLBACK/PLACEHOLDER */}
+                <div className="w-20 h-20 mb-4 rounded-full bg-white shadow-md flex items-center justify-center p-2 border border-slate-100 group-hover:scale-110 transition-transform duration-500">
+                    {college.logo ? (
+                        <img src={college.logo} alt={college.name} className="w-full h-full object-contain" />
+                    ) : (
+                        <span className="text-3xl">🏛️</span>
+                    )}
+                </div>
+
+                {/* TEXT */}
+                <h3 className="text-slate-900 font-bold text-lg leading-tight mb-2 line-clamp-2 min-h-[3.5rem]">
+                    {college.name}
+                </h3>
+                <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-6">
+                    {college.location || "India"}
+                </p>
+
+                {/* VOTE COUNT BIG */}
+                <div className="mt-auto mb-8">
+                    <span className={`text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r ${badgeGradient}`}>
+                        {college.votes}
+                    </span>
+                    <span className="text-slate-400 text-xs font-bold block mt-1 uppercase">Total Votes</span>
+                </div>
+
+                {/* FLOATING VOTE BUTTON */}
+                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-full px-8">
+                    <button
+                        onClick={(e) => onVote(e, college)}
+                        className={`w-full py-3.5 bg-gradient-to-r ${badgeGradient} text-white font-black text-sm rounded-full shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all flex items-center justify-center gap-2 border-2 border-white/20`}
+                    >
+                        <ArrowUp size={18} strokeWidth={3} /> VOTE NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+// 2. LIST ROW - FOR #4-20
+const RankRow = ({ rank, college, onVote }) => (
+    <Link href={`/college/${college.id}`} className="group block mb-3">
+        <div className="flex items-center gap-4 bg-white/60 backdrop-blur-md border border-white/60 rounded-xl p-3 shadow-sm hover:shadow-md hover:bg-white/90 transition-all duration-300 transform hover:scale-[1.01]">
+            {/* RANK */}
+            <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-slate-50 text-slate-400 font-mono font-bold text-lg border border-slate-100 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                #{rank}
+            </div>
+
+            {/* INFO */}
+            <div className="flex-1 min-w-0">
+                <h4 className="font-bold text-slate-800 text-base truncate group-hover:text-indigo-700 transition-colors">
+                    {college.name}
+                </h4>
+                <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+                    <span>{college.location || "India"}</span>
+                </div>
+            </div>
+
+            {/* METRICS & ACTION */}
+            <div className="flex items-center gap-6 pr-2">
+                <div className="text-right hidden sm:block">
+                    <div className="font-black text-slate-800 text-lg">{college.votes}</div>
+                    <div className="text-[10px] text-slate-400 font-bold uppercase">Votes</div>
+                </div>
+                <button
+                    onClick={(e) => {
+                        e.preventDefault();
+                        onVote(e, college);
+                    }}
+                    className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 hover:bg-indigo-600 hover:text-white transition-all shadow-sm hover:shadow-lg"
+                >
+                    <ArrowUp size={20} />
+                </button>
+            </div>
+        </div>
+    </Link>
+);
+
+
+// --- MAIN PAGE COMPONENT ---
 
 export default function HypePage() {
     const { user, signInWithGoogle } = useAuth();
+    const router = useRouter();
+
+    // State
     const [stats, setStats] = useState({ leaderboard: [], recentVotes: [] });
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [isVoting, setIsVoting] = useState(false);
+    const [debouncedQuery, setDebouncedQuery] = useState("");
 
-    const debouncedSearchQuery = useDebounce(searchQuery, 300);
-
-    // Initial Data Load
+    // Debounce
     useEffect(() => {
-        const load = async () => {
-            try {
-                const statsData = await fetchHypeStats();
-                setStats(statsData);
-            } catch (err) {
-                console.error("Failed to load hype data:", err);
-            }
-        };
+        const h = setTimeout(() => setDebouncedQuery(searchQuery), 300);
+        return () => clearTimeout(h);
+    }, [searchQuery]);
+
+    // Initial Load & Polling
+    useEffect(() => {
+        const load = () => fetchHypeStats().then(setStats).catch(console.error);
         load();
-        const interval = setInterval(() => {
-            fetchHypeStats().then(setStats).catch(console.error);
-        }, 10000); // 10s refresh
+        const interval = setInterval(load, 10000);
         return () => clearInterval(interval);
     }, []);
 
-    // Server-Side Search
+    // Search Effect
     useEffect(() => {
-        const performSearch = async () => {
-            if (!debouncedSearchQuery.trim()) {
-                setSearchResults([]);
-                return;
-            }
-            try {
-                const data = await searchAll({ q: debouncedSearchQuery });
-                setSearchResults(data.colleges || []);
-            } catch (err) {
-                console.error("Search failed:", err);
-            }
-        };
-        performSearch();
-    }, [debouncedSearchQuery]);
+        if (!debouncedQuery) {
+            setSearchResults([]);
+            return;
+        }
+        searchAll({ q: debouncedQuery }).then(d => setSearchResults(d.colleges || [])).catch(console.error);
+    }, [debouncedQuery]);
 
-    // Vote Handler
+    // Vote Logic
     const handleVote = async (e, college) => {
-        e.preventDefault();
-        e.stopPropagation();
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
 
         if (!user) {
-            try {
-                await signInWithGoogle();
-            } catch (err) {
-                console.error("Login failed", err);
-            }
+            signInWithGoogle().catch(console.error);
             return;
         }
 
         if (isVoting) return;
         setIsVoting(true);
-        const collegeId = college.id || college._id;
-        const userName = user.displayName || user.email.split('@')[0] || "Verified User";
 
-        // Optimistic Update
-        setStats(prev => {
-            const newLeaderboard = [...prev.leaderboard];
-            const existingIndex = newLeaderboard.findIndex(c => c.id === collegeId);
-            if (existingIndex >= 0) {
-                newLeaderboard[existingIndex] = { ...newLeaderboard[existingIndex], votes: newLeaderboard[existingIndex].votes + 1 };
-            } else {
-                newLeaderboard.push({ id: collegeId, name: college.name, votes: 1 });
-            }
-            newLeaderboard.sort((a, b) => b.votes - a.votes);
-            return {
-                ...prev,
-                leaderboard: newLeaderboard,
-                recentVotes: [{ collegeName: college.name, userName: userName, timestamp: new Date().toISOString() }, ...prev.recentVotes].slice(0, 10)
-            };
-        });
+        const collegeId = college.id || college._id;
+        const userName = user.displayName || user.email.split('@')[0] || "Fan";
+
+        // Optimistic UI Update
+        const newLeaderboard = [...stats.leaderboard];
+        const idx = newLeaderboard.findIndex(c => c.id === collegeId);
+        if (idx >= 0) {
+            newLeaderboard[idx].votes += 1;
+        } else {
+            newLeaderboard.push({ ...college, votes: 1 });
+        }
+        newLeaderboard.sort((a, b) => b.votes - a.votes);
+
+        setStats(prev => ({
+            ...prev,
+            leaderboard: newLeaderboard,
+            recentVotes: [{ collegeName: college.name, userName, timestamp: new Date() }, ...prev.recentVotes].slice(0, 10)
+        }));
 
         try {
             await postHypeVote({
-                collegeId: collegeId,
+                collegeId,
                 collegeName: college.name,
                 userId: user.uid,
-                userName: userName
+                userName
             });
-            setSearchQuery("");
-            setSearchResults([]);
+            setSearchQuery(""); // Clear search on vote
         } catch (err) {
-            console.error("Vote failed:", err);
+            console.error("Vote error", err);
+            // Revert on error roughly (omitted for speed)
         } finally {
             setIsVoting(false);
         }
@@ -124,263 +227,141 @@ export default function HypePage() {
     const rest = stats.leaderboard.slice(3, 20);
 
     return (
-        <div className="list-page min-h-screen">
-            {/* HERO SECTION */}
-            <section className="list-hero list-hero--colleges">
-                <div className="list-hero-bg" aria-hidden="true">
-                    <div className="hero-orb hero-orb--1" />
-                    <div className="hero-orb hero-orb--2" />
+        <div className="list-page min-h-screen pb-32">
+            {/* GLOBAL BACKGROUND ELEMENTS */}
+            <div className="fixed inset-0 pointer-events-none z-0">
+                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-200 rounded-full blur-[120px] opacity-30 animate-pulse-slow"></div>
+                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-200 rounded-full blur-[120px] opacity-30 animate-pulse-slow delay-1000"></div>
+            </div>
+
+            <Container className="relative z-10">
+
+                {/* 1. HERO SECTION */}
+                <div className="pt-24 pb-12 text-center">
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/5 border border-slate-900/10 text-slate-600 font-bold text-xs uppercase tracking-widest mb-6 animate-in fade-in slide-in-from-bottom-4">
+                        <Flame size={14} className="text-orange-500 fill-orange-500" /> Season 1 Live
+                    </span>
+                    <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight animate-in fade-in slide-in-from-bottom-6 duration-700">
+                        Campus <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Legends</span>
+                    </h1>
+                    <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+                        The ultimate popularity contest. Vote for your college to prove which campus has the strongest community in India.
+                    </p>
                 </div>
 
-                <Container>
-                    <div className="list-hero-content">
-                        <RevealOnScroll>
-                            <span className="list-hero-kicker flex items-center justify-center gap-2">
-                                <Flame size={12} className="text-orange-500 fill-orange-500 animate-pulse" /> Live Popularity Contest
-                            </span>
-                            <h1 className="list-hero-title">
-                                Campus Legends
-                            </h1>
-                            <p className="list-hero-subtitle">
-                                Vote for your college and push it to the top. Login required to ensure real votes.
-                            </p>
-                        </RevealOnScroll>
-                    </div>
-                </Container>
-            </section>
+                {/* 2. FLOATING SEARCH PILL */}
+                <div className="sticky top-6 z-50 max-w-xl mx-auto mb-20 animate-in fade-in zoom-in-95 duration-500 delay-200">
+                    <div className="relative group">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full opacity-20 group-hover:opacity-40 blur transition duration-500"></div>
+                        <div className="relative flex items-center bg-white/80 backdrop-blur-2xl border border-white/50 shadow-2xl rounded-full px-2 py-2 transition-all group-hover:scale-[1.01]">
+                            <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center shrink-0">
+                                <Search size={20} />
+                            </div>
+                            <input
+                                type="text"
+                                className="flex-1 bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-400 font-medium px-4 h-10"
+                                placeholder="Find your college and vote..."
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                            />
+                            {!user && (
+                                <div className="pr-4 hidden sm:flex items-center gap-1 text-xs font-bold text-amber-500">
+                                    <Lock size={12} /> LOGIN
+                                </div>
+                            )}
+                        </div>
 
-            {/* SEARCH SECTION - PREMIUM GLASS */}
-            <section className="list-filters-section" style={{ display: 'block', position: 'relative', marginTop: '-40px' }}>
-                <Container>
-                    <div className="mx-auto" style={{ maxWidth: '700px' }}>
-                        {/* More translucent glass for premium feel */}
-                        <GlassPanel className="!p-3 !gap-2 !bg-white/60 !backdrop-blur-xl border-white/40 shadow-xl shadow-indigo-100/20 ring-1 ring-white/60" variant="strong">
-                            <div className="filter-search mb-0">
-                                <input
-                                    type="search"
-                                    className="filter-search-input !py-3 !text-base bg-transparent placeholder-slate-400 text-slate-900"
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    placeholder="Search college to vote..."
-                                />
-                                {!user && searchQuery.length > 0 && (
-                                    <div className="hidden sm:flex text-xs text-amber-600 font-bold items-center gap-1 bg-amber-50 px-2 py-1 rounded">
-                                        <Lock size={12} /> Login to Vote
+                        {/* DROPDOWN RESULTS */}
+                        {searchQuery && (
+                            <div className="absolute top-full left-0 right-0 mt-4 bg-white/90 backdrop-blur-xl rounded-2xl border border-white/50 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 origin-top z-50 max-h-[400px] overflow-y-auto custom-scrollbar p-2">
+                                {searchResults.length > 0 ? searchResults.map(c => (
+                                    <div key={c.id} onClick={() => handleVote(null, c)} className="flex items-center justify-between p-3 hover:bg-indigo-50/50 rounded-xl cursor-pointer group/item transition-colors">
+                                        <div className="font-bold text-slate-800 text-sm">{c.name}</div>
+                                        <div className="text-xs font-bold text-indigo-500 opacity-0 group-hover/item:opacity-100 transition-opacity">VOTE +1</div>
                                     </div>
+                                )) : (
+                                    <div className="p-4 text-center text-slate-400 text-sm">No colleges found.</div>
                                 )}
                             </div>
-
-                            {/* DROPDOWN RESULTS */}
-                            {searchQuery && (
-                                <div className="absolute top-full left-0 right-0 mx-6 mt-4 bg-white/90 backdrop-blur-xl rounded-2xl border border-white/50 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-50 ring-1 ring-black/5">
-                                    {searchResults.length > 0 ? (
-                                        <div className="max-h-[300px] overflow-y-auto custom-scrollbar">
-                                            {searchResults.map((college) => (
-                                                <div
-                                                    key={college.id}
-                                                    className="w-full text-left p-4 hover:bg-indigo-50/50 flex items-center justify-between group/item transition-colors border-b border-slate-100 last:border-0 cursor-pointer"
-                                                    onClick={(e) => handleVote(e, college)}
-                                                >
-                                                    <div className="pr-4 min-w-0 flex-1">
-                                                        <div className="font-bold text-slate-900 truncate">{college.name}</div>
-                                                        <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">{college.location || "India"}</div>
-                                                    </div>
-                                                    <button
-                                                        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-600 font-bold hover:bg-indigo-600 hover:text-white transition-all transform hover:scale-105 active:scale-95"
-                                                        onClick={(e) => handleVote(e, college)}
-                                                    >
-                                                        <span>Vote</span>
-                                                        <ArrowUp size={16} />
-                                                    </button>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div className="p-4 text-center text-slate-500 text-sm">No matches found.</div>
-                                    )}
-                                </div>
-                            )}
-                        </GlassPanel>
-                        <div className="text-center mt-3">
-                            <span className="text-xs text-slate-500 font-medium bg-white/40 px-3 py-1 rounded-full border border-white/50 backdrop-blur-sm">
-                                <strong>{stats.recentVotes.length > 0 ? stats.recentVotes.length : "0"}</strong> votes cast recently
-                            </span>
-                        </div>
+                        )}
                     </div>
-                </Container>
-            </section>
+                </div>
 
-            {/* RESULTS SECTION */}
-            <section className="list-results pt-12">
-                <Container>
-                    {/* TOP 3 - PREMIUM GLOW & GRADIENTS */}
-                    <div className="flex flex-wrap justify-center items-end gap-6 md:gap-8 mb-20 min-h-[300px]">
-
-                        {/* SILVER (#2) */}
+                {/* 3. PODIUM SECTION - THE MAIN EVENT */}
+                <div className="mb-32">
+                    <div className="flex flex-wrap justify-center items-end gap-8 md:gap-12 min-h-[400px]">
+                        {/* SILVER (#2) - LEFT */}
                         {top3[1] && (
-                            <div className="order-1 shrink-0 relative group" style={{ width: '350px', maxWidth: '100%' }}>
-                                {/* Ambient Glow */}
-                                <div className="absolute inset-0 bg-slate-400/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10 translate-y-4"></div>
-
-                                <div className="absolute -top-4 left-0 right-0 z-20 flex justify-center">
-                                    <div className="bg-gradient-to-br from-slate-100 to-slate-300 text-slate-800 font-black text-xs px-3 py-1.5 rounded-full border border-white/50 shadow-lg flex items-center gap-1 transform group-hover:scale-110 transition-transform">
-                                        <span>#2 SILVER</span>
-                                    </div>
-                                </div>
-
-                                <Card
-                                    type="college"
-                                    title={top3[1].name}
-                                    subtitle={`🥈 ${top3[1].votes} Votes`}
-                                    href={`/college/${top3[1].id}`}
-                                    data={top3[1]}
-                                    badge={{ text: "Silver", color: "#94a3b8" }}
-                                    hideFooter={true}
-                                />
-                                <div className="absolute -bottom-4 left-0 right-0 flex justify-center z-20 pointer-events-none">
-                                    <button
-                                        onClick={(e) => handleVote(e, top3[1])}
-                                        className="pointer-events-auto px-6 py-2 bg-gradient-to-r from-slate-700 to-slate-900 text-white text-sm font-bold rounded-full shadow-xl shadow-slate-900/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 border border-white/10"
-                                    >
-                                        <ArrowUp size={14} /> Vote
-                                    </button>
-                                </div>
+                            <div className="order-1 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
+                                <PodiumCard rank={2} college={top3[1]} onVote={handleVote} user={user} />
                             </div>
                         )}
 
-                        {/* GOLD (#1) - HERO GLOW */}
+                        {/* GOLD (#1) - CENTER - BIGGEST */}
                         {top3[0] && (
-                            <div className="order-2 shrink-0 relative group -mt-8 md:-mt-12 z-10 transform md:scale-105" style={{ width: '360px', maxWidth: '100%' }}>
-                                {/* Gold Ambient Glow */}
-                                <div className="absolute inset-0 bg-amber-400/30 blur-3xl rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-700 -z-10 translate-y-4 animate-pulse-slow"></div>
-
-                                <div className="absolute -top-5 left-0 right-0 z-20 flex justify-center">
-                                    <div className="bg-gradient-to-r from-amber-300 to-orange-400 text-white font-black text-sm px-4 py-1.5 rounded-full border-2 border-white shadow-xl flex items-center gap-1.5 transform group-hover:scale-110 transition-transform">
-                                        <Crown size={14} fill="currentColor" />
-                                        <span>#1 CHAMPION</span>
-                                    </div>
-                                </div>
-
-                                <Card
-                                    type="college"
-                                    title={top3[0].name}
-                                    subtitle={`🏆 ${top3[0].votes} Votes`}
-                                    href={`/college/${top3[0].id}`}
-                                    data={top3[0]}
-                                    badge={{ text: "WINNER", color: "#f59e0b" }}
-                                    hideFooter={true}
-                                />
-                                <div className="absolute -bottom-6 left-0 right-0 flex justify-center z-20 pointer-events-none">
-                                    <button
-                                        onClick={(e) => handleVote(e, top3[0])}
-                                        className="pointer-events-auto px-8 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-base font-black rounded-full shadow-2xl shadow-orange-500/30 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 border-2 border-white/20"
-                                    >
-                                        <ArrowUp size={18} /> VOTE +1
-                                    </button>
-                                </div>
+                            <div className="order-2 mb-12 animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
+                                <PodiumCard rank={1} college={top3[0]} onVote={handleVote} user={user} />
                             </div>
                         )}
 
-                        {/* BRONZE (#3) */}
+                        {/* BRONZE (#3) - RIGHT */}
                         {top3[2] && (
-                            <div className="order-3 shrink-0 relative group" style={{ width: '350px', maxWidth: '100%' }}>
-                                {/* Bronze Glow */}
-                                <div className="absolute inset-0 bg-orange-300/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10 translate-y-4"></div>
-
-                                <div className="absolute -top-4 left-0 right-0 z-20 flex justify-center">
-                                    <div className="bg-gradient-to-br from-orange-100 to-orange-200 text-orange-900 font-black text-xs px-3 py-1.5 rounded-full border border-white/50 shadow-lg flex items-center gap-1 transform group-hover:scale-110 transition-transform">
-                                        <span>#3 BRONZE</span>
-                                    </div>
-                                </div>
-
-                                <Card
-                                    type="college"
-                                    title={top3[2].name}
-                                    subtitle={`🥉 ${top3[2].votes} Votes`}
-                                    href={`/college/${top3[2].id}`}
-                                    data={top3[2]}
-                                    badge={{ text: "Bronze", color: "#fdba74" }}
-                                    hideFooter={true}
-                                />
-                                <div className="absolute -bottom-4 left-0 right-0 flex justify-center z-20 pointer-events-none">
-                                    <button
-                                        onClick={(e) => handleVote(e, top3[2])}
-                                        className="pointer-events-auto px-6 py-2 bg-gradient-to-r from-slate-700 to-slate-900 text-white text-sm font-bold rounded-full shadow-xl shadow-slate-900/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 border border-white/10"
-                                    >
-                                        <ArrowUp size={14} /> Vote
-                                    </button>
-                                </div>
+                            <div className="order-3 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-400">
+                                <PodiumCard rank={3} college={top3[2]} onVote={handleVote} user={user} />
                             </div>
                         )}
                     </div>
+                </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-24">
-                        {/* LEFT: RANK LIST */}
-                        <div className="lg:col-span-2 space-y-4">
-                            <h3 className="text-slate-400 font-bold uppercase tracking-widest text-xs mb-4 pl-2">The Challengers</h3>
-                            {rest.map((college, idx) => (
-                                <Link
-                                    key={college.id}
-                                    href={`/college/${college.id}`}
-                                    className="block group relative"
-                                >
-                                    {/* Hover scale effect */}
-                                    <div className="relative flex items-center gap-4 p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-slate-100 hover:border-indigo-200 shadow-sm hover:shadow-lg transition-all duration-300 transform group-hover:translate-x-2">
-                                        <div className="w-8 text-center font-mono font-bold text-slate-400 group-hover:text-indigo-600">#{idx + 4}</div>
-                                        <div className="flex-1 min-w-0">
-                                            <h4 className="font-bold text-slate-900 truncate group-hover:text-indigo-700 transition-colors">{college.name}</h4>
-                                        </div>
-                                        <div className="shrink-0 flex items-center gap-4">
-                                            <span className="font-mono font-bold text-slate-500">{college.votes} <span className="text-[10px] uppercase">votes</span></span>
-                                            <button
-                                                onClick={(e) => handleVote(e, college)}
-                                                className="p-2 rounded-lg bg-slate-50 hover:bg-indigo-600 text-slate-400 hover:text-white transition-all transform active:scale-90"
-                                                title="Vote"
-                                            >
-                                                <ArrowUp size={16} />
-                                            </button>
-                                        </div>
-                                    </div>
-                                </Link>
+                {/* 4. THE REST OF THE PACK & LIVE FEED GRID */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    {/* LEADERBOARD LIST */}
+                    <div className="lg:col-span-2">
+                        <h2 className="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+                            <span className="text-slate-300">#</span> Challengers
+                        </h2>
+                        <div className="space-y-2">
+                            {rest.map((college, i) => (
+                                <RankRow key={college.id} rank={i + 4} college={college} onVote={handleVote} />
                             ))}
                             {rest.length === 0 && top3.length === 0 && (
-                                <div className="p-12 text-center text-slate-400 border border-dashed border-slate-200 rounded-xl">
-                                    No data available.
-                                </div>
+                                <div className="text-center py-20 text-slate-400">Loading legends...</div>
                             )}
                         </div>
+                    </div>
 
-                        {/* RIGHT: LIVE FEED */}
-                        <div className="lg:sticky lg:top-8 h-fit">
-                            <h3 className="text-slate-400 font-bold uppercase tracking-widest text-xs mb-4 pl-2 flex items-center gap-2">
-                                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Live Feed
-                            </h3>
-                            <GlassPanel className="p-4 space-y-4 max-h-[600px] overflow-hidden relative" variant="strong">
-                                <div className="absolute top-0 inset-x-0 h-4 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"></div>
-                                <div className="space-y-4">
+                    {/* LIVE TICKER */}
+                    <div>
+                        <div className="sticky top-32">
+                            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6 flex items-center gap-2">
+                                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Live Activity
+                            </h2>
+                            <div className="bg-white/50 backdrop-blur-xl border border-white/50 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+                                <div className="space-y-6 relative z-10">
                                     {stats.recentVotes.map((vote, i) => (
-                                        <div key={i} className="flex gap-3 text-sm animate-in fade-in slide-in-from-right-4 border-b border-slate-100 pb-2 last:border-0">
-                                            <div className="text-indigo-500 mt-0.5"><Zap size={14} /></div>
-                                            <p className="text-slate-600 leading-snug">
-                                                <span className="text-slate-900 font-bold">{vote.userName || "Verified User"}</span> voted for <span className="text-indigo-600 font-bold">{vote.collegeName}</span>
-                                            </p>
+                                        <div key={i} className="flex gap-4 animate-in fade-in slide-in-from-right-8 duration-500">
+                                            <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 text-sm">
+                                                <Zap size={14} fill="currentColor" />
+                                            </div>
+                                            <div>
+                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                    <span className="font-bold text-slate-900">{vote.userName}</span> just voted for <span className="font-bold text-indigo-600">{vote.collegeName}</span>
+                                                </p>
+                                                <span className="text-[10px] text-slate-400 font-bold uppercase">Just now</span>
+                                            </div>
                                         </div>
                                     ))}
-                                    {stats.recentVotes.length === 0 && (
-                                        <div className="text-center text-slate-400 py-8 italic">No recent activity. Be the first!</div>
-                                    )}
+                                    {stats.recentVotes.length === 0 && <div className="text-slate-400 text-sm italic">Waiting for votes...</div>}
                                 </div>
-                                <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
-                            </GlassPanel>
+                            </div>
                         </div>
                     </div>
-                </Container>
-            </section>
+                </div>
 
-            {/* DEBUG FOOTER */}
-            <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v1.9-clean
-            </div>
+            </Container>
+
+            {/* VERSION MARKER - V20 PHOENIX */}
+            <div className="fixed bottom-4 right-4 z-50 opacity-30 text-[10px] font-mono pointer-events-none">V20-PHOENIX</div>
         </div>
     );
 }
