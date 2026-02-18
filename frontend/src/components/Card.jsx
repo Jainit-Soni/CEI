@@ -5,7 +5,7 @@ import AddToChoiceButton from "./AddToChoiceButton";
 import PredictionBadge from "./PredictionBadge"; // New
 import "./Card.css";
 
-export default function Card({ title, subtitle, tags = [], meta = [], type = "default", variant, href, trust, badge, data = {} }) {
+export default function Card({ title, subtitle, tags = [], meta = [], type = "default", variant, href, trust, badge, data = {}, ...props }) {
   const resolvedType = variant || type;
   const metaList = Array.isArray(meta) ? meta : meta ? [meta] : [];
   const isExternal = href && (href.startsWith('http') || href.startsWith('//'));
@@ -56,7 +56,7 @@ export default function Card({ title, subtitle, tags = [], meta = [], type = "de
         </div>
       )}
 
-      {resolvedType === "college" && (
+      {resolvedType === "college" && !props.hideFooter && (
         <div
           className="card-footer"
           onClick={(e) => {

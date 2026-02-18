@@ -235,6 +235,7 @@ export default function HypePage() {
                                     href={`/college/${top3[1].id}`}
                                     data={top3[1]}
                                     badge={{ text: "Silver", color: "#94a3b8" }}
+                                    hideFooter={true}
                                 />
                                 <div className="absolute -bottom-4 left-0 right-0 flex justify-center z-20 pointer-events-none">
                                     <button
@@ -267,6 +268,7 @@ export default function HypePage() {
                                     href={`/college/${top3[0].id}`}
                                     data={top3[0]}
                                     badge={{ text: "WINNER", color: "#f59e0b" }}
+                                    hideFooter={true}
                                 />
                                 <div className="absolute -bottom-6 left-0 right-0 flex justify-center z-20 pointer-events-none">
                                     <button
@@ -298,6 +300,7 @@ export default function HypePage() {
                                     href={`/college/${top3[2].id}`}
                                     data={top3[2]}
                                     badge={{ text: "Bronze", color: "#fdba74" }}
+                                    hideFooter={true}
                                 />
                                 <div className="absolute -bottom-4 left-0 right-0 flex justify-center z-20 pointer-events-none">
                                     <button
@@ -376,7 +379,7 @@ export default function HypePage() {
 
             {/* DEBUG FOOTER */}
             <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v1.8-premium
+                v1.9-clean
             </div>
         </div>
     );
