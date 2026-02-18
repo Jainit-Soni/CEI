@@ -7,7 +7,7 @@ import GlassPanel from '@/components/GlassPanel';
 import Card from '@/components/Card';
 import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
-import { Search, Flame, ArrowUp, Zap, Lock } from 'lucide-react';
+import { Search, Flame, ArrowUp, Zap, Lock, Crown } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
 import "../colleges/page.css";
 
@@ -149,16 +149,16 @@ export default function HypePage() {
                 </Container>
             </section>
 
-            {/* SEARCH SECTION - ULTRA COMPACT & CENTERED */}
+            {/* SEARCH SECTION - PREMIUM GLASS */}
             <section className="list-filters-section" style={{ display: 'block', position: 'relative', marginTop: '-40px' }}>
                 <Container>
-                    {/* Strict max-width for Search to prevent it looking too wide */}
                     <div className="mx-auto" style={{ maxWidth: '700px' }}>
-                        <GlassPanel className="!p-3 !gap-2" variant="strong">
+                        {/* More translucent glass for premium feel */}
+                        <GlassPanel className="!p-3 !gap-2 !bg-white/60 !backdrop-blur-xl border-white/40 shadow-xl shadow-indigo-100/20 ring-1 ring-white/60" variant="strong">
                             <div className="filter-search mb-0">
                                 <input
                                     type="search"
-                                    className="filter-search-input !py-3 !text-base" // Tighter padding
+                                    className="filter-search-input !py-3 !text-base bg-transparent placeholder-slate-400 text-slate-900"
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     placeholder="Search college to vote..."
@@ -172,13 +172,13 @@ export default function HypePage() {
 
                             {/* DROPDOWN RESULTS */}
                             {searchQuery && (
-                                <div className="absolute top-full left-0 right-0 mx-6 mt-2 bg-white rounded-xl border border-slate-100 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-50">
+                                <div className="absolute top-full left-0 right-0 mx-6 mt-4 bg-white/90 backdrop-blur-xl rounded-2xl border border-white/50 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 z-50 ring-1 ring-black/5">
                                     {searchResults.length > 0 ? (
                                         <div className="max-h-[300px] overflow-y-auto custom-scrollbar">
                                             {searchResults.map((college) => (
                                                 <div
                                                     key={college.id}
-                                                    className="w-full text-left p-4 hover:bg-slate-50 flex items-center justify-between group/item transition-colors border-b border-slate-100 last:border-0 cursor-pointer"
+                                                    className="w-full text-left p-4 hover:bg-indigo-50/50 flex items-center justify-between group/item transition-colors border-b border-slate-100 last:border-0 cursor-pointer"
                                                     onClick={(e) => handleVote(e, college)}
                                                 >
                                                     <div className="pr-4 min-w-0 flex-1">
@@ -186,7 +186,7 @@ export default function HypePage() {
                                                         <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">{college.location || "India"}</div>
                                                     </div>
                                                     <button
-                                                        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-600 font-bold hover:bg-indigo-600 hover:text-white transition-all"
+                                                        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-50 text-indigo-600 font-bold hover:bg-indigo-600 hover:text-white transition-all transform hover:scale-105 active:scale-95"
                                                         onClick={(e) => handleVote(e, college)}
                                                     >
                                                         <span>Vote</span>
@@ -202,7 +202,7 @@ export default function HypePage() {
                             )}
                         </GlassPanel>
                         <div className="text-center mt-3">
-                            <span className="text-xs text-slate-400 font-medium bg-white/50 px-3 py-1 rounded-full border border-slate-100">
+                            <span className="text-xs text-slate-500 font-medium bg-white/40 px-3 py-1 rounded-full border border-white/50 backdrop-blur-sm">
                                 <strong>{stats.recentVotes.length > 0 ? stats.recentVotes.length : "0"}</strong> votes cast recently
                             </span>
                         </div>
@@ -213,13 +213,21 @@ export default function HypePage() {
             {/* RESULTS SECTION */}
             <section className="list-results pt-12">
                 <Container>
-                    {/* TOP 3 AS FLEXBOX - STRICTLY CENTERED & SIZED */}
-                    <div className="flex flex-wrap justify-center items-end gap-6 md:gap-8 mb-16 min-h-[300px]">
+                    {/* TOP 3 - PREMIUM GLOW & GRADIENTS */}
+                    <div className="flex flex-wrap justify-center items-end gap-6 md:gap-8 mb-20 min-h-[300px]">
 
                         {/* SILVER (#2) */}
                         {top3[1] && (
                             <div className="order-1 shrink-0 relative group" style={{ width: '350px', maxWidth: '100%' }}>
-                                <div className="absolute -top-3 left-4 z-10 bg-slate-100 text-slate-600 font-black text-xs px-2 py-1 rounded border border-slate-200 shadow-sm">#2 SILVER</div>
+                                {/* Ambient Glow */}
+                                <div className="absolute inset-0 bg-slate-400/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10 translate-y-4"></div>
+
+                                <div className="absolute -top-4 left-0 right-0 z-20 flex justify-center">
+                                    <div className="bg-gradient-to-br from-slate-100 to-slate-300 text-slate-800 font-black text-xs px-3 py-1.5 rounded-full border border-white/50 shadow-lg flex items-center gap-1 transform group-hover:scale-110 transition-transform">
+                                        <span>#2 SILVER</span>
+                                    </div>
+                                </div>
+
                                 <Card
                                     type="college"
                                     title={top3[1].name}
@@ -228,10 +236,10 @@ export default function HypePage() {
                                     data={top3[1]}
                                     badge={{ text: "Silver", color: "#94a3b8" }}
                                 />
-                                <div className="p-2">
+                                <div className="absolute -bottom-4 left-0 right-0 flex justify-center z-20 pointer-events-none">
                                     <button
                                         onClick={(e) => handleVote(e, top3[1])}
-                                        className="w-full py-2 bg-white border border-slate-200 text-slate-600 text-sm font-bold rounded-lg shadow-sm hover:border-indigo-500 hover:text-indigo-600 transition-all flex items-center justify-center gap-2"
+                                        className="pointer-events-auto px-6 py-2 bg-gradient-to-r from-slate-700 to-slate-900 text-white text-sm font-bold rounded-full shadow-xl shadow-slate-900/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 border border-white/10"
                                     >
                                         <ArrowUp size={14} /> Vote
                                     </button>
@@ -239,24 +247,33 @@ export default function HypePage() {
                             </div>
                         )}
 
-                        {/* GOLD (#1) - STRICT WIDTH */}
+                        {/* GOLD (#1) - HERO GLOW */}
                         {top3[0] && (
                             <div className="order-2 shrink-0 relative group -mt-8 md:-mt-12 z-10 transform md:scale-105" style={{ width: '360px', maxWidth: '100%' }}>
-                                <div className="absolute -top-3 left-4 z-10 bg-amber-400 text-amber-950 font-black text-xs px-2 py-1 rounded border border-amber-500 shadow-sm">#1 GOLD</div>
+                                {/* Gold Ambient Glow */}
+                                <div className="absolute inset-0 bg-amber-400/30 blur-3xl rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-700 -z-10 translate-y-4 animate-pulse-slow"></div>
+
+                                <div className="absolute -top-5 left-0 right-0 z-20 flex justify-center">
+                                    <div className="bg-gradient-to-r from-amber-300 to-orange-400 text-white font-black text-sm px-4 py-1.5 rounded-full border-2 border-white shadow-xl flex items-center gap-1.5 transform group-hover:scale-110 transition-transform">
+                                        <Crown size={14} fill="currentColor" />
+                                        <span>#1 CHAMPION</span>
+                                    </div>
+                                </div>
+
                                 <Card
                                     type="college"
                                     title={top3[0].name}
                                     subtitle={`🏆 ${top3[0].votes} Votes`}
                                     href={`/college/${top3[0].id}`}
                                     data={top3[0]}
-                                    badge={{ text: "CHAMPION", color: "#f59e0b" }}
+                                    badge={{ text: "WINNER", color: "#f59e0b" }}
                                 />
-                                <div className="p-2">
+                                <div className="absolute -bottom-6 left-0 right-0 flex justify-center z-20 pointer-events-none">
                                     <button
                                         onClick={(e) => handleVote(e, top3[0])}
-                                        className="w-full py-3 bg-amber-400 text-amber-950 text-sm font-black rounded-lg shadow-lg hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-amber-400/20"
+                                        className="pointer-events-auto px-8 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-base font-black rounded-full shadow-2xl shadow-orange-500/30 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 border-2 border-white/20"
                                     >
-                                        <ArrowUp size={16} /> VOTE +1
+                                        <ArrowUp size={18} /> VOTE +1
                                     </button>
                                 </div>
                             </div>
@@ -265,7 +282,15 @@ export default function HypePage() {
                         {/* BRONZE (#3) */}
                         {top3[2] && (
                             <div className="order-3 shrink-0 relative group" style={{ width: '350px', maxWidth: '100%' }}>
-                                <div className="absolute -top-3 left-4 z-10 bg-orange-100 text-orange-800 font-black text-xs px-2 py-1 rounded border border-orange-200 shadow-sm">#3 BRONZE</div>
+                                {/* Bronze Glow */}
+                                <div className="absolute inset-0 bg-orange-300/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10 translate-y-4"></div>
+
+                                <div className="absolute -top-4 left-0 right-0 z-20 flex justify-center">
+                                    <div className="bg-gradient-to-br from-orange-100 to-orange-200 text-orange-900 font-black text-xs px-3 py-1.5 rounded-full border border-white/50 shadow-lg flex items-center gap-1 transform group-hover:scale-110 transition-transform">
+                                        <span>#3 BRONZE</span>
+                                    </div>
+                                </div>
+
                                 <Card
                                     type="college"
                                     title={top3[2].name}
@@ -274,10 +299,10 @@ export default function HypePage() {
                                     data={top3[2]}
                                     badge={{ text: "Bronze", color: "#fdba74" }}
                                 />
-                                <div className="p-2">
+                                <div className="absolute -bottom-4 left-0 right-0 flex justify-center z-20 pointer-events-none">
                                     <button
                                         onClick={(e) => handleVote(e, top3[2])}
-                                        className="w-full py-2 bg-white border border-slate-200 text-slate-600 text-sm font-bold rounded-lg shadow-sm hover:border-indigo-500 hover:text-indigo-600 transition-all flex items-center justify-center gap-2"
+                                        className="pointer-events-auto px-6 py-2 bg-gradient-to-r from-slate-700 to-slate-900 text-white text-sm font-bold rounded-full shadow-xl shadow-slate-900/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 border border-white/10"
                                     >
                                         <ArrowUp size={14} /> Vote
                                     </button>
@@ -296,7 +321,8 @@ export default function HypePage() {
                                     href={`/college/${college.id}`}
                                     className="block group relative"
                                 >
-                                    <div className="relative flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-100 hover:border-indigo-200 shadow-sm hover:shadow-md transition-all">
+                                    {/* Hover scale effect */}
+                                    <div className="relative flex items-center gap-4 p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-slate-100 hover:border-indigo-200 shadow-sm hover:shadow-lg transition-all duration-300 transform group-hover:translate-x-2">
                                         <div className="w-8 text-center font-mono font-bold text-slate-400 group-hover:text-indigo-600">#{idx + 4}</div>
                                         <div className="flex-1 min-w-0">
                                             <h4 className="font-bold text-slate-900 truncate group-hover:text-indigo-700 transition-colors">{college.name}</h4>
@@ -305,7 +331,7 @@ export default function HypePage() {
                                             <span className="font-mono font-bold text-slate-500">{college.votes} <span className="text-[10px] uppercase">votes</span></span>
                                             <button
                                                 onClick={(e) => handleVote(e, college)}
-                                                className="p-2 rounded-lg bg-slate-50 hover:bg-indigo-600 text-slate-400 hover:text-white transition-all"
+                                                className="p-2 rounded-lg bg-slate-50 hover:bg-indigo-600 text-slate-400 hover:text-white transition-all transform active:scale-90"
                                                 title="Vote"
                                             >
                                                 <ArrowUp size={16} />
@@ -348,9 +374,9 @@ export default function HypePage() {
                 </Container>
             </section>
 
-            {/* DEBUG FOOTER - TO CONFIRM DEPLOYMENT */}
+            {/* DEBUG FOOTER */}
             <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v1.7-fix
+                v1.8-premium
             </div>
         </div>
     );
