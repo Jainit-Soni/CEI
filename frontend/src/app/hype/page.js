@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Container from '@/components/Container';
+import GlassPanel from '@/components/GlassPanel';
 import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
-import { Trophy, Search, Flame, ArrowUp, Zap, Activity } from 'lucide-react';
+import { useAuth } from '@/lib/AuthContext';
+import { Trophy, Search, Flame, ArrowUp, Zap, Activity, Lock, ExternalLink } from 'lucide-react';
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
 import "../colleges/page.css";
 
@@ -22,6 +25,7 @@ function useDebounce(value, delay) {
 }
 
 export default function HypePage() {
+    const { user, signInWithGoogle } = useAuth();
     const [stats, setStats] = useState({ leaderboard: [], recentVotes: [] });
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
@@ -68,10 +72,23 @@ export default function HypePage() {
     }, [debouncedSearchQuery]);
 
     // Vote Handler
-    const handleVote = async (college) => {
+    const handleVote = async (e, college) => {
+        e.preventDefault(); // Prevent navigation if triggered from a link event (though button is separate)
+        e.stopPropagation();
+
+        if (!user) {
+            try {
+                await signInWithGoogle();
+            } catch (err) {
+                console.error("Login failed", err);
+            }
+            return;
+        }
+
         if (isVoting) return;
         setIsVoting(true);
         const collegeId = college.id || college._id;
+        const userName = user.displayName || user.email.split('@')[0] || "Verified User";
 
         // Optimistic Update
         setStats(prev => {
@@ -86,7 +103,7 @@ export default function HypePage() {
             return {
                 ...prev,
                 leaderboard: newLeaderboard,
-                recentVotes: [{ collegeName: college.name, userName: "You", timestamp: new Date().toISOString() }, ...prev.recentVotes].slice(0, 10)
+                recentVotes: [{ collegeName: college.name, userName: userName, timestamp: new Date().toISOString() }, ...prev.recentVotes].slice(0, 10)
             };
         });
 
@@ -94,8 +111,8 @@ export default function HypePage() {
             await postHypeVote({
                 collegeId: collegeId,
                 collegeName: college.name,
-                userId: "session-user-" + Date.now(),
-                userName: "Anonymous"
+                userId: user.uid,
+                userName: userName
             });
             setSearchQuery("");
             setSearchResults([]);
@@ -130,22 +147,27 @@ export default function HypePage() {
                                 Campus Legends
                             </h1>
                             <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
-                                Vote for your college and push it to the top. Real-time global rankings.
+                                Vote for your college and push it to the top. Login required to ensure real votes.
                             </p>
 
-                            {/* NEON SEARCH BAR */}
+                            {/* CLEAN PREMIUM SEARCH BAR */}
                             <div className="relative w-full max-w-2xl mx-auto group z-50">
-                                <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500 group-focus-within:opacity-100 group-focus-within:blur-md"></div>
-                                <div className="relative flex items-center bg-[#0B1121] rounded-2xl border border-white/10 shadow-2xl">
-                                    <Search className={`ml-5 w-6 h-6 ${isSearching ? 'text-indigo-400 animate-pulse' : 'text-slate-500'}`} />
+                                <div className="absolute -inset-1 bg-white/10 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                                <div className="relative flex items-center bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-white/20 transition-colors shadow-2xl">
+                                    <Search className={`ml-5 w-5 h-5 ${isSearching ? 'text-indigo-400 animate-pulse' : 'text-slate-400'}`} />
                                     <input
                                         type="text"
-                                        className="w-full bg-transparent border-none text-xl py-5 px-4 placeholder-slate-600 focus:ring-0 text-white font-bold"
-                                        placeholder="Type your college name..."
+                                        className="w-full bg-transparent border-none text-lg py-4 px-4 placeholder-slate-500 focus:ring-0 text-white font-medium"
+                                        placeholder="Search college to vote..."
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         autoFocus
                                     />
+                                    {!user && searchQuery.length > 0 && (
+                                        <div className="mr-4 text-xs text-amber-500 font-bold flex items-center gap-1 animate-in fade-in">
+                                            <Lock size={12} /> Login to Vote
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* SEARCH DROPDOWN */}
@@ -154,20 +176,39 @@ export default function HypePage() {
                                         {searchResults.length > 0 ? (
                                             <div className="max-h-[300px] overflow-y-auto custom-scrollbar">
                                                 {searchResults.map((college) => (
-                                                    <button
+                                                    <div
                                                         key={college.id}
-                                                        onClick={() => handleVote(college)}
-                                                        className="w-full text-left p-4 hover:bg-white/5 flex items-center justify-between group/item transition-colors border-b border-white/5 last:border-0"
+                                                        className="w-full text-left p-4 hover:bg-white/5 flex items-center justify-between group/item transition-colors border-b border-white/5 last:border-0 cursor-pointer"
+                                                        onClick={(e) => {
+                                                            // If clicking the vote button, handle vote.
+                                                            // Otherwise navigating is fine but we want to allow voting from search directly? 
+                                                            // Actually user said "search college to vote", so clicking row should probably VOTE or show details.
+                                                            // Let's make the row main action VOTE, and small link to details.
+                                                            handleVote(e, college)
+                                                        }}
                                                     >
-                                                        <div className="pr-4 min-w-0">
+                                                        <div className="pr-4 min-w-0 flex-1">
                                                             <div className="font-bold text-slate-100 truncate">{college.name}</div>
                                                             <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">{college.location || "India"}</div>
                                                         </div>
-                                                        <div className="shrink-0 flex items-center gap-2 text-indigo-400 font-bold opacity-0 group-hover/item:opacity-100 transition-opacity translate-x-2 group-hover/item:translate-x-0">
-                                                            <span>VOTE</span>
-                                                            <ArrowUp size={16} />
+                                                        <div className="shrink-0 flex items-center gap-3">
+                                                            <Link
+                                                                href={`/college/${college.id}`}
+                                                                className="p-2 text-slate-500 hover:text-white transition-colors"
+                                                                onClick={(e) => e.stopPropagation()} // Don't trigger vote
+                                                                title="View Details"
+                                                            >
+                                                                <ExternalLink size={16} />
+                                                            </Link>
+                                                            <button
+                                                                className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-500/10 text-indigo-400 font-bold hover:bg-indigo-500 hover:text-white transition-all"
+                                                                onClick={(e) => handleVote(e, college)}
+                                                            >
+                                                                <span>Vote</span>
+                                                                <ArrowUp size={16} />
+                                                            </button>
                                                         </div>
-                                                    </button>
+                                                    </div>
                                                 ))}
                                             </div>
                                         ) : (
@@ -193,19 +234,25 @@ export default function HypePage() {
                                 {/* 2ND PLACE (SILVER) */}
                                 {top3[1] && (
                                     <div className="order-2 md:order-1 flex-1 max-w-[300px] group animate-in slide-in-from-bottom-8 duration-700 delay-100">
-                                        <div className="relative bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700/50 rounded-2xl p-6 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
+                                        <Link href={`/college/${top3[1].id}`} className="block relative bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700/50 rounded-2xl p-6 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
                                             <div className="absolute -top-5 bg-slate-700 text-slate-300 font-black text-sm px-3 py-1 rounded-full border border-slate-600 shadow-xl">#2</div>
                                             <div className="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mb-4 text-3xl shadow-inner shadow-black/50">🥈</div>
                                             <h3 className="text-slate-100 font-bold text-center leading-tight mb-3 line-clamp-2 min-h-[3rem] w-full">{top3[1].name}</h3>
                                             <div className="px-4 py-1.5 bg-slate-800 rounded-lg text-slate-300 font-mono font-bold">{top3[1].votes}</div>
-                                        </div>
+                                            <button
+                                                onClick={(e) => handleVote(e, top3[1])}
+                                                className="mt-4 w-full py-2 bg-slate-700/50 hover:bg-indigo-600 rounded-lg text-sm font-bold transition-colors"
+                                            >
+                                                Vote
+                                            </button>
+                                        </Link>
                                     </div>
                                 )}
 
                                 {/* 1ST PLACE (GOLD) */}
                                 {top3[0] && (
                                     <div className="order-1 md:order-2 flex-1 max-w-[340px] z-10 -mt-12 md:-mt-16 group animate-in slide-in-from-bottom-12 duration-700">
-                                        <div className="relative bg-gradient-to-b from-amber-900/40 to-[#1a1205] border border-amber-500/30 rounded-3xl p-8 flex flex-col items-center shadow-2xl shadow-amber-900/20 hover:-translate-y-3 transition-transform duration-300">
+                                        <Link href={`/college/${top3[0].id}`} className="block relative bg-gradient-to-b from-amber-900/40 to-[#1a1205] border border-amber-500/30 rounded-3xl p-8 flex flex-col items-center shadow-2xl shadow-amber-900/20 hover:-translate-y-3 transition-transform duration-300">
                                             <div className="absolute -inset-1 bg-gradient-to-b from-amber-500/20 to-transparent rounded-3xl blur-md opacity-50"></div>
                                             <div className="absolute -top-6 bg-amber-500 text-amber-950 font-black text-lg px-4 py-2 rounded-full border border-amber-400 shadow-xl shadow-amber-500/40">#1</div>
                                             <div className="relative mb-6">
@@ -213,19 +260,31 @@ export default function HypePage() {
                                             </div>
                                             <h3 className="text-white text-xl md:text-2xl font-black text-center leading-tight mb-4 max-w-full break-words">{top3[0].name}</h3>
                                             <div className="px-6 py-2 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-xl font-mono text-3xl font-black tracking-tight">{top3[0].votes}</div>
-                                        </div>
+                                            <button
+                                                onClick={(e) => handleVote(e, top3[0])}
+                                                className="mt-6 w-full py-3 bg-amber-500 hover:bg-amber-400 text-amber-950 rounded-xl font-black transition-colors shadow-lg shadow-amber-900/40"
+                                            >
+                                                VOTE +1
+                                            </button>
+                                        </Link>
                                     </div>
                                 )}
 
                                 {/* 3RD PLACE (BRONZE) */}
                                 {top3[2] && (
                                     <div className="order-3 flex-1 max-w-[300px] group animate-in slide-in-from-bottom-8 duration-700 delay-200">
-                                        <div className="relative bg-gradient-to-b from-[#3a2018] to-[#1a0f0d] border border-orange-800/50 rounded-2xl p-6 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
+                                        <Link href={`/college/${top3[2].id}`} className="block relative bg-gradient-to-b from-[#3a2018] to-[#1a0f0d] border border-orange-800/50 rounded-2xl p-6 flex flex-col items-center hover:-translate-y-2 transition-transform duration-300">
                                             <div className="absolute -top-5 bg-orange-800 text-orange-200 font-black text-sm px-3 py-1 rounded-full border border-orange-700 shadow-xl">#3</div>
                                             <div className="w-16 h-16 rounded-full bg-orange-900/30 flex items-center justify-center mb-4 text-3xl shadow-inner shadow-black/50">🥉</div>
                                             <h3 className="text-slate-100 font-bold text-center leading-tight mb-3 line-clamp-2 min-h-[3rem] w-full">{top3[2].name}</h3>
                                             <div className="px-4 py-1.5 bg-orange-900/20 rounded-lg text-orange-300 font-mono font-bold">{top3[2].votes}</div>
-                                        </div>
+                                            <button
+                                                onClick={(e) => handleVote(e, top3[2])}
+                                                className="mt-4 w-full py-2 bg-orange-900/40 hover:bg-indigo-600 rounded-lg text-sm font-bold transition-colors"
+                                            >
+                                                Vote
+                                            </button>
+                                        </Link>
                                     </div>
                                 )}
                             </div>
@@ -240,7 +299,11 @@ export default function HypePage() {
                         <div className="lg:col-span-2 space-y-3">
                             <h3 className="text-slate-400 font-bold uppercase tracking-widest text-xs mb-4 pl-2">The Challengers</h3>
                             {rest.map((college, idx) => (
-                                <div key={college.id} className="group relative">
+                                <Link
+                                    key={college.id}
+                                    href={`/college/${college.id}`}
+                                    className="block group relative"
+                                >
                                     <div className="absolute inset-0 bg-indigo-500/0 group-hover:bg-indigo-500/5 rounded-xl transition-colors"></div>
                                     <div className="relative flex items-center gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.02] hover:border-indigo-500/30 transition-all">
                                         <div className="w-10 text-center font-mono font-bold text-slate-500 group-hover:text-indigo-400">#{idx + 4}</div>
@@ -249,9 +312,16 @@ export default function HypePage() {
                                         </div>
                                         <div className="shrink-0 flex items-center gap-4">
                                             <span className="font-mono font-bold text-slate-400">{college.votes} <span className="text-[10px] uppercase">votes</span></span>
+                                            <button
+                                                onClick={(e) => handleVote(e, college)}
+                                                className="p-2 rounded-lg bg-white/5 hover:bg-indigo-600 text-slate-400 hover:text-white transition-all"
+                                                title="Vote"
+                                            >
+                                                <ArrowUp size={16} />
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                             {rest.length === 0 && top3.length === 0 && (
                                 <div className="p-8 text-center text-slate-600 border border-white/5 rounded-xl bg-white/[0.02]">
@@ -269,13 +339,16 @@ export default function HypePage() {
                                 <div className="absolute top-0 inset-x-0 h-8 bg-gradient-to-b from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
                                 <div className="space-y-4">
                                     {stats.recentVotes.map((vote, i) => (
-                                        <div key={i} className="flex gap-3 text-sm animate-in fade-in slide-in-from-right-4">
+                                        <div key={i} className="flex gap-3 text-sm animate-in fade-in slide-in-from-right-4 border-b border-white/5 pb-2 last:border-0">
                                             <div className="text-indigo-400 mt-0.5"><Zap size={14} /></div>
                                             <p className="text-slate-400 leading-snug">
-                                                <span className="text-slate-200 font-bold">{vote.userName || "Someone"}</span> just voted for <span className="text-indigo-300 font-bold">{vote.collegeName}</span>
+                                                <span className="text-slate-200 font-bold">{vote.userName || "Verified User"}</span> voted for <span className="text-indigo-300 font-bold">{vote.collegeName}</span>
                                             </p>
                                         </div>
                                     ))}
+                                    {stats.recentVotes.length === 0 && (
+                                        <div className="text-center text-slate-600 py-8 italic">No recent activity. Be the first!</div>
+                                    )}
                                 </div>
                                 <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
                             </div>
