@@ -76,12 +76,6 @@ export default function Dashboard() {
     const circumference = 2 * Math.PI * radius;
     const strokeDashoffset = circumference - (profileScore / 100) * circumference;
 
-    const quickLinks = [
-        { icon: <Heart size={20} />, label: "My Favorites", href: "/dashboard/favorites", color: "#ec4899" },
-        { icon: <TrendingUp size={20} />, label: "Analytics", href: "/dashboard/analytics", color: "#8b5cf6" },
-        { icon: <MapPin size={20} />, label: "College Map", href: "/map", color: "#10b981" },
-        { icon: <GraduationCap size={20} />, label: "Exams", href: "/exams", color: "#f59e0b" },
-    ];
 
     return (
         <div className="dashboard-container">
