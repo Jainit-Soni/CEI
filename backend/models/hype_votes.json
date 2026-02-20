@@ -1,35 +1,35 @@
 [
     {
         "collegeId": "iit-bombay",
-        "collegeName": "IIT Bombay",
+        "collegeName": "Indian Institute of Technology Bombay",
         "userId": "system-seed",
         "userName": "System",
         "timestamp": "2024-02-20T10:00:00.000Z"
     },
     {
         "collegeId": "iit-delhi",
-        "collegeName": "IIT Delhi",
+        "collegeName": "Indian Institute of Technology Delhi",
         "userId": "system-seed",
         "userName": "System",
         "timestamp": "2024-02-20T10:05:00.000Z"
     },
     {
         "collegeId": "bits-pilani",
-        "collegeName": "BITS Pilani",
+        "collegeName": "Birla Institute of Technology and Science, Pilani",
         "userId": "system-seed",
         "userName": "System",
         "timestamp": "2024-02-20T10:10:00.000Z"
     },
     {
         "collegeId": "nit-trichy",
-        "collegeName": "NIT Trichy",
+        "collegeName": "National Institute of Technology Thiruchirappalli",
         "userId": "system-seed",
         "userName": "System",
         "timestamp": "2024-02-20T10:15:00.000Z"
     },
     {
         "collegeId": "iit-kanpur",
-        "collegeName": "IIT Kanpur",
+        "collegeName": "Indian Institute of Technology Kanpur",
         "userId": "system-seed",
         "userName": "System",
         "timestamp": "2024-02-20T10:20:00.000Z"

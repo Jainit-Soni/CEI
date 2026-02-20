@@ -8,13 +8,13 @@ const votesData = require("../models/hype_votes.json");
 const votesFilePath = path.join(__dirname, "../models/hype_votes.json");
 
 const COLLEGES = [
-    { id: "iit-bombay", name: "IIT Bombay" },
-    { id: "iit-delhi", name: "IIT Delhi" },
-    { id: "bits-pilani", name: "BITS Pilani" },
-    { id: "nit-trichy", name: "NIT Trichy" },
-    { id: "iit-kanpur", name: "IIT Kanpur" },
-    { id: "vit-vellore", name: "VIT Vellore" },
-    { id: "thapar", name: "Thapar University" }
+    { id: "iit-bombay", name: "Indian Institute of Technology Bombay" },
+    { id: "iit-delhi", name: "Indian Institute of Technology Delhi" },
+    { id: "bits-pilani", name: "Birla Institute of Technology and Science, Pilani" },
+    { id: "nit-trichy", name: "National Institute of Technology Thiruchirappalli" },
+    { id: "iit-kanpur", name: "Indian Institute of Technology Kanpur" },
+    { id: "vit-vellore", name: "Vellore Institute of Technology" },
+    { id: "thapar", name: "Thapar Institute of Engineering and Technology" }
 ];
 
 // Path to user choices for aggregation
