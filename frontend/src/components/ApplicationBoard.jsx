@@ -261,102 +261,101 @@ export default function ApplicationBoard() {
         <div className="application-board">
             <GlassPanel
                 variant="subtle"
-                className="!p-8 !rounded-[2.5rem] border-white/40 bg-gradient-to-br from-white/60 via-indigo-50/20 to-white/40 backdrop-blur-3xl shadow-[0_32px_64px_-24px_rgba(0,0,0,0.06)] mb-12"
+                className="!p-8 sm:!p-12 !rounded-[3rem] border-white/60 bg-gradient-to-br from-white/80 via-indigo-50/20 to-white/70 backdrop-blur-3xl shadow-[0_32px_80px_-20px_rgba(0,0,0,0.08)] mb-16 relative"
             >
-                <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-10">
+                <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-12">
                     {/* 1. BRANDED INFO SECTION */}
-                    <div className="space-y-3">
-                        <div className="flex items-center gap-3">
-                            <h2 className="text-3xl font-black text-slate-900 tracking-tighter" style={{ fontFamily: 'var(--font-display)' }}>
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-4">
+                            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tighter" style={{ fontFamily: 'var(--font-display)' }}>
                                 Priority Roadmap
                             </h2>
-                            <div className="px-3 py-1 bg-white/60 border border-slate-200/50 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                            <div className="px-4 py-1.5 bg-indigo-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-xl shadow-indigo-100">
                                 {items.length} {items.length === 1 ? 'College' : 'Colleges'}
                             </div>
                         </div>
-                        <p className="text-sm md:text-base text-slate-500 font-medium tracking-tight max-w-xl leading-relaxed">
-                            Drag to reorder your strategic selections. Export your final report or share a read-only view with your mentors.
+                        <p className="text-base sm:text-lg text-slate-500 font-medium tracking-tight max-w-2xl leading-relaxed">
+                            Fine-tune your strategic selections by dragging to reorder. Generate a secure, read-only link to share your vision with mentors.
                         </p>
                     </div>
 
                     {/* 2. HARMONIZED UTILITY CLUSTER */}
-                    <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex flex-wrap items-center gap-6">
                         {/* Secondary Actions */}
                         <button
                             onClick={clearAll}
-                            className="px-6 py-3.5 text-xs font-black text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-2xl transition-all duration-300 uppercase tracking-widest"
+                            className="px-6 py-3 text-xs font-black text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl border border-transparent hover:border-red-100 transition-all duration-300 uppercase tracking-widest"
                         >
                             Reset List
                         </button>
 
-                        <div className="h-10 w-[2px] bg-slate-200/50 mx-2 hidden sm:block" />
+                        <div className="h-10 w-[1px] bg-slate-200 hidden sm:block" />
 
                         {/* Primary Action Group */}
-                        <div className="flex items-center p-1.5 bg-white/80 border border-slate-200/50 rounded-[1.75rem] shadow-sm">
+                        <div className="flex items-center p-2 bg-white/80 border border-slate-200/50 rounded-[2rem] shadow-sm relative overflow-visible">
                             <button
                                 onClick={exportPDF}
-                                className="flex items-center gap-3 px-8 py-3.5 bg-white hover:bg-slate-50 text-slate-900 rounded-[1.25rem] border border-slate-200/60 text-xs font-black uppercase tracking-widest transition-all hover:shadow-md active:scale-95"
+                                className="flex items-center gap-3 px-8 py-4 bg-white hover:bg-slate-50 text-slate-900 rounded-[1.5rem] border border-slate-100 text-xs font-black uppercase tracking-widest transition-all hover:shadow-md active:scale-95"
                             >
                                 <Download size={16} />
                                 <span>Export PDF</span>
                             </button>
 
-                            <div className="relative" ref={shareRef}>
+                            <div className="relative ml-2" ref={shareRef}>
                                 <button
-                                    className={`flex items-center gap-3 px-8 py-3.5 ml-1.5 rounded-[1.25rem] text-xs font-black uppercase tracking-widest transition-all active:scale-95
+                                    className={`flex items-center gap-3 px-8 py-4 rounded-[1.5rem] text-xs font-black uppercase tracking-widest transition-all active:scale-95
                                         ${shareUrl || isSharing
                                             ? 'bg-green-500 text-white shadow-xl shadow-green-100'
-                                            : 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-xl shadow-indigo-100'
+                                            : 'bg-indigo-600 text-white shadow-xl shadow-indigo-100'
                                         }
                                     `}
                                     onClick={handleShare}
                                     disabled={isSharing}
                                 >
                                     {isSharing ? <Loader2 size={16} className="animate-spin" /> : <Share2 size={16} />}
-                                    <span>{isSharing ? 'Generating...' : 'Share'}</span>
+                                    <span>{isSharing ? 'Sharing...' : 'Share'}</span>
                                 </button>
 
                                 {/* PREMIUM GLASS POPOVER (Phase 20 Polish) */}
                                 <AnimatePresence>
                                     {shareUrl && (
                                         <motion.div
-                                            initial={{ opacity: 0, y: 15, scale: 0.9 }}
-                                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                                            exit={{ opacity: 0, y: 15, scale: 0.9 }}
-                                            transition={{ type: "spring", damping: 20, stiffness: 200 }}
-                                            className="absolute right-0 top-full mt-6 z-[100] w-[340px] sm:w-[400px]"
+                                            initial={{ opacity: 0, scale: 0.9, y: 15 }}
+                                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                                            exit={{ opacity: 0, scale: 0.9, y: 15 }}
+                                            className="absolute right-0 top-[calc(100%+16px)] z-[1000] w-[340px] sm:w-[460px] pointer-events-auto"
                                         >
                                             <GlassPanel
                                                 variant="subtle"
-                                                className="!p-6 !rounded-[2.5rem] border-white/60 bg-white/95 backdrop-blur-3xl shadow-[0_40px_80px_-20px_rgba(79,70,229,0.3)]"
+                                                className="!p-8 !rounded-[3rem] border-white bg-white/95 backdrop-blur-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] ring-1 ring-black/5"
                                             >
-                                                <div className="flex items-center gap-5 mb-5 pl-1">
-                                                    <div className="w-12 h-12 shrink-0 rounded-[1.25rem] bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-100">
-                                                        <Sparkles className="w-6 h-6" />
+                                                <div className="flex items-center gap-6 mb-6 pl-1">
+                                                    <div className="w-16 h-16 shrink-0 rounded-[1.5rem] bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-xl shadow-indigo-100">
+                                                        <Sparkles className="w-8 h-8" />
                                                     </div>
-                                                    <div className="space-y-0.5">
-                                                        <h4 className="text-lg font-black text-slate-900 tracking-tight leading-none" style={{ fontFamily: 'var(--font-display)' }}>Share Access</h4>
-                                                        <p className="text-xs text-slate-400 font-medium tracking-tight"> mentors can view your roadmap.</p>
+                                                    <div className="space-y-1">
+                                                        <h4 className="text-2xl font-black text-slate-900 tracking-tight leading-none" style={{ fontFamily: 'var(--font-display)' }}>Share Access</h4>
+                                                        <p className="text-sm text-slate-400 font-medium">Mentors can view your roadmap via this link.</p>
                                                     </div>
                                                 </div>
 
-                                                <div className="flex items-center p-2 rounded-2xl bg-indigo-50/30 border border-indigo-100/50">
-                                                    <div className="flex-1 px-3 overflow-hidden">
-                                                        <div className="truncate text-xs font-bold text-indigo-900/60 tracking-tight">
+                                                <div className="flex items-center p-2 rounded-2xl bg-slate-50 border border-slate-200/50">
+                                                    <div className="flex-1 px-4 overflow-hidden">
+                                                        <div className="truncate text-xs font-bold text-slate-600 tracking-tight">
                                                             {shareUrl}
                                                         </div>
                                                     </div>
 
                                                     <button
                                                         onClick={copyToClipboard}
-                                                        className={`flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all active:scale-95 shrink-0 shadow-sm
+                                                        className={`flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-[11px] font-black uppercase tracking-widest transition-all active:scale-95 shrink-0 shadow-sm
                                                             ${copySuccess
-                                                                ? 'bg-green-500 text-white'
+                                                                ? 'bg-green-500 text-white text-md'
                                                                 : 'bg-slate-900 text-white'
                                                             }
                                                         `}
                                                     >
-                                                        {copySuccess ? <Check size={14} /> : <Copy size={14} />}
+                                                        {copySuccess ? <Check size={16} /> : <Copy size={16} />}
                                                         <span>{copySuccess ? 'Copied' : 'Copy'}</span>
                                                     </button>
                                                 </div>
