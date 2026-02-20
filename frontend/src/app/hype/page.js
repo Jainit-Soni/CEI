@@ -170,6 +170,7 @@ export default function HypePage() {
     const [debouncedSearchQuery, setDebouncedSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [isVoting, setIsVoting] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     // Initial Data Load
     useEffect(() => {
@@ -179,6 +180,8 @@ export default function HypePage() {
                 setStats(statsData);
             } catch (err) {
                 console.error("Failed to load hype data:", err);
+            } finally {
+                setIsLoading(false);
             }
         };
         load();
@@ -332,9 +335,9 @@ export default function HypePage() {
 
             <div className="relative z-10 pb-32">
                 {/* 1. HERO - ENHANCED WITH STATS (EXAMS STYLE) */}
-                <section className="pt-32 pb-12 flex flex-col items-center text-center px-4 overflow-hidden">
+                <section className="pt-24 pb-8 flex flex-col items-center text-center px-4 overflow-hidden">
                     <RevealOnScroll>
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 border border-white/50 backdrop-blur-md shadow-sm mb-8">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 border border-white/50 backdrop-blur-md shadow-sm mb-6">
                             <span className="relative flex h-3 w-3">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
@@ -342,10 +345,10 @@ export default function HypePage() {
                             <span className="text-xs font-bold tracking-widest uppercase text-slate-500">Live Popularity Contest</span>
                         </div>
 
-                        <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-slate-900 via-slate-800 to-slate-500 drop-shadow-sm">
+                        <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-b from-slate-900 via-slate-800 to-slate-500 drop-shadow-sm">
                             Campus Legends
                         </h1>
-                        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed mb-12">
+                        <p className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed mb-10">
                             Who runs this city? Vote for your college and prove that your campus has the strongest community in India.
                         </p>
 
@@ -480,9 +483,16 @@ export default function HypePage() {
                                     <RankRow key={college.id} college={college} index={i} onVote={handleVote} isVoting={isVoting} />
                                 ))}
 
-                                {stats.leaderboard.length === 0 && (
+                                {isLoading && (
                                     <div className="py-20 text-center text-slate-400 animate-pulse">
                                         Calculating popularity scores...
+                                    </div>
+                                )}
+
+                                {!isLoading && stats.leaderboard.length === 0 && (
+                                    <div className="py-20 text-center flex flex-col items-center gap-4">
+                                        <Flame className="w-12 h-12 text-slate-200" />
+                                        <div className="text-slate-400 font-medium">No votes yet. Be the first to start the legend!</div>
                                     </div>
                                 )}
                             </div>
@@ -493,7 +503,7 @@ export default function HypePage() {
 
             {/* VERSION MARKER - V29 ROBUST */}
             <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v2.9-robust-fix
+                v3.0-clean-logic
             </div>
         </div>
     );

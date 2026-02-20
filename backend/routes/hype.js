@@ -29,7 +29,7 @@ const filterVotes = (votes, timeframe) => {
         }
         if (timeframe === "monthly") return voteTime.getMonth() === now.getMonth() && voteTime.getFullYear() === now.getFullYear();
         if (timeframe === "yearly") return voteTime.getFullYear() === now.getFullYear();
-        return true; // All time
+        return !(["System", "system-seed"].includes(v.userId) || v.userName === "System");
     });
 };
 
@@ -38,7 +38,7 @@ const filterVotes = (votes, timeframe) => {
 // @access  Public
 router.get("/stats", (req, res) => {
     try {
-        const timeframe = req.query.timeframe || "daily";
+        const timeframe = req.query.timeframe || "all";
         const filtered = filterVotes(votesData, timeframe);
 
         // Aggregate counts
@@ -55,6 +55,7 @@ router.get("/stats", (req, res) => {
 
         // Get recent votes for ticker (globally recent, not just filtered)
         const recentVotes = [...votesData]
+            .filter(v => v.userId !== "system-seed" && v.userName !== "System")
             .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
             .slice(0, 10);
 
