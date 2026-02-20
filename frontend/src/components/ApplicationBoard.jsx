@@ -4,14 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
-import { Trash2, GripVertical, FileText, Download, Cloud, CloudOff, Share2, Copy, Check, Loader2, Sparkles } from "lucide-react";
+import { Trash2, GripVertical, FileText, Download, Share2, Copy, Check, Loader2, Sparkles, BookOpen, MapPin } from "lucide-react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/lib/AuthContext";
 import { fetchUserChoices, saveUserChoices, shareUserChoices } from "@/lib/api";
 import AuthModal from "./AuthModal";
-import GlassPanel from "./GlassPanel";
-import "../app/dashboard/dashboard.css";
 
 export default function ApplicationBoard() {
     const [items, setItems] = useState([]);
@@ -23,36 +21,28 @@ export default function ApplicationBoard() {
     const [copySuccess, setCopySuccess] = useState(false);
     const { user } = useAuth();
 
-    // Core Ref for Glass Popover
     const shareRef = useRef(null);
 
-    // Handle Click Outside for Popover
     useEffect(() => {
         function handleClickOutside(event) {
             if (shareRef.current && !shareRef.current.contains(event.target)) {
                 setShareUrl("");
             }
         }
-
         if (shareUrl) {
             document.addEventListener("mousedown", handleClickOutside);
         } else {
             document.removeEventListener("mousedown", handleClickOutside);
         }
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
+        return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [shareUrl]);
-    // Load from LocalStorage on Mount
+
     useEffect(() => {
         const stored = localStorage.getItem("choice-filling-cart");
         if (stored) {
             try {
                 const parsed = JSON.parse(stored);
-                if (Array.isArray(parsed)) {
-                    setItems(parsed);
-                }
+                if (Array.isArray(parsed)) setItems(parsed);
             } catch (e) {
                 console.error("Failed to parse choice-filling-cart", e);
             }
@@ -60,24 +50,18 @@ export default function ApplicationBoard() {
         setIsLoaded(true);
     }, []);
 
-    // Cloud Sync Logic
     useEffect(() => {
         if (!isLoaded || !user) return;
-
         const syncData = async () => {
             setIsSyncing(true);
             try {
                 const cloudChoices = await fetchUserChoices(user.uid);
                 const localStored = localStorage.getItem("choice-filling-cart");
                 const localItems = localStored ? JSON.parse(localStored) : [];
-
                 if (localItems.length > 0) {
-                    // Local data takes precedence (Zombie Fix)
-                    // If local exists, we push to cloud to ensure cloud matches local reality
                     await saveUserChoices(user.uid, localItems);
                     setItems(localItems);
                 } else if (cloudChoices && cloudChoices.length > 0) {
-                    // Only fetch from cloud if local is empty (New Device Scenario)
                     setItems(cloudChoices);
                     localStorage.setItem("choice-filling-cart", JSON.stringify(cloudChoices));
                 }
@@ -87,17 +71,13 @@ export default function ApplicationBoard() {
                 setIsSyncing(false);
             }
         };
-
         syncData();
     }, [user?.uid, isLoaded]);
 
-    // Persist to LocalStorage whenever items change
     useEffect(() => {
         if (!isLoaded) return;
         localStorage.setItem("choice-filling-cart", JSON.stringify(items));
         window.dispatchEvent(new Event("local-storage-update"));
-
-        // Periodic Cloud Save (if logged in)
         if (user) {
             const timer = setTimeout(() => {
                 saveUserChoices(user.uid, items).catch(console.error);
@@ -109,131 +89,77 @@ export default function ApplicationBoard() {
     const removeItem = async (id) => {
         const newItems = items.filter(item => item.id !== id);
         setItems(newItems);
-        // Immediate sync to prevent zombie items
         if (user) {
-            try {
-                await saveUserChoices(user.uid, newItems);
-            } catch (err) {
-                console.error("Failed to sync removal:", err);
-            }
+            try { await saveUserChoices(user.uid, newItems); }
+            catch (err) { console.error("Failed to sync removal:", err); }
         }
     };
 
     const clearAll = async () => {
-        if (window.confirm("Are you sure you want to clear your entire selection list? This cannot be undone.")) {
+        if (window.confirm("Clear your entire selection list? This cannot be undone.")) {
             setItems([]);
-            if (user) {
-                await saveUserChoices(user.uid, []);
-            }
+            if (user) await saveUserChoices(user.uid, []);
         }
     };
 
     const onDragEnd = (result) => {
         if (!result.destination) return;
-
         const newItems = Array.from(items);
         const [reorderedItem] = newItems.splice(result.source.index, 1);
         newItems.splice(result.destination.index, 0, reorderedItem);
-
         setItems(newItems);
     };
 
     const exportPDF = (e) => {
         if (e && e.preventDefault) e.preventDefault();
-
-        // Auth Guard
-        if (!user) {
-            setShowAuthModal(true);
-            return;
-        }
-
+        if (!user) { setShowAuthModal(true); return; }
         const doc = new jsPDF();
         const pageWidth = doc.internal.pageSize.width;
-
-        // PDF Implementation (Restoring the gorgeous design)
         doc.setFillColor(37, 99, 235);
         doc.rect(0, 0, pageWidth, 2, 'F');
-
-        doc.setFontSize(14);
-        doc.setTextColor(37, 99, 235);
-        doc.setFont("helvetica", "bold");
+        doc.setFontSize(14); doc.setTextColor(37, 99, 235); doc.setFont("helvetica", "bold");
         doc.text("CEI", 20, 25);
-        doc.setFont("helvetica", "normal");
-        doc.setTextColor(15, 23, 42);
-        doc.text("INTELLIGENCE", 30, 25);
-
-        doc.setFontSize(48);
-        doc.setTextColor(15, 23, 42);
-        doc.setFont("helvetica", "bold");
-        doc.text("Strategic", 20, 85);
-        doc.text("Priority List", 20, 102);
-
-        doc.setDrawColor(37, 99, 235);
-        doc.setLineWidth(2);
-        doc.line(20, 112, 55, 112);
-
-        doc.setFontSize(14);
-        doc.setTextColor(71, 85, 105);
-        doc.setFont("helvetica", "normal");
+        doc.setFont("helvetica", "normal"); doc.setTextColor(15, 23, 42);
+        doc.text("Intelligence", 30, 25);
+        doc.setFontSize(48); doc.setTextColor(15, 23, 42); doc.setFont("helvetica", "bold");
+        doc.text("Strategic", 20, 85); doc.text("Priority List", 20, 102);
+        doc.setDrawColor(37, 99, 235); doc.setLineWidth(2); doc.line(20, 112, 55, 112);
+        doc.setFontSize(14); doc.setTextColor(71, 85, 105); doc.setFont("helvetica", "normal");
         doc.text("STRATEGIC ADMISSIONS & ROI ANALYSIS", 20, 125);
-
-        // Body Content
         const tableData = items.map((item, index) => [
             `${index + 1}`,
             item.name || item.shortName,
             item.tuition || item.fees || "See Website",
-            (item.placements?.averagePackage || "High").toString().replace(/[^\x00-\x7F]/g, "").replace(/\s+/g, " "), // Remove non-ASCII/superscripts
+            (item.placements?.averagePackage || "High").toString().replace(/[^\x00-\x7F]/g, "").replace(/\s+/g, " "),
             (item.acceptedExams || []).map(e => (typeof e === 'object' ? (e.code || e.name) : e)).join(", ")
         ]);
-
-        // Add premium blue side-stripe
         doc.setFillColor(37, 99, 235);
         doc.rect(0, 0, 8, doc.internal.pageSize.height, 'F');
-
         autoTable(doc, {
             startY: 140,
             margin: { left: 20 },
-            margin: { left: 20 },
-            head: [['Sr No.', 'Institution', 'EST. TUITION', 'AVG Pkg', 'Key Exams']],
-            body: tableData,
-            theme: 'striped',
+            head: [['#', 'Institution', 'EST. TUITION', 'Avg. Package', 'Key Exams']],
             body: tableData,
             theme: 'striped',
             headStyles: { fillColor: [37, 99, 235], textColor: 255, fontStyle: 'bold' },
             styles: { fontSize: 8, cellPadding: 4 },
-            columnStyles: {
-                0: { cellWidth: 15 },
-                1: { cellWidth: 65 },
-                2: { cellWidth: 30 },
-                3: { cellWidth: 30 },
-                4: { cellWidth: 'auto' }
-            }
+            columnStyles: { 0: { cellWidth: 12 }, 1: { cellWidth: 68 }, 2: { cellWidth: 30 }, 3: { cellWidth: 30 } }
         });
-
         doc.save(`CEI_Strategic_Priority_${new Date().toISOString().split('T')[0]}.pdf`);
     };
 
     const handleShare = async () => {
-        if (!items || items.length === 0) {
-            alert("Your list is empty. Add some colleges first!");
-            return;
-        }
+        if (!items || items.length === 0) { alert("Your list is empty. Add some colleges first!"); return; }
         setIsSharing(true);
         try {
-            console.log("Generating share link...");
             const { shareId } = await shareUserChoices(items, user?.displayName || "Anonymous Student");
             if (shareId) {
-                const url = `${window.location.origin}/share/${shareId}`;
-                setShareUrl(url);
-            } else {
-                throw new Error("No share ID returned");
-            }
+                setShareUrl(`${window.location.origin}/share/${shareId}`);
+            } else { throw new Error("No share ID returned"); }
         } catch (err) {
             console.error("Sharing failed", err);
-            alert("Failed to generate share link. Please try again or check your connection.");
-        } finally {
-            setIsSharing(false);
-        }
+            alert("Failed to generate share link. Please try again.");
+        } finally { setIsSharing(false); }
     };
 
     const copyToClipboard = () => {
@@ -246,11 +172,22 @@ export default function ApplicationBoard() {
 
     if (items.length === 0) {
         return (
-            <div className="mylist-empty">
-                <div className="empty-icon">🎓</div>
-                <h3>Your list is empty</h3>
-                <p>Start exploring colleges and add them to your list to track them here.</p>
-                <Link href="/colleges" className="btn-browse">
+            <div style={{
+                textAlign: 'center', padding: '80px 20px',
+                background: 'white', borderRadius: '32px',
+                border: '2px dashed #e2e8f0',
+                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px'
+            }}>
+                <div style={{ fontSize: '4rem' }}>🎓</div>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>Your roadmap is empty</h3>
+                <p style={{ color: '#64748b', maxWidth: '400px', margin: 0, lineHeight: 1.6 }}>
+                    Start exploring colleges and add them to build your strategic priority list.
+                </p>
+                <Link href="/colleges" style={{
+                    marginTop: '8px', background: 'linear-gradient(135deg, #4f46e5, #7c3aed)',
+                    color: 'white', padding: '14px 40px', borderRadius: '999px',
+                    fontWeight: 700, textDecoration: 'none', boxShadow: '0 8px 24px rgba(79,70,229,0.35)'
+                }}>
                     Browse Colleges
                 </Link>
             </div>
@@ -258,475 +195,343 @@ export default function ApplicationBoard() {
     }
 
     return (
-        <div className="application-board">
-            <GlassPanel
-                variant="subtle"
-                className="!p-8 sm:!p-12 !rounded-[3rem] border-white/60 bg-gradient-to-br from-white/80 via-indigo-50/20 to-white/70 backdrop-blur-3xl shadow-[0_32px_80px_-20px_rgba(0,0,0,0.08)] mb-16 relative"
-            >
-                <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-12">
-                    {/* 1. BRANDED INFO SECTION */}
-                    <div className="space-y-4">
-                        <div className="flex items-center gap-4">
-                            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tighter" style={{ fontFamily: 'var(--font-display)' }}>
+        <div style={{ padding: '0' }}>
+
+            {/* ── CINEMATIC HEADER ── */}
+            <div style={{
+                background: 'linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(238,242,255,0.9) 50%, rgba(255,255,255,0.95) 100%)',
+                backdropFilter: 'blur(40px)',
+                WebkitBackdropFilter: 'blur(40px)',
+                border: '1px solid rgba(255,255,255,0.9)',
+                borderRadius: '32px',
+                padding: '40px 48px',
+                marginBottom: '32px',
+                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.04), 0 20px 60px -10px rgba(79,70,229,0.08)',
+                position: 'relative',
+                overflow: 'visible',
+            }}>
+                {/* Decorative accent */}
+                <div style={{
+                    position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
+                    background: 'linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899)',
+                    borderRadius: '32px 32px 0 0',
+                }} />
+
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '32px' }}>
+                    {/* Left: Info */}
+                    <div style={{ flex: '1 1 300px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '12px', flexWrap: 'wrap' }}>
+                            <h1 style={{
+                                fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+                                fontWeight: 900,
+                                color: '#0f172a',
+                                letterSpacing: '-0.04em',
+                                margin: 0,
+                                fontFamily: 'var(--font-display, system-ui)',
+                                lineHeight: 1.1,
+                            }}>
                                 Priority Roadmap
-                            </h2>
-                            <div className="px-4 py-1.5 bg-indigo-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-xl shadow-indigo-100">
+                            </h1>
+                            <span style={{
+                                background: 'linear-gradient(135deg, #4f46e5, #7c3aed)',
+                                color: 'white', borderRadius: '999px',
+                                padding: '6px 16px',
+                                fontSize: '11px', fontWeight: 800,
+                                letterSpacing: '0.1em', textTransform: 'uppercase',
+                                boxShadow: '0 4px 12px rgba(79,70,229,0.35)',
+                                whiteSpace: 'nowrap',
+                            }}>
                                 {items.length} {items.length === 1 ? 'College' : 'Colleges'}
-                            </div>
+                            </span>
                         </div>
-                        <p className="text-base sm:text-lg text-slate-500 font-medium tracking-tight max-w-2xl leading-relaxed">
-                            Fine-tune your strategic selections by dragging to reorder. Generate a secure, read-only link to share your vision with mentors.
+                        <p style={{
+                            color: '#64748b', fontSize: '1rem',
+                            lineHeight: 1.7, margin: 0, maxWidth: '540px',
+                            fontWeight: 500,
+                        }}>
+                            Drag cards to reorder your strategic selections. Export a professional PDF or generate a read-only share link for your mentors.
                         </p>
                     </div>
 
-                    {/* 2. HARMONIZED UTILITY CLUSTER */}
-                    <div className="flex flex-wrap items-center gap-6">
-                        {/* Secondary Actions */}
-                        <button
-                            onClick={clearAll}
-                            className="px-6 py-3 text-xs font-black text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl border border-transparent hover:border-red-100 transition-all duration-300 uppercase tracking-widest"
+                    {/* Right: Action Cluster */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                        {/* Reset — subtle danger */}
+                        <button onClick={clearAll} style={{
+                            padding: '10px 20px', background: 'transparent',
+                            border: '1px solid #e2e8f0', borderRadius: '12px',
+                            color: '#94a3b8', fontSize: '11px', fontWeight: 800,
+                            letterSpacing: '0.08em', textTransform: 'uppercase',
+                            cursor: 'pointer', transition: 'all 0.2s',
+                            fontFamily: 'inherit',
+                        }}
+                            onMouseEnter={e => { e.currentTarget.style.color = '#ef4444'; e.currentTarget.style.borderColor = '#fca5a5'; e.currentTarget.style.background = '#fff5f5'; }}
+                            onMouseLeave={e => { e.currentTarget.style.color = '#94a3b8'; e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.background = 'transparent'; }}
                         >
                             Reset List
                         </button>
 
-                        <div className="h-10 w-[1px] bg-slate-200 hidden sm:block" />
+                        <div style={{ width: '1px', height: '36px', background: '#e2e8f0' }} />
 
-                        {/* Primary Action Group */}
-                        <div className="flex items-center p-2 bg-white/80 border border-slate-200/50 rounded-[2rem] shadow-sm relative overflow-visible">
-                            <button
-                                onClick={exportPDF}
-                                className="flex items-center gap-3 px-8 py-4 bg-white hover:bg-slate-50 text-slate-900 rounded-[1.5rem] border border-slate-100 text-xs font-black uppercase tracking-widest transition-all hover:shadow-md active:scale-95"
+                        {/* Export PDF */}
+                        <button onClick={exportPDF} style={{
+                            display: 'flex', alignItems: 'center', gap: '10px',
+                            padding: '12px 24px', background: 'white',
+                            border: '1px solid #e2e8f0', borderRadius: '16px',
+                            color: '#1e293b', fontSize: '12px', fontWeight: 800,
+                            letterSpacing: '0.05em', textTransform: 'uppercase',
+                            cursor: 'pointer', transition: 'all 0.2s',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                            fontFamily: 'inherit',
+                        }}
+                            onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.1)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+                            onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                        >
+                            <Download size={15} />
+                            <span>Export PDF</span>
+                        </button>
+
+                        {/* Share — anchor for popover */}
+                        <div ref={shareRef} style={{ position: 'relative' }}>
+                            <button onClick={handleShare} disabled={isSharing} style={{
+                                display: 'flex', alignItems: 'center', gap: '10px',
+                                padding: '12px 24px',
+                                background: shareUrl ? 'linear-gradient(135deg, #059669, #10b981)' : 'linear-gradient(135deg, #4f46e5, #7c3aed)',
+                                border: 'none', borderRadius: '16px',
+                                color: 'white', fontSize: '12px', fontWeight: 800,
+                                letterSpacing: '0.05em', textTransform: 'uppercase',
+                                cursor: isSharing ? 'not-allowed' : 'pointer',
+                                transition: 'all 0.25s',
+                                boxShadow: shareUrl
+                                    ? '0 6px 20px rgba(5,150,105,0.4)'
+                                    : '0 6px 20px rgba(79,70,229,0.4)',
+                                opacity: isSharing ? 0.75 : 1,
+                                fontFamily: 'inherit',
+                            }}
+                                onMouseEnter={e => { if (!isSharing) e.currentTarget.style.transform = 'translateY(-1px)'; }}
+                                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
                             >
-                                <Download size={16} />
-                                <span>Export PDF</span>
+                                {isSharing ? <Loader2 size={15} style={{ animation: 'spin 1s linear infinite' }} /> : <Share2 size={15} />}
+                                <span>{isSharing ? 'Generating...' : shareUrl ? 'Link Ready' : 'Share'}</span>
                             </button>
 
-                            <div className="relative ml-2" ref={shareRef}>
-                                <button
-                                    className={`flex items-center gap-3 px-8 py-4 rounded-[1.5rem] text-xs font-black uppercase tracking-widest transition-all active:scale-95
-                                        ${shareUrl || isSharing
-                                            ? 'bg-green-500 text-white shadow-xl shadow-green-100'
-                                            : 'bg-indigo-600 text-white shadow-xl shadow-indigo-100'
-                                        }
-                                    `}
-                                    onClick={handleShare}
-                                    disabled={isSharing}
-                                >
-                                    {isSharing ? <Loader2 size={16} className="animate-spin" /> : <Share2 size={16} />}
-                                    <span>{isSharing ? 'Sharing...' : 'Share'}</span>
-                                </button>
+                            {/* ── SHARE POPOVER ── */}
+                            <AnimatePresence>
+                                {shareUrl && (
+                                    <motion.div
+                                        key="share-popover"
+                                        initial={{ opacity: 0, y: 12, scale: 0.95 }}
+                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                        exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                                        transition={{ type: "spring", stiffness: 350, damping: 28 }}
+                                        style={{
+                                            position: 'absolute',
+                                            top: 'calc(100% + 14px)',
+                                            right: 0,
+                                            width: '420px',
+                                            zIndex: 9999,
+                                            background: 'white',
+                                            borderRadius: '28px',
+                                            border: '1px solid rgba(79,70,229,0.15)',
+                                            boxShadow: '0 8px 16px rgba(0,0,0,0.06), 0 24px 64px rgba(79,70,229,0.18)',
+                                            padding: '28px',
+                                            pointerEvents: 'auto',
+                                        }}
+                                    >
+                                        {/* Accent line */}
+                                        <div style={{
+                                            position: 'absolute', top: 0, left: '32px', right: '32px', height: '2px',
+                                            background: 'linear-gradient(90deg, #4f46e5, #7c3aed)',
+                                            borderRadius: '0 0 4px 4px',
+                                        }} />
 
-                                {/* PREMIUM GLASS POPOVER (Phase 20 Polish) */}
-                                <AnimatePresence>
-                                    {shareUrl && (
-                                        <motion.div
-                                            initial={{ opacity: 0, scale: 0.9, y: 15 }}
-                                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                                            exit={{ opacity: 0, scale: 0.9, y: 15 }}
-                                            className="absolute right-0 top-[calc(100%+16px)] z-[1000] w-[340px] sm:w-[460px] pointer-events-auto"
-                                        >
-                                            <GlassPanel
-                                                variant="subtle"
-                                                className="!p-8 !rounded-[3rem] border-white bg-white/95 backdrop-blur-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] ring-1 ring-black/5"
-                                            >
-                                                <div className="flex items-center gap-6 mb-6 pl-1">
-                                                    <div className="w-16 h-16 shrink-0 rounded-[1.5rem] bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-xl shadow-indigo-100">
-                                                        <Sparkles className="w-8 h-8" />
-                                                    </div>
-                                                    <div className="space-y-1">
-                                                        <h4 className="text-2xl font-black text-slate-900 tracking-tight leading-none" style={{ fontFamily: 'var(--font-display)' }}>Share Access</h4>
-                                                        <p className="text-sm text-slate-400 font-medium">Mentors can view your roadmap via this link.</p>
-                                                    </div>
-                                                </div>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
+                                            <div style={{
+                                                width: '48px', height: '48px', borderRadius: '16px', flexShrink: 0,
+                                                background: 'linear-gradient(135deg, #4f46e5, #7c3aed)',
+                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                boxShadow: '0 8px 20px rgba(79,70,229,0.35)',
+                                                color: 'white',
+                                            }}>
+                                                <Sparkles size={22} />
+                                            </div>
+                                            <div>
+                                                <h4 style={{ margin: 0, fontSize: '1.15rem', fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em' }}>Share Access</h4>
+                                                <p style={{ margin: 0, fontSize: '13px', color: '#94a3b8', fontWeight: 500, marginTop: '2px' }}>Mentors can view your roadmap via this link.</p>
+                                            </div>
+                                        </div>
 
-                                                <div className="flex items-center p-2 rounded-2xl bg-slate-50 border border-slate-200/50">
-                                                    <div className="flex-1 px-4 overflow-hidden">
-                                                        <div className="truncate text-xs font-bold text-slate-600 tracking-tight">
-                                                            {shareUrl}
-                                                        </div>
-                                                    </div>
-
-                                                    <button
-                                                        onClick={copyToClipboard}
-                                                        className={`flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-[11px] font-black uppercase tracking-widest transition-all active:scale-95 shrink-0 shadow-sm
-                                                            ${copySuccess
-                                                                ? 'bg-green-500 text-white text-md'
-                                                                : 'bg-slate-900 text-white'
-                                                            }
-                                                        `}
-                                                    >
-                                                        {copySuccess ? <Check size={16} /> : <Copy size={16} />}
-                                                        <span>{copySuccess ? 'Copied' : 'Copy'}</span>
-                                                    </button>
-                                                </div>
-                                            </GlassPanel>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
+                                        <div style={{
+                                            display: 'flex', alignItems: 'center',
+                                            background: '#f8fafc', borderRadius: '16px',
+                                            border: '1px solid #e2e8f0', overflow: 'hidden',
+                                        }}>
+                                            <div style={{ flex: 1, padding: '12px 16px', overflow: 'hidden' }}>
+                                                <p style={{
+                                                    margin: 0, fontSize: '12px', fontWeight: 700,
+                                                    color: '#475569', whiteSpace: 'nowrap',
+                                                    overflow: 'hidden', textOverflow: 'ellipsis',
+                                                }}>
+                                                    {shareUrl}
+                                                </p>
+                                            </div>
+                                            <button onClick={copyToClipboard} style={{
+                                                display: 'flex', alignItems: 'center', gap: '8px',
+                                                padding: '12px 20px', margin: '4px',
+                                                background: copySuccess ? '#059669' : '#0f172a',
+                                                color: 'white', border: 'none', borderRadius: '12px',
+                                                fontSize: '11px', fontWeight: 800, letterSpacing: '0.06em',
+                                                textTransform: 'uppercase', cursor: 'pointer',
+                                                transition: 'all 0.2s', whiteSpace: 'nowrap',
+                                                fontFamily: 'inherit',
+                                                boxShadow: copySuccess ? '0 4px 12px rgba(5,150,105,0.4)' : 'none',
+                                            }}>
+                                                {copySuccess ? <Check size={13} /> : <Copy size={13} />}
+                                                <span>{copySuccess ? 'Copied!' : 'Copy'}</span>
+                                            </button>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
                     </div>
                 </div>
-            </GlassPanel>
+            </div>
 
-            <div className="board-content">
-                <DragDropContext onDragEnd={onDragEnd}>
-                    <Droppable droppableId="colleges">
-                        {(provided) => (
-                            <div {...provided.droppableProps} ref={provided.innerRef} className="colleges-list">
-                                {items.map((item, index) => (
-                                    <Draggable key={item.id} draggableId={item.id} index={index}>
-                                        {(provided, snapshot) => (
-                                            <div
-                                                ref={provided.innerRef}
-                                                {...provided.draggableProps}
-                                                className={`college-row-card ${snapshot.isDragging ? 'dragging' : ''}`}
-                                            >
-                                                <div {...provided.dragHandleProps} className="drag-handle">
-                                                    <GripVertical size={20} />
-                                                    <span className="rank-num">#{index + 1}</span>
+            {/* ── COLLEGE CARDS ── */}
+            <DragDropContext onDragEnd={onDragEnd}>
+                <Droppable droppableId="colleges">
+                    {(provided) => (
+                        <div {...provided.droppableProps} ref={provided.innerRef} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                            {items.map((item, index) => (
+                                <Draggable key={item.id} draggableId={item.id} index={index}>
+                                    {(provided, snapshot) => (
+                                        <div
+                                            ref={provided.innerRef}
+                                            {...provided.draggableProps}
+                                            style={{
+                                                ...provided.draggableProps.style,
+                                                background: 'white',
+                                                borderRadius: '24px',
+                                                border: snapshot.isDragging ? '2px solid #4f46e5' : '1px solid #e8eaf0',
+                                                boxShadow: snapshot.isDragging
+                                                    ? '0 20px 60px rgba(79,70,229,0.25), 0 8px 20px rgba(0,0,0,0.1)'
+                                                    : '0 2px 8px rgba(0,0,0,0.04), 0 0 0 1px rgba(0,0,0,0.02)',
+                                                overflow: 'hidden',
+                                                transition: snapshot.isDragging ? 'none' : 'box-shadow 0.2s, border-color 0.2s, transform 0.2s',
+                                                transform: snapshot.isDragging ? undefined : 'none',
+                                                display: 'flex',
+                                            }}
+                                        >
+                                            {/* Drag Handle */}
+                                            <div {...provided.dragHandleProps} style={{
+                                                width: '64px', minWidth: '64px',
+                                                background: snapshot.isDragging ? '#eff6ff' : '#fafbff',
+                                                borderRight: '1px solid #f1f4ff',
+                                                display: 'flex', flexDirection: 'column',
+                                                alignItems: 'center', justifyContent: 'center',
+                                                gap: '6px', cursor: 'grab', padding: '20px 0',
+                                                transition: 'background 0.2s',
+                                            }}>
+                                                <GripVertical size={18} style={{ color: '#94a3b8' }} />
+                                                <span style={{
+                                                    fontWeight: 900, color: '#4f46e5',
+                                                    fontSize: '1rem', letterSpacing: '-0.02em',
+                                                    lineHeight: 1,
+                                                }}>
+                                                    #{index + 1}
+                                                </span>
+                                            </div>
+
+                                            {/* Content */}
+                                            <div style={{ flex: 1, padding: '24px 28px' }}>
+                                                {/* Header Row */}
+                                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px', marginBottom: '20px', flexWrap: 'wrap' }}>
+                                                    <div>
+                                                        <h3 style={{
+                                                            margin: '0 0 6px', fontSize: '1.25rem', fontWeight: 800,
+                                                            color: '#1e3a8a', letterSpacing: '-0.02em', lineHeight: 1.2,
+                                                        }}>
+                                                            {item.name || item.shortName}
+                                                        </h3>
+                                                        <p style={{ margin: 0, color: '#64748b', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                                            <MapPin size={13} style={{ flexShrink: 0 }} />
+                                                            {item.location}
+                                                        </p>
+                                                    </div>
+                                                    <span style={{
+                                                        background: '#eff6ff', color: '#2563eb',
+                                                        padding: '6px 14px', borderRadius: '999px',
+                                                        fontSize: '12px', fontWeight: 700, whiteSpace: 'nowrap',
+                                                        border: '1px solid #bfdbfe',
+                                                    }}>
+                                                        Strategic Choice: {item.rankingTier && item.rankingTier.toString().toLowerCase().includes('tier') ? item.rankingTier : `Tier ${item.rankingTier || "1"}`}
+                                                    </span>
                                                 </div>
 
-                                                <div className="college-main-modern">
-                                                    <div className="report-header">
-                                                        <div className="identity">
-                                                            <h3 className="name">{item.name || item.shortName}</h3>
-                                                            <p className="loc">{item.location}</p>
-                                                        </div>
-                                                        <div className="tier-badge">
-                                                            Strategic Choice: {item.rankingTier && item.rankingTier.toString().toLowerCase().includes('tier') ? item.rankingTier : `Tier ${item.rankingTier || "1"}`}
-                                                        </div>
+                                                {/* Stats Grid */}
+                                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '16px', marginBottom: '20px' }}>
+                                                    <div style={{ background: '#f8fafc', borderRadius: '12px', padding: '14px 16px' }}>
+                                                        <p style={{ margin: '0 0 4px', fontSize: '10px', fontWeight: 800, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.08em' }}>EST. TUITION</p>
+                                                        <p style={{ margin: 0, fontSize: '1rem', fontWeight: 800, color: '#1e293b' }}>{item.tuition || "See Website"}</p>
                                                     </div>
+                                                    <div style={{ background: '#f0fdf4', borderRadius: '12px', padding: '14px 16px' }}>
+                                                        <p style={{ margin: '0 0 4px', fontSize: '10px', fontWeight: 800, color: '#6ee7b7', textTransform: 'uppercase', letterSpacing: '0.08em' }}>AVG PACKAGE</p>
+                                                        <p style={{ margin: 0, fontSize: '1rem', fontWeight: 800, color: '#059669' }}>{item.placements?.averagePackage || "High ROI"}</p>
+                                                    </div>
+                                                    <div style={{ background: '#fefce8', borderRadius: '12px', padding: '14px 16px', gridColumn: 'span 1' }}>
+                                                        <p style={{ margin: '0 0 4px', fontSize: '10px', fontWeight: 800, color: '#fcd34d', textTransform: 'uppercase', letterSpacing: '0.08em' }}>KEY EXAMS</p>
+                                                        <p style={{ margin: 0, fontSize: '0.9rem', fontWeight: 700, color: '#92400e', lineHeight: 1.3 }}>
+                                                            {(item.acceptedExams || []).map(e => (typeof e === 'object' ? (e.code || e.name) : e)).join(", ") || "CAT, CMAT"}
+                                                        </p>
+                                                    </div>
+                                                </div>
 
-                                                    <div className="report-details-grid">
-                                                        <div className="detail-item">
-                                                            <span className="label">EST. TUITION</span>
-                                                            <span className="value">{item.tuition || "See Website"}</span>
-                                                        </div>
-                                                        <div className="detail-item">
-                                                            <span className="label">AVG PACKAGE</span>
-                                                            <span className="value green">{item.placements?.averagePackage || "High ROI"}</span>
-                                                        </div>
-                                                        <div className="detail-item full-width">
-                                                            <span className="label">KEY EXAMS</span>
-                                                            <span className="value">
-                                                                {(item.acceptedExams || []).map(e => (typeof e === 'object' ? (e.code || e.name) : e)).join(", ") || "CAT, CMAT"}
-                                                            </span>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="row-actions-modern">
-                                                        <Link href={`/college/${item.id}`} className="action-btn-mini" title="View Details">
-                                                            <FileText size={16} /> Details
-                                                        </Link>
-                                                        <button
-                                                            className="action-btn-mini remove"
-                                                            onClick={() => removeItem(item.id)}
-                                                            title="Remove"
-                                                        >
-                                                            <Trash2 size={16} /> Remove
-                                                        </button>
-                                                    </div>
+                                                {/* Action Row */}
+                                                <div style={{ display: 'flex', gap: '10px', paddingTop: '16px', borderTop: '1px solid #f1f5f9' }}>
+                                                    <Link href={`/college/${item.id}`} style={{
+                                                        display: 'inline-flex', alignItems: 'center', gap: '7px',
+                                                        padding: '9px 18px', background: '#f8fafc',
+                                                        border: '1px solid #e8eaf0', borderRadius: '10px',
+                                                        fontSize: '12px', fontWeight: 700, color: '#334155',
+                                                        textDecoration: 'none', transition: 'all 0.15s',
+                                                    }}
+                                                        onMouseEnter={e => { e.currentTarget.style.background = '#eff6ff'; e.currentTarget.style.color = '#2563eb'; e.currentTarget.style.borderColor = '#bfdbfe'; }}
+                                                        onMouseLeave={e => { e.currentTarget.style.background = '#f8fafc'; e.currentTarget.style.color = '#334155'; e.currentTarget.style.borderColor = '#e8eaf0'; }}
+                                                    >
+                                                        <BookOpen size={14} />
+                                                        Details
+                                                    </Link>
+                                                    <button onClick={() => removeItem(item.id)} style={{
+                                                        display: 'inline-flex', alignItems: 'center', gap: '7px',
+                                                        padding: '9px 18px', background: '#f8fafc',
+                                                        border: '1px solid #e8eaf0', borderRadius: '10px',
+                                                        fontSize: '12px', fontWeight: 700, color: '#94a3b8',
+                                                        cursor: 'pointer', transition: 'all 0.15s',
+                                                        fontFamily: 'inherit',
+                                                    }}
+                                                        onMouseEnter={e => { e.currentTarget.style.background = '#fff1f2'; e.currentTarget.style.color = '#ef4444'; e.currentTarget.style.borderColor = '#fca5a5'; }}
+                                                        onMouseLeave={e => { e.currentTarget.style.background = '#f8fafc'; e.currentTarget.style.color = '#94a3b8'; e.currentTarget.style.borderColor = '#e8eaf0'; }}
+                                                    >
+                                                        <Trash2 size={14} />
+                                                        Remove
+                                                    </button>
                                                 </div>
                                             </div>
-                                        )}
-                                    </Draggable>
-                                ))}
-                                {provided.placeholder}
-                            </div>
-                        )}
-                    </Droppable>
-                </DragDropContext>
-            </div>
+                                        </div>
+                                    )}
+                                </Draggable>
+                            ))}
+                            {provided.placeholder}
+                        </div>
+                    )}
+                </Droppable>
+            </DragDropContext>
 
             <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
-
             <style jsx>{`
-                .application-board {
-                    padding: 20px 0;
-                }
-                .board-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 32px;
-                    padding: 24px;
-                    background: white;
-                    border: 1px solid #e2e8f0;
-                    border-radius: 20px;
-                    box-shadow: var(--shadow-sm);
-                }
-                .board-info h2 { 
-                    font-family: var(--font-display);
-                    font-size: 1.5rem;
-                    margin-bottom: 4px;
-                }
-                .subtitle { color: #64748b; font-size: 0.95rem; }
-                .board-actions { display: flex; gap: 12px; }
-                
-                .btn-download-report {
-                    background: #2563eb;
-                    color: white;
-                    border: none;
-                    padding: 12px 24px;
-                    border-radius: 12px;
-                    font-weight: 600;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    cursor: pointer;
-                    transition: all 0.2s;
-                }
-                .btn-download-report:hover { transform: translateY(-2px); background: #1d4ed8; }
-
-                .btn-share-roadmap {
-                    background: #f8fafc;
-                    color: #1e3a8a;
-                    border: 1px solid #e2e8f0;
-                    padding: 12px 24px;
-                    border-radius: 12px;
-                    font-weight: 600;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    cursor: pointer;
-                    transition: all 0.2s;
-                }
-                .btn-share-roadmap:hover { border-color: #2563eb; background: white; }
-
-                .btn-clear-list {
-                    background: #f1f5f9;
-                    color: #64748b;
-                    border: 1px solid #e2e8f0;
-                    padding: 12px 20px;
-                    border-radius: 12px;
-                    font-weight: 600;
-                    cursor: pointer;
-                }
-
-                .college-row-card {
-                    background: white;
-                    border: 1px solid #e2e8f0;
-                    border-radius: 20px;
-                    padding: 0;
-                    margin-bottom: 24px;
-                    display: flex;
-                    overflow: hidden;
-                    transition: all 0.2s;
-                }
-                .college-row-card.dragging { box-shadow: var(--shadow-lg); border-color: #2563eb; }
-
-                
-                /* Large Drag Handle */
-                .drag-handle {
-                    width: 60px;
-                    background: #f8fafc;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    color: #94a3b8;
-                    cursor: grab;
-                    border-right: 1px solid #f1f5f9;
-                    transition: background 0.2s;
-                }
-                .drag-handle:hover { background: #f1f5f9; color: #64748b; }
-                .rank-num { font-weight: 800; color: #1e3a8a; font-size: 1.1rem; margin-top: 4px; }
-
-                /* Mobile Optimizations */
-                @media (max-width: 768px) {
-                    .drag-handle {
-                        width: 100%;
-                        height: 48px; /* Taller touch target */
-                        flex-direction: row;
-                        border-right: none;
-                        border-bottom: 1px solid #f1f5f9;
-                        gap: 12px;
-                        background: #f8fafc;
-                    }
-                    .drag-handle:active { background: #e2e8f0; cursor: grabbing; }
-                    
-                    /* Prevent text selection while dragging */
-                    .college-row-card { user-select: none; -webkit-user-select: none; }
-                }
-
-                .report-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    margin-bottom: 20px;
-                    gap: 16px;
-                }
-                .identity .name { font-size: 1.4rem; font-weight: 800; color: #1e3a8a; margin: 0 0 4px; }
-                .identity .loc { color: #64748b; font-size: 1rem; margin: 0; }
-
-                .tier-badge {
-                    background: #eff6ff;
-                    color: #2563eb;
-                    padding: 6px 16px;
-                    border-radius: 99px;
-                    font-size: 0.85rem;
-                    font-weight: 700;
-                    white-space: nowrap;
-                }
-
-                .report-details-grid {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 16px;
-                    margin-bottom: 20px;
-                }
-
-                .detail-item {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 4px;
-                }
-                .detail-item.full-width { grid-column: span 2; }
-                .detail-item .label { font-size: 0.65rem; font-weight: 800; color: #94a3b8; letter-spacing: 0.05em; }
-                .detail-item .value { font-size: 1.1rem; font-weight: 700; color: #1e293b; }
-                .detail-item .value.green { color: #059669; }
-
-                .row-actions-modern {
-                    display: flex;
-                    gap: 12px;
-                    padding-top: 20px;
-                    border-top: 1px solid #f1f5f9;
-                }
-                .action-btn-mini {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 8px 16px;
-                    border-radius: 8px;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    text-decoration: none;
-                    background: #f1f5f9;
-                    color: #475569;
-                    border: none;
-                    cursor: pointer;
-                    transition: all 0.2s;
-                }
-                .action-btn-mini:hover { background: #e2e8f0; }
-                .action-btn-mini.remove:hover { background: #fef2f2; color: #ef4444; }
-
-                /* Responsive Board Header */
-                @media (max-width: 768px) {
-                    .board-header {
-                        flex-direction: column;
-                        gap: 20px;
-                        padding: 20px;
-                        text-align: center;
-                    }
-
-                    .board-info {
-                        width: 100%;
-                    }
-
-                    .board-actions {
-                        width: 100%;
-                        display: grid;
-                        grid-template-columns: 1fr; /* Stack buttons vertically */
-                        gap: 12px;
-                    }
-
-                    .btn-download-report, 
-                    .btn-share-roadmap, 
-                    .btn-clear-list {
-                        justify-content: center;
-                        width: 100%;
-                    }
-                }
-
-                @media (max-width: 768px) {
-                    .college-row-card {
-                        flex-direction: column;
-                        position: relative;
-                        padding-left: 0;
-                        height: auto;
-                    }
-                    .drag-handle {
-                        width: 100%;
-                        height: 36px;
-                        flex-direction: row;
-                        border-right: none;
-                        border-bottom: 1px solid #f1f5f9;
-                        gap: 8px;
-                    }
-                    .rank-num { margin-top: 0; font-size: 0.9rem; }
-                    
-                    .college-main-modern { padding: 16px; }
-
-                    .report-header { 
-                        flex-direction: column; 
-                        align-items: flex-start; 
-                        gap: 8px;
-                    }
-                    
-                    .report-details-grid { 
-                        grid-template-columns: 1fr; 
-                        gap: 12px;
-                    }
-                    .detail-item.full-width { grid-column: auto; }
-
-                    .row-actions-modern {
-                        flex-direction: column;
-                        width: 100%;
-                        gap: 8px;
-                    }
-                    .action-btn-mini {
-                        justify-content: center;
-                        width: 100%;
-                        padding: 12px;
-                        background: #f8fafc;
-                        border: 1px solid #e2e8f0;
-                    }
-                }
-
-                .mylist-empty {
-                    text-align: center;
-                    padding: 80px 20px;
-                    background: white;
-                    border-radius: 24px;
-                    border: 2px dashed #e2e8f0;
-                }
-                .empty-icon { font-size: 4rem; margin-bottom: 16px; }
-                .btn-browse {
-                    display: inline-block;
-                    margin-top: 20px;
-                    background: #2563eb;
-                    color: white;
-                    padding: 12px 32px;
-                    border-radius: 999px;
-                    font-weight: 600;
-                    text-decoration: none;
-                }
-                .share-modal-overlay {
-                    position: fixed;
-                    inset: 0;
-                    background: rgba(248, 250, 252, 0.4);
-                    backdrop-filter: blur(12px);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    z-index: 1000;
-                    padding: 20px;
-                }
-                .share-modal-glass {
-                    animation: modal-enter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-                }
-                @keyframes modal-enter {
-                    from { opacity: 0; transform: scale(0.95) translateY(20px); }
-                    to { opacity: 1; transform: scale(1) translateY(0); }
-                }
-                .btn-share-roadmap.active {
-                    background: #e0e7ff;
-                    border-color: #818cf8;
-                    color: #4338ca;
-                }
+                @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
             `}</style>
-        </div >
+        </div>
     );
 }
