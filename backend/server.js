@@ -33,9 +33,12 @@ const normalizedOrigins = rawOrigins
   .filter(Boolean)
   .map(o => o.replace(/\/$/, ""));
 
-const allowedOrigins = isProduction
-  ? normalizedOrigins
-  : ["http://localhost:3030", ...normalizedOrigins];
+const allowedOrigins = [
+  "http://localhost:3030",
+  "https://ce-intelligence.vercel.app",
+  "https://cmat-problem-frontend.vercel.app",
+  ...normalizedOrigins
+];
 
 const corsOptions = {
   origin: function (origin, callback) {
