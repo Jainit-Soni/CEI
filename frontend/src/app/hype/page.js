@@ -466,10 +466,11 @@ export default function HypePage() {
                         <GlassPanel className="filters-panel !p-8 !rounded-[2.5rem] !bg-white/40 !border-white/50 !backdrop-blur-xl !shadow-sm" variant="strong">
                             <div className="flex items-center justify-between mb-8 px-4">
                                 <h3 className="text-2xl font-bold text-slate-800 tracking-tight">Challengers</h3>
-                                    {rest.length > 0 
-                                        ? `Showing Top ${rest.length}` 
-                                        : stats.leaderboard.length > 0 
-                                            ? 'Be the first to challenge the top 3!' 
+                                <div className="text-sm font-medium text-slate-500">
+                                    {rest.length > 0
+                                        ? `Showing Top ${rest.length}`
+                                        : stats.leaderboard.length > 0
+                                            ? 'Be the first to challenge the top 3!'
                                             : 'Start the competition!'}
                                 </div>
                             </div>
