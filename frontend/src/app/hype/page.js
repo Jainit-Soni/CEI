@@ -97,64 +97,81 @@ const PodiumCard = ({ college, rank, onVote, isVoting }) => {
 
     return (
         <motion.div
-            whileHover={{ y: -12, scale: 1.01 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className={`relative flex flex-col p-8 rounded-[3rem] border-2 ${borderColor} ${bgGradient} transition-shadow duration-500 w-full min-h-[450px] group overflow-hidden`}
+            animate={{
+                y: [0, -10, 0],
+                transition: {
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: rank * 0.5
+                }
+            }}
+            whileHover={{ y: -15, scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 10 } }}
+            className={`relative flex flex-col p-10 md:p-12 rounded-[3.5rem] border-2 ${borderColor} ${bgGradient} transition-shadow duration-500 w-full min-h-[520px] group overflow-hidden`}
             style={{
-                boxShadow: `0 20px 60px -15px ${glowColor}`,
+                boxShadow: `0 25px 80px -20px ${glowColor}`,
             }}
         >
-            {/* Rank Badge */}
-            <div className="flex justify-between items-start mb-8">
-                <div className={`flex items-center gap-3 px-5 py-2 rounded-full font-bold text-sm tracking-tight ${isGold ? 'bg-amber-500 text-white' : 'bg-slate-100 text-slate-600'}`}>
+            {/* Rank Badge - Airy Position */}
+            <div className="flex justify-between items-start mb-12">
+                <div className={`flex items-center gap-4 px-6 py-2.5 rounded-full font-black text-xs tracking-[0.1em] uppercase ${isGold ? 'bg-amber-500 text-white shadow-lg shadow-amber-200' : 'bg-slate-100 text-slate-500'}`}>
                     <span>Rank #{rank}</span>
-                    {isGold && <Trophy size={14} />}
+                    {isGold && <Trophy size={14} className="animate-bounce" />}
                 </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-2 group-hover:translate-x-0 duration-300">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-3 group-hover:translate-x-0 duration-500">
                     {themeIcon}
                 </div>
             </div>
 
             <div className="flex-1 flex flex-col justify-center text-center">
-                <p className={`text-[0.65rem] font-black uppercase tracking-[0.2em] mb-2 opacity-60 ${accentColor}`}>
+                <p className={`text-[0.7rem] font-black uppercase tracking-[0.3em] mb-4 opacity-70 ${accentColor}`}>
                     {rankLabel}
                 </p>
-                <div className="flex items-center justify-center gap-2 text-xs text-slate-400 font-bold uppercase tracking-widest mb-4">
-                    <MapPin size={10} />
+                <div className="flex items-center justify-center gap-3 text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-8">
+                    <MapPin size={12} className="text-slate-300" />
                     <span>{college.location || "India"}</span>
                 </div>
-                <h3 className="text-3xl font-black text-slate-900 leading-tight mb-6 group-hover:text-indigo-600 transition-colors" style={{ fontFamily: 'var(--font-display)' }}>
+                <h3 className="text-3xl md:text-4xl font-black text-slate-900 leading-[1.2] mb-10 group-hover:text-amber-600 transition-colors" style={{ fontFamily: 'var(--font-display)' }}>
                     {college.name}
                 </h3>
 
-                <div className="flex flex-col items-center gap-2">
-                    <span className="text-5xl font-black text-slate-900 tracking-tighter tabular-nums">
-                        <AnimatedCounter value={college.votes} />
-                    </span>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Hype Points</span>
+                <div className="flex flex-col items-center gap-4">
+                    <div className="relative">
+                        <span className={`text-6xl font-black tracking-tighter tabular-nums ${isGold ? 'text-amber-500' : 'text-slate-900'}`}>
+                            <AnimatedCounter value={college.votes} />
+                        </span>
+                        {isGold && (
+                            <motion.div
+                                animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.2, 1] }}
+                                transition={{ duration: 2, repeat: Infinity }}
+                                className="absolute -inset-4 bg-amber-400/20 blur-2xl rounded-full -z-10"
+                            />
+                        )}
+                    </div>
+                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Authentic Hype Points</span>
                 </div>
             </div>
 
-            {/* Vote Action */}
-            <div className="mt-8 pt-6 border-t border-slate-100/80">
+            {/* Vote Action - Balanced Spacing */}
+            <div className="mt-12 pt-8 border-t border-slate-100/80">
                 <motion.button
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ scale: 0.92 }}
                     onClick={(e) => onVote(e, college)}
                     disabled={isVoting}
-                    className={`w-full py-4 rounded-2xl font-black text-sm tracking-wide transition-all flex items-center justify-center gap-3 relative overflow-hidden group/btn
+                    className={`w-full py-5 rounded-[1.5rem] font-black text-xs tracking-[0.2em] uppercase transition-all flex items-center justify-center gap-4 relative overflow-hidden group/btn shadow-xl
                         ${isGold
-                            ? 'bg-amber-500 text-white shadow-lg shadow-amber-200 hover:bg-amber-600'
-                            : 'bg-slate-900 text-white hover:bg-black shadow-lg shadow-slate-200'
+                            ? 'bg-amber-500 text-white shadow-amber-200 hover:bg-amber-600'
+                            : 'bg-slate-900 text-white hover:bg-black shadow-slate-200'
                         }
                     `}
                 >
-                    {isVoting ? <Loader2 size={18} className="animate-spin" /> : <Heart size={18} className="group-hover/btn:scale-125 transition-transform" />}
-                    <span>{isVoting ? 'BOOSTING...' : 'BOOST HYPE'}</span>
+                    {isVoting ? <Loader2 size={18} className="animate-spin" /> : <Heart size={20} className="group-hover/btn:scale-125 transition-transform duration-300" />}
+                    <span>{isVoting ? 'BOOSTING...' : 'BOOST CAMPUS HYPE'}</span>
                 </motion.button>
             </div>
 
-            {/* Subliminal Ranking Indicator */}
-            <div className="absolute bottom-2 right-8 text-[8rem] font-black text-slate-900/[0.03] pointer-events-none select-none -mb-8 mr-[-1rem]" style={{ fontFamily: 'var(--font-display)' }}>
+            {/* Massive Subliminal Indicator */}
+            <div className="absolute -bottom-10 -right-10 text-[14rem] font-black text-slate-900/[0.02] pointer-events-none select-none tracking-tighter" style={{ fontFamily: 'var(--font-display)' }}>
                 {rank}
             </div>
         </motion.div>
@@ -163,30 +180,38 @@ const PodiumCard = ({ college, rank, onVote, isVoting }) => {
 
 function RankRow({ college, index, onVote, isVoting }) {
     return (
-        <div className="group relative flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
-            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 text-slate-500 font-bold text-lg">
+        <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.05 }}
+            className="group relative flex items-center gap-6 p-6 rounded-3xl bg-white border border-indigo-50 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-500"
+        >
+            <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-slate-50 text-slate-400 font-black text-xl group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-500">
                 #{index + 4}
             </div>
 
             <div className="flex-1 min-w-0">
-                <div className="font-bold text-slate-800 truncate text-lg">{college.name}</div>
-                <div className="text-sm text-slate-500 flex items-center gap-2">
-                    {college.location}
-                    <span className="w-1 h-1 bg-slate-300 rounded-full" />
-                    <span className="text-slate-400 font-medium">
-                        <AnimatedCounter value={college.votes} /> Votes
+                <div className="font-black text-slate-800 truncate text-xl mb-1 tracking-tight group-hover:text-indigo-600 transition-colors">{college.name}</div>
+                <div className="text-xs text-slate-500 flex items-center gap-3 font-bold uppercase tracking-widest">
+                    <span className="flex items-center gap-1.5"><MapPin size={12} className="text-slate-300" /> {college.location}</span>
+                    <span className="w-1 h-1 bg-slate-200 rounded-full" />
+                    <span className="text-indigo-500">
+                        <AnimatedCounter value={college.votes} /> HYPE
                     </span>
                 </div>
             </div>
 
-            <button
+            <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={(e) => onVote(e, college)}
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-indigo-600 hover:text-white transition-all active:scale-90"
-                title="Vote"
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-900 text-white hover:bg-black shadow-lg shadow-slate-200 transition-all"
+                title="Boost Hype"
             >
-                <ArrowUp size={18} />
-            </button>
-        </div>
+                <ArrowUp size={20} />
+            </motion.button>
+        </motion.div>
     );
 }
 
