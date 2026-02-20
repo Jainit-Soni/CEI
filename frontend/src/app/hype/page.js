@@ -79,7 +79,7 @@ function LiveTicker({ votes }) {
 // ─────────────────────────────────────────────
 // TOP 3 HERO CARD
 // ─────────────────────────────────────────────
-function HeroCard({ college, rank, onVote, isVoting, totalVotes }) {
+function HeroCard({ college, rank, onVote, isVoting, totalVotes, podiumMode }) {
     const pct = totalVotes > 0 ? Math.min((college.votes / totalVotes) * 400, 100) : 0;
     const isGold = rank === 1;
 
@@ -94,12 +94,17 @@ function HeroCard({ college, rank, onVote, isVoting, totalVotes }) {
 
     if (!college) return null;
 
+    // Podium heights: #1 is tallest, #2 and #3 are slightly shorter
+    const podiumHeight = podiumMode
+        ? isGold ? "min-h-[400px]" : "min-h-[340px] mt-10"
+        : "min-h-[340px]";
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: rank * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className={`rank-hero-card ${cardClass} flex flex-col p-7 min-h-[340px]`}
+            className={`rank-hero-card ${cardClass} flex flex-col p-7 ${podiumHeight} w-full`}
         >
             {/* TOP ROW */}
             <div className="flex items-start justify-between mb-5">
@@ -446,24 +451,36 @@ export default function HypePage() {
                         </AnimatePresence>
                     </div>
 
-                    {/* ──── 4. TOP 3 CARDS ──── */}
+                    {/* ──── 4. TOP 3 PODIUM ──── */}
                     <section className="mb-16">
                         <div className="flex items-center gap-3 mb-8">
                             <Crown size={20} className="text-amber-500" />
                             <h2 className="text-2xl font-black tracking-tight text-slate-900">Top 3 Champions</h2>
                             <div className="h-px bg-slate-200 flex-1 ml-2" />
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {top3.map((col, i) => (
-                                <HeroCard
-                                    key={col.id}
-                                    college={col}
-                                    rank={i + 1}
-                                    onVote={handleVote}
-                                    isVoting={isVoting}
-                                    totalVotes={totalVotes}
-                                />
-                            ))}
+
+                        {/* PODIUM ROW — always 3 columns, rank 1 center and tallest */}
+                        <div className="flex items-end gap-6">
+                            {/* RANK 2 — left */}
+                            <div className="flex-1">
+                                {top3[1] && (
+                                    <HeroCard college={top3[1]} rank={2} onVote={handleVote} isVoting={isVoting} totalVotes={totalVotes} podiumMode />
+                                )}
+                            </div>
+
+                            {/* RANK 1 — center, tallest */}
+                            <div className="flex-1">
+                                {top3[0] && (
+                                    <HeroCard college={top3[0]} rank={1} onVote={handleVote} isVoting={isVoting} totalVotes={totalVotes} podiumMode />
+                                )}
+                            </div>
+
+                            {/* RANK 3 — right */}
+                            <div className="flex-1">
+                                {top3[2] && (
+                                    <HeroCard college={top3[2]} rank={3} onVote={handleVote} isVoting={isVoting} totalVotes={totalVotes} podiumMode />
+                                )}
+                            </div>
                         </div>
                     </section>
 
