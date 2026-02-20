@@ -281,41 +281,41 @@ export default function ApplicationBoard() {
                                 <Trash2 size={20} />
                             </button>
 
-                            <div className="flex flex-col gap-6 md:gap-8 pr-8 md:pr-12">
+                            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pr-10 md:pr-14">
                                 {/* Header Section */}
-                                <div className="flex items-start md:items-center gap-4 md:gap-6">
-                                    <div className="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-2xl md:rounded-[1.5rem] bg-indigo-600 flex items-center justify-center text-white shadow-xl shadow-indigo-200">
-                                        <Sparkles className="w-6 h-6 md:w-8 md:h-8" />
+                                <div className="flex items-center gap-4 md:gap-5 min-w-0">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-[1.25rem] bg-indigo-600 flex items-center justify-center text-white shadow-lg shadow-indigo-200">
+                                        <Sparkles className="w-6 h-6 md:w-7 md:h-7" />
                                     </div>
-                                    <div className="space-y-1">
-                                        <h4 className="text-lg md:text-xl font-black text-slate-800 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>Share Access Generated</h4>
-                                        <p className="text-xs md:text-sm text-slate-500 font-medium leading-snug max-w-sm">Anyone with this link can view your strategic roadmap in read-only mode.</p>
+                                    <div className="space-y-0.5 min-w-0">
+                                        <h4 className="text-lg md:text-xl font-black text-slate-800 tracking-tight truncate" style={{ fontFamily: 'var(--font-display)' }}>Share Access Generated</h4>
+                                        <p className="text-xs text-slate-500 font-medium leading-relaxed truncate md:whitespace-normal">Anyone with this link can view your strategic roadmap in read-only mode.</p>
                                     </div>
                                 </div>
 
                                 {/* Link Generation Box */}
-                                <div className="w-full">
-                                    <div className="share-link-box-modern flex flex-col sm:flex-row items-stretch sm:items-center p-2 rounded-2xl bg-white/80 border-2 border-slate-100 focus-within:border-indigo-400 focus-within:ring-[6px] focus-within:ring-indigo-100 transition-all duration-500 gap-2">
-                                        <div className="flex-1 px-4 py-2 sm:py-0 overflow-hidden">
+                                <div className="w-full lg:w-auto lg:max-w-md xl:max-w-lg shrink-0">
+                                    <div className="share-link-box-modern flex flex-wrap sm:flex-nowrap items-center p-1.5 md:p-2 rounded-2xl bg-white/80 border-2 border-slate-100 focus-within:border-indigo-400 focus-within:ring-[6px] focus-within:ring-indigo-100 transition-all duration-500 gap-2">
+                                        <div className="flex-1 px-3 py-2 sm:py-0 overflow-hidden min-w-[200px]">
                                             <motion.div
                                                 initial={{ width: 0 }}
                                                 animate={{ width: '100%' }}
                                                 transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-                                                className="truncate text-sm md:text-base font-bold text-slate-600 tracking-tight"
+                                                className="truncate text-sm font-bold text-slate-600 tracking-tight"
                                             >
                                                 {shareUrl}
                                             </motion.div>
                                         </div>
                                         <button
                                             onClick={copyToClipboard}
-                                            className={`flex justify-center items-center gap-2 px-6 py-3 md:px-8 md:py-3.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all active:scale-95 w-full sm:w-auto
+                                            className={`flex justify-center items-center gap-2 px-6 py-3 rounded-[0.85rem] text-[11px] font-black uppercase tracking-widest transition-all active:scale-95 shrink-0 w-full sm:w-auto
                                                 ${copySuccess
-                                                    ? 'bg-green-500 text-white shadow-xl shadow-green-200'
-                                                    : 'bg-slate-900 text-white hover:bg-black shadow-xl shadow-slate-200'
+                                                    ? 'bg-green-500 text-white shadow-lg shadow-green-200'
+                                                    : 'bg-slate-900 text-white hover:bg-black shadow-lg shadow-slate-200'
                                                 }
                                             `}
                                         >
-                                            {copySuccess ? <Check size={16} /> : <Copy size={16} />}
+                                            {copySuccess ? <Check size={14} /> : <Copy size={14} />}
                                             <span>{copySuccess ? 'Copied' : 'Copy Link'}</span>
                                         </button>
                                     </div>
