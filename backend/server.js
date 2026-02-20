@@ -20,17 +20,10 @@ const predictorRoutes = require("./routes/predictor");
 const app = express();
 
 
-// Security Middleware
-app.use(helmet());
+// Security & Infrastructure Middleware
+app.use(helmet()); // Secure HTTP headers
+app.use(compression()); // Enable gzip compression
 
-// Rate Limiting
-const globalLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
-  standardHeaders: true,
-  legacyHeaders: false,
-});
-app.use("/api", globalLimiter);
 // CORS configuration
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -50,7 +43,9 @@ const corsOptions = {
     if (!origin) return callback(null, true);
 
     // Fail-safe: Always allow Vercel origins to prevent deployment blocking
-    if (origin.endsWith(".vercel.app") || origin.includes("--ce-intelligence-")) {
+    const isVercel = origin.endsWith(".vercel.app") || origin.includes("--ce-intelligence-");
+
+    if (isVercel) {
       return callback(null, true);
     }
 
@@ -62,10 +57,7 @@ const corsOptions = {
     if (isAllowed) {
       callback(null, true);
     } else {
-      console.warn(`CORS Reject: Origin [${origin}] not in allowed list: [${allowedOrigins.join(", ")}]`);
-      // Calling callback(null, false) allows the cors middleware to handle the rejection
-      // by simply not adding the Access-Control-Allow-Origin header, which is the standard behavior.
-      // Throwing an Error here (as it was before) crashes the request before headers are set correctly.
+      console.warn(`CORS Reject: Origin [${origin}] not in allowed list`);
       callback(null, false);
     }
   },
@@ -73,6 +65,19 @@ const corsOptions = {
   allowedHeaders: ["Content-Type", "Authorization", "x-api-key"],
   credentials: true
 };
+
+// Apply CORS early to avoid "CORS masking" of other errors (429s, etc)
+app.use(cors(corsOptions));
+app.use(express.json());
+
+// Rate Limiting
+const globalLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 200, // Relaxed from 100 for production deployment testing
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use("/api", globalLimiter);
 
 // Speed Limiter (Throttling)
 const speedLimiter = slowDown({
@@ -99,11 +104,7 @@ const searchLimiter = rateLimit({
   skip: (req) => !!req.apiKey // Skip if valid API key present
 });
 
-// Middleware
-app.use(helmet()); // Secure HTTP headers
-app.use(compression()); // Enable gzip compression
-app.use(cors(corsOptions));
-app.use(express.json());
+// Domain Logic Middleware
 app.use(apiKeyAuth);   // Check for API Key first
 app.use(speedLimiter); // Then throttle
 app.use(standardLimiter);      // Then IP rate limit (if no key)
