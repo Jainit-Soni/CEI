@@ -3,19 +3,31 @@
 // Lazy-loaded Firestore instance
 let firestoreDb = null;
 
-// Get or initialize Firestore lazily
+// Get or initialize Firestore lazily with timeout
 async function getFirestoreDb() {
     if (firestoreDb) return firestoreDb;
 
-    const [{ initializeApp, getApps }, { getFirestore }] = await Promise.all([
-        import("firebase/app"),
-        import("firebase/firestore")
-    ]);
+    return new Promise(async (resolve, reject) => {
+        const timeout = setTimeout(() => {
+            reject(new Error("Firestore initialization timed out (10s)"));
+        }, 10000);
 
-    const firebaseConfig = (await import("./firebase.config")).default;
-    const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
-    firestoreDb = getFirestore(app);
-    return firestoreDb;
+        try {
+            const [{ initializeApp, getApps }, { getFirestore }] = await Promise.all([
+                import("firebase/app"),
+                import("firebase/firestore")
+            ]);
+
+            const firebaseConfig = (await import("./firebase.config")).default;
+            const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+            firestoreDb = getFirestore(app);
+            clearTimeout(timeout);
+            resolve(firestoreDb);
+        } catch (err) {
+            clearTimeout(timeout);
+            reject(err);
+        }
+    });
 }
 
 // Save a favorite item (college or exam)

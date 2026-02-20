@@ -2,10 +2,30 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 const path = require("path");
-const votesData = require("../models/hype_votes.json");
-
-// Define path to hype_votes.json for writing updates
 const votesFilePath = path.join(__dirname, "../models/hype_votes.json");
+
+// Helper: Read votes from disk
+const readVotes = () => {
+    try {
+        if (!fs.existsSync(votesFilePath)) return [];
+        const data = fs.readFileSync(votesFilePath, "utf8");
+        return JSON.parse(data);
+    } catch (err) {
+        console.error("Error reading votes:", err);
+        return [];
+    }
+};
+
+// Helper: Save votes to disk
+const saveVotes = (votes) => {
+    try {
+        fs.writeFileSync(votesFilePath, JSON.stringify(votes, null, 2), "utf8");
+        return true;
+    } catch (err) {
+        console.error("Failed to write votes file:", err);
+        return false;
+    }
+};
 
 const COLLEGES = [
     { id: "iit-bombay", name: "Indian Institute of Technology Bombay" },
@@ -24,15 +44,21 @@ const userChoicesFilePath = path.join(__dirname, "../models/user_choices.json");
 const filterVotes = (votes, timeframe) => {
     const now = new Date();
     return votes.filter(v => {
+        const isSystem = ["System", "system-seed"].includes(v.userId) || v.userName === "System";
+
+        // If timeframe is 'all', we allow seeds to populate the leaderboard
+        if (timeframe === "all") return true;
+
         const voteTime = new Date(v.timestamp);
-        if (timeframe === "daily") return voteTime.toDateString() === now.toDateString();
+        if (timeframe === "daily") return voteTime.toDateString() === now.toDateString() && !isSystem;
         if (timeframe === "weekly") {
             const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-            return voteTime >= oneWeekAgo;
+            return voteTime >= oneWeekAgo && !isSystem;
         }
-        if (timeframe === "monthly") return voteTime.getMonth() === now.getMonth() && voteTime.getFullYear() === now.getFullYear();
-        if (timeframe === "yearly") return voteTime.getFullYear() === now.getFullYear();
-        return !(["System", "system-seed"].includes(v.userId) || v.userName === "System");
+        if (timeframe === "monthly") return voteTime.getMonth() === now.getMonth() && voteTime.getFullYear() === now.getFullYear() && !isSystem;
+        if (timeframe === "yearly") return voteTime.getFullYear() === now.getFullYear() && !isSystem;
+
+        return !isSystem;
     });
 };
 
@@ -77,7 +103,8 @@ const getRoadmapStats = () => {
 router.get("/stats", (req, res) => {
     try {
         const timeframe = req.query.timeframe || "all";
-        const filtered = filterVotes(votesData, timeframe);
+        const votes = readVotes();
+        const filtered = filterVotes(votes, timeframe);
 
         // Aggregate counts
         const stats = {};
@@ -91,8 +118,8 @@ router.get("/stats", (req, res) => {
         // Convert to array and sort
         const leaderboard = Object.values(stats).sort((a, b) => b.votes - a.votes);
 
-        // Get recent votes for ticker (globally recent, not just filtered)
-        const recentVotes = [...votesData]
+        // Get recent votes for ticker (ALWAYS exclude system-seed)
+        const recentVotes = [...votes]
             .filter(v => v.userId !== "system-seed" && v.userName !== "System")
             .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
             .slice(0, 10);
@@ -115,13 +142,10 @@ router.get("/stats", (req, res) => {
 // @access  Protected
 router.post("/vote", (req, res) => {
     try {
-        // In real app, get userId from req.user
-        // Allow 'uid' or 'userId' for compatibility
         const { collegeId, collegeName, userId, uid, userName } = req.body;
         const finalUserId = userId || uid;
 
         if (!collegeId || !finalUserId) {
-            console.warn("Vote rejected: Missing collegeId or userId", req.body);
             return res.status(400).json({ error: "Invalid Data: Missing collegeId or userId" });
         }
 
@@ -133,31 +157,18 @@ router.post("/vote", (req, res) => {
             timestamp: new Date().toISOString()
         };
 
-        // Ensure votesData is an array (handle empty JSON case)
-        if (!Array.isArray(votesData)) {
-            // If it was require'd as {} or undefined, reset it
-            // Note: mutating exports is risky but matches current pattern
-            votesData.length = 0;
-            Object.setPrototypeOf(votesData, Array.prototype);
-        }
+        const votes = readVotes();
+        votes.push(newVote);
 
-        // Add to in-memory array
-        votesData.push(newVote);
-
-        // Persist to file
-        fs.writeFile(votesFilePath, JSON.stringify(votesData, null, 2), (err) => {
-            if (err) {
-                console.error("Failed to write votes file:", err);
-                // Don't fail the request if just persistence fails (in-memory works)
-                // But generally 500 is appropriate. For now, log and return success to not block user
-                // return res.status(500).json({ error: "Failed to save vote" });
-            }
+        if (saveVotes(votes)) {
             console.log(`Vote saved for ${collegeName} by ${userName}`);
             res.json({ success: true, vote: newVote });
-        });
+        } else {
+            res.status(500).json({ error: "Failed to persist vote" });
+        }
 
     } catch (err) {
-        console.error("Vote CRASH:", err);
+        console.error("Vote Error:", err);
         res.status(500).json({ error: "Server Error" });
     }
 });

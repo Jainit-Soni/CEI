@@ -23,40 +23,50 @@ export function FavoritesProvider({ children }) {
 
         const load = async () => {
             if (user) {
-                // User logged in: Sync local -> Subscribe Firestore
-                await syncLocalFavorites(user.uid);
+                try {
+                    // User logged in: Sync local -> Subscribe Firestore
+                    await syncLocalFavorites(user.uid);
 
-                if (!isMounted) return;
+                    if (!isMounted) return;
 
-                const unsub = await subscribeToFavorites(user.uid, (data) => {
-                    if (isMounted) {
-                        setFavorites(data);
-                        setLoading(false);
+                    const unsub = await subscribeToFavorites(user.uid, (data) => {
+                        if (isMounted) {
+                            setFavorites(data);
+                            setLoading(false);
+                        }
+                    });
+
+                    // Check if unmounted while waiting for subscribe
+                    if (!isMounted) {
+                        if (unsub) unsub();
+                    } else {
+                        cleanupFn = unsub;
                     }
-                });
-
-                // Check if unmounted while waiting for subscribe
-                if (!isMounted) {
-                    unsub();
-                } else {
-                    cleanupFn = unsub;
+                } catch (err) {
+                    console.error("[Favorites] Firestore sync failed:", err);
+                    if (isMounted) {
+                        // Fallback to local even if user is logged in, to stop hanging
+                        loadLocal();
+                    }
                 }
             } else {
                 // Guest: Load localStorage
-                const loadLocal = () => {
-                    if (!isMounted) return;
-                    try {
-                        const stored = localStorage.getItem(STORAGE_KEY);
-                        if (stored) setFavorites(JSON.parse(stored));
-                        else setFavorites({ colleges: [], exams: [] });
-                    } catch (err) {
-                        console.error("Failed to load local favorites:", err);
-                    }
-                    setLoading(false);
-                };
-
                 loadLocal();
+            }
+        };
 
+        const loadLocal = () => {
+            if (!isMounted) return;
+            try {
+                const stored = localStorage.getItem(STORAGE_KEY);
+                if (stored) setFavorites(JSON.parse(stored));
+                else setFavorites({ colleges: [], exams: [] });
+            } catch (err) {
+                console.error("Failed to load local favorites:", err);
+            }
+            setLoading(false);
+
+            if (!user) {
                 const handleStorageChange = (e) => {
                     if (e.key === STORAGE_KEY) {
                         loadLocal();
