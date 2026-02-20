@@ -271,33 +271,44 @@ export default function ApplicationBoard() {
                         exit={{ height: 0, opacity: 0, marginBottom: 0 }}
                         className="overflow-hidden"
                     >
-                        <GlassPanel variant="subtle" className="!p-10 !rounded-[2.5rem] border-indigo-100/50 bg-gradient-to-r from-indigo-50/40 via-white/40 to-indigo-50/40 backdrop-blur-xl shadow-2xl shadow-indigo-100/20">
-                            <div className="flex flex-col xl:flex-row items-center justify-between gap-12">
-                                <div className="flex items-center gap-6">
-                                    <div className="w-16 h-16 rounded-[1.5rem] bg-indigo-600 flex items-center justify-center text-white shadow-xl shadow-indigo-200">
-                                        <Sparkles size={32} />
+                        <GlassPanel variant="subtle" className="!p-6 md:!p-8 !rounded-3xl border-indigo-100/50 bg-gradient-to-r from-indigo-50/40 via-white/40 to-indigo-50/40 backdrop-blur-xl shadow-2xl shadow-indigo-100/20 relative">
+                            {/* Absolute Discard Button for Cleaner Layout */}
+                            <button
+                                onClick={() => setShareUrl("")}
+                                className="absolute top-4 right-4 md:top-6 md:right-6 p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-all duration-300"
+                                title="Discard Link"
+                            >
+                                <Trash2 size={20} />
+                            </button>
+
+                            <div className="flex flex-col gap-6 md:gap-8 pr-8 md:pr-12">
+                                {/* Header Section */}
+                                <div className="flex items-start md:items-center gap-4 md:gap-6">
+                                    <div className="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-2xl md:rounded-[1.5rem] bg-indigo-600 flex items-center justify-center text-white shadow-xl shadow-indigo-200">
+                                        <Sparkles className="w-6 h-6 md:w-8 md:h-8" />
                                     </div>
                                     <div className="space-y-1">
-                                        <h4 className="text-xl font-black text-slate-800 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>Share Access Generated</h4>
-                                        <p className="text-sm text-slate-500 font-medium">Anyone with this link can view your strategic roadmap in read-only mode.</p>
+                                        <h4 className="text-lg md:text-xl font-black text-slate-800 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>Share Access Generated</h4>
+                                        <p className="text-xs md:text-sm text-slate-500 font-medium leading-snug max-w-sm">Anyone with this link can view your strategic roadmap in read-only mode.</p>
                                     </div>
                                 </div>
 
-                                <div className="flex-1 w-full max-w-xl">
-                                    <div className="share-link-box-modern flex items-center p-2 rounded-2xl bg-white/80 border-2 border-slate-100 focus-within:border-indigo-400 focus-within:ring-[6px] focus-within:ring-indigo-100 transition-all duration-500">
-                                        <div className="flex-1 px-4 overflow-hidden border-r border-slate-100">
+                                {/* Link Generation Box */}
+                                <div className="w-full">
+                                    <div className="share-link-box-modern flex flex-col sm:flex-row items-stretch sm:items-center p-2 rounded-2xl bg-white/80 border-2 border-slate-100 focus-within:border-indigo-400 focus-within:ring-[6px] focus-within:ring-indigo-100 transition-all duration-500 gap-2">
+                                        <div className="flex-1 px-4 py-2 sm:py-0 overflow-hidden">
                                             <motion.div
                                                 initial={{ width: 0 }}
                                                 animate={{ width: '100%' }}
-                                                transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-                                                className="truncate text-base font-bold text-slate-600 tracking-tight"
+                                                transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                                                className="truncate text-sm md:text-base font-bold text-slate-600 tracking-tight"
                                             >
                                                 {shareUrl}
                                             </motion.div>
                                         </div>
                                         <button
                                             onClick={copyToClipboard}
-                                            className={`flex items-center gap-3 px-8 py-3.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all active:scale-90
+                                            className={`flex justify-center items-center gap-2 px-6 py-3 md:px-8 md:py-3.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all active:scale-95 w-full sm:w-auto
                                                 ${copySuccess
                                                     ? 'bg-green-500 text-white shadow-xl shadow-green-200'
                                                     : 'bg-slate-900 text-white hover:bg-black shadow-xl shadow-slate-200'
@@ -309,13 +320,6 @@ export default function ApplicationBoard() {
                                         </button>
                                     </div>
                                 </div>
-
-                                <button
-                                    onClick={() => setShareUrl("")}
-                                    className="p-3 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-all duration-300 transform hover:rotate-90"
-                                >
-                                    <Trash2 size={24} className="rotate-45" />
-                                </button>
                             </div>
                         </GlassPanel>
                     </motion.div>
