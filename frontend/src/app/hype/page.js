@@ -8,7 +8,7 @@ import Card from '@/components/Card';
 import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
 import { useToast } from "@/components/Toast";
-import { Share2, TrendingUp, Trophy, ArrowRight, Activity, Users, MapPin, Zap, ChevronRight, Loader2, Sparkles, Heart } from "lucide-react";
+import { Share2, TrendingUp, Trophy, ArrowRight, Activity, Users, MapPin, Zap, ChevronRight, Loader2, Sparkles, Heart, Search, Flame, ArrowUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
 import "@/app/colleges/page.css";
