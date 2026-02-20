@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
 import Container from '@/components/Container';
-import GlassPanel from '@/components/GlassPanel';
 import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
 import { useToast } from "@/components/Toast";
-import { Share2, Zap, ArrowRight, Activity, Users, MapPin, Loader2, Sparkles, Heart, Search, Flame, Plus, ShieldCheck, Trophy, Crown, ArrowUpRight } from "lucide-react";
+import { Zap, MapPin, Loader2, Search, Trophy, Medal, Plus, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
 import "@/app/colleges/page.css";
@@ -36,7 +34,7 @@ function AnimatedCounter({ value }) {
         if (start === end) return;
 
         const range = end - start;
-        const duration = 500;
+        const duration = 600;
         const startTime = Date.now();
 
         const animate = () => {
@@ -55,109 +53,77 @@ function AnimatedCounter({ value }) {
 }
 
 // -----------------------------------------------------------------------------
-// PREMIUM LIGHT GLASS PODIUM
+// SIMPLE, PREMIUM TOP 3 CARDS
 // -----------------------------------------------------------------------------
-const PodiumCard = ({ college, rank, onVote, isVoting, totalVotes }) => {
-    const isGold = rank === 1;
-    const isSilver = rank === 2;
-    const isBronze = rank === 3;
+const TopCard = ({ college, rank, onVote, isVoting }) => {
+    let rankClass = "rank-gold";
+    let icon = <Trophy className="text-amber-500 w-8 h-8" />;
 
-    // Calculate Domination %
-    const hypePercent = totalVotes > 0 ? Math.min((college.votes / totalVotes) * 400, 100) : 0;
-
-    let podiumClass = "podium-1";
-    let icon = <Crown className="text-amber-500 w-8 h-8 drop-shadow-md" />;
-    let tagColor = "bg-amber-100 text-amber-800 border-amber-200";
-    let progressColor = "from-amber-400 to-orange-500";
-
-    if (isSilver) {
-        podiumClass = "podium-2";
-        icon = <Trophy className="text-slate-400 w-7 h-7" />;
-        tagColor = "bg-slate-100 text-slate-700 border-slate-200";
-        progressColor = "from-slate-300 to-slate-400";
-    } else if (isBronze) {
-        podiumClass = "podium-3";
-        icon = <Trophy className="text-orange-400 w-7 h-7" />;
-        tagColor = "bg-orange-50 text-orange-800 border-orange-200";
-        progressColor = "from-orange-300 to-orange-400";
+    if (rank === 2) {
+        rankClass = "rank-silver";
+        icon = <Medal className="text-slate-400 w-8 h-8" />;
+    } else if (rank === 3) {
+        rankClass = "rank-bronze";
+        icon = <Medal className="text-orange-500 w-8 h-8" />;
     }
 
     if (!college) return (
-        <div className="glass-podium flex flex-col items-center justify-center min-h-[400px] border-dashed border-slate-300">
-            <p className="text-slate-400 font-medium text-sm tracking-widest uppercase">Position Vacant</p>
+        <div className="top-card border-dashed border-slate-300 min-h-[350px] items-center justify-center opacity-50">
+            <p className="text-slate-400 font-medium text-sm tracking-widest uppercase">Rank {rank} Empty</p>
         </div>
     );
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: rank * 0.1 }}
-            className={`glass-podium ${podiumClass} flex flex-col min-h-[450px] justify-between group`}
+            transition={{ delay: rank * 0.1, duration: 0.6 }}
+            className={`top-card ${rankClass} min-h-[350px] group`}
         >
-            <div>
-                {/* Header */}
-                <div className="flex justify-between items-start mb-6">
-                    <div className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase border ${tagColor} flex items-center gap-1.5`}>
-                        Rank 0{rank}
-                    </div>
-                    <div className="bg-white/50 p-2 rounded-full shadow-sm backdrop-blur-md">
-                        {icon}
-                    </div>
+            <div className="flex justify-between items-start mb-6">
+                {icon}
+                <div className="text-[10px] font-black tracking-widest text-slate-400 uppercase">
+                    Rank 0{rank}
                 </div>
+            </div>
 
-                <div className="mb-2 flex items-center gap-1 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+            <div className="flex-1 mt-4">
+                <div className="flex items-center gap-1.5 text-xs font-semibold text-indigo-500 mb-2 uppercase tracking-wide">
                     <MapPin size={12} /> {college.location || "India"}
                 </div>
-
-                <h3 className="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-8 tracking-tight display-font group-hover:text-indigo-900 transition-colors">
+                <h3 className="text-2xl font-black text-slate-800 leading-tight mb-8 group-hover:text-indigo-900 transition-colors line-clamp-3">
                     {college.name}
                 </h3>
             </div>
 
-            <div>
-                {/* Hype Meter */}
-                <div className="mb-8 p-4 bg-white/40 rounded-xl border border-white/50 shadow-inner">
-                    <div className="flex justify-between items-end mb-2">
-                        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Domination</span>
-                        <span className="text-lg font-black text-slate-800 tabular-nums">
-                            {Math.round(hypePercent)}%
-                        </span>
-                    </div>
-                    <div className="hype-progress-bg">
-                        <motion.div
-                            className={`hype-progress-fill bg-gradient-to-r ${progressColor}`}
-                            initial={{ width: 0 }}
-                            animate={{ width: `${hypePercent}%` }}
-                        />
-                    </div>
-                </div>
-
-                {/* Score */}
-                <div className="flex items-baseline gap-2 mb-6">
-                    <span className="text-5xl font-black tracking-tighter text-slate-900 drop-shadow-sm tabular-nums">
+            <div className="flex items-end justify-between mt-auto border-t border-slate-200/50 pt-6">
+                <div>
+                    <div className="text-4xl font-black tracking-tighter text-slate-900 drop-shadow-sm">
                         <AnimatedCounter value={college.votes} />
-                    </span>
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">Hype</span>
+                    </div>
+                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Total Hype</div>
                 </div>
-
-                <motion.button
-                    whileTap={{ scale: 0.96 }}
+                <button
                     onClick={(e) => onVote(e, college)}
                     disabled={isVoting}
-                    className="w-full py-4 rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 text-white font-bold text-sm tracking-widest uppercase hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 relative overflow-hidden group/btn"
+                    className={`vote-btn flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm tracking-wide transition-all shadow-sm
+                        ${isVoting ? 'voting bg-slate-100 text-slate-400' : 'bg-indigo-600 text-white hover:bg-indigo-700 hover:shadow-lg hover:-translate-y-0.5'}`}
                 >
-                    <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
-                    {isVoting ? <Loader2 className="animate-spin" /> : <Zap size={18} className="text-amber-400 fill-amber-400 group-hover/btn:scale-110 transition-transform" />}
-                    <span>{isVoting ? "Verifying..." : "Push Hype"}</span>
-                </motion.button>
+                    {isVoting ? <Loader2 size={16} className="animate-spin" /> : <Zap size={16} className="fill-current" />}
+                    <span>Push</span>
+                </button>
+            </div>
+
+            {/* Very faint background number */}
+            <div className="absolute -right-8 -bottom-8 text-[12rem] font-black text-slate-900/[0.02] pointer-events-none select-none z-0">
+                {rank}
             </div>
         </motion.div>
     );
 };
 
 // -----------------------------------------------------------------------------
-// PREMIUM COMPACT ROW
+// SIMPLE ROW (Ranks 4+)
 // -----------------------------------------------------------------------------
 function RankRow({ college, index, onVote, isVoting, nextCollegeVotes }) {
     const gap = nextCollegeVotes ? nextCollegeVotes - college.votes : 0;
@@ -174,39 +140,47 @@ function RankRow({ college, index, onVote, isVoting, nextCollegeVotes }) {
 
     return (
         <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className={`glass-clash-row group ${isFlashing ? 'flash-live' : ''}`}
+            transition={{ duration: 0.4 }}
+            className={`rank-row px-6 py-4 mb-3 group ${isFlashing ? 'flash-update' : ''}`}
         >
-            <div className="w-12 h-12 rounded-full bg-white/60 border border-slate-200 flex items-center justify-center font-black text-slate-500 group-hover:text-indigo-600 transition-colors text-lg shadow-sm shrink-0">
-                #{index + 4}
+            <div className="flex items-center gap-6 flex-1 min-w-0">
+                <div className="w-12 h-12 rounded-full bg-white/60 flex items-center justify-center font-black text-slate-400 group-hover:text-indigo-600 group-hover:bg-indigo-50 transition-colors text-lg shrink-0">
+                    #{index + 4}
+                </div>
+
+                <div className="flex-1 min-w-0 pr-4">
+                    <div className="font-bold text-lg text-slate-800 group-hover:text-indigo-900 transition-colors truncate">
+                        {college.name}
+                    </div>
+                </div>
             </div>
 
-            <div className="flex-1 min-w-0 pr-2">
-                <div className="font-bold text-slate-800 group-hover:text-indigo-900 transition-colors truncate text-sm">
-                    {college.name}
-                </div>
-                <div className="flex items-center gap-2 mt-1">
-                    <span className="text-xs font-black text-indigo-600 tracking-wide bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-100">
-                        <AnimatedCounter value={college.votes} /> <span className="text-[9px] uppercase">Hype</span>
-                    </span>
-                    {gap > 0 && (
-                        <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-tight flex items-center gap-1">
-                            <ArrowUpRight size={10} /> {gap} to climb
-                        </span>
+            <div className="flex items-center gap-8 shrink-0">
+                <div className="text-right">
+                    <div className="text-xl font-black text-slate-900 tabular-nums">
+                        <AnimatedCounter value={college.votes} />
+                    </div>
+                    {gap > 0 ? (
+                        <div className="text-[10px] font-bold text-slate-400 uppercase flex items-center justify-end gap-1">
+                            <ArrowUpRight size={10} /> {gap} to ascend
+                        </div>
+                    ) : (
+                        <div className="text-[10px] font-bold text-indigo-400 uppercase">Hype</div>
                     )}
                 </div>
-            </div>
 
-            <motion.button
-                whileTap={{ scale: 0.9 }}
-                onClick={(e) => onVote(e, college)}
-                disabled={isVoting}
-                className="w-10 h-10 shrink-0 flex items-center justify-center rounded-full bg-white text-slate-700 border border-slate-200 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all shadow-sm group-hover:shadow-md"
-            >
-                <Plus size={18} />
-            </motion.button>
+                <button
+                    onClick={(e) => onVote(e, college)}
+                    disabled={isVoting}
+                    className={`vote-btn flex items-center justify-center w-12 h-12 rounded-full transition-all shadow-sm
+                        ${isVoting ? 'voting bg-slate-100 text-slate-400 border border-slate-200' : 'bg-white border-2 border-slate-200 text-slate-700 hover:bg-indigo-600 hover:border-indigo-600 hover:text-white hover:shadow-md'}`}
+                >
+                    {isVoting ? <Loader2 size={18} className="animate-spin" /> : <Plus size={20} />}
+                </button>
+            </div>
         </motion.div>
     );
 }
@@ -222,18 +196,12 @@ export default function HypePage() {
     const [debouncedSearchQuery, setDebouncedSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [isVoting, setIsVoting] = useState(false);
-    const [lastVoteCoords, setLastVoteCoords] = useState(null);
-
-    const triggerBurst = (e) => {
-        setLastVoteCoords({ x: e.clientX, y: e.clientY });
-        setTimeout(() => setLastVoteCoords(null), 1000);
-    };
 
     useEffect(() => {
         fetchHypeStats().then(setStats).catch(console.error);
         const interval = setInterval(() => {
             fetchHypeStats().then(setStats).catch(console.error);
-        }, 10000);
+        }, 8000); // slightly faster refresh
         return () => clearInterval(interval);
     }, []);
 
@@ -250,7 +218,7 @@ export default function HypePage() {
             }
             try {
                 const data = await searchAll({ q: debouncedSearchQuery });
-                setSearchResults((data.colleges || []).slice(0, 6)); // Elegant limit
+                setSearchResults((data.colleges || []).slice(0, 5));
             } catch (err) {
                 console.error("Search failed:", err);
             }
@@ -276,15 +244,14 @@ export default function HypePage() {
         const collegeId = college.id || college._id;
 
         if (hasUserVoted(collegeId)) {
-            addToast("You've already pushed hype for this campus!", "error");
+            addToast("You've already verified your support for this campus.", "error");
             return;
         }
 
         if (isVoting) return;
         setIsVoting(true);
-        triggerBurst(e);
 
-        const userName = user.displayName || user.email.split('@')[0] || "User";
+        const userName = user.displayName || user.email.split('@')[0] || "Student";
         const payload = { collegeId, collegeName: college.name || "Unknown", uid: user.uid, userId: user.uid, userName };
 
         // Optimistic UI Update
@@ -297,6 +264,8 @@ export default function HypePage() {
                 newLeaderboard.push({ id: collegeId, name: college.name, votes: 1, location: college.location });
             }
             newLeaderboard.sort((a, b) => b.votes - a.votes);
+
+            // Generate a random animation key to force row flash
             return {
                 ...prev,
                 leaderboard: newLeaderboard,
@@ -312,7 +281,6 @@ export default function HypePage() {
 
         try {
             await postHypeVote(payload);
-            addToast(`Successfully hyped ${college.name}!`, "success");
             setSearchQuery("");
             setSearchResults([]);
         } catch (err) {
@@ -329,179 +297,136 @@ export default function HypePage() {
 
     const top3 = stats.leaderboard.slice(0, 3);
     const rest = stats.leaderboard.slice(3, 50);
-    const totalVotes = stats.leaderboard.reduce((acc, curr) => acc + (curr.votes || 0), 0);
-    const activeColleges = stats.leaderboard.length;
 
-    // Dupe for marquee
+    // Dupe for marquee to ensure it never empties
     const recentVotesDisplay = stats.recentVotes.length > 0
         ? [...stats.recentVotes, ...stats.recentVotes, ...stats.recentVotes, ...stats.recentVotes, ...stats.recentVotes, ...stats.recentVotes]
         : [];
 
     return (
-        <div className="min-h-screen relative overflow-hidden font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900 bg-[#F4F7FA]">
-            {/* PREMIUM GLOBAL BACKGROUND - LIGHT GLASS */}
+        <div className="min-h-screen relative overflow-hidden font-sans text-slate-900 bg-[#F4F7FA]">
+            {/* CLEAN BACKGROUND */}
             <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-                <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-indigo-200/40 rounded-full filter blur-[120px] mix-blend-multiply opacity-70 animate-blob"></div>
-                <div className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] bg-amber-200/40 rounded-full filter blur-[120px] mix-blend-multiply opacity-60 animate-blob animation-delay-2000"></div>
-                <div className="absolute bottom-[-10%] left-[10%] w-[70vw] h-[70vw] bg-emerald-200/30 rounded-full filter blur-[120px] mix-blend-multiply opacity-50 animate-blob animation-delay-4000"></div>
-                <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
+                <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-indigo-100/50 rounded-full filter blur-[100px] opacity-60"></div>
+                <div className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] bg-amber-100/50 rounded-full filter blur-[100px] opacity-50"></div>
+                <div className="absolute bottom-[-10%] left-[10%] w-[70vw] h-[70vw] bg-sky-100/40 rounded-full filter blur-[100px] opacity-50"></div>
             </div>
 
             <div className="relative z-10 pb-32">
-                {/* 1. ELEGANT HERO */}
-                <section className="pt-32 pb-16 flex flex-col items-center text-center px-4">
+
+                {/* 1. HERO & TIMELINE */}
+                <section className="pt-32 pb-8 flex flex-col items-center text-center px-4">
                     <RevealOnScroll>
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-indigo-100 text-indigo-700 shadow-sm backdrop-blur-md mb-8">
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                            </span>
-                            <span className="text-[10px] font-bold tracking-widest uppercase">Live Leaderboard Active</span>
-                        </div>
-
-                        <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black mb-4 tracking-tighter text-slate-900 display-font drop-shadow-sm">
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900">FAN WARS</span>
+                        <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-black mb-6 tracking-tighter text-slate-900 display-font">
+                            Fan Wars.
                         </h1>
-                        <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed mb-6">
-                            The ultimate battleground for institutional supremacy. Watch the live hype feed and escalate your campus to the top of the Indian leaderboard.
+                        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
+                            The ultimate battleground for institutional supremacy. Elevate your campus to the top of the leaderboard.
                         </p>
-
-                        <div className="flex gap-8 justify-center items-center">
-                            <div className="flex flex-col items-center">
-                                <span className="text-3xl font-black text-indigo-600"><AnimatedCounter value={totalVotes} /></span>
-                                <span className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1">Total Payload</span>
-                            </div>
-                            <div className="w-px h-10 bg-slate-300"></div>
-                            <div className="flex flex-col items-center">
-                                <span className="text-3xl font-black text-slate-800">{activeColleges}</span>
-                                <span className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1">Institutions</span>
-                            </div>
-                        </div>
                     </RevealOnScroll>
                 </section>
 
-                {/* 2. PREMIUM LIGHT MARQUEE */}
+                {/* CONSTANTLY MOVING HORIZONTAL TIMELINE */}
                 {recentVotesDisplay.length > 0 && (
-                    <div className="w-full overflow-hidden bg-white/40 backdrop-blur-md py-3 border-y border-white/60 mb-16 relative z-20 shadow-sm">
-                        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#F4F7FA] to-transparent z-10 pointer-events-none"></div>
-                        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#F4F7FA] to-transparent z-10 pointer-events-none"></div>
+                    <div className="w-full overflow-hidden mb-16 relative z-20">
+                        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#F4F7FA] to-transparent z-10 pointer-events-none"></div>
+                        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#F4F7FA] to-transparent z-10 pointer-events-none"></div>
 
-                        <div className="fast-marquee-container flex items-center gap-12 whitespace-nowrap px-4">
+                        <div className="timeline-container">
                             {recentVotesDisplay.map((vote, i) => (
-                                <div key={i} className="flex items-center gap-3 text-sm">
-                                    <div className="px-2 py-0.5 rounded-full bg-amber-100 border border-amber-200 flex items-center gap-1.5">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></div>
-                                        <span className="uppercase tracking-widest text-[9px] font-bold text-amber-700">Live</span>
-                                    </div>
-                                    <span className="text-slate-800 font-semibold">{vote.userName}</span>
-                                    <span className="text-slate-400 font-mono text-[10px] uppercase">hyped</span>
-                                    <span className="text-indigo-600 font-black tracking-tight">{vote.collegeName}</span>
+                                <div key={i} className="timeline-item">
+                                    <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></div>
+                                    <span className="text-slate-800 font-bold text-sm">{vote.userName}</span>
+                                    <span className="text-slate-400 text-xs">voted for</span>
+                                    <span className="text-indigo-600 font-black text-sm">{vote.collegeName}</span>
                                 </div>
                             ))}
                         </div>
                     </div>
                 )}
 
-                <Container className="max-w-7xl">
-                    {/* 3. PROMINENT GLASS SEARCH */}
-                    <div className="mb-20 max-w-3xl mx-auto relative z-30">
-                        <div className="relative group">
-                            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-300 to-amber-300 opacity-20 group-focus-within:opacity-40 transition-opacity blur-lg rounded-3xl"></div>
-                            <div className="relative bg-white/70 backdrop-blur-xl border border-white p-4 md:p-6 rounded-3xl flex items-center gap-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)] ring-1 ring-slate-900/5 focus-within:ring-indigo-500/50 transition-all">
-                                <Search size={28} className="text-indigo-400 shrink-0 ml-2" />
-                                <input
-                                    type="text"
-                                    className="w-full bg-transparent border-none focus:ring-0 text-xl md:text-2xl font-bold placeholder-slate-400 text-slate-800 tracking-tight"
-                                    placeholder="Search your campus to inject hype..."
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                />
-                                {isVoting && <Loader2 className="animate-spin text-slate-400 mr-2" />}
-                            </div>
+                <Container className="max-w-6xl">
 
+                    {/* 2. PREMIUM SEARCH (COLLEGE PAGE STYLE) */}
+                    <div className="mb-20 max-w-2xl mx-auto relative z-30">
+                        <div className="search-pill rounded-full p-2 flex items-center relative">
+                            <div className="pl-6 text-slate-400">
+                                <Search size={22} />
+                            </div>
+                            <input
+                                type="text"
+                                className="w-full bg-transparent border-none focus:ring-0 text-lg md:text-xl font-semibold placeholder-slate-400 text-slate-800 px-4 py-3"
+                                placeholder="Search for a college to boost..."
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                            />
+                            {isVoting && <Loader2 className="animate-spin text-indigo-500 mr-6" />}
+                        </div>
+
+                        <AnimatePresence>
                             {searchQuery && (
-                                <div className="absolute top-full left-0 right-0 mt-4 glass-search-results rounded-2xl overflow-hidden max-h-[400px] overflow-y-auto">
-                                    {searchResults.map(college => (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 10 }}
+                                    className="absolute top-full left-0 right-0 mt-4 bg-white/90 backdrop-blur-xl border border-slate-200 shadow-2xl z-50 rounded-2xl overflow-hidden max-h-[400px] overflow-y-auto"
+                                >
+                                    {searchResults.map((college, i) => (
                                         <div
                                             key={college.id}
                                             onClick={(e) => handleVote(e, college)}
-                                            className="p-5 glass-search-item cursor-pointer flex justify-between items-center group/search"
+                                            className={`p-4 cursor-pointer flex justify-between items-center hover:bg-slate-50 transition-colors group ${i !== searchResults.length - 1 ? 'border-b border-slate-100' : ''}`}
                                         >
-                                            <div>
-                                                <div className="font-bold text-lg text-slate-800 group-hover/search:text-indigo-600 transition-colors">{college.name}</div>
-                                                <div className="text-xs font-medium text-slate-500 mt-1 flex items-center gap-1.5">
-                                                    <MapPin size={12} /> {college.location}
-                                                </div>
+                                            <div className="min-w-0 pr-4">
+                                                <div className="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors truncate">{college.name}</div>
+                                                <div className="text-xs text-slate-500 mt-1">{college.location}</div>
                                             </div>
-                                            <button className="px-5 py-2.5 bg-slate-900 text-white font-bold text-xs uppercase tracking-widest rounded-lg group-hover/search:bg-indigo-600 transition-colors shadow-sm focus:outline-none flex items-center gap-2">
-                                                <Flame size={14} className="text-amber-400" /> Push
+                                            <button className="vote-btn shrink-0 w-10 h-10 flex items-center justify-center bg-slate-100 text-slate-600 rounded-full group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                                                <Plus size={18} />
                                             </button>
                                         </div>
                                     ))}
                                     {searchResults.length === 0 && (
-                                        <div className="p-8 text-center text-sm font-medium text-slate-500">
-                                            No campuses found matching your query.
+                                        <div className="p-8 text-center text-slate-500 font-medium">
+                                            No colleges found matching "{searchQuery}"
                                         </div>
                                     )}
-                                </div>
+                                </motion.div>
                             )}
-                        </div>
+                        </AnimatePresence>
                     </div>
 
-                    {/* 4. THE PODIUMS */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 items-end">
-                        <div className="md:order-1 transform md:translate-y-8">
-                            {top3[1] && <PodiumCard college={top3[1]} rank={2} onVote={handleVote} isVoting={isVoting} totalVotes={totalVotes} />}
-                        </div>
-                        <div className="md:order-2 z-10">
-                            {top3[0] && <PodiumCard college={top3[0]} rank={1} onVote={handleVote} isVoting={isVoting} totalVotes={totalVotes} />}
-                        </div>
-                        <div className="md:order-3 transform md:translate-y-16">
-                            {top3[2] && <PodiumCard college={top3[2]} rank={3} onVote={handleVote} isVoting={isVoting} totalVotes={totalVotes} />}
-                        </div>
+                    {/* 3. SIMPLE TOP 3 CARDS */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+                        {top3[0] && <TopCard college={top3[0]} rank={1} onVote={handleVote} isVoting={isVoting} />}
+                        {top3[1] && <TopCard college={top3[1]} rank={2} onVote={handleVote} isVoting={isVoting} />}
+                        {top3[2] && <TopCard college={top3[2]} rank={3} onVote={handleVote} isVoting={isVoting} />}
                     </div>
 
-                    {/* 5. CURRENT CLASHES GRID */}
-                    <div className="mt-16">
-                        <div className="flex items-center gap-4 mb-8">
-                            <h2 className="text-3xl font-black tracking-tight text-slate-900 display-font">The Rankings</h2>
-                            <div className="h-px bg-slate-200 flex-1 ml-4 mt-2"></div>
-                        </div>
+                    {/* 4. HORIZONTAL ROWS FOR THE REST */}
+                    {rest.length > 0 && (
+                        <div className="max-w-4xl mx-auto">
+                            <div className="flex items-center gap-4 mb-8 pl-2">
+                                <h2 className="text-2xl font-bold tracking-tight text-slate-800">The Contenders</h2>
+                                <div className="h-px bg-slate-200 flex-1 ml-4 mt-1"></div>
+                            </div>
 
-                        <div className="compact-clash-grid">
-                            {rest.map((college, i) => (
-                                <RankRow
-                                    key={college.id}
-                                    college={college}
-                                    index={i}
-                                    onVote={handleVote}
-                                    isVoting={isVoting}
-                                    nextCollegeVotes={i > 0 ? rest[i - 1].votes : stats.leaderboard[2].votes}
-                                />
-                            ))}
+                            <div className="flex flex-col gap-1">
+                                {rest.map((college, i) => (
+                                    <RankRow
+                                        key={college.id}
+                                        college={college}
+                                        index={i}
+                                        onVote={handleVote}
+                                        isVoting={isVoting}
+                                        nextCollegeVotes={i > 0 ? rest[i - 1].votes : stats.leaderboard[2].votes}
+                                    />
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </Container>
             </div>
-
-            {/* VERSION MARKER */}
-            <div className="fixed bottom-2 right-2 text-[10px] text-slate-400 pointer-events-none z-50 font-mono opacity-60">
-                v4.0-premium-glass
-            </div>
-
-            {/* HYPE BURST EFFECT */}
-            <AnimatePresence>
-                {lastVoteCoords && (
-                    <motion.div
-                        initial={{ scale: 0, opacity: 1 }}
-                        animate={{ scale: 2.5, opacity: 0 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="fixed pointer-events-none z-[9999] w-24 h-24 bg-amber-400/30 rounded-full blur-xl border-2 border-amber-300"
-                        style={{ top: lastVoteCoords.y - 48, left: lastVoteCoords.x - 48 }}
-                    />
-                )}
-            </AnimatePresence>
         </div>
     );
 }
