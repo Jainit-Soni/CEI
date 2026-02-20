@@ -89,86 +89,92 @@ function HeroCard({ college, rank, onVote, isVoting, totalVotes, podiumMode }) {
         : rank === 2 ? "bg-gradient-to-r from-slate-300 to-slate-400"
             : "bg-gradient-to-r from-orange-300 to-orange-500";
 
-    const icon = isGold ? <Crown size={22} className="text-amber-500" />
-        : <Medal size={22} className={rank === 2 ? "text-slate-400" : "text-orange-500"} />;
+    const icon = isGold ? <Crown size={24} className="text-amber-500" />
+        : <Medal size={24} className={rank === 2 ? "text-slate-400" : "text-orange-500"} />;
 
     if (!college) return null;
 
-    // Podium heights: #1 is tallest, #2 and #3 are slightly shorter
+    // Podium heights
     const podiumHeight = podiumMode
-        ? isGold ? "min-h-[400px]" : "min-h-[340px] mt-10"
-        : "min-h-[340px]";
+        ? isGold ? "min-h-[420px]" : "min-h-[380px] mt-8"
+        : "min-h-[380px]";
 
     return (
         <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: rank * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className={`rank-hero-card ${cardClass} flex flex-col p-7 ${podiumHeight} w-full`}
+            className={`rank-hero-card ${cardClass} flex flex-col p-8 ${podiumHeight} w-full group relative`}
         >
-            {/* TOP ROW */}
-            <div className="flex items-start justify-between mb-5">
-                <div className={`rank-badge ${badgeClass} text-sm`}>
-                    #{rank}
-                </div>
-                <div className="bg-white/60 rounded-full p-2 shadow-sm backdrop-blur">
-                    {icon}
-                </div>
-            </div>
-
-            {/* LOCATION */}
-            <div className="flex items-center gap-1 text-[11px] font-semibold text-slate-500 uppercase tracking-widest mb-2">
-                <MapPin size={11} className="text-slate-400" />
-                {college.location || "India"}
-            </div>
-
-            {/* NAME */}
-            <h3 className="text-xl font-black text-slate-900 leading-snug mb-auto line-clamp-3 tracking-tight group-hover:text-indigo-900 transition-colors">
-                {college.name}
-            </h3>
-
-            {/* METER */}
-            <div className="mt-6 mb-6">
-                <div className="flex justify-between items-center mb-2 text-[11px] font-bold uppercase tracking-widest">
-                    <span className="text-slate-500">Dominance</span>
-                    <span className="text-slate-800">{Math.round(pct)}%</span>
-                </div>
-                <div className="hype-bar-bg">
-                    <motion.div
-                        className={`hype-bar-fill ${barColor}`}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${pct}%` }}
-                        transition={{ delay: 0.5, duration: 1, ease: [0.4, 0, 0.2, 1] }}
-                    />
-                </div>
-            </div>
-
-            {/* FOOTER */}
-            <div className="flex items-end justify-between border-t border-slate-200/60 pt-5">
-                <div>
-                    <div className="text-4xl font-black tracking-tighter text-slate-900">
-                        <AnimatedCounter value={college.votes} />
-                    </div>
-                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">Hype Points</div>
-                </div>
-
-                <button
-                    onClick={(e) => onVote(e, college)}
-                    disabled={isVoting}
-                    className={`vote-btn px-5 py-3 rounded-2xl font-bold text-sm tracking-wide flex items-center gap-2
-            ${isVoting
-                            ? "bg-slate-100 text-slate-400 cursor-not-allowed"
-                            : "bg-indigo-600 text-white hover:bg-indigo-700 shadow-md shadow-indigo-200"
-                        }`}
-                >
-                    {isVoting ? <Loader2 size={16} className="animate-spin" /> : <Zap size={16} className="fill-current" />}
-                    Push Hype
-                </button>
-            </div>
-
-            {/* GHOST RANK NUMBER */}
-            <div className="pointer-events-none select-none absolute -bottom-4 -right-2 text-[9rem] font-black text-slate-900/[0.03] leading-none z-0">
+            {/* GHOST RANK NUMBER at the back */}
+            <div className="pointer-events-none select-none absolute -bottom-6 -right-6 text-[12rem] font-black text-slate-900/[0.04] leading-none z-0">
                 {rank}
+            </div>
+
+            <div className="relative z-10 flex flex-col h-full flex-1">
+                {/* RANK ROW */}
+                <div className="flex items-center justify-between mb-6">
+                    <div className={`rank-badge ${badgeClass} text-sm shadow-sm`}>
+                        #{rank}
+                    </div>
+                    <div className="bg-white/80 rounded-full p-2.5 shadow-sm backdrop-blur">
+                        {icon}
+                    </div>
+                </div>
+
+                {/* CONTENT */}
+                <div className="mb-8">
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">
+                        <MapPin size={12} className="text-slate-400" />
+                        {college.location || "India"}
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-900 leading-snug tracking-tight group-hover:text-indigo-900 transition-colors">
+                        {college.name}
+                    </h3>
+                </div>
+
+                {/* BOTTOM SECTION */}
+                <div className="mt-auto">
+                    {/* SCORES */}
+                    <div className="flex flex-col items-center text-center mb-8">
+                        <div className="text-5xl font-black tracking-tighter text-slate-900 mb-1">
+                            <AnimatedCounter value={college.votes} />
+                        </div>
+                        <div className="text-xs font-bold text-slate-400 uppercase tracking-widest bg-slate-100/50 px-3 py-1 rounded-full">
+                            Total Hype Points
+                        </div>
+                    </div>
+
+                    {/* DOMINANCE METER */}
+                    <div className="mb-6">
+                        <div className="flex justify-between items-center mb-2 text-xs font-bold uppercase tracking-widest text-slate-500">
+                            <span>Dominance</span>
+                            <span className="text-slate-800">{Math.round(pct)}%</span>
+                        </div>
+                        <div className="hype-bar-bg">
+                            <motion.div
+                                className={`hype-bar-fill ${barColor}`}
+                                initial={{ width: 0 }}
+                                animate={{ width: `${pct}%` }}
+                                transition={{ delay: 0.5, duration: 1, ease: [0.4, 0, 0.2, 1] }}
+                            />
+                        </div>
+                    </div>
+
+                    {/* VOTE BTN */}
+                    <button
+                        onClick={(e) => onVote(e, college)}
+                        disabled={isVoting}
+                        className={`vote-btn w-full py-3.5 rounded-xl font-bold text-base tracking-wide flex justify-center items-center gap-2
+                            ${isVoting
+                                ? "bg-slate-100 text-slate-400 cursor-not-allowed"
+                                : "bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-600/20"
+                            }`}
+                    >
+                        {isVoting ? <Loader2 size={18} className="animate-spin" /> : <Zap size={18} className="fill-current" />}
+                        Push Hype
+                    </button>
+                </div>
             </div>
         </motion.div>
     );
