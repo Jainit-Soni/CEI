@@ -59,11 +59,11 @@ function PodiumCard({ college, rank, onVote, isVoting }) {
     const isSilver = rank === 2;
     const isBronze = rank === 3;
 
-    // Gradient Backgrounds (V27 Polish)
-    let bgGradient = "bg-white/40";
-    if (isGold) bgGradient = "bg-gradient-to-br from-amber-50/80 via-white/60 to-amber-100/40 border-amber-200/60";
-    if (isSilver) bgGradient = "bg-gradient-to-br from-slate-50/80 via-white/60 to-slate-200/40 border-slate-200/60";
-    if (isBronze) bgGradient = "bg-gradient-to-br from-orange-50/80 via-white/60 to-orange-100/40 border-orange-200/60";
+    // Gradient Backgrounds (V31 Premium Solid)
+    let bgGradient = "bg-white";
+    if (isGold) bgGradient = "bg-gradient-to-br from-amber-50 via-white to-amber-50 border-amber-200/80 shadow-[0_20px_70px_-15px_rgba(245,158,11,0.4)]";
+    if (isSilver) bgGradient = "bg-gradient-to-br from-slate-50 via-white to-slate-50 border-slate-200/80 shadow-[0_20px_70px_-15px_rgba(148,163,184,0.3)]";
+    if (isBronze) bgGradient = "bg-gradient-to-br from-orange-50 via-white to-orange-50 border-orange-200/80 shadow-[0_20px_70px_-15px_rgba(253,186,116,0.3)]";
 
     return (
         <div className={`relative group ${isGold ? 'order-2 -mt-10 z-20' : isSilver ? 'order-1 mt-4 z-10' : 'order-3 mt-8 z-0'}`}>
@@ -76,11 +76,11 @@ function PodiumCard({ college, rank, onVote, isVoting }) {
                 }}
             />
 
-            <div className={`relative flex flex-col items-center text-center p-6 rounded-3xl border backdrop-blur-2xl transition-all duration-300 group-hover:-translate-y-2
+            <div className={`relative flex flex-col items-center text-center p-8 rounded-[2.5rem] border backdrop-blur-3xl transition-all duration-500 group-hover:-translate-y-3
                 ${bgGradient}
-                ${isGold ? 'w-[320px] h-[400px] shadow-[0_20px_60px_-15px_rgba(245,158,11,0.3)]' : ''}
-                ${isSilver ? 'w-[280px] h-[360px] shadow-[0_20px_60px_-15px_rgba(148,163,184,0.2)]' : ''}
-                ${isBronze ? 'w-[280px] h-[340px] shadow-[0_20px_60px_-15px_rgba(253,186,116,0.2)]' : ''}
+                ${isGold ? 'w-[340px] h-[440px] shadow-[0_20px_60px_-15px_rgba(245,158,11,0.3)]' : ''}
+                ${isSilver ? 'w-[300px] h-[390px] shadow-[0_20px_60px_-15px_rgba(148,163,184,0.2)]' : ''}
+                ${isBronze ? 'w-[300px] h-[370px] shadow-[0_20px_60px_-15px_rgba(253,186,116,0.2)]' : ''}
             `}>
                 {/* RANK BADGE */}
                 <div className={`absolute -top-6 px-6 py-2 rounded-full text-xs font-bold tracking-widest shadow-lg uppercase
@@ -370,14 +370,17 @@ export default function HypePage() {
 
                             {/* DOPAMINE TICKER (MARQUEE) - Enhanced Infinite Scroll */}
                             {recentVotesDisplay.length > 0 && (
-                                <div className="w-full overflow-hidden bg-slate-900/5 py-3 border-y border-slate-200/50 backdrop-blur-sm">
-                                    <div className="relative flex items-center gap-12 whitespace-nowrap animate-marquee">
+                                <div className="w-full overflow-hidden bg-white/40 py-4 border-y border-slate-200/40 backdrop-blur-xl mt-6">
+                                    <div className="relative flex items-center gap-16 whitespace-nowrap animate-marquee">
                                         {recentVotesDisplay.map((vote, i) => (
-                                            <div key={i} className="flex items-center gap-3 text-sm text-slate-600 font-medium">
-                                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse box-shadow-green"></span>
-                                                <span className="font-bold text-slate-900">{vote.userName}</span>
-                                                <span className="text-slate-400 text-xs uppercase tracking-wide">supported</span>
-                                                <span className="font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">{vote.collegeName}</span>
+                                            <div key={i} className="flex items-center gap-4 text-sm font-semibold">
+                                                <div className="flex items-center gap-2 text-slate-400">
+                                                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.6)]"></div>
+                                                    <span className="uppercase tracking-[0.2em] text-[10px] font-bold">New Pulse</span>
+                                                </div>
+                                                <span className="text-slate-900">{vote.userName}</span>
+                                                <span className="text-slate-400 font-medium lowercase">supported</span>
+                                                <span className="text-indigo-600 bg-indigo-50/50 px-3 py-1 rounded-full border border-indigo-100/50">{vote.collegeName}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -450,7 +453,7 @@ export default function HypePage() {
 
                     {/* 3. THE PODIUM (TOP 3) */}
                     {top3.length > 0 && (
-                        <div className="mb-24 flex flex-col md:flex-row justify-center items-end gap-6 md:gap-8 min-h-[450px]">
+                        <div className="my-20 flex flex-col md:flex-row justify-center items-end gap-6 md:gap-10 min-h-[500px]">
                             {/* SILVER (2) */}
                             {top3[1] && <PodiumCard college={top3[1]} rank={2} onVote={handleVote} isVoting={isVoting} />}
 
