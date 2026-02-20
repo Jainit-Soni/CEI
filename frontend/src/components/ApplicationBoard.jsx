@@ -9,6 +9,7 @@ import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { useAuth } from "@/lib/AuthContext";
 import { fetchUserChoices, saveUserChoices, shareUserChoices } from "@/lib/api";
 import AuthModal from "./AuthModal";
+import GlassPanel from "./GlassPanel";
 import "../app/dashboard/dashboard.css";
 
 export default function ApplicationBoard() {
@@ -330,23 +331,52 @@ export default function ApplicationBoard() {
 
             {/* Premium Share Modal */}
             {shareUrl && (
-                <div className="share-modal-overlay">
-                    <div className="share-modal">
-                        <div className="share-modal-header">
-                            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem' }}>Share Your Roadmap</h3>
-                            <button onClick={() => setShareUrl("")} className="btn-close-share">×</button>
+                <div className="share-modal-overlay animate-in fade-in duration-300">
+                    <GlassPanel variant="strong" className="share-modal-glass !p-0 overflow-hidden !rounded-[2.5rem] shadow-2xl max-w-lg w-full">
+                        <div className="p-8">
+                            <div className="share-modal-header flex items-center justify-between mb-6">
+                                <h3 className="text-2xl font-black tracking-tight text-slate-800" style={{ fontFamily: 'var(--font-display)' }}>
+                                    Share Roadmap
+                                </h3>
+                                <button
+                                    onClick={() => setShareUrl("")}
+                                    className="p-2 rounded-full hover:bg-slate-100 transition-colors text-slate-400 hover:text-slate-600"
+                                >
+                                    <Trash2 size={20} className="rotate-45" />
+                                </button>
+                            </div>
+
+                            <p className="text-slate-500 text-sm leading-relaxed mb-8">
+                                Anyone with this link can view a read-only snapshot of your strategic priorities and admission roadmap.
+                            </p>
+
+                            <div className="share-link-box-modern flex items-center p-2 rounded-2xl bg-slate-50 border border-slate-200 focus-within:border-indigo-500/50 focus-within:ring-4 focus-within:ring-indigo-500/10 transition-all">
+                                <input
+                                    readOnly
+                                    value={shareUrl}
+                                    className="flex-1 bg-transparent border-none focus:ring-0 text-sm font-medium text-slate-600 px-3 truncate"
+                                />
+                                <button
+                                    onClick={copyToClipboard}
+                                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all
+                                        ${copySuccess
+                                            ? 'bg-green-500 text-white shadow-lg shadow-green-500/20'
+                                            : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-600/20'
+                                        }
+                                    `}
+                                >
+                                    {copySuccess ? <Check size={16} /> : <Copy size={16} />}
+                                    <span>{copySuccess ? 'Copied' : 'Copy'}</span>
+                                </button>
+                            </div>
+
+                            {copySuccess && (
+                                <p className="text-center text-xs font-bold text-green-600 mt-4 animate-in slide-in-from-bottom-2">
+                                    Link copied to clipboard!
+                                </p>
+                            )}
                         </div>
-                        <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '20px' }}>
-                            Anyone with this link can view a read-only snapshot of your strategic priorities.
-                        </p>
-                        <div className="share-link-box">
-                            <input readOnly value={shareUrl} className="share-input" />
-                            <button onClick={copyToClipboard} className="btn-copy-share">
-                                {copySuccess ? <Check size={18} color="#059669" /> : <Copy size={18} />}
-                            </button>
-                        </div>
-                        {copySuccess && <p className="copy-notif">Link copied to clipboard!</p>}
-                    </div>
+                    </GlassPanel>
                 </div>
             )}
 
@@ -610,6 +640,24 @@ export default function ApplicationBoard() {
                     border-radius: 999px;
                     font-weight: 600;
                     text-decoration: none;
+                }
+                .share-modal-overlay {
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(248, 250, 252, 0.4);
+                    backdrop-filter: blur(12px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
+                    padding: 20px;
+                }
+                .share-modal-glass {
+                    animation: modal-enter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+                }
+                @keyframes modal-enter {
+                    from { opacity: 0; transform: scale(0.95) translateY(20px); }
+                    to { opacity: 1; transform: scale(1) translateY(0); }
                 }
             `}</style>
         </div>
