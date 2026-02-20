@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -268,10 +268,6 @@ export default function ApplicationBoard() {
                 </div>
                 <div className="board-actions">
                     <button className="btn-clear-list" onClick={clearAll}>Clear All</button>
-                    import {useRef} from "react";
-                    // (Note: useRef is already imported at the top, just need to make sure the popover is attached to the right element)
-
-                    // ... skipping to the render ...
 
                     <button className="btn-download-report" onClick={exportPDF}>
                         <Download size={18} />
