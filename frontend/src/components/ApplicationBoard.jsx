@@ -259,83 +259,116 @@ export default function ApplicationBoard() {
 
     return (
         <div className="application-board">
-            <div className="board-header">
-                <div className="board-info">
-                    <h2>Priority Roadmap</h2>
-                    <p className="subtitle">
-                        Drag to reorder your selections and export your strategic report 📑
-                    </p>
-                </div>
-                <div className="board-actions">
-                    <button className="btn-clear-list" onClick={clearAll}>Clear All</button>
+            <GlassPanel
+                variant="subtle"
+                className="!p-8 !rounded-[2.5rem] border-white/40 bg-gradient-to-br from-white/60 via-indigo-50/20 to-white/40 backdrop-blur-3xl shadow-[0_32px_64px_-24px_rgba(0,0,0,0.06)] mb-12"
+            >
+                <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-10">
+                    {/* 1. BRANDED INFO SECTION */}
+                    <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                            <h2 className="text-3xl font-black text-slate-900 tracking-tighter" style={{ fontFamily: 'var(--font-display)' }}>
+                                Priority Roadmap
+                            </h2>
+                            <div className="px-3 py-1 bg-white/60 border border-slate-200/50 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                                {items.length} {items.length === 1 ? 'College' : 'Colleges'}
+                            </div>
+                        </div>
+                        <p className="text-sm md:text-base text-slate-500 font-medium tracking-tight max-w-xl leading-relaxed">
+                            Drag to reorder your strategic selections. Export your final report or share a read-only view with your mentors.
+                        </p>
+                    </div>
 
-                    <button className="btn-download-report" onClick={exportPDF}>
-                        <Download size={18} />
-                        <span>Export PDF</span>
-                    </button>
-
-                    {/* SHARE BUTTON & POPOVER ANCHOR */}
-                    <div className="relative" ref={shareRef}>
+                    {/* 2. HARMONIZED UTILITY CLUSTER */}
+                    <div className="flex flex-wrap items-center gap-4">
+                        {/* Secondary Actions */}
                         <button
-                            className={`btn-share-roadmap ${shareUrl ? 'active' : ''}`}
-                            onClick={handleShare}
-                            disabled={isSharing}
+                            onClick={clearAll}
+                            className="px-6 py-3.5 text-xs font-black text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-2xl transition-all duration-300 uppercase tracking-widest"
                         >
-                            {isSharing ? <Loader2 size={18} className="animate-spin" /> : <Share2 size={18} />}
-                            <span>{isSharing ? 'Generating...' : 'Share Roadmap'}</span>
+                            Reset List
                         </button>
 
-                        {/* PREMIUM GLASS POPOVER (Phase 19 Pivot) */}
-                        <AnimatePresence>
-                            {shareUrl && (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                    transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                                    className="absolute right-0 top-full mt-4 z-[100] w-[340px] sm:w-[420px]"
+                        <div className="h-10 w-[2px] bg-slate-200/50 mx-2 hidden sm:block" />
+
+                        {/* Primary Action Group */}
+                        <div className="flex items-center p-1.5 bg-white/80 border border-slate-200/50 rounded-[1.75rem] shadow-sm">
+                            <button
+                                onClick={exportPDF}
+                                className="flex items-center gap-3 px-8 py-3.5 bg-white hover:bg-slate-50 text-slate-900 rounded-[1.25rem] border border-slate-200/60 text-xs font-black uppercase tracking-widest transition-all hover:shadow-md active:scale-95"
+                            >
+                                <Download size={16} />
+                                <span>Export PDF</span>
+                            </button>
+
+                            <div className="relative" ref={shareRef}>
+                                <button
+                                    className={`flex items-center gap-3 px-8 py-3.5 ml-1.5 rounded-[1.25rem] text-xs font-black uppercase tracking-widest transition-all active:scale-95
+                                        ${shareUrl || isSharing
+                                            ? 'bg-green-500 text-white shadow-xl shadow-green-100'
+                                            : 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-xl shadow-indigo-100'
+                                        }
+                                    `}
+                                    onClick={handleShare}
+                                    disabled={isSharing}
                                 >
-                                    <GlassPanel variant="subtle" className="!p-5 !rounded-3xl border-indigo-100/60 bg-white/95 backdrop-blur-2xl shadow-[0_20px_40px_-15px_rgba(79,70,229,0.2)]">
+                                    {isSharing ? <Loader2 size={16} className="animate-spin" /> : <Share2 size={16} />}
+                                    <span>{isSharing ? 'Generating...' : 'Share'}</span>
+                                </button>
 
-                                        {/* Header */}
-                                        <div className="flex items-center gap-4 mb-4">
-                                            <div className="w-10 h-10 shrink-0 rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-md shadow-indigo-200">
-                                                <Sparkles className="w-5 h-5" />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-base font-black text-slate-800 tracking-tight leading-tight" style={{ fontFamily: 'var(--font-display)' }}>Share Access</h4>
-                                                <p className="text-[11px] text-slate-500 font-medium">Read-only link generated.</p>
-                                            </div>
-                                        </div>
-
-                                        {/* Pill-Shaped Link Box */}
-                                        <div className="flex items-center p-1.5 rounded-[1.25rem] bg-slate-50 border border-slate-200 focus-within:border-indigo-400 focus-within:ring-[3px] focus-within:ring-indigo-100 transition-all">
-                                            <div className="flex-1 px-3 overflow-hidden">
-                                                <div className="truncate text-xs font-semibold text-slate-600">
-                                                    {shareUrl}
-                                                </div>
-                                            </div>
-
-                                            <button
-                                                onClick={copyToClipboard}
-                                                className={`flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-[11px] font-black uppercase tracking-wider transition-all active:scale-95 shrink-0
-                                                    ${copySuccess
-                                                        ? 'bg-green-500 text-white shadow-md shadow-green-200'
-                                                        : 'bg-slate-900 text-white hover:bg-black shadow-md shadow-slate-200'
-                                                    }
-                                                `}
+                                {/* PREMIUM GLASS POPOVER (Phase 20 Polish) */}
+                                <AnimatePresence>
+                                    {shareUrl && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 15, scale: 0.9 }}
+                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                            exit={{ opacity: 0, y: 15, scale: 0.9 }}
+                                            transition={{ type: "spring", damping: 20, stiffness: 200 }}
+                                            className="absolute right-0 top-full mt-6 z-[100] w-[340px] sm:w-[400px]"
+                                        >
+                                            <GlassPanel
+                                                variant="subtle"
+                                                className="!p-6 !rounded-[2.5rem] border-white/60 bg-white/95 backdrop-blur-3xl shadow-[0_40px_80px_-20px_rgba(79,70,229,0.3)]"
                                             >
-                                                {copySuccess ? <Check size={14} /> : <Copy size={14} />}
-                                                <span>{copySuccess ? 'Copied' : 'Copy'}</span>
-                                            </button>
-                                        </div>
-                                    </GlassPanel>
-                                </motion.div>
-                            )}
-                        </AnimatePresence>
+                                                <div className="flex items-center gap-5 mb-5 pl-1">
+                                                    <div className="w-12 h-12 shrink-0 rounded-[1.25rem] bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-indigo-100">
+                                                        <Sparkles className="w-6 h-6" />
+                                                    </div>
+                                                    <div className="space-y-0.5">
+                                                        <h4 className="text-lg font-black text-slate-900 tracking-tight leading-none" style={{ fontFamily: 'var(--font-display)' }}>Share Access</h4>
+                                                        <p className="text-xs text-slate-400 font-medium tracking-tight"> mentors can view your roadmap.</p>
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex items-center p-2 rounded-2xl bg-indigo-50/30 border border-indigo-100/50">
+                                                    <div className="flex-1 px-3 overflow-hidden">
+                                                        <div className="truncate text-xs font-bold text-indigo-900/60 tracking-tight">
+                                                            {shareUrl}
+                                                        </div>
+                                                    </div>
+
+                                                    <button
+                                                        onClick={copyToClipboard}
+                                                        className={`flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all active:scale-95 shrink-0 shadow-sm
+                                                            ${copySuccess
+                                                                ? 'bg-green-500 text-white'
+                                                                : 'bg-slate-900 text-white'
+                                                            }
+                                                        `}
+                                                    >
+                                                        {copySuccess ? <Check size={14} /> : <Copy size={14} />}
+                                                        <span>{copySuccess ? 'Copied' : 'Copy'}</span>
+                                                    </button>
+                                                </div>
+                                            </GlassPanel>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </GlassPanel>
 
             <div className="board-content">
                 <DragDropContext onDragEnd={onDragEnd}>
@@ -695,6 +728,6 @@ export default function ApplicationBoard() {
                     color: #4338ca;
                 }
             `}</style>
-        </div>
+        </div >
     );
 }
