@@ -15,6 +15,17 @@ import "@/app/colleges/page.css";
 import "./HypeBattle.css";
 
 // -----------------------------------------------------------------------------
+// CUSTOM HOOK: USE PREVIOUS
+// -----------------------------------------------------------------------------
+function usePrevious(value) {
+    const ref = useRef();
+    useEffect(() => {
+        ref.current = value;
+    });
+    return ref.current;
+}
+
+// -----------------------------------------------------------------------------
 // ANIMATED COUNTER COMPONENT
 // -----------------------------------------------------------------------------
 function AnimatedCounter({ value }) {
@@ -152,54 +163,49 @@ const PodiumCard = ({ college, rank, onVote, isVoting, totalVotes }) => {
     );
 };
 
-function BattleLog({ votes }) {
-    return (
-        <div className="battle-log overflow-hidden relative">
-            <div className="absolute top-2 left-4 text-[9px] font-black text-slate-400 uppercase tracking-widest z-10">Realtime_Combat_Log</div>
-            <div className="pt-8 flex flex-col-reverse">
-                <AnimatePresence initial={false}>
-                    {votes.map((vote, i) => (
-                        <motion.div
-                            key={vote.timestamp + i}
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 0.7, x: 0 }}
-                            exit={{ opacity: 0 }}
-                            className="battle-log-entry"
-                        >
-                            <span className="text-slate-400 mr-2">[{new Date(vote.timestamp).toLocaleTimeString([], { hour12: false })}]</span>
-                            <span className="text-amber-600 font-bold uppercase mr-1">{vote.userName}</span>
-                            <span className="text-slate-600">INJECTED HYPE INTO</span>
-                            <span className="ml-2 font-black text-slate-900 uppercase">{vote.collegeName}</span>
-                        </motion.div>
-                    ))}
-                </AnimatePresence>
-            </div>
-        </div>
-    );
-}
+// Removed BattleLog (Vertical Feed) component.
 
 function RankRow({ college, index, onVote, isVoting, nextCollegeVotes }) {
     const gap = nextCollegeVotes ? nextCollegeVotes - college.votes : 0;
 
+    // Detect live vote updates for this specific college
+    const prevVotes = usePrevious(college.votes);
+    const [isFlashing, setIsFlashing] = useState(false);
+
+    useEffect(() => {
+        if (prevVotes !== undefined && college.votes > prevVotes) {
+            setIsFlashing(true);
+            const timer = setTimeout(() => setIsFlashing(false), 1000); // Flash duration
+            return () => clearTimeout(timer);
+        }
+    }, [college.votes, prevVotes]);
+
     return (
         <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="clash-row flex items-center gap-6 group"
+            className={`clash-row flex items-center gap-4 group ${isFlashing ? 'flash-live' : ''}`}
         >
-            <div className="w-12 h-12 flex items-center justify-center font-black text-slate-300 border-r border-slate-100 group-hover:text-amber-600 transition-colors">
+            <div className="w-10 h-10 flex items-center justify-center font-black text-slate-300 border-r border-slate-200 group-hover:text-amber-600 transition-colors text-lg">
                 #{index + 4}
             </div>
 
-            <div className="flex-1">
-                <div className="font-black text-slate-900 group-hover:translate-x-1 transition-transform">{college.name}</div>
-                <div className="flex items-center gap-4 mt-1">
-                    <span className="text-[10px] font-black text-indigo-600">{college.votes} HYPE</span>
+            <div className="flex-1 min-w-0 pr-2">
+                <div className="font-black text-slate-900 group-hover:translate-x-1 transition-transform truncate text-sm">
+                    {college.name}
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                    <span className="text-[10px] font-black text-indigo-600 tracking-wider">
+                        <AnimatedCounter value={college.votes} /> HYPE
+                    </span>
                     {gap > 0 && (
-                        <span className="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">
-                            -{gap} TO OVERTAKE
-                        </span>
+                        <>
+                            <span className="w-1 h-1 bg-slate-200 rounded-full" />
+                            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">
+                                -{gap} TO OVERTAKE
+                            </span>
+                        </>
                     )}
                 </div>
             </div>
@@ -208,7 +214,7 @@ function RankRow({ college, index, onVote, isVoting, nextCollegeVotes }) {
                 whileTap={{ scale: 0.9 }}
                 onClick={(e) => onVote(e, college)}
                 disabled={isVoting}
-                className="w-10 h-10 flex items-center justify-center rounded-sm bg-slate-100 text-black hover:bg-black hover:text-white transition-all shadow-sm"
+                className="w-10 h-10 shrink-0 flex items-center justify-center rounded-lg bg-black text-white hover:bg-slate-800 transition-all shadow-md group-hover:scale-110"
             >
                 <Plus size={16} />
             </motion.button>
@@ -410,36 +416,103 @@ export default function HypePage() {
                             <span className="text-[10px] font-black tracking-[0.4em] uppercase">SYSTEM_STATE: COMBAT_ACTIVE</span>
                         </div>
 
-                        <h1 className="glitch-title text-6xl md:text-9xl font-black mb-6 tracking-tighter text-slate-900">
+                        <h1 className="glitch-title text-5xl md:text-8xl lg:text-[8rem] font-black mb-4 tracking-tighter text-slate-900 leading-none">
                             FAN WARS
                         </h1>
+                        <h2 className="text-2xl md:text-4xl font-black text-[#C0522A] tracking-tight mb-8">
+                            TOTAL DOMINATION
+                        </h2>
 
-                        <p className="text-base md:text-xl text-slate-500 max-w-xl mx-auto font-medium leading-relaxed mb-12">
-                            Total institutional dominance. Vote to escalate your campus status. No mercy for the second-tier.
+                        <p className="text-base md:text-xl text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
+                            The ultimate battleground for institutional supremacy. Watch the live hype feed, deploy tactical votes, and escalate your campus to the top of the India leaderboard.
                         </p>
-
-                        {/* LIVE STATS IN BATTLE STYLE */}
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 mb-16">
-                            <div className="flex flex-col items-center">
-                                <span className="text-5xl font-black text-slate-900 tracking-tighter">
-                                    <AnimatedCounter value={totalVotes} />
-                                </span>
-                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mt-2">Aggregated_Conflict_Points</span>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <span className="text-5xl font-black text-slate-900 tracking-tighter">
-                                    {activeColleges}
-                                </span>
-                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mt-2">Active_War_Zones</span>
-                            </div>
-                        </div>
                     </RevealOnScroll>
                 </section>
 
+                {/* HIGH-SPEED HORIZONTAL MARQUEE (Brought Back & Enhanced) */}
+                {recentVotesDisplay.length > 0 && (
+                    <div className="w-full overflow-hidden bg-black py-4 border-y-2 border-[#C0522A]/30 mb-16 relative z-20">
+                        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
+                        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+
+                        <div className="fast-marquee-container flex items-center gap-16 whitespace-nowrap">
+                            {recentVotesDisplay.map((vote, i) => (
+                                <div key={i} className="flex items-center gap-3 text-sm font-semibold">
+                                    <div className="flex items-center gap-2 text-slate-400">
+                                        <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse shadow-[0_0_10px_rgba(245,158,11,0.8)]"></div>
+                                        <span className="uppercase tracking-[0.2em] text-[10px] font-black text-amber-500">LIVE STRIKE</span>
+                                    </div>
+                                    <span className="text-white uppercase tracking-wider">{vote.userName}</span>
+                                    <span className="text-slate-500 font-mono text-[10px] uppercase">deployed hype to</span>
+                                    <span className="text-amber-400 font-black tracking-tight">{vote.collegeName}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
                 <Container className="max-w-7xl">
+
+                    {/* CENTERED, PROMINENT SEARCH BAR (Moved Up for Immediate Access) */}
+                    <div className="mb-20 max-w-4xl mx-auto">
+                        <div className="relative group">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-amber-500 opacity-30 group-hover:opacity-60 transition-opacity blur-lg rounded-2xl animate-pulse"></div>
+                            <div className="relative bg-white border-2 border-slate-900 p-6 md:p-8 rounded-2xl flex items-center gap-6 shadow-2xl">
+                                <Search size={28} className="text-[#C0522A]" />
+                                <input
+                                    type="text"
+                                    className="w-full bg-transparent border-none focus:ring-0 text-2xl md:text-3xl font-black placeholder-slate-300 text-slate-900 uppercase tracking-tight"
+                                    placeholder="SEARCH TO DEPLOY HYPE..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                />
+                            </div>
+
+                            {searchQuery && (
+                                <div className="absolute top-full left-0 right-0 mt-4 bg-black text-white border-2 border-amber-500 shadow-[0_20px_50px_rgba(245,158,11,0.3)] z-50 rounded-xl overflow-hidden max-h-[400px] overflow-y-auto">
+                                    {searchResults.map(college => (
+                                        <div
+                                            key={college.id}
+                                            onClick={(e) => handleVote(e, college)}
+                                            className="p-6 hover:bg-slate-900 cursor-pointer border-b border-white/10 flex justify-between items-center group/search transition-colors"
+                                        >
+                                            <div>
+                                                <div className="font-black text-xl tracking-tight text-white group-hover:text-amber-400 transition-colors uppercase">{college.name}</div>
+                                                <div className="text-xs font-mono text-slate-400 mt-1 flex items-center gap-2">
+                                                    <MapPin size={12} /> {college.location}
+                                                </div>
+                                            </div>
+                                            <button className="px-6 py-2 bg-amber-500 text-black font-black text-xs uppercase tracking-widest rounded-sm group-hover/search:bg-amber-400 transition-colors">
+                                                STRIKE
+                                            </button>
+                                        </div>
+                                    ))}
+                                    {searchResults.length === 0 && (
+                                        <div className="p-8 text-center font-mono text-slate-500 uppercase tracking-widest">
+                                            NO TARGETS FOUND
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Global Intel below search */}
+                        <div className="flex justify-center gap-12 mt-8">
+                            <div className="flex items-center gap-2">
+                                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+                                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-slate-600">Servers Active</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Activity size={12} className="text-indigo-600" />
+                                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-slate-600">Sync: 10s</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* MAIN BATTLEGROUND GRID */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                        {/* LEFT: Dominance Rings (Podiums) */}
-                        <div className="lg:col-span-9">
+                        {/* LEFT: Dominance Rings (Podiums) - Takes full width now since Log is gone */}
+                        <div className="lg:col-span-12">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 items-start">
                                 {/* RANK 2 */}
                                 {top3[1] && <PodiumCard college={top3[1]} rank={2} onVote={handleVote} isVoting={isVoting} totalVotes={totalVotes} />}
@@ -448,73 +521,24 @@ export default function HypePage() {
                                 {/* RANK 3 */}
                                 {top3[2] && <PodiumCard college={top3[2]} rank={3} onVote={handleVote} isVoting={isVoting} totalVotes={totalVotes} />}
                             </div>
-
-                            {/* SEARCH OVERLAY - BATTLE STYLE */}
-                            <div className="mb-20">
-                                <div className="relative group">
-                                    <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-terracotta opacity-20 group-hover:opacity-40 transition-opacity blur-sm rounded-xl"></div>
-                                    <div className="relative bg-[#E8E3DA] border-2 border-slate-900 p-8 rounded-xl flex items-center gap-6">
-                                        <Search size={24} className="text-slate-900" />
-                                        <input
-                                            type="text"
-                                            className="w-full bg-transparent border-none focus:ring-0 text-2xl font-black placeholder-slate-400 text-slate-900 uppercase tracking-tight"
-                                            placeholder="DEPLOY_HYPE_TO_UNIT..."
-                                            value={searchQuery}
-                                            onChange={(e) => setSearchQuery(e.target.value)}
-                                        />
-                                    </div>
-
-                                    {searchQuery && (
-                                        <div className="absolute top-full left-0 right-0 mt-2 bg-black text-white border-2 border-slate-900 shadow-2xl z-50 overflow-hidden max-h-[400px] overflow-y-auto">
-                                            {searchResults.map(college => (
-                                                <div
-                                                    key={college.id}
-                                                    onClick={(e) => handleVote(e, college)}
-                                                    className="p-6 hover:bg-slate-900 cursor-pointer border-b border-white/10 flex justify-between items-center group/search"
-                                                >
-                                                    <div>
-                                                        <div className="font-black text-xl tracking-tight group-hover:text-amber-400 transition-colors uppercase">{college.name}</div>
-                                                        <div className="text-[10px] font-mono text-slate-500">{college.location}</div>
-                                                    </div>
-                                                    <Plus className="text-slate-500 group-hover:text-white group-hover:rotate-90 transition-all" />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* RIGHT: Battle Log & Global Intel */}
-                        <div className="lg:col-span-3">
-                            <div className="sticky top-32 space-y-12">
-                                <BattleLog votes={stats.recentVotes} />
-
-                                <div className="p-8 border-2 border-slate-900 rounded-xl bg-white space-y-6">
-                                    <h4 className="text-xs font-black tracking-[0.2em] uppercase text-slate-400">Tactical_Briefing</h4>
-                                    <div className="space-y-4">
-                                        <div className="flex items-start gap-4">
-                                            <ShieldCheck size={18} className="text-green-600 shrink-0" />
-                                            <p className="text-[10px] font-bold text-slate-600 leading-relaxed uppercase">Votes are verified against system-seed protocols to ensure authentic dominance stats.</p>
-                                        </div>
-                                        <div className="flex items-start gap-4">
-                                            <Activity size={18} className="text-indigo-600 shrink-0" />
-                                            <p className="text-[10px] font-bold text-slate-600 leading-relaxed uppercase">Hype metrics re-calculate every 10 seconds. Stay alert for rank changes.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
-                    {/* CHALLENGERS (CLASH ROWS) */}
+                    {/* NEW: COMPACT CHALLENGERS GRID */}
                     <div className="mt-20">
                         <div className="flex items-center gap-6 mb-12">
                             <h2 className="text-4xl font-black tracking-tighter text-slate-900 uppercase">Current_Clashes</h2>
+                            <div className="flex items-center gap-4 px-4 py-1 bg-slate-900 text-white rounded-full">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                                </span>
+                                <span className="text-[10px] font-bold tracking-[0.2em] uppercase">Live Updating</span>
+                            </div>
                             <div className="h-0.5 bg-slate-900 flex-1 opacity-10"></div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                        <div className="compact-clash-grid">
                             {rest.map((college, i) => (
                                 <RankRow
                                     key={college.id}
@@ -532,7 +556,7 @@ export default function HypePage() {
 
             {/* VERSION MARKER - V29 ROBUST */}
             <div className="fixed bottom-2 right-2 text-[10px] text-slate-300 pointer-events-none z-50 opacity-50">
-                v3.1-battle-arena
+                v3.2-live-kinetic
             </div>
 
             {/* Hype Burst Effect Container */}
