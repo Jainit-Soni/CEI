@@ -60,30 +60,88 @@ export default function Dashboard() {
         { icon: <GraduationCap size={20} />, label: "Exams", href: "/exams", color: "#f59e0b" },
     ];
 
+    // --- GAMIFICATION LOGIC ---
+    const getGreeting = () => {
+        const hour = new Date().getHours();
+        if (hour < 12) return "Good morning";
+        if (hour < 18) return "Good afternoon";
+        return "Good evening";
+    };
+
+    const firstName = user?.displayName ? user.displayName.split(' ')[0] : 'Student';
+    const profileScore = stats.predicted || 0; // Using predicted score as generic "Completeness" for now
+
+    // --- SVG KINETIC RING CALCULATIONS ---
+    const radius = 38;
+    const circumference = 2 * Math.PI * radius;
+    const strokeDashoffset = circumference - (profileScore / 100) * circumference;
+
+    const quickLinks = [
+        { icon: <Heart size={20} />, label: "My Favorites", href: "/dashboard/favorites", color: "#ec4899" },
+        { icon: <TrendingUp size={20} />, label: "Analytics", href: "/dashboard/analytics", color: "#8b5cf6" },
+        { icon: <MapPin size={20} />, label: "College Map", href: "/map", color: "#10b981" },
+        { icon: <GraduationCap size={20} />, label: "Exams", href: "/exams", color: "#f59e0b" },
+    ];
+
     return (
         <div className="dashboard-container">
             {/* Left Sidebar (Glass) */}
             <aside className="dashboard-sidebar">
                 <div className="user-profile-mini">
-                    <div className="avatar-placeholder">
-                        {user.photoURL ? (
-                            <img src={user.photoURL} alt="Profile" />
-                        ) : (
-                            <User size={24} />
-                        )}
+                    <div className="kinetic-avatar-container">
+                        {/* Kinetic SVG Ring */}
+                        <svg className="kinetic-ring" width="96" height="96" viewBox="0 0 96 96">
+                            {/* Background Track */}
+                            <circle cx="48" cy="48" r={radius} fill="none" stroke="rgba(0,0,0,0.05)" strokeWidth="6" />
+                            {/* Animated Progress Track */}
+                            <circle
+                                cx="48"
+                                cy="48"
+                                r={radius}
+                                fill="none"
+                                stroke="url(#gradient)"
+                                strokeWidth="6"
+                                strokeLinecap="round"
+                                strokeDasharray={circumference}
+                                strokeDashoffset={strokeDashoffset}
+                                className="kinetic-progress"
+                                transform="rotate(-90 48 48)"
+                            />
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stopColor="#4f46e5" />
+                                    <stop offset="100%" stopColor="#ec4899" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                        {/* Inner Avatar */}
+                        <div className="avatar-placeholder">
+                            {user?.photoURL ? (
+                                <img src={user.photoURL} alt="Profile" />
+                            ) : (
+                                <User size={24} />
+                            )}
+                        </div>
+
+                        {/* Score Badge */}
+                        <div className="avatar-score-badge">
+                            {profileScore}%
+                        </div>
                     </div>
-                    <div>
-                        <h3>{user.displayName || "Student"}</h3>
+
+                    <div className="user-profile-info">
+                        <h3>{firstName}</h3>
                         <p>Free Account</p>
                     </div>
                 </div>
 
                 <nav className="sidebar-nav">
                     <Link href="/dashboard" className="nav-item active">
-                        <LayoutDashboard size={20} /> Dashboard
+                        <LayoutDashboard size={20} /> Command Center
                     </Link>
-                    <Link href="/dashboard/favorites" className="nav-item">
-                        <Heart size={20} /> Favorites
+                    <Link href="/my-list" className="nav-item">
+                        <Heart size={20} /> Priority Roadmap
                     </Link>
 
                     <div className="nav-divider" />
@@ -98,8 +156,8 @@ export default function Dashboard() {
             <main className="dashboard-content">
                 <header className="content-header">
                     <div>
-                        <h1>Hello, {user.displayName ? user.displayName.split(' ')[0] : 'Student'}! 👋</h1>
-                        <p>Here's what's happening with your college journey.</p>
+                        <h1>{getGreeting()}, {firstName}! 👋</h1>
+                        <p>Your strategic command center for college admissions.</p>
                     </div>
                     <Button variant="outline" href="/colleges">Explore Colleges</Button>
                 </header>
@@ -115,7 +173,7 @@ export default function Dashboard() {
                                 </div>
                                 <div className="stat-info">
                                     <span className="stat-value">{stats.favorites}</span>
-                                    <span className="stat-label">Favorites</span>
+                                    <span className="stat-label">Roadmap Priorities</span>
                                 </div>
                             </GlassPanel>
 
@@ -124,15 +182,55 @@ export default function Dashboard() {
                                     <Sparkles size={24} />
                                 </div>
                                 <div className="stat-info">
-                                    <span className="stat-value">{stats.predicted}%</span>
-                                    <span className="stat-label">Profile Score</span>
+                                    <span className="stat-value">{profileScore}%</span>
+                                    <span className="stat-label">Profile Strength</span>
                                 </div>
                             </GlassPanel>
                         </div>
 
-                        {/* Quick Actions */}
+                        {/* INTELLIGENT NEXT STEPS */}
                         <section className="dashboard-section">
-                            <h2>Quick Actions</h2>
+                            <div className="section-header">
+                                <h2>Next Steps to Unlock Premium AI Insights</h2>
+                                <span className="ai-badge"><Sparkles size={12} /> Priority Queue</span>
+                            </div>
+
+                            <div className="next-steps-list">
+                                {/* Step 1: Roadmap Completion */}
+                                <Link href="/colleges" className={`next-step-card ${stats.favorites >= 3 ? 'completed' : ''}`}>
+                                    <div className="step-indicator">1</div>
+                                    <div className="step-content">
+                                        <h3>Build your Priority Roadmap</h3>
+                                        <p>Add at least 3 colleges {stats.favorites > 0 && stats.favorites < 3 ? `(Add ${3 - stats.favorites} more)` : ''} to build a baseline algorithm map.</p>
+                                    </div>
+                                    <ChevronRight size={20} className="step-arrow text-slate-300" />
+                                </Link>
+
+                                {/* Step 2: Exam Score Entry */}
+                                <button className={`next-step-card ${profileScore >= 90 ? 'completed' : ''}`} style={{ textAlign: 'left', width: '100%', border: 'none', background: 'white' }}>
+                                    <div className="step-indicator">2</div>
+                                    <div className="step-content">
+                                        <h3>Input Exam Metrics</h3>
+                                        <p>Feed your actual or expected percentiles (CAT, XAT, NMAT) into the engine to unlock predictive odds.</p>
+                                    </div>
+                                    <ChevronRight size={20} className="step-arrow text-slate-300" />
+                                </button>
+
+                                {/* Step 3: Run True ROI */}
+                                <Link href="/roi-calculator" className="next-step-card actionable-pulse">
+                                    <div className="step-indicator">3</div>
+                                    <div className="step-content">
+                                        <h3>Run the True ROI Simulator</h3>
+                                        <p>Map out the exact break-even timeline for your top prioritized colleges. Stop guessing your 10-year outlook.</p>
+                                    </div>
+                                    <ChevronRight size={20} className="step-arrow text-indigo-500" />
+                                </Link>
+                            </div>
+                        </section>
+
+                        {/* Quick Actions */}
+                        <section className="dashboard-section mt-8">
+                            <h2>Fast Travel</h2>
                             <div className="quick-links-grid">
                                 {quickLinks.map((link, idx) => (
                                     <Link key={idx} href={link.href} className="quick-link-card">
@@ -141,29 +239,6 @@ export default function Dashboard() {
                                         <ChevronRight size={16} className="ql-arrow" />
                                     </Link>
                                 ))}
-                            </div>
-                        </section>
-
-                        {/* Recommended Section (Placeholder for AI) */}
-                        <section className="dashboard-section">
-                            <div className="section-header">
-                                <h2>Recommended for You</h2>
-                                <span className="ai-badge"><Sparkles size={12} /> AI Picked</span>
-                            </div>
-                            <div className="rec-grid">
-                                {[1, 2].map((i) => (
-                                    <div key={i} className="rec-card-skeleton">
-                                        <div className="sk-img" />
-                                        <div className="sk-content">
-                                            <div className="sk-line w-3/4" />
-                                            <div className="sk-line w-1/2" />
-                                        </div>
-                                    </div>
-                                ))}
-                                <div className="rec-cta">
-                                    <p>Complete your profile to get personalized college recommendations.</p>
-                                    <Button size="sm">Update Profile</Button>
-                                </div>
                             </div>
                         </section>
                     </div>

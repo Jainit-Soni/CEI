@@ -112,62 +112,26 @@
     font-weight: 600;
 }
 
-/* Gauge */
-.gauge-container {
-    width: 200px;
-    height: 100px;
+/* Charting Mode Layout Adjustments */
+.roi-visual-card.charting-mode {
+    padding: 32px 24px;
+    justify-content: flex-start;
+}
+
+.chart-overlay {
+    margin-bottom: 24px;
+}
+
+.chart-container {
+    width: 100%;
     position: relative;
-    overflow: hidden;
+    z-index: 10;
 }
 
-.gauge-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: #e2e8f0;
-    z-index: 1;
-}
-
-.gauge-fill {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: #10b981;
-    /* Emerald */
-    z-index: 2;
-    transform-origin: center;
-    transform: rotate(-90deg);
-    /* Start hidden */
-    transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-    /* Only show top half */
-}
-
-.gauge-center {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 160px;
-    height: 80px;
-    background: #f8fafc;
-    /* Match bg */
-    border-radius: 80px 80px 0 0;
-    z-index: 3;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 10px;
-}
-
-.emoji {
-    font-size: 2rem;
+.roi-chart-tooltip {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
 }
 
 /* Right: Details */

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import "./ROICalculator.css";
 
 const DEFAULT_INITIAL_DATA = {};
@@ -9,7 +10,7 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
     // Hidden defaults
     const [duration, setDuration] = useState(initialData.duration || 2); // MBA usually 2 years
     // NEW: Projection horizon
-    const [projectionYears, setProjectionYears] = useState(5);
+    const [projectionYears, setProjectionYears] = useState(10); // Default to 10 for better chart
 
     // Active Inputs
     const [tuitionPerYear, setTuitionPerYear] = useState(initialData.tuition || 800000);
@@ -17,6 +18,7 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
     const [avgPackage, setAvgPackage] = useState(initialData.avgPackage || 1200000);
 
     const [stats, setStats] = useState(null);
+    const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
         calculateStats();
@@ -52,6 +54,10 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
         let totalEarnings = 0;
         let nominalEarnings = 0;
 
+        // --- CHART DATA GENERATION ---
+        const newChartData = [];
+        let currentCumulativeEarnings = 0;
+
         for (let i = 0; i < yearsToProject; i++) {
             const currentYearNominal = annualInHand * Math.pow(1 + hikeRate, i);
             nominalEarnings += currentYearNominal;
@@ -59,7 +65,18 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
             // Discount back to present value (Real Value)
             const currentYearReal = currentYearNominal / Math.pow(1 + inflationRate, i);
             totalEarnings += currentYearReal;
+
+            // For chart, we plot cumulative
+            currentCumulativeEarnings += currentYearReal;
+
+            newChartData.push({
+                year: `Year ${i + 1}`,
+                Investment: totalInvest, // Flat line for total investment
+                Earnings: Math.round(currentCumulativeEarnings) // Curving line for cumulative real earnings
+            });
         }
+
+        setChartData(newChartData);
 
         // Multiplier based on Real Value
         const multiplier = (totalEarnings / totalInvest).toFixed(1);
@@ -95,6 +112,20 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
         else setAvgPackage(basePkg);
     };
 
+    // Custom Tooltip for Recharts
+    const CustomTooltip = ({ active, payload, label }) => {
+        if (active && payload && payload.length) {
+            return (
+                <div className="roi-chart-tooltip" style={{ background: 'rgba(255, 255, 255, 0.95)', padding: '12px', border: '1px solid #e2e8f0', borderRadius: '8px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}>
+                    <p className="label" style={{ fontWeight: 'bold', marginBottom: '8px', color: '#0f172a' }}>{label}</p>
+                    <p style={{ color: '#ef4444', fontSize: '0.9rem', marginBottom: '4px' }}>Cost: {formatMoney(payload[0].value)}</p>
+                    <p style={{ color: '#10b981', fontSize: '0.9rem', fontWeight: 'bold' }}>Earned: {formatMoney(payload[1].value)}</p>
+                </div>
+            );
+        }
+        return null;
+    };
+
     return (
         <div className="premium-tab-card roi-container">
             <div className="roi-header">
@@ -110,20 +141,38 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
             </div>
 
             <div className="roi-grid">
-                {/* Visual Card */}
-                <div className="roi-visual-card">
-                    <div className="multiplier-badge">
+                {/* Visual Card WITH CHART */}
+                <div className="roi-visual-card charting-mode">
+                    <div className="multiplier-badge chart-overlay">
                         <span className="mult-label">{projectionYears}-Year Wealth Multiplier (Real)</span>
                         <div className="mult-value">{stats?.multiplier || "0.0"}x</div>
-                        <span className="mult-sub">Returns {stats?.multiplier}x your investment in real value</span>
+                        <span className="mult-sub">Returns {stats?.multiplier}x your investment</span>
                     </div>
 
-                    <div className="gauge-container">
-                        <div className="gauge-bg"></div>
-                        <div className="gauge-fill" style={{ transform: `rotate(${((stats?.score || 0) * 1.8) - 90}deg)` }}></div>
-                        <div className="gauge-center">
-                            <span className="emoji">{stats?.multiplier > (projectionYears * 0.6) ? '🚀' : '⚖️'}</span>
-                        </div>
+                    <div className="chart-container" style={{ width: '100%', height: '280px', marginTop: '20px' }}>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <AreaChart
+                                data={chartData}
+                                margin={{ top: 20, right: 10, left: 0, bottom: 0 }}
+                            >
+                                <defs>
+                                    <linearGradient id="colorInvest" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#ef4444" stopOpacity={0.1} />
+                                        <stop offset="95%" stopColor="#ef4444" stopOpacity={0} />
+                                    </linearGradient>
+                                    <linearGradient id="colorEarn" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
+                                        <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
+                                    </linearGradient>
+                                </defs>
+                                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(0,0,0,0.05)" />
+                                <XAxis dataKey="year" fontSize={11} tickLine={false} axisLine={false} tickMargin={10} />
+                                <YAxis tickFormatter={(val) => `₹${(val / 100000).toFixed(0)}L`} fontSize={11} tickLine={false} axisLine={false} width={50} />
+                                <Tooltip content={<CustomTooltip />} />
+                                <Area type="monotone" dataKey="Investment" stroke="#ef4444" strokeWidth={2} fillOpacity={1} fill="url(#colorInvest)" />
+                                <Area type="monotone" dataKey="Earnings" stroke="#10b981" strokeWidth={3} fillOpacity={1} fill="url(#colorEarn)" />
+                            </AreaChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
 
