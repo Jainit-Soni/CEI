@@ -8,6 +8,7 @@ import CompareFloatingBar from "../components/CompareFloatingBar";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -68,6 +69,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrains.variable}`}>
+      <head>
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-22DDHMQFTY`}
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-22DDHMQFTY');
+          `}
+        </Script>
+      </head>
       <body>
         <ClientProviders>
           <ErrorBoundary>
