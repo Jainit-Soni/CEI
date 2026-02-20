@@ -1,7 +1,10 @@
-/* frontend/src/app/hype/page.css */
+/* ================================================================
+   FAN WARS — WORLD CLASS PAGE CSS
+   Glassmorphism over Chromatic Bands Background
+   ================================================================ */
 
-/* --- MARQUEE TIMELINE --- */
-@keyframes continuous-marquee {
+/* ---- LIVE TICKER (Infinite Horizontal Scroll) ---- */
+@keyframes ticker-scroll {
     0% {
         transform: translateX(0);
     }
@@ -11,144 +14,266 @@
     }
 }
 
-.timeline-container {
-    animation: continuous-marquee 40s linear infinite;
-    width: max-content;
-    will-change: transform;
+.ticker-track {
     display: flex;
+    width: max-content;
+    animation: ticker-scroll 36s linear infinite;
+    will-change: transform;
 }
 
-.timeline-container:hover {
+.ticker-track:hover {
     animation-play-state: paused;
 }
 
-.timeline-item {
-    padding: 0.5rem 1.5rem;
-    border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    marginCommand: 0 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-    transition: all 0.2s;
+/* ---- HERO TITLE GRADIENT ---- */
+.hero-gradient-text {
+    background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 40%, #7c3aed 70%, #1e1b4b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.timeline-item:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: scale(1.05);
+/* ---- GLASS PANEL ---- */
+.fw-glass {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.04),
+        0 10px 30px -5px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* --- PREMIUM TOP 3 CARDS --- */
-.top-card {
+/* ---- TOP 3 HERO CARDS ---- */
+.rank-hero-card {
     background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 1.5rem;
-    padding: 2.5rem 2rem;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.5),
+        0 20px 50px -12px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.top-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.9);
+.rank-hero-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+    pointer-events: none;
 }
 
-.rank-gold {
-    border-top: 6px solid #F59E0B;
+.rank-hero-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.8),
+        0 30px 70px -15px rgba(99, 102, 241, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
-.rank-silver {
-    border-top: 6px solid #94A3B8;
+.rank-hero-card.gold-card {
+    border-top: 4px solid #F59E0B;
+    box-shadow:
+        0 0 0 1px rgba(245, 158, 11, 0.2),
+        0 20px 60px -10px rgba(245, 158, 11, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
-.rank-bronze {
-    border-top: 6px solid #D97706;
+.rank-hero-card.gold-card:hover {
+    box-shadow:
+        0 0 0 1px rgba(245, 158, 11, 0.3),
+        0 35px 80px -15px rgba(245, 158, 11, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
-/* --- ROW STYLING (THE REST) --- */
-.rank-row {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 1rem;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
-    display: flex;
+.rank-hero-card.silver-card {
+    border-top: 4px solid #94A3B8;
+}
+
+.rank-hero-card.bronze-card {
+    border-top: 4px solid #D97706;
+}
+
+/* ---- RANK BADGE ---- */
+.rank-badge {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 1rem;
 }
 
-.rank-row:hover {
-    transform: translateX(8px);
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(99, 102, 241, 0.2);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+.rank-badge-gold {
+    background: linear-gradient(135deg, #FDE68A, #F59E0B);
+    color: #78350F;
 }
 
-/* --- VOTE BUTTON ANIMATION --- */
+.rank-badge-silver {
+    background: linear-gradient(135deg, #E2E8F0, #94A3B8);
+    color: #334155;
+}
+
+.rank-badge-bronze {
+    background: linear-gradient(135deg, #FED7AA, #D97706);
+    color: #78350F;
+}
+
+/* ---- HYPE METER ---- */
+.hype-bar-bg {
+    height: 6px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.hype-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- VOTE BUTTON ---- */
 .vote-btn {
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.vote-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.vote-btn:hover::after {
+    opacity: 1;
+}
+
+.vote-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
 }
 
 .vote-btn:active {
-    transform: scale(0.9);
+    transform: translateY(0) scale(0.96);
 }
 
-.vote-btn.voting {
-    opacity: 0.7;
-    pointer-events: none;
-    transform: scale(0.95);
+/* ---- CONTENDER ROWS (Rank 4-10) ---- */
+.contender-row {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 1rem;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
-/* --- QUICK FLASH ON VOTE RECIEVED --- */
-@keyframes light-flash {
-    0% {
-        background-color: rgba(255, 255, 255, 0.4);
+.contender-row:hover {
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateX(6px);
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 8px 25px -5px rgba(99, 102, 241, 0.12);
+}
+
+/* ---- SEARCH BAR ---- */
+.fw-search-bar {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 9999px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 1);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fw-search-bar:focus-within {
+    border-color: rgba(99, 102, 241, 0.4);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.08),
+        0 10px 30px rgba(99, 102, 241, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+/* ---- SEARCH DROPDOWN ---- */
+.fw-search-dropdown {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- LIVE DOT ---- */
+@keyframes ping-live {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
     }
+}
 
-    50% {
-        background-color: rgba(99, 102, 241, 0.15);
-        transform: scale(1.02);
+.live-dot {
+    animation: ping-live 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ---- CONFETTI ON VOTE ---- */
+@keyframes burst-ring {
+    0% {
+        transform: scale(0);
+        opacity: 0.8;
     }
 
     100% {
-        background-color: rgba(255, 255, 255, 0.4);
-        transform: scale(1);
+        transform: scale(2.5);
+        opacity: 0;
     }
 }
 
-.flash-update {
-    animation: light-flash 1s ease-out;
+.burst-ring {
+    animation: burst-ring 0.7s ease-out forwards;
 }
 
-/* --- SEARCH PILL --- */
-.search-pill {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(203, 213, 225, 0.5);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+/* ---- FLASH UPDATE ---- */
+@keyframes row-flash {
+    0% {
+        background: rgba(255, 255, 255, 0.45);
+    }
+
+    40% {
+        background: rgba(99, 102, 241, 0.12);
+    }
+
+    100% {
+        background: rgba(255, 255, 255, 0.45);
+    }
 }
 
-.search-pill:focus-within {
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1), 0 15px 40px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(99, 102, 241, 0.3);
+.row-flash-anim {
+    animation: row-flash 1.2s ease-out;
 }
 
-/* Typography Enhancements */
-.display-font {
-    font-family: var(--font-display, inherit);
+/* ---- STAT CHIP ---- */
+.stat-chip {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
