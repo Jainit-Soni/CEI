@@ -17,6 +17,9 @@ const COLLEGES = [
     { id: "thapar", name: "Thapar University" }
 ];
 
+// Path to user choices for aggregation
+const userChoicesFilePath = path.join(__dirname, "../models/user_choices.json");
+
 // Helper: Filter votes by timeframe
 const filterVotes = (votes, timeframe) => {
     const now = new Date();
@@ -31,6 +34,41 @@ const filterVotes = (votes, timeframe) => {
         if (timeframe === "yearly") return voteTime.getFullYear() === now.getFullYear();
         return !(["System", "system-seed"].includes(v.userId) || v.userName === "System");
     });
+};
+
+// Helper: Aggregate user roadmap choices
+const getRoadmapStats = () => {
+    try {
+        if (!fs.existsSync(userChoicesFilePath)) return [];
+        const data = fs.readFileSync(userChoicesFilePath, "utf8");
+        const allChoices = JSON.parse(data);
+        const stats = {};
+
+        // allChoices is an object mapping uid -> array of college objects
+        Object.values(allChoices).forEach(userList => {
+            if (!Array.isArray(userList)) return;
+            // Use a Set to only count each college once per user, regardless of rank/duplicates
+            const uniqueCollegesForUser = new Set();
+            userList.forEach(college => {
+                if (college && college.id) {
+                    uniqueCollegesForUser.add(JSON.stringify({ id: college.id, name: college.name || college.shortName }));
+                }
+            });
+
+            uniqueCollegesForUser.forEach(collegeStr => {
+                const college = JSON.parse(collegeStr);
+                if (!stats[college.id]) {
+                    stats[college.id] = { id: college.id, name: college.name, priorityCount: 0 };
+                }
+                stats[college.id].priorityCount++;
+            });
+        });
+
+        return Object.values(stats).sort((a, b) => b.priorityCount - a.priorityCount);
+    } catch (err) {
+        console.error("Error aggregating roadmap stats:", err);
+        return [];
+    }
 };
 
 // @route   GET /api/hype/stats
@@ -59,7 +97,10 @@ router.get("/stats", (req, res) => {
             .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
             .slice(0, 10);
 
-        res.json({ leaderboard, recentVotes });
+        // Get Roadmap priorities
+        const roadmapLeaderboard = getRoadmapStats();
+
+        res.json({ leaderboard, recentVotes, roadmapLeaderboard });
     } catch (err) {
         console.error(err.message);
         res.status(500).send("Server Error");

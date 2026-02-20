@@ -222,7 +222,7 @@ function RankRow({ college, index, onVote, isVoting }) {
 export default function HypePage() {
     const { user, signInWithGoogle } = useAuth();
     const { addToast } = useToast();
-    const [stats, setStats] = useState({ leaderboard: [], recentVotes: [] });
+    const [stats, setStats] = useState({ leaderboard: [], recentVotes: [], roadmapLeaderboard: [] });
     const [searchQuery, setSearchQuery] = useState("");
     const [debouncedSearchQuery, setDebouncedSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
@@ -465,6 +465,56 @@ export default function HypePage() {
                 </section>
 
                 <Container className="max-w-6xl">
+
+                    {/* NEW: THE PEOPLE'S CHOICE (ROADMAP LEADERBOARD) */}
+                    {stats.roadmapLeaderboard && stats.roadmapLeaderboard.length > 0 && (
+                        <div className="mb-20">
+                            <RevealOnScroll>
+                                <div className="text-center mb-10">
+                                    <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>
+                                        The People's Choice
+                                    </h2>
+                                    <p className="text-slate-500 mt-3 max-w-xl mx-auto font-medium">
+                                        The most frequently added colleges across all strategic Priority Roadmaps nationwide.
+                                    </p>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    {stats.roadmapLeaderboard.slice(0, 3).map((college, idx) => (
+                                        <motion.div
+                                            key={`roadmap-${college.id}`}
+                                            whileHover={{ y: -8, scale: 1.02 }}
+                                            className="relative bg-white rounded-3xl p-8 border border-slate-200/60 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.1)] overflow-hidden transition-all duration-300"
+                                        >
+                                            {/* Rank Accent Line */}
+                                            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-80" />
+
+                                            <div className="flex justify-between items-start mb-6">
+                                                <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-black text-xl shadow-inner shadow-indigo-100/50">
+                                                    #{idx + 1}
+                                                </div>
+                                                <div className="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold uppercase tracking-widest rounded-full">
+                                                    Top Priority
+                                                </div>
+                                            </div>
+
+                                            <h3 className="text-xl font-black text-slate-900 mb-2 leading-snug truncate" style={{ fontFamily: 'var(--font-display)' }}>
+                                                {college.name}
+                                            </h3>
+
+                                            <div className="flex items-center gap-2 mt-6 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                                <Users size={16} className="text-indigo-500" />
+                                                <span className="text-base font-bold text-slate-700">
+                                                    <span className="text-indigo-600 font-black text-xl mr-1">{college.priorityCount}</span>
+                                                    <span className="text-xs uppercase tracking-wider text-slate-400">Roadmaps</span>
+                                                </span>
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </RevealOnScroll>
+                        </div>
+                    )}
 
                     {/* 2. STANDARD SEARCH PANEL */}
                     <div className="mb-12">
