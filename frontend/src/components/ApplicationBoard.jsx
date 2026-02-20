@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
-import { Trash2, GripVertical, FileText, Download, Cloud, CloudOff, Share2, Copy, Check, Loader2 } from "lucide-react";
+import { Trash2, GripVertical, FileText, Download, Cloud, CloudOff, Share2, Copy, Check, Loader2, Sparkles } from "lucide-react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/lib/AuthContext";
 import { fetchUserChoices, saveUserChoices, shareUserChoices } from "@/lib/api";
 import AuthModal from "./AuthModal";
@@ -250,12 +251,76 @@ export default function ApplicationBoard() {
                         <Download size={18} />
                         <span>Export PDF</span>
                     </button>
-                    <button className="btn-share-roadmap" onClick={handleShare}>
-                        <Share2 size={18} />
-                        <span>Share Roadmap</span>
+                    <button
+                        className={`btn-share-roadmap ${shareUrl ? 'active' : ''}`}
+                        onClick={handleShare}
+                        disabled={isSharing}
+                    >
+                        {isSharing ? <Loader2 size={18} className="animate-spin" /> : <Share2 size={18} />}
+                        <span>{isSharing ? 'Generating...' : 'Share Roadmap'}</span>
                     </button>
                 </div>
             </div>
+
+            {/* PRE-COMPUTED PREMIUM INLINE SHARE (REPLACES MODAL) */}
+            <AnimatePresence>
+                {shareUrl && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0, marginBottom: 0 }}
+                        animate={{ height: 'auto', opacity: 1, marginBottom: 24 }}
+                        exit={{ height: 0, opacity: 0, marginBottom: 0 }}
+                        className="overflow-hidden"
+                    >
+                        <GlassPanel variant="subtle" className="!p-6 !rounded-3xl border-indigo-100/50 bg-gradient-to-r from-indigo-50/30 to-white/30 backdrop-blur-md">
+                            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-lg shadow-indigo-200">
+                                        <Sparkles size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-slate-800" style={{ fontFamily: 'var(--font-display)' }}>Share Access Generated</h4>
+                                        <p className="text-xs text-slate-500 font-medium">Anyone with this link can view your strategic roadmap.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex-1 w-full max-w-md">
+                                    <div className="share-link-box-modern flex items-center p-1.5 rounded-xl bg-white/60 border border-slate-200 focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-100 transition-all">
+                                        <div className="flex-1 px-3 overflow-hidden">
+                                            <motion.div
+                                                initial={{ width: 0 }}
+                                                animate={{ width: '100%' }}
+                                                transition={{ duration: 1.5, ease: "circOut" }}
+                                                className="truncate text-sm font-semibold text-slate-600 tracking-tight"
+                                            >
+                                                {shareUrl}
+                                            </motion.div>
+                                        </div>
+                                        <button
+                                            onClick={copyToClipboard}
+                                            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold transition-all active:scale-95
+                                                ${copySuccess
+                                                    ? 'bg-green-500 text-white shadow-lg shadow-green-200'
+                                                    : 'bg-slate-900 text-white hover:bg-black shadow-lg shadow-slate-200'
+                                                }
+                                            `}
+                                        >
+                                            {copySuccess ? <Check size={14} /> : <Copy size={14} />}
+                                            <span>{copySuccess ? 'Copied' : 'Copy Link'}</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <button
+                                    onClick={() => setShareUrl("")}
+                                    className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors"
+                                >
+                                    <Trash2 size={20} className="rotate-45" />
+                                </button>
+                            </div>
+                        </GlassPanel>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             <div className="board-content">
                 <DragDropContext onDragEnd={onDragEnd}>
@@ -329,56 +394,6 @@ export default function ApplicationBoard() {
 
             <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
-            {/* Premium Share Modal */}
-            {shareUrl && (
-                <div className="share-modal-overlay animate-in fade-in duration-300">
-                    <GlassPanel variant="strong" className="share-modal-glass !p-0 overflow-hidden !rounded-[2.5rem] shadow-2xl max-w-lg w-full">
-                        <div className="p-8">
-                            <div className="share-modal-header flex items-center justify-between mb-6">
-                                <h3 className="text-2xl font-black tracking-tight text-slate-800" style={{ fontFamily: 'var(--font-display)' }}>
-                                    Share Roadmap
-                                </h3>
-                                <button
-                                    onClick={() => setShareUrl("")}
-                                    className="p-2 rounded-full hover:bg-slate-100 transition-colors text-slate-400 hover:text-slate-600"
-                                >
-                                    <Trash2 size={20} className="rotate-45" />
-                                </button>
-                            </div>
-
-                            <p className="text-slate-500 text-sm leading-relaxed mb-8">
-                                Anyone with this link can view a read-only snapshot of your strategic priorities and admission roadmap.
-                            </p>
-
-                            <div className="share-link-box-modern flex items-center p-2 rounded-2xl bg-slate-50 border border-slate-200 focus-within:border-indigo-500/50 focus-within:ring-4 focus-within:ring-indigo-500/10 transition-all">
-                                <input
-                                    readOnly
-                                    value={shareUrl}
-                                    className="flex-1 bg-transparent border-none focus:ring-0 text-sm font-medium text-slate-600 px-3 truncate"
-                                />
-                                <button
-                                    onClick={copyToClipboard}
-                                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all
-                                        ${copySuccess
-                                            ? 'bg-green-500 text-white shadow-lg shadow-green-500/20'
-                                            : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-600/20'
-                                        }
-                                    `}
-                                >
-                                    {copySuccess ? <Check size={16} /> : <Copy size={16} />}
-                                    <span>{copySuccess ? 'Copied' : 'Copy'}</span>
-                                </button>
-                            </div>
-
-                            {copySuccess && (
-                                <p className="text-center text-xs font-bold text-green-600 mt-4 animate-in slide-in-from-bottom-2">
-                                    Link copied to clipboard!
-                                </p>
-                            )}
-                        </div>
-                    </GlassPanel>
-                </div>
-            )}
 
             <style jsx>{`
                 .application-board {
@@ -658,6 +673,11 @@ export default function ApplicationBoard() {
                 @keyframes modal-enter {
                     from { opacity: 0; transform: scale(0.95) translateY(20px); }
                     to { opacity: 1; transform: scale(1) translateY(0); }
+                }
+                .btn-share-roadmap.active {
+                    background: #e0e7ff;
+                    border-color: #818cf8;
+                    color: #4338ca;
                 }
             `}</style>
         </div>

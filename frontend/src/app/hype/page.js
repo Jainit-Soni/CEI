@@ -8,7 +8,8 @@ import Card from '@/components/Card';
 import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
 import { useToast } from "@/components/Toast";
-import { Search, Flame, ArrowUp, Zap, Lock, Filter } from 'lucide-react';
+import { Share2, TrendingUp, Trophy, ArrowRight, Activity, Users, MapPin, Zap, ChevronRight, Loader2, Sparkles, Heart } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
 import "@/app/colleges/page.css";
 
@@ -52,82 +53,113 @@ function AnimatedCounter({ value }) {
 // V19-PREMIUM COMPONENTS (Restored & Enhanced)
 // -----------------------------------------------------------------------------
 
-function PodiumCard({ college, rank, onVote, isVoting }) {
-    if (!college) return null;
-
+const PodiumCard = ({ college, rank, onVote, isVoting }) => {
     const isGold = rank === 1;
     const isSilver = rank === 2;
     const isBronze = rank === 3;
 
-    // Gradient Backgrounds (V31 Premium Solid)
+    // Standardized Premium Styles for Ultra-Refinement
+    let borderColor = "border-slate-200/60";
     let bgGradient = "bg-white";
-    if (isGold) bgGradient = "bg-gradient-to-br from-amber-50 via-white to-amber-50 border-amber-200/80 shadow-[0_20px_70px_-15px_rgba(245,158,11,0.4)]";
-    if (isSilver) bgGradient = "bg-gradient-to-br from-slate-50 via-white to-slate-50 border-slate-200/80 shadow-[0_20px_70px_-15px_rgba(148,163,184,0.3)]";
-    if (isBronze) bgGradient = "bg-gradient-to-br from-orange-50 via-white to-orange-50 border-orange-200/80 shadow-[0_20px_70px_-15px_rgba(253,186,116,0.3)]";
+    let accentColor = "text-slate-900";
+    let glowColor = "rgba(100, 116, 139, 0.1)";
+    let rankLabel = "";
+    let themeIcon = null;
 
-    return (
-        <div className={`relative group ${isGold ? 'order-2 -mt-10 z-20' : isSilver ? 'order-1 mt-4 z-10' : 'order-3 mt-8 z-0'}`}>
-            {/* Ambient Glow */}
-            <div
-                className="absolute inset-0 blur-3xl rounded-full opacity-60 pointer-events-none transition-all duration-1000 group-hover:opacity-100"
-                style={{
-                    background: isGold ? "rgba(245, 158, 11, 0.3)" : isSilver ? "rgba(148, 163, 184, 0.3)" : "rgba(253, 186, 116, 0.3)",
-                    transform: 'scale(1.2)'
-                }}
-            />
+    if (isGold) {
+        borderColor = "border-amber-200/80";
+        bgGradient = "bg-gradient-to-br from-amber-50 via-white to-amber-50";
+        accentColor = "text-amber-700";
+        glowColor = "rgba(245, 158, 11, 0.25)";
+        rankLabel = "Supreme Champion";
+        themeIcon = <Sparkles size={20} className="text-amber-500 animate-pulse" />;
+    } else if (isSilver) {
+        borderColor = "border-slate-200";
+        bgGradient = "bg-gradient-to-br from-slate-50 via-white to-indigo-50/30";
+        accentColor = "text-slate-700";
+        glowColor = "rgba(71, 85, 105, 0.15)";
+        rankLabel = "Elite Challenger";
+        themeIcon = <Activity size={20} className="text-slate-400" />;
+    } else if (isBronze) {
+        borderColor = "border-orange-200/50";
+        bgGradient = "bg-gradient-to-br from-orange-50/50 via-white to-orange-100/30";
+        accentColor = "text-orange-800";
+        glowColor = "rgba(234, 88, 12, 0.15)";
+        rankLabel = "Rising Legend";
+        themeIcon = <TrendingUp size={20} className="text-orange-400" />;
+    }
 
-            <div className={`relative flex flex-col items-center text-center p-8 rounded-[2.5rem] border backdrop-blur-3xl transition-all duration-500 group-hover:-translate-y-3
-                ${bgGradient}
-                ${isGold ? 'w-[340px] h-[440px] shadow-[0_20px_60px_-15px_rgba(245,158,11,0.3)]' : ''}
-                ${isSilver ? 'w-[300px] h-[390px] shadow-[0_20px_60px_-15px_rgba(148,163,184,0.2)]' : ''}
-                ${isBronze ? 'w-[300px] h-[370px] shadow-[0_20px_60px_-15px_rgba(253,186,116,0.2)]' : ''}
-            `}>
-                {/* RANK BADGE */}
-                <div className={`absolute -top-6 px-6 py-2 rounded-full text-xs font-bold tracking-widest shadow-lg uppercase
-                    ${isGold ? 'bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-white' : ''}
-                    ${isSilver ? 'bg-gradient-to-r from-slate-300 via-slate-400 to-slate-500 text-white' : ''}
-                    ${isBronze ? 'bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 text-white' : ''}
-                `}>
-                    {isGold ? 'Champion #1' : isSilver ? 'Silver #2' : 'Bronze #3'}
-                </div>
-
-                {/* CONTENT */}
-                <div className="flex-1 flex flex-col justify-center items-center w-full mt-4">
-                    <h3 className={`font-bold leading-tight line-clamp-2 mb-2 ${isGold ? 'text-2xl text-slate-800' : 'text-xl text-slate-700'}`}>
-                        {college.name}
-                    </h3>
-                    <div className="flex items-center gap-2 text-sm text-slate-500 font-medium mb-6">
-                        <span className="w-1 h-1 rounded-full bg-slate-300" />
-                        {college.location || "India"}
-                        <span className="w-1 h-1 rounded-full bg-slate-300" />
-                    </div>
-
-                    <div className="flex flex-col items-center gap-1 mb-8">
-                        <span className={`text-5xl font-black tracking-tighter ${isGold ? 'text-amber-500' : isSilver ? 'text-slate-500' : 'text-orange-500'}`}>
-                            <AnimatedCounter value={college.votes} />
-                        </span>
-                        <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Votes</span>
-                    </div>
-                </div>
-
-                {/* VOTE BUTTON */}
-                <button
-                    onClick={(e) => onVote(e, college)}
-                    disabled={isVoting}
-                    className={`absolute -bottom-6 flex items-center gap-2 px-8 py-4 rounded-full text-sm font-bold shadow-xl transition-all active:scale-90 hover:shadow-2xl overflow-hidden relative
-                        ${isGold ? 'bg-slate-900 text-white hover:bg-black' : 'bg-white text-slate-900 border border-slate-100 hover:bg-slate-50'}
-                    `}
-                >
-                    <ArrowUp size={16} className={isVoting ? 'animate-bounce' : ''} />
-                    {isVoting ? 'Voting...' : 'VOTE NOW'}
-
-                    {/* Ripple Effect Container */}
-                    <span className="absolute inset-0 rounded-full bg-white/20 scale-0 active:scale-150 transition-transform duration-300 origin-center pointer-events-none" />
-                </button>
-            </div>
+    if (!college) return (
+        <div className={`flex flex-col items-center justify-center p-8 rounded-[2.5rem] border-2 border-dashed border-slate-200 bg-slate-50/50 min-h-[450px] w-full`}>
+            <p className="text-slate-400 font-medium">Spot Open # {rank}</p>
         </div>
     );
-}
+
+    return (
+        <motion.div
+            whileHover={{ y: -12, scale: 1.01 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className={`relative flex flex-col p-8 rounded-[3rem] border-2 ${borderColor} ${bgGradient} transition-shadow duration-500 w-full min-h-[450px] group overflow-hidden`}
+            style={{
+                boxShadow: `0 20px 60px -15px ${glowColor}`,
+            }}
+        >
+            {/* Rank Badge */}
+            <div className="flex justify-between items-start mb-8">
+                <div className={`flex items-center gap-3 px-5 py-2 rounded-full font-bold text-sm tracking-tight ${isGold ? 'bg-amber-500 text-white' : 'bg-slate-100 text-slate-600'}`}>
+                    <span>Rank #{rank}</span>
+                    {isGold && <Trophy size={14} />}
+                </div>
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-2 group-hover:translate-x-0 duration-300">
+                    {themeIcon}
+                </div>
+            </div>
+
+            <div className="flex-1 flex flex-col justify-center text-center">
+                <p className={`text-[0.65rem] font-black uppercase tracking-[0.2em] mb-2 opacity-60 ${accentColor}`}>
+                    {rankLabel}
+                </p>
+                <div className="flex items-center justify-center gap-2 text-xs text-slate-400 font-bold uppercase tracking-widest mb-4">
+                    <MapPin size={10} />
+                    <span>{college.location || "India"}</span>
+                </div>
+                <h3 className="text-3xl font-black text-slate-900 leading-tight mb-6 group-hover:text-indigo-600 transition-colors" style={{ fontFamily: 'var(--font-display)' }}>
+                    {college.name}
+                </h3>
+
+                <div className="flex flex-col items-center gap-2">
+                    <span className="text-5xl font-black text-slate-900 tracking-tighter tabular-nums">
+                        <AnimatedCounter value={college.votes} />
+                    </span>
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Hype Points</span>
+                </div>
+            </div>
+
+            {/* Vote Action */}
+            <div className="mt-8 pt-6 border-t border-slate-100/80">
+                <motion.button
+                    whileTap={{ scale: 0.95 }}
+                    onClick={(e) => onVote(e, college)}
+                    disabled={isVoting}
+                    className={`w-full py-4 rounded-2xl font-black text-sm tracking-wide transition-all flex items-center justify-center gap-3 relative overflow-hidden group/btn
+                        ${isGold
+                            ? 'bg-amber-500 text-white shadow-lg shadow-amber-200 hover:bg-amber-600'
+                            : 'bg-slate-900 text-white hover:bg-black shadow-lg shadow-slate-200'
+                        }
+                    `}
+                >
+                    {isVoting ? <Loader2 size={18} className="animate-spin" /> : <Heart size={18} className="group-hover/btn:scale-125 transition-transform" />}
+                    <span>{isVoting ? 'BOOSTING...' : 'BOOST HYPE'}</span>
+                </motion.button>
+            </div>
+
+            {/* Subliminal Ranking Indicator */}
+            <div className="absolute bottom-2 right-8 text-[8rem] font-black text-slate-900/[0.03] pointer-events-none select-none -mb-8 mr-[-1rem]" style={{ fontFamily: 'var(--font-display)' }}>
+                {rank}
+            </div>
+        </motion.div>
+    );
+};
 
 function RankRow({ college, index, onVote, isVoting }) {
     return (
@@ -451,11 +483,15 @@ export default function HypePage() {
                         </GlassPanel>
                     </div>
 
-                    {/* 3. THE PODIUM (TOP 3) */}
+                    {/* 3. THE PODIUM (TOP 3) - STANDARDIZED & UNIFIED */}
                     {top3.length > 0 && (
-                        <div className="my-20 flex flex-col md:flex-row justify-center items-end gap-6 md:gap-10 min-h-[500px]">
+                        <div className="my-20 flex flex-col md:flex-row justify-center items-stretch gap-8 md:gap-12 min-h-[500px]">
                             {/* SILVER (2) */}
-                            {top3[1] && <PodiumCard college={top3[1]} rank={2} onVote={handleVote} isVoting={isVoting} />}
+                            {top3[1] && (
+                                <RevealOnScroll>
+                                    <PodiumCard college={top3[1]} rank={2} onVote={handleVote} isVoting={isVoting} />
+                                </RevealOnScroll>
+                            )}
 
                             {/* GOLD (1) */}
                             <RevealOnScroll>
@@ -463,7 +499,11 @@ export default function HypePage() {
                             </RevealOnScroll>
 
                             {/* BRONZE (3) */}
-                            {top3[2] && <PodiumCard college={top3[2]} rank={3} onVote={handleVote} isVoting={isVoting} />}
+                            {top3[2] && (
+                                <RevealOnScroll>
+                                    <PodiumCard college={top3[2]} rank={3} onVote={handleVote} isVoting={isVoting} />
+                                </RevealOnScroll>
+                            )}
                         </div>
                     )}
 
