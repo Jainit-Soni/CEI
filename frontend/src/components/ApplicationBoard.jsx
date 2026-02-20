@@ -23,6 +23,27 @@ export default function ApplicationBoard() {
     const [copySuccess, setCopySuccess] = useState(false);
     const { user } = useAuth();
 
+    // Core Ref for Glass Popover
+    const shareRef = useRef(null);
+
+    // Handle Click Outside for Popover
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (shareRef.current && !shareRef.current.contains(event.target)) {
+                setShareUrl("");
+            }
+        }
+
+        if (shareUrl) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [shareUrl]);
     // Load from LocalStorage on Mount
     useEffect(() => {
         const stored = localStorage.getItem("choice-filling-cart");
@@ -247,84 +268,78 @@ export default function ApplicationBoard() {
                 </div>
                 <div className="board-actions">
                     <button className="btn-clear-list" onClick={clearAll}>Clear All</button>
+                    import {useRef} from "react";
+                    // (Note: useRef is already imported at the top, just need to make sure the popover is attached to the right element)
+
+                    // ... skipping to the render ...
+
                     <button className="btn-download-report" onClick={exportPDF}>
                         <Download size={18} />
                         <span>Export PDF</span>
                     </button>
-                    <button
-                        className={`btn-share-roadmap ${shareUrl ? 'active' : ''}`}
-                        onClick={handleShare}
-                        disabled={isSharing}
-                    >
-                        {isSharing ? <Loader2 size={18} className="animate-spin" /> : <Share2 size={18} />}
-                        <span>{isSharing ? 'Generating...' : 'Share Roadmap'}</span>
-                    </button>
+
+                    {/* SHARE BUTTON & POPOVER ANCHOR */}
+                    <div className="relative" ref={shareRef}>
+                        <button
+                            className={`btn-share-roadmap ${shareUrl ? 'active' : ''}`}
+                            onClick={handleShare}
+                            disabled={isSharing}
+                        >
+                            {isSharing ? <Loader2 size={18} className="animate-spin" /> : <Share2 size={18} />}
+                            <span>{isSharing ? 'Generating...' : 'Share Roadmap'}</span>
+                        </button>
+
+                        {/* PREMIUM GLASS POPOVER (Phase 19 Pivot) */}
+                        <AnimatePresence>
+                            {shareUrl && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                    transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                                    className="absolute right-0 top-full mt-4 z-[100] w-[340px] sm:w-[420px]"
+                                >
+                                    <GlassPanel variant="subtle" className="!p-5 !rounded-3xl border-indigo-100/60 bg-white/95 backdrop-blur-2xl shadow-[0_20px_40px_-15px_rgba(79,70,229,0.2)]">
+
+                                        {/* Header */}
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="w-10 h-10 shrink-0 rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-md shadow-indigo-200">
+                                                <Sparkles className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-base font-black text-slate-800 tracking-tight leading-tight" style={{ fontFamily: 'var(--font-display)' }}>Share Access</h4>
+                                                <p className="text-[11px] text-slate-500 font-medium">Read-only link generated.</p>
+                                            </div>
+                                        </div>
+
+                                        {/* Pill-Shaped Link Box */}
+                                        <div className="flex items-center p-1.5 rounded-[1.25rem] bg-slate-50 border border-slate-200 focus-within:border-indigo-400 focus-within:ring-[3px] focus-within:ring-indigo-100 transition-all">
+                                            <div className="flex-1 px-3 overflow-hidden">
+                                                <div className="truncate text-xs font-semibold text-slate-600">
+                                                    {shareUrl}
+                                                </div>
+                                            </div>
+
+                                            <button
+                                                onClick={copyToClipboard}
+                                                className={`flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-[11px] font-black uppercase tracking-wider transition-all active:scale-95 shrink-0
+                                                    ${copySuccess
+                                                        ? 'bg-green-500 text-white shadow-md shadow-green-200'
+                                                        : 'bg-slate-900 text-white hover:bg-black shadow-md shadow-slate-200'
+                                                    }
+                                                `}
+                                            >
+                                                {copySuccess ? <Check size={14} /> : <Copy size={14} />}
+                                                <span>{copySuccess ? 'Copied' : 'Copy'}</span>
+                                            </button>
+                                        </div>
+                                    </GlassPanel>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
                 </div>
             </div>
-
-            {/* PRE-COMPUTED PREMIUM INLINE SHARE (REPLACES MODAL) */}
-            <AnimatePresence>
-                {shareUrl && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0, marginBottom: 0 }}
-                        animate={{ height: 'auto', opacity: 1, marginBottom: 48 }}
-                        exit={{ height: 0, opacity: 0, marginBottom: 0 }}
-                        className="overflow-hidden"
-                    >
-                        <GlassPanel variant="subtle" className="!p-6 md:!p-8 !rounded-3xl border-indigo-100/50 bg-gradient-to-r from-indigo-50/40 via-white/40 to-indigo-50/40 backdrop-blur-xl shadow-2xl shadow-indigo-100/20 relative">
-                            {/* Absolute Discard Button for Cleaner Layout */}
-                            <button
-                                onClick={() => setShareUrl("")}
-                                className="absolute top-4 right-4 md:top-6 md:right-6 p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-all duration-300"
-                                title="Discard Link"
-                            >
-                                <Trash2 size={20} />
-                            </button>
-
-                            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pr-10 md:pr-14">
-                                {/* Header Section */}
-                                <div className="flex items-center gap-4 md:gap-5 min-w-0">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-[1.25rem] bg-indigo-600 flex items-center justify-center text-white shadow-lg shadow-indigo-200">
-                                        <Sparkles className="w-6 h-6 md:w-7 md:h-7" />
-                                    </div>
-                                    <div className="space-y-0.5 min-w-0">
-                                        <h4 className="text-lg md:text-xl font-black text-slate-800 tracking-tight truncate" style={{ fontFamily: 'var(--font-display)' }}>Share Access Generated</h4>
-                                        <p className="text-xs text-slate-500 font-medium leading-relaxed truncate md:whitespace-normal">Anyone with this link can view your strategic roadmap in read-only mode.</p>
-                                    </div>
-                                </div>
-
-                                {/* Link Generation Box */}
-                                <div className="w-full lg:w-auto lg:max-w-md xl:max-w-lg shrink-0">
-                                    <div className="share-link-box-modern flex flex-wrap sm:flex-nowrap items-center p-1.5 md:p-2 rounded-2xl bg-white/80 border-2 border-slate-100 focus-within:border-indigo-400 focus-within:ring-[6px] focus-within:ring-indigo-100 transition-all duration-500 gap-2">
-                                        <div className="flex-1 px-3 py-2 sm:py-0 overflow-hidden min-w-[200px]">
-                                            <motion.div
-                                                initial={{ width: 0 }}
-                                                animate={{ width: '100%' }}
-                                                transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-                                                className="truncate text-sm font-bold text-slate-600 tracking-tight"
-                                            >
-                                                {shareUrl}
-                                            </motion.div>
-                                        </div>
-                                        <button
-                                            onClick={copyToClipboard}
-                                            className={`flex justify-center items-center gap-2 px-6 py-3 rounded-[0.85rem] text-[11px] font-black uppercase tracking-widest transition-all active:scale-95 shrink-0 w-full sm:w-auto
-                                                ${copySuccess
-                                                    ? 'bg-green-500 text-white shadow-lg shadow-green-200'
-                                                    : 'bg-slate-900 text-white hover:bg-black shadow-lg shadow-slate-200'
-                                                }
-                                            `}
-                                        >
-                                            {copySuccess ? <Check size={14} /> : <Copy size={14} />}
-                                            <span>{copySuccess ? 'Copied' : 'Copy Link'}</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </GlassPanel>
-                    </motion.div>
-                )}
-            </AnimatePresence>
 
             <div className="board-content">
                 <DragDropContext onDragEnd={onDragEnd}>
