@@ -40,7 +40,7 @@ git push -u origin main --force
     - `NEXT_PUBLIC_API_URL`: Paste the Backend URL from Step 2 (e.g., `https://cmat-backend.vercel.app/api`).
       *Note: Add `/api` at the end if your backend routes are prefixed with /api, otherwise just the base URL.*
 6.  Click **Deploy**.
-
+ok
 ---
 
 ## Troubleshooting "404 Not Found"
