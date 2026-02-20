@@ -51,13 +51,17 @@ const corsOptions = {
 
     const isAllowed = allowedOrigins.some(allowed => {
       if (allowed === "*") return true;
-      return allowed.toLowerCase() === origin.toLowerCase().replace(/\/$/, "");
+      const normalizedQuery = origin.toLowerCase().replace(/\/$/, "");
+      const normalizedAllowed = allowed.toLowerCase().replace(/\/$/, "");
+      return normalizedAllowed === normalizedQuery;
     });
 
     if (isAllowed) {
       callback(null, true);
     } else {
       console.warn(`CORS Reject: Origin [${origin}] not in allowed list`);
+      // For local development or non-critical errors, we might want to be more lenient
+      // but strictly following the current logic:
       callback(null, false);
     }
   },
