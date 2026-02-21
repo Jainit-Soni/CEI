@@ -6,11 +6,10 @@ import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
 import { useToast } from "@/components/Toast";
 import {
-    Zap, MapPin, Loader2, Trophy, Flame, ShieldCheck,
-    TrendingUp, Plus, Search, Crown, Activity, Sparkles
+    Zap, MapPin, Loader2, Trophy, Flame,
+    TrendingUp, Plus, Search, Activity
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { RevealOnScroll } from "@/lib/useIntersectionObserver";
 import "./page.css";
 
 // ─────────────────────────────────────────────
@@ -37,43 +36,47 @@ function AnimatedNumber({ value }) {
 }
 
 // ─────────────────────────────────────────────
-// ARENA PODIUM CARD
+// CRYSTAL PILLAR CARD
 // ─────────────────────────────────────────────
-function ArenaCard({ col, rank, total, onVote, isVoting }) {
+function CrystalPillar({ col, rank, total, onVote, isVoting }) {
     if (!col) return null;
     const pct = total > 0 ? (col.votes / total) * 100 : 0;
-    const isFirst = rank === 1;
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ delay: rank * 0.15, duration: 0.6 }}
-            className={`stage-card group ${isFirst ? 'border-amber-500/20' : ''}`}
+            initial={{ opacity: 0, scale: 0.9, rotateX: 20 }}
+            animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+            transition={{ delay: rank * 0.1, duration: 0.8 }}
+            className={`crystal-pillar rank-${rank}`}
         >
-            <div className={`card-rank-badge rank-${rank}-badge`}>{rank}</div>
+            <div className="crystal-rank">{rank}</div>
 
-            <div className="relative z-10">
-                <div className="stage-card-loc">
-                    <MapPin size={12} /> {col.location || "India"}
+            <div className="relative z-10 flex flex-col items-center">
+                <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-4">
+                    <MapPin size={10} /> {col.location || "India"}
                 </div>
-                <h3 className="stage-card-title mt-2">
+
+                <h3 className="pillar-title">
                     {col.name}
                 </h3>
 
-                <div className="arena-score-block">
-                    <div className="text-[10px] uppercase tracking-[0.3em] font-black text-slate-500 mb-1">
-                        Battle Power
-                    </div>
-                    <div className="arena-score-val">
+                <div className="pillar-score-wrap">
+                    <div className="pillar-score">
                         <AnimatedNumber value={col.votes} />
                     </div>
-                    <div className="arena-progress-track">
+                </div>
+
+                <div className="w-full mb-8">
+                    <div className="flex justify-between text-[10px] font-black text-slate-400 mb-2 uppercase">
+                        <span>Market Share</span>
+                        <span>{pct.toFixed(1)}%</span>
+                    </div>
+                    <div className="pillar-progress-track">
                         <motion.div
-                            className={`arena-progress-bar bar-${rank}`}
+                            className={`pillar-progress-bar color-${rank}`}
                             initial={{ width: 0 }}
                             animate={{ width: `${Math.max(pct, 5)}%` }}
-                            transition={{ delay: 0.8, duration: 1.5 }}
+                            transition={{ delay: 0.5, duration: 1.2 }}
                         />
                     </div>
                 </div>
@@ -81,10 +84,10 @@ function ArenaCard({ col, rank, total, onVote, isVoting }) {
                 <button
                     onClick={(e) => onVote(e, col)}
                     disabled={isVoting}
-                    className={`hype-trigger ${isFirst ? 'rank1-btn' : ''}`}
+                    className="crystal-btn"
                 >
-                    {isVoting ? <Loader2 size={18} className="animate-spin" /> : <Zap size={18} className="fill-current" />}
-                    <span>Inject Hype</span>
+                    {isVoting ? <Loader2 size={16} className="animate-spin" /> : <Zap size={16} className="fill-current" />}
+                    <span>Push Hype</span>
                 </button>
             </div>
         </motion.div>
@@ -92,27 +95,27 @@ function ArenaCard({ col, rank, total, onVote, isVoting }) {
 }
 
 // ─────────────────────────────────────────────
-// ARENA LIST ROW
+// CRYSTAL LIST ROW
 // ─────────────────────────────────────────────
-function ArenaRow({ col, rank, onVote, isVoting }) {
+function CrystalRow({ col, rank, onVote, isVoting }) {
     return (
         <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="arena-list-item"
+            className="crystal-row"
         >
-            <div className="arena-list-rank">#{rank}</div>
-            <div className="arena-list-name">{col.name}</div>
-            <div className="arena-list-score">
+            <div className="row-rank">#{rank}</div>
+            <div className="row-name">{col.name}</div>
+            <div className="row-score">
                 <AnimatedNumber value={col.votes} />
             </div>
             <button
-                className="arena-list-btn"
+                className="row-add"
                 onClick={(e) => onVote(e, col)}
                 disabled={isVoting}
             >
-                {isVoting ? <Loader2 size={20} className="animate-spin" /> : <Plus size={24} />}
+                {isVoting ? <Loader2 size={16} className="animate-spin" /> : <Plus size={18} />}
             </button>
         </motion.div>
     );
@@ -121,7 +124,7 @@ function ArenaRow({ col, rank, onVote, isVoting }) {
 // ─────────────────────────────────────────────
 // MAIN PAGE
 // ─────────────────────────────────────────────
-export default function FanWarsTheArena() {
+export default function FanWarsTheCrystalArena() {
     const { user, signInWithGoogle } = useAuth();
     const { addToast } = useToast();
 
@@ -130,7 +133,7 @@ export default function FanWarsTheArena() {
     const [searchQuery, setSearchQuery] = useState("");
     const [debQuery, setDebQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-    const [showHypeLine, setShowHypeLine] = useState(false);
+    const [burst, setBurst] = useState(false);
     const searchRef = useRef(null);
 
     useEffect(() => {
@@ -163,8 +166,8 @@ export default function FanWarsTheArena() {
         }
 
         setIsVoting(true);
-        setShowHypeLine(true);
-        setTimeout(() => setShowHypeLine(false), 1000);
+        setBurst(true);
+        setTimeout(() => setBurst(false), 800);
 
         const userName = user.displayName || user.email?.split('@')[0] || "Student";
         const payload = {
@@ -190,11 +193,11 @@ export default function FanWarsTheArena() {
 
         try {
             await postHypeVote(payload);
-            addToast(`Hype Surge: ${col.name} +1`, "success");
+            addToast(`Crystal Surge: ${col.name} +1`, "success");
             setSearchQuery("");
             setSearchResults([]);
         } catch (err) {
-            addToast("Connection error, retrying...", "error");
+            addToast("Sync error, retrying...", "error");
             fetchHypeStats().then(setStats);
         } finally {
             setIsVoting(false);
@@ -206,43 +209,47 @@ export default function FanWarsTheArena() {
     const total = stats.leaderboard.reduce((a, c) => a + (c.votes || 0), 0);
 
     return (
-        <div className="arena-wrapper selection:bg-cyan-500/30">
-            <div className="arena-nebula" />
-            <div className="arena-grid-mesh" />
-
+        <div className="crystal-wrapper">
             <Container className="relative z-10 pt-40">
-                {/* HERO STATS */}
+
+                {/* HERO SECTION */}
                 <div className="flex flex-col items-center text-center">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="flex items-center gap-4 mb-12"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="flex items-center gap-3 mb-8 bg-black/5 px-4 py-2 rounded-full border border-black/5"
                     >
-                        <div className="arena-stat-pod">
-                            <Flame size={16} /> <i><AnimatedNumber value={total} /></i> Vol.
-                        </div>
-                        <div className="arena-stat-pod">
-                            <Trophy size={16} /> <i>{stats.leaderboard.length}</i> Active
-                        </div>
+                        <TrendingUp size={16} className="text-slate-400" />
+                        <span className="text-xs font-black uppercase tracking-widest text-slate-500">Live Popularity Arena</span>
                     </motion.div>
 
-                    <h1 className="arena-title">
+                    <h1 className="crystal-title">
                         Fan Wars
                     </h1>
-                    <p className="arena-subtitle">
-                        The definitive arena for institution rankings. <br />
-                        Witness the real-time power struggle of India&apos;s campuses.
+                    <p className="crystal-subtitle">
+                        India&apos;s most prestigious campus ranking. Use your influence to push your institution to the diamond rankings.
                     </p>
+
+                    <div className="flex items-center gap-12 mt-12">
+                        <div className="text-center">
+                            <div className="text-3xl font-black text-slate-800"><AnimatedNumber value={total} /></div>
+                            <div className="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Total Hype Volume</div>
+                        </div>
+                        <div className="w-[1px] h-10 bg-slate-200" />
+                        <div className="text-center">
+                            <div className="text-3xl font-black text-slate-800">{stats.leaderboard.length}</div>
+                            <div className="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Active Contenders</div>
+                        </div>
+                    </div>
                 </div>
 
-                {/* THE SEARCH */}
-                <div className="arena-search-container" ref={searchRef}>
-                    <div className="arena-search-box">
-                        <Search className="text-slate-500" size={24} />
+                {/* THE DIAMOND SEARCH */}
+                <div className="crystal-search-wrap" ref={searchRef}>
+                    <div className="diamond-search">
+                        <Search className="text-slate-300" size={24} />
                         <input
                             type="text"
-                            className="arena-search-input"
-                            placeholder="Find your campus to boost..."
+                            placeholder="Find any institution to boost..."
                             value={searchQuery}
                             onChange={e => setSearchQuery(e.target.value)}
                         />
@@ -251,71 +258,71 @@ export default function FanWarsTheArena() {
                     <AnimatePresence>
                         {searchQuery && (
                             <motion.div
-                                initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                                initial={{ opacity: 0, scale: 0.98, y: -10 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.95 }}
-                                className="absolute top-full left-0 right-0 mt-4 bg-slate-900/95 border border-white/10 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-3xl"
+                                exit={{ opacity: 0, scale: 0.98 }}
+                                className="absolute top-full left-0 right-0 mt-4 bg-white border border-black/5 rounded-2xl shadow-2xl overflow-hidden z-50"
                             >
                                 {searchResults.length > 0 ? searchResults.map(c => (
                                     <div
                                         key={c.id}
                                         onClick={e => handleVote(e, c)}
-                                        className="p-5 flex items-center justify-between hover:bg-white/5 cursor-pointer border-b border-white/5 last:border-0 group"
+                                        className="p-5 flex items-center justify-between hover:bg-slate-50 cursor-pointer border-b border-slate-100 last:border-0 group"
                                     >
                                         <div>
-                                            <div className="font-bold text-white group-hover:text-cyan-400 transition-colors">{c.name}</div>
-                                            <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">
-                                                <MapPin size={10} /> {c.location}
+                                            <div className="font-bold text-slate-900">{c.name}</div>
+                                            <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">
+                                                {c.location}
                                             </div>
                                         </div>
-                                        <Plus size={20} className="text-slate-500 group-hover:text-white" />
+                                        <Plus size={20} className="text-slate-300 group-hover:text-black transition-colors" />
                                     </div>
                                 )) : (
-                                    <div className="p-8 text-center text-slate-500 font-bold">No Match Detected</div>
+                                    <div className="p-8 text-center text-slate-400 font-bold">Searching for Arena entry...</div>
                                 )}
                             </motion.div>
                         )}
                     </AnimatePresence>
                 </div>
 
-                {/* THE STAGE (Top 3) */}
-                <div className="modern-podium">
+                {/* THE CRYSTAL PODIUM */}
+                <div className="crystal-podium">
                     {/* #2 */}
-                    <div className="order-2 lg:order-1">
-                        {top3[1] && <ArenaCard col={top3[1]} rank={2} total={total} onVote={handleVote} isVoting={isVoting} />}
+                    <div className="order-2 lg:order-1 self-end">
+                        {top3[1] && <CrystalPillar col={top3[1]} rank={2} total={total} onVote={handleVote} isVoting={isVoting} />}
                     </div>
                     {/* #1 */}
-                    <div className="order-1 lg:order-2">
-                        {top3[0] && <ArenaCard col={top3[0]} rank={1} total={total} onVote={handleVote} isVoting={isVoting} />}
+                    <div className="order-1 lg:order-2 self-end">
+                        {top3[0] && <CrystalPillar col={top3[0]} rank={1} total={total} onVote={handleVote} isVoting={isVoting} />}
                     </div>
                     {/* #3 */}
-                    <div className="order-3 lg:order-3">
-                        {top3[2] && <ArenaCard col={top3[2]} rank={3} total={total} onVote={handleVote} isVoting={isVoting} />}
+                    <div className="order-3 lg:order-3 self-end">
+                        {top3[2] && <CrystalPillar col={top3[2]} rank={3} total={total} onVote={handleVote} isVoting={isVoting} />}
                     </div>
                 </div>
 
-                {/* THE LIST */}
+                {/* THE CRYSTAL LIST */}
                 {rest.length > 0 && (
-                    <div className="contender-grid">
-                        <div className="flex items-center gap-4 mb-8">
-                            <Activity size={24} className="text-cyan-500" />
-                            <h2 className="text-2xl font-black uppercase tracking-tighter">Rising Potential</h2>
+                    <div className="crystal-list">
+                        <div className="flex items-center gap-3 mb-6 px-2">
+                            <Activity size={20} className="text-slate-400" />
+                            <h2 className="text-lg font-black uppercase tracking-tighter text-slate-800">Rising Contenders</h2>
                         </div>
                         {rest.map((c, i) => (
-                            <ArenaRow key={c.id} col={c} rank={i + 4} onVote={handleVote} isVoting={isVoting} />
+                            <CrystalRow key={c.id} col={c} rank={i + 4} onVote={handleVote} isVoting={isVoting} />
                         ))}
                     </div>
                 )}
             </Container>
 
-            {/* Shockwave Visual Feedback */}
+            {/* Shine Burst Effect */}
             <AnimatePresence>
-                {showHypeLine && (
+                {burst && (
                     <motion.div
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 4 }}
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 2 }}
                         exit={{ opacity: 0 }}
-                        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-[9999] w-[100vw] h-[100vh] bg-white/5 rounded-full filter blur-3xl border-8 border-cyan-500/20"
+                        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-[9999] w-[100vw] h-[100vh] bg-white/40 rounded-full filter blur-3xl mix-blend-overlay"
                     />
                 )}
             </AnimatePresence>
