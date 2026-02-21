@@ -21,18 +21,40 @@ function AnimatedNumber({ value }) {
     useEffect(() => {
         const start = display, end = value;
         if (start === end) return;
-        const dur = 800;
+        const dur = 600; // snappier
         const startTime = performance.now();
         const tick = (now) => {
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / dur, 1);
-            const ease = 1 - Math.pow(1 - progress, 3);
-            setDisplay(Math.floor(start + (end - start) * ease));
+            const ease = 0.16, // faster start
+                easeFunc = 1 - Math.pow(1 - progress, 4);
+            setDisplay(Math.floor(start + (end - start) * easeFunc));
             if (progress < 1) requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
     }, [value]);
     return <span className="tabular-nums">{display.toLocaleString()}</span>;
+}
+
+function LiveTicker({ votes }) {
+    if (!votes || votes.length === 0) return null;
+    // Double for seamless loop
+    const double = [...votes, ...votes];
+    return (
+        <div className="arena-ticker-wrap">
+            <div className="ticker-track">
+                {double.map((v, i) => (
+                    <div key={i} className="ticker-item">
+                        <Flame size={14} />
+                        <b>{v.userName}</b>
+                        <span>pushed hype for</span>
+                        <i>{v.collegeName}</i>
+                        <span className="mx-2 text-slate-300">•</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 }
 
 // ─────────────────────────────────────────────
@@ -53,7 +75,7 @@ function CrystalPillar({ col, rank, total, onVote, isVoting }) {
 
             <div className="relative z-10 flex flex-col items-center">
                 <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-4">
-                    <MapPin size={10} /> {col.location || "India"}
+                    <MapPin size={10} /> {col.location?.split(',')[0] || "Campus"}
                 </div>
 
                 <h3 className="pillar-title">
@@ -66,11 +88,7 @@ function CrystalPillar({ col, rank, total, onVote, isVoting }) {
                     </div>
                 </div>
 
-                <div className="w-full mb-8">
-                    <div className="flex justify-between text-[10px] font-black text-slate-400 mb-2 uppercase">
-                        <span>Market Share</span>
-                        <span>{pct.toFixed(1)}%</span>
-                    </div>
+                <div className="w-full">
                     <div className="pillar-progress-track">
                         <motion.div
                             className={`pillar-progress-bar color-${rank}`}
@@ -184,7 +202,10 @@ export default function FanWarsTheCrystalArena() {
             if (idx >= 0) lb[idx] = { ...lb[idx], votes: lb[idx].votes + 1 };
             else lb.push({ id: collegeId, name: col.name, votes: 1, location: col.location });
             lb.sort((a, b) => b.votes - a.votes);
-            return { ...prev, leaderboard: lb };
+
+            // Add to ticker optimistically
+            const newTicker = [{ userName, collegeName: col.name }, ...prev.recentVotes].slice(0, 10);
+            return { ...prev, leaderboard: lb, recentVotes: newTicker };
         });
 
         const sv = JSON.parse(localStorage.getItem('hype_v3_votes') || '[]');
@@ -230,15 +251,19 @@ export default function FanWarsTheCrystalArena() {
                         India&apos;s most prestigious campus ranking. Use your influence to push your institution to the diamond rankings.
                     </p>
 
-                    <div className="flex items-center gap-12 mt-12">
+                    <div className="flex items-center gap-12 mt-12 mb-12">
                         <div className="text-center">
-                            <div className="text-3xl font-black text-slate-800"><AnimatedNumber value={total} /></div>
-                            <div className="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Total Hype Volume</div>
+                            <div className="text-5xl font-black text-slate-800 mb-5">
+                                <AnimatedNumber value={total} />
+                            </div>
+                            <div className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em]">Total Hype Volume</div>
                         </div>
-                        <div className="w-[1px] h-10 bg-slate-200" />
+                        <div className="w-[1px] h-16 bg-slate-200" />
                         <div className="text-center">
-                            <div className="text-3xl font-black text-slate-800">{stats.leaderboard.length}</div>
-                            <div className="text-[10px] uppercase font-bold text-slate-400 tracking-tighter">Active Contenders</div>
+                            <div className="text-5xl font-black text-slate-800 mb-5">
+                                {stats.leaderboard.length}
+                            </div>
+                            <div className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em]">Active Contenders</div>
                         </div>
                     </div>
                 </div>
@@ -267,15 +292,17 @@ export default function FanWarsTheCrystalArena() {
                                     <div
                                         key={c.id}
                                         onClick={e => handleVote(e, c)}
-                                        className="p-5 flex items-center justify-between hover:bg-slate-50 cursor-pointer border-b border-slate-100 last:border-0 group"
+                                        className="p-6 flex items-center justify-between hover:bg-slate-50 cursor-pointer border-b border-slate-100 last:border-0 group gap-4"
                                     >
-                                        <div>
-                                            <div className="font-bold text-slate-900">{c.name}</div>
-                                            <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">
-                                                {c.location}
+                                        <div className="flex-1">
+                                            <div className="font-bold text-slate-900 text-lg mb-1">{c.name}</div>
+                                            <div className="text-[11px] text-slate-500 font-medium leading-tight">
+                                                {c.location || c.city + ", " + c.state}
                                             </div>
                                         </div>
-                                        <Plus size={20} className="text-slate-300 group-hover:text-black transition-colors" />
+                                        <div className="row-add">
+                                            <Plus size={20} />
+                                        </div>
                                     </div>
                                 )) : (
                                     <div className="p-8 text-center text-slate-400 font-bold">Searching for Arena entry...</div>
@@ -284,6 +311,9 @@ export default function FanWarsTheCrystalArena() {
                         )}
                     </AnimatePresence>
                 </div>
+
+                {/* LIVE VOTE FEED */}
+                <LiveTicker votes={stats.recentVotes} />
 
                 {/* THE CRYSTAL PODIUM */}
                 <div className="crystal-podium">
