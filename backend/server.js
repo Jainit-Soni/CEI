@@ -21,6 +21,7 @@ const app = express();
 
 
 // Security & Infrastructure Middleware
+app.set("trust proxy", 1); // Trust Vercel's reverse proxy for accurate client IPs
 app.use(helmet()); // Secure HTTP headers
 app.use(compression()); // Enable gzip compression
 
@@ -80,7 +81,7 @@ app.use(express.json());
 // Rate Limiting
 const globalLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 200, // Relaxed from 100 for production deployment testing
+  max: 1000,
   standardHeaders: true,
   legacyHeaders: false,
 });
@@ -89,14 +90,14 @@ app.use("/api", globalLimiter);
 // Speed Limiter (Throttling)
 const speedLimiter = slowDown({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  delayAfter: 250, // allow 250 requests per 15 minutes (relaxed from 50 for smoother exploration)
-  delayMs: () => 500 // begin adding 500ms of delay per request above limits
+  delayAfter: 500,
+  delayMs: () => 500
 });
 
 // Rate limiting configuration
 const standardLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
+  max: 500, // Limit each IP to 500 requests per windowMs
   message: "Too many requests from this IP, please try again later.",
   standardHeaders: true,
   legacyHeaders: false,
