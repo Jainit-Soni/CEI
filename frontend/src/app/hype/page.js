@@ -6,105 +6,85 @@ import { fetchHypeStats, postHypeVote, searchAll } from '@/lib/api';
 import { useAuth } from '@/lib/AuthContext';
 import { useToast } from "@/components/Toast";
 import {
-    Zap, MapPin, Loader2, Trophy, Flame, ShieldCheck, TrendingUp, Plus, Search
+    Zap, MapPin, Loader2, Trophy, Flame, ShieldCheck,
+    TrendingUp, Plus, Search, Crown, Activity, Sparkles
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
 import "./page.css";
 
 // ─────────────────────────────────────────────
-// CUSTOM HOOKS
+// REUSABLE COMPONENTS
 // ─────────────────────────────────────────────
-function usePrevious(value) {
-    const ref = useRef();
-    useEffect(() => { ref.current = value; });
-    return ref.current;
-}
 
-// ─────────────────────────────────────────────
-// ANIMATED COUNTER
-// ─────────────────────────────────────────────
-function AnimatedCounter({ value, className = "" }) {
+function AnimatedNumber({ value }) {
     const [display, setDisplay] = useState(value);
     useEffect(() => {
         const start = display, end = value;
         if (start === end) return;
-        const t0 = Date.now(), dur = 700;
-        const tick = () => {
-            const p = Math.min((Date.now() - t0) / dur, 1);
-            const e = 1 - Math.pow(1 - p, 4);
-            setDisplay(Math.floor(start + (end - start) * e));
-            if (p < 1) requestAnimationFrame(tick);
+        const dur = 800;
+        const startTime = performance.now();
+        const tick = (now) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / dur, 1);
+            const ease = 1 - Math.pow(1 - progress, 3);
+            setDisplay(Math.floor(start + (end - start) * ease));
+            if (progress < 1) requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
     }, [value]);
-    return <span className={`tabular-nums ${className}`}>{display.toLocaleString()}</span>;
+    return <span className="tabular-nums">{display.toLocaleString()}</span>;
 }
 
 // ─────────────────────────────────────────────
-// NEXUS PODIUM CARD
+// ARENA PODIUM CARD
 // ─────────────────────────────────────────────
-function NexusPodiumCard({ college, rank, totalVotes, onVote, isVoting }) {
-    if (!college) return null;
-
+function ArenaCard({ col, rank, total, onVote, isVoting }) {
+    if (!col) return null;
+    const pct = total > 0 ? (col.votes / total) * 100 : 0;
     const isFirst = rank === 1;
-    const pct = totalVotes > 0 ? (college.votes / totalVotes) * 100 : 0;
-
-    // Aesthetic Maps
-    const posClass = rank === 1 ? "podium-rank-1" : rank === 2 ? "podium-rank-2" : "podium-rank-3";
-    const badgeClass = rank === 1 ? "badge-1" : rank === 2 ? "badge-2" : "badge-3";
-    const fillClass = rank === 1 ? "fill-1" : rank === 2 ? "fill-2" : "fill-3";
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: rank * 0.15, duration: 0.8, type: "spring", stiffness: 100 }}
-            className={`podium-card-wrapper ${posClass}`}
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: rank * 0.15, duration: 0.6 }}
+            className={`stage-card group ${isFirst ? 'border-amber-500/20' : ''}`}
         >
-            <div className="nexus-glass-card">
-                <div className={`nexus-rank-badge ${badgeClass}`}>#{rank}</div>
+            <div className={`card-rank-badge rank-${rank}-badge`}>{rank}</div>
 
-                <h3 className="text-xl font-bold text-slate-900 mt-4 pr-12 leading-tight">
-                    {college.name}
+            <div className="relative z-10">
+                <div className="stage-card-loc">
+                    <MapPin size={12} /> {col.location || "India"}
+                </div>
+                <h3 className="stage-card-title mt-2">
+                    {col.name}
                 </h3>
 
-                <div className="flex items-center gap-1.5 mt-3 text-xs font-semibold text-slate-500 uppercase tracking-widest">
-                    <MapPin size={14} className="text-indigo-400" />
-                    {college.location || "India"}
-                </div>
-
-                <div className="mt-8">
-                    <div className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">
-                        Global Hype Score
+                <div className="arena-score-block">
+                    <div className="text-[10px] uppercase tracking-[0.3em] font-black text-slate-500 mb-1">
+                        Battle Power
                     </div>
-                    <div className="nexus-vote-count">
-                        <AnimatedCounter value={college.votes} />
+                    <div className="arena-score-val">
+                        <AnimatedNumber value={col.votes} />
                     </div>
-                </div>
-
-                <div className="mt-4 mb-6">
-                    <div className="flex justify-between text-xs font-bold text-slate-500 mb-2">
-                        <span>Market Share</span>
-                        <span>{pct.toFixed(1)}%</span>
-                    </div>
-                    <div className="nexus-progress-bg">
+                    <div className="arena-progress-track">
                         <motion.div
-                            className={`nexus-progress-fill ${fillClass}`}
+                            className={`arena-progress-bar bar-${rank}`}
                             initial={{ width: 0 }}
-                            animate={{ width: `${Math.min(pct * 2, 100)}%` }} // *2 for visual impact
-                            transition={{ delay: 1, duration: 1.5, ease: "easeOut" }}
+                            animate={{ width: `${Math.max(pct, 5)}%` }}
+                            transition={{ delay: 0.8, duration: 1.5 }}
                         />
                     </div>
                 </div>
 
                 <button
-                    onClick={(e) => onVote(e, college)}
+                    onClick={(e) => onVote(e, col)}
                     disabled={isVoting}
-                    className={`nexus-vote-btn ${isVoting ? 'btn-disabled' : 'btn-primary'}`}
+                    className={`hype-trigger ${isFirst ? 'rank1-btn' : ''}`}
                 >
-                    {isVoting ? <Loader2 className="animate-spin" size={20} /> : <Zap size={20} className="fill-current" />}
-                    Inject Hype
+                    {isVoting ? <Loader2 size={18} className="animate-spin" /> : <Zap size={18} className="fill-current" />}
+                    <span>Inject Hype</span>
                 </button>
             </div>
         </motion.div>
@@ -112,76 +92,53 @@ function NexusPodiumCard({ college, rank, totalVotes, onVote, isVoting }) {
 }
 
 // ─────────────────────────────────────────────
-// NEXUS CONTENDER ROW
+// ARENA LIST ROW
 // ─────────────────────────────────────────────
-function NexusContenderRow({ college, rank, onVote, isVoting }) {
-    const prev = usePrevious(college.votes);
-    const [flash, setFlash] = useState(false);
-
-    useEffect(() => {
-        if (prev !== undefined && college.votes > prev) {
-            setFlash(true);
-            const t = setTimeout(() => setFlash(false), 1000);
-            return () => clearTimeout(t);
-        }
-    }, [college.votes, prev]);
-
+function ArenaRow({ col, rank, onVote, isVoting }) {
     return (
         <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            className={`nexus-list-item ${flash ? 'row-flash' : ''}`}
+            viewport={{ once: true }}
+            className="arena-list-item"
         >
-            <div className="nexus-list-rank">
-                #{rank}
+            <div className="arena-list-rank">#{rank}</div>
+            <div className="arena-list-name">{col.name}</div>
+            <div className="arena-list-score">
+                <AnimatedNumber value={col.votes} />
             </div>
-
-            <div className="nexus-list-content">
-                <div className="nexus-list-title">{college.name}</div>
-                <div className="flex items-center gap-1.5 text-xs font-bold text-slate-400 uppercase tracking-widest">
-                    <MapPin size={12} className="text-slate-300" /> {college.location || "India"}
-                </div>
-            </div>
-
-            <div className="nexus-list-stats">
-                <AnimatedCounter value={college.votes} />
-            </div>
-
             <button
-                className="nexus-list-btn"
-                onClick={(e) => onVote(e, college)}
+                className="arena-list-btn"
+                onClick={(e) => onVote(e, col)}
                 disabled={isVoting}
             >
-                {isVoting ? <Loader2 size={24} className="animate-spin" /> : <Plus size={24} />}
+                {isVoting ? <Loader2 size={20} className="animate-spin" /> : <Plus size={24} />}
             </button>
         </motion.div>
     );
 }
 
 // ─────────────────────────────────────────────
-// MAIN PAGE EXPORT
+// MAIN PAGE
 // ─────────────────────────────────────────────
-export default function FanWarsV2() {
+export default function FanWarsTheArena() {
     const { user, signInWithGoogle } = useAuth();
     const { addToast } = useToast();
 
     const [stats, setStats] = useState({ leaderboard: [], recentVotes: [] });
     const [isVoting, setIsVoting] = useState(false);
-    const [burstPos, setBurstPos] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
     const [debQuery, setDebQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
+    const [showHypeLine, setShowHypeLine] = useState(false);
     const searchRef = useRef(null);
 
-    // Initial Load & Polling
     useEffect(() => {
         fetchHypeStats().then(setStats).catch(console.error);
-        const id = setInterval(() => fetchHypeStats().then(setStats).catch(console.error), 8000);
+        const id = setInterval(() => fetchHypeStats().then(setStats).catch(console.error), 10000);
         return () => clearInterval(id);
     }, []);
 
-    // Search Debouncing
     useEffect(() => {
         const t = setTimeout(() => setDebQuery(searchQuery), 300);
         return () => clearTimeout(t);
@@ -190,72 +147,54 @@ export default function FanWarsV2() {
     useEffect(() => {
         if (!debQuery.trim()) { setSearchResults([]); return; }
         searchAll({ q: debQuery })
-            .then(d => setSearchResults((d.colleges || []).slice(0, 5)))
+            .then(d => setSearchResults((d.colleges || []).slice(0, 6)))
             .catch(console.error);
     }, [debQuery]);
 
-    useEffect(() => {
-        const handler = (e) => {
-            if (searchRef.current && !searchRef.current.contains(e.target))
-                setSearchQuery("");
-        };
-        document.addEventListener("mousedown", handler);
-        return () => document.removeEventListener("mousedown", handler);
-    }, []);
-
-    const hasVoted = (id) => {
-        if (typeof window === 'undefined') return false;
-        return JSON.parse(localStorage.getItem('hype_votes') || '[]').includes(id);
-    };
-
-    const handleVote = async (e, college) => {
-        e.preventDefault(); e.stopPropagation();
+    const handleVote = async (e, col) => {
+        e.preventDefault();
         if (!user) { try { await signInWithGoogle(); } catch { } return; }
 
-        const collegeId = college.id || college._id;
-        if (hasVoted(collegeId)) {
-            addToast("You've already hyped this campus today!", "error");
+        const collegeId = col.id || col._id;
+        const voted = JSON.parse(localStorage.getItem('hype_v3_votes') || '[]');
+        if (voted.includes(collegeId)) {
+            addToast("You've contributed to this campus recently!", "error");
             return;
         }
-        if (isVoting) return;
 
         setIsVoting(true);
-        // Visual burst effect
-        setBurstPos({ x: e.clientX, y: e.clientY });
-        setTimeout(() => setBurstPos(null), 800);
+        setShowHypeLine(true);
+        setTimeout(() => setShowHypeLine(false), 1000);
 
         const userName = user.displayName || user.email?.split('@')[0] || "Student";
-        const payload = { collegeId, collegeName: college.name || "Unknown", uid: user.uid, userId: user.uid, userName };
+        const payload = {
+            collegeId,
+            collegeName: col.name,
+            uid: user.uid,
+            userName
+        };
 
-        // Optimistic UI Update
+        // Optimistic UI
         setStats(prev => {
             const lb = [...prev.leaderboard];
             const idx = lb.findIndex(c => c.id === collegeId);
             if (idx >= 0) lb[idx] = { ...lb[idx], votes: lb[idx].votes + 1 };
-            else lb.push({ id: collegeId, name: college.name, votes: 1, location: college.location });
+            else lb.push({ id: collegeId, name: col.name, votes: 1, location: col.location });
             lb.sort((a, b) => b.votes - a.votes);
-            return {
-                ...prev,
-                leaderboard: lb,
-                recentVotes: [{ collegeName: college.name, userName, timestamp: new Date().toISOString() }, ...prev.recentVotes].slice(0, 20)
-            };
+            return { ...prev, leaderboard: lb };
         });
 
-        // Local Storage Sync (Anti-Spam)
-        const sv = JSON.parse(localStorage.getItem('hype_votes') || '[]');
-        if (!sv.includes(collegeId)) {
-            sv.push(collegeId);
-            localStorage.setItem('hype_votes', JSON.stringify(sv));
-        }
+        const sv = JSON.parse(localStorage.getItem('hype_v3_votes') || '[]');
+        sv.push(collegeId);
+        localStorage.setItem('hype_v3_votes', JSON.stringify(sv));
 
-        // Network Request
         try {
             await postHypeVote(payload);
-            addToast(`Hype injected into ${college.name}! 🔥`, "success");
+            addToast(`Hype Surge: ${col.name} +1`, "success");
             setSearchQuery("");
             setSearchResults([]);
         } catch (err) {
-            addToast("Sync failed, retrying...", "error");
+            addToast("Connection error, retrying...", "error");
             fetchHypeStats().then(setStats);
         } finally {
             setIsVoting(false);
@@ -263,153 +202,120 @@ export default function FanWarsV2() {
     };
 
     const top3 = stats.leaderboard.slice(0, 3);
-    const contenders = stats.leaderboard.slice(3, 10);
-    const totalVotes = stats.leaderboard.reduce((a, c) => a + (c.votes || 0), 0);
-    const totalCamps = stats.leaderboard.length;
+    const rest = stats.leaderboard.slice(3, 12);
+    const total = stats.leaderboard.reduce((a, c) => a + (c.votes || 0), 0);
 
     return (
-        <div className="hype-page-wrapper selection:bg-indigo-200">
-            {/* Ambient Background Glows */}
-            <div className="hype-bg-glow glow-1" />
-            <div className="hype-bg-glow glow-2" />
+        <div className="arena-wrapper selection:bg-cyan-500/30">
+            <div className="arena-nebula" />
+            <div className="arena-grid-mesh" />
 
-            <Container className="relative z-10 pt-32 pb-12">
-                {/* HERO SECTION */}
-                <div className="text-center mb-16">
-                    <RevealOnScroll>
-                        <motion.div
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-600 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-8 shadow-sm"
-                        >
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                            </span>
-                            Live Arena
-                        </motion.div>
-
-                        <h1 className="arena-hero-title">
-                            The Nexus
-                        </h1>
-                        <p className="arena-hero-subtitle">
-                            The ultimate battleground for institution supremacy.
-                            Vote for your campus and push them to the top of the national leaderboard.
-                        </p>
-
-                        <div className="flex items-center justify-center gap-4 flex-wrap">
-                            <div className="nexus-stat-chip">
-                                <Flame className="text-amber-500" size={20} />
-                                <span><AnimatedCounter value={totalVotes} /> Total Volume</span>
-                            </div>
-                            <div className="nexus-stat-chip">
-                                <Trophy className="text-indigo-500" size={20} />
-                                <span>{totalCamps} Active Entities</span>
-                            </div>
-                            <div className="nexus-stat-chip">
-                                <ShieldCheck className="text-emerald-500" size={20} />
-                                <span>Secure Ledger</span>
-                            </div>
+            <Container className="relative z-10 pt-40">
+                {/* HERO STATS */}
+                <div className="flex flex-col items-center text-center">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="flex items-center gap-4 mb-12"
+                    >
+                        <div className="arena-stat-pod">
+                            <Flame size={16} /> <i><AnimatedNumber value={total} /></i> Vol.
                         </div>
-                    </RevealOnScroll>
+                        <div className="arena-stat-pod">
+                            <Trophy size={16} /> <i>{stats.leaderboard.length}</i> Active
+                        </div>
+                    </motion.div>
+
+                    <h1 className="arena-title">
+                        Fan Wars
+                    </h1>
+                    <p className="arena-subtitle">
+                        The definitive arena for institution rankings. <br />
+                        Witness the real-time power struggle of India&apos;s campuses.
+                    </p>
                 </div>
 
-                {/* THE SEARCH BAR */}
-                <div className="max-w-2xl mx-auto mb-20 relative z-50" ref={searchRef}>
-                    <div className="nexus-search-bar">
-                        <Search size={22} className="text-indigo-400 shrink-0" />
+                {/* THE SEARCH */}
+                <div className="arena-search-container" ref={searchRef}>
+                    <div className="arena-search-box">
+                        <Search className="text-slate-500" size={24} />
                         <input
                             type="text"
-                            className="w-full bg-transparent border-none outline-none text-lg font-bold text-slate-800 placeholder-slate-400"
-                            placeholder="Find any institution to push hype..."
+                            className="arena-search-input"
+                            placeholder="Find your campus to boost..."
                             value={searchQuery}
                             onChange={e => setSearchQuery(e.target.value)}
                         />
-                        {searchQuery && (
-                            <button onClick={() => { setSearchQuery(""); setSearchResults([]) }} className="text-slate-400 hover:text-slate-600 text-xl font-bold">×</button>
-                        )}
                     </div>
 
                     <AnimatePresence>
                         {searchQuery && (
                             <motion.div
-                                initial={{ opacity: 0, y: -10, scale: 0.98 }}
-                                animate={{ opacity: 1, y: 0, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.98 }}
-                                className="nexus-search-results absolute top-full left-0 right-0 mt-3 bg-white/95 backdrop-blur-xl border border-white rounded-2xl shadow-2xl overflow-hidden"
+                                initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                className="absolute top-full left-0 right-0 mt-4 bg-slate-900/95 border border-white/10 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-3xl"
                             >
-                                {searchResults.length > 0 ? searchResults.map(col => (
+                                {searchResults.length > 0 ? searchResults.map(c => (
                                     <div
-                                        key={col.id}
-                                        onClick={e => handleVote(e, col)}
-                                        className="flex items-center justify-between p-4 border-b border-slate-100 last:border-0 hover:bg-indigo-50/50 cursor-pointer transition-colors group"
+                                        key={c.id}
+                                        onClick={e => handleVote(e, c)}
+                                        className="p-5 flex items-center justify-between hover:bg-white/5 cursor-pointer border-b border-white/5 last:border-0 group"
                                     >
                                         <div>
-                                            <div className="font-bold text-slate-900 group-hover:text-indigo-600 truncate">{col.name}</div>
-                                            <div className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1 mt-1">
-                                                <MapPin size={10} /> {col.location}
+                                            <div className="font-bold text-white group-hover:text-cyan-400 transition-colors">{c.name}</div>
+                                            <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">
+                                                <MapPin size={10} /> {c.location}
                                             </div>
                                         </div>
-                                        <button className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
-                                            <Plus size={20} />
-                                        </button>
+                                        <Plus size={20} className="text-slate-500 group-hover:text-white" />
                                     </div>
                                 )) : (
-                                    <div className="p-6 text-center text-slate-500 font-bold italic">No results for "{searchQuery}"</div>
+                                    <div className="p-8 text-center text-slate-500 font-bold">No Match Detected</div>
                                 )}
                             </motion.div>
                         )}
                     </AnimatePresence>
                 </div>
 
-                {/* THE PODIUM (Top 3) */}
-                {top3.length > 0 && (
-                    <div className="podium-container">
-                        {/* Rank 2 - Left */}
-                        {top3[1] && <NexusPodiumCard college={top3[1]} rank={2} totalVotes={totalVotes} onVote={handleVote} isVoting={isVoting} />}
+                {/* THE STAGE (Top 3) */}
+                <div className="modern-podium">
+                    {/* #2 */}
+                    <div className="order-2 lg:order-1">
+                        {top3[1] && <ArenaCard col={top3[1]} rank={2} total={total} onVote={handleVote} isVoting={isVoting} />}
+                    </div>
+                    {/* #1 */}
+                    <div className="order-1 lg:order-2">
+                        {top3[0] && <ArenaCard col={top3[0]} rank={1} total={total} onVote={handleVote} isVoting={isVoting} />}
+                    </div>
+                    {/* #3 */}
+                    <div className="order-3 lg:order-3">
+                        {top3[2] && <ArenaCard col={top3[2]} rank={3} total={total} onVote={handleVote} isVoting={isVoting} />}
+                    </div>
+                </div>
 
-                        {/* Rank 1 - Center */}
-                        {top3[0] && <NexusPodiumCard college={top3[0]} rank={1} totalVotes={totalVotes} onVote={handleVote} isVoting={isVoting} />}
-
-                        {/* Rank 3 - Right */}
-                        {top3[2] && <NexusPodiumCard college={top3[2]} rank={3} totalVotes={totalVotes} onVote={handleVote} isVoting={isVoting} />}
+                {/* THE LIST */}
+                {rest.length > 0 && (
+                    <div className="contender-grid">
+                        <div className="flex items-center gap-4 mb-8">
+                            <Activity size={24} className="text-cyan-500" />
+                            <h2 className="text-2xl font-black uppercase tracking-tighter">Rising Potential</h2>
+                        </div>
+                        {rest.map((c, i) => (
+                            <ArenaRow key={c.id} col={c} rank={i + 4} onVote={handleVote} isVoting={isVoting} />
+                        ))}
                     </div>
                 )}
-
-                {/* THE CONTENDERS */}
-                {contenders.length > 0 && (
-                    <div className="mt-24">
-                        <div className="flex items-center justify-center gap-4 mb-12">
-                            <TrendingUp size={28} className="text-indigo-500" />
-                            <h2 className="text-3xl font-black text-slate-900 tracking-tight">Rising Contenders</h2>
-                        </div>
-
-                        <div className="contender-lane">
-                            {contenders.map((col, i) => (
-                                <NexusContenderRow
-                                    key={col.id}
-                                    college={col}
-                                    rank={i + 4}
-                                    onVote={handleVote}
-                                    isVoting={isVoting}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                )}
-
             </Container>
 
-            {/* CLICK FX */}
+            {/* Shockwave Visual Feedback */}
             <AnimatePresence>
-                {burstPos && (
+                {showHypeLine && (
                     <motion.div
-                        initial={{ scale: 0, opacity: 1 }}
-                        animate={{ scale: 2, opacity: 0 }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 4 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="fixed pointer-events-none z-[9999] rounded-full border-[8px] border-indigo-500/50"
-                        style={{ top: burstPos.y - 50, left: burstPos.x - 50, width: 100, height: 100 }}
+                        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-[9999] w-[100vw] h-[100vh] bg-white/5 rounded-full filter blur-3xl border-8 border-cyan-500/20"
                     />
                 )}
             </AnimatePresence>
