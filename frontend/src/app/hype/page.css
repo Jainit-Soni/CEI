@@ -52,28 +52,22 @@
     align-items: flex-end;
     justify-content: center;
     gap: 1.5rem;
-    margin-top: 5rem;
+    margin: 5rem auto 0;
+    max-width: 1100px;
     padding: 0 1rem;
-    perspective: 1000px;
+    perspective: 1200px;
 }
 
 @media (max-width: 1024px) {
     .crystal-podium {
         display: flex;
         flex-direction: row;
-        align-items: stretch;
-        justify-content: flex-start;
-        gap: 1.5rem;
-        overflow-x: auto;
-        padding: 2rem 1rem;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        /* Hide for clean look */
-        -ms-overflow-style: none;
-    }
-
-    .crystal-podium::-webkit-scrollbar {
-        display: none;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 2rem 0.5rem;
+        overflow: visible;
+        /* No scroll */
     }
 }
 
@@ -85,9 +79,6 @@
     border-radius: 20px;
     padding: 2.5rem 1.5rem 1.5rem;
     width: 320px;
-    flex-shrink: 0;
-    /* Important for horizontal scroll */
-    scroll-snap-align: center;
     position: relative;
     box-shadow:
         0 10px 40px -10px rgba(0, 0, 0, 0.1),
@@ -98,8 +89,30 @@
 
 @media (max-width: 1024px) {
     .crystal-pillar {
-        width: 280px;
-        /* Reduced for mobile row */
+        width: 32%;
+        /* Fit 3 side-by-side */
+        padding: 1.5rem 0.75rem 1rem;
+        border-radius: 12px;
+    }
+
+    .pillar-title {
+        font-size: 0.85rem !important;
+    }
+
+    .pillar-score {
+        font-size: 1.75rem !important;
+    }
+
+    .crystal-rank {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.9rem !important;
+        top: -12px !important;
+    }
+
+    .crystal-btn {
+        padding: 0.5rem !important;
+        font-size: 0.65rem !important;
     }
 }
 
@@ -115,13 +128,13 @@
     background-position: -100% -100%;
     transition: background-position 0.5s;
     pointer-events: none;
-    border-radius: 20px;
+    border-radius: inherit;
 }
 
 .crystal-pillar:hover {
-    transform: translateY(-15px) scale(1.02);
+    transform: translateY(-15px) rotateX(5deg);
     box-shadow:
-        0 30px 60px -20px rgba(0, 0, 0, 0.15),
+        0 40px 80px -20px rgba(0, 0, 0, 0.15),
         inset 0 0 30px #fff;
     border-color: #fff;
 }
@@ -187,11 +200,16 @@
 
 @media (max-width: 1024px) {
 
-    .rank-1,
-    .rank-2,
+    .rank-1 {
+        min-height: 300px;
+    }
+
+    .rank-2 {
+        min-height: 260px;
+    }
+
     .rank-3 {
-        height: auto;
-        min-height: 350px;
+        min-height: 230px;
     }
 }
 
@@ -207,7 +225,7 @@
 
 .pillar-score-wrap {
     margin: 2rem 0;
-    margin-bottom: 0;
+    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -220,7 +238,7 @@
 }
 
 .pillar-progress-track {
-    height: 8px;
+    height: 6px;
     background: rgba(0, 0, 0, 0.05);
     border-radius: 99px;
     margin-top: 1rem;
@@ -268,10 +286,11 @@
 }
 
 .crystal-btn:hover:not(:disabled) {
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #4f46e5;
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.3);
 }
 
 /* --- Live Ticker --- */
@@ -282,13 +301,14 @@
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     margin: 4rem 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
 }
 
 .ticker-track {
     display: flex;
-    gap: 2rem;
-    animation: ticker-scroll 30s linear infinite;
+    gap: 3rem;
+    animation: ticker-scroll 35s linear infinite;
     width: max-content;
 }
 
@@ -301,20 +321,22 @@
 .ticker-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     white-space: nowrap;
     font-weight: 700;
-    font-size: 0.9rem;
-    color: #475569;
+    font-size: 1rem;
+    color: #64748b;
 }
 
 .ticker-item b {
-    color: #0f172a;
+    color: #4f46e5;
+    text-shadow: 0 0 10px rgba(79, 70, 229, 0.2);
 }
 
 .ticker-item i {
-    color: var(--accent-gold);
+    color: #0f172a;
     font-style: normal;
+    font-weight: 800;
 }
 
 /* --- Floating Diamond Search --- */
