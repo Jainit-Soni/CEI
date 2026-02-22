@@ -11,20 +11,20 @@ export default function PremiumHome() {
                 {/* Brand Signal */}
                 <div className="premium-kicker fadeIn">
                     <div className="kicker-dot" />
-                    <span>COLLEGE EXAM INTELLIGENCE — VERSION 2.0</span>
+                    <span>CEI — INDIA'S ULTIMATE COLLEGE PLATFORM</span>
                 </div>
 
                 {/* The Primary Statement */}
                 <h1 className="premium-title fadeIn delay-1">
-                    The Admission <br />
-                    <span className="serif-accent">Verdict.</span>
+                    Discover. Rank. <br />
+                    <span className="serif-accent">Hype.</span>
                 </h1>
 
                 {/* The Specific Goal Subtext */}
                 <p className="premium-mission fadeIn delay-2">
-                    Architecting India’s academic legacies. Track 2000+ elite institutions,
-                    compare real-time admissions data, and master the strategy
-                    behind every entrance exam with absolute intelligence.
+                    The undisputed platform for Indian students to compare real-time admissions data,
+                    track 2000+ elite institutions, secure scholarships, and push their campuses
+                    to the top of the Fan Wars.
                 </p>
 
                 {/* The Single Strategic Goal (CTA) */}
