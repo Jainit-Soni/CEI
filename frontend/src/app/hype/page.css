@@ -233,18 +233,15 @@
 /* Pillar heights for 3D effect */
 .rank-1 {
     height: auto;
-    min-height: 400px;
     z-index: 10;
 }
 
 .rank-2 {
     height: auto;
-    min-height: 340px;
 }
 
 .rank-3 {
     height: auto;
-    min-height: 300px;
 }
 
 @media (max-width: 1024px) {
@@ -252,25 +249,22 @@
         width: 100%;
         max-width: 340px;
         padding: 2rem 1.5rem;
-        margin-top: -3rem;
         transform: translateZ(0);
     }
 
     .rank-1 {
         z-index: 30 !important;
-        transform: scale(1.1) translateZ(50px);
+        transform: translateZ(50px);
         margin-top: 0;
         box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
     }
 
     .rank-2 {
         z-index: 20;
-        transform: translateX(-10px) rotate(-2deg);
     }
 
     .rank-3 {
         z-index: 10;
-        transform: translateX(10px) rotate(2deg);
     }
 
     .pillar-title {
@@ -299,74 +293,65 @@
         margin-bottom: 0.25rem;
     }
 
-    /* Podium: genuine 3-in-a-row compact */
+    /* Podium: Premium Vertical Stack Redesign */
     .crystal-podium {
-        gap: 0.5rem;
-        padding: 2rem 0.5rem;
-        margin-top: 2rem;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-    }
-
-    .crystal-podium::-webkit-scrollbar {
-        display: none;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        margin-top: 1rem;
+        align-items: stretch;
     }
 
     .crystal-pillar {
-        /* Each pillar: fixed width, no float needed */
-        flex-shrink: 0;
-        width: clamp(120px, 30vw, 160px) !important;
-        padding: 1.25rem 0.6rem 0.75rem !important;
-        border-radius: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 2rem 1.5rem !important;
+        border-radius: 16px !important;
         margin-top: 0 !important;
         transform: none !important;
+        flex-shrink: 1;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)) !important;
+        box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.1) !important;
     }
 
-    .rank-1 {
-        z-index: 10 !important;
-        transform: none !important;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
-    }
-
+    .rank-1,
     .rank-2,
     .rank-3 {
+        z-index: 10 !important;
         transform: none !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
     }
 
     .pillar-title {
-        font-size: 0.65rem !important;
+        font-size: 1.05rem !important;
         line-height: 1.3 !important;
-        margin-bottom: 0.25rem !important;
+        margin-bottom: 0.5rem !important;
     }
 
     .pillar-score {
-        font-size: 1.4rem !important;
+        font-size: 2.8rem !important;
     }
 
     .pillar-score-wrap {
-        margin: 0.75rem 0 !important;
-        margin-bottom: 16px !important;
+        margin: 1.5rem 0 !important;
     }
 
     .crystal-rank {
-        width: 24px !important;
-        height: 24px !important;
-        font-size: 0.7rem !important;
-        top: -10px !important;
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 0.85rem !important;
+        top: -14px !important;
     }
 
     .crystal-btn {
-        padding: 0.4rem 0.5rem !important;
-        font-size: 0.6rem !important;
-        margin-top: 0.75rem !important;
-        gap: 4px !important;
+        padding: 0.8rem 1rem !important;
+        font-size: 0.75rem !important;
+        margin-top: 1.5rem !important;
+        gap: 6px !important;
     }
 
     .pillar-progress-track {
-        display: none;
+        display: block !important;
     }
 
     /* Ticker */

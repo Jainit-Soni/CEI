@@ -144,6 +144,21 @@ router.post("/vote", async (req, res) => {
         const { collegeId, collegeName, uid, userName } = req.body;
         if (!collegeId || !uid) return res.status(400).json({ error: "Missing data" });
 
+        const redisClient = await getRedisClient();
+
+        // 1. Validation Check (Redis + Disk Fallback)
+        if (redisClient) {
+            const hasVoted = await redisClient.sismember(`ce_hype_user_votes:${uid}`, collegeId);
+            if (hasVoted) return res.status(400).json({ error: "Already voted for this college" });
+        } else {
+            if (fs.existsSync(votesFilePath)) {
+                const existingVotes = JSON.parse(fs.readFileSync(votesFilePath, "utf8"));
+                if (existingVotes.some(v => v.userId === uid && v.collegeId === collegeId)) {
+                    return res.status(400).json({ error: "Already voted for this college" });
+                }
+            }
+        }
+
         const newVote = {
             collegeId,
             collegeName,
@@ -152,17 +167,18 @@ router.post("/vote", async (req, res) => {
             timestamp: new Date().toISOString()
         };
 
-        const redisClient = await getRedisClient();
+        // 2. Commit Vote to Redis
         if (redisClient) {
             const pipeline = redisClient.pipeline();
             pipeline.zincrby(REDIS_KEY_LEADERBOARD, 1, collegeId);
             pipeline.hset("ce_hype_names", collegeId, collegeName);
+            pipeline.sadd(`ce_hype_user_votes:${uid}`, collegeId); // Track user vote
             pipeline.lpush(REDIS_KEY_RECENT, JSON.stringify(newVote));
             pipeline.ltrim(REDIS_KEY_RECENT, 0, 49);
             await pipeline.exec();
         }
 
-        // Always persist to disk as master backup
+        // 3. Always persist to disk as master backup
         let votes = [];
         if (fs.existsSync(votesFilePath)) {
             votes = JSON.parse(fs.readFileSync(votesFilePath, "utf8"));
