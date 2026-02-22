@@ -1,8 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
-const rateLimit = require("express-rate-limit");
-const slowDown = require("express-slow-down");
 const helmet = require("helmet");
 const apiKeyAuth = require("./middleware/apiKeys");
 const collegesRoutes = require("./routes/colleges");
@@ -74,59 +72,12 @@ const corsOptions = {
   credentials: true
 };
 
-// Apply CORS early to avoid "CORS masking" of other errors (429s, etc)
+// Apply CORS early to avoid "CORS masking" of other errors
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// Rate Limiting
-const globalLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 10000,
-  standardHeaders: true,
-  legacyHeaders: false,
-  skip: (req) => {
-    const ip = req.ip || req.connection?.remoteAddress || "";
-    return !isProduction || ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost');
-  }
-});
-app.use("/api", globalLimiter);
-
-// Speed Limiter (Throttling)
-const speedLimiter = slowDown({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  delayAfter: 500,
-  delayMs: () => 500,
-  skip: (req) => {
-    const ip = req.ip || req.connection?.remoteAddress || "";
-    return !isProduction || ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost');
-  }
-});
-
-// Rate limiting configuration
-const standardLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 5000,
-  message: "Too many requests, please try again later.",
-  standardHeaders: true,
-  legacyHeaders: false,
-  skip: (req) => {
-    const ip = req.ip || req.connection?.remoteAddress || "";
-    return !isProduction || !!req.apiKey || ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost');
-  }
-});
-
-// Stricter rate limit for search endpoints
-const searchLimiter = rateLimit({
-  windowMs: 1 * 60 * 1000, // 1 minute
-  max: 30, // 30 requests per minute
-  message: "Too many search requests, please slow down.",
-  skip: (req) => !isProduction || !!req.apiKey || req.ip.includes('127.0.0.1') || req.ip.includes('::1')
-});
-
 // Domain Logic Middleware
 app.use(apiKeyAuth);   // Check for API Key first
-app.use(speedLimiter); // Then throttle
-app.use(standardLimiter);      // Then IP rate limit (if no key)
 
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
@@ -138,7 +89,7 @@ app.get("/", (req, res) => {
 
 app.use("/api", collegesRoutes);
 app.use("/api", examsRoutes);
-app.use("/api", searchLimiter, searchRoutes); // Stricter limit for search
+app.use("/api", searchRoutes);
 app.use("/api/stats", statsRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/activity", activityRoutes);

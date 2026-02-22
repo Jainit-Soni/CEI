@@ -261,7 +261,7 @@ export default function FanWarsTheCrystalArena() {
             if (d && d.leaderboard) setStats(d);
         }).catch(console.error);
         refresh();
-        const id = setInterval(refresh, 3000);
+        const id = setInterval(refresh, 15000); // Relaxed to 15s to prevent 429s
         return () => clearInterval(id);
     }, []);
 
