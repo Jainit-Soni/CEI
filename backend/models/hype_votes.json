@@ -1,37 +1,100 @@
 [
-    {
-        "collegeId": "iit-bombay",
-        "collegeName": "Indian Institute of Technology Bombay",
-        "userId": "system-seed",
-        "userName": "System",
-        "timestamp": "2024-02-20T10:00:00.000Z"
-    },
-    {
-        "collegeId": "iit-delhi",
-        "collegeName": "Indian Institute of Technology Delhi",
-        "userId": "system-seed",
-        "userName": "System",
-        "timestamp": "2024-02-20T10:05:00.000Z"
-    },
-    {
-        "collegeId": "bits-pilani",
-        "collegeName": "Birla Institute of Technology and Science, Pilani",
-        "userId": "system-seed",
-        "userName": "System",
-        "timestamp": "2024-02-20T10:10:00.000Z"
-    },
-    {
-        "collegeId": "nit-trichy",
-        "collegeName": "National Institute of Technology Thiruchirappalli",
-        "userId": "system-seed",
-        "userName": "System",
-        "timestamp": "2024-02-20T10:15:00.000Z"
-    },
-    {
-        "collegeId": "iit-kanpur",
-        "collegeName": "Indian Institute of Technology Kanpur",
-        "userId": "system-seed",
-        "userName": "System",
-        "timestamp": "2024-02-20T10:20:00.000Z"
-    }
+  {
+    "collegeId": "iit-bombay",
+    "collegeName": "Indian Institute of Technology Bombay",
+    "userId": "system-seed",
+    "userName": "System",
+    "timestamp": "2024-02-20T10:00:00.000Z"
+  },
+  {
+    "collegeId": "iit-delhi",
+    "collegeName": "Indian Institute of Technology Delhi",
+    "userId": "system-seed",
+    "userName": "System",
+    "timestamp": "2024-02-20T10:05:00.000Z"
+  },
+  {
+    "collegeId": "bits-pilani",
+    "collegeName": "Birla Institute of Technology and Science, Pilani",
+    "userId": "system-seed",
+    "userName": "System",
+    "timestamp": "2024-02-20T10:10:00.000Z"
+  },
+  {
+    "collegeId": "nit-trichy",
+    "collegeName": "National Institute of Technology Thiruchirappalli",
+    "userId": "system-seed",
+    "userName": "System",
+    "timestamp": "2024-02-20T10:15:00.000Z"
+  },
+  {
+    "collegeId": "iit-kanpur",
+    "collegeName": "Indian Institute of Technology Kanpur",
+    "userId": "system-seed",
+    "userName": "System",
+    "timestamp": "2024-02-20T10:20:00.000Z"
+  },
+  {
+    "collegeId": "nit-trichy",
+    "collegeName": "National Institute of Technology Thiruchirappalli",
+    "userId": "YRuYUCUx7cayOTy9IVopLyvSRTY2",
+    "userName": "jainit",
+    "timestamp": "2026-02-21T11:05:23.284Z"
+  },
+  {
+    "collegeId": "iit-bombay",
+    "collegeName": "Indian Institute of Technology Bombay",
+    "userId": "YRuYUCUx7cayOTy9IVopLyvSRTY2",
+    "userName": "jainit",
+    "timestamp": "2026-02-21T11:08:50.164Z"
+  },
+  {
+    "collegeId": "iit-kanpur",
+    "collegeName": "Indian Institute of Technology Kanpur",
+    "userId": "YRuYUCUx7cayOTy9IVopLyvSRTY2",
+    "userName": "jainit",
+    "timestamp": "2026-02-21T11:28:26.887Z"
+  },
+  {
+    "collegeId": "assam-agricultural-university",
+    "collegeName": "Assam Agricultural University",
+    "userId": "YRuYUCUx7cayOTy9IVopLyvSRTY2",
+    "userName": "jainit",
+    "timestamp": "2026-02-21T11:29:49.411Z"
+  },
+  {
+    "collegeId": "ldce-ahmedabad",
+    "collegeName": "L.D. College of Engineering",
+    "userId": "YRuYUCUx7cayOTy9IVopLyvSRTY2",
+    "userName": "jainit",
+    "timestamp": "2026-02-21T12:02:22.087Z"
+  },
+  {
+    "collegeId": "nfsu-gandhinagar",
+    "collegeName": "National Forensic Sciences University",
+    "userId": "YRuYUCUx7cayOTy9IVopLyvSRTY2",
+    "userName": "jainit",
+    "timestamp": "2026-02-21T12:12:02.185Z"
+  },
+  {
+    "collegeId": "iim-bangalore",
+    "collegeName": "Indian Institute of Management Bangalore",
+    "userId": "YRuYUCUx7cayOTy9IVopLyvSRTY2",
+    "userName": "jainit",
+    "timestamp": "2026-02-21T12:26:56.304Z"
+  },
+  {
+    "collegeId": "sdau-dantiwada",
+    "collegeName": "Sardarkrushinagar Dantiwada Agricultural University",
+    "userId": "YRuYUCUx7cayOTy9IVopLyvSRTY2",
+    "userName": "jainit",
+    "timestamp": "2026-02-21T12:32:08.596Z"
+  },
+  {
+    "collegeId": "parul-uni",
+    "collegeName": "Parul University",
+    "userId": "YRuYUCUx7cayOTy9IVopLyvSRTY2",
+    "userName": "jainit",
+    "timestamp": "2026-02-21T12:42:09.407Z"
+  }
 ]

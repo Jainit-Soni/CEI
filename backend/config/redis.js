@@ -66,7 +66,7 @@ async function getRedisClient() {
                     console.warn("⚠️  Redis ready timeout. Proceeding without cache.");
                 }
                 resolve(null);
-            }, 2000);
+            }, 200);
 
             redisClient.once("ready", () => {
                 clearTimeout(timeout);
@@ -89,7 +89,7 @@ async function getRedisClient() {
         // Add a 2s timeout to the connection attempt
         const connectionPromise = redisClient.connect();
         const timeoutPromise = new Promise((_, reject) =>
-            setTimeout(() => reject(new Error("Redis connection timeout")), 2000)
+            setTimeout(() => reject(new Error("Redis connection timeout")), 200)
         );
 
         await Promise.race([connectionPromise, timeoutPromise]);

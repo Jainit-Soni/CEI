@@ -1,4 +1,4 @@
-﻿const express = require("express");
+const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
 const rateLimit = require("express-rate-limit");
@@ -80,10 +80,14 @@ app.use(express.json());
 
 // Rate Limiting
 const globalLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 1000,
+  windowMs: 15 * 60 * 1000,
+  max: 10000,
   standardHeaders: true,
   legacyHeaders: false,
+  skip: (req) => {
+    const ip = req.ip || req.connection?.remoteAddress || "";
+    return !isProduction || ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost');
+  }
 });
 app.use("/api", globalLimiter);
 
@@ -91,17 +95,24 @@ app.use("/api", globalLimiter);
 const speedLimiter = slowDown({
   windowMs: 15 * 60 * 1000, // 15 minutes
   delayAfter: 500,
-  delayMs: () => 500
+  delayMs: () => 500,
+  skip: (req) => {
+    const ip = req.ip || req.connection?.remoteAddress || "";
+    return !isProduction || ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost');
+  }
 });
 
 // Rate limiting configuration
 const standardLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 500, // Limit each IP to 500 requests per windowMs
-  message: "Too many requests from this IP, please try again later.",
+  windowMs: 15 * 60 * 1000,
+  max: 5000,
+  message: "Too many requests, please try again later.",
   standardHeaders: true,
   legacyHeaders: false,
-  skip: (req) => !!req.apiKey // Skip IP limit if valid API key present
+  skip: (req) => {
+    const ip = req.ip || req.connection?.remoteAddress || "";
+    return !isProduction || !!req.apiKey || ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost');
+  }
 });
 
 // Stricter rate limit for search endpoints
@@ -109,7 +120,7 @@ const searchLimiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
   max: 30, // 30 requests per minute
   message: "Too many search requests, please slow down.",
-  skip: (req) => !!req.apiKey // Skip if valid API key present
+  skip: (req) => !isProduction || !!req.apiKey || req.ip.includes('127.0.0.1') || req.ip.includes('::1')
 });
 
 // Domain Logic Middleware
