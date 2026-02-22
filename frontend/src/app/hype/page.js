@@ -355,10 +355,10 @@ export default function FanWarsTheCrystalArena() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="flex items-center gap-3 mb-10 bg-white/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/60 shadow-xl"
+                        className="flex items-center gap-3 mb-10 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-xl px-6 py-3 rounded-full border border-indigo-200/50 shadow-lg shadow-indigo-500/5"
                     >
-                        <Flame size={20} className="text-orange-500 animate-bounce" />
-                        <span className="text-xs font-black uppercase tracking-[0.4em] text-slate-600">Arena Level Master</span>
+                        <Flame size={18} className="text-pink-500 animate-pulse" />
+                        <span className="text-xs font-black uppercase tracking-[0.4em] bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text text-transparent">International Arena</span>
                     </motion.div>
 
                     <h1 className="crystal-title leading-[0.9] mb-6">
@@ -375,13 +375,17 @@ export default function FanWarsTheCrystalArena() {
                             <div className="text-5xl lg:text-9xl font-black text-slate-900 mb-3 lg:mb-6 tracking-tighter group-hover:scale-105 transition-transform duration-700 leading-none">
                                 <AmazingNumber value={total} />
                             </div>
-                            <div className="text-[10px] lg:text-[12px] uppercase font-black text-indigo-500 tracking-[0.2em] lg:tracking-[0.5em] group-hover:tracking-[0.6em] transition-all">Global Hype Surge</div>
+                            <div className="text-[10px] lg:text-[12px] uppercase font-black bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent tracking-[0.2em] lg:tracking-[0.5em] group-hover:tracking-[0.6em] transition-all">Global Hype Surge</div>
                         </div>
+
+                        <div className="hidden lg:block w-px h-20 bg-gradient-to-b from-transparent via-indigo-300/50 to-transparent" />
+                        <div className="lg:hidden w-20 h-px bg-gradient-to-r from-transparent via-indigo-300/40 to-transparent" />
+
                         <div className="text-center group">
                             <div className="text-5xl lg:text-9xl font-black text-slate-300 mb-3 lg:mb-6 tracking-tighter group-hover:text-slate-900 transition-colors duration-700 leading-none">
                                 <AmazingNumber value={stats.leaderboard.length} />
                             </div>
-                            <div className="text-[10px] lg:text-[12px] uppercase font-black text-slate-400 tracking-[0.2em] lg:tracking-[0.5em] group-hover:text-indigo-500 transition-all">Institutions</div>
+                            <div className="text-[10px] lg:text-[12px] uppercase font-black text-slate-400 tracking-[0.2em] lg:tracking-[0.5em] group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-indigo-500 group-hover:bg-clip-text group-hover:text-transparent transition-all">Institutions</div>
                         </div>
                     </div>
                 </div>
