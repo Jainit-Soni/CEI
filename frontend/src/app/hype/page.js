@@ -160,46 +160,52 @@ function CrystalPillar({ col, rank, total, onVote, isVoting }) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             whileHover={{ y: -10, scale: 1.02 }}
             transition={{ delay: rank * 0.15, type: "spring", stiffness: 100 }}
-            className={`crystal-pillar rank-${rank}`}
+            className={`crystal-pillar rank-${rank} h-full flex flex-col`}
         >
             <div className="crystal-rank shadow-xl">{rank}</div>
 
-            <div className="relative z-10 flex flex-col items-center">
-                <div className="flex items-center gap-1 text-[9px] lg:text-[10px] font-black text-slate-400 tracking-[0.2em] uppercase mb-4 opacity-70">
-                    <MapPin size={10} /> {col.location?.split(',')[0] || "University"}
+            <div className="relative z-10 flex flex-col items-center flex-1 w-full justify-between h-full">
+
+                {/* Top Section */}
+                <div className="w-full flex flex-col items-center">
+                    <div className="flex items-center gap-1 text-[9px] lg:text-[10px] font-black text-slate-400 tracking-[0.2em] uppercase mb-4 opacity-70">
+                        <MapPin size={10} /> {col.location?.split(',')[0] || "University"}
+                    </div>
+                    <h3 className="pillar-title">
+                        {col.name}
+                    </h3>
                 </div>
 
-                <h3 className="pillar-title">
-                    {col.name}
-                </h3>
-
-                <div className="pillar-score-wrap">
+                {/* Score Section */}
+                <div className="pillar-score-wrap mt-auto mb-auto w-full">
                     <div className="pillar-score">
                         <AmazingNumber value={col.votes} />
                     </div>
                 </div>
 
-                <div className="w-full">
-                    <div className="pillar-progress-track">
-                        <motion.div
-                            className={`pillar-progress-bar color-${rank}`}
-                            initial={{ width: 0 }}
-                            animate={{ width: `${Math.max(pct, 8)}%` }}
-                            transition={{ delay: 0.5, duration: 2, ease: "circOut" }}
-                        />
+                {/* Bottom Section */}
+                <div className="w-full mt-auto">
+                    <div className="w-full mb-6 mt-4">
+                        <div className="pillar-progress-track">
+                            <motion.div
+                                className={`pillar-progress-bar color-${rank}`}
+                                initial={{ width: 0 }}
+                                animate={{ width: `${Math.max(pct, 8)}%` }}
+                                transition={{ delay: 0.5, duration: 2, ease: "circOut" }}
+                            />
+                        </div>
                     </div>
+                    <motion.button
+                        whileTap={{ scale: 0.92 }}
+                        onClick={(e) => onVote(e, col)}
+                        disabled={isVoting}
+                        className="crystal-btn group overflow-hidden relative"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none" />
+                        {isVoting ? <Loader2 size={16} className="animate-spin" /> : <Zap size={16} className="fill-current" />}
+                        <span>Push Hype</span>
+                    </motion.button>
                 </div>
-
-                <motion.button
-                    whileTap={{ scale: 0.92 }}
-                    onClick={(e) => onVote(e, col)}
-                    disabled={isVoting}
-                    className="crystal-btn group overflow-hidden relative"
-                >
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none" />
-                    {isVoting ? <Loader2 size={16} className="animate-spin" /> : <Zap size={16} className="fill-current" />}
-                    <span>Push Hype</span>
-                </motion.button>
             </div>
         </motion.div>
     );
@@ -442,18 +448,18 @@ export default function FanWarsTheCrystalArena() {
                 {/* LIVE VOTE FEED */}
                 <LiveTicker votes={stats.recentVotes} />
 
-                {/* THE CRYSTAL PODIUM - NEW MOBILE FOCUS LAYOUT */}
+                {/* THE CRYSTAL PODIUM - FIXED MOBILE ORDER AND IDENTICAL SIZES */}
                 <div className="crystal-podium relative">
-                    {/* #2 */}
-                    <div className="order-2 lg:order-1 self-end">
-                        {top3[1] && <CrystalPillar col={top3[1]} rank={2} total={total} onVote={handleVote} isVoting={isVoting} />}
-                    </div>
                     {/* #1 */}
-                    <div className="order-1 lg:order-2 self-end">
+                    <div className="w-full lg:w-auto lg:order-2 flex h-full">
                         {top3[0] && <CrystalPillar col={top3[0]} rank={1} total={total} onVote={handleVote} isVoting={isVoting} />}
                     </div>
+                    {/* #2 */}
+                    <div className="w-full lg:w-auto lg:order-1 flex h-full">
+                        {top3[1] && <CrystalPillar col={top3[1]} rank={2} total={total} onVote={handleVote} isVoting={isVoting} />}
+                    </div>
                     {/* #3 */}
-                    <div className="order-3 lg:order-3 self-end">
+                    <div className="w-full lg:w-auto lg:order-3 flex h-full">
                         {top3[2] && <CrystalPillar col={top3[2]} rank={3} total={total} onVote={handleVote} isVoting={isVoting} />}
                     </div>
                 </div>
