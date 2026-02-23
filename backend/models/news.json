@@ -1,62 +1,932 @@
 [
-    {
-        "id": "cmat-2026-results",
-        "title": "CMAT 2026 Results Announced: Check Your Scorecard",
-        "summary": "NTA declared the CMAT 2026 results yesterday. Cutoffs for top MBA colleges like JBIMS and SIMSREE are expected to rise by 2-3 percentile points this year.",
-        "category": "Results",
-        "date": "2026-02-17T10:00:00Z",
-        "source": "NTA Official",
-        "url": "https://cmat.nta.nic.in",
-        "urgent": true
-    },
-    {
-        "id": "cbse-boards-start",
-        "title": "CBSE Class 12 Board Exams Begin Today",
-        "summary": "Over 16 lakh students appear for the CBSE Class 12 board exams starting today. Critical guidelines issued for exam centers regarding electronic devices.",
-        "category": "Exam Alert",
-        "date": "2026-02-15T08:30:00Z",
-        "source": "CBSE",
-        "url": "https://cbse.gov.in",
-        "urgent": true
-    },
-    {
-        "id": "neet-ug-2026-deadline",
-        "title": "NEET UG 2026 Registration Ends in 2 Days",
-        "summary": "Last chance for medical aspirants! The registration window for NEET UG 2026 closes on Feb 20th. No further extensions will be provided.",
-        "category": "Admissions",
-        "date": "2026-02-18T09:00:00Z",
-        "source": "NTA / NEET",
-        "url": "https://neet.nta.nic.in",
-        "urgent": true
-    },
-    {
-        "id": "jee-main-session-2",
-        "title": "JEE Main Session 2: City Intimation Slips Out",
-        "summary": "NTA has released the advance city intimation slips for JEE Main 2026 Session 2. Download now to plan travel. Admit cards expected next week.",
-        "category": "Exam Alert",
-        "date": "2026-02-16T14:00:00Z",
-        "source": "JEE Main",
-        "url": "https://jeemain.nta.ac.in",
-        "urgent": false
-    },
-    {
-        "id": "iim-cap-interviews",
-        "title": "IIM CAP 2026 Interviews Scheduling Open",
-        "summary": "The Common Admission Process (CAP) for the 9 new IIMs has started interview scheduling. Shortlisted candidates must book slots before Feb 25.",
-        "category": "Admissions",
-        "date": "2026-02-14T11:00:00Z",
-        "source": "IIM CAP Committee",
-        "url": "https://cap2026.iim.ac.in",
-        "urgent": false
-    },
-    {
-        "id": "bitsat-2026-dates",
-        "title": "BITSAT 2026 Exam Dates Revised",
-        "summary": "BITS Pilani has slightly adjusted the Session 1 dates to avoid clash with state board exams. Check the updated brochure.",
-        "category": "Policy",
-        "date": "2026-02-12T16:00:00Z",
-        "source": "BITS Admission",
-        "url": "https://bitsadmission.com",
-        "urgent": false
-    }
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MBA Colleges Without CAT Exam: Steps to Get Direct Admission - Physics Wallah",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-06-22T07:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE45dkdRanhiMUlGenNKRmg1dWJ5QjlhN1lvVWdFYk9CRzVTQkpnLXFLWGQ1SUduVnoxNm1uZExKRzljcDBOV3A4d3RSTVd6d192ejQtWjdpcmVzcWhHRWZiNG9Kb3Y3SnBMVWlV?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "GGSIPU to open applications from Feb 1, details here - India Today",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-01-29T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPR3BtZktfNk42TVlJUEJSZmQwU0hPS3prdnBPU1NubU5qTnVlS3JsQm5vTTFOU1Q0WlpvNnRBREN0VUsxWHlwZmNzTnJmLXV6NEQ3TjRFSGs1SWt3RkpDQ1JVUjRyZWRndmR2RjlsbjV4V3BqX2ItOUtTSmhpM1k3LVVEZk82TnhnMHgwQnZkVG5FYUlNcGEwMUZPeExSRDQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Top Private MBA Colleges in India 2026: Ranking, Fees, Admissions, Courses, Placements - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-01-12T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZUI1MlBSQjR3Yk10TDJOeThiUG0yTDBYSHFDY00yczhtNnR2bUR1b3lQLXZYSHFFZmVYTU9xUXZiRHV2ZmJ5aXRpMGdoM2Y1WmxucENqM3k0S3BIWmkxRDBKSDduTVFtVFN6QnNQMFA0MlhEMHZacEZlN1hzckVRLW81TF9FRnlw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Christ University MBA Admissions 2026; Eligibility Criteria, Fees, Selection Process - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-07-11T11:57:54.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQUzR2QndwS09va2Q1bWZtZWgyVWwxVHE4dEFSdHNJNzB4R045bUN4a1hvUF9MZTkzak1SLXc3ZXRmd0ZfMFRBR2lmVFJIQWFWcEo5S3M3VHlpaUk2WXQ5cXBuN3kwdGt6S01XSjkzZS03OGlPNVVzVFBSWEY0TTZ3Y29KdzQtS21WeVpBZ1JfMzQ1V2M?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MAH MBA CET 2026: Registration (Extended), Exam Dates, Eligibility, Syllabus, Pattern, Prep Tips - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-04-08T09:17:37.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBpWkxERms2VDZVclZVSlZmTFU1a3B0OGZpMjlRcHNmSFplOVFBWGpUSXMtMllvVnprelVLUHQ1MFM0cXBfMEdXSFhZRDVFUHByU19sMVJYNFhsNS1sNlBMa2EzYjJtRmNtaURRWXRHOGpGWHZHblE?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "40 Popular Tier 2 MBA Colleges in India You Can Apply To - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-02-10T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZ2o1WkJzU3FBRlFlb2lvVTY4dFlmNWdXclFabzlyWjdoVnNieTBjS0xHQmtsT3hDUXJzTFJORWM0REY2ZzM0NlVoUURHc1k0SlZhN296OWZRMGRlZWpnSHkybklkUWdpZjktZ0hnUjktNzl0cXI3d1hqNVV6WHVySmFIa0RsR3U3akZ6WUpCT2pyc00?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Chitkara University: Courses, Fees, Admission 2026, Placements, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-12-17T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9pbjRzX3lfT3lEOGJ0YjFSaFZXRk81dm96djV0YjdBREttUC03X2JqdWRlaFFjdzlLRzdWeVpnd1Q2S09kODc5b1ZQZTFpM2p4eld5V196SlNoQklYaFJ1ZmFXckxGQVlJd2lteS1jaHZSZTZzbHBYLTljQQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MAH MBA CAP 2024: Registration Begins, Check Schedule, Process, Fees - - Adda247",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2024-07-13T07:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PVG54c0dSUXdSWnp3RTlFVm9lalVSY0RmTVBsQlJLdGJBVUxYaXdZQl9CZ1JoX1JBMGxOa3dsQUs2UWVjVXdqNHc1TzJvSVV2WS0xUHpjN28xYzdo?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "IMU CET 2026: Application Form (OUT), Exam, Syllabus, Exam Pattern, Question Paper - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2024-09-11T07:59:31.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1pR3BUR2sxSGdoWGQ3TkxHSXREVUF2NmowaExVNnZJTGMzVTVCRExMMlNLb2Y5blA0QTdubVRTVUZyNTNlMG9DRy1KeFZES0ZMVkk3dnNqVnV5NWM?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "IILM University, Greater Noida Admission 2026: Fees, Eligibility, Dates &amp; Application Process - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2022-09-26T05:43:27.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOeUYyUGoyVlBDMUVDbFZRX3g3bmowS3h5VFlEUUpITmhLM01Jd1VRUU9DOE5oOHZjLUllM3VwUVk3WjhUSi0xa2pqcmFxaGpEYjRYa0RuZ08tWnF5eGMxUktHYnFDWnFKdGVtQ2QwY0NDSEZ0SnF6U2Y1VWx3cGNuSzFn?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Agartala: Courses, Fees, Admission 2026, Placements, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-01-23T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSm55TVYwQzM5bWtUYkdNTG9rSF9zUHUzcTJhY0hkVi15NGNXb21WTGhLSVBDYXdfc0ZLMnN6TmlSd2JPUE9uSEVpaVd3cUdVYnpPQ3haMlp2NTBfM1RRbjhxQzFFTEtYV2lucFNDX1NXSm5wbEo1QmJqR25vRENuQUo4OWh3enJ2REhz?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Sai University: Courses, Fees, Admissions 2026, Placements, Scholarships - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2021-05-21T09:46:35.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1lam9QVlkxVkRkSTBnTE9MQnFDQjM3UVYxNHpOcEtNWWs1dF8xcTlvSnBIeXdPRUJacGRmQnFhcWJWNFlpYkkxNzhjV0FiQmtQTER0c2paeVVqM29fT080bUpZTXJMSjRlRHJMaWhmcjh5dw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "SMIT Sikkim Admission 2025: Eligibility, Process, Courses &amp; Fee - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2021-02-03T07:03:11.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxObWk3ZVdWNmI3MWgxMWtid2ZQb05YOTU1SU4zMTZCNGFyNnZVa0lEZEVwSnVOSjFqNDJMUG5aTlZvVnp0YTlZZ19ndEVraUh0d093akEzTmZXVDFnUmhOTVBybGVYQ1dhMnNvbHFfQ3ZFOW1kLVlJUGx5bUVxeXlaaXFuNWJFTUxZMUNNZW1TMHptVl9RSHB5bzl3YWZOeGJzVUJaQ1NWQ1FkUnpOYXZpblRBQmFSWF9ZdFA2N28tWjZSZw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Indus University Admission 2025: Fees, Eligibility, Dates &amp; Selection Process - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2018-04-11T13:08:44.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOdXcxbUNUNDQxeWhwdmNTVzRTYkJpVWs0Z3FTRkdxVW56Z29YSXpva283Y0xnZEdyRUk1ODk2UDR0QzZlQV9YckJra0lxcmJfNWZCWndEZlc1THNqSFpVenRhcGV1eGlyelROSDdoOVlrS1NPY2dlck1sM2syd3RfLWVvNA?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "TMU: Courses, Fees, Admissions 2025, Placements, Rankings - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-08T05:54:02.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPclJGMXh3M3pzVzkwTTNlSGNCbmRCcGZZMG9kNmJDUVB6WUx2T1pfekdDZ2xuQVZNRFpyYlJBNURIb1dwVHcyd3FIVmRDX29LVE9HNjF5U3B5ZDN3ZEJqRnJ4bzdZclUwXy1SNm12bXBrVi0xcXloZkYzZkgtQXpWQXRuTjYwdG85aGc?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MAH CET Counselling 2026: MBA CAP Round Wise Result, Merit List, Cutoff &amp; Top Colleges - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-03-08T13:55:54.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hQ2lvX1c4VnYyQ0VPQnRTZ1d2QXlLUm5CWDBTV2FiWUZURy1TZTNaZlBZV2FHTWFUR1BqX2k4Sk8yZXJrc0xpN1pSSnVGSTBQM2k2WndwYWNPMXNLdGdVMXhB?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "GITAM University Hyderabad Admissions 2026: Application Process, Eligibility, Courses &amp; Fee - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2020-02-18T06:44:20.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNQmV5MWdlSGhNSWs0RkFDd2hUdUh1a1JnaEg4Z19jX09KdG93Y255bU1yT20yVWdHZFFSZkVtSnZWZkZBbTVrZjRBS0pHZHplUlFZUmVYUzY3VVJDSU51MVM3Zmxmb2FqQkZCNmdXRUd1ZGtWb3lYendMTEtPSTI5SzNsTVQwWFo5bkRJMlp4cllfUDR1WF9yNFZTRQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "GITM Gurgaon: Courses, Fees, Admission 2025, Placements, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-08T06:22:15.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWERDaEhseHJlLW9EaVhxcHlWb0dSVjVWZkIwWGQ2MVZIYTFrb2JJV21OcUpiTGVsdG1xX1hSeWRrbkJndngta29sQkJFVjNMcXFydWkyQUdYTWRuZEZLZWY0eEV3enRfZnB6N1Y3b25KSkFDTXlWcXoybUdGZnd5NWxRWU1ELU9QWXRvbURjMlB6bTlqdnc?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MNNIT Allahabad Course Admissions 2025: Cutoff, Fee, Eligibility, Application &amp; Last Dates - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-02-23T08:32:33.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPT0tNcnlLRXIzeU9rdHJ1V0pCT1luZHFaSXZtaW5Gb2RBTVZ1UGlYY2piWDZKbnJsN1R3Zm9zRmZxRFhvazRoeXZ0SU4wUXBjdmEyOWRndnBWOFBPdmV2NGtZQzdZRllBYWM3WWlaR0Zad1ZocGYwTU1wV095R1A2V1NyblJCVVZBVlhoMnVFYVk0ekpNUExVX3B0ZlM3dkRneGJqOWZQdWxEQUpPY0lVc2RIYw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Top MBA Entrance Exams 2026: Check Exam Dates, Notification, Application Last Date - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-02-06T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNM2xsUTVueF8tc0NlZlpCeWdLUGtsWHNyUVkyZVJwVzZnQkVSLXlnTk1XRTB5VXlkbUlrVTlWTm1NbHBJRE9OdmtlZ2gyY2NMbEozb3NYMUZDc25zTjdGUzlRR1NkU0dfQkhLTUJrV3d0UEQwQmhqcVd2SkEwQjZXeFJvb2RLWUZEWGctXzQtTnZRTkZXSlVHejJR?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Top MBA Entrance Exams 2025 In India : Know Exam Dates, Registration Last Date, Paper Pattern - Adda247",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-08-23T07:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1adFgzUDN2MEhMME9DYm1DeTZOY3Vsamh4VVFGQzNIMTExODdSTGZtdVp2NXVZNGIwdVlONkl0RzhtSTJRQXlYWjBBYlVkSERKS1VZNDZPS3JqMkNTcmtN?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Mumbai University Admission 2026: Last Date, Courses, Fee, Eligibility &amp; Selection - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-12-02T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9McGNobnF5R25pOTdXbkJoaVZ0dmJ0bTR4dlFXNjNYVGk4amc0UXNtRHFtVVBhcGtLQTZ4eldqWmZiT0ttMzVkSWYzVHhZQk54NkZyeHVXY3o1SDRUZDhscVhNeWdoS2ZTdV9LWHM5ajBlZ3ZQZDRPMg?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Upcoming Entrance Exams 2025 - IE Education",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-02-06T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaHUzbm5tQVJkalYtbEpkUV82UEEtY3I0RVB3TjNIZi1mQktydzZQVFRHX25BWGswRDlHVWFGdERoNlVRRnFkNU9OdENsSDhVMHpYcVdQUlBOYmxxV2FWb1JnRENSLVdRZ2hvUTRiVjUyQWZCTjZITDh0S0pRaWoxRERndWpEXzZEaEJndzVB?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "IPU Admission 2026: Last Date, Courses, Eligibility, Fee, Application Form - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-12-02T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNeU1EQXZQM1I1TktUN21PTGNtY2thWS1YWkNBei01TV92d3U4S1c0MXIyUVNabnFubkdDSTVvcDV2ZTB4WlZDSjJCU0NkVkx4ZEdvT05CbU5Bbnp2QVJjbEdSbzVXb2FMV2ZIM3BkM0l4OU5kNFBUbGFrUG5JcDJnS0EweWQ1SXY5ZzA0c1lLSDQxbFlhQnBLZHpndVk3WDA?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Bhopal (MANIT): Cutoff, Placement, Fees, Courses, Admission 2026, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-01-22T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOM08tWkg0cnRkcVdOVXd6dXFqZ21TRmFmUHI5ZUNMXzFmRjY1RjEzVmlqZlpjNXcwd09LaFh6eEFOd2lVU2R0ZTAya1BwODc5cU9jS2RwZklERTQwaUR1U0duQ3AwRVZpbHN4bjVrOHV6VjJiVDdCaXJOS2JJNFY4clN1Q0J3V2VPTTY5V0R6bUUtVzZLMTN1dFF0YVM?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Dibrugarh University: Courses, Admissions 2025, Fees, Placements - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-07-31T07:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE00V3l1N2lwanlfUEo3SmZqYnlSZTY0amZLR3cwSUQ4dENHSGlsYmJWeGxlazY4SkVhTGZfRHlfMUpZdzVDYVgwZnhUQ2tiMWhERmdCYl9zeWJaOVRhN25aMHdwbXpoZzFfZFQwbWlR?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Devi Ahilya Vishwavidyalaya: Courses, Fees, Admission 2026, Placements, Rankings - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-12-24T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNV3djcVBERmpqaVJ4T0dPMjdMck4wdjBwVEEySC1memtUMWFMTVFNcDJsVXpvTnR4VXJkVkYwZFliOEt2ams1WkVXRl9mdDFCdUNHUlZRRUZYYkRIeWMyU1ZfUV93N0lTOFFGS25RSmVvdFpkSkZUUnVtT2xjcXIycUtqTHZCbDg?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "All About CAT, MAT, XAT, CMAT: Full Form, Eligibility, Dates, Exam Fees, Syllabus - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-02-10T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPcVhzUU5MQzBnZmJSRkNiekppdVYyXzVZNFZaZDExWUdDY1BudXhQdjNZMU50a0UxY01HakVSa2JuRWZGbGowbXh6SEdkeHdHM01NNW1BX3pDaDVVWkF3VE1kQ3pKVTd5elJqQ3BWZ3N2YkJCX2JpdzlJVkJpRXJBS0p5ZEFYV0xDSFFB?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Best MBA Colleges Without CAT 2025 Exam; How to Get Direct Admission - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-12-24T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUk9pajRfaXBUaTcxaFdyaG9oOFowbURiYnQ1SmswaHd6LXBTaXlwV1d3RzE1Ulk2cWlDMzluYUJmZy1RQ3ZxeGNfZ1hhaG5ZdU0tdTAwemFNQTZTclNlcllYNFdrV28tb1Y1c3FnUXphRjBueVJQTUNHc2pvLU03MjhrUnJlczljN1dCTHBRTE1UUV9tTlhKUnQ5MHRmMWIyS3dycFhnUV9NMVczUUE?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MBA Entrance Exam 2025 Reservation Criteria &amp; Guidelines for Reserved Category Students - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-07-08T07:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxORnJCdFNoZlBsQWZtWWJxaWJvQ1A0clRwM0hJV2RHX0tURjlaN19lNTkxaTBZYUdiZ05kQlM0Mk05YmhwbXRoelRFNEFxNXJ5d3dSek4yMmdndDZBTnBoUnV1dDJCNFk5VVdDNmNGMFhLSWN1VlUzMW1YZnpuckg1ckJTVDJBZ0tZTnJsUzY1THc3bXYzS1BJZEptX2MweTUwcUdQQm5oQmxKaUZpdGhzbmNnN19VeFVQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MBA Admission 2026: Last Date to Apply, Fees and Selection Process of Top B-Schools - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-02-16T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQTAzYjBzbnlNbHVydFlGdU12b3FuWkY3VEpkOVhUeHRpa2VrS3AzYS1vTzBZT2FkREVVWm14elFfZkd1Z3U4UjBydV9Cb29ZTkIxd2tRYnpJNHdqak10TWoxbjZ6OUIydGZBREJvbWRWbUp6RUU4WVRidm0wYWRMcHlmaW13ZU45QlFtb0g5VUp0Q1JPUjZLNGx6QlVISmhvenZsWkg2QV9kNVNMMUZ6MQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Direct MBA Admission 2026 Without Entrance Exam in Top Colleges - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-02-04T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObHVYN1RRTmR4bDJsaHdiTjlGODhndlB4NHV6cDVGYXM3N1NObWU5VF9rZFExZ1Y5VlV2dEp6MU1JTWp0VW5qWFEzY0ZoVkVJTWcwUnpmZXBtcV9RRHZkSjFJLVViaVB0WjJobWJfWDBpWTZjWVZEM3JiNVNBLS1kZ1hOb1Y2YTItQl9zLUFzZHc5LTlmSWZuZ1AzdE5uLTg1aGZkc3M5bWg?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Top CMAT Colleges in India: Check Cut Offs 2026 and Fees - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-02-17T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOS0FlelNMVnpNNG9KbnUzYkJqU2FGQ01JSXhFbDV1Ym5PdVVpNjFYWV9QMmJtYkY3czZFTDJmYlZwOENmaEcwWTZFZlB5dkN4NFpSOVItb2lJUW8tVlJJNTIzendUcGJtQl8wU3E2dEtXOU1ON3U1ZWNCajAtVXFGNmlvWFZzR3NrMmpkLVlmbmxmSDZjUjdfcmFvdWw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MIT-WPU, Pune Admissions 2026 (Open): Fees, Eligibility, Dates, Selection Process - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2023-01-17T11:22:16.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BcHN0aEl2Ny1MWHRCTVRENm16aXFnT2c1eG5LYW1sVXNnS3ZEVlZ1akhzaFpwcS1mZTItVjM0VzBDcFd5OGNBTXZIdm43MjFBbnZzR0w1cTlhbS1BU2k0cjE5OVVfTVRVamJEVXd0R2o?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Entrance Tests in Christ University - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2022-06-30T07:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMlBrUG9zMUFyaXBXTjJ4YmRpYm55eUNVQy1VaTJvYXVFam9uVXc2WXZvbzV0eG5nNUFCZFhGeW5zYWt1UFFYeEliY2h1cFE2cllMb28tQ0RGZkJSbDhtNFY3SzRYYndPWFN6WUI5Y3FBcE9zckFGZ3pabWRXbXI1N3E0cmg4a2hGZGtQbXVB?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Graphic Era University Admission 2026: Fees, Eligibility, Last Dates, Selection Criteria - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2023-07-11T19:08:22.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNS3FNbGc3bGxrcmRJMGh0dUFFbkxmdll1ZTh0eE1sckU5bFl0aWMwaFptdWRnVUcxNGhablowYXM4WUE2d3NJQVAyTlE3dm5Dd1FDc2JyYVljUmt6c3dMS2xjd0d3NkFGRW0xdGZRQlhCMDk4WGtCZl9XTWpIQmdDWEtsN01DUWdVMzJYSlVsRHRLSFJZZGhpYjVvRQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "What is Hospital Management: Subjects, Course Fees, Admission 2026, Career Options - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-01-06T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTmQ1d2FpQThKUUR2Mm5VV2p6Y0RLUEtoUHdKMWtSa3M4d2x0ZmlpNGtBSGlQN21QYm9lUVBqdUFLTkJHdzJhZ05FQzhPQW9wd2VBd1NrQmRfR1VBWkMxOVh6UWlBNzNLeFNNWVR4X2ZmRHEtUVJqdk9NcDJRaUM0UFY1MVV3Zw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Universal AI University: Courses, Fees, Admission 2026, Placements, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2023-07-19T07:38:02.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaTFMYXhqX2dCcG9nOXhwdEFpQm12OEk5U2lPTU9RVHJaUjhVUFlQdzRPSy1ZZ08wSEI3VlRQbnJ2Z0F5NFBSOFZiMEZHdHNhdWNaYWYxajBaamJsNG9pWXpQak94WW01MnJ2U2FkZlg3VWROR25GaUk3SHJGNDZSaA?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Galgotias University Course Admissions 2026: Fees, Eligibility, Fees, Dates &amp; Scholarships - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-09T06:36:47.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQWDk2c18xZXFSVFNFVldqWnpOMl8zNVpfaU5nSkFhUWJuLW9uamIteGFWYXZiS3AteHBIMVlIempQWDJLZjNWektEbzBubUpHdHFqLWFOVjlVTm9BdjFSNjNtOFpLRTVDSUdDR1dBT0g1VUh1d0VvcjRYNkZPbDhyVnVMZWVJLV8tVzhiNlVR?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "UPES Dehradun Course Admissions 2026: Fees, Eligibility, Dates &amp; Selection Process - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2021-10-19T06:41:26.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5VREJPYy1iMGJxN21ab2JXTFN3OG9YbTNOV3J3N3dDR1YxMnJ4QWxSOXg0MGtsaHZNMWZ5ZFBqT0plYVpFVnJ5Qkp2WGZFNmhqempwRF9TTzdzRXlhcDMwYjd6dXFsMngtTUUtc1RRWUxUZw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Jamia Hamdard Course Admissions 2026: Eligibility, Selection Process, Fees &amp; Last Date - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2018-08-04T13:54:27.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBoTnpwM0lPdEwtY0thUnVvMnRhTXNQQVptSDg0SEpET0dnWkg4U1Jhb2lMdkprMVZsa0R3R3M0Tmh5NlFtR1VJUUJCM3g4RGpnMVYtMXQyN000bDlFblhXMmpablZHcW15cl9mTlpkVE81M1pjdXZDYg?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Amity University Noida UP: Courses, Fees, Admission 2026, Placements, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2026-02-12T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBFRFJRcFp6dkg5ZDUzc09IVWdvNHhYUnhPN0l2QWlyM19QcG5JdzRLN1BuMVRPMjVSOFc0dHZoM3BvT2ZfR1dKYnNTX3VuOGh4UTVuXzVqWm0wanJINTg0NkZ1Q3p3dmhPSmYzT0lRZVc?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Surathkal Course Admissions 2026: Dates, Cutoff, Fees, Eligibility, Application &amp; Selection - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2023-04-05T15:28:01.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNeUNfUlJLMWZ1b3RfZldMZmMtN21BZnlfV3h2QXFWcFJELXdwTGxEZjZhVE5USlVYWVZ1NTJReEVnVTVCWUc3MFRFMzJzWTdaN0hLTWpSbDRKSV82bFBMaHRBOEpaWnlWZUhFVlZpa2hfaHQ0Y1RPc3JxakZsc3pGZmFSamMxam80a1ktSGMzM0hrbE9DNGN5RkNCOHdydzZ2U2RjTG1MWQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "DDU: Cutoff 2025, Admission, Placements, Ranking, Courses, Fees - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-10-01T12:04:51.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNQmNGQ080akNWdVRfYUptM3pvaGJCekpNWWxnRmFjSHhsbDlhRGNNZW1yVnlET3dZT0dneGdtdnFMbUxRQWlQWHB0NzFvdmVSZk5NeElmSkZsd0UtNTZKLTdSN3ZmZkgxN0xXV01uUE5sWWZxSTFJc1c0VmgyOFVxSXV6TnI0MU40LVNDWVZn?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Amity University Noida UP Course Admissions 2026: Last Date, Fees, Eligibility &amp; Selection Process - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-08T09:38:13.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5ta09GQ1hia2pxOXFITDVqc09iREdWa2U5MldaOEllbnZxbVBYUTBQZnlOdEVEanFOZVAyaVJmczJIaC1aYlZ0LUMzU2VMaGFGXzBjem1NaVV0cTFpZzZyLXJ0eVU0TGw3Y2RwVG85TzhYcWdqWDNiV2x3RlEydw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "List of GL Bajaj Group of Institutes: Courses, Eligibility &amp; Admission 2025 (Open) - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-04-06T07:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPRFR1VjMzZDl3Rnktb1FDVHFjOFpWSmVwZnFyNWtZaElwZDQ0WGNPbnFPejJ4M1RFZGFtXzlzZmlZMFFzbEpLQlhHX0lmeW4zbkxVVUU1Q0piUkdfS0tURnhJVVg2S2JEVHJLVVZMQ2RHb1RmajJYa0VjWTRVdHBwSmk0UlloVFVrSGlBdFV2YnF4SFdBbGE2bFVKNE1UbTFlX195SFNZR3lZU1JKWExlZ2RQT0xVUHlQNV8tenZHTQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "UPES Dehradun: Courses, Fees, Admission 2026, Placements, Ranking, Cutoff - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2021-08-03T08:59:57.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9xQTVFT2RKVUlZMTl1dXBic3VVcWFjYU9CeUFxZHJVZWpCaHVJM0N3XzIzdkxrcGd2RE9IR1RlRzlqNEk5ZVJqU2U1TldhTW83enVDR3VrOFdJN1lyOTl0ZjZadm0?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "COEP: Courses, Fees, Admission 2026, Placements, Cutoff - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-12-17T08:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ERzlqZFNtb1dnMWFkWDVEeFJwOGZHa1pTTmswZmQtcnN6S3hXSUpKc1RSZV8xVlhaVWNuSXBvd25mMXlrLW13UFJhQU0tYmV5Mlc5WU5RbENYLUxSczRYaE9TQUJVM2ZIX19POHhsOFlVeFU?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Silchar Course Admissions 2025: Cutoff, Fees, Eligibility, Application &amp; Selection - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-01-30T07:29:17.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSlBJUWlSZTJvVFV2UXUwdGl6T3dCZGtuaHNfQUxweG5PdWpQRTN6NDlnbFc4WDdXdDRFSU5TLXN1U3pWTDB4azJYbHp3NDVBWXpOM3Bud25XeUQyQWp2elFaZmY4UFJTRHl5Uk5wTGNiMmFVcnFwTl9vb0Z4MGEwNzRvU25DVHQxRWRtVThtQThPY1JTSEJqUVItQQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Gurugram University Admission 2026: Application, Fees, Eligibility, Dates, etc. - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-03-06T20:49:07.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPLXlfTjl4Y0RSYXRyWGpOUDJNWEI1YTkwLTVSUndCS2NySl9hUVBOc3haUE53aTBHNG5BVGRpQk16ajVuMDMtcFd3ZEVBcUl4UWx3aXNTQzd0SnFZcjV4RWI4Yk5MZ2hqTnFOZi0tQUlLNmp2YS10dTdkQmgwQlA0MTZWVGs?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "TAPMI Manipal Admission 2026: Courses, Fee, Eligibility &amp; Seats - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2023-10-25T12:18:57.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQV2pTaU10VDN2U2RhWUsza2RXTjZ2Nlo0emtFWllRN0pkVUVfRk9CbmFfbU8wczV1SzNHUzNxM25fYlBydjYtaWwtd3NIV2dnLWFhaVk1NTJOQXE2UVFZX1pNSmpCemtNWnJkSG9pV05CV1Rqa0ZaZkowODBBZTRNU1o2RGpFRWhoMjFfZVlyNms1OEk?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "SPPU Admission 2025: Application, Eligibility &amp; Dates - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2021-04-08T09:57:51.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWnpPaVZROHJaQ0htSVhrNXpUeDQ1OXV1dGd3OEtUUU5tWW5tTnRkQ2VrSDBnVmNGblRzZ2VzUWR4ZU5ZdG1DRmlnSEg5RG9uM3JoYS1uNmFpSkhoeGZaRW8zdHU4bkdZZlNRLXllaDJUa0VySFpXYS1ZeW9MdEU4SEQteU51TTN5cm1zUGQwSW5LbXJHY2hxSU83Slo?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "GNIOT Greater Noida Course Admissions 2025: Fees, Eligibility, Dates &amp; Selection Process - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-09-13T21:07:04.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPcnRNN0ZGc0Y4Z2lhSGlzT0NDZlRZU3ZQWDc5ZzFQYzRuMUNnd0ktN2pETEJqYkZHOHpQalItNkJQX1pVM0hDdUlxdVNPOE9mU0xqV2NGQzNqTG5zdzg1ZnRLOGNrZkVEOGRGNmVBU0xaWXVEX1l1ZzE1bFNIQjB5emtveU5SR0tlLTVlRGZR?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "BIT Mesra: Courses, Admission 2026, Ranking, Cut off, Fees, Placements - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-07T21:18:05.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWWhaOHBtdE13UmNaSk9NUWlscDZZbDN3TGxVTVZybC1BYjJjS3VVUll5WVI1TTZHZXFOZWxGcUd3V05jMS04d3VSd3h3eDZNV000NTZGUHZwTFZ1RC1EWUxlS1JtSHJtOExSSXRiS21GWFVEM1FLcGNkLWRpRTQ4VmRoQkRncF9fMmx3?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Techno India University Kolkata: Courses, Fees, Admission 2026, Placements, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-08T00:58:05.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9VLXdUOFlucG42NnB2TDg0ZHNhUFA3ZXVraHBYYlRsb25IdHZnal9PN1hGLUc5bXlKTzBOV3hqeUZlRll1dWZ3d211VThMSnZNSWhtSDVBdllSZ0pMTjdrZFpWekY3WUJlMnN5X05nRkR1MWU5Tk9pNkc4cGE?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Guru Gobind Singh Indraprastha University - New Delhi - IE Education",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2025-07-03T07:00:00.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdWFrN0x0Ny01QXBtQi1tY3dma2ZKXzU3WFphRi1QZzItcjZzblhIQXNHN3JmRGVRVDFrdHVFNzcwaTNVYXpXeWRMYk9nQVI3SkV1ZVEtQ0c0dGFJVktJQUtHZlFJNGRvR252REdURnhUSGFjU3VnMkVhNGR5YTRpR3cwWkFUcE5tZTExXzRWWWFwby1IazdOTFhBdkxocS1oeGlsNmJmQTh4LW1PMk1LbUhQLWs2Rzg?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Rourkela Course Admissions 2026: Cutoff, Fees, Eligibility, Application &amp; Selection - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2020-03-13T10:28:55.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWDRRT1ROOGVKSUNnalloYXA2d1JFY1lyeDRBQ0p1UE9fa1VDQWVyQ3F6RTR0bWo5bFFpdUowMVgzVE9UcEdYUVZlVGltX3FTdmxxRFBMam1Ka3pnYk1lRnBVakxEQ0JGbkJxOVRKVDdkQ1hhbkZheGpVX0dUbWQ3R09EUS1iTmN2c1ZGaXMzQ2t4VkxkcFVXUW1jUkg?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MSU Baroda: Courses, Fees, Admission 2026, Placements, Rankings - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-02-25T06:40:24.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORzRRN1UzS1UzdDY1RWFoWTNPRERTNmxvY2NhX055MHZuVnpUYkF6QUdBODNFaG9kVnkxU3psZENiU2hGb0VpREpfQXcxdW1GT1Vna0pYeU9XX3J0QnhSa1lVMWU5SmtGWXczc25McFlDSTl5ZnhDd196UzQ5dW1IN3FDalRxckRuMW9VOHluR0R3Q3lybmt1bUZRWUtDZw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Hamirpur Course Admissions 2025: Cutoff, Fees, Eligibility, Application &amp; Selection - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-01-18T00:47:32.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRG9mblNTY1IxVHhLV19LV1MtVlZFSjAyYWNUZDYyN1dTYmVmT3lXVGxNWHluVjVJRENhbTBva1E1eEM3ckZUZi1fZ3Bud2F4SngtckFiMWhzdHRNV21FLVR4SDF4VTZraXVZeVJucERPX1o3ZkxJWWUybUMteDZfaFV4UFBVbXNycmI5WjZuTlZEWW5ycFdsd1JJR2I?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Netaji Subhas University of Technology Admission 2026: Eligibility, Selection Process, Entrance Exam &amp; Dates - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2020-10-16T06:21:56.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSzVVQ2VOcEYybmFxMXEwOUlWQ0VkZjNBVlR1MUFFbUs2ZThCX2h6U2RGU1BmbHJvQmFQUjZ5bnh6OUtfU1Jjd1M5eWNLa0NBT2MzamNIUXlkd090ZnFPZXJPMTFqaWw3SXZ6dlF1Y05ldUwzSnp2ZWVTMXYyTDVhZ21sTXd2SlAzMGNnaUFBQl9aQ2lKWktWVENjNmZVVVk3?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "SRM Institute of Science and Technology Admission 2026: Courses, Eligibility, Selection and Application - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2018-10-29T08:22:04.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTFhuUElGTWxWTG41WGJjNHAyNThBUHF5QzJubHBnWk1FZWdybUdERGhEYVJrRHVIRkdMTTlTUTlNR0hMeTBxYV9uT0ZNZ0dKNUdCV3FCaDRPWkZiaW9Wd2FmeV9DUklsUmJGMm1waWRrY1piU2lrUnhISWJTbVFMNk9FRlJ2c0FXN09JYjZ1WGdkMEExdjkzT3RwR2tPekM3WlUzbGZWM0ZrbXlUTm5wUko4VQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Amity University Mumbai Course Admissions 2026: Eligibility, Fee, Application &amp; Selection Criteria - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-08T10:26:25.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9sMlFHNF9VSkkxaDFBWkNQWTQ4MTZxUXlfeHlLbjJiYkMxSU1ST3RHVzVSM1RsMjhkOEstUmhKOGZoS0Y5S3pxTG9iMlRITEZzLXBHWkZ0M2huVEcyRkU4WW1RM2pYREJwM2x2Nm5zZEVtbFM5UEFJamRjSnBRbFU?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIMS University Admissions 2026 (Open): Application, Eligibility, Dates &amp; Selection Criteria - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-08T12:25:29.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5XbGVvMk1Kc3pRUWJOTzVDU3ctVmVMV2FhMnhwTk5TNWp5QVlkVVVmeXpWV3dtelR3UVEtcnU3LUYzUk5JcUViUzRzdjR0NC01YU9Fd2JnUWc3SFpnNDc0QVZ4M2lrYVlUc3pGeEt3bDEtNTBobzBSRWl6Rzdadw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Anna University Admissions 2025: Last Date to Apply, Courses, Fees, Eligibility - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-08T08:55:06.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBxX0JEUlJlaGEyLUZ0Vl9YVGVjVTNXeDNUN2djMDc5ZXl1YW1zVTVndjVHWHlaSlNyUTNmdXdoeC1NbWlsN2tIYWd3OHhtX3U1dHFtamZ3aTZVZ1F4LWVMM2JJQlJ3eEEyR09KcWZQaUttRmVjTmNxbjBqMEtsQQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Savitribai Phule Pune University (SPPU): Courses, Fees, Admission 2026, Placements, Rankings - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2021-04-07T12:32:23.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObHdCbjV5cnJfT01HUXdJZVRtVUxsNlEwcWMtZl9fWmhxLUx4V25iS3pOSm1WTUJnNi1CWnBwUU5ubWRYVkE2MjdTZ0pEV19qdjZ1TVktWWtZNUI2d0pvOHRybzBfR2F3eDROYXdvWDNnQWJTTHprVS0xbnVwczZPNWMzTWtnVnNTR2lLVEoxZw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Gujarat University: Courses, Fees, Admission 2026, Placements - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-07T21:17:52.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5oY3ZYUWRzaWU0R045N0VLeldBUFBKU1kyRlJjZ091dUFlRFY1MDhtbWZqTmx1ejMyV0pSdlVzVlpMVHJBeGNHQUcwcmM3S1hvSk1ZSWVUMEljZHMtc2hsUEdwU3NDaWRrYTF0S1BjVXBHd3dxWDU1bQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Navrachana University: Courses, Fees, Admission 2026, Placements, Cutoff, Scholarship - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2018-05-04T09:12:50.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5KTHhaeTVNNjV2eUdvVi1VZkFHRlZHcEpNOThobm1HMGFfd1kzcC1xMk5CekFTVW9wUmdOZWx0TmdkRWR3Y25rWUJqY2MzdXVpTkZHT0E3OG0wNzg0enFsSEJ3MDVOTDJlNFl0NmhwYml1QWhQVUNQQ1N2aw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Netaji Subhas University of Technology: Courses, Fees, Admission 2026, Placements, Cutoff - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2020-10-16T06:17:34.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNUxxMFpZRFFNdm1zSUZzX0xUNUY1QmxhWnI1X0ZyLTRQTC1WcnFnLWxRTVFZa3JiVDczYkZSak82TVgwZllLa1pwSG5iUEFMRnNWbFNqRThCbzRwV0FlM3d3NElxOWRpN2VZMmxpQUV4WlkzNUJ1U0dqcGpEUTVsdGpVUndYRDQ2aFcyU1Y4ZkdwMnc?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Jain University: Courses, Fees, Admission 2026, Placements, Ranking, Cutoff - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2020-01-08T10:52:24.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOT0VsMnEtY1E3SFhBWUlBZWVGWFBBc2gweTNlRFRHMnRHYnRFelJfaUVYOTY1MVFUZXY2U21FeHh1MUxLaFdQaUpCODNjaDIwQ0ZFcmJPSVhMaFZONjFxby1xYXpZalNDWEhYbXcxYWdaTVJ1TXpybkVWU2VqVDk3RnhRMA?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Hamirpur: Courses, Fees, Admission 2026, Placements, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-01-17T13:51:35.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQNjZaR0t4Ym1BNXBUck1hRFMtY2ZlYV9LbHFDOEJmODQyVDJnMW80RW16SDMxUkRYeTIzU2gwTUZhQjZtMVFpa1V5S0ROUkF1cmdDY3NqZGlSbFYzbU1YYWpzOGFkc3BCR1lxUVJSVXdKajFMdGhza3ZrRnMwYzg3R3NLeGxLVWtVNEhlcFpsOA?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Gautam Buddha University Course Admission 2025: Dates, Courses, Eligibility, Fee, Application - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-09T06:50:12.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNY3dPejQzTEhRQndueUdCeWF4dHJ5QW96MGlSYnlQR0NuMTgxaWdMcDJCRXNyS2FpeDljbGdWSHZYV2JQWm03aUkyYkl2SlFRRk1OV3RTSXZlVE1Hdi1xOVc0M2E4SUxxRXNwUnVUUkltV1pEN2laWlJKQXZNdWs0N1dPOGhpVmZSMm9qY0NBa1RoaDA?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "OJEE Counselling 2025: Dates &amp; Schedule, Registration Link, Documents Required, Result - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2018-10-11T03:25:16.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9QYS1JR256Rkx1VTFrejVvbUxtNmhfc3JaQlFjbVRjRU1RSXJlOGo1OW9rSHdqV01FcEtneV9zX2lsRlc5UHR1ckpqdnBZTUNmN3NyRm03OFB4aTRJdFE?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Birla Global University: Placements, Cut off, Admissions 2026, Fees, Courses, Rankings - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-08T03:58:11.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMVc4RzN5c0E5bEVia1FFaDlLcUIxcWpmTUFoUmM5Y0U3dWJXck9ETno0a2VvSUZtVkI4QWt0bWxsZmt4UGVGR1dfd2x3MlFHN2NUTTF0b1FDdVNYUXViam5xSFdDMW85VlR4SGExaG9jZDV5LWw0b2NoajdKRWp3STJn?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Galgotias University Greater Noida: Courses, Fees, Admission 2026, Placements, Cutoff, Rankings - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-07T19:36:01.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNSFNQMEsyMkduME8ycjl6Rms1cWJTU0N5MlR2ZmZzUkVMRFJQZWswYWtGc0FLclUwVG0wWUZHcmgyOUF1YmNqTG11T1ZyZ19jSzJ4Q1AtZHBNNWpXTDFUU2dQWWZEeDRhUjhBSURnTWxHUDBJZ0phdllVM09aYXBEZw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "Indus University: Courses, Fees, Admission 2025, Placements, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2018-04-11T13:07:37.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE40RGtGbTNyLVd1NkNSMVZzb3FoN3JaY2JwN3BOTzMtY1FJUnJ0WWo4QWh4by1sZUxobWpjbUdxbTEtNTdPRFcwUURYaXBvWVBEUW5WeEV6ZU9LZkctSWd6VUUweHpLZTVYWnJiYi16WjVNX0JJOVE?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Durgapur Course Admissions 2025: Cutoff, Fees, Eligibility, Application &amp; Selection - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-01-30T06:45:37.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQUC1jNzVJSVFYOXRzWm1vTDNabWNyWVJJMWdSRk4zdUd3QjF1ZzhqbThhTFkyWnV0WGVORng0SUhaVlBXQ3VLLTJHdlNLN2w3dm1zdVRGeHJEbFVTTmlMTGtPSUVHdmZFYUZtcjc1dVh3QzQxZmF1LXRsRTRXb3h1VFdfNWpwNVdybHdMaTczSmtxSHJhMm9PQ2RjN2o?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "PES University: Courses, Fees, Admission 2026, Placements, Scholarships - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-07T22:52:17.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5oNGExMm5RMVZHY0JrQ29PUzdORGV1SS1KLU8zbGpqY3AwdWhVRVJ1cDA5MzRDdTliRU5tUDU3TGlNVC1McnJ6Q0s3UlN6RmxIQVRrQmppbTNjRmwyandtbThkYi1oU0Q3MkxlSFRtWTU1TUk?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MNIT Jaipur Admissions 2025: Dates, Application Process, Eligibility, Courses &amp; Fee - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-01-27T13:19:18.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNS0psZlVBVDRWMUdMZDhaWV9qYy00TGhxR3drLUxGR3RRYWVwM2xjYmV2RjZmUjdtRjVleG45V1pmYWpzYkRtYXdIT0VFQlF5TEc5dDFfd3h4MnVldW9tWXJKZ1NNRGstZ0gyXzB1OGRaeUtqdzNOQUFwc0FvZGxxWTE0UFN6dVdyRnJsQXlNWDI4a3VjSm5fRnpGbVlHZG1tU0w0?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "GSFC University: Courses, Fees, Admission 2026, Placements, Rankings - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-10-11T07:50:46.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBya0cwelJWNE5UcFVkZDBoaUcxelh0YUxsS1pTSWFzd1Y3NC1UbmFac285YU5aZ2ttWTh5Sm44bWppMmdrNk1OaXZFdzNPNDNuZjI1ZXdjOENrYmZ0QkcwcWJYYW55NzhKMF9wV09XOENpVFE?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "CUSAT Admissions 2025: Dates, Fees, Eligibility, Application Process, Selection Criteria - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-09T06:37:12.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcXlwU3Nhb0F4Q0w4ODVkMVlpWi0wOVNsSi1KN3FxVS1nQnJWUGlVY3RkOXpVeERDT3pTUWhJWTRxTF8zbnBCWmp6TVZaZEdiOVpzLWtITXZvcENwVkE0bFFNemwxRl9ZaWs4R1dmUVdRS21SVXBGMHA2d1ZxNXBTS1FDTVg5Ylo5YTFPQkNBaTRTRHdlR3p0TVMtNUlSWC1HdXc?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Srinagar: Cutoff, Placement, Fees, Courses, Admission 2026, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-01-19T11:05:21.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOdmQ3dUdYY1lLSkJFN2dHTmxLSk9DUUpDY0o0QW1ibFg4aUtnbXBZTGdrSzdzb256ZkRzcTl4VmhWSUROR3hZUnJlN2syODM5MHZ1M2YydF9rZUM4Ty1Fd2JUMTVhcGdCSUhmbUZmRkR4YjZOZDlRMjk0RXpaUjB1T3BGRmthMFIyVkp3?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Silchar - National Institute of Technology: Cutoff, Placement, Fees, Courses, Admission 2026, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-01-30T08:29:07.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNM01nM2R1ekx1b21LWjZlRkJGaTloOFI1dzBGa01WdlF1bk5Najd2Q3MxZHRkdmJLSDhad0NQY0FOd0JOT21TdjdtMDRrVEhVRXVLZDRzNVdqM2NHd1JBb1k1bEZfLWkwaDA2cGNwMEFMenRHZy11QUxRRGlOcC1ranVha0R4WkMyazdpckZR?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MMU Mullana Admission 2025: Eligibility, Applications Deadline and Fee - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-11-23T10:55:38.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUEtvMUxmVmJxWC12RU9oUHdiMmIydjgyNnduQ09ZbDFCRDN5bU5mTWZKc25MRjh5R0dtRWZ0dmVVS2h2bDVZQlUtVEpyRWZVUTdwN05XdjkzeFFWUC1YTHQwaGV0NzFzM2FFcmZ6YzhDUk52eXVLQ3lCNUdNdm1oRl90SzBrYkpxM3VXMThwZ3VoWGxtZlN0NTFlemxGc1It?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NIT Durgapur: Courses, Fees, Admission 2026, Cutoff, Placement, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-01-30T10:50:15.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNalhKUXNvODBXcE9Oc0o4QnFBRGtTTDJQVnEwcDBlMEt2bmcxcnAyLTRwbGhDa28waVZyNG1OMEZaTExVV3JpYmt5cktsVUNqR3dReWJBTHdpa3NmM2UyNUhMMU1uQ3lhMm54MmtVbmpCX0w0Nm1rY1FVck1vTWRjbF92Vjcwd2pVY052X2VZUQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "MIET Jammu: Courses, Fees, Admissions 2026, Placements, Scholarships - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2019-04-05T09:50:07.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZlpXaWJNYm5RdVJxcldOZlVjaDB4akFTckJMY2lIVzRkQV9QaG52SE9RX3N4ejlzVnUzY2lEc3EyS05GMDRUalNQZnkxVnFqaGg4d1d6REpleGE2cTJSWlZjSDc0Sk1jYnNWM2hQdGdaNE9fc1gzSFZkeW9fY2JoTk1PUGQ5UHcxQ2Z1Z0s3Y1NtN2c?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "NEHU Shillong: Courses, Admission 2025, Fees, Placements, Ranking - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-08T11:09:11.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNX1JXT3JWSU5MaVpMV3pla3FUamVOUjYxQU5PNGh5Snd1NWhUV0x3TEFFYWJvcUp3elB5em1tVTJKRlN5bEwtZTZaMlAtN3o1MTY1MUhFbGdDWU9YVDZoczJRTzBGV1FsOWFKZ3pDbXExcGtPbVRFc1VoRTRncFZnMzlLbzlYUQ?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "rss-aHR0cHM6Ly9uZXdz",
+    "title": "GGSIPU: Courses, Admission 2026, Fees, Rankings, Cut off, Placements, Eligibility - Shiksha.com",
+    "summary": "Live update from educational news wire.",
+    "category": "Live Update",
+    "date": "2017-06-07T22:57:42.000Z",
+    "source": "Google News",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQd0ltR0xjRTdrYXptUGxtTFg2YmVscVBuWmlWbVRFeFloLXhIc0R5UTZjbU1PMU1lbHVQamlhSnNPajFwRVdJV1h5SjJONEJqUnMzYlNyY0ZOdkd4NGo4ZjJNcDNTZEhBYjlWYVJOSUdyLWt4aHNnY0x2SVMzb3ZhcEtnWjlSczFXSVNMWnJyLUNrdw?oc=5",
+    "urgent": false
+  },
+  {
+    "id": "cmat-2026-results",
+    "title": "CMAT 2026 Results Announced: Check Your Scorecard",
+    "summary": "NTA declared the CMAT 2026 results yesterday. Cutoffs for top MBA colleges like JBIMS and SIMSREE are expected to rise by 2-3 percentile points this year.",
+    "category": "Results",
+    "date": "2026-02-17T10:00:00Z",
+    "source": "NTA Official",
+    "url": "https://cmat.nta.nic.in",
+    "urgent": true
+  },
+  {
+    "id": "cbse-boards-start",
+    "title": "CBSE Class 12 Board Exams Begin Today",
+    "summary": "Over 16 lakh students appear for the CBSE Class 12 board exams starting today. Critical guidelines issued for exam centers regarding electronic devices.",
+    "category": "Exam Alert",
+    "date": "2026-02-15T08:30:00Z",
+    "source": "CBSE",
+    "url": "https://cbse.gov.in",
+    "urgent": true
+  },
+  {
+    "id": "neet-ug-2026-deadline",
+    "title": "NEET UG 2026 Registration Ends in 2 Days",
+    "summary": "Last chance for medical aspirants! The registration window for NEET UG 2026 closes on Feb 20th. No further extensions will be provided.",
+    "category": "Admissions",
+    "date": "2026-02-18T09:00:00Z",
+    "source": "NTA / NEET",
+    "url": "https://neet.nta.nic.in",
+    "urgent": true
+  },
+  {
+    "id": "jee-main-session-2",
+    "title": "JEE Main Session 2: City Intimation Slips Out",
+    "summary": "NTA has released the advance city intimation slips for JEE Main 2026 Session 2. Download now to plan travel. Admit cards expected next week.",
+    "category": "Exam Alert",
+    "date": "2026-02-16T14:00:00Z",
+    "source": "JEE Main",
+    "url": "https://jeemain.nta.ac.in",
+    "urgent": false
+  },
+  {
+    "id": "iim-cap-interviews",
+    "title": "IIM CAP 2026 Interviews Scheduling Open",
+    "summary": "The Common Admission Process (CAP) for the 9 new IIMs has started interview scheduling. Shortlisted candidates must book slots before Feb 25.",
+    "category": "Admissions",
+    "date": "2026-02-14T11:00:00Z",
+    "source": "IIM CAP Committee",
+    "url": "#",
+    "urgent": false
+  },
+  {
+    "id": "bitsat-2026-dates",
+    "title": "BITSAT 2026 Exam Dates Revised",
+    "summary": "BITS Pilani has slightly adjusted the Session 1 dates to avoid clash with state board exams. Check the updated brochure.",
+    "category": "Policy",
+    "date": "2026-02-12T16:00:00Z",
+    "source": "BITS Admission",
+    "url": "https://bitsadmission.com",
+    "urgent": false
+  }
 ]

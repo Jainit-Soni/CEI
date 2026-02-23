@@ -4,32 +4,19 @@ import React, { useState } from 'react';
 import GlassPanel from './GlassPanel';
 import './ExamTabs.css';
 
-import { fetchColleges } from '@/lib/api';
+import { searchAll } from '@/lib/api';
 
 export default function ExamTabs({ exam }) {
     const [activeTab, setActiveTab] = useState('overview');
-    const [targetColleges, setTargetColleges] = useState([]);
+    const [targetColleges, setTargetColleges] = useState(exam?.acceptedCollegesResolved || []);
     const [isLoadingColleges, setIsLoadingColleges] = useState(false);
 
-    // Fetch colleges that accept this exam when "colleges" tab is clicked
+    // Sync state if exam data updates (e.g. from async fetch in parent)
     React.useEffect(() => {
-        if (activeTab === 'colleges' && targetColleges.length === 0 && exam) {
-            const loadColleges = async () => {
-                setIsLoadingColleges(true);
-                try {
-                    // Search by shortName (e.g., "CAT") or Name
-                    const query = exam.shortName || exam.name;
-                    const data = await fetchColleges({ exam: query, limit: 100 });
-                    setTargetColleges(data.data || []);
-                } catch (err) {
-                    console.error("Failed to load target colleges", err);
-                } finally {
-                    setIsLoadingColleges(false);
-                }
-            };
-            loadColleges();
+        if (exam?.acceptedCollegesResolved) {
+            setTargetColleges(exam.acceptedCollegesResolved);
         }
-    }, [activeTab, exam, targetColleges.length]);
+    }, [exam?.acceptedCollegesResolved]);
 
     if (!exam) return null;
 
@@ -236,16 +223,21 @@ export default function ExamTabs({ exam }) {
                 {activeTab === 'colleges' && (
                     <div className="tab-pane fade-in">
                         <div className="mission-card">
-                            <h3 className="card-header">Target Institutes (Accepting {exam.shortName})</h3>
+                            <h3 className="card-header">Target Institutes ({targetColleges.length || (exam.acceptedCount)} Accepting {exam.shortName})</h3>
                             {isLoadingColleges ? (
                                 <div className="loading-colleges">Loading affiliated institutes...</div>
                             ) : (
                                 <div className="colleges-grid-mini">
-                                    {targetColleges.length > 0 ? targetColleges.map(c => (
-                                        <a href={`/college/${c.id}`} key={c.id} className="mini-college-card">
-                                            {c.shortName || c.name}
-                                        </a>
-                                    )) : (
+                                    {targetColleges.length > 0 ? targetColleges.map((c, i) => {
+                                        const id = typeof c === 'object' ? c.id : c;
+                                        const name = typeof c === 'object' ? (c.shortName || c.name || c.id) : c;
+
+                                        return (
+                                            <a href={`/college/${id}`} key={id || i} className="mini-college-card">
+                                                {name}
+                                            </a>
+                                        );
+                                    }) : (
                                         <p className="no-data">No specific colleges found in database linking to this exam.</p>
                                     )}
                                 </div>

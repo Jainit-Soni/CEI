@@ -8,6 +8,8 @@
     margin: 0 auto;
     overflow: hidden;
     min-height: 500px;
+    touch-action: pan-y;
+    /* Allow vertical scroll over map */
 }
 
 .india-geo-map {
@@ -15,6 +17,8 @@
     height: auto;
     max-height: 700px;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+    touch-action: pan-y;
+    /* Crucial for react-simple-maps ZoomableGroup */
 }
 
 .map-tooltip {

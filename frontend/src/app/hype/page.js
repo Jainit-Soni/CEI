@@ -7,10 +7,65 @@ import { useAuth } from '@/lib/AuthContext';
 import { useToast } from "@/components/Toast";
 import {
     Zap, MapPin, Loader2, Trophy, Flame,
-    TrendingUp, Search, Activity
+    TrendingUp, Search, Activity, Globe
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useSpring } from "framer-motion";
 import "./page.css";
+
+// ─────────────────────────────────────────────
+// HYPE LOADING SKELETON
+// ─────────────────────────────────────────────
+function HypeSkeleton() {
+    return (
+        <div className="crystal-wrapper pt-32 lg:pt-48 pb-20 px-4 min-h-screen relative z-10">
+            <Container>
+                <div className="flex flex-col items-center mb-16">
+                    <div className="h-8 w-40 bg-indigo-500/10 rounded-full animate-pulse mb-8 border border-white/20"></div>
+                    <div className="h-16 w-full max-w-2xl bg-indigo-500/10 rounded-2xl animate-pulse mb-6 border border-white/20"></div>
+                    <div className="h-4 w-1/2 max-w-md bg-indigo-500/10 rounded-full animate-pulse border border-white/20"></div>
+                </div>
+
+                <div className="crystal-podium relative flex flex-col lg:flex-row gap-6 justify-center items-stretch mt-12 bg-transparent">
+                    {[2, 1, 3].map((rank) => (
+                        <div key={rank} className={`w-full lg:w-[320px] h-[450px] bg-white/40 backdrop-blur-xl border border-white/50 rounded-[24px] p-6 flex flex-col justify-between animate-pulse lg:order-${rank === 1 ? 2 : rank === 2 ? 1 : 3}`}>
+                            <div className="w-12 h-12 rounded-full bg-indigo-500/20 mx-auto -mt-10 mb-6 drop-shadow-md"></div>
+                            <div className="w-24 h-4 bg-indigo-500/10 rounded-full mx-auto mb-6"></div>
+                            <div className="w-full h-8 bg-indigo-500/20 rounded-lg mb-auto"></div>
+                            <div className="w-32 h-16 bg-indigo-500/10 rounded-xl mx-auto my-8"></div>
+                            <div className="w-full h-2 bg-indigo-500/10 rounded-full mb-6"></div>
+                            <div className="w-full h-12 bg-indigo-500/20 rounded-xl"></div>
+                        </div>
+                    ))}
+                </div>
+            </Container>
+        </div>
+    );
+}
+
+// ─────────────────────────────────────────────
+// AMAZING NUMBER (Animated Counter + Skeleton)
+// ─────────────────────────────────────────────
+function AmazingNumber({ value }) {
+    if (value === null || value === undefined) {
+        return <div className="h-10 md:h-14 w-24 bg-indigo-500/20 animate-pulse rounded-lg mx-auto" />;
+    }
+
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => setMounted(true), []);
+
+    if (!mounted) return <span className="opacity-0 font-display">{value}</span>;
+
+    const valStr = (value || 0).toString();
+    const digits = valStr.split('');
+
+    return (
+        <div className="flex items-center justify-center" style={{ fontVariantNumeric: 'tabular-nums', letterSpacing: 0 }}>
+            {digits.map((d, i) => (
+                <SlottedDigit key={`${i}-${valStr.length}`} digit={d} />
+            ))}
+        </div>
+    );
+}
 
 // ─────────────────────────────────────────────
 // REUSABLE COMPONENTS
@@ -31,24 +86,6 @@ function SlottedDigit({ digit }) {
                     <div key={num} className="slotted-digit">{num}</div>
                 ))}
             </motion.div>
-        </div>
-    );
-}
-
-function AmazingNumber({ value }) {
-    const [mounted, setMounted] = useState(false);
-    useEffect(() => setMounted(true), []);
-
-    if (!mounted) return <span className="opacity-0 font-display">{value}</span>;
-
-    const valStr = (value || 0).toString();
-    const digits = valStr.split('');
-
-    return (
-        <div className="flex items-center justify-center" style={{ fontVariantNumeric: 'tabular-nums', letterSpacing: 0 }}>
-            {digits.map((d, i) => (
-                <SlottedDigit key={`${i}-${valStr.length}`} digit={d} />
-            ))}
         </div>
     );
 }
@@ -254,6 +291,7 @@ export default function FanWarsTheCrystalArena() {
     const { addToast } = useToast();
 
     const [stats, setStats] = useState({ leaderboard: [], recentVotes: [] });
+    const [isLoading, setIsLoading] = useState(true);
     const [isVoting, setIsVoting] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
     const [debQuery, setDebQuery] = useState("");
@@ -265,7 +303,11 @@ export default function FanWarsTheCrystalArena() {
     useEffect(() => {
         const refresh = () => fetchHypeStats().then(d => {
             if (d && d.leaderboard) setStats(d);
-        }).catch(console.error);
+            setIsLoading(false);
+        }).catch(err => {
+            console.error(err);
+            setIsLoading(false);
+        });
         refresh();
         const id = setInterval(refresh, 15000); // Relaxed to 15s to prevent 429s
         return () => clearInterval(id);
@@ -351,6 +393,15 @@ export default function FanWarsTheCrystalArena() {
     const top3 = stats.leaderboard?.slice(0, 3) || [];
     const rest = stats.leaderboard?.slice(3, 50) || [];
     const total = (stats.leaderboard || []).reduce((a, c) => a + (Number(c.votes) || 0), 0);
+
+    if (isLoading) {
+        return (
+            <div className="relative bg-[#f8fafc] min-h-screen selection:bg-indigo-200">
+                <div className="aurora-mesh-bg"><div className="mesh-blob"></div></div>
+                <HypeSkeleton />
+            </div>
+        );
+    }
 
     return (
         <div className="crystal-wrapper selection:bg-indigo-200">
@@ -448,20 +499,14 @@ export default function FanWarsTheCrystalArena() {
                 {/* LIVE VOTE FEED */}
                 <LiveTicker votes={stats.recentVotes} />
 
-                {/* THE CRYSTAL PODIUM - FIXED MOBILE ORDER AND IDENTICAL SIZES */}
+                {/* THE CRYSTAL PODIUM - PURE FLEX ORDERING */}
                 <div className="crystal-podium relative">
                     {/* #1 */}
-                    <div className="w-full lg:w-auto lg:order-2 flex h-full">
-                        {top3[0] && <CrystalPillar col={top3[0]} rank={1} total={total} onVote={handleVote} isVoting={isVoting} />}
-                    </div>
+                    {top3[0] && <CrystalPillar col={top3[0]} rank={1} total={total} onVote={handleVote} isVoting={isVoting} />}
                     {/* #2 */}
-                    <div className="w-full lg:w-auto lg:order-1 flex h-full">
-                        {top3[1] && <CrystalPillar col={top3[1]} rank={2} total={total} onVote={handleVote} isVoting={isVoting} />}
-                    </div>
+                    {top3[1] && <CrystalPillar col={top3[1]} rank={2} total={total} onVote={handleVote} isVoting={isVoting} />}
                     {/* #3 */}
-                    <div className="w-full lg:w-auto lg:order-3 flex h-full">
-                        {top3[2] && <CrystalPillar col={top3[2]} rank={3} total={total} onVote={handleVote} isVoting={isVoting} />}
-                    </div>
+                    {top3[2] && <CrystalPillar col={top3[2]} rank={3} total={total} onVote={handleVote} isVoting={isVoting} />}
                 </div>
 
                 {/* THE CRYSTAL LIST */}

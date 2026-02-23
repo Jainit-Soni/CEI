@@ -54,12 +54,6 @@ export default function ScholarshipDetail() {
         <div className="college-profile-v3 bg-slate-50 min-h-screen">
             {/* 1. CINEMATIC HERO (Reused Styles) */}
             <div className="cinematic-hero">
-                <div className="cinematic-bg">
-                    <div className="cinematic-orb orb-1"></div>
-                    <div className="cinematic-orb orb-2"></div>
-                    <div className="cinematic-grid"></div>
-                </div>
-
                 <div className="cinematic-content">
                     <div className="hero-container">
                         <div className="hero-badge-row gap-4 mb-3">
@@ -93,11 +87,6 @@ export default function ScholarshipDetail() {
                                 </div>
                             </div>
 
-                            <div className="hero-actions gap-4 mt-8 md:mt-0">
-                                <Button href={scholarship.applicationUrl} target="_blank" variant="primary" className="px-8 py-4 text-lg shadow-xl shadow-indigo-500/20">
-                                    Apply Now <ExternalLink size={18} className="ml-2" />
-                                </Button>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -182,9 +171,6 @@ export default function ScholarshipDetail() {
                                     <div className="space-y-3">
                                         <Button href={scholarship.applicationUrl} target="_blank" variant="primary" className="w-full justify-center py-4 text-lg shadow-lg shadow-indigo-200">
                                             Apply on Official Site
-                                        </Button>
-                                        <Button variant="outline" className="w-full justify-center gap-2">
-                                            <Share2 size={16} /> Share Opportunity
                                         </Button>
                                     </div>
 

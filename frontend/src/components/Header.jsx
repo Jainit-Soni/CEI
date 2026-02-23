@@ -9,7 +9,7 @@ import UserDropdown from "./UserDropdown";
 import ScoreInputModal from "./ScoreInputModal";
 import { useAuth } from "@/lib/AuthContext";
 import { useScores } from "@/lib/ScoreContext";
-import { Menu, X, ArrowLeft, Trophy, Heart } from "lucide-react";
+import { Menu, X, ArrowLeft, Trophy, Heart, User, Sparkles, MapPin, TrendingUp } from "lucide-react";
 import "./Header.css";
 
 export default function Header() {
@@ -143,39 +143,94 @@ export default function Header() {
           <div className="mobile-menu-content">
             <div className="mobile-header">
               <span className="brand-logo">CEI</span>
-              <button onClick={() => setIsMobileMenuOpen(false)} aria-label="Close Menu">
-                <ArrowLeft size={18} />
-                <span>Close</span>
+              <button className="mobile-close-btn" onClick={() => setIsMobileMenuOpen(false)} aria-label="Close Menu">
+                <X size={24} />
               </button>
             </div>
 
-            <nav className="mobile-nav">
-              {navLinks.map((link) => (
-                <Link key={link.path} href={link.path} className="mobile-link">
-                  {link.name}
-                </Link>
-              ))}
-              <Link href="/my-list" className="mobile-link">
-                My List {choiceCount > 0 && `(${choiceCount})`}
-              </Link>
+            {/* Mobile User Profile Summary */}
+            {user ? (
+              <div className="mobile-user-card">
+                <div className="mobile-user-avatar">
+                  {user.photoURL ? (
+                    <img src={user.photoURL} alt="Profile" />
+                  ) : (
+                    <User size={28} className="text-blue-500" />
+                  )}
+                  {/* Decorative Ring */}
+                  <svg className="mobile-avatar-ring" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(14, 165, 233, 0.2)" strokeWidth="4" />
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="#0ea5e9" strokeWidth="4" strokeDasharray="289" strokeDashoffset={289 - (85 / 100) * 289} strokeLinecap="round" transform="rotate(-90 50 50)" />
+                  </svg>
+                  <div className="mobile-score-badge">85%</div>
+                </div>
+                <div className="mobile-user-info">
+                  <h3>{user.displayName || "Student Pioneer"}</h3>
+                  <p>{user.email}</p>
+                  <Link href="/dashboard" className="mobile-view-dash" onClick={() => setIsMobileMenuOpen(false)}>
+                    Go to Dashboard <span>→</span>
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <div className="mobile-guest-card">
+                <div className="mobile-guest-icon">
+                  <Sparkles size={24} className="text-indigo-500" />
+                </div>
+                <div className="mobile-guest-text">
+                  <h3>Unlock Your Potential</h3>
+                  <p>Save colleges, track exams, and predict your chances.</p>
+                </div>
+                <Button variant="primary" className="w-full justify-center mt-3" onClick={() => { setIsMobileMenuOpen(false); setShowAuthModal(true); }}>
+                  Login or Sign Up
+                </Button>
+              </div>
+            )}
 
-              <hr className="mobile-divider" />
-
-              <button onClick={() => setShowScoreModal(true)} className="mobile-link">
-                <Trophy size={20} />
-                {hasScores ? "Update Scores" : "Predict Chances"}
+            {/* Quick Actions Grid */}
+            <div className="mobile-quick-actions">
+              <button onClick={() => { setIsMobileMenuOpen(false); setShowScoreModal(true); }} className="mq-action-btn">
+                <div className="mq-icon-box" style={{ background: hasScores ? '#d1fae5' : '#e0e7ff', color: hasScores ? '#059669' : '#4f46e5' }}>
+                  <Trophy size={20} />
+                </div>
+                <span>{hasScores ? "Update Score" : "Predict"}</span>
               </button>
 
-              {user ? (
-                <Link href="/dashboard" className="mobile-link highlight">
-                  Dashboard
+              <Link href="/my-list" className="mq-action-btn" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="mq-icon-box" style={{ background: '#fce7f3', color: '#db2777' }}>
+                  <Heart size={20} />
+                  {choiceCount > 0 && <span className="mq-badge">{choiceCount}</span>}
+                </div>
+                <span>My List</span>
+              </Link>
+
+              <Link href="/map" className="mq-action-btn" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="mq-icon-box" style={{ background: '#fef3c7', color: '#d97706' }}>
+                  <MapPin size={20} />
+                </div>
+                <span>Map Explore</span>
+              </Link>
+
+              <Link href="/roi-calculator" className="mq-action-btn" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="mq-icon-box" style={{ background: '#e0f2fe', color: '#0284c7' }}>
+                  <TrendingUp size={20} />
+                </div>
+                <span>ROI Check</span>
+              </Link>
+            </div>
+
+            <hr className="mobile-divider" />
+
+            <nav className="mobile-nav-list">
+              <span className="mobile-nav-label">Main Domains</span>
+              {navLinks.filter(l => !['Map', 'ROI Tool', 'Home'].includes(l.name)).map((link) => (
+                <Link key={link.path} href={link.path} className="mobile-list-link" onClick={() => setIsMobileMenuOpen(false)}>
+                  {link.name}
+                  <ArrowLeft size={16} className="rotate-180 opacity-40" />
                 </Link>
-              ) : (
-                <button onClick={() => setShowAuthModal(true)} className="mobile-link highlight">
-                  Login / Signup
-                </button>
-              )}
+              ))}
             </nav>
+
           </div>
         </div>
       )}

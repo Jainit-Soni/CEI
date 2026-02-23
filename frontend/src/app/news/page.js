@@ -105,7 +105,9 @@ export default function NewsPage() {
                         <RevealOnScroll delay={100}>
                             <div className="list-stats">
                                 <div className="list-stat">
-                                    <span className="list-stat-value mono">{news.length || "--"}</span>
+                                    <span className="list-stat-value mono">
+                                        {isLoading ? <div className="h-8 w-16 bg-white/20 animate-pulse rounded-md inline-block" /> : (news.length || "--")}
+                                    </span>
                                     <span className="list-stat-label">Updates</span>
                                 </div>
                             </div>

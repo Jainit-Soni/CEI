@@ -104,16 +104,22 @@ export default function ScholarshipsPage() {
 
                         {/* Stats */}
                         <RevealOnScroll delay={100}>
-                            <div className="list-stats">
-                                <div className="list-stat">
-                                    <span className="list-stat-value mono">{scholarships.length || "--"}</span>
-                                    <span className="list-stat-label">Grants</span>
-                                </div>
-                                <div className="list-stat">
-                                    <span className="list-stat-value mono">₹{scholarships.reduce((acc, curr) => acc + (parseInt(curr.amount?.replace(/[^0-9]/g, '')) || 0), 0).toLocaleString()}</span>
-                                    <span className="list-stat-label">Total Value</span>
-                                </div>
-                            </div>
+                            {(() => {
+                                const totalAmt = scholarships.reduce((acc, curr) => acc + (parseInt(curr.amount?.toString().replace(/[^0-9]/g, '')) || 0), 0);
+                                const formattedAmt = totalAmt >= 10000000 ? `₹${(totalAmt / 10000000).toFixed(2)} Cr` : `₹${totalAmt.toLocaleString()}`;
+                                return (
+                                    <div className="list-stats">
+                                        <div className="list-stat">
+                                            <span className="list-stat-value mono">{scholarships.length || "--"}</span>
+                                            <span className="list-stat-label">Grants</span>
+                                        </div>
+                                        <div className="list-stat">
+                                            <span className="list-stat-value mono">{formattedAmt}</span>
+                                            <span className="list-stat-label">Total Value</span>
+                                        </div>
+                                    </div>
+                                );
+                            })()}
                         </RevealOnScroll>
                     </div>
                 </Container>

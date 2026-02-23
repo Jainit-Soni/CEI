@@ -48,7 +48,7 @@ const nextConfig = {
                     },
                     {
                         key: 'Content-Security-Policy',
-                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com https://*.sentry.io https://apis.google.com https://www.googleapis.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' blob: data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https: http: https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src 'self' https://accounts.google.com https://content.googleapis.com https://*.firebaseapp.com https://*.firebasejs.com;"
+                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' blob: https://va.vercel-scripts.com https://*.sentry.io https://apis.google.com https://www.googleapis.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' blob: data: https:; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; connect-src 'self' blob: data: https: http: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self' https://accounts.google.com https://content.googleapis.com https://*.firebaseapp.com https://*.firebasejs.com; worker-src 'self' blob:;"
                     },
                     {
                         key: 'Cross-Origin-Opener-Policy',

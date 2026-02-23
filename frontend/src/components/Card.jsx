@@ -2,7 +2,7 @@
 import AddToCompareButton from "./AddToCompareButton";
 import FavoriteButton from "./FavoriteButton";
 import AddToChoiceButton from "./AddToChoiceButton";
-import PredictionBadge from "./PredictionBadge"; // New
+import PredictionBadge from "./PredictionBadge";
 import "./Card.css";
 
 export default function Card({ title, subtitle, tags = [], meta = [], type = "default", variant, href, trust, badge, data = {}, ...props }) {
@@ -73,6 +73,7 @@ export default function Card({ title, subtitle, tags = [], meta = [], type = "de
       )}
     </div>
   );
+
   return href ? (
     <a
       href={href}

@@ -5,6 +5,8 @@ import Container from './Container';
 import Button from './Button';
 import './ExamHero.css';
 
+import ScrollReveal from './animations/ScrollReveal';
+
 export default function ExamHero({ exam }) {
     if (!exam) return null;
 
@@ -26,12 +28,14 @@ export default function ExamHero({ exam }) {
                                 <span className="status-dot pulse"></span>
                                 {exam.shortName || "EXAM DETAILS"}
                             </div>
-                            <h1 className="mission-title">{exam.name}</h1>
-                            <div className="mission-subtitle">
+                            <ScrollReveal as="h1" containerClassName="mission-title" baseRotation={1} blurStrength={5}>
+                                {exam.name}
+                            </ScrollReveal>
+                            <ScrollReveal as="div" containerClassName="mission-subtitle" baseOpacity={0.4} blurStrength={2}>
                                 <span className="label">CONDUCTED BY:</span> {exam.conductingBody}
                                 <span className="sep">|</span>
                                 <span className="label">MODE:</span> {exam.stats?.mode || "OFFLINE/ONLINE"}
-                            </div>
+                            </ScrollReveal>
 
                             <div className="mission-actions">
                                 <Button href={exam.officialUrl || "#"} variant="accent" className="mission-btn-primary">
@@ -66,9 +70,19 @@ export default function ExamHero({ exam }) {
                                 {exam.totalMarks && (
                                     <div className="intel-box highlight">
                                         <span className="intel-label">MAX SCORE</span>
-                                        <span className="intel-value mono">{exam.totalMarks.split(' ')[0]}</span>
+                                        <span className="intel-value mono">
+                                            {typeof exam.totalMarks === 'string' ? exam.totalMarks.split(' ')[0] : exam.totalMarks}
+                                        </span>
                                     </div>
                                 )}
+                            </div>
+                            <div className="intel-row">
+                                <div className="intel-box wide-intel">
+                                    <span className="intel-label">ACCREDITED ARENAS</span>
+                                    <span className="intel-value mono">
+                                        {exam.acceptedCount || (exam.acceptedColleges || []).length || "--"} Affiliated
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>

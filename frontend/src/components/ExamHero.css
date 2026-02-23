@@ -248,6 +248,11 @@
     background: #ffffff;
 }
 
+.intel-box.wide-intel {
+    width: 100%;
+    flex: 1;
+}
+
 .intel-box.highlight {
     background: #fff;
     position: relative;

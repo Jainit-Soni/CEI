@@ -172,12 +172,16 @@ export default function ExamsPage() {
             <RevealOnScroll delay={100}>
               <div className="list-stats">
                 <div className="list-stat">
-                  <span className="list-stat-value mono">{typeOptions.length - 1 || "--"}</span>
+                  <span className="list-stat-value mono">
+                    {isLoading ? <div className="h-8 w-16 bg-white/20 animate-pulse rounded-md inline-block" /> : (typeOptions.length - 1 || "--")}
+                  </span>
                   <span className="list-stat-label">Exam types</span>
                 </div>
 
                 <div className="list-stat">
-                  <span className="list-stat-value mono">{exams.length || "--"}</span>
+                  <span className="list-stat-value mono">
+                    {isLoading ? <div className="h-8 w-16 bg-white/20 animate-pulse rounded-md inline-block" /> : (exams.length || "--")}
+                  </span>
                   <span className="list-stat-label">Exams</span>
                 </div>
               </div>

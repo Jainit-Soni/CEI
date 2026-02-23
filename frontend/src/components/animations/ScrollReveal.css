@@ -1,0 +1,18 @@
+.scroll-reveal {
+    margin: 0;
+    display: block;
+}
+
+.scroll-reveal-text {
+    /* Dynamic font sizing is handled by the calling component, but we provide a sensible base */
+    font-weight: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+.word {
+    display: inline-block;
+    white-space: pre;
+    /* Preserves spaces */
+}

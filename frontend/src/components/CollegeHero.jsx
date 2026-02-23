@@ -5,6 +5,7 @@ import AddToChoiceButton from './AddToChoiceButton';
 import PredictionBadge from './PredictionBadge';
 import { Users } from 'lucide-react';
 import './CollegeHero.css';
+import ScrollReveal from './animations/ScrollReveal';
 import { postActivityPing, fetchLiveActivity } from '@/lib/api';
 
 export default function CollegeHero({ college }) {
@@ -70,10 +71,12 @@ export default function CollegeHero({ college }) {
                                 </div>
                             )}
                             <div className="hero-text">
-                                <h1 className="hero-title">{college.name}</h1>
-                                <p className="hero-subtitle">
+                                <ScrollReveal as="h1" containerClassName="hero-title" baseRotation={1} blurStrength={4}>
+                                    {college.name}
+                                </ScrollReveal>
+                                <ScrollReveal as="p" containerClassName="hero-subtitle" baseOpacity={0.3} blurStrength={2}>
                                     {college.location} • {college.rankingTier || "Unranked"}
-                                </p>
+                                </ScrollReveal>
                             </div>
                         </div>
 

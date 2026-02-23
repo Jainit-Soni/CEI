@@ -5,6 +5,7 @@ import {
     Trophy, Map, TrendingUp, Users, Calendar, Building2, Rocket, Award,
     Globe, Briefcase, Clock, Microscope, Library, Shield, BookOpen, Cpu, Zap
 } from "lucide-react";
+import ScrollReveal from "./animations/ScrollReveal";
 import "./IntelligenceFacts.css";
 
 const AMAZING_FACTS = [
@@ -62,7 +63,9 @@ export default function IntelligenceFacts() {
             <div className="intel-container">
                 <div className="intel-header">
                     <span className="intel-kicker">ACADEMIC_INSIGHTS</span>
-                    <h2 className="intel-main-title">Mindblowing <br /><span className="serif-italic">Realities.</span></h2>
+                    <ScrollReveal as="h2" containerClassName="intel-main-title" baseRotation={1} blurStrength={5}>
+                        Mindblowing Realities.
+                    </ScrollReveal>
                 </div>
 
                 <div className="intel-grid">
@@ -83,8 +86,12 @@ export default function IntelligenceFacts() {
                     <div className="banner-content">
                         <BookOpen size={32} className="banner-icon" />
                         <div className="banner-text">
-                            <h3>{randomBanner.title}</h3>
-                            <p>{randomBanner.desc}</p>
+                            <ScrollReveal as="h3" baseOpacity={0.3} blurStrength={3}>
+                                {randomBanner.title}
+                            </ScrollReveal>
+                            <ScrollReveal as="p" baseOpacity={0.2} blurStrength={2}>
+                                {randomBanner.desc}
+                            </ScrollReveal>
                         </div>
                     </div>
                 </div>

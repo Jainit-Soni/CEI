@@ -2,11 +2,16 @@
 
 import { ArrowRight, Shield, Activity, Globe } from "lucide-react";
 import Link from "next/link";
+import ScrollReveal from "./animations/ScrollReveal";
+import FluidGlass from "./animations/FluidGlass";
 import "./PremiumHome.css";
 
 export default function PremiumHome() {
     return (
         <section className="premium-home">
+            {/* The Intelligence Lens Overlay */}
+            <FluidGlass title="Discover. Rank. Hype." />
+
             <div className="premium-container">
                 {/* Brand Signal */}
                 <div className="premium-kicker fadeIn">
@@ -15,17 +20,14 @@ export default function PremiumHome() {
                 </div>
 
                 {/* The Primary Statement */}
-                <h1 className="premium-title fadeIn delay-1">
-                    Discover. Rank. <br />
-                    <span className="serif-accent">Hype.</span>
-                </h1>
+                <ScrollReveal as="h1" containerClassName="premium-title" baseRotation={2} blurStrength={6}>
+                    Discover. Rank. Hype.
+                </ScrollReveal>
 
                 {/* The Specific Goal Subtext */}
-                <p className="premium-mission fadeIn delay-2">
-                    The undisputed platform for Indian students to compare real-time admissions data,
-                    track 2000+ elite institutions, secure scholarships, and push their campuses
-                    to the top of the Fan Wars.
-                </p>
+                <ScrollReveal as="p" containerClassName="premium-mission" baseOpacity={0.2} blurStrength={3}>
+                    The undisputed platform for Indian students to compare real-time admissions data, track 2000+ elite institutions, secure scholarships, and push their campuses to the top of the Fan Wars.
+                </ScrollReveal>
 
                 {/* The Single Strategic Goal (CTA) */}
                 <div className="premium-actions fadeIn delay-3">
