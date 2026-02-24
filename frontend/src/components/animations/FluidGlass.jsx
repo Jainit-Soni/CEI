@@ -28,11 +28,6 @@ export default function FluidGlass({
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    // Disable 3D on mobile to honor 'mobile optimize this effect'
-    if (isMobile) {
-        return null;
-    }
-
     return (
         <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, pointerEvents: 'none', zIndex: 5, ...style }}>
             <Canvas
@@ -40,7 +35,7 @@ export default function FluidGlass({
                 gl={{ antialias: true, stencil: false, depth: false }}
                 dpr={[1, 2]}
             >
-                <LensScene scrollProgress={scrollProgress} />
+                <LensScene scrollProgress={scrollProgress} isMobile={isMobile} />
             </Canvas>
         </div>
     );
@@ -112,7 +107,7 @@ const ParticleGalaxy = ({ speed, rotationIntensity }) => {
 };
 
 
-const LensScene = memo(function LensScene({ scrollProgress }) {
+const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
     const ref = useRef();
     const backgroundRef = useRef();
     const { viewport: vp, camera, pointer, gl } = useThree();
@@ -187,7 +182,7 @@ const LensScene = memo(function LensScene({ scrollProgress }) {
                             anchorX="center"
                             anchorY="middle"
                             color="#0f172a"
-                            fillOpacity={1} // Permanently visible
+                            fillOpacity={Math.max(0, 1 - (scrollProgress * 5))} // Fade out text quickly to prevent massive magnification block
                         >
                             CE Intelligence
                         </Text>
@@ -204,7 +199,8 @@ const LensScene = memo(function LensScene({ scrollProgress }) {
 
             <mesh scale={[vp.width, vp.height, 1]}>
                 <planeGeometry />
-                <meshBasicMaterial map={buffer.texture} transparent opacity={0} />
+                {/* On mobile, since we hide the glass sphere, we render the raw FBO buffer directly to the screen plane */}
+                <meshBasicMaterial map={buffer.texture} transparent opacity={isMobile ? 1 : 0} />
             </mesh>
 
             <mesh
@@ -213,6 +209,7 @@ const LensScene = memo(function LensScene({ scrollProgress }) {
                 rotation-x={Math.PI / 2}
                 geometry={fallbackGeometry}
                 renderOrder={1}
+                visible={!isMobile} // Hide the ugly sphere on mobile
             >
                 {/* Updated Glass Material: Removed aberration/distortion for razor sharpness */}
                 <MeshTransmissionMaterial
