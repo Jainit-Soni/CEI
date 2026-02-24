@@ -40,10 +40,9 @@ export default function PremiumHome() {
             ScrollTrigger.create({
                 trigger: el,
                 start: "top top",
-                end: "+=60%",
+                end: "+=50%", // Fast, snappy pinning
                 pin: true,
-                pinSpacing: false, // Prevents blank space
-                pinSpacing: false,
+                pinSpacing: true, // SEQUENTIAL: Section 2 only starts after Section 1 finishes
                 scrub: 1.5,
                 onUpdate: (self) => {
                     setScrollProgress(self.progress);
@@ -110,16 +109,16 @@ export default function PremiumHome() {
                             </div>
                         </div>
                     </div>
-
-                    {/* Removed CTA Button to unblock the 3D Lens UI */}
                 </div>
 
                 {/* The Decoupled Intelligence Dashboard - Fades in over the 3D Canvas */}
                 <div
                     className="intelligence-dashboard"
                     style={{
-                        opacity: scrollProgress > 0.5 ? Math.min((scrollProgress - 0.5) * 2.5, 1) : 0,
-                        pointerEvents: scrollProgress > 0.8 ? 'auto' : 'none',
+                        opacity: scrollProgress > 0.5 && scrollProgress < 0.95
+                            ? Math.min((scrollProgress - 0.5) * 2.5, 1)
+                            : scrollProgress >= 0.95 ? Math.max(0, 1 - (scrollProgress - 0.95) * 20) : 0,
+                        pointerEvents: scrollProgress > 0.8 && scrollProgress < 0.95 ? 'auto' : 'none',
                         transform: `scale(${scrollProgress > 0.5 ? 1 : 0.95}) translateY(${scrollProgress > 0.5 ? 0 : 20}px)`
                     }}
                 >
