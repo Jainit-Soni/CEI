@@ -460,8 +460,12 @@
     .premium-home-sticky {
         height: auto;
         min-height: 100vh;
+        padding-top: 120px;
         padding-bottom: 60px;
         align-items: center;
+        flex-direction: column;
+        overflow: visible;
+        gap: 20px;
     }
 
     .intelligence-dashboard {
