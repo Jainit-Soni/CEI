@@ -21,13 +21,23 @@ export default function FluidGlass({
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        setIsMounted(true);
         const checkMobile = () => {
-            setIsMobile(window.innerWidth <= 768);
+            const mql = window.matchMedia("(max-width: 768px)");
+            const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            setIsMobile(mql.matches || window.innerWidth <= 768 || (isTouch && window.innerWidth < 1024));
         };
         checkMobile();
+
+        // Delay mounting until the CSS viewport has physically snapped to mobile dimensions, preventing Desktop FBO crashes
+        const timer = setTimeout(() => {
+            setIsMounted(true);
+        }, 10);
+
         window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('resize', checkMobile);
+        };
     }, []);
 
     return (
@@ -99,7 +109,12 @@ const ParticleGalaxy = ({ speed, rotationIntensity }) => {
                 <Instances limit={600} range={600}>
                     <sphereGeometry args={[1, 16, 16]} />
                     {/* Crucial fix: Use MeshBasicMaterial for pure, sharp, unlit color that doesn't blur through transmission */}
-                    <meshBasicMaterial toneMapped={false} />
+                    <meshBasicMaterial
+                        toneMapped={false}
+                        transparent={true}
+                        blending={THREE.NormalBlending}
+                        depthWrite={false}
+                    />
                     {particles.map((data, i) => (
                         <Instance
                             key={i}
