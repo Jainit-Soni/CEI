@@ -48,11 +48,7 @@ export default function FluidGlass({
                 dpr={[1, 2]}
             >
                 {isMounted && (
-                    isMobile ? (
-                        <MobileLensScene scrollProgress={scrollProgress} />
-                    ) : (
-                        <DesktopLensScene scrollProgress={scrollProgress} />
-                    )
+                    <LensScene scrollProgress={scrollProgress} />
                 )}
             </Canvas>
         </div>
@@ -130,33 +126,7 @@ const ParticleGalaxy = ({ speed, rotationIntensity }) => {
 };
 
 
-const MobileLensScene = memo(function MobileLensScene({ scrollProgress }) {
-    // Stripped down scene specifically for Mobile to prevent WebGL/FBO and transmission material crashes
-    // However, we include the exact same premium background and lighting as PC so it looks identical.
-    return (
-        <group position={[0, 0, 0]}>
-            {/* Deep Space cinematic glowing backdrop (No FBO needed) */}
-            <mesh scale={30}>
-                <sphereGeometry args={[1, 64, 64]} />
-                <meshBasicMaterial
-                    side={THREE.BackSide}
-                    color="#e2e8f0"
-                />
-            </mesh>
-
-            <ambientLight intensity={1.5} color="#ffffff" />
-            <pointLight position={[10, 10, -5]} intensity={2} color="#ffffff" />
-            <pointLight position={[-10, -10, -5]} intensity={1.5} color="#f8fafc" />
-
-            {/* The Rainbow Data Nexus */}
-            <group scale={Math.max(0.001, Math.min(scrollProgress * 1.5, 1))}>
-                <ParticleGalaxy speed={1.5} rotationIntensity={0.8} />
-            </group>
-        </group>
-    );
-});
-
-const DesktopLensScene = memo(function DesktopLensScene({ scrollProgress }) {
+const LensScene = memo(function LensScene({ scrollProgress }) {
     const ref = useRef();
     const backgroundRef = useRef();
     const { viewport: vp, camera, pointer, gl } = useThree();
@@ -236,7 +206,7 @@ const DesktopLensScene = memo(function DesktopLensScene({ scrollProgress }) {
             </Float>
 
             {/* The Rainbow Data Nexus */}
-            <group visible={scrollProgress > 0.02} scale={Math.min(scrollProgress * 1.5, 1)}>
+            <group scale={Math.max(0.001, Math.min(scrollProgress * 1.5, 1))}>
                 {/* Cinematic Rainbow Particle Cloud */}
                 <ParticleGalaxy speed={1.5} rotationIntensity={0.8} />
             </group>
