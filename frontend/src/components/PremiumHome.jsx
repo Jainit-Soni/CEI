@@ -5,6 +5,7 @@ import { Shield, Activity, Globe } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FluidGlass from "./animations/FluidGlass";
+import MobileDataNexus from "./animations/MobileDataNexus";
 import "./PremiumHome.css";
 
 if (typeof window !== "undefined") {
@@ -73,7 +74,7 @@ export default function PremiumHome() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="premium-home-drilldown" data-vercel-cache-bust="v12">
+        <section ref={sectionRef} className="premium-home-drilldown" data-vercel-cache-bust="v13">
             {/* The sticky container holds everything that stays on screen while pinning */}
             <div className="premium-home-sticky">
 
@@ -83,8 +84,11 @@ export default function PremiumHome() {
                 {/* Subtle Artistic Texture */}
                 <div className="premium-overlay" />
 
-                {/* The Intelligence Lens Overlay — Removed aggressively on Mobile to fix GSAP freezing */}
+                {/* Desktop: The Heavy 3D Intelligence Lens Overlay */}
                 {isMounted && !isMobile && <FluidGlass scrollProgress={scrollProgress} />}
+
+                {/* Mobile: The Ultra-Smooth 60FPS 2D Data Nexus matrix */}
+                {isMounted && isMobile && <MobileDataNexus scrollProgress={scrollProgress} />}
 
                 {/* The HTML Content that will fade away */}
                 <div ref={contentRef} className="premium-container">
