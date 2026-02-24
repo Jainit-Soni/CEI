@@ -129,15 +129,18 @@ const ParticleGalaxy = ({ speed, rotationIntensity }) => {
 const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
     const ref = useRef();
     const backgroundRef = useRef();
-    const { viewport: vp, camera, pointer, gl } = useThree();
+    const { viewport: vp, camera, pointer, gl, size } = useThree();
 
-    // Restore FBO resolution to 768 for ultimate crisp particles, but disable MSAA (samples: 0) on mobile for performance
-    const fboSettings = isMobile ? { samples: 0, resolution: 768 } : { samples: 4, resolution: 512 };
-    const buffer = useFBO(fboSettings.resolution, fboSettings.resolution, {
-        samples: fboSettings.samples,
-        depth: true,
-        type: THREE.HalfFloatType
-    });
+    // Dynamically match exact screen width/height to fix aspect ratio Distortion and Blur 
+    const buffer = useFBO(
+        isMobile ? size.width : size.width * 2,
+        isMobile ? size.height : size.height * 2,
+        {
+            samples: isMobile ? 0 : 4,
+            depth: true,
+            type: THREE.HalfFloatType
+        }
+    );
 
     const [scene] = useState(() => {
         const s = new THREE.Scene();
@@ -160,9 +163,9 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
             easing.damp3(ref.current.position, [destX, destY, 5], 0.1, delta);
             easing.damp3(ref.current.rotation, [Math.PI / 2 + pointer.y * 0.1, 0, -pointer.x * 0.1], 0.15, delta);
 
-            // Scale down significantly on mobile to avoid overwhelming the tiny screen
-            const baseScale = isMobile ? 0.20 : 0.48;
-            const targetScale = baseScale + (scrollProgress * (isMobile ? 1.5 : 14.0)); // Prevent massive clipping past camera at z=20
+            // Keep the mobile sphere exceptionally small to fit 300px wide screens beautifully
+            const baseScale = isMobile ? 0.15 : 0.48;
+            const targetScale = baseScale + (scrollProgress * (isMobile ? 0.5 : 14.0));
             easing.damp(ref.current.scale, 'x', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'y', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'z', targetScale, 0.1, delta);
@@ -236,7 +239,7 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
 
             <mesh
                 ref={ref}
-                scale={isMobile ? 0.3 : 0.48}
+                scale={isMobile ? 0.15 : 0.48}
                 rotation-x={Math.PI / 2}
                 geometry={fallbackGeometry}
                 renderOrder={1}
@@ -258,8 +261,6 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
                     color="#ffffff"
                     transparent
                     opacity={1}
-                    resolution={fboSettings.resolution}
-                    samples={fboSettings.samples}
                 />
             </mesh>
         </>
