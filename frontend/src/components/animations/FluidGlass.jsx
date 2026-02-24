@@ -139,7 +139,7 @@ const MobileLensScene = memo(function MobileLensScene({ scrollProgress }) {
             <pointLight position={[-10, -10, -5]} intensity={1.5} color="#f8fafc" />
 
             {/* The Rainbow Data Nexus */}
-            <group visible={scrollProgress > 0.02} scale={Math.min(scrollProgress * 1.5, 1)}>
+            <group scale={Math.max(0.001, Math.min(scrollProgress * 1.5, 1))}>
                 <ParticleGalaxy speed={1.5} rotationIntensity={0.8} />
             </group>
         </group>
