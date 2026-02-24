@@ -16,10 +16,12 @@ export default function FluidGlass({
     style = {},
     scrollProgress = 0
 }) {
-    // Mobile detection
-    const [isMobile, setIsMobile] = useState(true);
+    // Mobile detection and SSR hydration protection
+    const [isMounted, setIsMounted] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
         const checkMobile = () => {
             setIsMobile(window.innerWidth <= 768);
         };
@@ -27,6 +29,8 @@ export default function FluidGlass({
         window.addEventListener('resize', checkMobile);
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
+
+    if (!isMounted) return null;
 
     return (
         <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, pointerEvents: 'none', zIndex: 5, ...style }}>
