@@ -17,6 +17,20 @@ export default function PremiumHome() {
     const contentRef = useRef(null);
     const [scrollProgress, setScrollProgress] = useState(0);
 
+    // Strict Device Detection to completely unmount WebGL on mobile
+    const [isMounted, setIsMounted] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
     useEffect(() => {
         const handleMouseMove = (e) => {
             if (spotlightRef.current) {
@@ -59,7 +73,7 @@ export default function PremiumHome() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="premium-home-drilldown" data-vercel-cache-bust="v11">
+        <section ref={sectionRef} className="premium-home-drilldown" data-vercel-cache-bust="v12">
             {/* The sticky container holds everything that stays on screen while pinning */}
             <div className="premium-home-sticky">
 
@@ -69,8 +83,8 @@ export default function PremiumHome() {
                 {/* Subtle Artistic Texture */}
                 <div className="premium-overlay" />
 
-                {/* The Intelligence Lens Overlay — Now receives scrollProgress */}
-                <FluidGlass scrollProgress={scrollProgress} />
+                {/* The Intelligence Lens Overlay — Removed aggressively on Mobile to fix GSAP freezing */}
+                {isMounted && !isMobile && <FluidGlass scrollProgress={scrollProgress} />}
 
                 {/* The HTML Content that will fade away */}
                 <div ref={contentRef} className="premium-container">
