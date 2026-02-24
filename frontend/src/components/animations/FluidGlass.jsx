@@ -131,8 +131,8 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
     const backgroundRef = useRef();
     const { viewport: vp, camera, pointer, gl } = useThree();
 
-    // Restore FBO resolution to 512 for sharp particles, but disable MSAA (samples: 0) on mobile for performance
-    const fboSettings = isMobile ? { samples: 0, resolution: 512 } : { samples: 4, resolution: 512 };
+    // Restore FBO resolution to 768 for ultimate crisp particles, but disable MSAA (samples: 0) on mobile for performance
+    const fboSettings = isMobile ? { samples: 0, resolution: 768 } : { samples: 4, resolution: 512 };
     const buffer = useFBO(fboSettings.resolution, fboSettings.resolution, {
         samples: fboSettings.samples,
         depth: true,
@@ -161,8 +161,8 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
             easing.damp3(ref.current.rotation, [Math.PI / 2 + pointer.y * 0.1, 0, -pointer.x * 0.1], 0.15, delta);
 
             // Scale down significantly on mobile to avoid overwhelming the tiny screen
-            const baseScale = isMobile ? 0.25 : 0.48;
-            const targetScale = baseScale + (scrollProgress * (isMobile ? 5.0 : 14.0)); // Prevent massive clipping past camera at z=20
+            const baseScale = isMobile ? 0.20 : 0.48;
+            const targetScale = baseScale + (scrollProgress * (isMobile ? 1.5 : 14.0)); // Prevent massive clipping past camera at z=20
             easing.damp(ref.current.scale, 'x', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'y', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'z', targetScale, 0.1, delta);
@@ -218,7 +218,7 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
             )}
 
             {/* The Rainbow Data Nexus */}
-            <group scale={Math.max(0.001, Math.min(scrollProgress * 1.5, 1))}>
+            <group scale={isMobile ? 0.8 : Math.max(0.001, Math.min(scrollProgress * 1.5, 1))}>
                 {/* Cinematic Rainbow Particle Cloud */}
                 <ParticleGalaxy speed={1.5} rotationIntensity={0.8} />
             </group>
