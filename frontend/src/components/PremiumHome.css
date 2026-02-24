@@ -1,17 +1,26 @@
-.premium-home {
+.premium-home-drilldown {
     --text-primary: #0f172a;
     --text-muted: #64748b;
     --accent-blue: #4f46e5;
     --font-serif: 'Ibarra Real Nova', 'Playfair Display', 'Georgia', serif;
 
-    min-height: 100vh;
+    /* Let GSAP control the scroll distance automatically. Default to exact screen height */
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+.premium-home-sticky {
+    /* Pinned inner container */
+    height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 40px;
     background: transparent;
     position: relative;
-    z-index: 10;
+    overflow: hidden;
 }
 
 .premium-container {
@@ -92,102 +101,57 @@
     }
 }
 
-.premium-mission {
-    font-size: clamp(1rem, 3.5vw, 1.35rem);
-    color: var(--text-muted);
-    line-height: 1.5;
-    max-width: 680px;
-    margin: 0 auto 50px;
-    font-weight: 450;
-}
-
-.premium-actions {
+.premium-features-list {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-}
-
-/* Glow behind the button */
-.premium-actions::before {
-    content: "";
-    position: absolute;
-    width: 260px;
-    height: 80px;
-    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
-    filter: blur(20px);
-    z-index: -1;
-    animation: ctaGlow 3s ease-in-out infinite;
-}
-
-@keyframes ctaGlow {
-
-    0%,
-    100% {
-        opacity: 0.5;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.15);
-    }
-}
-
-.btn-premium-goal {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed, #6366f1);
-    background-size: 200% 200%;
-    animation: gradientShift 4s ease infinite;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 24px 56px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 0 auto 50px;
+    max-width: 580px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 30px 40px;
     border-radius: 24px;
-    font-size: 1rem;
-    font-weight: 950;
-    letter-spacing: 0.05em;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
+}
+
+.feature-bullet {
     display: flex;
     align-items: center;
-    gap: 16px;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow:
-        0 20px 50px rgba(79, 70, 229, 0.3),
-        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-    border: none;
-    position: relative;
-    overflow: hidden;
+    gap: 20px;
 }
 
-/* Shimmer sweep on CTA */
-.btn-premium-goal::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(105deg,
-            transparent 40%,
-            rgba(255, 255, 255, 0.2) 50%,
-            transparent 60%);
-    transform: translateX(-100%);
-    animation: ctaShimmer 4s ease-in-out infinite;
+.feature-icon {
+    color: var(--accent-blue);
+    flex-shrink: 0;
+    padding: 12px;
+    background: rgba(79, 70, 229, 0.08);
+    border-radius: 14px;
+    box-sizing: content-box;
+    border: 1px solid rgba(79, 70, 229, 0.1);
 }
 
-@keyframes ctaShimmer {
-
-    0%,
-    70% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(100%);
-    }
+.feature-bullet h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0 0 6px 0;
+    letter-spacing: -0.01em;
 }
 
-.btn-premium-goal:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow:
-        0 30px 60px rgba(79, 70, 229, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+.feature-bullet p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
 }
+
+/* Removed .btn-premium-goal and CTA styles entirely */
 
 .premium-badges {
     margin-top: 80px;
@@ -233,33 +197,18 @@
     z-index: 1;
 }
 
-/* Floating geometric shapes */
-.premium-home::before {
-    content: "";
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.06));
-    top: 10%;
-    right: 5%;
-    animation: floatSlow 12s ease-in-out infinite;
+/* Dynamic Spotlight Layer */
+.premium-spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
     z-index: 0;
-}
-
-.premium-home::after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    background: linear-gradient(135deg, rgba(236, 72, 153, 0.06), rgba(245, 158, 11, 0.05));
-    bottom: 15%;
-    left: 8%;
-    animation: floatSlow 16s ease-in-out infinite reverse;
-    pointer-events: none;
-    z-index: 0;
+    /* Updated dynamically via inline styles */
+    background: radial-gradient(1000px circle at 50% 50%, rgba(79, 70, 229, 0.05), transparent 40%);
+    transition: background 0.1s ease;
 }
 
 /* Animations */
@@ -293,21 +242,26 @@
 }
 
 @media (max-width: 1024px) {
-    .premium-home {
-        padding: 0 24px;
+    .premium-home-drilldown {
         height: auto;
-        min-height: 100vh;
-        padding-top: 110px;
     }
 
-    .premium-home::before {
+    .premium-home-sticky {
+        padding: 0 24px;
+        height: 100vh;
+        /* Revert min-height 100svh to exact 100vh to maintain pin logic */
+        padding-top: 110px;
+        align-items: flex-start;
+    }
+
+    .premium-home-drilldown::before {
         width: 160px;
         height: 160px;
         top: 5%;
         right: -5%;
     }
 
-    .premium-home::after {
+    .premium-home-drilldown::after {
         width: 120px;
         height: 120px;
         bottom: 10%;
@@ -333,26 +287,16 @@
         letter-spacing: -0.02em;
     }
 
-    .premium-mission {
-        font-size: 1.05rem;
-        line-height: 1.6;
-        padding: 0 4px;
-        margin-bottom: 40px;
-        font-weight: 400;
+    .premium-features-list {
+        padding: 24px;
+        width: 100%;
     }
 
-    .premium-actions {
-        flex-direction: column;
-        gap: 16px;
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
+    .feature-bullet h3 {
+        font-size: 1rem;
     }
 
-    .btn-premium-goal {
-        width: 100%;
-        justify-content: center;
-        padding: 18px 30px;
+    .feature-bullet p {
         font-size: 0.9rem;
     }
 
@@ -381,5 +325,174 @@
 
     .premium-badges {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   DECOUPLED INTELLIGENCE DASHBOARD (PHASE 26)
+   100% Crisp Native DOM Overlays
+   ========================================================== */
+
+.intelligence-dashboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    /* Float ABOVE the 3D Canvas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.1s linear, transform 0.1s linear;
+}
+
+/* Base Circular Panel Styling */
+.hq-circle-panel {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    /* Light Theme Glassmorphism */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 2px 10px rgba(255, 255, 255, 0.8);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hq-circle-panel:hover {
+    transform: scale(1.05);
+}
+
+/* Specific Positions for Circles */
+.circle-left {
+    top: 20%;
+    left: 8%;
+}
+
+.circle-center {
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle-center:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.circle-right {
+    top: 30%;
+    right: 8%;
+}
+
+/* Typography for Light Theme */
+.hq-kicker {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: #4f46e5;
+    /* Indigo accent */
+    text-transform: uppercase;
+}
+
+.hq-value {
+    font-family: var(--font-serif) !important;
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-style: italic;
+    margin: 0;
+    background: linear-gradient(135deg, #4f46e5, #ec4899, #f59e0b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    text-shadow: 0 4px 20px rgba(236, 72, 153, 0.2);
+}
+
+.hq-detail {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #64748b;
+    /* Slate 500 */
+}
+
+/* Responsive adjustments for Circular Overlays */
+@media (max-width: 1024px) {
+    .hq-circle-panel {
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle-left {
+        top: 15%;
+        left: 5%;
+    }
+
+    .circle-right {
+        top: 35%;
+        right: 5%;
+    }
+
+    .circle-center {
+        bottom: 8%;
+    }
+
+    .hq-value {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intelligence-dashboard {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+        /* Let inline GSAP styles control opacity and pointer events */
+    }
+
+    .hq-circle-panel {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 160px;
+        /* Reduced for mobile stack */
+        height: 160px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .hq-value {
+        font-size: 2rem;
+    }
+
+    .hq-kicker {
+        font-size: 0.6rem;
+    }
+
+    .circle-center:hover {
+        transform: none !important;
+        /* disabled hover tilt on mobile stack */
     }
 }
