@@ -74,7 +74,7 @@ export default function PremiumHome() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="premium-home-drilldown" data-vercel-cache-bust="v13">
+        <section ref={sectionRef} className="premium-home-drilldown" data-vercel-cache-bust="v14">
             {/* The sticky container holds everything that stays on screen while pinning */}
             <div className="premium-home-sticky">
 

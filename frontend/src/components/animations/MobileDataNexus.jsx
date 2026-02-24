@@ -8,7 +8,7 @@ export default function MobileDataNexus({ scrollProgress = 0 }) {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
-        const ctx = canvas.getContext('2d', { alpha: false }); // Opaque for performance
+        const ctx = canvas.getContext('2d'); // Transparent to let CSS Gradient shine
 
         // Handle strict Retina scaling
         const dpr = window.devicePixelRatio || 1;
@@ -47,9 +47,8 @@ export default function MobileDataNexus({ scrollProgress = 0 }) {
         let animationFrameId;
 
         const render = () => {
-            // High-key light theme background
-            ctx.fillStyle = '#f8fafc';
-            ctx.fillRect(0, 0, width, height);
+            // Clear canvas completely to keep premium CSS animated gradients visible
+            ctx.clearRect(0, 0, width, height);
 
             // Calculate global shift based on scroll (Parallax effect)
             const scrollShiftY = scrollProgress * 200; // Parallax distance
