@@ -30,8 +30,6 @@ export default function FluidGlass({
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    if (!isMounted) return null;
-
     return (
         <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, pointerEvents: 'none', zIndex: 5, ...style }}>
             <Canvas
@@ -39,10 +37,12 @@ export default function FluidGlass({
                 gl={{ antialias: true, stencil: false, depth: false }}
                 dpr={[1, 2]}
             >
-                {isMobile ? (
-                    <MobileLensScene scrollProgress={scrollProgress} />
-                ) : (
-                    <DesktopLensScene scrollProgress={scrollProgress} />
+                {isMounted && (
+                    isMobile ? (
+                        <MobileLensScene scrollProgress={scrollProgress} />
+                    ) : (
+                        <DesktopLensScene scrollProgress={scrollProgress} />
+                    )
                 )}
             </Canvas>
         </div>
