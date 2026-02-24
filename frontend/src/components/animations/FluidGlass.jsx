@@ -42,15 +42,15 @@ export default function FluidGlass({
 
     return (
         <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, pointerEvents: 'none', zIndex: 5, ...style }}>
-            <Canvas
-                camera={{ position: [0, 0, 20], fov: 15 }}
-                gl={{ antialias: true, stencil: false, depth: false }}
-                dpr={isMobile ? [1, 1] : [1, 2]}
-            >
-                {isMounted && (
-                    <LensScene scrollProgress={scrollProgress} />
-                )}
-            </Canvas>
+            {isMounted && (
+                <Canvas
+                    camera={{ position: [0, 0, 20], fov: 15 }}
+                    gl={{ antialias: true, stencil: false, depth: false }}
+                    dpr={isMobile ? [1, 1] : [1, 2]}
+                >
+                    <LensScene scrollProgress={scrollProgress} isMobile={isMobile} />
+                </Canvas>
+            )}
         </div>
     );
 }
