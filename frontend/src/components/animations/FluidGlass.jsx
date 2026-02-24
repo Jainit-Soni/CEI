@@ -45,7 +45,7 @@ export default function FluidGlass({
             <Canvas
                 camera={{ position: [0, 0, 20], fov: 15 }}
                 gl={{ antialias: true, stencil: false, depth: false }}
-                dpr={[1, 2]}
+                dpr={isMobile ? [1, 1] : [1, 2]}
             >
                 {isMounted && (
                     <LensScene scrollProgress={scrollProgress} />
@@ -131,8 +131,8 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
     const backgroundRef = useRef();
     const { viewport: vp, camera, pointer, gl } = useThree();
 
-    // Dynamically lower FBO resolution on mobile to guarantee smooth scrolling
-    const fboSettings = isMobile ? { samples: 2, resolution: 256 } : { samples: 4, resolution: 512 };
+    // Restore FBO resolution to 512 for sharp particles, but disable MSAA (samples: 0) on mobile for performance
+    const fboSettings = isMobile ? { samples: 0, resolution: 512 } : { samples: 4, resolution: 512 };
     const buffer = useFBO(fboSettings.resolution, fboSettings.resolution, {
         samples: fboSettings.samples,
         depth: true,
@@ -161,8 +161,8 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
             easing.damp3(ref.current.rotation, [Math.PI / 2 + pointer.y * 0.1, 0, -pointer.x * 0.1], 0.15, delta);
 
             // Scale down significantly on mobile to avoid overwhelming the tiny screen
-            const baseScale = isMobile ? 0.3 : 0.48;
-            const targetScale = baseScale + (scrollProgress * 14.0); // Prevent massive clipping past camera at z=20
+            const baseScale = isMobile ? 0.25 : 0.48;
+            const targetScale = baseScale + (scrollProgress * (isMobile ? 5.0 : 14.0)); // Prevent massive clipping past camera at z=20
             easing.damp(ref.current.scale, 'x', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'y', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'z', targetScale, 0.1, delta);
