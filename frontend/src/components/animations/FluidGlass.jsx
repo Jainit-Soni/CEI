@@ -196,24 +196,26 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
             <pointLight position={[-10, -10, -5]} intensity={1.5} color="#f8fafc" />
 
             {/* Central 3D Text (Permanent and perfectly sharp on PC, conditionally hidden on mobile if too heavy) */}
-            <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.2}>
-                <Text
-                    position={[0, 0, -2]} // Sitting slightly back
-                    fontSize={vp.width > 10 ? 0.8 : 0.6}
-                    font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZhrib2Bg-4.ttf" // Crisp Sans
-                    fontWeight={900}
-                    letterSpacing={-0.05}
-                    maxWidth={vp.width * 0.9}
-                    lineHeight={1}
-                    textAlign="center"
-                    anchorX="center"
-                    anchorY="middle"
-                    color="#0f172a"
-                    fillOpacity={Math.max(0, 1 - (scrollProgress * 5))} // Fade out text quickly to prevent massive magnification block
-                >
-                    CE Intelligence
-                </Text>
-            </Float>
+            {!isMobile && (
+                <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.2}>
+                    <Text
+                        position={[0, 0, -2]} // Sitting slightly back
+                        fontSize={vp.width > 10 ? 0.8 : 0.6}
+                        font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZhrib2Bg-4.ttf" // Crisp Sans
+                        fontWeight={900}
+                        letterSpacing={-0.05}
+                        maxWidth={vp.width * 0.9}
+                        lineHeight={1}
+                        textAlign="center"
+                        anchorX="center"
+                        anchorY="middle"
+                        color="#0f172a"
+                        fillOpacity={Math.max(0, 1 - (scrollProgress * 5))} // Fade out text quickly to prevent massive magnification block
+                    >
+                        CE Intelligence
+                    </Text>
+                </Float>
+            )}
 
             {/* The Rainbow Data Nexus */}
             <group scale={Math.max(0.001, Math.min(scrollProgress * 1.5, 1))}>
