@@ -40,16 +40,42 @@ export default function FluidGlass({
         };
     }, []);
 
+    // Mobile CSS Glass Orb scaling based on scroll
+    const cssOrbScale = isMobile ? 0.8 + (scrollProgress * 2.0) : 0;
+
     return (
         <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, pointerEvents: 'none', zIndex: 5, ...style }}>
             {isMounted && (
-                <Canvas
-                    camera={{ position: [0, 0, 20], fov: 15 }}
-                    gl={{ antialias: true, stencil: false, depth: false }}
-                    dpr={isMobile ? [1, 1] : [1, 2]}
-                >
-                    <LensScene scrollProgress={scrollProgress} isMobile={isMobile} />
-                </Canvas>
+                <>
+                    {/* The Pure CSS 60FPS Glass Orb for Mobile */}
+                    {isMobile && (
+                        <div style={{
+                            position: 'absolute',
+                            top: '50%',
+                            left: '50%',
+                            transform: `translate(-50%, -50%) scale(${cssOrbScale})`,
+                            width: '280px',
+                            height: '280px',
+                            borderRadius: '50%',
+                            background: 'radial-gradient(130% 130% at 50% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.05) 100%)',
+                            boxShadow: 'inset 0 2px 20px rgba(255, 255, 255, 0.5), 0 20px 40px rgba(0, 0, 0, 0.1)',
+                            backdropFilter: 'blur(16px) saturate(140%)',
+                            WebkitBackdropFilter: 'blur(16px) saturate(140%)',
+                            border: '1px solid rgba(255, 255, 255, 0.4)',
+                            transition: 'transform 0.1s ease-out',
+                            zIndex: 2 // Sits ABOVE the particles
+                        }} />
+                    )}
+
+                    <Canvas
+                        camera={{ position: [0, 0, 20], fov: 15 }}
+                        gl={{ antialias: true, stencil: false, depth: false }}
+                        dpr={isMobile ? [1, 1] : [1, 2]}
+                        style={{ zIndex: 1 }} // Sits BEHIND the CSS orb
+                    >
+                        <LensScene scrollProgress={scrollProgress} isMobile={isMobile} />
+                    </Canvas>
+                </>
             )}
         </div>
     );
@@ -131,13 +157,15 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
     const backgroundRef = useRef();
     const { viewport: vp, camera, pointer, gl, size } = useThree();
 
-    // Dynamically match exact screen width/height to fix aspect ratio Distortion and Blur 
+    // Dynamically match exact screen width/height to fix aspect ratio Distortion and Blur (DESKTOP ONLY)
+    // On mobile, we use a 1x1 dummy FBO because we render pure CSS glass. Hooks cannot be called conditionally, so we pass minimal values.
+    const fboSize = isMobile ? 1 : size.width * 2;
     const buffer = useFBO(
-        isMobile ? size.width : size.width * 2,
-        isMobile ? size.height : size.height * 2,
+        fboSize,
+        fboSize,
         {
             samples: isMobile ? 0 : 4,
-            depth: true,
+            depth: !isMobile,
             type: THREE.HalfFloatType
         }
     );
@@ -176,10 +204,13 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
             backgroundRef.current.rotation.x += 0.0005;
         }
 
-        gl.setRenderTarget(buffer);
-        gl.clear();
-        gl.render(scene, camera);
-        gl.setRenderTarget(null);
+        // Only do heavy scene rendering to FBO if NOT mobile
+        if (!isMobile) {
+            gl.setRenderTarget(buffer);
+            gl.clear();
+            gl.render(scene, camera);
+            gl.setRenderTarget(null);
+        }
     });
 
     const innerContent = (
@@ -230,39 +261,52 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
 
     return (
         <>
-            {createPortal(innerContent, scene)}
+            {/* Desktop Only: The actual WebGL Mesh Transmission Glass Sphere */}
+            {!isMobile && (
+                <>
+                    {createPortal(innerContent, scene)}
 
-            <mesh scale={[vp.width, vp.height, 1]}>
-                <planeGeometry />
-                <meshBasicMaterial map={buffer.texture} transparent opacity={0} />
-            </mesh>
+                    <mesh scale={[vp.width, vp.height, 1]}>
+                        <planeGeometry />
+                        <meshBasicMaterial map={buffer.texture} transparent opacity={0} />
+                    </mesh>
 
-            <mesh
-                ref={ref}
-                scale={isMobile ? 0.15 : 0.48}
-                rotation-x={Math.PI / 2}
-                geometry={fallbackGeometry}
-                renderOrder={1}
-            >
-                {/* Updated Glass Material: Removed aberration/distortion for razor sharpness 
-                    and drastically optimized resolution to fix Mobile scroll lag */}
-                <MeshTransmissionMaterial
-                    buffer={buffer.texture}
-                    ior={1.15}
-                    thickness={0.5}
-                    anisotropy={isMobile ? 0.1 : 0.3}
-                    chromaticAberration={0.0}
-                    transmission={1}
-                    roughness={0.0}
-                    backside={false}
-                    distortion={0.0}
-                    distortionScale={0.0}
-                    temporalDistortion={0.0}
-                    color="#ffffff"
-                    transparent
-                    opacity={1}
-                />
-            </mesh>
+                    <mesh
+                        ref={ref}
+                        scale={0.48}
+                        rotation-x={Math.PI / 2}
+                        geometry={fallbackGeometry}
+                        renderOrder={1}
+                    >
+                        <MeshTransmissionMaterial
+                            buffer={buffer.texture}
+                            ior={1.15}
+                            thickness={0.5}
+                            anisotropy={0.3}
+                            chromaticAberration={0.0}
+                            transmission={1}
+                            roughness={0.0}
+                            backside={false}
+                            distortion={0.0}
+                            distortionScale={0.0}
+                            temporalDistortion={0.0}
+                            color="#ffffff"
+                            transparent
+                            opacity={1}
+                        />
+                    </mesh>
+                </>
+            )}
+
+            {/* Mobile Only: Just render the Particles directly to the screen (behind the CSS Orb) */}
+            {isMobile && (
+                <group position={[0, 0, 0]}>
+                    <ambientLight intensity={1.5} color="#ffffff" />
+                    <group scale={1.2}>
+                        <ParticleGalaxy speed={1.5} rotationIntensity={0.8} />
+                    </group>
+                </group>
+            )}
         </>
     );
 });
