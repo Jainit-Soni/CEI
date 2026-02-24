@@ -48,11 +48,7 @@ export default function FluidGlass({
                 dpr={[1, 2]}
             >
                 {isMounted && (
-                    isMobile ? (
-                        <MobileLensScene scrollProgress={scrollProgress} />
-                    ) : (
-                        <DesktopLensScene scrollProgress={scrollProgress} />
-                    )
+                    <LensScene scrollProgress={scrollProgress} isMobile={isMobile} />
                 )}
             </Canvas>
         </div>
@@ -130,23 +126,7 @@ const ParticleGalaxy = ({ speed, rotationIntensity }) => {
 };
 
 
-const MobileLensScene = memo(function MobileLensScene({ scrollProgress }) {
-    // Stripped down scene specifically for Mobile to prevent WebGL/FBO and transmission material crashes
-    return (
-        <group position={[0, 0, 0]}>
-            <ambientLight intensity={1.5} color="#ffffff" />
-            <pointLight position={[10, 10, -5]} intensity={2} color="#ffffff" />
-            <pointLight position={[-10, -10, -5]} intensity={1.5} color="#f8fafc" />
-
-            {/* The Rainbow Data Nexus */}
-            <group scale={Math.max(0.001, Math.min(scrollProgress * 1.5, 1))}>
-                <ParticleGalaxy speed={1.5} rotationIntensity={0.8} />
-            </group>
-        </group>
-    );
-});
-
-const DesktopLensScene = memo(function DesktopLensScene({ scrollProgress }) {
+const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
     const ref = useRef();
     const backgroundRef = useRef();
     const { viewport: vp, camera, pointer, gl } = useThree();
@@ -205,25 +185,27 @@ const DesktopLensScene = memo(function DesktopLensScene({ scrollProgress }) {
             <pointLight position={[10, 10, -5]} intensity={2} color="#ffffff" />
             <pointLight position={[-10, -10, -5]} intensity={1.5} color="#f8fafc" />
 
-            {/* Central 3D Text (Permanent and perfectly sharp on PC) */}
-            <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.2}>
-                <Text
-                    position={[0, 0, -2]} // Sitting slightly back
-                    fontSize={vp.width > 10 ? 0.8 : 0.6}
-                    font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZhrib2Bg-4.ttf" // Crisp Sans
-                    fontWeight={900}
-                    letterSpacing={-0.05}
-                    maxWidth={vp.width * 0.9}
-                    lineHeight={1}
-                    textAlign="center"
-                    anchorX="center"
-                    anchorY="middle"
-                    color="#0f172a"
-                    fillOpacity={Math.max(0, 1 - (scrollProgress * 5))} // Fade out text quickly to prevent massive magnification block
-                >
-                    CE Intelligence
-                </Text>
-            </Float>
+            {/* Central 3D Text (Permanent and perfectly sharp on PC, hidden on mobile) */}
+            {!isMobile && (
+                <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.2}>
+                    <Text
+                        position={[0, 0, -2]} // Sitting slightly back
+                        fontSize={vp.width > 10 ? 0.8 : 0.6}
+                        font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZhrib2Bg-4.ttf" // Crisp Sans
+                        fontWeight={900}
+                        letterSpacing={-0.05}
+                        maxWidth={vp.width * 0.9}
+                        lineHeight={1}
+                        textAlign="center"
+                        anchorX="center"
+                        anchorY="middle"
+                        color="#0f172a"
+                        fillOpacity={Math.max(0, 1 - (scrollProgress * 5))} // Fade out text quickly to prevent massive magnification block
+                    >
+                        CE Intelligence
+                    </Text>
+                </Float>
+            )}
 
             {/* The Rainbow Data Nexus */}
             <group visible={scrollProgress > 0.02} scale={Math.min(scrollProgress * 1.5, 1)}>
@@ -239,7 +221,8 @@ const DesktopLensScene = memo(function DesktopLensScene({ scrollProgress }) {
 
             <mesh scale={[vp.width, vp.height, 1]}>
                 <planeGeometry />
-                <meshBasicMaterial map={buffer.texture} transparent opacity={0} />
+                {/* On mobile, render the raw FBO buffer directly to the screen plane */}
+                <meshBasicMaterial map={buffer.texture} transparent opacity={isMobile ? 1 : 0} />
             </mesh>
 
             <mesh
@@ -248,6 +231,7 @@ const DesktopLensScene = memo(function DesktopLensScene({ scrollProgress }) {
                 rotation-x={Math.PI / 2}
                 geometry={fallbackGeometry}
                 renderOrder={1}
+                visible={!isMobile} // Hide the glass sphere on mobile
             >
                 {/* Updated Glass Material: Removed aberration/distortion for razor sharpness */}
                 <MeshTransmissionMaterial
