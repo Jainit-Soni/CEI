@@ -168,7 +168,7 @@ const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
             <pointLight position={[10, 10, -5]} intensity={2} color="#ffffff" />
             <pointLight position={[-10, -10, -5]} intensity={1.5} color="#f8fafc" />
 
-            {/* Central 3D Text (Permanent and perfectly sharp) */}
+            {/* Central 3D Text (Permanent and perfectly sharp on PC, hidden on mobile) */}
             {!isMobile && (
                 <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.2}>
                     <Text
