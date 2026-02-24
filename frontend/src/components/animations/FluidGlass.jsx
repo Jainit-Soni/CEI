@@ -126,11 +126,18 @@ const ParticleGalaxy = ({ speed, rotationIntensity }) => {
 };
 
 
-const LensScene = memo(function LensScene({ scrollProgress }) {
+const LensScene = memo(function LensScene({ scrollProgress, isMobile }) {
     const ref = useRef();
     const backgroundRef = useRef();
     const { viewport: vp, camera, pointer, gl } = useThree();
-    const buffer = useFBO(); // FBO buffer safely constrained to desktop
+
+    // Dynamically lower FBO resolution on mobile to guarantee smooth scrolling
+    const fboSettings = isMobile ? { samples: 2, resolution: 256 } : { samples: 4, resolution: 512 };
+    const buffer = useFBO(fboSettings.resolution, fboSettings.resolution, {
+        samples: fboSettings.samples,
+        depth: true,
+        type: THREE.HalfFloatType
+    });
 
     const [scene] = useState(() => {
         const s = new THREE.Scene();
@@ -139,6 +146,7 @@ const LensScene = memo(function LensScene({ scrollProgress }) {
         return s;
     });
 
+    // Sleek, minimal cylinder geometry for pure refraction power
     const fallbackGeometry = useMemo(() => new THREE.CylinderGeometry(1.2, 1.2, 0.1, 64), []);
 
     useFrame((state, delta) => {
@@ -152,7 +160,9 @@ const LensScene = memo(function LensScene({ scrollProgress }) {
             easing.damp3(ref.current.position, [destX, destY, 5], 0.1, delta);
             easing.damp3(ref.current.rotation, [Math.PI / 2 + pointer.y * 0.1, 0, -pointer.x * 0.1], 0.15, delta);
 
-            const targetScale = 0.48 + (scrollProgress * 14.0); // Prevent massive clipping past camera at z=20
+            // Scale down significantly on mobile to avoid overwhelming the tiny screen
+            const baseScale = isMobile ? 0.3 : 0.48;
+            const targetScale = baseScale + (scrollProgress * 14.0); // Prevent massive clipping past camera at z=20
             easing.damp(ref.current.scale, 'x', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'y', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'z', targetScale, 0.1, delta);
@@ -185,7 +195,7 @@ const LensScene = memo(function LensScene({ scrollProgress }) {
             <pointLight position={[10, 10, -5]} intensity={2} color="#ffffff" />
             <pointLight position={[-10, -10, -5]} intensity={1.5} color="#f8fafc" />
 
-            {/* Central 3D Text (Permanent and perfectly sharp on PC, hidden on mobile) */}
+            {/* Central 3D Text (Permanent and perfectly sharp on PC, conditionally hidden on mobile if too heavy) */}
             <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.2}>
                 <Text
                     position={[0, 0, -2]} // Sitting slightly back
@@ -224,17 +234,18 @@ const LensScene = memo(function LensScene({ scrollProgress }) {
 
             <mesh
                 ref={ref}
-                scale={0.48}
+                scale={isMobile ? 0.3 : 0.48}
                 rotation-x={Math.PI / 2}
                 geometry={fallbackGeometry}
                 renderOrder={1}
             >
-                {/* Updated Glass Material: Removed aberration/distortion for razor sharpness */}
+                {/* Updated Glass Material: Removed aberration/distortion for razor sharpness 
+                    and drastically optimized resolution to fix Mobile scroll lag */}
                 <MeshTransmissionMaterial
                     buffer={buffer.texture}
                     ior={1.15}
                     thickness={0.5}
-                    anisotropy={0.3}
+                    anisotropy={isMobile ? 0.1 : 0.3}
                     chromaticAberration={0.0}
                     transmission={1}
                     roughness={0.0}
@@ -245,6 +256,8 @@ const LensScene = memo(function LensScene({ scrollProgress }) {
                     color="#ffffff"
                     transparent
                     opacity={1}
+                    resolution={fboSettings.resolution}
+                    samples={fboSettings.samples}
                 />
             </mesh>
         </>
