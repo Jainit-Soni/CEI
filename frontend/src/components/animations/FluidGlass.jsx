@@ -28,10 +28,10 @@ export default function FluidGlass({
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    // Allow 3D on mobile to honor 'mobile optimize this effect'
-    // if (isMobile) {
-    //     return null;
-    // }
+    // Disable 3D on mobile to honor 'mobile optimize this effect'
+    if (isMobile) {
+        return null;
+    }
 
     return (
         <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, pointerEvents: 'none', zIndex: 5, ...style }}>

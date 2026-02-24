@@ -457,16 +457,27 @@
 }
 
 @media (max-width: 768px) {
+    .premium-home-sticky {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 60px;
+        align-items: center;
+    }
+
     .intelligence-dashboard {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
+        top: auto;
+        left: auto;
         width: 100%;
-        height: 100vh;
+        height: auto;
         flex-direction: column;
-        gap: 12px;
-        justify-content: center;
-        /* Let inline GSAP styles control opacity and pointer events */
+        gap: 30px;
+        padding: 40px 20px;
+        margin-top: 40px;
+        /* Force visibility on mobile regardless of scroll state */
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: none !important;
     }
 
     .hq-circle-panel {
@@ -476,23 +487,22 @@
         right: auto !important;
         bottom: auto !important;
         transform: none !important;
-        width: 160px;
-        /* Reduced for mobile stack */
-        height: 160px;
+        width: 240px;
+        height: 240px;
         margin: 0 auto;
-        padding: 10px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        /* Stronger shadow since 3D is missing */
     }
 
     .hq-value {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .hq-kicker {
-        font-size: 0.6rem;
+        font-size: 0.75rem;
     }
 
     .circle-center:hover {
-        transform: none !important;
-        /* disabled hover tilt on mobile stack */
+        transform: scale(1.05) !important;
     }
 }

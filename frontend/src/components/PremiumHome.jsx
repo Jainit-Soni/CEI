@@ -36,22 +36,31 @@ export default function PremiumHome() {
 
         // GSAP MatchMedia for responsive scroll triggers
         let ctx = gsap.context(() => {
-            // Apply the pinning drill-down effect universally, including mobile
-            ScrollTrigger.create({
-                trigger: el,
-                start: "top top",
-                end: "+=50%", // Fast, snappy pinning
-                pin: true,
-                pinSpacing: true, // SEQUENTIAL: Section 2 only starts after Section 1 finishes
-                scrub: 1.5,
-                onUpdate: (self) => {
-                    setScrollProgress(self.progress);
-                },
-                animation: gsap.timeline().to(
-                    content,
-                    { opacity: 0, scale: 0.95, filter: "blur(10px)", duration: 0.3 },
-                    0
-                )
+            let mm = gsap.matchMedia();
+
+            // Desktop only: Pin and Scrub into the 3D lens
+            mm.add("(min-width: 769px)", () => {
+                ScrollTrigger.create({
+                    trigger: el,
+                    start: "top top",
+                    end: "+=50%", // Fast, snappy pinning
+                    pin: true,
+                    pinSpacing: true, // SEQUENTIAL: Section 2 only starts after Section 1 finishes
+                    scrub: 1.5,
+                    onUpdate: (self) => {
+                        setScrollProgress(self.progress);
+                    },
+                    animation: gsap.timeline().to(
+                        content,
+                        { opacity: 0, scale: 0.95, filter: "blur(10px)", duration: 0.3 },
+                        0
+                    )
+                });
+            });
+
+            // Mobile only: Ensure content is visible and no pinning
+            mm.add("(max-width: 768px)", () => {
+                gsap.set(content, { opacity: 1, scale: 1, filter: "none" });
             });
         }, el);
 
