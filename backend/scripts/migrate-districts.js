@@ -1,6 +1,12 @@
+require('dotenv').config({ path: require('path').resolve(__dirname, '../.env.local') });
 const mongoose = require('mongoose');
 
-const MONGODB_URI = "mongodb://JAINIT:Uu4mAS9IQ7Q9NEX4@ac-jmm94uu-shard-00-00.shlqnzg.mongodb.net:27017,ac-jmm94uu-shard-00-01.shlqnzg.mongodb.net:27017,ac-jmm94uu-shard-00-02.shlqnzg.mongodb.net:27017/cei?ssl=true&authSource=admin&retryWrites=true";
+const MONGODB_URI = process.env.MONGODB_URI;
+
+if (!MONGODB_URI) {
+    console.error("Missing MONGODB_URI in environment variables.");
+    process.exit(1);
+}
 
 async function migrate() {
     try {
