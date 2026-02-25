@@ -1,3 +1,4 @@
+require('dotenv').config({ path: require('path').resolve(__dirname, '.env.local') });
 const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
@@ -14,8 +15,14 @@ const scholarshipRoutes = require("./routes/scholarships");
 const newsRoutes = require("./routes/news");
 const hypeRoutes = require("./routes/hype");
 const predictorRoutes = require("./routes/predictor");
+const connectDB = require("./config/db");
 
 const app = express();
+
+// Connect to MongoDB
+if (process.env.NODE_ENV !== 'test') {
+  connectDB();
+}
 
 
 // Security & Infrastructure Middleware

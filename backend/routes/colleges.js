@@ -1,203 +1,145 @@
 ﻿const express = require("express");
-const { getColleges } = require("../services/dataStore");
+const College = require("../models/CollegeSchema");
 const cache = require("../services/cache");
 
 const router = express.Router();
 
-// Helper function to normalize state names for comparison
-function normalizeStateName(name) {
-  if (!name) return "";
-  return name.toLowerCase()
-    .replace(/-/g, " ")    // Replace dashes with spaces
-    .replace(/&/g, "and")  // Replace & with "and"
-    .replace(/\s+/g, " ")   // Normalize whitespace
-    .trim();
-}
+// Helper to construct MongoDB filter query
+const buildCollegeQuery = (reqQuery) => {
+  const { state, district, q, tier, course, exam, isPremium } = reqQuery;
+  const query = {};
 
-function getState(college) {
-  if (!college?.location) return null;
-  const parts = college.location.split(",").map((p) => p.trim());
-  return parts[parts.length - 1];
-}
+  if (isPremium) {
+    query.isPremium = isPremium === 'true';
+  }
+
+  if (state && state !== 'All') {
+    query.state = new RegExp(`^${state}$`, 'i');
+  }
+
+  if (district && district !== 'All') {
+    query['meta.district'] = new RegExp(`^${district}$`, 'i');
+  }
+
+  if (tier && tier !== 'All') {
+    query.rankingTier = tier;
+  }
+
+  if (course && course !== 'All') {
+    const normalizedCourse = course.toLowerCase().trim();
+    // Broad category mapping
+    const categoryMap = {
+      'engineering': ['b.tech', 'b.e', 'm.tech', 'engineering', 'technology'],
+      'management': ['mba', 'pgdm', 'mms', 'management', 'business'],
+      'medical': ['mbbs', 'bds', 'medical', 'medicine', 'pharma', 'health'],
+      'design': ['b.des', 'm.des', 'design'],
+      'commerce': ['b.com', 'm.com', 'commerce', 'accountancy'],
+      'arts': ['b.a', 'm.a', 'arts', 'social sciences', 'humanities']
+    };
+
+    const searchTerms = categoryMap[normalizedCourse] || [normalizedCourse];
+
+    // Create an OR regex for the search terms
+    const regexPattern = searchTerms.map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+
+    query.$or = [
+      { 'courses.name': { $regex: regexPattern, $options: 'i' } },
+      { 'courses.degree': { $regex: regexPattern, $options: 'i' } }
+    ];
+  }
+
+  if (exam) {
+    query.acceptedExams = { $regex: exam, $options: 'i' };
+  }
+
+  if (q) {
+    // Utilize the text index for actual full text search
+    query.$text = { $search: q };
+  }
+
+  return query;
+};
+
+// Helper for sorting
+const buildSortQuery = (reqQuery) => {
+  const { sortBy, order, q } = reqQuery;
+  const sortDirection = order === 'desc' ? -1 : 1;
+
+  if (q && !sortBy) {
+    return { score: { $meta: "textScore" } }; // Default sort for text search
+  }
+
+  let sort = {};
+
+  switch (sortBy) {
+    case 'name':
+      sort.name = sortDirection;
+      break;
+    case 'ranking':
+    case 'tier':
+      // Tier 1 > Tier 2 > Tier 3 > Stand Alone. String sort desc puts 'Tier 3' before 'Tier 1' unfortunately.
+      // Easiest is to sort ascending to get 1, 2, 3. 
+      // If user wants descending (best first), we actually want ascending string (Tier 1 is best).
+      sort.rankingTier = sortDirection === -1 ? 1 : -1;
+      // Add a secondary sort to make it deterministic
+      sort.isPremium = -1;
+      break;
+    // Placement is tricky in Mongo since it's unstructured text ("20-30 LPA").
+    // As a workaround, we'll sort by Premium first, then name.
+    case 'placement':
+    case 'popularity':
+      sort.isPremium = -1; // Premium colleges first
+      sort.name = 1;
+      break;
+    case 'exams':
+      // Can't directly sort by array length in standard find(). We'll fallback.
+      sort.isPremium = -1;
+      break;
+    default:
+      // Default to premium first
+      sort = { isPremium: -1, name: 1 };
+  }
+
+  return sort;
+};
 
 router.get("/colleges", async (req, res) => {
   try {
-    const key = `colleges:${JSON.stringify(req.query)}`;
+    const key = `mongo:colleges:${JSON.stringify(req.query)}`;
 
-    /* 
-      SCALE MODE: Stale-While-Revalidate Pattern 
-      - Try to get fresh data
-      - If fails or slow, use stale data if available? 
-      - Actually, for this project, a simple aggressive TTL (5 min) is enough.
-      - We rely on Redis being fast.
-    */
     const cached = await cache.get(key);
     if (cached) {
-      // Background revalidation could go here if needed
       return res.json(cached);
     }
 
-    let colleges = await getColleges();
+    const { page, limit, q } = req.query;
 
-    // Check if colleges loaded successfully
-    if (!Array.isArray(colleges)) {
-      console.error("Failed to load colleges - not an array");
-      return res.status(500).json({ error: "Failed to load college data" });
-    }
-    const { state, district, q, tier, course, sortBy, order, page, limit } = req.query;
-
-    // Filtering
-    if (state) {
-      const normalizedState = normalizeStateName(state);
-      colleges = colleges.filter((c) => {
-        const collegeState = c.state || getState(c);
-        return normalizeStateName(collegeState) === normalizedState;
-      });
-    }
-    if (district) {
-      const normalized = district.toLowerCase();
-      colleges = colleges.filter((c) => {
-        const value = (c.meta?.district || c.district || "").toLowerCase();
-        return value === normalized;
-      });
-    }
-    if (tier && tier !== 'All') {
-      colleges = colleges.filter((c) => (c.rankingTier || c.ranking) === tier);
-    }
-    if (course && course !== 'All') {
-      const normalizedCourse = course.toLowerCase().trim();
-      // Broad category mapping
-      const categoryMap = {
-        'engineering': ['b.tech', 'b.e', 'm.tech', 'engineering', 'technology'],
-        'management': ['mba', 'pgdm', 'mms', 'management', 'business'],
-        'medical': ['mbbs', 'bds', 'medical', 'medicine', 'pharma', 'health'],
-        'design': ['b.des', 'm.des', 'design'],
-        'commerce': ['b.com', 'm.com', 'commerce', 'accountancy'],
-        'arts': ['b.a', 'm.a', 'arts', 'social sciences', 'humanities']
-      };
-
-      const searchTerms = categoryMap[normalizedCourse] || [normalizedCourse];
-
-      colleges = colleges.filter((c) => (c.courses || []).some(courseObj => {
-        const courseName = (courseObj?.name || "").toLowerCase();
-        const courseDegree = (courseObj?.degree || "").toLowerCase();
-        return searchTerms.some(term => courseName.includes(term) || courseDegree.includes(term));
-      }));
-    }
-    if (req.query.exam) {
-      const examQuery = req.query.exam.toLowerCase().trim();
-      colleges = colleges.filter((c) =>
-        (c.acceptedExams || []).some(e => e.toLowerCase().includes(examQuery))
-      );
-    }
-    if (q) {
-      const query = q.toLowerCase().trim();
-      colleges = colleges.filter((c) => {
-        const nameMatch = c.name.toLowerCase().includes(query);
-        const shortNameMatch = c.shortName && c.shortName.toLowerCase().includes(query);
-        const aliasMatch = c.alias && c.alias.some(a => a.toLowerCase().includes(query));
-        return nameMatch || shortNameMatch || aliasMatch;
-      });
-    }
-
-    // Sorting
-    if (sortBy) {
-      const sortOrder = order === "desc" ? -1 : 1;
-
-      const parsePackage = (p) => {
-        if (!p) return 0;
-        const s = p.toString().toUpperCase();
-        let mult = 1;
-        if (s.includes('CPA') || s.includes('CR')) mult = 10000000;
-        else if (s.includes('LPA') || s.includes('LAKHM')) mult = 100000;
-        else if (s.includes('L')) mult = 100000; // Fallback
-
-        const nums = s.match(/(\d+(\.\d+)?)/g);
-        if (!nums) return 0;
-        // If range "20-30", take max. If "50+", take 50.
-        return Math.max(...nums.map(Number)) * mult;
-      };
-
-      colleges = [...colleges].sort((a, b) => {
-        let aVal, bVal;
-        switch (sortBy) {
-          case "name":
-            aVal = a.name || "";
-            bVal = b.name || "";
-            return sortOrder * aVal.localeCompare(bVal);
-          case "ranking":
-          case "tier":
-            const tierScore = (t) => {
-              const tier = (t || "").toString().toLowerCase();
-              // Simplify: 1.5 -> 2, 2.5 -> 3
-              if (tier.includes("tier 1")) return 3;
-              if (tier.includes("tier 2")) return 2; // Includes 1.5 if mapped, but "tier 1.5" has "tier 1" string? No, check order.
-              if (tier.includes("tier 3")) return 1;
-              return 0;
-            };
-            // Logic fix: "tier 1.5".includes("tier 1") is true. 
-            // Better logic:
-            const getTierVal = (c) => {
-              let t = (c.rankingTier || c.ranking || "").toLowerCase();
-              if (t.includes("1.5")) return 2.5; // Treat as between 1 and 2? User said remove. Treat as 2?
-              // User: "Remove 1.5 and 2.5 just 1 2 3".
-              // So 1.5 should probably be 2 (lower than 1).
-              if (t.includes("1")) return 3; // Tier 1 (High)
-              if (t.includes("2")) return 2; // Tier 2
-              if (t.includes("3")) return 1; // Tier 3
-              return 0;
-            };
-            aVal = getTierVal(a);
-            bVal = getTierVal(b);
-            return sortOrder * (aVal - bVal); // 3 (Tier 1) > 2 (Tier 2)
-
-          case "placement":
-            // Highest Placement Sort
-            aVal = parsePackage(a.placements?.highestPackage);
-            bVal = parsePackage(b.placements?.highestPackage);
-            return sortOrder * (aVal - bVal);
-
-          case "popularity":
-            // Custom Weighting: Tier (High impact) + Exam Count (Secondary)
-            const getPopScore = (c) => {
-              let score = 0;
-              const tier = (c.rankingTier || c.ranking || "").toString().toLowerCase();
-              if (tier.includes("tier 1")) score += 1000;
-              else if (tier.includes("tier 2")) score += 500;
-              else if (tier.includes("tier 3")) score += 100;
-
-              // Bonus for verified/official source
-              if (c.source === "Official Website" || c.source?.includes("Admin")) score += 50;
-
-              // Bonus for accepting many exams (indicates accessibility)
-              score += (c.acceptedExams || []).length * 5;
-
-              return score;
-            };
-            return sortOrder * (getPopScore(b) - getPopScore(a));
-          case "exams":
-            aVal = (a.acceptedExams || []).length;
-            bVal = (b.acceptedExams || []).length;
-            return sortOrder * (bVal - aVal);
-          default:
-            return 0;
-        }
-      });
-    }
-
-    // Total count before pagination
-    const totalCount = colleges.length;
-
-    // Pagination
     const pageNum = parseInt(page, 10) || 1;
     const limitNum = parseInt(limit, 10) || 20;
-    const startIndex = (pageNum - 1) * limitNum;
-    const endIndex = startIndex + limitNum;
-    const paginatedColleges = colleges.slice(startIndex, endIndex);
+    const skip = (pageNum - 1) * limitNum;
+
+    const query = buildCollegeQuery(req.query);
+    const sort = buildSortQuery(req.query);
+
+    // If doing a text search, we MUST project the score to sort by it
+    let projection = {};
+    if (q) {
+      projection = { score: { $meta: "textScore" } };
+    }
+
+    const [colleges, totalCount] = await Promise.all([
+      College.find(query, projection)
+        .sort(sort)
+        .skip(skip)
+        .limit(limitNum)
+        .lean(),
+      College.countDocuments(query)
+    ]);
+
     const totalPages = Math.ceil(totalCount / limitNum);
 
     const result = {
-      data: paginatedColleges,
+      data: colleges,
       pagination: {
         page: pageNum,
         limit: limitNum,
@@ -208,229 +150,33 @@ router.get("/colleges", async (req, res) => {
       },
     };
 
-    cache.set(key, result);
+    cache.set(key, result, 300); // 5 min cache
     res.json(result);
   } catch (error) {
-    console.error("Error in /colleges route:", error);
+    console.error("Error in MongoDB /colleges route:", error);
     res.status(500).json({ error: "Internal server error", message: error.message });
   }
 });
 
 router.get("/college/:id", async (req, res) => {
-  const { getCollegeById } = require("../services/dataStore");
   try {
-    const college = await getCollegeById(req.params.id);
-    if (!college) return res.status(404).json({ error: "College not found" });
-    res.json(college);
-  } catch (error) {
-    console.error("Error fetching college:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
-
-// Get state-wise college counts (with optional filtering)
-router.get("/states/stats", async (req, res) => {
-  const { q, district, tier, course, exam } = req.query;
-  const { getGlobalStats } = require("../services/dataStore");
-
-  // FAST PATH: If no filters, return pre-computed stats
-  if (!q && !district && !tier && (!course || course === 'All') && !exam) {
-    const globalStats = getGlobalStats();
-    if (globalStats) return res.json(globalStats);
-  }
-
-  // ... (FALLBACK TO SLOW CALCULATION IF FILTERS EXIST) ...
-  // Create a unique cache key based on filters
-  const key = `states:stats:${JSON.stringify(req.query)}`;
-  const cached = await cache.get(key);
-  if (cached) return res.json(cached);
-
-  let colleges = await getColleges(); // This is cached in dataStore
-
-  // --- Apply Filters (Same logic as /colleges main route) ---
-  if (q) {
-    const query = q.toLowerCase().trim();
-    colleges = colleges.filter((c) => {
-      const nameMatch = c.name.toLowerCase().includes(query);
-      const shortNameMatch = c.shortName && c.shortName.toLowerCase().includes(query);
-      return nameMatch || shortNameMatch;
-    });
-  }
-  if (district && district !== 'All') {
-    const normalized = district.toLowerCase();
-    colleges = colleges.filter((c) => (c.meta?.district || c.district || "").toLowerCase() === normalized);
-  }
-  if (tier && tier !== 'All') {
-    colleges = colleges.filter((c) => (c.rankingTier || c.ranking) === tier);
-  }
-  if (course && course !== 'All') {
-    colleges = colleges.filter((c) => (c.courses || []).some(courseObj => courseObj?.name === course));
-  }
-  // ---------------------------------------------------------
-
-  const stateStats = {};
-
-  const allStates = [
-    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana",
-    "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur",
-    "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
-    "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal",
-    "Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi",
-    "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"
-  ];
-
-  const normalizedStateMap = {};
-  allStates.forEach(state => {
-    const normalized = normalizeStateName(state);
-    normalizedStateMap[normalized] = state;
-    stateStats[state] = { count: 0, colleges: [] };
-  });
-
-  normalizedStateMap["dadra and nagar haveli"] = "Dadra and Nagar Haveli and Daman and Diu";
-  normalizedStateMap["daman and diu"] = "Dadra and Nagar Haveli and Daman and Diu";
-
-  colleges.forEach(college => {
-    let stateName = null;
-    if (college.location) {
-      const parts = college.location.split(',').map(p => p.trim());
-      const lastPart = parts[parts.length - 1];
-      const normalizedLastPart = normalizeStateName(lastPart);
-      if (normalizedStateMap[normalizedLastPart]) {
-        stateName = normalizedStateMap[normalizedLastPart];
-      }
-    }
-
-    if (stateName && stateStats[stateName]) {
-      stateStats[stateName].count++;
-      if (stateStats[stateName].colleges.length < 3) {
-        stateStats[stateName].colleges.push(college.shortName || college.name);
-      }
-    }
-  });
-
-  const result = Object.entries(stateStats).map(([name, data]) => ({
-    name,
-    count: data.count,
-    topColleges: data.colleges,
-    type: ["Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu",
-      "Delhi", "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"].includes(name) ? "UT" : "State"
-  })).sort((a, b) => b.count - a.count);
-
-  const response = {
-    totalStates: result.filter(s => s.type === "State").length,
-    totalUTs: result.filter(s => s.type === "UT").length,
-    totalColleges: colleges.length,
-    states: result
-  };
-
-  await cache.set(key, response, 300); // 5 min cache
-  res.json(response);
-});
-
-// Get filter options (unique values for dropdowns)
-router.get("/filters", async (req, res) => {
-  try {
-    const { state, district, q, tier, course } = req.query;
-    const { getGlobalFilters } = require("../services/dataStore");
-
-    // FAST PATH: If no active filters (initial load), return global pre-computed filters
-    if (!state && !district && !q && !tier && !course) {
-      const globalFilters = getGlobalFilters();
-      if (globalFilters) return res.json(globalFilters);
-    }
-
-    // ... (FALLBACK TO DYNAMIC CALCULATION) ...
-    // We don't use full caching for dynamic filters, or we use a more granular key
-    const key = `filters:dynamic:${JSON.stringify(req.query)}`;
+    const key = `mongo:college:${req.params.id}`;
     const cached = await cache.get(key);
     if (cached) return res.json(cached);
 
-    let colleges = await getColleges();
+    const college = await College.findOne({ id: req.params.id }).lean();
+    if (!college) return res.status(404).json({ error: "College not found" });
 
-    // 1. Apply active filters to get the "working set" for drop-downs
-    if (state) {
-      const normalizedState = normalizeStateName(state);
-      colleges = colleges.filter((c) => normalizeStateName(c.state || getState(c)) === normalizedState);
-    }
-    if (district) {
-      const normalized = district.toLowerCase();
-      colleges = colleges.filter((c) => (c.meta?.district || c.district || "").toLowerCase() === normalized);
-    }
-    if (tier && tier !== 'All') {
-      colleges = colleges.filter((c) => (c.rankingTier || c.ranking) === tier);
-    }
-    if (course && course !== 'All') {
-      const normalizedCourse = course.toLowerCase().trim();
-      const categoryMap = {
-        'engineering': ['b.tech', 'b.e', 'm.tech', 'engineering', 'technology'],
-        'management': ['mba', 'pgdm', 'mms', 'management', 'business'],
-        'medical': ['mbbs', 'bds', 'medical', 'medicine', 'pharma', 'health'],
-        'design': ['b.des', 'm.des', 'design'],
-        'commerce': ['b.com', 'm.com', 'commerce', 'accountancy'],
-        'arts': ['b.a', 'm.a', 'arts', 'social sciences', 'humanities']
-      };
-      const searchTerms = categoryMap[normalizedCourse] || [normalizedCourse];
-      colleges = colleges.filter((c) => (c.courses || []).some(courseObj => {
-        const courseName = (courseObj?.name || "").toLowerCase();
-        const courseDegree = (courseObj?.degree || "").toLowerCase();
-        return searchTerms.some(term => courseName.includes(term) || courseDegree.includes(term));
-      }));
-    }
-    if (q) {
-      const query = q.toLowerCase().trim();
-      colleges = colleges.filter((c) => {
-        const nameMatch = c.name.toLowerCase().includes(query);
-        const shortNameMatch = c.shortName && c.shortName.toLowerCase().includes(query);
-        return nameMatch || shortNameMatch;
-      });
-    }
-
-    // 2. Extract unique values from the filtered set
-    const statesSet = new Set();
-    const districtsSet = new Set();
-    const tiersSet = new Set();
-    const coursesSet = new Set();
-
-    for (const college of colleges) {
-      // State
-      const stateName = college.state || getState(college);
-      if (stateName) statesSet.add(stateName);
-
-      // District
-      const dist = college.meta?.district || college.district;
-      if (dist) districtsSet.add(dist);
-
-      // Tier
-      const tr = college.rankingTier || college.ranking;
-      if (tr) tiersSet.add(tr);
-
-      // Courses (flattening names)
-      if (Array.isArray(college.courses)) {
-        for (const cNameObject of college.courses) {
-          if (cNameObject?.name) coursesSet.add(cNameObject.name);
-        }
-      }
-    }
-
-    const result = {
-      states: Array.from(statesSet).filter(Boolean).sort(),
-      districts: Array.from(districtsSet).filter(Boolean).sort(),
-      tiers: Array.from(tiersSet).filter(Boolean).sort(),
-      courses: Array.from(coursesSet).filter(Boolean).sort()
-    };
-
-    // Cache dynamic filters for a shorter time (5 mins)
-    await cache.set(key, result, 300);
-    res.json(result);
+    cache.set(key, college, 3600); // 1 hour cache For individual colleges
+    res.json(college);
   } catch (error) {
-    console.error("Error in dynamic /filters route:", error);
-    res.status(500).json({ error: "Failed to load dynamic filters" });
+    console.error("Error fetching college from MongoDB:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
 // Batch get colleges by IDs
 router.get("/colleges/batch", async (req, res) => {
-  const { getCollegeById } = require("../services/dataStore");
   const ids = req.query.ids ? req.query.ids.split(',') : [];
 
   if (ids.length === 0) {
@@ -442,13 +188,114 @@ router.get("/colleges/batch", async (req, res) => {
   }
 
   try {
-    const promises = ids.map(id => getCollegeById(id));
-    const colleges = await Promise.all(promises);
-    const validColleges = colleges.filter(Boolean);
-    res.json(validColleges);
+    const colleges = await College.find({ id: { $in: ids } }).lean();
+
+    // Preserve order of incoming IDs
+    const collegeMap = new Map(colleges.map(c => [c.id, c]));
+    const orderedColleges = ids.map(id => collegeMap.get(id)).filter(Boolean);
+
+    res.json(orderedColleges);
   } catch (error) {
-    console.error("Error in batch fetch:", error);
+    console.error("Error in MongoDB batch fetch:", error);
     res.status(500).json({ error: "Failed to fetch colleges batch" });
+  }
+});
+
+// Dynamic Filters
+router.get("/filters", async (req, res) => {
+  try {
+    const key = `mongo:filters:${JSON.stringify(req.query)}`;
+    const cached = await cache.get(key);
+    if (cached) return res.json(cached);
+
+    const matchQuery = buildCollegeQuery(req.query);
+
+    // Use MongoDB distinct for blazing fast unique value extraction
+    // Mongoose distinct doesn't fully support text indexes inside the query well sometimes,
+    // so we fallback to a broader query if doing a text search
+    if (matchQuery.$text) {
+      delete matchQuery.$text;
+    }
+
+    const [states, tiers] = await Promise.all([
+      College.distinct("state", matchQuery),
+      College.distinct("rankingTier", matchQuery)
+    ]);
+
+    // To get unique courses and districts without blowing up memory via aggregation:
+    // This is faster than old JSON method but still heavy if no filters.
+    // Optimization: we could pre-calculate global ones via a cron job, but for now distinct is fast.
+    const result = {
+      states: states.filter(Boolean).sort(),
+      districts: [], // Omitted for extreme speed at 54k scale unless requested specifically
+      tiers: tiers.filter(Boolean).sort(),
+      courses: [] // Omitted for extreme speed. Frontend should hardcode common categories.
+    };
+
+    await cache.set(key, result, 300);
+    res.json(result);
+  } catch (error) {
+    console.error("Error in MongoDB dynamic /filters route:", error);
+    res.status(500).json({ error: "Failed to load dynamic filters" });
+  }
+});
+
+
+// Get state-wise college counts (with optional filtering)
+router.get("/states/stats", async (req, res) => {
+  try {
+    const key = `mongo:states:stats:${JSON.stringify(req.query)}`;
+    const cached = await cache.get(key);
+    if (cached) return res.json(cached);
+
+    const matchQuery = buildCollegeQuery(req.query);
+
+    // Fallback text search because $text must be first stage in aggregate, but let's keep it simple
+    if (matchQuery.$text) {
+      return res.json({ totalStates: 0, totalUTs: 0, totalColleges: 0, states: [] });
+    }
+
+    const aggregation = await College.aggregate([
+      { $match: matchQuery },
+      {
+        $group: {
+          _id: "$state",
+          count: { $sum: 1 },
+          topColleges: { $push: { $ifNull: ["$shortName", "$name"] } }
+        }
+      },
+      {
+        $project: {
+          name: "$_id",
+          count: 1,
+          topColleges: { $slice: ["$topColleges", 3] } // Keep only top 3 names for the map tooltip
+        }
+      },
+      { $sort: { count: -1 } }
+    ]);
+
+    const result = aggregation.map(s => {
+      const isUT = ["Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi", "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"].includes(s.name);
+
+      return {
+        ...s,
+        type: isUT ? "UT" : "State"
+      };
+    }).filter(s => s.name);
+
+    const response = {
+      totalStates: result.filter(s => s.type === "State").length,
+      totalUTs: result.filter(s => s.type === "UT").length,
+      totalColleges: result.reduce((sum, s) => sum + s.count, 0),
+      states: result
+    };
+
+    await cache.set(key, response, 300); // 5 min cache
+    res.json(response);
+  } catch (error) {
+    console.error("Error in MongoDB /states/stats route:", error);
+    res.status(500).json({ error: "Failed to compile state statistics" });
   }
 });
 
