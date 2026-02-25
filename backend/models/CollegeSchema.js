@@ -82,6 +82,11 @@ const collegeSchema = new mongoose.Schema({
 // Text index for global search
 collegeSchema.index({ name: 'text', shortName: 'text', location: 'text' });
 
+// Compound indexes for extremely fast, low-memory sorting during deep pagination
+collegeSchema.index({ isPremium: -1, name: 1 });
+collegeSchema.index({ rankingTier: 1, isPremium: -1 });
+collegeSchema.index({ rankingTier: -1, isPremium: -1 });
+
 const College = mongoose.model('College', collegeSchema);
 
 module.exports = College;

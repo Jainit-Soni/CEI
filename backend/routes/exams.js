@@ -1,6 +1,7 @@
 ﻿const express = require("express");
-const { getExams, getColleges } = require("../services/dataStore");
 const cache = require("../services/cache");
+const Exam = require("../models/ExamSchema");
+const College = require("../models/CollegeSchema");
 
 const router = express.Router();
 
@@ -30,105 +31,122 @@ const syllabusById = {
 };
 
 router.get("/exams", async (req, res) => {
-  const key = `exams_v2:${JSON.stringify(req.query)}`;
-  const cached = await cache.get(key);
-  if (cached) return res.json(cached);
+  try {
+    const key = `mongo:exams:${JSON.stringify(req.query)}`;
+    const cached = await cache.get(key);
+    if (cached) return res.json(cached);
 
-  let exams = await getExams();
-  const colleges = await getColleges();
+    const { type, q } = req.query;
 
-  const { type, q } = req.query;
+    let query = {};
+    let projection = {};
+    let sort = { name: 1 };
 
-  if (type) {
-    exams = exams.filter((e) => e.type.toLowerCase() === type.toLowerCase());
+    if (type) {
+      query.type = { $regex: new RegExp(`^${type}$`, "i") };
+    }
+
+    if (q) {
+      query.$text = { $search: q };
+      projection = { score: { $meta: "textScore" } };
+      sort = { score: { $meta: "textScore" } };
+    }
+
+    const exams = await Exam.find(query, projection).sort(sort).lean();
+
+    // Map through exams and find accepted colleges
+    const normalizedExams = await Promise.all(exams.map(async (exam) => {
+      // Fast college lookup if exam.id exists in College's acceptedExams array
+      const examKeys = [exam.id, exam.shortName, exam.name].filter(Boolean);
+      const regexPattern = examKeys.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+
+      let collegeQuery = {};
+      if (exam.collegesAccepting && exam.collegesAccepting.length > 0) {
+        collegeQuery = {
+          $or: [
+            { id: { $in: exam.collegesAccepting } },
+            { acceptedExams: { $regex: regexPattern, $options: 'i' } }
+          ]
+        };
+      } else {
+        collegeQuery = { acceptedExams: { $regex: regexPattern, $options: 'i' } };
+      }
+
+      const colleges = await College.find(collegeQuery, 'id name shortName isPremium').sort({ isPremium: -1, name: 1 }).limit(20).lean();
+
+      const acceptedCollegesResolved = colleges.map(c => ({
+        id: c.id,
+        name: c.name,
+        shortName: c.shortName
+      }));
+
+      const syllabus = exam.syllabus && exam.syllabus.length > 0
+        ? exam.syllabus
+        : syllabusById[exam.id];
+
+      // Approximate total count
+      const acceptedCount = await College.countDocuments(collegeQuery);
+
+      return {
+        ...exam,
+        syllabus,
+        acceptedCount,
+        acceptedCollegesResolved,
+      };
+    }));
+
+    cache.set(key, normalizedExams, 300);
+    res.json(normalizedExams);
+  } catch (error) {
+    console.error("Error fetching exams from MongoDB:", error);
+    res.status(500).json({ error: "Failed to load exams" });
   }
-  if (q) {
-    const query = q.toLowerCase().trim();
-    exams = exams.filter((e) => e.name.toLowerCase().includes(query));
-  }
+});
 
-  const normalizeForMatch = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+router.get("/exam/:id", async (req, res) => {
+  try {
+    const exam = await Exam.findOne({ id: req.params.id }).lean();
+    if (!exam) return res.status(404).json({ error: "Exam not found" });
 
-  const normalizedExams = exams.map((exam) => {
     const examKeys = [exam.id, exam.shortName, exam.name].filter(Boolean);
-    const normalizedExamKeys = examKeys.map(normalizeForMatch);
+    const regexPattern = examKeys.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
 
-    const matchingColleges = colleges.filter((college) => {
-      const fromJsonList = (exam.collegesAccepting || exam.acceptedColleges || []);
-      if (fromJsonList.includes(college.id)) return true;
+    let collegeQuery = {};
+    if (exam.collegesAccepting && exam.collegesAccepting.length > 0) {
+      collegeQuery = {
+        $or: [
+          { id: { $in: exam.collegesAccepting } },
+          { acceptedExams: { $regex: regexPattern, $options: 'i' } }
+        ]
+      };
+    } else {
+      collegeQuery = { acceptedExams: { $regex: regexPattern, $options: 'i' } };
+    }
 
-      return (college.acceptedExams || []).some((e) => {
-        const normalizedE = normalizeForMatch(e);
-        return normalizedExamKeys.some(key => normalizedE.includes(key) || key.includes(normalizedE));
-      });
-    });
+    // Fetch top colleges accepting this exam
+    const colleges = await College.find(collegeQuery, 'id name shortName isPremium').sort({ isPremium: -1, name: 1 }).limit(50).lean();
+    const acceptedCount = await College.countDocuments(collegeQuery);
 
-    const acceptedCollegesResolved = matchingColleges.map(c => ({
+    const acceptedCollegesResolved = colleges.map(c => ({
       id: c.id,
       name: c.name,
       shortName: c.shortName
     }));
 
-    const acceptedCount = acceptedCollegesResolved.length;
-
     const syllabus = exam.syllabus && exam.syllabus.length > 0
       ? exam.syllabus
       : syllabusById[exam.id];
 
-    return {
+    res.json({
       ...exam,
       syllabus,
       acceptedCount,
       acceptedCollegesResolved,
-    };
-  });
-
-  cache.set(key, normalizedExams);
-  res.json(normalizedExams);
-});
-
-router.get("/exam/:id", async (req, res) => {
-  const exams = await getExams();
-  const colleges = await getColleges();
-  const collegeIdToName = new Map(
-    colleges.map((c) => [c.id, c.shortName || c.name])
-  );
-
-  const exam = exams.find((e) => e.id === req.params.id);
-  if (!exam) return res.status(404).json({ error: "Exam not found" });
-
-  const normalizeForMatch = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-  const examKeys = [exam.id, exam.shortName, exam.name].filter(Boolean);
-  const normalizedExamKeys = examKeys.map(normalizeForMatch);
-
-  const matchingColleges = colleges.filter((college) => {
-    const fromJsonList = (exam.collegesAccepting || exam.acceptedColleges || []);
-    if (fromJsonList.includes(college.id)) return true;
-
-    return (college.acceptedExams || []).some((e) => {
-      const normalizedE = normalizeForMatch(e);
-      return normalizedExamKeys.some(key => normalizedE.includes(key) || key.includes(normalizedE));
     });
-  });
-
-  const acceptedCollegesResolved = matchingColleges.map(c => ({
-    id: c.id,
-    name: c.name,
-    shortName: c.shortName
-  }));
-
-  const acceptedCount = acceptedCollegesResolved.length;
-
-  const syllabus = exam.syllabus && exam.syllabus.length > 0
-    ? exam.syllabus
-    : syllabusById[exam.id];
-
-  res.json({
-    ...exam,
-    syllabus,
-    acceptedCount,
-    acceptedCollegesResolved,
-  });
+  } catch (error) {
+    console.error("Error fetching exam by ID:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 module.exports = router;

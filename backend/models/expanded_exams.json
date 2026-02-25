@@ -1,0 +1,655 @@
+[
+    {
+        "id": "neet-pg",
+        "name": "National Eligibility cum Entrance Test (Postgraduate)",
+        "shortName": "NEET PG",
+        "type": "Medical PG",
+        "category": "Medical & Dental",
+        "logo": "https://nbe.edu.in/images/nbe-logo.jpg",
+        "conductingBody": "National Board of Examinations (NBE)",
+        "stats": {
+            "applicants": "2.1 Lakhs",
+            "fee": " 4250",
+            "duration": "3 Hours 30 Mins",
+            "mode": "Online (CBT)"
+        },
+        "markingScheme": {
+            "correct": "+4",
+            "incorrect": "-1"
+        },
+        "safeScore": {
+            "min": "500+",
+            "target": "Govt Clinical Seats"
+        },
+        "courses": [
+            "MD",
+            "MS",
+            "PG Diploma"
+        ],
+        "pattern": [
+            "Clinical, Pre-clinical, Para-clinical subjects from MBBS (200 MCQ)"
+        ],
+        "totalMarks": "800",
+        "dates": {
+            "registration": "Jan-Feb",
+            "examWindow": "March-April",
+            "result": "May"
+        },
+        "officialUrl": "https://nbe.edu.in",
+        "collegesAccepting": [
+            "aiims-new-delhi",
+            "cmc-vellore",
+            "jipmer-puducherry"
+        ]
+    },
+    {
+        "id": "upsc-cse",
+        "name": "UPSC Civil Services Examination",
+        "shortName": "UPSC CSE",
+        "type": "Civil Services",
+        "category": "Civil Services & Govt",
+        "logo": "https://upsc.gov.in/sites/all/themes/upsc/images/upsc_logo.png",
+        "conductingBody": "Union Public Service Commission",
+        "stats": {
+            "applicants": "11 Lakhs",
+            "fee": " 100",
+            "duration": "Multiple Days (Prelims + Mains)",
+            "mode": "Offline (Pen & Paper)"
+        },
+        "markingScheme": {
+            "correct": "+2 (Prelims)",
+            "incorrect": "-0.66 (Prelims)"
+        },
+        "safeScore": {
+            "min": "Select",
+            "target": "IAS/IPS Rank < 100"
+        },
+        "courses": [
+            "IAS",
+            "IPS",
+            "IFS",
+            "IRS"
+        ],
+        "pattern": [
+            "Prelims (GS + CSAT)",
+            "Mains (9 Descriptive Papers)",
+            "Personality Test (Interview)"
+        ],
+        "totalMarks": "2025 (Mains + Interview)",
+        "dates": {
+            "registration": "Feb-March",
+            "examWindow": "May (Prelims), Sept (Mains)",
+            "result": "April (Final)"
+        },
+        "officialUrl": "https://upsc.gov.in"
+    },
+    {
+        "id": "ssc-cgl",
+        "name": "Staff Selection Commission Combined Graduate Level",
+        "shortName": "SSC CGL",
+        "type": "Government Jobs",
+        "category": "Civil Services & Govt",
+        "conductingBody": "SSC",
+        "stats": {
+            "applicants": "30 Lakhs",
+            "fee": " 100",
+            "duration": "1 Hour (Tier 1)",
+            "mode": "Online (CBT)"
+        },
+        "markingScheme": {
+            "correct": "+2",
+            "incorrect": "-0.5"
+        },
+        "safeScore": {
+            "min": "130+ (Tier 1)",
+            "target": "Income Tax / MEA"
+        },
+        "courses": [
+            "Group B & C Govt Posts"
+        ],
+        "pattern": [
+            "Tier 1: Quant, Reasoning, English, GA",
+            "Tier 2: Advanced Quant, English, Computer Knowledge"
+        ],
+        "totalMarks": "200 (Tier 1)",
+        "dates": {
+            "registration": "April-May",
+            "examWindow": "July-Aug",
+            "result": "Sept-Oct"
+        },
+        "officialUrl": "https://ssc.nic.in"
+    },
+    {
+        "id": "gre",
+        "name": "Graduate Record Examinations",
+        "shortName": "GRE",
+        "type": "Study Abroad PG",
+        "category": "Global / Study Abroad",
+        "conductingBody": "ETS",
+        "stats": {
+            "applicants": "Global",
+            "fee": " $220",
+            "duration": "1 Hour 58 Mins",
+            "mode": "Online (CBT)"
+        },
+        "markingScheme": {
+            "correct": "Adaptive",
+            "incorrect": "No negative marking"
+        },
+        "safeScore": {
+            "min": "310+",
+            "target": "Top 50 US Universities"
+        },
+        "courses": [
+            "MS",
+            "Ph.D",
+            "MBA (Some)"
+        ],
+        "pattern": [
+            "Verbal Reasoning (27 Q)",
+            "Quantitative Reasoning (27 Q)",
+            "Analytical Writing (1 Essay)"
+        ],
+        "totalMarks": "340",
+        "dates": {
+            "registration": "Year-round",
+            "examWindow": "Any weekday/weekend",
+            "result": "8-10 days"
+        },
+        "officialUrl": "https://www.ets.org/gre"
+    },
+    {
+        "id": "gmat",
+        "name": "Graduate Management Admission Test (Focus Edition)",
+        "shortName": "GMAT",
+        "type": "Study Abroad MBA",
+        "category": "Global / Study Abroad",
+        "conductingBody": "GMAC",
+        "stats": {
+            "applicants": "Global",
+            "fee": " $275",
+            "duration": "2 Hours 15 Mins",
+            "mode": "Online (CBT) or Test Center"
+        },
+        "markingScheme": {
+            "correct": "Adaptive",
+            "incorrect": "Penalty for unanswered questions"
+        },
+        "safeScore": {
+            "min": "655+ (Focus)",
+            "target": "M7 B-Schools"
+        },
+        "courses": [
+            "MBA",
+            "MIM",
+            "Master of Finance"
+        ],
+        "pattern": [
+            "Quantitative Reasoning",
+            "Verbal Reasoning",
+            "Data Insights"
+        ],
+        "totalMarks": "805",
+        "dates": {
+            "registration": "Year-round",
+            "examWindow": "Anytime",
+            "result": "Within 7 days"
+        },
+        "officialUrl": "https://www.mba.com"
+    },
+    {
+        "id": "ielts",
+        "name": "International English Language Testing System",
+        "shortName": "IELTS Academic",
+        "type": "Language Proficiency",
+        "category": "Global / Study Abroad",
+        "conductingBody": "IDP / British Council",
+        "stats": {
+            "applicants": "Global",
+            "fee": " 17,000 INR",
+            "duration": "2 Hours 45 Mins",
+            "mode": "Paper/Computer"
+        },
+        "markingScheme": {
+            "correct": "Bands",
+            "incorrect": "No negative"
+        },
+        "safeScore": {
+            "min": "6.5 Band",
+            "target": "7.5+ Band"
+        },
+        "courses": [
+            "All Study Abroad Programs"
+        ],
+        "pattern": [
+            "Listening",
+            "Reading",
+            "Writing",
+            "Speaking"
+        ],
+        "totalMarks": "9 Bands",
+        "dates": {
+            "registration": "Year-round",
+            "examWindow": "Multiple times a month",
+            "result": "3-5 days (CBT)"
+        },
+        "officialUrl": "https://www.ielts.org"
+    },
+    {
+        "id": "sat",
+        "name": "Scholastic Assessment Test",
+        "shortName": "SAT",
+        "type": "Study Abroad UG",
+        "category": "Global / Study Abroad",
+        "conductingBody": "College Board",
+        "stats": {
+            "applicants": "Global",
+            "fee": " $103 (Ind)",
+            "duration": "2 Hours 14 Mins",
+            "mode": "Digital (Adaptive)"
+        },
+        "markingScheme": {
+            "correct": "Adaptive",
+            "incorrect": "No negative marking"
+        },
+        "safeScore": {
+            "min": "1300+",
+            "target": "1500+ (Ivy League)"
+        },
+        "courses": [
+            "B.S.",
+            "B.A. (USA/Canada)"
+        ],
+        "pattern": [
+            "Reading and Writing (2 modules)",
+            "Math (2 modules)"
+        ],
+        "totalMarks": "1600",
+        "dates": {
+            "registration": "Specific deadlines",
+            "examWindow": "Mar, May, June, Aug, Oct, Nov, Dec",
+            "result": "2 weeks"
+        },
+        "officialUrl": "https://satsuite.collegeboard.org"
+    },
+    {
+        "id": "nimcet",
+        "name": "NIT MCA Common Entrance Test",
+        "shortName": "NIMCET",
+        "type": "MCA Entrance",
+        "category": "Engineering",
+        "conductingBody": "NITs (Rotational)",
+        "stats": {
+            "applicants": "35,000",
+            "fee": " 2500",
+            "duration": "2 Hours",
+            "mode": "Online (CBT)"
+        },
+        "markingScheme": {
+            "correct": "+12 (Maths), +6 (LR), +4 (Computer), +4 (English)",
+            "incorrect": "25% Negative"
+        },
+        "safeScore": {
+            "min": "400+",
+            "target": "NIT Trichy/Warangal"
+        },
+        "courses": [
+            "MCA"
+        ],
+        "pattern": [
+            "Mathematics (50 Q)",
+            "Analytical Ability & Logical Reasoning (40 Q)",
+            "Computer Awareness (20 Q)",
+            "General English (10 Q)"
+        ],
+        "totalMarks": "1000",
+        "dates": {
+            "registration": "March-April",
+            "examWindow": "June",
+            "result": "late June"
+        },
+        "officialUrl": "https://nimcet.in"
+    },
+    {
+        "id": "nmat",
+        "name": "NMIMS Management Aptitude Test",
+        "shortName": "NMAT by GMAC",
+        "type": "Management",
+        "category": "Management",
+        "conductingBody": "GMAC",
+        "stats": {
+            "applicants": "90,000",
+            "fee": " 2800",
+            "duration": "2 Hours",
+            "mode": "Online (CBT) Adaptive"
+        },
+        "markingScheme": {
+            "correct": "Adaptive Scoring",
+            "incorrect": "No negative marking"
+        },
+        "safeScore": {
+            "min": "200+",
+            "target": "240+ (NMIMS Core)"
+        },
+        "courses": [
+            "MBA",
+            "PGDM"
+        ],
+        "pattern": [
+            "Language Skills (36 Q)",
+            "Quantitative Skills (36 Q)",
+            "Logical Reasoning (36 Q)"
+        ],
+        "totalMarks": "360",
+        "dates": {
+            "registration": "August-October",
+            "examWindow": "October-December (Multiple Attempts allowed)",
+            "result": "Within 48 hours of attempt"
+        },
+        "officialUrl": "https://www.mba.com/exams/nmat"
+    },
+    {
+        "id": "sbi-po",
+        "name": "State Bank of India Probationary Officer",
+        "shortName": "SBI PO",
+        "type": "Banking",
+        "category": "Civil Services & Govt",
+        "conductingBody": "State Bank of India",
+        "stats": {
+            "applicants": "8-10 Lakhs",
+            "fee": " 750",
+            "duration": "1 Hour (Prelims)",
+            "mode": "Online (CBT)"
+        },
+        "markingScheme": {
+            "correct": "+1",
+            "incorrect": "-0.25"
+        },
+        "safeScore": {
+            "min": "65+ / 100",
+            "target": "Final Merit List"
+        },
+        "courses": [
+            "Bank PO (Officer Scale I)"
+        ],
+        "pattern": [
+            "Prelims (English, Quant, Reasoning)",
+            "Mains (Objective + Descriptive)",
+            "Group Exercise & Interview"
+        ],
+        "totalMarks": "250 (Mains)",
+        "dates": {
+            "registration": "September",
+            "examWindow": "November (Prelims), Dec (Mains)",
+            "result": "Jan-Feb"
+        }
+    },
+    {
+        "id": "nda",
+        "name": "National Defence Academy Examination",
+        "shortName": "NDA",
+        "type": "Defense",
+        "category": "Civil Services & Govt",
+        "conductingBody": "UPSC",
+        "stats": {
+            "applicants": "5 Lakhs",
+            "fee": " 100",
+            "duration": "5 Hours (2 Papers)",
+            "mode": "Offline (Pen & Paper)"
+        },
+        "markingScheme": {
+            "correct": "+2.5 (Math), +4 (GAT)",
+            "incorrect": "1/3rd Negative"
+        },
+        "safeScore": {
+            "min": "350+ (Written)",
+            "target": "700+ (Written + SSB)"
+        },
+        "courses": [
+            "Army",
+            "Navy",
+            "Air Force Academies"
+        ],
+        "pattern": [
+            "Mathematics (300 Marks)",
+            "General Ability Test (600 Marks)"
+        ],
+        "totalMarks": "900",
+        "dates": {
+            "registration": "Dec-Jan / May-June",
+            "examWindow": "April / September",
+            "result": "Within 45 days"
+        },
+        "officialUrl": "https://upsc.gov.in"
+    },
+    {
+        "id": "lsat-india",
+        "name": "Law School Admission Test India",
+        "shortName": "LSAT India",
+        "type": "Law",
+        "category": "Law",
+        "conductingBody": "Pearson VUE",
+        "stats": {
+            "applicants": "15,000",
+            "fee": " 3999",
+            "duration": "2 Hours 20 Mins",
+            "mode": "Online (CBT Homed Based)"
+        },
+        "markingScheme": {
+            "correct": "Scaled Score",
+            "incorrect": "No negative marking"
+        },
+        "safeScore": {
+            "min": "60+ %ile",
+            "target": "JGLS (90+ %ile)"
+        },
+        "courses": [
+            "BA LLB",
+            "BBA LLB",
+            "LLM"
+        ],
+        "pattern": [
+            "Analytical Reasoning",
+            "Logical Reasoning (2 Secs)",
+            "Reading Comprehension"
+        ],
+        "totalMarks": "Percentile Band (420-480)",
+        "dates": {
+            "registration": "Aug-May",
+            "examWindow": "Jan and May",
+            "result": "Feb / June"
+        },
+        "officialUrl": "https://www.lsatindia.in"
+    },
+    {
+        "id": "ailet",
+        "name": "All India Law Entrance Test",
+        "shortName": "AILET",
+        "type": "Law",
+        "category": "Law",
+        "conductingBody": "NLU Delhi",
+        "stats": {
+            "applicants": "20,000",
+            "fee": " 3500",
+            "duration": "2 Hours",
+            "mode": "Offline (Pen & Paper)"
+        },
+        "markingScheme": {
+            "correct": "+1",
+            "incorrect": "-0.25"
+        },
+        "safeScore": {
+            "min": "75+ / 150",
+            "target": "NLU Delhi (100+)"
+        },
+        "courses": [
+            "BA LLB (Hons)",
+            "LLM",
+            "Ph.D"
+        ],
+        "pattern": [
+            "English Language",
+            "Current Affairs",
+            "Logical Reasoning"
+        ],
+        "totalMarks": "150",
+        "dates": {
+            "registration": "Aug-Nov",
+            "examWindow": "Dec",
+            "result": "Jan"
+        },
+        "officialUrl": "https://nationallawuniversitydelhi.in"
+    },
+    {
+        "id": "toefl",
+        "name": "Test of English as a Foreign Language",
+        "shortName": "TOEFL iBT",
+        "type": "Language Proficiency",
+        "category": "Global / Study Abroad",
+        "conductingBody": "ETS",
+        "stats": {
+            "applicants": "Global",
+            "fee": " $205",
+            "duration": "1 Hour 56 Mins",
+            "mode": "Online (CBT)"
+        },
+        "markingScheme": {
+            "correct": "Scaled Score",
+            "incorrect": "No negative"
+        },
+        "safeScore": {
+            "min": "90+",
+            "target": "100+ (Ivy League)"
+        },
+        "courses": [
+            "All Study Abroad Programs"
+        ],
+        "pattern": [
+            "Reading (35 mins)",
+            "Listening (36 mins)",
+            "Speaking (16 mins)",
+            "Writing (29 mins)"
+        ],
+        "totalMarks": "120",
+        "dates": {
+            "registration": "Year-round",
+            "examWindow": "Multiple times a week",
+            "result": "4-8 days"
+        },
+        "officialUrl": "https://www.ets.org/toefl"
+    },
+    {
+        "id": "icai-ca",
+        "name": "Institute of Chartered Accountants of India Exams",
+        "shortName": "CA Foundation/Intermediate/Final",
+        "type": "Finance/Accounting",
+        "category": "Management",
+        "conductingBody": "ICAI",
+        "stats": {
+            "applicants": "4 Lakhs (across levels)",
+            "fee": " Varies by Level",
+            "duration": "3 Hours (per paper)",
+            "mode": "Offline (Pen & Paper)"
+        },
+        "markingScheme": {
+            "correct": "Subjective & Objective",
+            "incorrect": "Negative in Objective"
+        },
+        "safeScore": {
+            "min": "40% per paper",
+            "target": "50% aggregate (Pass)"
+        },
+        "courses": [
+            "Chartered Accountancy"
+        ],
+        "pattern": [
+            "Accounting",
+            "Law",
+            "Taxation",
+            "Costing",
+            "Audit",
+            "Financial Management"
+        ],
+        "totalMarks": "400-800",
+        "dates": {
+            "registration": "Continuous",
+            "examWindow": "May & Nov",
+            "result": "July & Jan"
+        },
+        "officialUrl": "https://icai.org"
+    },
+    {
+        "id": "nift-situational",
+        "name": "NIFT Situation Test",
+        "shortName": "NIFT Stage 2",
+        "type": "Design",
+        "category": "Design & Architecture",
+        "conductingBody": "NIFT",
+        "stats": {
+            "applicants": "Top 20% of Written Test",
+            "fee": " Covered in Initial App",
+            "duration": "2 Hours",
+            "mode": "Offline (Hands-on)"
+        },
+        "markingScheme": {
+            "correct": "Jury Evaluation",
+            "incorrect": "N/A"
+        },
+        "safeScore": {
+            "min": "Good Portfolio",
+            "target": "NIFT Delhi"
+        },
+        "courses": [
+            "B.Des"
+        ],
+        "pattern": [
+            "Material Handling",
+            "Innovation",
+            "Aesthetic Appeal",
+            "Write-up explaining concept"
+        ],
+        "totalMarks": "20% of Final Weightage",
+        "dates": {
+            "registration": "Post Written Result",
+            "examWindow": "April",
+            "result": "May"
+        },
+        "officialUrl": "https://nift.ac.in"
+    },
+    {
+        "id": "sbi-clerk",
+        "name": "State Bank of India Junior Associates",
+        "shortName": "SBI Clerk",
+        "type": "Banking",
+        "category": "Civil Services & Govt",
+        "conductingBody": "State Bank of India",
+        "stats": {
+            "applicants": "15 Lakhs+",
+            "fee": " 750",
+            "duration": "1 Hour (Prelims)",
+            "mode": "Online (CBT)"
+        },
+        "markingScheme": {
+            "correct": "+1",
+            "incorrect": "-0.25"
+        },
+        "safeScore": {
+            "min": "State-wise Cutoff",
+            "target": "80+ / 100"
+        },
+        "courses": [
+            "Clerical Cadre"
+        ],
+        "pattern": [
+            "Prelims (English, Quant, Reasoning)",
+            "Mains (GA, English, Quant, Reasoning)"
+        ],
+        "totalMarks": "200 (Mains)",
+        "dates": {
+            "registration": "Sept-Oct",
+            "examWindow": "Nov (Prelims), Jan (Mains)",
+            "result": "March"
+        },
+        "officialUrl": "https://sbi.co.in/web/careers"
+    }
+]
