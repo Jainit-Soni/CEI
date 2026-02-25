@@ -183,7 +183,7 @@ function CollegesContent({ initialData }) {
                 const response = await fetchColleges(params);
 
                 if (response.data && response.pagination) {
-                    setColleges(prev => page === 1 ? response.data : [...prev, ...response.data]);
+                    setColleges(response.data);
                     setPagination(response.pagination);
                 } else {
                     const data = Array.isArray(response) ? response : [];
@@ -399,16 +399,17 @@ function CollegesContent({ initialData }) {
                         </RevealOnScroll>
                     ))}
                 </div>
-                {pagination && pagination.hasNext && (
-                    <div className="flex justify-center mt-12 mb-8 w-full">
-                        <Button
-                            variant="primary"
-                            onClick={() => setPage(p => p + 1)}
-                            disabled={isLoading}
-                        >
-                            {isLoading ? "Loading..." : "Load More Colleges"}
-                        </Button>
-                    </div>
+                {pagination && pagination.totalPages > 1 && (
+                    <Pagination
+                        page={pagination.page}
+                        totalPages={pagination.totalPages}
+                        hasNext={pagination.hasNext}
+                        hasPrev={pagination.hasPrev}
+                        onPageChange={(p) => {
+                            setPage(p);
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                    />
                 )}
             </>
         );
