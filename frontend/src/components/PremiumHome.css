@@ -79,7 +79,7 @@
     font-family: var(--font-serif);
     font-weight: 400;
     font-style: italic;
-    background: linear-gradient(135deg, #4f46e5, #8b5cf6, #ec4899);
+    background: linear-gradient(135deg, #1d4ed8, #4f46e5, #8b5cf6);
     background-size: 200% 200%;
     animation: gradientShift 4s ease infinite;
     -webkit-background-clip: text;
@@ -360,25 +360,24 @@
    100% Crisp Native DOM Overlays
    ========================================================== */
 
-.intelligence-dashboard {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+.intelligence-dashboard-static {
+    position: relative;
     z-index: 20;
-    /* Float ABOVE the 3D Canvas */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.1s linear, transform 0.1s linear;
+    gap: 40px;
+    margin-top: 60px;
+    padding-bottom: 80px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 /* Base Circular Panel Styling */
 .hq-circle-panel {
-    position: absolute;
-    width: 260px;
-    height: 260px;
+    position: relative;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     /* Liquid Glass Aesthetic */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.1) 100%);
@@ -408,27 +407,6 @@
     transform: scale(1.05);
 }
 
-/* Specific Positions for Circles */
-.circle-left {
-    top: 20%;
-    left: 8%;
-}
-
-.circle-center {
-    bottom: 12%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.circle-center:hover {
-    transform: translateX(-50%) scale(1.05);
-}
-
-.circle-right {
-    top: 30%;
-    right: 8%;
-}
-
 /* Typography for Light Theme */
 .hq-kicker {
     font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
@@ -446,13 +424,13 @@
     font-weight: 800;
     font-style: italic;
     margin: 0;
-    background: linear-gradient(135deg, #4f46e5, #ec4899, #f59e0b);
+    background: linear-gradient(135deg, #4f46e5, #3b82f6, #64748b);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     letter-spacing: -0.02em;
     line-height: 1;
-    text-shadow: 0 4px 20px rgba(236, 72, 153, 0.2);
+    text-shadow: 0 4px 20px rgba(79, 70, 229, 0.2);
 }
 
 .hq-detail {
@@ -466,22 +444,8 @@
 /* Responsive adjustments for Circular Overlays */
 @media (max-width: 1024px) {
     .hq-circle-panel {
-        width: 200px;
-        height: 200px;
-    }
-
-    .circle-left {
-        top: 15%;
-        left: 5%;
-    }
-
-    .circle-right {
-        top: 35%;
-        right: 5%;
-    }
-
-    .circle-center {
-        bottom: 8%;
+        width: 180px;
+        height: 180px;
     }
 
     .hq-value {
@@ -490,28 +454,17 @@
 }
 
 @media (max-width: 768px) {
-    .intelligence-dashboard {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
+    .intelligence-dashboard-static {
+        margin-top: 30px;
+        padding-bottom: 40px;
         flex-direction: column;
-        gap: 12px;
-        justify-content: center;
-        /* Let inline GSAP styles control opacity and pointer events */
+        gap: 20px;
     }
 
     .hq-circle-panel {
-        position: relative;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important;
-        width: 160px;
+        width: 180px;
         /* Reduced for mobile stack */
-        height: 160px;
+        height: 180px;
         margin: 0 auto;
         padding: 10px;
     }
@@ -523,9 +476,25 @@
     .hq-kicker {
         font-size: 0.6rem;
     }
+}
 
-    .circle-center:hover {
-        transform: none !important;
-        /* disabled hover tilt on mobile stack */
+@media (max-width: 480px) {
+    .hq-circle-panel {
+        width: 140px;
+        height: 140px;
+        padding: 5px;
     }
+
+    .hq-value {
+        font-size: 1.6rem;
+    }
+
+    .hq-kicker {
+        font-size: 0.55rem;
+    }
+}
+
+.circle-center:hover {
+    transform: none !important;
+    /* disabled hover tilt on mobile stack */
 }

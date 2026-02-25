@@ -151,6 +151,9 @@ export default function RootLayout({ children }) {
 
               {/* Universal Footer */}
               <Footer />
+
+              {/* Compare Floating Bar */}
+              <CompareFloatingBar />
             </div>
           </ErrorBoundary>
         </ClientProviders>

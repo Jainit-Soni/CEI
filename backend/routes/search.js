@@ -28,15 +28,25 @@ router.get("/suggest", async (req, res) => {
   const exams = await getExams();
 
   let collegeSuggestions = [];
-  if (!typeParam || typeParam === "college") {
+  if (!typeParam || typeParam === "college" || typeParam === "all") {
     collegeSuggestions = colleges
-      .filter((c) => {
+      .map(c => {
         const name = (c.name || "").toLowerCase();
         const short = (c.shortName || "").toLowerCase();
-        // Match name, shortName, or check if query is initials of the name
-        return name.includes(q) || short.includes(q) ||
-          name.split(/\s+/).map(w => w[0]).join("").includes(q);
+        let score = 0;
+
+        if (short === q) score += 100;
+        else if (short.startsWith(q)) score += 50;
+        else if (name.startsWith(q)) score += 30;
+        else if (name.includes(q) || short.includes(q)) score += 10;
+
+        const initials = name.split(/\s+/).map(w => w[0]).join("");
+        if (initials.includes(q)) score += 40; // High priority for "ii" -> "IIT" etc
+
+        return { ...c, _score: score };
       })
+      .filter(c => c._score > 0)
+      .sort((a, b) => b._score - a._score)
       .slice(0, 8)
       .map(c => ({
         id: c.id,
@@ -47,13 +57,22 @@ router.get("/suggest", async (req, res) => {
   }
 
   let examSuggestions = [];
-  if (!typeParam || typeParam === "exam") {
+  if (!typeParam || typeParam === "exam" || typeParam === "all") {
     examSuggestions = exams
-      .filter((e) => {
+      .map(e => {
         const name = (e.name || "").toLowerCase();
         const short = (e.shortName || "").toLowerCase();
-        return name.includes(q) || short.includes(q);
+        let score = 0;
+
+        if (short === q) score += 100;
+        else if (short.startsWith(q)) score += 50;
+        else if (name.startsWith(q)) score += 30;
+        else if (name.includes(q) || short.includes(q)) score += 10;
+
+        return { ...e, _score: score };
       })
+      .filter(e => e._score > 0)
+      .sort((a, b) => b._score - a._score)
       .slice(0, 8)
       .map(e => ({
         id: e.id,

@@ -10,15 +10,12 @@ export default function Loading() {
                     <div className="hero-orb hero-orb--2" />
                 </div>
                 <Container>
-                    <div className="list-hero-content flex flex-col items-center">
-                        <div className="h-4 w-32 bg-indigo-500/20 rounded-full mb-6 relative z-10 animate-pulse" />
-                        <div className="h-10 md:h-14 w-full max-w-2xl bg-indigo-500/20 rounded-lg mb-6 relative z-10 animate-pulse" />
-                        <div className="h-4 w-3/4 max-w-xl bg-indigo-500/20 rounded-full relative z-10 animate-pulse mb-12" />
-                        <div className="list-stats relative z-10">
-                            <div className="list-stat flex flex-col items-center">
-                                <div className="h-10 w-24 bg-indigo-500/20 rounded-lg animate-pulse mb-2" />
-                                <div className="h-4 w-16 bg-indigo-500/10 rounded-full animate-pulse" />
-                            </div>
+                    <div className="list-hero-content flex flex-col items-center detail-skeleton-hero skeleton" style={{ background: 'transparent', boxShadow: 'none', border: 'none', padding: '20px 0' }}>
+                        <div className="skeleton-line skeleton-kicker mx-auto mb-6" style={{ width: '120px' }} />
+                        <div className="skeleton-line skeleton-heading mx-auto mb-6" style={{ width: '80%', height: '64px' }} />
+                        <div className="skeleton-line skeleton-subheading mx-auto mb-12" style={{ width: '60%' }} />
+                        <div className="list-stats relative z-10 flex justify-center">
+                            <div className="skeleton-stat" style={{ width: '120px', height: '80px' }} />
                         </div>
                     </div>
                 </Container>

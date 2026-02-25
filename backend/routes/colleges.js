@@ -8,17 +8,18 @@ const router = express.Router();
 const buildCollegeQuery = (reqQuery) => {
   const { state, district, q, tier, course, exam, isPremium } = reqQuery;
   const query = {};
+  const andConditions = [];
 
   if (isPremium) {
     query.isPremium = isPremium === 'true';
   }
 
   if (state && state !== 'All') {
-    query.state = new RegExp(`^${state}$`, 'i');
+    query.state = state;
   }
 
   if (district && district !== 'All') {
-    query['meta.district'] = new RegExp(`^${district}$`, 'i');
+    query['meta.district'] = district;
   }
 
   if (tier && tier !== 'All') {
@@ -27,25 +28,28 @@ const buildCollegeQuery = (reqQuery) => {
 
   if (course && course !== 'All') {
     const normalizedCourse = course.toLowerCase().trim();
-    // Broad category mapping
     const categoryMap = {
       'engineering': ['b.tech', 'b.e', 'm.tech', 'engineering', 'technology'],
       'management': ['mba', 'pgdm', 'mms', 'management', 'business'],
-      'medical': ['mbbs', 'bds', 'medical', 'medicine', 'pharma', 'health'],
+      'medical': ['mbbs', 'bds', 'medical', 'medicine', 'health'],
       'design': ['b.des', 'm.des', 'design'],
       'commerce': ['b.com', 'm.com', 'commerce', 'accountancy'],
-      'arts': ['b.a', 'm.a', 'arts', 'social sciences', 'humanities']
+      'arts': ['b.a', 'm.a', 'arts', 'social sciences', 'humanities'],
+      'law': ['ll.b', 'llm', 'law', 'legal'],
+      'pharmacy': ['b.pharm', 'm.pharm', 'pharmacy', 'pharma', 'all-pharmacy'],
+      'science': ['b.sc', 'm.sc', 'science'],
+      'architecture': ['b.arch', 'm.arch', 'architecture', 'planning']
     };
 
     const searchTerms = categoryMap[normalizedCourse] || [normalizedCourse];
-
-    // Create an OR regex for the search terms
     const regexPattern = searchTerms.map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
 
-    query.$or = [
-      { 'courses.name': { $regex: regexPattern, $options: 'i' } },
-      { 'courses.degree': { $regex: regexPattern, $options: 'i' } }
-    ];
+    andConditions.push({
+      $or: [
+        { 'courses.name': { $regex: regexPattern, $options: 'i' } },
+        { 'courses.degree': { $regex: regexPattern, $options: 'i' } }
+      ]
+    });
   }
 
   if (exam) {
@@ -53,8 +57,33 @@ const buildCollegeQuery = (reqQuery) => {
   }
 
   if (q) {
-    // Utilize the text index for actual full text search
-    query.$text = { $search: q };
+    const safeQ = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(safeQ, 'i');
+
+    // If query is just one character, be MUCH stricter to avoid noise like "DPU" matching "Y"
+    if (q.length === 1) {
+      andConditions.push({
+        $or: [
+          { shortName: { $regex: new RegExp(`^${safeQ}`, 'i') } },
+          { name: { $regex: new RegExp(`\\b${safeQ}`, 'i') } } // Matches if a word starts with the letter
+        ]
+      });
+    } else {
+      // Add initials match for "ii" -> "IIT", "iiit" cases
+      const initialRegex = new RegExp('^' + q.split('').join('.*'), 'i');
+
+      andConditions.push({
+        $or: [
+          { name: { $regex: regex } },
+          { shortName: { $regex: regex } },
+          { name: { $regex: initialRegex } } // Allows "ii" to match "Indian Institute..."
+        ]
+      });
+    }
+  }
+
+  if (andConditions.length > 0) {
+    query.$and = andConditions;
   }
 
   return query;
@@ -62,12 +91,8 @@ const buildCollegeQuery = (reqQuery) => {
 
 // Helper for sorting
 const buildSortQuery = (reqQuery) => {
-  const { sortBy, order, q } = reqQuery;
+  const { sortBy, order } = reqQuery;
   const sortDirection = order === 'desc' ? -1 : 1;
-
-  if (q && !sortBy) {
-    return { score: { $meta: "textScore" } }; // Default sort for text search
-  }
 
   let sort = {};
 
@@ -121,14 +146,8 @@ router.get("/colleges", async (req, res) => {
     const query = buildCollegeQuery(req.query);
     const sort = buildSortQuery(req.query);
 
-    // If doing a text search, we MUST project the score to sort by it
-    let projection = {};
-    if (q) {
-      projection = { score: { $meta: "textScore" } };
-    }
-
     const [colleges, totalCount] = await Promise.all([
-      College.find(query, projection)
+      College.find(query)
         .sort(sort)
         .skip(skip)
         .limit(limitNum)
@@ -209,27 +228,19 @@ router.get("/filters", async (req, res) => {
     if (cached) return res.json(cached);
 
     const matchQuery = buildCollegeQuery(req.query);
-
-    // Use MongoDB distinct for blazing fast unique value extraction
-    // Mongoose distinct doesn't fully support text indexes inside the query well sometimes,
-    // so we fallback to a broader query if doing a text search
-    if (matchQuery.$text) {
-      delete matchQuery.$text;
-    }
-
-    const [states, tiers] = await Promise.all([
+    const [states, metaDistricts, topDistricts] = await Promise.all([
       College.distinct("state", matchQuery),
-      College.distinct("rankingTier", matchQuery)
+      College.distinct("meta.district", matchQuery),
+      College.distinct("district", matchQuery)
     ]);
 
-    // To get unique courses and districts without blowing up memory via aggregation:
-    // This is faster than old JSON method but still heavy if no filters.
-    // Optimization: we could pre-calculate global ones via a cron job, but for now distinct is fast.
+    const commonCourses = ["Engineering", "Management", "Medical", "Design", "Commerce", "Arts", "Law", "Pharmacy", "Science", "Architecture"];
+
     const result = {
       states: states.filter(Boolean).sort(),
-      districts: [], // Omitted for extreme speed at 54k scale unless requested specifically
-      tiers: tiers.filter(Boolean).sort(),
-      courses: [] // Omitted for extreme speed. Frontend should hardcode common categories.
+      districts: [...new Set([...metaDistricts, ...topDistricts])].filter(Boolean).sort(),
+      tiers: ["Tier 1", "Tier 2", "Tier 3", "University", "Stand Alone"],
+      courses: commonCourses
     };
 
     await cache.set(key, result, 300);
@@ -249,11 +260,6 @@ router.get("/states/stats", async (req, res) => {
     if (cached) return res.json(cached);
 
     const matchQuery = buildCollegeQuery(req.query);
-
-    // Fallback text search because $text must be first stage in aggregate, but let's keep it simple
-    if (matchQuery.$text) {
-      return res.json({ totalStates: 0, totalUTs: 0, totalColleges: 0, states: [] });
-    }
 
     const aggregation = await College.aggregate([
       { $match: matchQuery },

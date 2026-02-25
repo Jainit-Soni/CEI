@@ -15,6 +15,7 @@ const scholarshipRoutes = require("./routes/scholarships");
 const newsRoutes = require("./routes/news");
 const hypeRoutes = require("./routes/hype");
 const predictorRoutes = require("./routes/predictor");
+const authRoutes = require("./routes/auth");
 const connectDB = require("./config/db");
 
 const app = express();
@@ -104,6 +105,7 @@ app.use("/api/scholarships", scholarshipRoutes);
 app.use("/api/news", newsRoutes);
 app.use("/api/hype", hypeRoutes);
 app.use("/api/predict", predictorRoutes);
+app.use("/api/auth", authRoutes);
 app.use("/api", userRoutes);
 
 const PORT = process.env.PORT || 4000;

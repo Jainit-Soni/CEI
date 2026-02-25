@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import GlassPanel from './GlassPanel';
+import Pagination from './Pagination';
 import './ExamTabs.css';
 
 import { searchAll, fetchExamColleges } from '@/lib/api';
@@ -16,6 +17,7 @@ export default function ExamTabs({ exam }) {
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(false);
     const [totalColleges, setTotalColleges] = useState(exam?.acceptedCount || 0);
+    const [totalPages, setTotalPages] = useState(1);
 
     // Debounce for search
     const searchTimeout = useRef(null);
@@ -29,6 +31,7 @@ export default function ExamTabs({ exam }) {
                 setTargetColleges(prev => append ? [...prev, ...res.data] : res.data);
                 setHasMore(res.pagination.hasNext);
                 setTotalColleges(res.pagination.totalCount);
+                setTotalPages(res.pagination.totalPages);
             }
         } catch (error) {
             console.error("Failed to load exam colleges:", error);
@@ -58,7 +61,7 @@ export default function ExamTabs({ exam }) {
     const handleLoadMore = () => {
         const nextPage = page + 1;
         setPage(nextPage);
-        loadColleges(nextPage, searchQuery, true);
+        loadColleges(nextPage, searchQuery, false);
     };
 
     if (!exam) return null;
@@ -275,7 +278,7 @@ export default function ExamTabs({ exam }) {
                                         value={searchQuery}
                                         onChange={handleSearchChange}
                                         className="retro-input"
-                                        style={{ width: '100%', padding: '0.6rem 1rem', borderRadius: '4px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff' }}
+                                        style={{ width: '100%', padding: '0.6rem 1rem', borderRadius: '4px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: '#0f172a' }}
                                     />
                                 </div>
                             </div>
@@ -296,18 +299,25 @@ export default function ExamTabs({ exam }) {
                             </div>
 
                             {isLoadingColleges && (
-                                <div className="loading-colleges mt-4" style={{ textAlign: 'center', opacity: 0.7, padding: '1rem' }}>Loading affiliated institutes...</div>
+                                <div className="colleges-grid-mini mt-4">
+                                    {Array.from({ length: 12 }).map((_, i) => (
+                                        <div key={i} className="skeleton-tag skeleton" style={{ width: '100%', height: '42px', borderRadius: '10px' }}></div>
+                                    ))}
+                                </div>
                             )}
 
-                            {hasMore && !isLoadingColleges && (
-                                <div className="load-more-container mt-4" style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-                                    <button
-                                        className="btn-glass"
-                                        onClick={handleLoadMore}
-                                        style={{ padding: '0.6rem 1.5rem', cursor: 'pointer', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: '#fff', borderRadius: '4px' }}
-                                    >
-                                        Load More Institutes
-                                    </button>
+                            {totalPages > 1 && !isLoadingColleges && (
+                                <div className="mt-8" style={{ marginTop: '2rem' }}>
+                                    <Pagination
+                                        page={page}
+                                        totalPages={totalPages}
+                                        hasNext={hasMore}
+                                        hasPrev={page > 1}
+                                        onPageChange={(p) => {
+                                            setPage(p);
+                                            loadColleges(p, searchQuery, false);
+                                        }}
+                                    />
                                 </div>
                             )}
                         </div>

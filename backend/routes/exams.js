@@ -78,9 +78,12 @@ router.get("/exams", async (req, res) => {
     }
 
     if (q) {
-      query.$text = { $search: q };
-      projection = { score: { $meta: "textScore" } };
-      sort = { score: { $meta: "textScore" } };
+      const safeQ = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      query.$or = [
+        { name: { $regex: safeQ, $options: 'i' } },
+        { shortName: { $regex: safeQ, $options: 'i' } }
+      ];
+      sort = { name: 1 };
     }
 
     const exams = await Exam.find(query, projection).sort(sort).lean();
@@ -166,15 +169,20 @@ router.get("/exam/:id/colleges", async (req, res) => {
     const exam = await Exam.findOne({ id: req.params.id }).lean();
     if (!exam) return res.status(404).json({ error: "Exam not found" });
 
-    const collegeQuery = buildExamCollegeQuery(exam);
+    let collegeQuery = buildExamCollegeQuery(exam);
 
     let projection = {};
     let sort = { isPremium: -1, name: 1 };
 
     if (q) {
-      collegeQuery.$text = { $search: q };
-      projection = { score: { $meta: "textScore" } };
-      sort = { score: { $meta: "textScore" } };
+      const safeQ = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const searchOr = {
+        $or: [
+          { name: { $regex: safeQ, $options: 'i' } },
+          { shortName: { $regex: safeQ, $options: 'i' } }
+        ]
+      };
+      collegeQuery = { $and: [collegeQuery, searchOr] };
     }
 
     const [colleges, totalCount] = await Promise.all([

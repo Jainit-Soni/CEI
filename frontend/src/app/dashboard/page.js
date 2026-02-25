@@ -1,248 +1,213 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/lib/AuthContext";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { useAuth } from "@/lib/AuthContext";
 import GlassPanel from "@/components/GlassPanel";
-import Button from "@/components/Button"; // Keep existing imports
-import {
-    LayoutDashboard,
-    Heart,
-    TrendingUp,
-    Settings,
-    LogOut,
-    User,
-    ChevronRight,
-    Sparkles,
-    MapPin,
-    GraduationCap,
-    Clock
-} from "lucide-react";
-import DeadlineWatchtower from "@/components/DeadlineWatchtower";
-import "./dashboard.css"; // We'll update this next
+import Button from "@/components/Button";
+import { useFavorites } from "@/lib/useFavorites";
+import Link from "next/link";
+import { Bookmark, Calendar, Clock, LogOut, ChevronRight, User } from "lucide-react";
+import "./dashboard.css";
 
-export default function Dashboard() {
-    const { user, loading, logout } = useAuth();
+export default function DashboardPage() {
+    const { user, loading: authLoading, logout } = useAuth();
+    const { favorites, clearAllFavorites } = useFavorites();
     const router = useRouter();
-    const [stats, setStats] = useState({
-        favorites: 0,
-        applications: 0,
-        predicted: 0
-    });
+    const [activeTab, setActiveTab] = useState("overview");
 
     useEffect(() => {
-        if (!loading && !user) {
-            router.push("/");
+        if (!authLoading && !user) {
+            router.push("/login");
         }
-    }, [user, loading, router]);
+    }, [user, authLoading, router]);
 
-    // Mock loading of stats (replace with real API if needed)
-    useEffect(() => {
-        if (user) {
-            // Simulate fetch
-            setTimeout(() => {
-                setStats({
-                    favorites: 12,
-                    applications: 5,
-                    predicted: 85
-                });
-            }, 500);
-        }
-    }, [user]);
+    if (authLoading || !user) {
+        return (
+            <main className="dashboard-page loading">
+                <div className="spinner"></div>
+                <h2>Loading your dashboard...</h2>
+            </main>
+        );
+    }
 
-    if (loading || !user) return null;
+    const { colleges = [], exams = [] } = favorites;
+    // Fallback if deadlines are not populated yet
+    const deadlines = user.deadlines || [];
 
-    const quickLinks = [
-        { icon: <Heart size={20} />, label: "My Favorites", href: "/dashboard/favorites", color: "#ec4899" },
-        { icon: <TrendingUp size={20} />, label: "Analytics", href: "/dashboard/analytics", color: "#8b5cf6" },
-        { icon: <MapPin size={20} />, label: "College Map", href: "/map", color: "#10b981" },
-        { icon: <GraduationCap size={20} />, label: "Exams", href: "/exams", color: "#f59e0b" },
-    ];
-
-    // --- GAMIFICATION LOGIC ---
-    const getGreeting = () => {
-        const hour = new Date().getHours();
-        if (hour < 12) return "Good morning";
-        if (hour < 18) return "Good afternoon";
-        return "Good evening";
+    const handleLogout = async () => {
+        await logout();
+        router.push("/");
     };
 
-    const firstName = user?.displayName ? user.displayName.split(' ')[0] : 'Student';
-    const profileScore = stats.predicted || 0; // Using predicted score as generic "Completeness" for now
-
-    // --- SVG KINETIC RING CALCULATIONS ---
-    const radius = 38;
-    const circumference = 2 * Math.PI * radius;
-    const strokeDashoffset = circumference - (profileScore / 100) * circumference;
-
-
     return (
-        <div className="dashboard-container">
-            {/* Left Sidebar (Glass) */}
-            <aside className="dashboard-sidebar">
-                <div className="user-profile-mini">
-                    <div className="kinetic-avatar-container">
-                        {/* Kinetic SVG Ring */}
-                        <svg className="kinetic-ring" width="96" height="96" viewBox="0 0 96 96">
-                            {/* Background Track */}
-                            <circle cx="48" cy="48" r={radius} fill="none" stroke="rgba(0,0,0,0.05)" strokeWidth="6" />
-                            {/* Animated Progress Track */}
-                            <circle
-                                cx="48"
-                                cy="48"
-                                r={radius}
-                                fill="none"
-                                stroke="url(#gradient)"
-                                strokeWidth="6"
-                                strokeLinecap="round"
-                                strokeDasharray={circumference}
-                                strokeDashoffset={strokeDashoffset}
-                                className="kinetic-progress"
-                                transform="rotate(-90 48 48)"
-                            />
-                            <defs>
-                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stopColor="#4f46e5" />
-                                    <stop offset="100%" stopColor="#ec4899" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
+        <main className="dashboard-page">
+            <div className="dashboard-container">
+                {/* Sidebar Menu */}
+                <aside className="dashboard-sidebar">
+                    <GlassPanel className="sidebar-panel">
+                        <div className="user-profile">
+                            <div className="avatar">
+                                {user.avatarUrl ? (
+                                    <img src={user.avatarUrl} alt="Avatar" />
+                                ) : (
+                                    <User size={32} color="var(--color-primary)" />
+                                )}
+                            </div>
+                            <h3>{user.displayName || "Student"}</h3>
+                            <p>{user.email}</p>
+                        </div>
 
-                        {/* Inner Avatar */}
-                        <div className="avatar-placeholder">
-                            {user?.photoURL ? (
-                                <img src={user.photoURL} alt="Profile" />
+                        <nav className="dashboard-nav">
+                            <button
+                                className={`nav-item ${activeTab === 'overview' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('overview')}
+                            >
+                                <Bookmark size={18} /> Overview
+                            </button>
+                            <button
+                                className={`nav-item ${activeTab === 'colleges' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('colleges')}
+                            >
+                                <Bookmark size={18} /> Saved Colleges ({colleges.length})
+                            </button>
+                            <button
+                                className={`nav-item ${activeTab === 'deadlines' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('deadlines')}
+                            >
+                                <Calendar size={18} /> Deadlines ({deadlines.length})
+                            </button>
+                        </nav>
+
+                        <div className="sidebar-footer">
+                            <button className="logout-btn" onClick={handleLogout}>
+                                <LogOut size={16} /> Sign Out
+                            </button>
+                        </div>
+                    </GlassPanel>
+                </aside>
+
+                {/* Main Content Area */}
+                <section className="dashboard-main">
+                    <div className="dashboard-header">
+                        <h1>{activeTab === "overview" ? "Welcome back!" :
+                            activeTab === "colleges" ? "Your Shortlist" : "Application Deadlines"}</h1>
+                        <p className="dashboard-subtitle">
+                            Manage your higher education journey in one place.
+                        </p>
+                    </div>
+
+                    {activeTab === "overview" && (
+                        <div className="overview-grid">
+                            {/* Summary Cards */}
+                            <GlassPanel className="summary-card">
+                                <div className="card-icon blue"><Bookmark size={24} /></div>
+                                <div className="card-info">
+                                    <h3>{colleges.length}</h3>
+                                    <p>Saved Colleges</p>
+                                </div>
+                                <Link href="/colleges" className="card-link"><ChevronRight size={18} /></Link>
+                            </GlassPanel>
+
+                            <GlassPanel className="summary-card">
+                                <div className="card-icon purple"><Calendar size={24} /></div>
+                                <div className="card-info">
+                                    <h3>{deadlines.length}</h3>
+                                    <p>Upcoming Deadlines</p>
+                                </div>
+                                <button className="card-link" onClick={() => setActiveTab('deadlines')}><ChevronRight size={18} /></button>
+                            </GlassPanel>
+
+                            <GlassPanel className="summary-card">
+                                <div className="card-icon orange"><Bookmark size={24} /></div>
+                                <div className="card-info">
+                                    <h3>{exams.length}</h3>
+                                    <p>Tracked Exams</p>
+                                </div>
+                                <Link href="/exams" className="card-link"><ChevronRight size={18} /></Link>
+                            </GlassPanel>
+
+                            {/* Recent Activity or Next Steps */}
+                            <div className="action-section">
+                                <h2>Next Steps</h2>
+                                <GlassPanel className="action-panel">
+                                    {colleges.length === 0 ? (
+                                        <div className="empty-state">
+                                            <p>You haven't saved any colleges yet. Start exploring!</p>
+                                            <Link href="/colleges">
+                                                <Button size="sm">Browse Colleges</Button>
+                                            </Link>
+                                        </div>
+                                    ) : (
+                                        <div className="empty-state">
+                                            <p>Ready to compare your shortlisted colleges?</p>
+                                            <Link href="/compare">
+                                                <Button size="sm" variant="outline">Compare Now</Button>
+                                            </Link>
+                                        </div>
+                                    )}
+                                </GlassPanel>
+                            </div>
+                        </div>
+                    )}
+
+                    {activeTab === "colleges" && (
+                        <div className="list-section">
+                            {colleges.length === 0 ? (
+                                <GlassPanel className="empty-panel">
+                                    <Bookmark size={48} color="#9ca3af" style={{ marginBottom: '1rem' }} />
+                                    <h3>Your shortlist is empty</h3>
+                                    <p>Save colleges while browsing to easily access them here.</p>
+                                    <Link href="/colleges"><Button className="mt-4">Explore Colleges</Button></Link>
+                                </GlassPanel>
                             ) : (
-                                <User size={24} />
+                                <div className="item-list">
+                                    {colleges.map((c, i) => (
+                                        <GlassPanel key={i} className="list-item">
+                                            <div className="item-details">
+                                                <h4>{c.name || c.id}</h4>
+                                                <span className="item-tag">College</span>
+                                            </div>
+                                            <div className="item-actions">
+                                                <Link href={`/college/${c.id}`}><Button size="sm" variant="outline">View</Button></Link>
+                                            </div>
+                                        </GlassPanel>
+                                    ))}
+                                </div>
                             )}
                         </div>
+                    )}
 
-                        {/* Score Badge */}
-                        <div className="avatar-score-badge">
-                            {profileScore}%
+                    {activeTab === "deadlines" && (
+                        <div className="list-section">
+                            {deadlines.length === 0 ? (
+                                <GlassPanel className="empty-panel">
+                                    <Calendar size={48} color="#9ca3af" style={{ marginBottom: '1rem' }} />
+                                    <h3>No upcoming deadlines</h3>
+                                    <p>Add custom reminders or track official exam dates.</p>
+                                    <Button className="mt-4" onClick={() => alert("Deadline builder coming soon.")}>Add Deadline</Button>
+                                </GlassPanel>
+                            ) : (
+                                <div className="item-list">
+                                    {deadlines.map((d, i) => (
+                                        <GlassPanel key={i} className="list-item deadline-item">
+                                            <div className="deadline-date black">
+                                                <span className="month">{new Date(d.date).toLocaleString('default', { month: 'short' })}</span>
+                                                <span className="day">{new Date(d.date).getDate()}</span>
+                                            </div>
+                                            <div className="item-details">
+                                                <h4>{d.title}</h4>
+                                                <p className="item-notes">{d.notes}</p>
+                                                <span className="item-tag deadline-tag"><Clock size={12} /> {d.type}</span>
+                                            </div>
+                                        </GlassPanel>
+                                    ))}
+                                </div>
+                            )}
                         </div>
-                    </div>
-
-                    <div className="user-profile-info">
-                        <h3>{firstName}</h3>
-                        <p>Free Account</p>
-                    </div>
-                </div>
-
-                <nav className="sidebar-nav">
-                    <Link href="/dashboard" className="nav-item active">
-                        <LayoutDashboard size={20} /> Command Center
-                    </Link>
-                    <Link href="/my-list" className="nav-item">
-                        <Heart size={20} /> Priority Roadmap
-                    </Link>
-
-                    <div className="nav-divider" />
-
-                    <button onClick={logout} className="nav-item logout">
-                        <LogOut size={20} /> Sign Out
-                    </button>
-                </nav>
-            </aside>
-
-            {/* Main Content */}
-            <main className="dashboard-content">
-                <header className="content-header">
-                    <div>
-                        <h1>{getGreeting()}, {firstName}! 👋</h1>
-                        <p>Your strategic command center for college admissions.</p>
-                    </div>
-                    <Button variant="outline" href="/colleges">Explore Colleges</Button>
-                </header>
-
-                {/* Main Content Area: Stats + Watchtower */}
-                <div className="dashboard-grid">
-                    <div className="stats-column">
-                        {/* Quick Stats Row */}
-                        <div className="stats-grid-row">
-                            <GlassPanel className="stat-card">
-                                <div className="stat-icon" style={{ background: 'rgba(236, 72, 153, 0.1)', color: '#ec4899' }}>
-                                    <Heart size={24} />
-                                </div>
-                                <div className="stat-info">
-                                    <span className="stat-value">{stats.favorites}</span>
-                                    <span className="stat-label">Roadmap Priorities</span>
-                                </div>
-                            </GlassPanel>
-
-                            <GlassPanel className="stat-card">
-                                <div className="stat-icon" style={{ background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6' }}>
-                                    <Sparkles size={24} />
-                                </div>
-                                <div className="stat-info">
-                                    <span className="stat-value">{profileScore}%</span>
-                                    <span className="stat-label">Profile Strength</span>
-                                </div>
-                            </GlassPanel>
-                        </div>
-
-                        {/* INTELLIGENT NEXT STEPS */}
-                        <section className="dashboard-section">
-                            <div className="section-header">
-                                <h2>Next Steps to Unlock Premium AI Insights</h2>
-                                <span className="ai-badge"><Sparkles size={12} /> Priority Queue</span>
-                            </div>
-
-                            <div className="next-steps-list">
-                                {/* Step 1: Roadmap Completion */}
-                                <Link href="/colleges" className={`next-step-card ${stats.favorites >= 3 ? 'completed' : ''}`}>
-                                    <div className="step-indicator">1</div>
-                                    <div className="step-content">
-                                        <h3>Build your Priority Roadmap</h3>
-                                        <p>Add at least 3 colleges {stats.favorites > 0 && stats.favorites < 3 ? `(Add ${3 - stats.favorites} more)` : ''} to build a baseline algorithm map.</p>
-                                    </div>
-                                    <ChevronRight size={20} className="step-arrow text-slate-300" />
-                                </Link>
-
-                                {/* Step 2: Exam Score Entry */}
-                                <button className={`next-step-card ${profileScore >= 90 ? 'completed' : ''}`} style={{ textAlign: 'left', width: '100%', border: 'none', background: 'white' }}>
-                                    <div className="step-indicator">2</div>
-                                    <div className="step-content">
-                                        <h3>Input Exam Metrics</h3>
-                                        <p>Feed your actual or expected percentiles (CAT, XAT, NMAT) into the engine to unlock predictive odds.</p>
-                                    </div>
-                                    <ChevronRight size={20} className="step-arrow text-slate-300" />
-                                </button>
-
-                                {/* Step 3: Run True ROI */}
-                                <Link href="/roi-calculator" className="next-step-card actionable-pulse">
-                                    <div className="step-indicator">3</div>
-                                    <div className="step-content">
-                                        <h3>Run the True ROI Simulator</h3>
-                                        <p>Map out the exact break-even timeline for your top prioritized colleges. Stop guessing your 10-year outlook.</p>
-                                    </div>
-                                    <ChevronRight size={20} className="step-arrow text-indigo-500" />
-                                </Link>
-                            </div>
-                        </section>
-
-                        {/* Quick Actions */}
-                        <section className="dashboard-section mt-8">
-                            <h2>Fast Travel</h2>
-                            <div className="quick-links-grid">
-                                {quickLinks.map((link, idx) => (
-                                    <Link key={idx} href={link.href} className="quick-link-card">
-                                        <div className="ql-icon" style={{ color: link.color }}>{link.icon}</div>
-                                        <span>{link.label}</span>
-                                        <ChevronRight size={16} className="ql-arrow" />
-                                    </Link>
-                                ))}
-                            </div>
-                        </section>
-                    </div>
-
-                    {/* Right Column: Watchtower */}
-                    <div className="watchtower-column">
-                        <DeadlineWatchtower />
-                    </div>
-                </div>
-            </main>
-        </div>
+                    )}
+                </section>
+            </div>
+        </main>
     );
 }

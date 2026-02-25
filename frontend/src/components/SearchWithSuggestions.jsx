@@ -22,7 +22,7 @@ export default function SearchWithSuggestions({
   const apiBase = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:4000";
 
   const fetchSuggestions = useCallback(async (searchQuery) => {
-    if (!searchQuery.trim() || searchQuery.length < 2) {
+    if (!searchQuery.trim()) {
       setSuggestions([]);
       setIsOpen(false);
       return;

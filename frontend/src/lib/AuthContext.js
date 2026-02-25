@@ -59,15 +59,41 @@ export function AuthProvider({ children }) {
                 const auth = await getFirebaseAuth();
                 const { onAuthStateChanged } = await import("firebase/auth");
 
-                unsubscribe = onAuthStateChanged(auth, (user) => {
-                    console.log("[Auth] User state changed:", user ? user.uid : "No user");
-                    setUser(user);
+                unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+                    console.log("[Auth] User state changed:", firebaseUser ? firebaseUser.uid : "No user");
+
+                    if (firebaseUser) {
+                        try {
+                            const { getApiUrl } = await import("./api");
+                            const axios = (await import("axios")).default;
+
+                            // Mocking a Firebase verify token for easy dev setup
+                            const payload = btoa(JSON.stringify({
+                                uid: firebaseUser.uid,
+                                email: firebaseUser.email,
+                                displayName: firebaseUser.displayName,
+                                photoURL: firebaseUser.photoURL
+                            }));
+
+                            const res = await axios.get(`${getApiUrl()}/api/auth/sync`, {
+                                headers: { Authorization: `Bearer ${payload}` }
+                            });
+
+                            setUser(res.data.user);
+                        } catch (syncErr) {
+                            console.error("[Auth] Sync with MongoDB failed:", syncErr);
+                            // Fallback to purely firebase if backend is down
+                            setUser(firebaseUser);
+                        }
+                    } else {
+                        setUser(null);
+                    }
+
                     setLoading(false);
                     setAuthInitialized(true);
                 });
             } catch (err) {
                 console.error("[Auth] Failed to initialize:", err);
-                // On mobile, this might be due to cookies/storage
                 setLoading(false);
                 setAuthInitialized(true);
             }

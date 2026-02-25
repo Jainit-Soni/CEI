@@ -1,0 +1,42 @@
+{
+  "YRuYUCUx7cayOTy9IVopLyvSRTY2": [
+    {
+      "id": "iit-kharagpur",
+      "name": "Indian Institute of Technology Kharagpur",
+      "shortName": "IIT KGP",
+      "rankingTier": "Tier 1",
+      "location": "Kharagpur, Paschim Medinipur, West Bengal",
+      "placements": {
+        "averagePackage": "24.0 LPA",
+        "medianPackage": "19.76 LPA",
+        "highestPackage": "2.14 CPA"
+      },
+      "tuition": "Standard IIT Fees",
+      "acceptedExams": [
+        "jee-advanced",
+        "gate",
+        "jam"
+      ],
+      "addedAt": "2026-02-16T10:11:53.269Z"
+    },
+    {
+      "id": "iit-roorkee",
+      "name": "IIT Roorkee",
+      "shortName": "IIT Roorkee",
+      "rankingTier": "Tier 1",
+      "location": "Roorkee, Haridwar, Uttarakhand",
+      "placements": {
+        "averagePackage": "18.34 LPA",
+        "medianPackage": "17.0 LPA",
+        "highestPackage": "2.0 CPA"
+      },
+      "tuition": "Standard IIT Fees",
+      "acceptedExams": [
+        "jee-advanced",
+        "gate",
+        "jam"
+      ],
+      "addedAt": "2026-02-20T11:41:32.859Z"
+    }
+  ]
+}

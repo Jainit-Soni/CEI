@@ -38,9 +38,9 @@ const REGION_GRADIENTS = {
 // Get tier color
 function getTierColor(count) {
     if (count === 0) return { bg: "rgba(148, 163, 184, 0.1)", text: "#94a3b8", glow: "none", tier: "—" };
-    if (count >= 40) return { bg: "rgba(251, 191, 36, 0.12)", text: "#f59e0b", glow: "0 0 20px rgba(251, 191, 36, 0.3)", tier: "🔥" };
-    if (count >= 20) return { bg: "rgba(96, 165, 250, 0.12)", text: "#3b82f6", glow: "0 0 15px rgba(96, 165, 250, 0.2)", tier: "⭐" };
-    if (count >= 10) return { bg: "rgba(167, 139, 250, 0.12)", text: "#8b5cf6", glow: "0 0 12px rgba(167, 139, 250, 0.2)", tier: "✦" };
+    if (count >= 3000) return { bg: "rgba(251, 191, 36, 0.12)", text: "#f59e0b", glow: "0 0 20px rgba(251, 191, 36, 0.3)", tier: "🔥" };
+    if (count >= 1000) return { bg: "rgba(96, 165, 250, 0.12)", text: "#3b82f6", glow: "0 0 15px rgba(96, 165, 250, 0.2)", tier: "⭐" };
+    if (count >= 100) return { bg: "rgba(167, 139, 250, 0.12)", text: "#8b5cf6", glow: "0 0 12px rgba(167, 139, 250, 0.2)", tier: "✦" };
     return { bg: "rgba(52, 211, 153, 0.1)", text: "#10b981", glow: "0 0 10px rgba(52, 211, 153, 0.15)", tier: "·" };
 }
 
@@ -177,19 +177,19 @@ export default function MobileMapList({ stateStats, totalStats, onStateClick }) 
             <div className="mobile-map-legend">
                 <div className="legend-row">
                     <span className="legend-dot" style={{ background: "#f59e0b" }} />
-                    <span>40+ Colleges</span>
+                    <span>3000+ Colleges</span>
                 </div>
                 <div className="legend-row">
                     <span className="legend-dot" style={{ background: "#3b82f6" }} />
-                    <span>20-39</span>
+                    <span>1000-3000</span>
                 </div>
                 <div className="legend-row">
                     <span className="legend-dot" style={{ background: "#8b5cf6" }} />
-                    <span>10-19</span>
+                    <span>100-1000</span>
                 </div>
                 <div className="legend-row">
                     <span className="legend-dot" style={{ background: "#10b981" }} />
-                    <span>1-9</span>
+                    <span>1-100</span>
                 </div>
             </div>
         </div>

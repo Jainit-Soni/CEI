@@ -21,7 +21,11 @@ import dynamic from "next/dynamic";
 // Performance: Heavy map loaded lazily
 const IndiaMap = dynamic(() => import("@/components/IndiaMap"), {
     ssr: false,
-    loading: () => <div className="india-map-loading"><div className="loading-spinner"></div><p>Loading Intelligence Map...</p></div>
+    loading: () => (
+        <div className="india-map-loading skeleton" style={{ borderRadius: '24px', minHeight: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <p style={{ color: '#fff', opacity: 0.5, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem' }}>Initializing Cartography...</p>
+        </div>
+    )
 });
 import "./page.css";
 

@@ -1,27 +1,39 @@
+/* Premium High-End Glass Skeleton System */
+
 .card-skeleton {
     height: 220px;
-    border-radius: var(--radius-xl);
-    background: var(--color-surface);
-    border: 1px solid var(--color-glass-border);
+    border-radius: var(--radius-xl, 16px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Base style for elements inside skeletons */
 .skeleton-line {
-    border-radius: var(--radius-s);
-    background: rgba(200, 210, 230, 0.5);
+    border-radius: var(--radius-s, 8px);
+    background: rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
 }
 
 .skeleton-title {
     width: 70%;
     height: 24px;
+    margin-bottom: 4px;
 }
 
 .skeleton-subtitle {
     width: 50%;
     height: 16px;
+    opacity: 0.7;
 }
 
 .skeleton-tags {
@@ -33,83 +45,132 @@
 .skeleton-tag {
     width: 60px;
     height: 28px;
-    border-radius: var(--radius-pill);
-    background: rgba(200, 210, 230, 0.4);
+    border-radius: var(--radius-pill, 99px);
+    background: rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
 .skeleton-meta {
     width: 40%;
     height: 14px;
+    opacity: 0.5;
 }
 
 /* Detail page skeleton */
 .detail-skeleton {
-    padding: var(--space-8) var(--space-4);
+    padding: var(--space-8, 64px) var(--space-4, 24px);
 }
 
 .detail-skeleton-hero {
-    border-radius: var(--radius-l);
-    padding: var(--space-7);
-    margin-bottom: var(--space-6);
+    border-radius: var(--radius-xl, 24px);
+    padding: var(--space-7, 48px);
+    margin-bottom: var(--space-6, 40px);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    position: relative;
+    overflow: hidden;
 }
 
 .skeleton-kicker {
     width: 80px;
-    height: 12px;
-    margin-bottom: var(--space-3);
+    height: 14px;
+    margin-bottom: var(--space-3, 16px);
 }
 
 .skeleton-heading {
     width: 60%;
-    height: 32px;
-    margin-bottom: var(--space-2);
+    height: 48px;
+    margin-bottom: var(--space-2, 12px);
 }
 
 .skeleton-subheading {
     width: 40%;
-    height: 18px;
+    height: 20px;
 }
 
 .skeleton-stats {
     display: flex;
-    gap: var(--space-6);
-    margin-top: var(--space-6);
+    gap: var(--space-6, 40px);
+    margin-top: var(--space-6, 40px);
 }
 
 .skeleton-stat {
-    width: 80px;
-    height: 48px;
-    border-radius: var(--radius-m);
-    background: rgba(200, 210, 230, 0.3);
+    width: 100px;
+    height: 64px;
+    border-radius: var(--radius-m, 12px);
+    background: rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
 .detail-skeleton-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6, 40px);
 }
 
 .detail-skeleton-panel {
-    height: 200px;
-    border-radius: var(--radius-l);
+    height: 240px;
+    border-radius: var(--radius-xl, 20px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Shimmer animation */
-@keyframes shimmer {
+/* The Premium Shimmer Animation */
+@keyframes premium-shimmer {
     0% {
-        background-position: 200% 0;
+        transform: translateX(-150%);
     }
 
     100% {
-        background-position: -200% 0;
+        transform: translateX(150%);
     }
 }
 
-.skeleton {
-    background: linear-gradient(120deg,
-            rgba(255, 255, 255, 0.4) 0%,
-            rgba(255, 255, 255, 0.8) 50%,
-            rgba(255, 255, 255, 0.4) 100%);
-    background-size: 200% 100%;
-    animation: shimmer 1.4s ease-in-out infinite;
+@keyframes pulse-opacity {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* Apply shimmer to all skeleton base backgrounds AND specific line elements */
+.skeleton::after,
+.skeleton-line::after,
+.skeleton-tag::after,
+.skeleton-stat::after,
+.detail-skeleton-panel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    animation: premium-shimmer 2.5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Apply a soft breathing pulse to the main skeleton shells for organic feel */
+.card-skeleton,
+.detail-skeleton-hero,
+.detail-skeleton-panel {
+    animation: pulse-opacity 4s ease-in-out infinite;
 }

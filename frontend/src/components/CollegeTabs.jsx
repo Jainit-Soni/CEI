@@ -192,7 +192,7 @@ export default function CollegeTabs({ college }) {
 
                 {activeTab === "placements" && (
                     <div className="tab-pane fade-in">
-                        {college.placements ? (
+                        {college.placements && college.isPremium ? (
                             <div className="premium-tab-card">
                                 <h3 className="tab-heading">Placement Highlights 🚀</h3>
                                 <div className="placement-grid-premium">
@@ -217,7 +217,7 @@ export default function CollegeTabs({ college }) {
                             </div>
                         ) : (
                             <div className="premium-tab-card empty-tab-state">
-                                Placement reports are yet to be verified for this institute.
+                                Placement reports are yet to be officially verified for this institute.
                             </div>
                         )}
                     </div>

@@ -1,8 +1,7 @@
 .compare-page {
     padding-top: 120px;
     padding-bottom: var(--space-10);
-    /* Bands/Gradient Background */
-    background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #f8fafc 40%, #ffffff 100%);
+    background: transparent;
     min-height: 80vh;
 }
 
@@ -27,8 +26,11 @@
 .compare-table-wrapper {
     overflow-x: auto;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    background: white;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .compare-table {
@@ -40,30 +42,31 @@
 .compare-table th {
     padding: 1.5rem;
     text-align: left;
-    border-bottom: 2px solid #e5e7eb;
-    background: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.6);
     vertical-align: top;
 }
 
 .label-col,
 .label-cell {
     width: 200px;
-    background: #f9fafb;
+    background: rgba(249, 250, 251, 0.5);
     font-weight: 600;
     color: #4b5563;
-    border-right: 1px solid #e5e7eb;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .label-cell {
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid #f3f4f6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .compare-table td {
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid #f3f4f6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     color: #1f2937;
     font-size: 1rem;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .college-header {
@@ -110,8 +113,11 @@
 .compare-table-wrapper {
     overflow-x: auto;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    background: white;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     margin-bottom: var(--space-6);
 }
 
@@ -122,14 +128,14 @@
 }
 
 .section-divider td {
-    background: #f3f4f6;
+    background: rgba(243, 244, 246, 0.6);
     color: #4b5563;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding: 0.75rem 1.5rem !important;
-    border-bottom: 2px solid #e5e7eb !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4) !important;
 }
 
 .tier-badge {
@@ -208,11 +214,13 @@
     }
 
     .feature-group {
-        background: white;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 20px;
         padding: 20px;
         box-shadow: var(--shadow-sm);
-        border: 1px solid #e5e7eb;
     }
 
     .feature-group-title {
@@ -256,11 +264,11 @@
     }
 
     .college-header-mobile {
-        background: white;
+        background: rgba(255, 255, 255, 0.6);
         border-radius: 16px;
         padding: 16px;
         margin-bottom: 12px;
-        border: 1px solid #e2e8f0;
+        border: 1px solid rgba(255, 255, 255, 0.5);
         display: flex;
         justify-content: space-between;
         align-items: center;

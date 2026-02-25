@@ -81,7 +81,7 @@ export default function CompareClient() {
                 <div className="compare-header">
                     <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                         <h1>Compare Colleges</h1>
-                        {isLoading && <span className="loading-tag">Updating data...</span>}
+                        {isLoading && <div className="skeleton-tag skeleton" style={{ width: '120px', height: '28px' }}></div>}
                     </div>
                     {displayList.length < 3 && (
                         <Button href="/colleges" variant="secondary" size="sm">Add More +</Button>
@@ -253,9 +253,6 @@ export default function CompareClient() {
                     </div>
                 </div>
 
-                <div className="compare-footer-note">
-                    * Data is sourced from official mandates and NIRF filings. Placements are based on 2023-24 cycle.
-                </div>
             </Container>
         </div>
     );
