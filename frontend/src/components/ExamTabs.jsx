@@ -223,7 +223,7 @@ export default function ExamTabs({ exam }) {
                 {activeTab === 'colleges' && (
                     <div className="tab-pane fade-in">
                         <div className="mission-card">
-                            <h3 className="card-header">Target Institutes ({targetColleges.length || (exam.acceptedCount)} Accepting {exam.shortName})</h3>
+                            <h3 className="card-header">Target Institutes ({exam.acceptedCount} Accepting {exam.shortName})</h3>
                             {isLoadingColleges ? (
                                 <div className="loading-colleges">Loading affiliated institutes...</div>
                             ) : (
