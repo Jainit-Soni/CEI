@@ -2,9 +2,18 @@
    CARD — Premium Living Surface
    ============================================ */
 .card {
-  background: white;
-  border-radius: 16px;
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 100%);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1.5px solid rgba(255, 255, 255, 1);
+  border-left: 1.5px solid rgba(255, 255, 255, 1);
+  box-shadow:
+    0 16px 32px rgba(31, 38, 135, 0.05),
+    0 8px 16px rgba(79, 70, 229, 0.05),
+    inset 0 4px 16px rgba(255, 255, 255, 0.8),
+    inset 0 -4px 16px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   height: 100%;
@@ -52,9 +61,11 @@
 .card:hover {
   transform: translateY(-6px) scale(1.015);
   box-shadow:
-    0 20px 40px -12px rgba(99, 102, 241, 0.15),
-    0 8px 16px -8px rgba(0, 0, 0, 0.08);
-  border-color: rgba(99, 102, 241, 0.2);
+    0 24px 48px rgba(31, 38, 135, 0.08),
+    0 12px 24px rgba(79, 70, 229, 0.08),
+    inset 0 6px 20px rgba(255, 255, 255, 0.9),
+    inset 0 -6px 20px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* --- Tier-specific accent colors --- */
@@ -154,18 +165,22 @@
 .card-tags span {
   font-size: 0.73rem;
   font-weight: 650;
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 4px 12px;
+  border-radius: 99px;
+  /* Pill shapes for liquid aesthetic */
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  border: 1px solid transparent;
-  transition: all 0.2s ease;
-}
-
-/* Default tag style */
-.card-tags span {
-  background: #f1f5f9;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  border-left: 1px solid rgba(255, 255, 255, 1);
+  box-shadow:
+    0 4px 12px rgba(31, 38, 135, 0.05),
+    inset 0 2px 6px rgba(255, 255, 255, 0.8);
   color: #475569;
+  transition: all 0.2s ease;
 }
 
 /* Tier-specific tag colors */
@@ -204,8 +219,8 @@
 /* ---- Meta Row ---- */
 .card-meta {
   padding: 0 20px 20px 20px;
-  border-top: 1px solid #f1f5f9;
-  background: linear-gradient(to bottom, #fcfcfd, #f8fafc);
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
   display: flex;
   gap: 12px;
   margin-top: auto;
@@ -224,7 +239,7 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  padding: 4px 10px;
+  padding: 6px 14px;
   border-radius: 99px;
   color: white;
   font-size: 0.75rem;
@@ -232,6 +247,12 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.1),
+    inset 0 2px 6px rgba(255, 255, 255, 0.4);
 }
 
 /* ---- Card Footer ---- */
@@ -241,8 +262,8 @@
   justify-content: space-between;
   padding: 12px 16px;
   margin-top: auto;
-  border-top: 1px solid #f1f5f9;
-  background: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
 }
 
 .card-footer-left {
