@@ -156,4 +156,60 @@ router.get("/exam/:id", async (req, res) => {
   }
 });
 
+router.get("/exam/:id/colleges", async (req, res) => {
+  try {
+    const { page, limit, q } = req.query;
+    const pageNum = parseInt(page, 10) || 1;
+    const limitNum = parseInt(limit, 10) || 20;
+    const skip = (pageNum - 1) * limitNum;
+
+    const exam = await Exam.findOne({ id: req.params.id }).lean();
+    if (!exam) return res.status(404).json({ error: "Exam not found" });
+
+    const collegeQuery = buildExamCollegeQuery(exam);
+
+    let projection = {};
+    let sort = { isPremium: -1, name: 1 };
+
+    if (q) {
+      collegeQuery.$text = { $search: q };
+      projection = { score: { $meta: "textScore" } };
+      sort = { score: { $meta: "textScore" } };
+    }
+
+    const [colleges, totalCount] = await Promise.all([
+      College.find(collegeQuery, 'id name shortName isPremium state rankingTier meta', projection)
+        .sort(sort)
+        .skip(skip)
+        .limit(limitNum)
+        .lean(),
+      College.countDocuments(collegeQuery)
+    ]);
+
+    const totalPages = Math.ceil(totalCount / limitNum);
+
+    res.json({
+      data: colleges.map(c => ({
+        id: c.id,
+        name: c.name,
+        shortName: c.shortName,
+        state: c.state,
+        rankingTier: c.rankingTier
+      })),
+      pagination: {
+        page: pageNum,
+        limit: limitNum,
+        totalCount,
+        totalPages,
+        hasNext: pageNum < totalPages,
+        hasPrev: pageNum > 1,
+      }
+    });
+
+  } catch (error) {
+    console.error("Error fetching exam colleges:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 module.exports = router;

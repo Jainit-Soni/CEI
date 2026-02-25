@@ -27,6 +27,11 @@ export async function fetchExam(id) {
   return data;
 }
 
+export async function fetchExamColleges(id, params = {}) {
+  const { data } = await api.get(`/api/exam/${id}/colleges`, { params });
+  return data;
+}
+
 export async function searchAll(params = {}) {
   const { data } = await api.get("/api/search", { params });
   return data;

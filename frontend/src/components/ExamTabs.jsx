@@ -1,22 +1,65 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import GlassPanel from './GlassPanel';
 import './ExamTabs.css';
 
-import { searchAll } from '@/lib/api';
+import { searchAll, fetchExamColleges } from '@/lib/api';
 
 export default function ExamTabs({ exam }) {
     const [activeTab, setActiveTab] = useState('overview');
+
+    // Colleges Tab State
     const [targetColleges, setTargetColleges] = useState(exam?.acceptedCollegesResolved || []);
     const [isLoadingColleges, setIsLoadingColleges] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [page, setPage] = useState(1);
+    const [hasMore, setHasMore] = useState(false);
+    const [totalColleges, setTotalColleges] = useState(exam?.acceptedCount || 0);
 
-    // Sync state if exam data updates (e.g. from async fetch in parent)
-    React.useEffect(() => {
-        if (exam?.acceptedCollegesResolved) {
-            setTargetColleges(exam.acceptedCollegesResolved);
+    // Debounce for search
+    const searchTimeout = useRef(null);
+
+    const loadColleges = useCallback(async (pageNum, query, append = false) => {
+        if (!exam?.id) return;
+        setIsLoadingColleges(true);
+        try {
+            const res = await fetchExamColleges(exam.id, { page: pageNum, limit: 18, q: query });
+            if (res && res.data) {
+                setTargetColleges(prev => append ? [...prev, ...res.data] : res.data);
+                setHasMore(res.pagination.hasNext);
+                setTotalColleges(res.pagination.totalCount);
+            }
+        } catch (error) {
+            console.error("Failed to load exam colleges:", error);
+        } finally {
+            setIsLoadingColleges(false);
         }
-    }, [exam?.acceptedCollegesResolved]);
+    }, [exam?.id]);
+
+    // Initial load when switching to colleges tab
+    useEffect(() => {
+        if (activeTab === 'colleges' && targetColleges.length <= 50 && page === 1 && !searchQuery) {
+            loadColleges(1, '', false);
+        }
+    }, [activeTab, loadColleges, targetColleges.length, page, searchQuery]);
+
+    const handleSearchChange = (e) => {
+        const val = e.target.value;
+        setSearchQuery(val);
+        setPage(1);
+
+        if (searchTimeout.current) clearTimeout(searchTimeout.current);
+        searchTimeout.current = setTimeout(() => {
+            loadColleges(1, val, false);
+        }, 500);
+    };
+
+    const handleLoadMore = () => {
+        const nextPage = page + 1;
+        setPage(nextPage);
+        loadColleges(nextPage, searchQuery, true);
+    };
 
     if (!exam) return null;
 
@@ -223,23 +266,48 @@ export default function ExamTabs({ exam }) {
                 {activeTab === 'colleges' && (
                     <div className="tab-pane fade-in">
                         <div className="mission-card">
-                            <h3 className="card-header">Target Institutes ({exam.acceptedCount} Accepting {exam.shortName})</h3>
-                            {isLoadingColleges ? (
-                                <div className="loading-colleges">Loading affiliated institutes...</div>
-                            ) : (
-                                <div className="colleges-grid-mini">
-                                    {targetColleges.length > 0 ? targetColleges.map((c, i) => {
-                                        const id = typeof c === 'object' ? c.id : c;
-                                        const name = typeof c === 'object' ? (c.shortName || c.name || c.id) : c;
+                            <div className="card-header-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem' }}>
+                                <h3 className="card-header" style={{ margin: 0 }}>Target Institutes ({totalColleges} Accepting {exam.shortName})</h3>
+                                <div className="exam-college-search" style={{ position: 'relative', minWidth: '250px' }}>
+                                    <input
+                                        type="text"
+                                        placeholder="Search specific colleges..."
+                                        value={searchQuery}
+                                        onChange={handleSearchChange}
+                                        className="retro-input"
+                                        style={{ width: '100%', padding: '0.6rem 1rem', borderRadius: '4px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff' }}
+                                    />
+                                </div>
+                            </div>
 
-                                        return (
-                                            <a href={`/college/${id}`} key={id || i} className="mini-college-card">
-                                                {name}
-                                            </a>
-                                        );
-                                    }) : (
-                                        <p className="no-data">No specific colleges found in database linking to this exam.</p>
-                                    )}
+                            <div className="colleges-grid-mini">
+                                {targetColleges.length > 0 ? targetColleges.map((c, i) => {
+                                    const id = typeof c === 'object' ? c.id : c;
+                                    const name = typeof c === 'object' ? (c.shortName || c.name || c.id) : c;
+
+                                    return (
+                                        <a href={`/college/${id}`} key={id || i} className="mini-college-card">
+                                            {name}
+                                        </a>
+                                    );
+                                }) : !isLoadingColleges ? (
+                                    <p className="no-data" style={{ gridColumn: '1 / -1' }}>No specific colleges found matching your criteria.</p>
+                                ) : null}
+                            </div>
+
+                            {isLoadingColleges && (
+                                <div className="loading-colleges mt-4" style={{ textAlign: 'center', opacity: 0.7, padding: '1rem' }}>Loading affiliated institutes...</div>
+                            )}
+
+                            {hasMore && !isLoadingColleges && (
+                                <div className="load-more-container mt-4" style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+                                    <button
+                                        className="btn-glass"
+                                        onClick={handleLoadMore}
+                                        style={{ padding: '0.6rem 1.5rem', cursor: 'pointer', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: '#fff', borderRadius: '4px' }}
+                                    >
+                                        Load More Institutes
+                                    </button>
                                 </div>
                             )}
                         </div>
