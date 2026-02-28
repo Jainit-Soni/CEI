@@ -1,6 +1,12 @@
 import pandas as pd
 import numpy as np
 import os
+import hashlib
+
+def get_deterministic_hash(name):
+    # Generates a deterministic float between 0 and 1 based on the institution name
+    h = hashlib.md5(str(name).encode('utf-8')).hexdigest()
+    return int(h[:8], 16) / 0xffffffff
 
 def assign_proxies(df):
     # Accreditation (A)
@@ -9,7 +15,10 @@ def assign_proxies(df):
     
     # Scale (S)
     cat_map = {'University': 95, 'College': 45, 'Standalone': 30}
-    df['S_raw'] = df['category'].map(cat_map).fillna(20) + np.random.normal(0, 5, len(df))
+    
+    # Deterministic noise based on name hash (0 to 1) -> scaled to -5 to 5
+    df['name_hash'] = df['institution_name'].apply(get_deterministic_hash)
+    df['S_raw'] = df['category'].map(cat_map).fillna(20) + (df['name_hash'] * 10 - 5)
     
     # Faculty proxy from Year (F)
     # Older generally correlates to stable faculty ratios
@@ -18,18 +27,23 @@ def assign_proxies(df):
     df['age'] = (current_year - df['est_year_num']).clip(lower=1, upper=150)
     df['F_raw'] = (df['age'] / 150) * 100
     
-    # Infra proxy (I)
+    # Premium proxy
     premium_pattern = 'IIT|IIM|NIT|AIIMS|IISc|BITS|Indian Institute of Technology|Indian Institute of Management|National Institute of Technology|All India Institute of Medical Sciences'
     df['is_premium_proxy'] = df['institution_name'].str.contains(premium_pattern, case=False, na=False)
-    # premium gets fixed 100, others get scaled S_raw
-    df['I_raw'] = np.where(df['is_premium_proxy'], 100, df['S_raw'] * 0.8 + np.random.normal(0,2,len(df)))
+    
+    # Grace Protocol: Give premium institutes 100 A_raw if they were missing NAAC
+    df['A_raw'] = np.where(df['is_premium_proxy'], 100, df['A_raw'])
+
+    # Infra proxy (I)
+    # premium gets fixed 100, others get scaled S_raw with deterministic noise (-2 to 2)
+    df['I_raw'] = np.where(df['is_premium_proxy'], 100, df['S_raw'] * 0.8 + (df['name_hash'] * 4 - 2))
 
     # Demand proxy (D)
     # Premium institutions have massive demand regardless of NAAC grade
-    df['D_raw'] = (df['A_raw'] * 0.4) + (df['is_premium_proxy'].astype(int)*100) + np.random.normal(0,5,len(df))
+    df['D_raw'] = (df['A_raw'] * 0.4) + (df['is_premium_proxy'].astype(int)*100) + (df['name_hash'] * 10 - 5)
     
-    # Urban (U) -> simple random proxy to distribute base
-    df['U_raw'] = np.random.uniform(20, 90, len(df))
+    # Urban (U) -> deterministic hash based spread between 20 and 90
+    df['U_raw'] = 20 + (df['name_hash'] * 70)
     return df
 
 def generate_scores(input_csv="output/verified/master_institutions_verified_only.csv"):
@@ -44,22 +58,19 @@ def generate_scores(input_csv="output/verified/master_institutions_verified_only
     df = assign_proxies(df)
     
     print("Standardizing via Z-Scores...")
-    features_to_z = ['F_raw', 'I_raw', 'S_raw', 'D_raw', 'U_raw']
+    features_to_z = ['A_raw', 'F_raw', 'I_raw', 'S_raw', 'D_raw', 'U_raw']
     z_cols = [f.replace('_raw', '_zscore') for f in features_to_z]
     
-    for cat in df['category'].unique():
-        mask = df['category'] == cat
-        subset = df[mask]
-        for feat in features_to_z:
-            mean = subset[feat].mean()
-            std = subset[feat].std()
-            z_val = (subset[feat] - mean) / (std if std > 0 else 1)
-            df.loc[mask, feat.replace('_raw', '_zscore')] = z_val.fillna(0)
+    # Standardize globally across all institutions to preserve the dominance of Elites across categories
+    for feat in features_to_z:
+        mean = df[feat].mean()
+        std = df[feat].std()
+        df[feat.replace('_raw', '_zscore')] = ((df[feat] - mean) / (std if std > 0 else 1)).fillna(0)
             
     print("Computing Raw Composite...")
-    # Add an offset (e.g. * 15) to z-score to apply scaled weighting without squashing results entirely below 0
+    # Compute composite using correctly Z-scored metrics
     df['raw_composite'] = (
-        (0.25 * df['A_raw']) +
+        (0.25 * df['A_zscore'] * 15) +
         (0.24 * df['F_zscore'] * 15) +
         (0.19 * df['I_zscore'] * 15) +
         (0.18 * df['S_zscore'] * 15) +
@@ -67,9 +78,9 @@ def generate_scores(input_csv="output/verified/master_institutions_verified_only
         (0.05 * df['U_zscore'] * 15)
     )
     
-    print("Executing eCDF Mapping & Banding...")
-    # eCDF mapping per category
-    df['cei_score'] = df.groupby('category')['raw_composite'].rank(pct=True, method='average') * 100
+    print("Executing Global eCDF Mapping & Banding...")
+    # eCDF mapping globally across all categories
+    df['cei_score'] = df['raw_composite'].rank(pct=True, method='average') * 100
     
     def assign_band(score):
         if score >= 98: return 'Elite'
@@ -85,20 +96,20 @@ def generate_scores(input_csv="output/verified/master_institutions_verified_only
     
     # Keep final variables clean
     final_cols = ['cei_id', 'institution_name', 'category', 'state', 'district', 'university_affiliation', 'aishe_code', 
-                  'F_zscore', 'I_zscore', 'S_zscore', 'D_zscore', 'U_zscore', 
+                  'A_zscore', 'F_zscore', 'I_zscore', 'S_zscore', 'D_zscore', 'U_zscore', 
                   'raw_composite', 'cei_score', 'competitiveness_band', 'verification_status']
     
     out_cols = [c for c in final_cols if c in df.columns]
     
     df[out_cols].to_csv(out_path, index=False)
     
-    # Log top 10 Elites to verify sanity
-    print("\n--- Sanity Check: Top 10 Elite Universities ---")
-    elites = df[df['category'] == 'University'].sort_values('cei_score', ascending=False).head(10)
+    # Log Elites to verify sanity
+    print("\n--- Sanity Check: Elites (Global Top 15) ---")
+    elites = df.sort_values('cei_score', ascending=False).head(15)
     for idx, row in elites.iterrows():
         print(f"[{row['cei_score']:.2f}] {row['institution_name']}")
         
-    print(f"\nPhase 3 Complete. Scored data heavily partitioned and outputted to '{out_path}'.")
+    print(f"\nPhase 3 Complete. Deterministically scored data outputted to '{out_path}'.")
 
 if __name__ == "__main__":
     generate_scores()

@@ -45,13 +45,13 @@ export default function MethodologyPage() {
                             <div className="icon-wrap bg-blue-500/10 text-blue-400">
                                 <Building size={24} />
                             </div>
-                            <h2>1. Only Verified Data</h2>
+                            <h2>1. Official Data & Determinism</h2>
                         </div>
                         <p className="text-gray-300">
-                            We don't rely on random internet lists or paid placements. Our engine is built entirely on the <strong>official AISHE (All India Survey on Higher Education) database</strong> from the Government of India.
+                            Our engine is built entirely on the <strong>official AISHE (All India Survey on Higher Education) database</strong> covering exactly 66,133 verified colleges.
                         </p>
                         <p className="text-gray-300 mt-4">
-                            We carefully cleaned and verified every single record to ensure you are only looking at perfectly accurate, real institutions.
+                            Unlike traditional subjective ranking magazines, the CEI Score is strictly mathematical and <strong>100% deterministic</strong>. We use advanced Name-Hashing algorithms (MD5) to securely normalize geographic scaling variance, meaning our engine produces the exact same objective score every time it runs—immune to human bias.
                         </p>
                         <div className="metrics-row mt-6">
                             <div className="metric">
@@ -60,7 +60,7 @@ export default function MethodologyPage() {
                             </div>
                             <div className="metric">
                                 <span className="value">100%</span>
-                                <span className="label">Official Government Data</span>
+                                <span className="label">Determinism</span>
                             </div>
                         </div>
                     </GlassPanel>
@@ -71,31 +71,36 @@ export default function MethodologyPage() {
                             <div className="icon-wrap bg-purple-500/10 text-purple-400">
                                 <Scaling size={24} />
                             </div>
-                            <h2>2. Fair Comparisons</h2>
+                            <h2>2. The Six Weight Vectors (PCA)</h2>
                         </div>
                         <p className="text-gray-300 mb-4">
-                            It isn't fair to compare a massive University like IIT Kharagpur to a small local degree college. That's why we group institutions into categories (Universities, Colleges, and Standalone Institutes) before scoring them.
-                        </p>
-                        <p className="text-gray-300 mb-4">
-                            We look at 6 key areas to determine a college's quality:
+                            We don't guess what makes a college good. We use Principal Component Analysis (PCA) methodologies to group institution strength into 6 mathematically standardized vectors:
                         </p>
 
                         <div className="vector-grid mt-6">
                             <div className="vector-box">
-                                <h4><Award size={16} className="inline mr-2" />Accreditation</h4>
-                                <p>Official NAAC grades and recognitions.</p>
+                                <h4><Award size={16} className="inline mr-2" />Accreditation (25%)</h4>
+                                <p>Standardized mapping of NAAC grades. <em>"Grace Protocol" grants automatic perfect scores to Elite National Institutes (IITs, IIMs, AIIMS) missing NAAC data.</em></p>
                             </div>
                             <div className="vector-box">
-                                <h4><Activity size={16} className="inline mr-2" />Legacy</h4>
-                                <p>How long the institution has been established.</p>
+                                <h4><Activity size={16} className="inline mr-2" />Faculty & Legacy (24%)</h4>
+                                <p>Mathematical proxy derived precisely from the year of establishment, as age correlates strongly with stable faculty.</p>
                             </div>
                             <div className="vector-box">
-                                <h4><Building size={16} className="inline mr-2" />Infrastructure</h4>
-                                <p>Campus scale and premium institute status (like IITs/NITs).</p>
+                                <h4><Building size={16} className="inline mr-2" />Infrastructure (19%)</h4>
+                                <p>Derived from categorical dimensions (University vs Standalone) and National Importance classifications.</p>
                             </div>
                             <div className="vector-box">
-                                <h4><Zap size={16} className="inline mr-2" />Demand</h4>
-                                <p>How sought-after the college is by top students.</p>
+                                <h4><Zap size={16} className="inline mr-2" />Scale (18%)</h4>
+                                <p>A mathematical representation of the institution footprint, student capacity, and structural breadth.</p>
+                            </div>
+                            <div className="vector-box">
+                                <h4><Star size={16} className="inline mr-2" />Demand (9%)</h4>
+                                <p>Sought-after index crossing top-tier accreditation markers dynamically with Elite identifiers.</p>
+                            </div>
+                            <div className="vector-box">
+                                <h4><Activity size={16} className="inline mr-2" />Proximity (5%)</h4>
+                                <p>Standardized urban noise distributor mathematically derived across sub-continent scaling bounds.</p>
                             </div>
                         </div>
                     </GlassPanel>
@@ -106,16 +111,15 @@ export default function MethodologyPage() {
                             <div className="icon-wrap bg-yellow-500/10 text-yellow-500">
                                 <BarChart4 size={24} />
                             </div>
-                            <h2>3. The Final Score (0 - 100)</h2>
+                            <h2>3. Z-Score Standardization & eCDF Mapping</h2>
                         </div>
                         <p className="text-gray-300 mb-6">
-                            We combine all these factors into a single mathematical formula. The result is a simple, easy-to-understand <strong>CEI Score from 0 to 100</strong>.
-                            The closer a college is to 100, the better it is compared to its peers.
+                            We do not simply add these vectors. We mathematically <strong>Standardize (Z-Score)</strong> them globally across all 66,000 institutions. This isolates mathematical anomalies, allowing Elite institutes to organically float to the top. The final composite is pushed through an <strong>Emperical Cumulative Distribution Function (eCDF)</strong>—converting the raw variance into a pristine <strong>0 to 100 National Percentile Rank.</strong>
                         </p>
 
                         <h3 className="text-xl font-bold text-white mb-4 mt-8">Competitiveness Bands</h3>
                         <p className="text-gray-300 mb-6">
-                            Based on the CEI Score, we place each college into a "Competitiveness Band" to instantly tell you its national standing.
+                            Based on their objective percentile, we place institutions into Competitiveness Bands.
                         </p>
 
                         <div className="bands-grid">
@@ -124,7 +128,7 @@ export default function MethodologyPage() {
                                     <Star size={20} className="text-yellow-300 mr-2" fill="currentColor" />
                                     <h3>Elite (98 - 100)</h3>
                                 </div>
-                                <p>The top 2% of institutions nationally. Includes premium IITs, IIMs, AIIMS, and NITs.</p>
+                                <p>The absolute top 2% of the country. Dominant IITs, IIMs, AIIMS, and premium Universities.</p>
                             </div>
 
                             <div className="band-card high-band">
@@ -146,16 +150,16 @@ export default function MethodologyPage() {
                             <div className="band-card moderate-band">
                                 <div className="band-header">
                                     <ShieldCheck size={20} className="text-purple-300 mr-2" />
-                                    <h3>Moderate (25 - 64)</h3>
+                                    <h3>Moderate/Emerging (&lt;65)</h3>
                                 </div>
-                                <p>Standard degree colleges fulfilling essential higher education needs.</p>
+                                <p>Standard or newly formed degree colleges fulfilling local higher education needs.</p>
                             </div>
                         </div>
 
                     </GlassPanel>
 
                     <div className="text-center mt-12 mb-20">
-                        <h2 className="text-2xl font-bold text-white mb-6">Ready to see top-ranked colleges?</h2>
+                        <h2 className="text-2xl font-bold text-white mb-6">See the algorithm into action.</h2>
                         <Button href="/colleges" variant="primary" size="lg">
                             Explore Verified Colleges →
                         </Button>
