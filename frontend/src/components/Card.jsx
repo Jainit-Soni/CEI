@@ -37,7 +37,30 @@ export default function Card({ title, subtitle, tags = [], meta = [], type = "de
       <div className="card-top">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
           <h3>{title}</h3>
-          {trust && <TrustBadge {...trust} />}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px' }}>
+            {data?.ceiScore > 0 && (
+              <div
+                title={`${data.competitivenessBand || 'Evaluated'} Tier: ${data.ceiScore.toFixed(1)}`}
+                style={{
+                  background: 'linear-gradient(135deg, #111827, #374151)',
+                  color: '#fbbf24',
+                  fontWeight: '700',
+                  padding: '4px 10px',
+                  borderRadius: '12px',
+                  fontSize: '0.75rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.15)',
+                  border: '1px solid #4b5563'
+                }}
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                {Math.round(data.ceiScore)} CEI Score
+              </div>
+            )}
+            {trust && <TrustBadge {...trust} />}
+          </div>
         </div>
         {subtitle && <p>{subtitle}</p>}
       </div>

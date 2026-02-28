@@ -18,7 +18,8 @@ const placementSchema = new mongoose.Schema({
     averagePackage: String,
     medianPackage: String,
     highestPackage: String,
-    placementRate: String
+    placementRate: String,
+    highestPackageNumeric: Number
 }, { _id: false });
 
 const metaSchema = new mongoose.Schema({
@@ -74,6 +75,33 @@ const collegeSchema = new mongoose.Schema({
     isPremium: {
         type: Boolean,
         default: false // True for our 1789 hand-curated colleges, false for raw AISHE shells
+    },
+    // CEI Intelligence Properties
+    ceiScore: {
+        type: Number,
+        min: 0,
+        max: 100,
+        index: true
+    },
+    competitivenessBand: {
+        type: String,
+        enum: ['Elite', 'High', 'Competitive', 'Moderate', 'Emerging'],
+        index: true
+    },
+    canonicalId: {
+        type: String,
+        index: true,
+        unique: true,
+        sparse: true
+    },
+    verificationStatus: {
+        type: String,
+        enum: ['VERIFIED', 'UNVERIFIED', 'UNVERIFIED_NO_STUDENTS', 'UNVERIFIED_NOT_IN_SOURCE', 'UNVERIFIED_MISSING_META'],
+        default: 'UNVERIFIED',
+        index: true
+    },
+    lastScoreUpdate: {
+        type: Date
     }
 }, {
     timestamps: true

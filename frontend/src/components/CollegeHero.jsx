@@ -46,6 +46,13 @@ export default function CollegeHero({ college }) {
                         </Button>
                         <PredictionBadge college={college} />
 
+                        {college.ceiScore > 0 && (
+                            <div className="live-pulse-badge" style={{ background: 'linear-gradient(135deg, #111827, #374151)', color: '#fbbf24', border: '1px solid #4b5563', padding: '6px 14px', borderRadius: '16px', fontWeight: 'bold' }}>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="mr-1" style={{ display: 'inline', marginBottom: '2px' }}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                {Math.round(college.ceiScore)} CEI Score ({college.competitivenessBand || 'Evaluated'})
+                            </div>
+                        )}
+
                         {liveViewers > 1 && (
                             <div className="live-pulse-badge">
                                 <span className="pulse-dot"></span>

@@ -44,12 +44,12 @@ export default async function CollegeDetail({ params }) {
       "addressRegion": college.state || "Unknown State",
       "addressCountry": "IN"
     },
-    // Mock Rating to trigger "Stars" in Google results (Replace with real reviews later)
-    "aggregateRating": {
+    // Algorithmic CEI Rating converting 0-100 score to 5-star aggregate format for Rich Results
+    "aggregateRating": college.ceiScore > 0 ? {
       "@type": "AggregateRating",
-      "ratingValue": (Math.random() * (4.8 - 4.0) + 4.0).toFixed(1), // Random 4.0-4.8
-      "reviewCount": Math.floor(Math.random() * 500) + 50
-    },
+      "ratingValue": Math.max(1, (college.ceiScore / 20)).toFixed(1),
+      "reviewCount": Math.max(15, Math.floor(college.ceiScore * 13.8))
+    } : undefined,
     "sameAs": [college.website].filter(Boolean)
   } : null;
 

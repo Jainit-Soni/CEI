@@ -26,6 +26,10 @@ const buildCollegeQuery = (reqQuery) => {
     query.rankingTier = tier;
   }
 
+  if (reqQuery.band && reqQuery.band !== 'All') {
+    query.competitivenessBand = reqQuery.band;
+  }
+
   if (course && course !== 'All') {
     const normalizedCourse = course.toLowerCase().trim();
     const categoryMap = {
@@ -111,9 +115,14 @@ const buildSortQuery = (reqQuery) => {
       break;
     // Placement is tricky in Mongo since it's unstructured text ("20-30 LPA").
     // As a workaround, we'll sort by Premium first, then name.
+    // Placement uses the newly calculated highestPackageNumeric to mathematically sort
     case 'placement':
+      sort['placements.highestPackageNumeric'] = -1; // Descending packages (CPA/LPA normalized to LPA)
+      sort.ceiScore = -1; // Fallback to intelligence score
+      sort.name = 1;
+      break;
     case 'popularity':
-      sort.isPremium = -1; // Premium colleges first
+      sort.ceiScore = -1; // Premium/verified highest
       sort.name = 1;
       break;
     case 'exams':
@@ -220,6 +229,32 @@ router.get("/colleges/batch", async (req, res) => {
   }
 });
 
+// High-speed endpoint exclusively for Next.js Sitemap Generation
+router.get("/sitemap-batch", async (req, res) => {
+  const { page = 0, limit = 10000 } = req.query;
+  const skip = parseInt(page) * parseInt(limit);
+
+  try {
+    const key = `mongo:sitemap:${page}:${limit}`;
+    const cached = await cache.get(key);
+    if (cached) return res.json(cached);
+
+    // Only select the bare minimum data needed for sitemaps
+    const colleges = await College.find({})
+      .select('id updatedAt')
+      .sort({ _id: 1 }) // Deterministic sort
+      .skip(skip)
+      .limit(parseInt(limit))
+      .lean();
+
+    await cache.set(key, colleges, 86400); // 24 hour cache
+    res.json(colleges);
+  } catch (error) {
+    console.error("Error in sitemap-batch:", error);
+    res.status(500).json({ error: "Failed to fetch sitemap batch" });
+  }
+});
+
 // Dynamic Filters
 router.get("/filters", async (req, res) => {
   try {
@@ -240,7 +275,8 @@ router.get("/filters", async (req, res) => {
       states: states.filter(Boolean).sort(),
       districts: [...new Set([...metaDistricts, ...topDistricts])].filter(Boolean).sort(),
       tiers: ["Tier 1", "Tier 2", "Tier 3", "University", "Stand Alone"],
-      courses: commonCourses
+      courses: commonCourses,
+      bands: ['Elite', 'High', 'Competitive', 'Moderate', 'Emerging']
     };
 
     await cache.set(key, result, 300);

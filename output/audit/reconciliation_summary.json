@@ -1,0 +1,27 @@
+{
+    "metrics": {
+        "total_raw_rows": 68186,
+        "final_verified_total": 66144,
+        "total_removed": 2042
+    },
+    "category_breakdown": {
+        "University": {
+            "official_target": 1113,
+            "actual_verified": "1159",
+            "variance": "46",
+            "variance_percent": "4.13"
+        },
+        "College": {
+            "official_target": 43796,
+            "actual_verified": "50669",
+            "variance": "6873",
+            "variance_percent": "15.69"
+        },
+        "Standalone": {
+            "official_target": 11296,
+            "actual_verified": "14316",
+            "variance": "3020",
+            "variance_percent": "26.74"
+        }
+    }
+}

@@ -57,7 +57,8 @@ function CollegesContent({ initialData }) {
     const [filterOptions, setFilterOptions] = useState({
         districts: ["All"],
         courses: ["All"],
-        tiers: ["All"]
+        tiers: ["All"],
+        bands: ["All"]
     });
     // If we have initial data, we aren't loading!
     const [isLoading, setIsLoading] = useState(!initialData?.data?.length);
@@ -69,6 +70,7 @@ function CollegesContent({ initialData }) {
         district: "All",
         course: "All",
         tier: "All",
+        band: "All",
     });
 
     const router = useRouter();
@@ -87,11 +89,12 @@ function CollegesContent({ initialData }) {
         const district = searchParams.get("district") || "All";
         const course = searchParams.get("course") || "All";
         const tier = searchParams.get("tier") || "All";
+        const band = searchParams.get("band") || "All";
         const sort = searchParams.get("sortBy") || "Highest Placement";
         const p = parseInt(searchParams.get("page")) || 1;
 
         setQuery(q);
-        setFilters({ state, district, course, tier });
+        setFilters({ state, district, course, tier, band });
         setSortBy(sort);
         setPage(p);
         setIsInitialized(true);
@@ -115,6 +118,7 @@ function CollegesContent({ initialData }) {
         if (filters.district !== "All") params.set("district", filters.district);
         if (filters.course !== "All") params.set("course", filters.course);
         if (filters.tier !== "All") params.set("tier", filters.tier);
+        if (filters.band !== "All") params.set("band", filters.band);
         if (sortBy !== "Highest Placement") params.set("sortBy", sortBy);
         if (page > 1) params.set("page", page.toString());
 
@@ -131,6 +135,7 @@ function CollegesContent({ initialData }) {
                     if (filters.district !== "All") params.district = filters.district;
                     if (filters.course !== "All") params.course = filters.course;
                     if (filters.tier !== "All") params.tier = filters.tier;
+                    if (filters.band !== "All") params.band = filters.band;
                     if (query) params.q = query;
 
                     const data = await fetchFilters(params);
@@ -138,7 +143,8 @@ function CollegesContent({ initialData }) {
                         states: ["All", ...(data?.states || [])],
                         districts: ["All", ...(data?.districts || [])],
                         courses: ["All", ...(data?.courses || [])],
-                        tiers: ["All", ...(data?.tiers || [])]
+                        tiers: ["All", ...(data?.tiers || [])],
+                        bands: ["All", ...(data?.bands || [])]
                     });
                 } catch (err) {
                     console.error("Failed to load filters", err);
@@ -148,7 +154,7 @@ function CollegesContent({ initialData }) {
         }, 400); // 400ms debounce
 
         return () => clearTimeout(timer);
-    }, [filters.state, filters.district, filters.course, filters.tier, query]);
+    }, [filters.state, filters.district, filters.course, filters.tier, filters.band, query]);
 
     useEffect(() => {
         const load = async () => {
@@ -183,6 +189,7 @@ function CollegesContent({ initialData }) {
                 if (filters.district !== "All") params.district = filters.district;
                 if (filters.course !== "All") params.course = filters.course;
                 if (filters.tier !== "All") params.tier = filters.tier;
+                if (filters.band !== "All") params.band = filters.band;
 
                 const response = await fetchColleges(params);
 
@@ -219,7 +226,7 @@ function CollegesContent({ initialData }) {
             }
         };
         load();
-    }, [page, query, sortBy, filters.state, filters.district, filters.course, filters.tier, stateFilter, isInitialized]);
+    }, [page, query, sortBy, filters.state, filters.district, filters.course, filters.tier, filters.band, stateFilter, isInitialized]);
 
     // Map stats removed as per user request
 
@@ -259,7 +266,7 @@ function CollegesContent({ initialData }) {
     const clearFilters = useCallback(() => {
         setQuery("");
         setSortBy("Most Popular");
-        setFilters({ state: "All", district: "All", course: "All", tier: "All" });
+        setFilters({ state: "All", district: "All", course: "All", tier: "All", band: "All" });
         setPage(1);
         setIsMobileFiltersOpen(false); // Close mobile panel
         router.push("/colleges");
@@ -271,7 +278,8 @@ function CollegesContent({ initialData }) {
         filters.state !== "All" ||
         filters.district !== "All" ||
         filters.course !== "All" ||
-        filters.tier !== "All";
+        filters.tier !== "All" ||
+        filters.band !== "All";
 
     const renderContent = () => {
         if (isLoading) {
@@ -333,7 +341,7 @@ function CollegesContent({ initialData }) {
                         <button
                             className="filter-btn-reset"
                             onClick={() => {
-                                setFilters({ state: 'All', district: 'All', course: 'All', tier: 'All' });
+                                setFilters({ state: 'All', district: 'All', course: 'All', tier: 'All', band: 'All' });
                                 setQuery(""); // Assuming 'q' is for query
                                 setIsMobileFiltersOpen(false);
                             }}
@@ -447,7 +455,7 @@ function CollegesContent({ initialData }) {
                             <div className="list-stats">
                                 <div className="list-stat">
                                     <span className="list-stat-value mono">
-                                        {pagination?.totalCount || displayColleges.length || "--"}
+                                        {pagination?.totalCount ? pagination.totalCount.toLocaleString() : (displayColleges.length ? displayColleges.length.toLocaleString() : "--")}
                                     </span>
                                     <span className="list-stat-label">
                                         Colleges
@@ -523,6 +531,12 @@ function CollegesContent({ initialData }) {
                                 value={filters.tier}
                                 options={filterOptions.tiers}
                                 onChange={(val) => handleFilterChange("tier", val)}
+                            />
+                            <FancySelect
+                                label="CEI Band"
+                                value={filters.band}
+                                options={filterOptions.bands}
+                                onChange={(val) => handleFilterChange("band", val)}
                             />
                         </div>
 

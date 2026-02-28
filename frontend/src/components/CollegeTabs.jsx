@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import ReviewList from "./ReviewList";
 import Button from "./Button";
 import ReviewModal from "./ReviewModal";
-
+import IntelligenceRadar from "./IntelligenceRadar";
 import PremiumReviews from "./PremiumReviews"; // New Premium Reviews
 import "./CollegeTabs.css";
 
@@ -59,6 +59,7 @@ export default function CollegeTabs({ college }) {
         { id: "overview", label: "Overview", icon: "🏢" },
         { id: "cutoffs", label: "Cutoffs", icon: "📊" },
         { id: "placements", label: "Placements", icon: "💼" },
+        { id: "intelligence", label: "CEI Intelligence", icon: "🧠" },
         { id: "roi", label: "ROI Analysis", icon: "💰" },
         { id: "reviews", label: "Reviews", icon: "⭐" }
     ];
@@ -220,6 +221,21 @@ export default function CollegeTabs({ college }) {
                                 Placement reports are yet to be officially verified for this institute.
                             </div>
                         )}
+                    </div>
+                )}
+
+                {activeTab === "intelligence" && (
+                    <div className="tab-pane fade-in">
+                        <div className="premium-tab-card">
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                                <h3 className="tab-heading" style={{ margin: 0 }}>CEI Intelligence Vectors</h3>
+                                <Button href="/methodology" variant="ghost" size="sm">View Methodology →</Button>
+                            </div>
+                            <p className="overview-text mb-6">
+                                The College Exam Intelligence engine algorithmically grades institutions across 6 discrete mathematical vectors. This visualization illustrates the relative strength of {college.shortName || college.name}'s infrastructure, demand, and quality against its strictly normalized peer strata.
+                            </p>
+                            <IntelligenceRadar college={college} />
+                        </div>
                     </div>
                 )}
 

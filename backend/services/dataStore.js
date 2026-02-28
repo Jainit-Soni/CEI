@@ -392,7 +392,8 @@ function loadAdminUpdates() {
   if (!fs.existsSync(p)) return { added: [], deleted: [] };
   try {
     const raw = fs.readFileSync(p, "utf8");
-    return JSON.parse(raw);
+    const cleaned = raw.replace(/^\uFEFF/, "");
+    return JSON.parse(cleaned);
   } catch (err) {
     console.warn("Failed to read admin updates:", err);
     return { added: [], deleted: [] };
