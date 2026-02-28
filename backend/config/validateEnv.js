@@ -24,8 +24,7 @@ function validateEnv() {
     }
 
     if (process.env.NODE_ENV === 'production' && !process.env.ADMIN_SECRET) {
-        console.error('❌ FATAL: ADMIN_SECRET must be set in production!');
-        process.exit(1);
+        console.warn('⚠️  WARNING: ADMIN_SECRET is not set. Admin routes will be disabled.');
     }
 }
 
