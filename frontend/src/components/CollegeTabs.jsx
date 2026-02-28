@@ -12,6 +12,7 @@ import PremiumReviews from "./PremiumReviews";
 import ExplainabilityCard from "./ExplainabilityCard";
 import DataConfidenceBadge from "./DataConfidenceBadge";
 import DataSourcesPanel from "./DataSourcesPanel";
+import ImprovementSimulator from "./ImprovementSimulator";
 import "./CollegeTabs.css";
 
 const ROICalculator = dynamic(() => import("./ROICalculator"), {

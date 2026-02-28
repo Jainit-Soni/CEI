@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+.dev-page {
+    min-height: 100vh;
+    background: #020817;
+    color: #e2e8f0;
+    padding: 0 0 80px;
+}
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.dev-hero {
+    text-align: center;
+    padding: 80px 24px 60px;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dev-hero-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #818cf8;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.dev-hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin: 0 0 16px;
+    background: linear-gradient(135deg, #e2e8f0 30%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.dev-hero-sub {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 28px;
+    line-height: 1.7;
+}
+
+.dev-hero-sub code {
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    padding: 1px 6px;
+    border-radius: 4px;
+    color: #a5b4fc;
+    font-size: 0.9em;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.dev-hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.dev-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* ── Sections ─────────────────────────────────────────────── */
+.dev-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 0;
+}
+
+.dev-section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dev-caption {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin: 10px 0 0;
+    line-height: 1.6;
+}
+
+.dev-caption code {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 1px 5px;
+    border-radius: 4px;
+    color: #a5b4fc;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Code blocks ──────────────────────────────────────────── */
+.dev-code-block {
+    background: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 18px 20px;
+    overflow-x: auto;
+}
+
+.dev-code-block code,
+.dev-code-block pre {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.83rem;
+    color: #e2e8f0;
+    line-height: 1.7;
+    margin: 0;
+    white-space: pre;
+}
+
+/* ── Endpoints ────────────────────────────────────────────── */
+.dev-endpoints {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dev-endpoint-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 16px 18px;
+    transition: background 0.15s;
+}
+
+.dev-endpoint-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.dev-ep-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.dev-method {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.dev-path {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.84rem;
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.dev-ep-desc {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin: 0 0 8px;
+}
+
+.dev-ep-example {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.dev-ex-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #475569;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.dev-ex-link {
+    font-size: 0.78rem;
+    color: #60a5fa;
+    font-family: 'JetBrains Mono', monospace;
+    word-break: break-all;
+}
+
+.dev-ex-link:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+/* ── Table ────────────────────────────────────────────────── */
+.dev-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.dev-table th,
+.dev-table td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dev-table th {
+    color: #475569;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dev-table td {
+    color: #cbd5e1;
+}
+
+/* ── Footer note ─────────────────────────────────────────── */
+.dev-footer-note p {
+    font-size: 0.85rem;
+    color: #475569;
+    text-align: center;
+    line-height: 1.7;
+    font-style: italic;
+}

@@ -27,15 +27,21 @@ const transparencyRoutes = require("./routes/transparency");
 const governanceRoutes = require("./routes/governance");
 const explainRoutes = require("./routes/explain");
 const verificationRoutes = require("./routes/verification");
+const adminAuthRoutes = require("./routes/adminAuth");
 const connectDB = require("./config/db");
 const { getRedisClient } = require("./config/redis");
 const logger = require("./lib/logger");
+const scheduler = require("./lib/scheduler");
 
 const app = express();
 
 // Connect to MongoDB
 if (process.env.NODE_ENV !== 'test') {
   connectDB();
+  // Start scheduler (non-Vercel environments only — Vercel uses cron.json)
+  if (!process.env.VERCEL) {
+    scheduler.start();
+  }
 }
 
 // ==========================================
@@ -164,6 +170,10 @@ app.use("/api/transparency", transparencyRoutes);
 app.use("/api/governance", governanceRoutes);
 app.use("/api/explain", explainRoutes);
 app.use("/api/verification", verificationRoutes);
+app.use("/api/admin-auth", adminAuthRoutes);
+app.use("/api/forecast", require("./routes/forecast"));
+app.use("/api/simulator", require("./routes/simulator"));
+app.use("/api/v1", require("./routes/publicApi"));
 app.use("/api", userRoutes);
 
 // ==========================================
