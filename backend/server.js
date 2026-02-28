@@ -26,6 +26,7 @@ const authRoutes = require("./routes/auth");
 const transparencyRoutes = require("./routes/transparency");
 const governanceRoutes = require("./routes/governance");
 const explainRoutes = require("./routes/explain");
+const verificationRoutes = require("./routes/verification");
 const connectDB = require("./config/db");
 const { getRedisClient } = require("./config/redis");
 const logger = require("./lib/logger");
@@ -162,6 +163,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/transparency", transparencyRoutes);
 app.use("/api/governance", governanceRoutes);
 app.use("/api/explain", explainRoutes);
+app.use("/api/verification", verificationRoutes);
 app.use("/api", userRoutes);
 
 // ==========================================

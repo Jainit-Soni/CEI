@@ -1,0 +1,117 @@
+.dcb-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dcb-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: default;
+    user-select: none;
+    transition: filter 0.15s ease;
+    border: 1px solid transparent;
+}
+
+.dcb-badge:hover {
+    filter: brightness(1.1);
+}
+
+.dcb-emoji {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.dcb-text {
+    color: inherit;
+}
+
+.dcb-score {
+    padding: 1px 6px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-family: var(--font-mono, monospace);
+}
+
+/* ── Color variants ── */
+.dcb-high {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border-color: rgba(16, 185, 129, 0.25);
+}
+
+.dcb-moderate {
+    background: rgba(251, 191, 36, 0.12);
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.25);
+}
+
+.dcb-low {
+    background: rgba(239, 68, 68, 0.12);
+    color: #f87171;
+    border-color: rgba(239, 68, 68, 0.25);
+}
+
+/* ── Compact mode ── */
+.dcb-compact .dcb-badge {
+    padding: 2px 8px;
+    font-size: 0.72rem;
+}
+
+/* ── Tooltip ── */
+.dcb-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 260px;
+    padding: 14px 16px;
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    color: #e2e8f0;
+    pointer-events: none;
+}
+
+.dcb-tooltip strong {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: #f8fafc;
+}
+
+.dcb-tooltip p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #94a3b8;
+    margin: 0 0 10px 0;
+}
+
+.dcb-tooltip-link {
+    font-size: 0.75rem;
+    color: #60a5fa;
+    text-decoration: underline;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.dcb-tooltip-link:hover {
+    color: #93c5fd;
+}
+
+@media (max-width: 480px) {
+    .dcb-tooltip {
+        left: 0;
+        transform: none;
+    }
+}

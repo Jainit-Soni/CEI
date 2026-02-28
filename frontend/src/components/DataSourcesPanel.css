@@ -1,0 +1,226 @@
+.dsp-root {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ── Trigger Button ─────────────────────────────────────────────── */
+.dsp-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.dsp-trigger:hover,
+.dsp-trigger.open {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #e2e8f0;
+}
+
+.dsp-chevron {
+    margin-left: auto;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+}
+
+.dsp-chevron.rotate {
+    transform: rotate(180deg);
+}
+
+/* ── Panel ──────────────────────────────────────────────────────── */
+.dsp-panel {
+    margin-top: 8px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+    animation: dspSlideIn 0.2s ease;
+}
+
+@keyframes dspSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.dsp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 12px;
+}
+
+.dsp-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dsp-institution {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.dsp-last-check {
+    font-size: 0.72rem;
+    color: #64748b;
+}
+
+/* ── Warnings ───────────────────────────────────────────────────── */
+.dsp-warning {
+    margin: 10px 16px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.dsp-warning.anomaly {
+    background: rgba(251, 191, 36, 0.08);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+}
+
+.dsp-warning.mismatch {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+/* ── Table ──────────────────────────────────────────────────────── */
+.dsp-table-wrap {
+    overflow-x: auto;
+    padding: 0 4px;
+}
+
+.dsp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+.dsp-table thead th {
+    padding: 10px 16px;
+    text-align: left;
+    color: #475569;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    white-space: nowrap;
+}
+
+.dsp-table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background 0.15s;
+}
+
+.dsp-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.dsp-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.dsp-table td {
+    padding: 10px 16px;
+    color: #cbd5e1;
+    vertical-align: middle;
+}
+
+.dsp-field-name {
+    font-weight: 600;
+    color: #e2e8f0;
+    white-space: nowrap;
+}
+
+.dsp-date {
+    font-size: 0.74rem;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.dsp-na {
+    color: #475569;
+    font-style: italic;
+}
+
+/* Row shade for unverified fields */
+.dsp-row.unverified {
+    opacity: 0.75;
+}
+
+/* ── Status Pill ─────────────────────────────────────────────────── */
+.dsp-status-pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+/* ── Loading / Error ─────────────────────────────────────────────── */
+.dsp-loading {
+    padding: 20px;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.dsp-error {
+    padding: 16px 20px;
+    color: #f87171;
+    font-size: 0.85rem;
+}
+
+/* ── Footer ─────────────────────────────────────────────────────── */
+.dsp-footer {
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.dsp-footer-link {
+    font-size: 0.78rem;
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.dsp-footer-link:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .dsp-table thead th:not(:first-child):not(:nth-child(3)) {
+        display: none;
+    }
+
+    .dsp-table td:not(:first-child):not(:nth-child(3)) {
+        display: none;
+    }
+}

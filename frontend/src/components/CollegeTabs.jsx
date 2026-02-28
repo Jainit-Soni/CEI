@@ -8,8 +8,10 @@ import ReviewList from "./ReviewList";
 import Button from "./Button";
 import ReviewModal from "./ReviewModal";
 import IntelligenceRadar from "./IntelligenceRadar";
-import PremiumReviews from "./PremiumReviews"; // New Premium Reviews
+import PremiumReviews from "./PremiumReviews";
 import ExplainabilityCard from "./ExplainabilityCard";
+import DataConfidenceBadge from "./DataConfidenceBadge";
+import DataSourcesPanel from "./DataSourcesPanel";
 import "./CollegeTabs.css";
 
 const ROICalculator = dynamic(() => import("./ROICalculator"), {
@@ -107,7 +109,15 @@ export default function CollegeTabs({ college }) {
                 {activeTab === "overview" && (
                     <div className="tab-pane fade-in">
                         <div className="premium-tab-card">
-                            <h3 className="tab-heading">About {college.shortName || "Institute"}</h3>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '10px', marginBottom: '12px' }}>
+                                <h3 className="tab-heading" style={{ margin: 0 }}>About {college.shortName || "Institute"}</h3>
+                                {college.dataConfidenceLabel && (
+                                    <DataConfidenceBadge
+                                        label={college.dataConfidenceLabel}
+                                        score={college.dataIntegrityScore}
+                                    />
+                                )}
+                            </div>
                             <p className="overview-text">
                                 {college.overview || `${college.name} is a premier institute located in ${college.location}. It offers a wide range of programs and has a strong reputation for academic excellence.`}
                             </p>
@@ -234,6 +244,7 @@ export default function CollegeTabs({ college }) {
                                 <Button href="/methodology" variant="ghost" size="sm">Methodology →</Button>
                             </div>
                             <ExplainabilityCard college={college} />
+                            <DataSourcesPanel collegeId={college.id} />
                         </div>
 
                         {/* Intelligence Radar — vector visualization */}
