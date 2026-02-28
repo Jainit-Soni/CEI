@@ -258,6 +258,10 @@ export default function CollegeTabs({ college }) {
                                 <IntelligenceRadar college={college} />
                             </div>
                         </div>
+
+                        {/* Phase XIII: Improvement Simulator — sandbox hypothetical */}
+                        <ImprovementSimulator college={college} />
+
                     </div>
                 )}
 
