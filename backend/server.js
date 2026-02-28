@@ -1,7 +1,7 @@
 require('dotenv').config({ path: require('path').resolve(__dirname, '.env.local') });
 
 const validateEnv = require('./config/validateEnv');
-validateEnv(); // Validate env vars before anything else
+validateEnv();
 
 const express = require("express");
 const cors = require("cors");
@@ -9,6 +9,8 @@ const compression = require("compression");
 const helmet = require("helmet");
 const { rateLimit } = require("express-rate-limit");
 const apiKeyAuth = require("./middleware/apiKeys");
+const requestLogger = require("./middleware/requestLogger");
+const { honeypotMiddleware, honeypotBlockCheck } = require("./middleware/honeypot");
 const collegesRoutes = require("./routes/colleges");
 const examsRoutes = require("./routes/exams");
 const searchRoutes = require("./routes/search");
@@ -21,7 +23,10 @@ const newsRoutes = require("./routes/news");
 const hypeRoutes = require("./routes/hype");
 const predictorRoutes = require("./routes/predictor");
 const authRoutes = require("./routes/auth");
+const transparencyRoutes = require("./routes/transparency");
 const connectDB = require("./config/db");
+const { getRedisClient } = require("./config/redis");
+const logger = require("./lib/logger");
 
 const app = express();
 
@@ -107,15 +112,30 @@ const anonymousLimiter = rateLimit({
 app.use(anonymousLimiter);
 
 // ==========================================
+// 🔍 REQUEST TRACING (UUID per request)
+// ==========================================
+app.use(requestLogger);
+
+// ==========================================
+// 🍯 HONEYPOT BLOCK CHECK (before all routes)
+// ==========================================
+app.use(honeypotBlockCheck);
+
+// ==========================================
 // 🔑  API KEY AUTHENTICATION
 // ==========================================
 app.use(apiKeyAuth); // Per-key rate limiting on top of IP limiting
 
 // ==========================================
-// 🏥 HEALTH CHECK
+// 🏥 HEALTH CHECK — enriched status
 // ==========================================
-app.get("/api/health", (req, res) => {
-  res.json({ status: "ok", time: new Date().toISOString() });
+app.get("/api/health", async (req, res) => {
+  const redis = await getRedisClient().catch(() => null);
+  res.json({
+    status: "ok",
+    time: new Date().toISOString(),
+    services: { redis: redis ? "connected" : "unavailable" }
+  });
 });
 
 app.get("/", (req, res) => {
@@ -136,7 +156,13 @@ app.use("/api/news", newsRoutes);
 app.use("/api/hype", hypeRoutes);
 app.use("/api/predict", predictorRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/transparency", transparencyRoutes);
 app.use("/api", userRoutes);
+
+// ==========================================
+// 🍯 HONEYPOT TRAP ROUTES (last, after real routes)
+// ==========================================
+app.use(honeypotMiddleware);
 
 // ==========================================
 // ❌ GLOBAL ERROR HANDLER
