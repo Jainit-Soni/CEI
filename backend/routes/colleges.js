@@ -139,6 +139,12 @@ const buildSortQuery = (reqQuery) => {
 
 router.get("/colleges", async (req, res) => {
   try {
+    // --- Input Validation & Sanitization ---
+    const rawQ = req.query.q;
+    if (rawQ && rawQ.length > 100) {
+      return res.status(400).json({ error: "Search query too long (max 100 characters)" });
+    }
+
     const key = `mongo:colleges:${JSON.stringify(req.query)}`;
 
     const cached = await cache.get(key);
@@ -148,8 +154,8 @@ router.get("/colleges", async (req, res) => {
 
     const { page, limit, q } = req.query;
 
-    const pageNum = parseInt(page, 10) || 1;
-    const limitNum = parseInt(limit, 10) || 20;
+    const pageNum = Math.max(1, parseInt(page, 10) || 1);
+    const limitNum = Math.min(100, Math.max(1, parseInt(limit, 10) || 20)); // Clamp 1–100
     const skip = (pageNum - 1) * limitNum;
 
     const query = buildCollegeQuery(req.query);

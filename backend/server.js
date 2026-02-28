@@ -1,14 +1,19 @@
 require('dotenv').config({ path: require('path').resolve(__dirname, '.env.local') });
+
+const validateEnv = require('./config/validateEnv');
+validateEnv(); // Validate env vars before anything else
+
 const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
 const helmet = require("helmet");
+const { rateLimit } = require("express-rate-limit");
 const apiKeyAuth = require("./middleware/apiKeys");
 const collegesRoutes = require("./routes/colleges");
 const examsRoutes = require("./routes/exams");
 const searchRoutes = require("./routes/search");
 const statsRoutes = require("./routes/stats");
-const adminRoutes = require("./routes/admin"); // Import admin routes
+const adminRoutes = require("./routes/admin");
 const userRoutes = require("./routes/user");
 const activityRoutes = require("./routes/activity");
 const scholarshipRoutes = require("./routes/scholarships");
@@ -25,19 +30,16 @@ if (process.env.NODE_ENV !== 'test') {
   connectDB();
 }
 
-
 // ==========================================
 // 🛡️ SECURITY & INFRASTRUCTURE MIDDLEWARE
 // ==========================================
 app.set("trust proxy", 1); // Trust Vercel's reverse proxy for accurate client IP detection
-app.use(helmet()); // Secure HTTP headers against common web vulnerabilities
-app.use(compression()); // Enable gzip compression to reduce payload sizes
+app.use(helmet());          // Secure HTTP headers against common web vulnerabilities
+app.use(compression());     // Enable gzip compression to reduce payload sizes
 
 // ==========================================
 // 🌐 CORS CONFIGURATION
 // ==========================================
-const isProduction = process.env.NODE_ENV === 'production';
-
 // Parse allowed origins from environment variables
 const rawOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
 const normalizedOrigins = rawOrigins
@@ -45,89 +47,110 @@ const normalizedOrigins = rawOrigins
   .filter(Boolean)
   .map(o => o.replace(/\/$/, ""));
 
-// Define explicitly allowed frontend URLs
+// Define explicitly allowlisted frontend origins
 const allowedOrigins = [
-  "http://localhost:3030", // Local development frontend
-  "https://ce-intelligence.vercel.app", // Production Vercel domain
-  "https://cmat-problem-frontend.vercel.app", // Legacy Vercel domain
+  "http://localhost:3000",
+  "http://localhost:3030",
+  "https://ce-intelligence-eight.vercel.app",   // Current production domain
+  "https://ce-intelligence.vercel.app",         // Alternate production domain
   ...normalizedOrigins
 ];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    // 1. Allow non-browser requests (e.g., mobile apps, cURL, desktop clients)
+    // Allow non-browser requests (e.g., mobile apps, cURL during development)
     if (!origin) return callback(null, true);
 
-    // 2. Allow Vercel preview environments dynamically
-    const isVercel = origin.endsWith(".vercel.app") || origin.includes("--ce-intelligence-");
-    if (isVercel) {
+    // Allow only THIS project's specific Vercel preview deployments
+    // Pattern: ce-intelligence-<hash>-<owner>.vercel.app
+    const isTrustedVercelPreview = /^https:\/\/ce-intelligence-[a-z0-9-]+-jainit-sonis-projects\.vercel\.app$/.test(origin);
+    if (isTrustedVercelPreview) {
       return callback(null, true);
     }
 
-    // 3. Check against strictly defined allowed domains
+    // Check against strict allowlist
+    const normalizedOrigin = origin.toLowerCase().replace(/\/$/, "");
     const isAllowed = allowedOrigins.some(allowed => {
-      if (allowed === "*") return true; // Wildcard bypass
-      const normalizedQuery = origin.toLowerCase().replace(/\/$/, "");
-      const normalizedAllowed = allowed.toLowerCase().replace(/\/$/, "");
-      return normalizedAllowed === normalizedQuery;
+      if (allowed === "*") return true;
+      return allowed.toLowerCase().replace(/\/$/, "") === normalizedOrigin;
     });
 
     if (isAllowed) {
       callback(null, true);
     } else {
-      console.warn(`CORS Reject: Origin [${origin}] not in allowed list`);
+      console.warn(`[CORS] Rejected origin: ${origin}`);
       callback(null, false);
     }
   },
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization", "x-api-key"],
+  allowedHeaders: ["Content-Type", "Authorization", "x-api-key", "X-API-Key"],
   credentials: true
 };
 
-// Apply CORS early in the middleware stack to avoid "CORS masking" of other errors
+// Apply CORS early in the middleware stack
 app.use(cors(corsOptions));
-app.use(express.json());
+app.use(express.json({ limit: "1mb" })); // Limit body size to prevent memory attacks
 
 // ==========================================
-// 🔑 DOMAIN LOGIC & API KEY AUTHENTICATION
+// 🚦 IP-BASED RATE LIMITING (Anonymous)
+// Applied before API key auth to throttle unauthenticated scrapers/DDoS
 // ==========================================
-app.use(apiKeyAuth); // Enforce API Key validation on all incoming requests
+const anonymousLimiter = rateLimit({
+  windowMs: 60 * 1000,      // 1 minute window
+  max: 60,                   // 60 requests per minute per IP
+  standardHeaders: true,     // Return standard RateLimit-* headers
+  legacyHeaders: false,
+  message: { error: "Too many requests from this IP, please try again in a minute." },
+  skip: (req) => !!req.header("X-API-Key") // Skip if API key is present (handled separately)
+});
 
-// Database Health Check Endpoint
+app.use(anonymousLimiter);
+
+// ==========================================
+// 🔑  API KEY AUTHENTICATION
+// ==========================================
+app.use(apiKeyAuth); // Per-key rate limiting on top of IP limiting
+
+// ==========================================
+// 🏥 HEALTH CHECK
+// ==========================================
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
 });
 
-// Root Endpoint
 app.get("/", (req, res) => {
-  res.send("<h1>CEI Backend is Running</h1><p>Status: Active, Secured by API Key</p>");
+  res.send("<h1>CEI Backend</h1><p>Status: Active</p>");
 });
 
 // ==========================================
 // 🚀 APPLICATION ROUTES
 // ==========================================
-// Core Entities
-app.use("/api", collegesRoutes);      // College profiles and queries
-app.use("/api", examsRoutes);         // Competitive exam details
-app.use("/api", searchRoutes);        // Global search endpoint
+app.use("/api", collegesRoutes);
+app.use("/api", examsRoutes);
+app.use("/api", searchRoutes);
+app.use("/api/stats", statsRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/activity", activityRoutes);
+app.use("/api/scholarships", scholarshipRoutes);
+app.use("/api/news", newsRoutes);
+app.use("/api/hype", hypeRoutes);
+app.use("/api/predict", predictorRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api", userRoutes);
 
-// Specialized Features
-app.use("/api/stats", statsRoutes);           // Analytics and map aggregated stats
-app.use("/api/admin", adminRoutes);           // Administrative dashboard tools
-app.use("/api/activity", activityRoutes);     // Real-time tracking and logs
-app.use("/api/scholarships", scholarshipRoutes); // Scholarship lookup
-app.use("/api/news", newsRoutes);             // Edu news scraper
-app.use("/api/hype", hypeRoutes);             // Fan-wars upvoting system
-app.use("/api/predict", predictorRoutes);     // Admissions predictor algorithm
-app.use("/api/auth", authRoutes);             // User authentication (JWT/OAuth)
-app.use("/api", userRoutes);                  // User profile management
+// ==========================================
+// ❌ GLOBAL ERROR HANDLER
+// ==========================================
+app.use((err, req, res, next) => {
+  console.error("[Global Error]", err.message, err.stack);
+  res.status(err.status || 500).json({ error: err.message || "Internal server error" });
+});
 
 const PORT = process.env.PORT || 4000;
 
-// Only listen if not running on Vercel (Vercel exports the app)
 if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
   app.listen(PORT, () => {
-    console.log(`CEI backend running on ${PORT}`);
+    console.log(`CEI backend running on port ${PORT}`);
   });
 }
 

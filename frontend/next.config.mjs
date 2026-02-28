@@ -12,12 +12,15 @@ const nextConfig = {
         return config;
     },
     images: {
-        domains: ['localhost'],
         remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: '**',
-            },
+            { protocol: 'https', hostname: 'lh3.googleusercontent.com' },
+            { protocol: 'https', hostname: '*.googleusercontent.com' },
+            { protocol: 'https', hostname: 'firebasestorage.googleapis.com' },
+            { protocol: 'https', hostname: '*.amazonaws.com' },
+            { protocol: 'https', hostname: 'res.cloudinary.com' },
+            { protocol: 'https', hostname: 'upload.wikimedia.org' },
+            { protocol: 'https', hostname: 'images.unsplash.com' },
+            { protocol: 'http', hostname: 'localhost' },
         ],
     },
     async headers() {
@@ -51,7 +54,9 @@ const nextConfig = {
                     },
                     {
                         key: 'Content-Security-Policy',
-                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' blob: https://va.vercel-scripts.com https://*.sentry.io https://apis.google.com https://www.googleapis.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' blob: data: https:; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; connect-src 'self' blob: data: https: http: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self' https://accounts.google.com https://content.googleapis.com https://*.firebaseapp.com https://*.firebasejs.com; worker-src 'self' blob:;"
+                        // Removed 'unsafe-eval' which allows XSS via eval().
+                        // If a library strictly requires eval, it should be whitelisted specifically.
+                        value: "default-src 'self'; script-src 'self' 'unsafe-inline' blob: https://va.vercel-scripts.com https://*.sentry.io https://apis.google.com https://www.googleapis.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' blob: data: https:; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; connect-src 'self' blob: data: https: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self' https://accounts.google.com https://content.googleapis.com https://*.firebaseapp.com https://*.firebasejs.com; worker-src 'self' blob:;"
                     },
                     {
                         key: 'Cross-Origin-Opener-Policy',

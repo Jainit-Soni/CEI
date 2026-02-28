@@ -30,6 +30,13 @@ backend/node_modules/
 backend/.env
 backend/dump.rdb
 backend/scripts/valid_ids.json
+backend/.env.local
+
+# Large data files (use cloud storage instead)
+*.xlsx
+*.csv.bak
+output/scoring/*.csv
+
 
 # Frontend specific
 frontend/node_modules/

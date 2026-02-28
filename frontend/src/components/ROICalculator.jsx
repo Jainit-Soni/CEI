@@ -195,7 +195,7 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
                             <label>Avg Package (LPA)</label>
                             <div className="range-row">
                                 <input
-                                    type="range" min="300000" max="5000000" step="50000"
+                                    type="range" min="300000" max="20000000" step="50000"
                                     value={avgPackage} onChange={e => setAvgPackage(Number(e.target.value))}
                                 />
                                 <span className="range-val">{formatMoney(avgPackage)}</span>
@@ -206,7 +206,7 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
                             <label>Total Tuition (Yearly)</label>
                             <div className="range-row">
                                 <input
-                                    type="range" min="50000" max="1500000" step="10000"
+                                    type="range" min="50000" max="3000000" step="10000"
                                     value={tuitionPerYear} onChange={e => setTuitionPerYear(Number(e.target.value))}
                                 />
                                 <span className="range-val">{formatMoney(tuitionPerYear)}</span>
@@ -230,7 +230,7 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
                                 <label>Monthly Living</label>
                                 <div className="range-row compact">
                                     <input
-                                        type="range" min="5000" max="50000" step="1000"
+                                        type="range" min="5000" max="100000" step="1000"
                                         value={livingPerMonth} onChange={e => setLivingPerMonth(Number(e.target.value))}
                                     />
                                     <span className="range-val">{formatMoney(livingPerMonth)}</span>

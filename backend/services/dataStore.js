@@ -8,7 +8,8 @@ const MODELS_DIR = path.join(__dirname, "..", "models");
 const CACHE_KEYS = {
   COLLEGES_MAP: "colleges:map",
   EXAMS_MAP: "exams:map",
-  LAST_UPDATE: "data:last_update"
+  LAST_UPDATE: "data:last_update",
+  COLLEGES_INITIALIZED: "colleges_initialized"  // Sentinel key — missing this caused re-init on EVERY request
 };
 
 // TTL in seconds
@@ -370,6 +371,7 @@ async function getExams() {
   if (!rawMap || Object.keys(rawMap).length === 0) {
     await initializeCache();
     const retryMap = await redis.hgetall(CACHE_KEYS.EXAMS_MAP);
+    if (!retryMap) return []; // Guard against null on double-fetch miss
     return Object.values(retryMap).map(s => JSON.parse(s));
   }
 
@@ -379,8 +381,11 @@ async function getExams() {
 // Invalidate cache
 async function invalidateCache() {
   const redis = await getRedisClient();
-  await redis.del(CACHE_KEYS.COLLEGES_MAP, CACHE_KEYS.EXAMS_MAP);
-  LOCAL_CACHE = null; // Clear local cache
+  if (redis) {
+    // Also delete the sentinel key so initializeCache runs fresh
+    await redis.del(CACHE_KEYS.COLLEGES_MAP, CACHE_KEYS.EXAMS_MAP, CACHE_KEYS.COLLEGES_INITIALIZED);
+  }
+  LOCAL_CACHE = null; // Always clear local cache regardless of Redis
   console.log("Cache invalidated");
   await initializeCache();
 }

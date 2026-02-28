@@ -144,47 +144,48 @@ router.post("/vote", async (req, res) => {
         const { collegeId, collegeName, uid, userName } = req.body;
         if (!collegeId || !uid) return res.status(400).json({ error: "Missing data" });
 
+        // Input validation — prevent data poisoning via overly long strings
+        if (typeof collegeId !== 'string' || collegeId.length > 100) {
+            return res.status(400).json({ error: "Invalid collegeId" });
+        }
+        if (collegeName && (typeof collegeName !== 'string' || collegeName.length > 200)) {
+            return res.status(400).json({ error: "Invalid collegeName" });
+        }
+        // Strip any HTML/script chars from college name before storing
+        const safeName = (collegeName || "").replace(/[<>"'&]/g, '').trim().slice(0, 200);
+
         const redisClient = await getRedisClient();
 
-        // 1. Validation Check (Redis + Disk Fallback)
+        // 1. Validation Check (Redis)
         if (redisClient) {
             const hasVoted = await redisClient.sismember(`ce_hype_user_votes:${uid}`, collegeId);
             if (hasVoted) return res.status(400).json({ error: "Already voted for this college" });
-        } else {
-            if (fs.existsSync(votesFilePath)) {
-                const existingVotes = JSON.parse(fs.readFileSync(votesFilePath, "utf8"));
-                if (existingVotes.some(v => v.userId === uid && v.collegeId === collegeId)) {
-                    return res.status(400).json({ error: "Already voted for this college" });
-                }
-            }
         }
 
         const newVote = {
             collegeId,
-            collegeName,
+            collegeName: safeName,
             userId: uid,
-            userName: userName || "Student",
+            userName: userName ? String(userName).slice(0, 50) : "Student",
             timestamp: new Date().toISOString()
         };
 
-        // 2. Commit Vote to Redis
+        // 2. Commit Vote to Redis (primary store)
         if (redisClient) {
             const pipeline = redisClient.pipeline();
             pipeline.zincrby(REDIS_KEY_LEADERBOARD, 1, collegeId);
-            pipeline.hset("ce_hype_names", collegeId, collegeName);
-            pipeline.sadd(`ce_hype_user_votes:${uid}`, collegeId); // Track user vote
+            pipeline.hset("ce_hype_names", collegeId, safeName);
+            pipeline.sadd(`ce_hype_user_votes:${uid}`, collegeId);
             pipeline.lpush(REDIS_KEY_RECENT, JSON.stringify(newVote));
             pipeline.ltrim(REDIS_KEY_RECENT, 0, 49);
             await pipeline.exec();
+        } else {
+            // Redis unavailable — reject vote to prevent silent data loss
+            return res.status(503).json({ error: "Vote service temporarily unavailable. Please try again." });
         }
 
-        // 3. Always persist to disk as master backup
-        let votes = [];
-        if (fs.existsSync(votesFilePath)) {
-            votes = JSON.parse(fs.readFileSync(votesFilePath, "utf8"));
-        }
-        votes.push(newVote);
-        fs.writeFileSync(votesFilePath, JSON.stringify(votes, null, 2));
+        // NOTE: Disk write removed — Vercel filesystem is ephemeral/read-only.
+        // Votes are persisted in Redis. For durable storage, migrate to MongoDB.
 
         res.json({ success: true });
     } catch (err) {
