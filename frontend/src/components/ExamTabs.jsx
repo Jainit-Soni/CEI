@@ -90,7 +90,7 @@ export default function ExamTabs({ exam }) {
             </div>
 
             {/* Content Area */}
-            <div className="mission-tabs-content">
+            <div className="mission-tabs-content" style={{ minHeight: '600px' }}>
 
                 {/* 1. OVERVIEW TAB */}
                 {activeTab === 'overview' && (

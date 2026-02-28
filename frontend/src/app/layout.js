@@ -14,19 +14,22 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
+  adjustFontFallback: false,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-body",
+  adjustFontFallback: false,
 });
 
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-mono",
-  preload: false,
+  preload: true,
+  adjustFontFallback: false,
 });
 
 export const metadata = {

@@ -122,7 +122,7 @@ const ScrollReveal = ({
     const Tag = as;
 
     return (
-        <Tag ref={containerRef} className={`scroll-reveal ${containerClassName}`}>
+        <Tag ref={containerRef} className={`scroll-reveal ${containerClassName}`} style={{ opacity: 0, willChange: 'opacity, transform' }}>
             <span className={`scroll-reveal-text ${textClassName}`}>{splitText}</span>
         </Tag>
     );
