@@ -1,0 +1,356 @@
+/* ScoringComparisonMatrix.css */
+
+.scm-root {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Inter', 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 0.82rem;
+    color: #1a202c;
+    padding-top: 24px;
+    border-top: 2px solid #e2e8f0;
+    margin-top: 24px;
+}
+
+.scm-loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+    color: #64748b;
+    font-size: 0.84rem;
+}
+
+.scm-spinner {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #e2e8f0;
+    border-top-color: #334155;
+    border-radius: 50%;
+    animation: scm-spin 0.8s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes scm-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.scm-error {
+    padding: 12px 14px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    color: #991b1b;
+}
+
+.scm-version-warn {
+    padding: 10px 14px;
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: 6px;
+    font-size: 0.77rem;
+    color: #78350f;
+}
+
+.scm-version-pin {
+    font-size: 0.71rem;
+    color: #64748b;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.scm-ver-link {
+    color: #0ea5e9;
+    text-decoration: none;
+}
+
+.scm-ver-link:hover {
+    text-decoration: underline;
+}
+
+.scm-hash {
+    color: #7dd3fc;
+    font-size: 0.69rem;
+}
+
+.scm-section-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+/* ── Table ────────────────────────────────────────────────────── */
+.scm-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scm-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+}
+
+/* Score header */
+.scm-score-row th {
+    padding: 12px 14px;
+    text-align: center;
+}
+
+.scm-label-col {
+    text-align: left !important;
+    min-width: 140px;
+}
+
+.scm-college-name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.scm-college-score {
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.scm-college-band {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+/* Column header row */
+.scm-header-row {
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.scm-header-row th {
+    padding: 6px 10px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    text-align: right;
+}
+
+.scm-header-row th.scm-label-col {
+    text-align: left;
+}
+
+/* Vector rows */
+.scm-vec-row {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.scm-vec-row:hover {
+    background: #f8fafc;
+}
+
+.scm-vec-label {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    vertical-align: middle;
+}
+
+.scm-vec-code {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #1e293b;
+    color: #f8fafc;
+    font-size: 0.65rem;
+    font-weight: 800;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.scm-vec-name {
+    color: #475569;
+    font-size: 0.78rem;
+}
+
+.scm-vec-weight {
+    color: #94a3b8;
+    font-size: 0.69rem;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.scm-value-cell {
+    padding: 8px 10px;
+    vertical-align: middle;
+}
+
+/* Cell bar */
+.cell-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.cell-bar-track {
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    width: 60px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.cell-bar-fill {
+    height: 100%;
+    background: #94a3b8;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+.cell-bar-fill.leader {
+    background: #1e293b;
+}
+
+.cell-bar-val {
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+    color: #475569;
+    min-width: 28px;
+    text-align: right;
+}
+
+.cell-bar-val.leader {
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.scm-variance-note {
+    font-size: 0.67rem;
+    color: #94a3b8;
+    text-align: right;
+    margin-top: 2px;
+}
+
+/* Penalty row */
+.scm-penalty-row {
+    background: #fef2f2;
+}
+
+.scm-penalty-cell {
+    text-align: right;
+    padding: 6px 10px;
+    color: #991b1b;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+/* Final row */
+.scm-final-row {
+    background: #f1f5f9;
+    border-top: 2px solid #e2e8f0;
+}
+
+.scm-final-cell {
+    text-align: right;
+    padding: 10px;
+    font-size: 1rem;
+    color: #0f172a;
+}
+
+/* Variance toggle */
+.scm-variance-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.77rem;
+    color: #475569;
+    user-select: none;
+}
+
+.scm-variance-toggle input[type="checkbox"] {
+    accent-color: #1e293b;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+/* Strength Differential */
+.scm-differential-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scm-differential-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.scm-diff-block {
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #f8fafc;
+}
+
+.scm-diff-leader {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.scm-diff-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.scm-diff-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.77rem;
+    color: #475569;
+}
+
+.scm-diff-vec {
+    color: #334155;
+}
+
+.scm-diff-delta {
+    font-weight: 700;
+    color: #15803d;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .scm-vec-name {
+        display: none;
+    }
+
+    .scm-college-score {
+        font-size: 1.1rem;
+    }
+
+    .cell-bar-track {
+        width: 40px;
+    }
+}

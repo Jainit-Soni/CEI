@@ -9,6 +9,7 @@ import Button from "./Button";
 import ReviewModal from "./ReviewModal";
 import IntelligenceRadar from "./IntelligenceRadar";
 import PremiumReviews from "./PremiumReviews"; // New Premium Reviews
+import ExplainabilityCard from "./ExplainabilityCard";
 import "./CollegeTabs.css";
 
 const ROICalculator = dynamic(() => import("./ROICalculator"), {
@@ -226,13 +227,20 @@ export default function CollegeTabs({ college }) {
 
                 {activeTab === "intelligence" && (
                     <div className="tab-pane fade-in">
-                        <div className="premium-tab-card">
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-                                <h3 className="tab-heading" style={{ margin: 0 }}>CEI Intelligence Vectors</h3>
-                                <Button href="/methodology" variant="ghost" size="sm">View Methodology →</Button>
+                        {/* Explainability Card — constitutional score breakdown */}
+                        <div className="premium-tab-card" style={{ marginBottom: '16px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                                <h3 className="tab-heading" style={{ margin: 0 }}>Score Explainability</h3>
+                                <Button href="/methodology" variant="ghost" size="sm">Methodology →</Button>
                             </div>
-                            <p className="overview-text mb-6">
-                                The College Exam Intelligence engine algorithmically grades institutions across 6 discrete mathematical vectors. This visualization illustrates the relative strength of {college.shortName || college.name}'s infrastructure, demand, and quality against its strictly normalized peer strata.
+                            <ExplainabilityCard college={college} />
+                        </div>
+
+                        {/* Intelligence Radar — vector visualization */}
+                        <div className="premium-tab-card">
+                            <h3 className="tab-heading" style={{ marginBottom: '12px' }}>Vector Visualization</h3>
+                            <p className="overview-text" style={{ marginBottom: '16px' }}>
+                                Radar visualization of {college.shortName || college.name}&#39;s 6 scoring vectors relative to the normalized peer strata.
                             </p>
                             <IntelligenceRadar college={college} />
                         </div>

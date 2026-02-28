@@ -1,0 +1,404 @@
+/* ExplainabilityCard.css — CEI Institutional Explainability
+ * Visual language: Monochrome institutional, confidence-color accents only.
+ * Typography-first. No decorative gradients.
+ */
+
+.explain-card {
+    font-family: 'Inter', 'IBM Plex Sans', system-ui, sans-serif;
+    color: #1a202c;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ── Constitutional Loading ───────────────────────────────────── */
+.explain-loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+    color: #64748b;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}
+
+.explain-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e2e8f0;
+    border-top-color: #334155;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.explain-error {
+    padding: 16px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    font-size: 0.84rem;
+    color: #991b1b;
+}
+
+/* ── Section label ────────────────────────────────────────────── */
+.explain-section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+/* ── Score Breakdown Matrix ───────────────────────────────────── */
+.explain-matrix-section {
+    display: block;
+}
+
+.explain-matrix {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+}
+
+.explain-matrix thead tr {
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.explain-matrix th {
+    text-align: left;
+    padding: 6px 10px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.explain-matrix th:not(:first-child) {
+    text-align: right;
+}
+
+.explain-matrix tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.1s;
+}
+
+.explain-matrix tbody tr:hover {
+    background: #f8fafc;
+}
+
+.explain-matrix td {
+    padding: 8px 10px;
+    vertical-align: middle;
+}
+
+.explain-matrix td:not(:first-child) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.vec-code {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: #1e293b;
+    color: #f8fafc;
+    font-size: 0.68rem;
+    font-weight: 800;
+    border-radius: 4px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.vec-name-cell {
+    display: flex;
+    align-items: center;
+}
+
+.vec-desc {
+    font-size: 0.78rem;
+    color: #475569;
+    line-height: 1.3;
+}
+
+.contrib-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.contrib-bar {
+    height: 4px;
+    border-radius: 2px;
+    background: #1e293b;
+    min-width: 2px;
+    max-width: 60px;
+    flex-shrink: 0;
+}
+
+.contrib-val {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+
+/* ── Totals row ───────────────────────────────────────────────── */
+.explain-matrix tfoot tr {
+    border-top: 2px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.explain-matrix tfoot td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* ── Stability Panel ──────────────────────────────────────────── */
+.explain-stability-section {
+    display: block;
+}
+
+.stability-panel {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.stability-badge {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.stability-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.stability-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.stability-label.stable {
+    color: #15803d;
+}
+
+.stability-label.moderate {
+    color: #b45309;
+}
+
+.stability-label.volatile {
+    color: #b91c1c;
+}
+
+.stability-label.neutral {
+    color: #64748b;
+}
+
+.stability-index-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.stability-index-bar-track {
+    height: 5px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.stability-index-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: #1e293b;
+    transition: width 0.6s ease;
+}
+
+.stability-index-bar-fill.stable {
+    background: #16a34a;
+}
+
+.stability-index-bar-fill.moderate {
+    background: #d97706;
+}
+
+.stability-index-bar-fill.volatile {
+    background: #dc2626;
+}
+
+.stability-index-val {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1e293b;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.stability-description {
+    font-size: 0.76rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.confidence-badge-pill {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: #e2e8f0;
+    color: #475569;
+    margin-left: 8px;
+}
+
+.confidence-badge-pill.high {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.confidence-badge-pill.medium {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.confidence-badge-pill.low {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ── Constitutional Anchor ────────────────────────────────────── */
+.explain-anchor-section {
+    display: block;
+}
+
+.explain-anchor {
+    padding: 14px 16px;
+    background: #1e293b;
+    border-radius: 8px;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-family: 'IBM Plex Mono', 'Fira Code', monospace;
+}
+
+.anchor-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    line-height: 1.8;
+    flex-wrap: wrap;
+}
+
+.anchor-key {
+    color: #64748b;
+    font-weight: 600;
+    white-space: nowrap;
+    min-width: 100px;
+}
+
+.anchor-val {
+    color: #e2e8f0;
+    font-weight: 400;
+    word-break: break-all;
+}
+
+.anchor-hash {
+    color: #7dd3fc;
+    font-size: 0.72rem;
+}
+
+.anchor-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.72rem;
+    margin-left: 6px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+}
+
+.anchor-link:hover {
+    border-color: #38bdf8;
+}
+
+.no-version-notice {
+    padding: 12px 14px;
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    color: #78350f;
+}
+
+/* ── Score Summary strip ──────────────────────────────────────── */
+.score-summary-strip {
+    display: flex;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+.score-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.score-stat-label {
+    font-size: 0.66rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 600;
+}
+
+.score-stat-val {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #1e293b;
+    font-variant-numeric: tabular-nums;
+}
+
+.score-stat-val.final {
+    color: #0f172a;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 640px) {
+
+    .explain-matrix th:nth-child(3),
+    .explain-matrix td:nth-child(3),
+    .explain-matrix th:nth-child(4),
+    .explain-matrix td:nth-child(4) {
+        display: none;
+    }
+
+    .stability-panel {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

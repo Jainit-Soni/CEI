@@ -9,6 +9,7 @@ import EmptyState from "@/components/EmptyState";
 import { useEffect, useState } from "react";
 import { fetchCollegesBatch } from "@/lib/api";
 import Link from "next/link";
+import ScoringComparisonMatrix from "@/components/ScoringComparisonMatrix";
 import "./ComparePage.css";
 
 export default function CompareClient() {
@@ -252,6 +253,11 @@ export default function CompareClient() {
                         ))}
                     </div>
                 </div>
+
+                {/* ── CEI Scoring Decomposition Matrix ── */}
+                {fullColleges.length >= 2 && (
+                    <ScoringComparisonMatrix colleges={fullColleges} />
+                )}
 
             </Container>
         </div>
