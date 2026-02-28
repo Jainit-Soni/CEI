@@ -18,7 +18,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import "./ScoringComparisonMatrix.css";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000").replace(/\/$/, "");
 
 const BAND_COLORS = {
     Elite: { bg: "#0f172a", color: "#f8fafc" },

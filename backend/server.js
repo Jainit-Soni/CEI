@@ -85,7 +85,7 @@ const corsOptions = {
     if (isAllowed) {
       callback(null, true);
     } else {
-      console.warn(`[CORS] Rejected origin: ${origin}`);
+      console.warn(`[CORS] Rejected origin: ${origin} (Normalized: ${normalizedOrigin})`);
       callback(null, false);
     }
   },

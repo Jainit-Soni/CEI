@@ -242,7 +242,9 @@ export default function CollegeTabs({ college }) {
                             <p className="overview-text" style={{ marginBottom: '16px' }}>
                                 Radar visualization of {college.shortName || college.name}&#39;s 6 scoring vectors relative to the normalized peer strata.
                             </p>
-                            <IntelligenceRadar college={college} />
+                            <div style={{ width: '100%', height: '400px', minHeight: '300px' }}>
+                                <IntelligenceRadar college={college} />
+                            </div>
                         </div>
                     </div>
                 )}

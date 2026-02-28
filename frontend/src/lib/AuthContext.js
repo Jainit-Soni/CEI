@@ -64,7 +64,7 @@ export function AuthProvider({ children }) {
 
                     if (firebaseUser) {
                         try {
-                            const { getApiUrl } = await import("./api");
+                            const { API_BASE } = await import("./api");
                             const axios = (await import("axios")).default;
 
                             // Mocking a Firebase verify token for easy dev setup
@@ -75,7 +75,7 @@ export function AuthProvider({ children }) {
                                 photoURL: firebaseUser.photoURL
                             }));
 
-                            const res = await axios.get(`${getApiUrl()}/api/auth/sync`, {
+                            const res = await axios.get(`${API_BASE}/api/auth/sync`, {
                                 headers: { Authorization: `Bearer ${payload}` }
                             });
 

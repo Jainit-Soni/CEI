@@ -17,7 +17,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import "./ExplainabilityCard.css";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000").replace(/\/$/, "");
 
 export default function ExplainabilityCard({ college }) {
     const [data, setData] = useState(null);

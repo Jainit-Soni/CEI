@@ -8,7 +8,7 @@ import Link from "next/link";
 import { ShieldCheck, BarChart4, Scaling, Activity, Building, Award, Star, TrendingUp, Zap, Info } from "lucide-react";
 import "./page.css";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000").replace(/\/$/, "");
 
 const VECTOR_ICONS = {
     A: <Award size={16} className="inline mr-2" />,
