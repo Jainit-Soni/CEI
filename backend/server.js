@@ -24,6 +24,7 @@ const hypeRoutes = require("./routes/hype");
 const predictorRoutes = require("./routes/predictor");
 const authRoutes = require("./routes/auth");
 const transparencyRoutes = require("./routes/transparency");
+const governanceRoutes = require("./routes/governance");
 const connectDB = require("./config/db");
 const { getRedisClient } = require("./config/redis");
 const logger = require("./lib/logger");
@@ -158,6 +159,7 @@ app.use("/api/hype", hypeRoutes);
 app.use("/api/predict", predictorRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/transparency", transparencyRoutes);
+app.use("/api/governance", governanceRoutes);
 app.use("/api", userRoutes);
 
 // ==========================================
