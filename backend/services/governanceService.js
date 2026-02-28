@@ -21,8 +21,12 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
 const ScoringVersion = require('../models/ScoringVersion');
-const AuditLog = require('./AuditLog') || (() => {
-    try { return require('../models/AuditLog'); } catch { return null; }
+const AuditLog = (() => {
+    try {
+        return require('../models/AuditLog');
+    } catch (e) {
+        return null;
+    }
 })();
 const logger = (() => { try { return require('../lib/logger'); } catch { return console; } })();
 
