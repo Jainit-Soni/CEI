@@ -248,9 +248,36 @@
   margin: 0;
 }
 
+/* Constitutional Anchor Bar */
+.constitutional-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 32px;
+}
+
+.constitutional-bar code {
+  color: #7dd3fc;
+  font-family: var(--font-mono);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.constitutional-bar a:hover {
+  color: #38bdf8;
+}
+
 @media (max-width: 768px) {
-  .card-header {
+  .constitutional-bar {
     flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
   }
 }
