@@ -130,11 +130,12 @@ app.use(apiKeyAuth); // Per-key rate limiting on top of IP limiting
 // 🏥 HEALTH CHECK — enriched status
 // ==========================================
 app.get("/api/health", async (req, res) => {
-  const redis = await getRedisClient().catch(() => null);
+  const { getRedisStatus } = require("./services/dataStore");
+  const cacheStatus = await getRedisStatus().catch(() => ({ status: "error" }));
   res.json({
     status: "ok",
     time: new Date().toISOString(),
-    services: { redis: redis ? "connected" : "unavailable" }
+    cache: cacheStatus
   });
 });
 
