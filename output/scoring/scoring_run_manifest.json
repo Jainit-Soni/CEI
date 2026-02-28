@@ -1,0 +1,117 @@
+{
+  "engine_version": "3.0.0",
+  "run_timestamp": "20260228_095627",
+  "input_file": "output/verified/master_institutions_verified_only.csv",
+  "input_sha256": "e499ca3678155155768758456641d3bbc069e6e68081bf72aa20753c9e6471ad",
+  "output_file": "output/scoring/master_scored_20260228_095627.csv",
+  "output_sha256": "c4a836d2e63c53d87eb01812899332866acf7042ccee44bd5859dae2e7c16537",
+  "total_records": 66133,
+  "weight_vector": {
+    "A": 0.25,
+    "F": 0.24,
+    "I": 0.19,
+    "S": 0.18,
+    "D": 0.09,
+    "U": 0.05
+  },
+  "band_thresholds": {
+    "Elite": 98,
+    "High": 90,
+    "Competitive": 65,
+    "Moderate": 25,
+    "Emerging": 0
+  },
+  "penalty_max": 10.0,
+  "monte_carlo_runs": 50,
+  "monte_carlo_noise_pct": 5.0,
+  "volatile_institutions": 50304,
+  "band_distribution": {
+    "Moderate": 26454,
+    "Emerging": 18513,
+    "Competitive": 16533,
+    "High": 4487,
+    "Elite": 146
+  },
+  "elite_list": [
+    {
+      "institution_name": "Biogas Research Unit & Microbiology, Sadra",
+      "cei_score": 99.89
+    },
+    {
+      "institution_name": "Punit Teacher Training College, Pansal",
+      "cei_score": 99.83
+    },
+    {
+      "institution_name": "Punit College",
+      "cei_score": 99.87
+    },
+    {
+      "institution_name": "CSIIT COLLEGE OF ARCHITECTURE",
+      "cei_score": 99.89
+    },
+    {
+      "institution_name": "International Institute of Technology & Management",
+      "cei_score": 99.82
+    },
+    {
+      "institution_name": "NIT Graduate school of Management, Katol Road",
+      "cei_score": 99.87
+    },
+    {
+      "institution_name": "SHREE VASHISTA COLLEGE OF EDUCATION NEAR VAARTHA UNIT, ALGUNOOR, THIMMAPUR, KARIMNAGAR",
+      "cei_score": 99.85
+    },
+    {
+      "institution_name": "Sine International Institute of Technology,Jaipur",
+      "cei_score": 99.85
+    },
+    {
+      "institution_name": "Indian Institute of Management and commerce",
+      "cei_score": 99.9
+    },
+    {
+      "institution_name": "KIIT College of Engg.Sohna Road,Bhondsi (Gurgaon)",
+      "cei_score": 99.88
+    },
+    {
+      "institution_name": "KIIT COLLEGE OF EDUCATION",
+      "cei_score": 99.88
+    },
+    {
+      "institution_name": "St. Soldier College of Education Behind  REC (NIT) Jalandhar.",
+      "cei_score": 99.89
+    },
+    {
+      "institution_name": "Kamrah Institute of Information & Technology(KIIT)",
+      "cei_score": 99.85
+    },
+    {
+      "institution_name": "Liberal College, IIM Pithampur Rau, Indore",
+      "cei_score": 99.84
+    },
+    {
+      "institution_name": "Shivkumarsingh Instt. of Science & Technology, Gram Dehadi, Near IIM, Indore",
+      "cei_score": 99.89
+    },
+    {
+      "institution_name": "Nalanda Institute of Technology (NIT), Bhubaneswar",
+      "cei_score": 99.86
+    },
+    {
+      "institution_name": "Indian Institute of Science and Information Technology (IISIT), Bhubaneswar",
+      "cei_score": 99.86
+    },
+    {
+      "institution_name": "Barrister Ranjit Mohanty  International Institute of Technology (BRMIIT), Bhubaneswar",
+      "cei_score": 99.85
+    },
+    {
+      "institution_name": "Bhubaneswar Institute of Industrial Technology, (BIIT), Khurda",
+      "cei_score": 99.84
+    },
+    {
+      "institution_name": "BIIT (BRILLIANT INSTITUTE OF INFORMATION TECHNOLOGY) SHEOPUR",
+      "cei_score": 99.82
+    }
+  ]
+}
