@@ -1,6 +1,9 @@
 import { withSentryConfig } from "@sentry/nextjs";
 
 const nextConfig = {
+    experimental: {
+        optimizePackageImports: ['lucide-react'],
+    },
     webpack: (config, { isServer }) => {
         config.ignoreWarnings = [
             { module: /node_modules\/@opentelemetry\/instrumentation/ },

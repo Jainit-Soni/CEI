@@ -5,6 +5,9 @@ import { Shield, Activity, Globe } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FluidGlass from "./animations/FluidGlass";
+// Lazy load the heavy 3D element so it doesn't block mobile PageSpeed Execution
+import dynamic from 'next/dynamic';
+const FluidGlassDynamic = dynamic(() => import('./animations/FluidGlass'), { ssr: false });
 import "./PremiumHome.css";
 
 if (typeof window !== "undefined") {
@@ -53,7 +56,7 @@ export default function PremiumHome() {
                 <div className="premium-overlay" />
 
                 {/* Desktop: The Heavy 3D Intelligence Lens Overlay (No Scroll Dependency) */}
-                {isMounted && !isMobile && <FluidGlass />}
+                {isMounted && !isMobile && <FluidGlassDynamic />}
 
                 {/* The HTML Content */}
                 <div className="premium-container pointer-events-auto">

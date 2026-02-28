@@ -26,41 +26,47 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 
-// Security & Infrastructure Middleware
-app.set("trust proxy", 1); // Trust Vercel's reverse proxy for accurate client IPs
-app.use(helmet()); // Secure HTTP headers
-app.use(compression()); // Enable gzip compression
+// ==========================================
+// 🛡️ SECURITY & INFRASTRUCTURE MIDDLEWARE
+// ==========================================
+app.set("trust proxy", 1); // Trust Vercel's reverse proxy for accurate client IP detection
+app.use(helmet()); // Secure HTTP headers against common web vulnerabilities
+app.use(compression()); // Enable gzip compression to reduce payload sizes
 
-// CORS configuration
+// ==========================================
+// 🌐 CORS CONFIGURATION
+// ==========================================
 const isProduction = process.env.NODE_ENV === 'production';
 
+// Parse allowed origins from environment variables
 const rawOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
 const normalizedOrigins = rawOrigins
   .map(o => o.trim())
   .filter(Boolean)
   .map(o => o.replace(/\/$/, ""));
 
+// Define explicitly allowed frontend URLs
 const allowedOrigins = [
-  "http://localhost:3030",
-  "https://ce-intelligence.vercel.app",
-  "https://cmat-problem-frontend.vercel.app",
+  "http://localhost:3030", // Local development frontend
+  "https://ce-intelligence.vercel.app", // Production Vercel domain
+  "https://cmat-problem-frontend.vercel.app", // Legacy Vercel domain
   ...normalizedOrigins
 ];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
+    // 1. Allow non-browser requests (e.g., mobile apps, cURL, desktop clients)
     if (!origin) return callback(null, true);
 
-    // Fail-safe: Always allow Vercel origins to prevent deployment blocking
+    // 2. Allow Vercel preview environments dynamically
     const isVercel = origin.endsWith(".vercel.app") || origin.includes("--ce-intelligence-");
-
     if (isVercel) {
       return callback(null, true);
     }
 
+    // 3. Check against strictly defined allowed domains
     const isAllowed = allowedOrigins.some(allowed => {
-      if (allowed === "*") return true;
+      if (allowed === "*") return true; // Wildcard bypass
       const normalizedQuery = origin.toLowerCase().replace(/\/$/, "");
       const normalizedAllowed = allowed.toLowerCase().replace(/\/$/, "");
       return normalizedAllowed === normalizedQuery;
@@ -70,8 +76,6 @@ const corsOptions = {
       callback(null, true);
     } else {
       console.warn(`CORS Reject: Origin [${origin}] not in allowed list`);
-      // For local development or non-critical errors, we might want to be more lenient
-      // but strictly following the current logic:
       callback(null, false);
     }
   },
@@ -80,33 +84,43 @@ const corsOptions = {
   credentials: true
 };
 
-// Apply CORS early to avoid "CORS masking" of other errors
+// Apply CORS early in the middleware stack to avoid "CORS masking" of other errors
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// Domain Logic Middleware
-app.use(apiKeyAuth);   // Check for API Key first
+// ==========================================
+// 🔑 DOMAIN LOGIC & API KEY AUTHENTICATION
+// ==========================================
+app.use(apiKeyAuth); // Enforce API Key validation on all incoming requests
 
+// Database Health Check Endpoint
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
 });
 
+// Root Endpoint
 app.get("/", (req, res) => {
-  res.send("<h1>CMAT Backend is Running</h1><p>Status: Active</p>");
+  res.send("<h1>CEI Backend is Running</h1><p>Status: Active, Secured by API Key</p>");
 });
 
-app.use("/api", collegesRoutes);
-app.use("/api", examsRoutes);
-app.use("/api", searchRoutes);
-app.use("/api/stats", statsRoutes);
-app.use("/api/admin", adminRoutes);
-app.use("/api/activity", activityRoutes);
-app.use("/api/scholarships", scholarshipRoutes);
-app.use("/api/news", newsRoutes);
-app.use("/api/hype", hypeRoutes);
-app.use("/api/predict", predictorRoutes);
-app.use("/api/auth", authRoutes);
-app.use("/api", userRoutes);
+// ==========================================
+// 🚀 APPLICATION ROUTES
+// ==========================================
+// Core Entities
+app.use("/api", collegesRoutes);      // College profiles and queries
+app.use("/api", examsRoutes);         // Competitive exam details
+app.use("/api", searchRoutes);        // Global search endpoint
+
+// Specialized Features
+app.use("/api/stats", statsRoutes);           // Analytics and map aggregated stats
+app.use("/api/admin", adminRoutes);           // Administrative dashboard tools
+app.use("/api/activity", activityRoutes);     // Real-time tracking and logs
+app.use("/api/scholarships", scholarshipRoutes); // Scholarship lookup
+app.use("/api/news", newsRoutes);             // Edu news scraper
+app.use("/api/hype", hypeRoutes);             // Fan-wars upvoting system
+app.use("/api/predict", predictorRoutes);     // Admissions predictor algorithm
+app.use("/api/auth", authRoutes);             // User authentication (JWT/OAuth)
+app.use("/api", userRoutes);                  // User profile management
 
 const PORT = process.env.PORT || 4000;
 
