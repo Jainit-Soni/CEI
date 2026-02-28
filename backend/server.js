@@ -174,6 +174,8 @@ app.use("/api/admin-auth", adminAuthRoutes);
 app.use("/api/forecast", require("./routes/forecast"));
 app.use("/api/simulator", require("./routes/simulator"));
 app.use("/api/v1", require("./routes/publicApi"));
+app.use("/api/verify", require("./routes/verify"));
+app.use("/api/evidence", require("./routes/evidence"));
 app.use("/api", userRoutes);
 
 // ==========================================

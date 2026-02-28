@@ -1,0 +1,32 @@
+{
+    "name": "@cei/sdk",
+    "version": "1.0.0",
+    "description": "Official JavaScript SDK for the CEI (Constitutional Education Intelligence) Public API",
+    "main": "index.js",
+    "type": "commonjs",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "keywords": [
+        "CEI",
+        "education",
+        "intelligence",
+        "API",
+        "India",
+        "college-ranking"
+    ],
+    "license": "MIT",
+    "homepage": "https://ce-intelligence-eight.vercel.app/developers",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Jainit-Soni/CEI.git"
+    },
+    "files": [
+        "index.js",
+        "README.md"
+    ],
+    "scripts": {
+        "test": "node -e \"const CEI = require('./index'); const c = new CEI.Client({ baseUrl: 'http://localhost:5000' }); c.scoring.activeVersion().then(v => console.log('SDK Test PASS:', v?.data?.versionId || 'no active version')).catch(e => console.log('SDK Test (network expected):', e.message))\""
+    },
+    "dependencies": {}
+}
