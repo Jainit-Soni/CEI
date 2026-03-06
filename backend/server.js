@@ -10,11 +10,11 @@ const requiredEnv = [
   "REDIS_URL"
 ];
 
-for (const key of requiredEnv) {
-  if (!process.env[key]) {
-    console.error(`FATAL CONFIG ERROR: ${key} is missing`);
-    process.exit(1);
-  }
+const missingEnv = requiredEnv.filter(key => !process.env[key]);
+const isMaintenanceMode = missingEnv.length > 0;
+
+if (isMaintenanceMode) {
+  console.error("⚠️  MAINTENANCE MODE: Missing required environment variables:", missingEnv.join(", "));
 }
 // ──────────────────────────────────────────────────────────────────────────
 
@@ -50,14 +50,31 @@ const scheduler = require("./lib/scheduler");
 
 const app = express();
 
-// Connect to MongoDB
-if (process.env.NODE_ENV !== 'test') {
+// Connect to MongoDB & Start Services
+if (process.env.NODE_ENV !== 'test' && !isMaintenanceMode) {
   connectDB();
   // Start scheduler (non-Vercel environments only — Vercel uses cron.json)
   if (!process.env.VERCEL) {
     scheduler.start();
   }
 }
+
+// ==========================================
+// 🚨 DIAGNOSTIC MAINTENANCE MIDDLEWARE
+// ==========================================
+// If environment variables are missing, return 503 with diagnostic info.
+app.use((req, res, next) => {
+  if (isMaintenanceMode) {
+    return res.status(503).json({
+      error: "Service Temporarily Unavailable (Missing Configuration)",
+      diagnostic: {
+        missingEnvironmentVariables: missingEnv,
+        actionRequired: "Please add these variables to your Vercel Project Settings."
+      }
+    });
+  }
+  next();
+});
 
 // ==========================================
 // 🛣️ URL NORMALIZATION MIDDLEWARE

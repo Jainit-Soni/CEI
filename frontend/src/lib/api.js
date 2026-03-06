@@ -157,3 +157,14 @@ export async function fetchBattleData() {
   const { data } = await api.get("/api/hype/stats");
   return data;
 }
+
+// ── Phase XVI — Reviews API ──────────────────────────────────────────────
+export async function fetchReviews(collegeId) {
+  const { data } = await api.get(`/api/reviews/${collegeId}`);
+  return data;
+}
+
+export async function postReview(reviewData) {
+  const { data } = await api.post("/api/reviews", reviewData);
+  return data;
+}

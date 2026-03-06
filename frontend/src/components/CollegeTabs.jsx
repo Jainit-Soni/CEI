@@ -13,6 +13,7 @@ import ExplainabilityCard from "./ExplainabilityCard";
 import DataConfidenceBadge from "./DataConfidenceBadge";
 import DataSourcesPanel from "./DataSourcesPanel";
 import ImprovementSimulator from "./ImprovementSimulator";
+import { fetchReviews as getReviews } from "@/lib/api";
 import "./CollegeTabs.css";
 
 const ROICalculator = dynamic(() => import("./ROICalculator"), {
@@ -70,11 +71,8 @@ export default function CollegeTabs({ college }) {
 
     const fetchReviews = async () => {
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/reviews/${college.id}`);
-            if (res.ok) {
-                const data = await res.json();
-                setReviewsData(data);
-            }
+            const data = await getReviews(college.id);
+            setReviewsData(data);
         } catch (error) {
             console.error("Failed to fetch reviews", error);
         }

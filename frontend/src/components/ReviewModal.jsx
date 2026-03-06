@@ -6,6 +6,7 @@ import Button from "./Button";
 import { Star, X } from "lucide-react";
 import { useAuth } from "@/lib/AuthContext";
 import { useToast } from "./Toast";
+import { postReview } from "@/lib/api";
 
 const SENTIMENTS = {
     1: "Terrible 😡",
@@ -41,21 +42,13 @@ export default function ReviewModal({ isOpen, onClose, collegeId, onReviewSubmit
 
         setIsSubmitting(true);
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/reviews`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    collegeId,
-                    userId: user.uid,
-                    userName: user.displayName || "Student",
-                    rating,
-                    comment
-                })
+            await postReview({
+                collegeId,
+                userId: user.uid,
+                userName: user.displayName || "Student",
+                rating,
+                comment
             });
-
-            if (!res.ok) throw new Error("Failed to submit");
 
             addToast("Review submitted successfully!", "success");
             onReviewSubmitted();
@@ -101,8 +94,8 @@ export default function ReviewModal({ isOpen, onClose, collegeId, onReviewSubmit
                                     <Star
                                         size={42}
                                         className={`transition-colors duration-200 ${star <= (hoverRating || rating)
-                                                ? "fill-amber-400 text-amber-400 drop-shadow-md"
-                                                : "fill-slate-100 text-slate-200"
+                                            ? "fill-amber-400 text-amber-400 drop-shadow-md"
+                                            : "fill-slate-100 text-slate-200"
                                             }`}
                                         strokeWidth={1.5}
                                     />
