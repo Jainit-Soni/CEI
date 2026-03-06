@@ -8,28 +8,36 @@ import { fetchCollege } from "@/lib/api";
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
-  const college = await fetchCollege(params.id);
-  if (!college) return { title: "College Not Found" };
+  try {
+    const college = await fetchCollege(params.id);
+    if (!college) return { title: "College Not Found" };
 
-  return {
-    title: college.name,
-    description: `Detailed information about ${college.name}, including courses, fees, admission process, and reviews.`,
-    openGraph: {
+    return {
       title: college.name,
-      description: `Learn more about ${college.name} on CEI.`,
-      images: [college.logo || "/default-college.png"],
-    },
-  };
+      description: `Detailed information about ${college.name}, including courses, fees, admission process, and reviews.`,
+      openGraph: {
+        title: college.name,
+        description: `Learn more about ${college.name} on CEI.`,
+        images: [college.logo || "/default-college.png"],
+      },
+    };
+  } catch (error) {
+    console.error("[generateMetadata] Failed to fetch college:", error.message);
+    return { title: "College Search — CEI" };
+  }
 }
 
 export default async function CollegeDetail({ params }) {
-  const college = await fetchCollege(params.id);
+  let college = null;
+  try {
+    college = await fetchCollege(params.id);
+  } catch (error) {
+    console.error("[CollegeDetail] Failed to fetch initial data:", error.message);
+    // Fallback: college remains null, letting CollegeDetailClient handle it
+  }
 
   /* 
     SEO DOMINANCE: Rich Snippets
-    - EducationalOrganization
-    - AggregateRating (Stars in search)
-    - PostalAddress (Local SEO)
   */
   const jsonLd = college ? {
     "@context": "https://schema.org",
@@ -44,7 +52,7 @@ export default async function CollegeDetail({ params }) {
       "addressRegion": college.state || "Unknown State",
       "addressCountry": "IN"
     },
-    // Algorithmic CEI Rating converting 0-100 score to 5-star aggregate format for Rich Results
+    // Algorithmic CEI Rating
     "aggregateRating": college.ceiScore > 0 ? {
       "@type": "AggregateRating",
       "ratingValue": Math.max(1, (college.ceiScore / 20)).toFixed(1),

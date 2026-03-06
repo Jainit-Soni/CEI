@@ -52,61 +52,15 @@ const scheduler = require("./lib/scheduler");
 
 const app = express();
 
-// Connect to MongoDB & Start Services
-if (process.env.NODE_ENV !== 'test' && !isMaintenanceMode) {
-  connectDB();
-  // Start scheduler (non-Vercel environments only — Vercel uses cron.json)
-  if (!process.env.VERCEL) {
-    scheduler.start();
-  }
-}
-
 // ==========================================
-// 🚨 DIAGNOSTIC MAINTENANCE MIDDLEWARE
+// 🌐 CORS CONFIGURATION (MUST BE FIRST)
 // ==========================================
-// If environment variables are missing, return 503 with diagnostic info.
-app.use((req, res, next) => {
-  if (isMaintenanceMode) {
-    return res.status(503).json({
-      error: "Service Temporarily Unavailable (Missing Configuration)",
-      diagnostic: {
-        missingEnvironmentVariables: missingEnv,
-        actionRequired: "Please add these variables to your Vercel Project Settings."
-      }
-    });
-  }
-  next();
-});
-
-// ==========================================
-// 🛣️ URL NORMALIZATION MIDDLEWARE
-// ==========================================
-// Replaces multiple slashes (//) with a single slash (/) to prevent redirects that break CORS.
-app.use((req, res, next) => {
-  if (req.url.includes("//")) {
-    req.url = req.url.replace(/\/+/g, "/");
-  }
-  next();
-});
-
-// ==========================================
-// 🛡️ SECURITY & INFRASTRUCTURE MIDDLEWARE
-// ==========================================
-app.set("trust proxy", 1); // Trust Vercel's reverse proxy for accurate client IP detection
-app.use(helmet());          // Secure HTTP headers against common web vulnerabilities
-app.use(compression());     // Enable gzip compression to reduce payload sizes
-
-// ==========================================
-// 🌐 CORS CONFIGURATION
-// ==========================================
-// Parse allowed origins from environment variables
 const rawOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
 const normalizedOrigins = rawOrigins
   .map(o => o.trim())
   .filter(Boolean)
   .map(o => o.replace(/\/$/, ""));
 
-// Define explicitly allowlisted frontend origins
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3030",
@@ -117,17 +71,10 @@ const allowedOrigins = [
 
 const corsOptions = {
   origin: function (origin, callback) {
-    // Allow non-browser requests (e.g., mobile apps, cURL during development)
     if (!origin) return callback(null, true);
-
-    // Allow only THIS project's specific Vercel preview deployments
-    // Pattern: ce-intelligence-<hash>-<owner>.vercel.app
     const isTrustedVercelPreview = /^https:\/\/ce-intelligence-[a-z0-9-]+-jainit-sonis-projects\.vercel\.app$/.test(origin);
-    if (isTrustedVercelPreview) {
-      return callback(null, true);
-    }
+    if (isTrustedVercelPreview) return callback(null, true);
 
-    // Check against strict allowlist
     const normalizedOrigin = origin.toLowerCase().replace(/\/$/, "");
     const isAllowed = allowedOrigins.some(allowed => {
       if (allowed === "*") return true;
@@ -146,8 +93,49 @@ const corsOptions = {
   credentials: true
 };
 
-// Apply CORS early in the middleware stack
 app.use(cors(corsOptions));
+
+// ==========================================
+// 🛣️ URL NORMALIZATION MIDDLEWARE
+// ==========================================
+app.use((req, res, next) => {
+  if (req.url.includes("//")) {
+    req.url = req.url.replace(/\/+/g, "/");
+  }
+  next();
+});
+
+// ==========================================
+// 🚨 DIAGNOSTIC MAINTENANCE MIDDLEWARE
+// ==========================================
+app.use((req, res, next) => {
+  if (isMaintenanceMode) {
+    return res.status(503).json({
+      error: "Service Temporarily Unavailable (Missing Configuration)",
+      diagnostic: {
+        missingEnvironmentVariables: missingEnv,
+        actionRequired: "Please add these variables to your Vercel Project Settings."
+      }
+    });
+  }
+  next();
+});
+
+// Connect to MongoDB & Start Services
+if (process.env.NODE_ENV !== 'test' && !isMaintenanceMode) {
+  connectDB();
+  if (!process.env.VERCEL) {
+    scheduler.start();
+  }
+}
+
+// ==========================================
+// 🛡️ SECURITY & INFRASTRUCTURE MIDDLEWARE
+// ==========================================
+app.set("trust proxy", 1); // Trust Vercel's reverse proxy for accurate client IP detection
+app.use(helmet());          // Secure HTTP headers against common web vulnerabilities
+app.use(compression());     // Enable gzip compression to reduce payload sizes
+
 app.use(express.json({ limit: "1mb" })); // Limit body size to prevent memory attacks
 
 // ==========================================
