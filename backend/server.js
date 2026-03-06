@@ -7,7 +7,8 @@ const requiredEnv = [
   "JWT_SECRET",
   "BACKUP_ENCRYPTION_KEY",
   "MONGODB_URI",
-  "REDIS_URL"
+  "REDIS_URL",
+  "FIREBASE_SERVICE_ACCOUNT_KEY"
 ];
 
 const missingEnv = requiredEnv.filter(key => !process.env[key]);
@@ -43,6 +44,7 @@ const governanceRoutes = require("./routes/governance");
 const explainRoutes = require("./routes/explain");
 const verificationRoutes = require("./routes/verification");
 const adminAuthRoutes = require("./routes/adminAuth");
+const reviewsRoutes = require("./routes/reviews");
 const connectDB = require("./config/db");
 const { getRedisClient } = require("./config/redis");
 const logger = require("./lib/logger");
@@ -214,6 +216,7 @@ app.use("/api/governance", governanceRoutes);
 app.use("/api/explain", explainRoutes);
 app.use("/api/verification", verificationRoutes);
 app.use("/api/admin-auth", adminAuthRoutes);
+app.use("/api/reviews", reviewsRoutes);
 app.use("/api/forecast", require("./routes/forecast"));
 app.use("/api/simulator", require("./routes/simulator"));
 app.use("/api/v1", require("./routes/publicApi"));

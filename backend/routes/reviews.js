@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Review = require("../models/Review");
-const authMiddleware = require("../middleware/auth"); // Assuming this exists or we mock for guest
+// const authMiddleware = require("../middleware/auth"); // Removed broken import
 
 // GET /api/reviews/:collegeId
 // Fetch reviews for a specific college
