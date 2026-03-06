@@ -272,4 +272,105 @@ router.get('/disputes', async (req, res) => {
     }
 });
 
+// ── GET /api/transparency/data-confidence/:collegeId (Phase XVI) ──────────────
+// Public view of all 12 verified field confidence scores & status labels.
+router.get('/data-confidence/:collegeId', async (req, res) => {
+    try {
+        const VerifiedField = require('../models/VerifiedField');
+        const { collegeId } = req.params;
+        const fields = await VerifiedField.find({ collegeId })
+            .select('fieldName fieldValue confidenceScore verificationStatus sourceCount lastVerifiedAt anomalyBoost')
+            .lean();
+
+        res.json({
+            success: true,
+            collegeId,
+            totalTrackedFields: fields.length,
+            overallDataQuality: fields.length
+                ? Math.round(fields.reduce((s, f) => s + f.confidenceScore, 0) / fields.length)
+                : null,
+            fields: fields.map(f => ({
+                fieldName: f.fieldName,
+                fieldValue: f.fieldValue,
+                confidenceScore: f.confidenceScore,
+                verificationStatus: f.verificationStatus,
+                sourceCount: f.sourceCount,
+                lastVerifiedAt: f.lastVerifiedAt,
+                hasPendingReports: f.anomalyBoost > 0
+            }))
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// ── GET /api/transparency/placement-reality/:collegeId (Phase XVI) ─────────────
+// Public placement reality score with reasoning for why CEI trusts the data.
+router.get('/placement-reality/:collegeId', async (req, res) => {
+    try {
+        const PlacementReality = require('../models/PlacementReality');
+        const { collegeId } = req.params;
+        const doc = await PlacementReality.findOne({ collegeId }).lean();
+
+        if (!doc) {
+            return res.status(404).json({
+                success: false,
+                message: 'No placement reality analysis yet for this college. It will be computed in the next weekly scan.'
+            });
+        }
+
+        res.json({
+            success: true,
+            collegeId,
+            placementRealityScore: doc.placementRealityScore,
+            reliabilityLabel: doc.reliabilityLabel,
+            emoji: doc.reliabilityLabel === 'Highly Reliable' ? '🟢'
+                : doc.reliabilityLabel === 'Moderate Confidence' ? '🟡' : '🔴',
+            whyCEITrustsThisData: {
+                peerAlignment: `Score based on comparison with ${doc.layerScores?.statisticalOutlier !== null ? 'peer colleges in same state and tier' : 'unavailable peers'}.`,
+                historicalConsistency: doc.yoyGrowthRatio
+                    ? `YoY change: ${((doc.yoyGrowthRatio - 1) * 100).toFixed(0)}%`
+                    : 'No historical data available.',
+                crossSourceCheck: doc.crossSourceVariancePct !== null
+                    ? `Cross-source variance: ${doc.crossSourceVariancePct}%`
+                    : 'No external source data available.',
+                companyValidation: 'Claimed companies cross-referenced with alumni employment data.'
+            },
+            anomalyFlags: doc.anomalyFlags || [],
+            lastComputed: doc.lastComputed
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// ── GET /api/transparency/reports/:collegeId (Phase XVI) ──────────────────────
+// Public view of community trust reports for a college.
+router.get('/reports/:collegeId', async (req, res) => {
+    try {
+        const TrustReport = require('../models/TrustReport');
+        const { collegeId } = req.params;
+        const reports = await TrustReport.find({
+            collegeId,
+            status: { $in: ['pending', 'validated'] },
+            isDuplicate: false
+        })
+            .select('fieldName reportedValue reportReason status createdAt')
+            .sort({ createdAt: -1 })
+            .limit(50)
+            .lean();
+
+        res.json({
+            success: true,
+            collegeId,
+            openReports: reports.filter(r => r.status === 'pending').length,
+            validatedReports: reports.filter(r => r.status === 'validated').length,
+            reports
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 module.exports = router;
+

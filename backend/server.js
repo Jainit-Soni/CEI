@@ -191,6 +191,10 @@ app.use("/api/simulator", require("./routes/simulator"));
 app.use("/api/v1", require("./routes/publicApi"));
 app.use("/api/verify", require("./routes/verify"));
 app.use("/api/evidence", require("./routes/evidence"));
+// ── Phase XVI — National Data Truth Engine ────────────────────────────────
+app.use("/api/verified", require("./routes/verifiedData"));
+app.use("/api/placement-reality", require("./routes/placementReality"));
+app.use("/api/trust", require("./routes/trust"));
 app.use("/api", userRoutes);
 
 // ==========================================
