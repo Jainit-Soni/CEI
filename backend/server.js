@@ -1,7 +1,22 @@
 require('dotenv').config({ path: require('path').resolve(__dirname, '.env.local') });
 
-const validateEnv = require('./config/validateEnv');
-validateEnv();
+require("dotenv").config({ path: require("path").resolve(__dirname, ".env.local") });
+
+// ── 1. Lock Environment Validation at Startup ─────────────────────────────
+const requiredEnv = [
+  "JWT_SECRET",
+  "BACKUP_ENCRYPTION_KEY",
+  "MONGODB_URI",
+  "REDIS_URL"
+];
+
+for (const key of requiredEnv) {
+  if (!process.env[key]) {
+    console.error(`FATAL CONFIG ERROR: ${key} is missing`);
+    process.exit(1);
+  }
+}
+// ──────────────────────────────────────────────────────────────────────────
 
 const express = require("express");
 const cors = require("cors");
