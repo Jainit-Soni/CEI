@@ -1,14 +1,16 @@
 "use client";
 
 import { useCompare } from "../lib/CompareContext";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Button from "./Button";
 import "./CompareFloatingBar.css";
 
 export default function CompareFloatingBar() {
     const { compareList, removeFromCompare, setCompareList } = useCompare(); // I'll update context to include setCompareList or clearAll
     const router = useRouter();
+    const pathname = usePathname();
 
+    if (pathname?.startsWith("/admin")) return null;
     if (compareList.length === 0) return null;
 
     const clearAll = () => {

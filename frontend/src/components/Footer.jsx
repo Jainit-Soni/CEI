@@ -1,9 +1,16 @@
-﻿import Link from "next/link";
+﻿"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "./Footer.css";
 import { Twitter, Linkedin, Instagram, ArrowRight, Heart, Mail } from "lucide-react";
 
 export default function Footer() {
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+
+  if (pathname?.startsWith("/admin")) return null;
+
   return (
     <footer className="footer-premium">
       <div className="footer-container">

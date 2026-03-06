@@ -56,6 +56,8 @@ export default function Header() {
   const isActive = (path) => pathname === path || (path !== "/" && pathname?.startsWith(path));
   const hasScores = Object.values(scores || {}).some(v => v > 0);
 
+  if (pathname?.startsWith("/admin")) return null;
+
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Colleges", path: "/colleges" },
