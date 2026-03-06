@@ -67,16 +67,11 @@ export function AuthProvider({ children }) {
                             const { API_BASE } = await import("./api");
                             const axios = (await import("axios")).default;
 
-                            // Mocking a Firebase verify token for easy dev setup
-                            const payload = btoa(JSON.stringify({
-                                uid: firebaseUser.uid,
-                                email: firebaseUser.email,
-                                displayName: firebaseUser.displayName,
-                                photoURL: firebaseUser.photoURL
-                            }));
+                            // Fetch the real, cryptographically secure Firebase JWT token
+                            const idToken = await firebaseUser.getIdToken(true);
 
                             const res = await axios.get(`${API_BASE}/api/auth/sync`, {
-                                headers: { Authorization: `Bearer ${payload}` }
+                                headers: { Authorization: `Bearer ${idToken}` }
                             });
 
                             setUser(res.data.user);
