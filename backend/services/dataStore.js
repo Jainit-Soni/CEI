@@ -19,6 +19,7 @@
 const fs = require("fs");
 const path = require("path");
 const { getRedisClient } = require("../config/redis");
+const College = require("../models/CollegeSchema");
 const logger = (() => {
   try { return require("../lib/logger"); }
   catch { return console; } // Safe fallback during early boot
@@ -226,36 +227,56 @@ async function initializeCache() {
   }
 
   try {
-    logger.info && logger.info("[dataStore] Acquired hydration lock. Loading from disk...");
+    // 1. Load + deduplicate from state JSON files (Premium/Manual data)
+    const jsonColleges = loadStateCollegeFiles();
 
-    // Load + deduplicate from state JSON files
-    const colleges = loadStateCollegeFiles();
+    // 2. Load from MongoDB (Full 68k dataset)
+    logger.info && logger.info("[dataStore] Fetching full dataset from MongoDB...");
+    const mongoColleges = await College.find({}).lean();
+    logger.info && logger.info("[dataStore] Fetched " + mongoColleges.length + " colleges from MongoDB.");
 
-    // Apply admin overrides (additions/deletions)
+    // ── HYBRID MERGE ──
+    // We use a Map to merge. JSON data (curated/premium) overwrites MongoDB data for the same ID.
+    const masterMap = new Map();
+
+    // First populate with MongoDB data
+    mongoColleges.forEach(c => masterMap.set(c.id, c));
+
+    // Then overwrite/add with JSON data (higher quality)
+    jsonColleges.forEach(c => {
+      const existing = masterMap.get(c.id);
+      masterMap.set(c.id, existing ? { ...existing, ...c } : c);
+    });
+
+    // 3. Apply admin overrides (additions/deletions)
     const updates = loadAdminUpdates();
     const deletedSet = new Set(updates.deleted);
 
-    let finalColleges = colleges.filter(c => !deletedSet.has(c.id));
-    const adminMap = new Map(updates.added.map(c => [c.id, c]));
+    // Filter deletions and merge additions
+    const finalCollegesList = Array.from(masterMap.values())
+      .filter(c => !deletedSet.has(c.id))
+      .map(c => {
+        const adminEdit = updates.added.find(a => a.id === c.id);
+        return adminEdit ? { ...c, ...adminEdit } : c;
+      });
 
-    // Merge admin additions / edits
-    finalColleges = finalColleges.map(c => adminMap.has(c.id) ? { ...c, ...adminMap.get(c.id) } : c);
+    // Ensure manual additions that aren't in Map yet are included
     updates.added.forEach(c => {
-      if (!finalColleges.find(f => f.id === c.id)) finalColleges.push(c);
+      if (!masterMap.has(c.id)) finalCollegesList.push(c);
     });
 
     // Set L1 immediately so requests don't wait for Redis pipeline
-    LOCAL_CACHE = finalColleges;
+    LOCAL_CACHE = finalCollegesList;
     LOCAL_LAST_UPDATE = Date.now();
 
     // Load exams
     const exams = loadJson("exams.json") || [];
 
     // Perform blue-green hydration (write to GREEN, swap pointer)
-    const activeKey = await hydrateGreen(redis, finalColleges, exams);
+    const activeKey = await hydrateGreen(redis, LOCAL_CACHE, exams);
 
     logger.info && logger.info("[dataStore] ✅ Cache hydration complete", {
-      colleges: finalColleges.length,
+      colleges: LOCAL_CACHE.length,
       exams: exams.length,
       activeKey
     });
