@@ -84,7 +84,7 @@ export default function AdminPage() {
     // --- RENDER LOGIN SCREEN ---
     if (!isAuthenticated) {
         return (
-            <div className="min-h-screen bg-slate-950 flex items-center justify-center relative overflow-hidden font-sans">
+            <div className="fixed inset-0 z-[99999] bg-slate-900 flex items-center justify-center overflow-hidden font-sans">
                 {/* Dark High-Tech Background */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 blur-[150px] rounded-full mix-blend-screen" />
@@ -137,8 +137,8 @@ export default function AdminPage() {
         <button
             onClick={() => setActiveTab(id)}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold transition-all text-sm mb-2 ${activeTab === id
-                    ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30'
-                    : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200'
+                ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30'
+                : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200'
                 }`}
         >
             <Icon size={18} /> {label}
@@ -146,10 +146,10 @@ export default function AdminPage() {
     );
 
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans">
+        <div className="fixed inset-0 z-[99999] bg-slate-50 flex flex-col md:flex-row font-sans overflow-y-auto w-full h-full">
 
             {/* --- SIDEBAR --- */}
-            <aside className="w-full md:w-64 bg-slate-950 text-white flex flex-col md:min-h-screen shrink-0 sticky top-0 md:h-screen overflow-y-auto">
+            <aside className="w-full md:w-64 bg-slate-900 text-white flex flex-col md:min-h-screen shrink-0 sticky top-0 md:h-screen overflow-y-auto">
                 <div className="p-6 pb-2 border-b border-white/10 flex items-center justify-between md:justify-start gap-4">
                     <div className="flex items-center gap-3">
                         <div className="bg-indigo-600 p-2 rounded-lg shadow-[0_0_15px_rgba(99,102,241,0.5)]">
@@ -369,8 +369,8 @@ export default function AdminPage() {
                                                 <td className="p-4 text-sm font-medium text-slate-600">{row.type}</td>
                                                 <td className="p-4">
                                                     <span className={`px-2 py-1 rounded-md text-xs font-black uppercase ${row.severity === 'High' ? 'bg-red-100 text-red-700' :
-                                                            row.severity === 'Medium' ? 'bg-amber-100 text-amber-700' :
-                                                                'bg-emerald-100 text-emerald-700'
+                                                        row.severity === 'Medium' ? 'bg-amber-100 text-amber-700' :
+                                                            'bg-emerald-100 text-emerald-700'
                                                         }`}>
                                                         {row.severity}
                                                     </span>
@@ -393,8 +393,8 @@ export default function AdminPage() {
                 {/* --- TAB CONTENT: SYSTEM LOGS (MOCK) --- */}
                 {activeTab === "logs" && (
                     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                        <div className="bg-slate-950 rounded-3xl border border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.1)] overflow-hidden">
-                            <div className="p-4 border-b border-slate-800 flex items-center gap-3 bg-slate-900/50">
+                        <div className="bg-slate-900 rounded-3xl border border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.1)] overflow-hidden">
+                            <div className="p-4 border-b border-slate-800 flex items-center gap-3 bg-slate-800/50">
                                 <div className="flex gap-2">
                                     <div className="w-3 h-3 rounded-full bg-rose-500"></div>
                                     <div className="w-3 h-3 rounded-full bg-amber-500"></div>
