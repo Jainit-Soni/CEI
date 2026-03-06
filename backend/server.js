@@ -60,6 +60,17 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 // ==========================================
+// 🛣️ URL NORMALIZATION MIDDLEWARE
+// ==========================================
+// Replaces multiple slashes (//) with a single slash (/) to prevent redirects that break CORS.
+app.use((req, res, next) => {
+  if (req.url.includes("//")) {
+    req.url = req.url.replace(/\/+/g, "/");
+  }
+  next();
+});
+
+// ==========================================
 // 🛡️ SECURITY & INFRASTRUCTURE MIDDLEWARE
 // ==========================================
 app.set("trust proxy", 1); // Trust Vercel's reverse proxy for accurate client IP detection
