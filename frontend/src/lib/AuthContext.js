@@ -81,7 +81,11 @@ export function AuthProvider({ children }) {
 
                             setUser(res.data.user);
                         } catch (syncErr) {
-                            console.error("[Auth] Sync with MongoDB failed:", syncErr);
+                            if (syncErr.response?.status === 503) {
+                                console.warn("[Auth] Backend auth sync is unconfigured or temporarily unavailable. Using local Firebase session.");
+                            } else {
+                                console.error("[Auth] Sync with MongoDB failed:", syncErr.message || syncErr);
+                            }
                             // Fallback to purely firebase if backend is down
                             setUser(firebaseUser);
                         }
