@@ -359,7 +359,7 @@ router.get("/audit-log", async (req, res) => {
     }
 });
 
-// ── Whoami (frontend uses this to verify token is valid post-login) ────────────
+// ── Whoami ───────────────────────────────────────────────────────────────────
 
 router.get("/me", (req, res) => {
     res.json({
@@ -368,6 +368,95 @@ router.get("/me", (req, res) => {
         picture: req.admin.picture,
         uid: req.admin.uid,
     });
+});
+
+// ── Dashboard Stats — Real live data, zero fake numbers ──────────────────────
+
+router.get("/dashboard/stats", async (req, res) => {
+    try {
+        const now = new Date();
+        const since24h = new Date(now - 24 * 60 * 60 * 1000);
+        const since48h = new Date(now - 48 * 60 * 60 * 1000);
+
+        // Load all models lazily (some may not exist in all envs)
+        let Anomaly, Verification, CollegeData;
+        try { Anomaly = require('../models/AnomalySchema'); } catch { }
+        try { Verification = require('../models/VerificationTask'); } catch { }
+
+        // Parallel real DB queries
+        const [
+            totalColleges,
+            pendingReports,
+            prev24hReports,
+            openAnomalies,
+            auditLast24h,
+            auditPrev24h,
+            recentAuditLogs,
+        ] = await Promise.all([
+            College.countDocuments().lean(),
+            TrustReport.countDocuments({ status: 'pending' }),
+            TrustReport.countDocuments({ status: 'pending', createdAt: { $gte: since48h, $lt: since24h } }),
+            Anomaly ? Anomaly.countDocuments({ status: { $ne: 'resolved' }, anomalyScore: { $gt: 0 } }) : 0,
+            AdminAuditLog.countDocuments({ timestamp: { $gte: since24h } }),
+            AdminAuditLog.countDocuments({ timestamp: { $gte: since48h, $lt: since24h } }),
+            AdminAuditLog.find({ timestamp: { $gte: since24h } })
+                .sort({ timestamp: -1 }).limit(200).lean(),
+        ]);
+
+        // Build hourly bucket chart data (last 24h, 1h buckets)
+        const hourBuckets = Array.from({ length: 24 }, (_, i) => {
+            const bucketStart = new Date(now - (23 - i) * 60 * 60 * 1000);
+            const bucketEnd = new Date(bucketStart.getTime() + 60 * 60 * 1000);
+            const count = recentAuditLogs.filter(l => {
+                const t = new Date(l.timestamp);
+                return t >= bucketStart && t < bucketEnd;
+            }).length;
+            return {
+                time: bucketStart.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: false }),
+                actions: count,
+            };
+        });
+
+        // Recent unique page routes (from audit log — what admins were looking at)
+        const recentActivity = recentAuditLogs.slice(0, 20).map(l => ({
+            action: l.action,
+            resource: l.resource,
+            adminEmail: l.adminEmail,
+            timestamp: l.timestamp,
+            method: l.method,
+        }));
+
+        // Redis cache stats
+        let cacheHitRate = null;
+        try {
+            const { getRedisClient } = require('../config/redis');
+            const redis = await getRedisClient();
+            if (redis) {
+                const info = await redis.info('stats');
+                const hits = parseInt(info.match(/keyspace_hits:(\d+)/)?.[1] || 0);
+                const misses = parseInt(info.match(/keyspace_misses:(\d+)/)?.[1] || 0);
+                const total = hits + misses;
+                cacheHitRate = total > 0 ? ((hits / total) * 100).toFixed(1) : null;
+            }
+        } catch { }
+
+        res.json({
+            kpis: {
+                totalColleges,
+                pendingReports,
+                pendingReportsDelta: pendingReports - prev24hReports,   // +N means more in queue
+                openAnomalies,
+                adminActions24h: auditLast24h,
+                adminActionsDelta: auditLast24h - auditPrev24h,
+                cacheHitRate,
+            },
+            chart: hourBuckets,
+            recentActivity,
+            generatedAt: now.toISOString(),
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 module.exports = router;
