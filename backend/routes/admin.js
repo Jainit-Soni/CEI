@@ -328,15 +328,23 @@ router.get("/ranking-cache", async (req, res) => {
 
 router.get("/anomalies", async (req, res) => {
     try {
-        const Anomaly = require('../models/AnomalySchema');
+        const Anomaly = require('../models/AnomalyAlert');
         const { page = 1, limit = 50, status } = req.query;
         const skip = (parseInt(page) - 1) * parseInt(limit);
-        const filter = status ? { status } : { anomalyScore: { $gt: 0 } };
+        const filter = status && status !== 'all' ? { status } : { zScore: { $ne: null } };
 
-        const [anomalies, total] = await Promise.all([
-            Anomaly.find(filter).sort({ anomalyScore: -1 }).skip(skip).limit(parseInt(limit)).lean(),
+        const [alerts, total] = await Promise.all([
+            Anomaly.find(filter).sort({ detectedAt: -1 }).skip(skip).limit(parseInt(limit)).lean(),
             Anomaly.countDocuments(filter),
         ]);
+
+        // Map for frontend compatibility
+        const anomalies = alerts.map(a => ({
+            ...a,
+            anomalyScore: a.zScore ? Math.abs(a.zScore * 20) : 0, // Mocked until formal score is added
+            anomalyType: a.alertType,
+        }));
+
         res.json({ anomalies, total });
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -379,9 +387,8 @@ router.get("/dashboard/stats", async (req, res) => {
         const since48h = new Date(now - 48 * 60 * 60 * 1000);
 
         // Load all models lazily (some may not exist in all envs)
-        let Anomaly, Verification, CollegeData;
-        try { Anomaly = require('../models/AnomalySchema'); } catch { }
-        try { Verification = require('../models/VerificationTask'); } catch { }
+        let Anomaly;
+        try { Anomaly = require('../models/AnomalyAlert'); } catch { }
 
         // Parallel real DB queries
         const [
@@ -396,7 +403,7 @@ router.get("/dashboard/stats", async (req, res) => {
             College.countDocuments().lean(),
             TrustReport.countDocuments({ status: 'pending' }),
             TrustReport.countDocuments({ status: 'pending', createdAt: { $gte: since48h, $lt: since24h } }),
-            Anomaly ? Anomaly.countDocuments({ status: { $ne: 'resolved' }, anomalyScore: { $gt: 0 } }) : 0,
+            Anomaly ? Anomaly.countDocuments({ status: 'open' }) : 0,
             AdminAuditLog.countDocuments({ timestamp: { $gte: since24h } }),
             AdminAuditLog.countDocuments({ timestamp: { $gte: since48h, $lt: since24h } }),
             AdminAuditLog.find({ timestamp: { $gte: since24h } })

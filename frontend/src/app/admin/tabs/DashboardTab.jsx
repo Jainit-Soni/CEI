@@ -132,12 +132,12 @@ export default function DashboardTab({ adminFetch }) {
                     Admin Activity — Last 24 Hours (hourly)
                 </h3>
                 {loading ? (
-                    <div style={{ height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8', fontSize: '0.875rem' }}>
+                    <div style={{ height: 220, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8', fontSize: '0.875rem' }}>
                         Loading…
                     </div>
                 ) : (
-                    <div style={{ width: '100%', height: 220 }}>
-                        <ResponsiveContainer width="100%" height="100%">
+                    <div style={{ width: '100%', height: 220, minWidth: 0, minHeight: 220 }}>
+                        <ResponsiveContainer width="100%" height="100%" minHeight={220}>
                             <AreaChart data={data?.chart ?? []} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                                 <defs>
                                     <linearGradient id="colorActions" x1="0" y1="0" x2="0" y2="1">
