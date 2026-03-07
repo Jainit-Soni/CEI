@@ -76,8 +76,10 @@ function normalise(val) {
 // ── Transform MongoDB doc → compact ranking entry ─────────────────────────────
 
 function toRankingEntry(doc) {
+    const idStr = doc._id ? doc._id.toString() : doc.id;
     return {
-        collegeId: doc.id,
+        id: idStr,
+        collegeId: idStr,
         name: doc.name,
         shortName: doc.shortName || null,
         state: doc.state || null,

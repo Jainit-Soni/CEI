@@ -239,7 +239,10 @@ router.get("/colleges", async (req, res) => {
     const totalPages = Math.ceil(totalCount / limitNum);
 
     const result = {
-      data: colleges,
+      data: colleges.map(c => ({
+        ...c,
+        id: c._id ? c._id.toString() : c.id
+      })),
       pagination: {
         page: pageNum,
         limit: limitNum,
