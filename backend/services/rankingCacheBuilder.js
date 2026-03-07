@@ -90,24 +90,18 @@ function toRankingEntry(doc) {
 
 // ── Core: build and store one ranking key ─────────────────────────────────────
 
-/**
- * buildOne(redis, filter, sortField, redisKey)
- *
- * Queries MongoDB with `filter`, sorts by `sortField` descending,
- * takes top 200, transforms, and stores JSON array in Redis.
- *
- * @returns {number} number of entries written
- */
-async function buildOne(redis, filter, sortField, redisKey) {
+async function buildOne(redis, filter, sortField, redisKey, countFilter = null) {
     const mongoSort = {};
     mongoSort[sortField] = -1;
+
+    const actualCountFilter = countFilter || filter;
 
     const [docs, totalCount] = await Promise.all([
         College.find(filter, RANKING_PROJECTION)
             .sort(mongoSort)
             .limit(TOP_N)
             .lean(),
-        College.countDocuments(filter)
+        College.countDocuments(actualCountFilter)
     ]);
 
     if (docs.length === 0) return 0;
@@ -149,11 +143,13 @@ async function rebuildAll() {
     logger.info('[RankingCache] Building global rankings...');
     const globalCeiCount = await buildOne(
         redis, { ceiScore: { $ne: null } },
-        'ceiScore', 'ranking:global:ceiScore'
+        'ceiScore', 'ranking:global:ceiScore',
+        {} // Count base: All colleges globally
     );
     const globalPlacementCount = await buildOne(
         redis, { 'placements.highestPackageNumeric': { $gt: 0 } },
-        'placements.highestPackageNumeric', 'ranking:global:placement'
+        'placements.highestPackageNumeric', 'ranking:global:placement',
+        {} // Count base: All colleges globally
     );
     breakdown.global = { ceiScore: globalCeiCount, placement: globalPlacementCount };
     keysBuilt += 2;
@@ -165,11 +161,13 @@ async function rebuildAll() {
         const n = normalise(state);
         await buildOne(
             redis, { state: n, ceiScore: { $ne: null } },
-            'ceiScore', rankingKey('state', n, 'ceiScore')
+            'ceiScore', rankingKey('state', n, 'ceiScore'),
+            { state: n }
         );
         await buildOne(
             redis, { state: n, 'placements.highestPackageNumeric': { $gt: 0 } },
-            'placements.highestPackageNumeric', rankingKey('state', n, 'placement')
+            'placements.highestPackageNumeric', rankingKey('state', n, 'placement'),
+            { state: n }
         );
         stateKeys += 2;
     }
@@ -182,7 +180,8 @@ async function rebuildAll() {
     for (const tier of TIERS) {
         await buildOne(
             redis, { rankingTier: tier, ceiScore: { $ne: null } },
-            'ceiScore', rankingKey('tier', normalise(tier), 'ceiScore')
+            'ceiScore', rankingKey('tier', normalise(tier), 'ceiScore'),
+            { rankingTier: tier }
         );
         tierKeys++;
     }
@@ -199,7 +198,8 @@ async function rebuildAll() {
             'placements.highestPackageNumeric': { $gt: 0 }
         },
             'placements.highestPackageNumeric',
-            rankingKey('band', normalise(band), 'placement')
+            rankingKey('band', normalise(band), 'placement'),
+            { competitivenessBand: band }
         );
         bandKeys++;
     }
