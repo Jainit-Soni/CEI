@@ -102,14 +102,21 @@ async function buildOne(redis, filter, sortField, redisKey) {
     const mongoSort = {};
     mongoSort[sortField] = -1;
 
-    const docs = await College.find(filter, RANKING_PROJECTION)
-        .sort(mongoSort)
-        .limit(TOP_N)
-        .lean();
+    const [docs, totalCount] = await Promise.all([
+        College.find(filter, RANKING_PROJECTION)
+            .sort(mongoSort)
+            .limit(TOP_N)
+            .lean(),
+        College.countDocuments(filter)
+    ]);
 
     if (docs.length === 0) return 0;
 
-    const payload = JSON.stringify(docs.map(toRankingEntry));
+    const payload = JSON.stringify({
+        data: docs.map(toRankingEntry),
+        totalCount
+    });
+
     await redis.set(redisKey, payload, 'EX', RANKING_TTL);
     return docs.length;
 }

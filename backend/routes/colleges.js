@@ -176,8 +176,13 @@ router.get("/colleges", async (req, res) => {
         const cached = await rankingCache.getRanking(rankKey);
 
         if (cached !== null) {
+          // Backwards compatibility check: If it's an array (old data), adapt it
+          const isOldFormat = Array.isArray(cached);
+          const cacheData = isOldFormat ? cached : cached.data;
+          const totalCount = isOldFormat ? cacheData.length : cached.totalCount;
+
           // Slice for pagination within the precomputed top-200
-          const pageSlice = cached.slice(0, limitNum);
+          const pageSlice = cacheData.slice(0, limitNum);
           res.set('X-Cache', 'RANKING-HIT');
           res.set('X-Cache-Key', rankKey);
           return res.json({
@@ -185,9 +190,9 @@ router.get("/colleges", async (req, res) => {
             pagination: {
               page: 1,
               limit: limitNum,
-              totalCount: cached.length,
-              totalPages: Math.ceil(cached.length / limitNum),
-              hasNext: cached.length > limitNum,
+              totalCount: totalCount,
+              totalPages: Math.ceil(totalCount / limitNum),
+              hasNext: totalCount > limitNum,
               hasPrev: false,
               source: 'ranking_cache',
             },
