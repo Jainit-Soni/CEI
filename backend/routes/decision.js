@@ -106,9 +106,8 @@ router.post('/recommend', rateLimit, async (req, res) => {
         careerGoal: req.body.careerGoal || 'job',
     };
 
-    // ── Redis cache check ───────────────────────────────────────────────────
-    const hash = crypto.createHash('sha256').update(JSON.stringify(inputs)).digest('hex').slice(0, 16);
-    const cacheKey = `decision:${hash}`;
+    // ── Readable Redis cache key ────────────────────────────────────────────
+    const cacheKey = `decision:${inputs.rank}:${inputs.preferredBranch}:${inputs.preferredState || 'any'}:${inputs.budgetPerYear}:${inputs.collegeType}:${inputs.careerGoal}`.toLowerCase().replace(/\s+/g, '-');
 
     const cached = await cacheGet(cacheKey);
     if (cached) {
@@ -119,7 +118,7 @@ router.post('/recommend', rateLimit, async (req, res) => {
     try {
         const result = await runDecisionEngine(inputs, 10);
 
-        await cacheSet(cacheKey, result, 3600); // 1h TTL
+        await cacheSet(cacheKey, result, 21600); // 6h TTL
 
         return res.json({ source: 'engine', ...result });
     } catch (err) {
