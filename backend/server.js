@@ -1,7 +1,5 @@
 require('dotenv').config({ path: require('path').resolve(__dirname, '.env.local') });
 
-require("dotenv").config({ path: require("path").resolve(__dirname, ".env.local") });
-
 // ── 1. Lock Environment Validation at Startup ─────────────────────────────
 const requiredEnv = [
   "JWT_SECRET",

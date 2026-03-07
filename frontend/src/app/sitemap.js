@@ -1,6 +1,7 @@
 import { fetchExams } from '@/lib/api';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://ce-intelligence-backend.vercel.app').replace(/\/$/, '');
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://ce-intelligence-eight.vercel.app').replace(/\/$/, '');
 const SITEMAP_LIMIT = 10000;
 const TOTAL_COLLEGES_APPROX = 67000;
 
@@ -15,7 +16,7 @@ export async function generateSitemaps() {
 }
 
 export default async function sitemap({ id }) {
-    const baseUrl = 'https://frontend-blond-nu-51.vercel.app';
+    const baseUrl = SITE_URL;
     const pageId = id === undefined ? 0 : Number(id);
     const items = [];
 
@@ -30,6 +31,7 @@ export default async function sitemap({ id }) {
             '/guide',
             '/privacy',
             '/terms',
+            '/decision',
         ].map((route) => ({
             url: `${baseUrl}${route}`,
             lastModified: new Date(),

@@ -15,6 +15,31 @@ const router = express.Router();
 const { runDecisionEngine } = require('../services/decisionEngine');
 const { getRedisClient } = require('../config/redis');
 
+// ── In-memory Rate Limiter (20 req/min per IP, no extra deps) ────────────────
+const _rlMap = new Map();
+const RL_WINDOW_MS = 60_000;
+const RL_MAX = 20;
+setInterval(() => _rlMap.clear(), RL_WINDOW_MS);
+
+function rateLimit(req, res, next) {
+    const ip = req.ip || req.headers['x-forwarded-for'] || 'unknown';
+    const now = Date.now();
+    const entry = _rlMap.get(ip) || { count: 0, start: now };
+
+    if (now - entry.start > RL_WINDOW_MS) {
+        _rlMap.set(ip, { count: 1, start: now });
+        return next();
+    }
+
+    entry.count++;
+    _rlMap.set(ip, entry);
+
+    if (entry.count > RL_MAX) {
+        return res.status(429).json({ error: 'Too many requests. Please wait a moment before retrying.' });
+    }
+    next();
+}
+
 // ── Cache helpers ─────────────────────────────────────────────────────────────
 
 async function cacheGet(key) {
@@ -39,7 +64,7 @@ const VALID_CAREER_GOALS = ['job', 'research', 'startup', 'abroad'];
 
 function validateInputs(body) {
     const errors = [];
-    const { rank, budgetPerYear, preferredBranch, collegeType, careerGoal } = body;
+    const { rank, budgetPerYear, preferredBranch, preferredState, collegeType, careerGoal } = body;
 
     if (!rank || typeof rank !== 'number' || rank < 1 || rank > 10_000_000) {
         errors.push('rank must be a number between 1 and 10,000,000');
@@ -49,6 +74,11 @@ function validateInputs(body) {
     }
     if (!preferredBranch || typeof preferredBranch !== 'string' || preferredBranch.trim().length < 2) {
         errors.push('preferredBranch is required (e.g. "Computer Science")');
+    } else if (!/^[a-zA-Z0-9 &\/\-().]+$/.test(preferredBranch.trim())) {
+        errors.push('preferredBranch contains invalid characters');
+    }
+    if (preferredState != null && typeof preferredState === 'string' && !/^[a-zA-Z &\-]+$/.test(preferredState.trim())) {
+        errors.push('preferredState contains invalid characters');
     }
     if (collegeType && !VALID_COLLEGE_TYPES.includes(collegeType)) {
         errors.push(`collegeType must be one of: ${VALID_COLLEGE_TYPES.join(', ')}`);
@@ -61,7 +91,7 @@ function validateInputs(body) {
 
 // ── POST /api/decision/recommend ──────────────────────────────────────────────
 
-router.post('/recommend', async (req, res) => {
+router.post('/recommend', rateLimit, async (req, res) => {
     const errors = validateInputs(req.body);
     if (errors.length > 0) {
         return res.status(400).json({ error: 'Invalid input', details: errors });
