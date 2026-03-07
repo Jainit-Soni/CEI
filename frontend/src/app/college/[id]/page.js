@@ -9,7 +9,8 @@ export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
   try {
-    const college = await fetchCollege(params.id);
+    const { id } = await params;
+    const college = await fetchCollege(id);
     if (!college) return { title: "College Not Found" };
 
     return {
@@ -29,8 +30,9 @@ export async function generateMetadata({ params }) {
 
 export default async function CollegeDetail({ params }) {
   let college = null;
+  const { id } = await params;
   try {
-    college = await fetchCollege(params.id);
+    college = await fetchCollege(id);
   } catch (error) {
     console.error("[CollegeDetail] Failed to fetch initial data:", error.message);
     // Fallback: college remains null, letting CollegeDetailClient handle it
@@ -44,8 +46,8 @@ export default async function CollegeDetail({ params }) {
     "@type": "EducationalOrganization",
     "name": college.name,
     "description": college.shortDescription || `Detailed information about ${college.name}`,
-    "url": `https://frontend-blond-nu-51.vercel.app/college/${params.id}`,
-    "logo": college.logo || "https://frontend-blond-nu-51.vercel.app/logo.png",
+    "url": `https://ce-intelligence-eight.vercel.app/college/${id}`,
+    "logo": college.logo || "https://ce-intelligence-eight.vercel.app/logo.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": college.district || "Unknown City",
@@ -64,7 +66,7 @@ export default async function CollegeDetail({ params }) {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <CollegeDetailClient id={params.id} initialData={college} />
+      <CollegeDetailClient id={id} initialData={college} />
     </>
   );
 }

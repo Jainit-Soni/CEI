@@ -21,6 +21,7 @@ const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
 const helmet = require("helmet");
+const morgan = require("morgan");
 const { rateLimit } = require("express-rate-limit");
 const apiKeyAuth = require("./middleware/apiKeys");
 const requestLogger = require("./middleware/requestLogger");
@@ -47,6 +48,23 @@ const connectDB = require("./config/db");
 const { getRedisClient } = require("./config/redis");
 const logger = require("./lib/logger");
 const scheduler = require("./lib/scheduler");
+
+// ── Sentry Backend Error Monitoring ──────────────────────────────────────────
+let Sentry = null;
+if (process.env.SENTRY_DSN) {
+  try {
+    Sentry = require("@sentry/node");
+    Sentry.init({
+      dsn: process.env.SENTRY_DSN,
+      environment: process.env.NODE_ENV || "production",
+      tracesSampleRate: 0.2, // 20% of transactions for performance tracing
+    });
+    console.log("✅ Sentry backend monitoring active");
+  } catch (e) {
+    console.warn("⚠️  Sentry failed to initialize:", e.message);
+    Sentry = null;
+  }
+}
 
 const app = express();
 
@@ -133,6 +151,11 @@ if (process.env.NODE_ENV !== 'test' && !isMaintenanceMode) {
 app.set("trust proxy", 1); // Trust Vercel's reverse proxy for accurate client IP detection
 app.use(helmet());          // Secure HTTP headers against common web vulnerabilities
 app.use(compression());     // Enable gzip compression to reduce payload sizes
+
+// ── Morgan HTTP Request Logging ───────────────────────────────────────────────
+// Logs every request: method, URL, status, latency, user-agent.
+// Helps track API abuse, slow routes, and traffic spikes in Vercel logs.
+app.use(morgan("combined"));
 
 app.use(express.json({ limit: "1mb" })); // Limit body size to prevent memory attacks
 

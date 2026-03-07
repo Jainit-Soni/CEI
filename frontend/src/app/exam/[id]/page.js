@@ -8,7 +8,8 @@ import { fetchExam } from "@/lib/api";
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
-  const exam = await fetchExam(params.id);
+  const { id } = await params;
+  const exam = await fetchExam(id);
   if (!exam) return { title: "Exam Not Found" };
 
   return {
@@ -22,7 +23,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ExamDetail({ params }) {
-  const exam = await fetchExam(params.id);
+  const { id } = await params;
+  const exam = await fetchExam(id);
 
   /*
     SEO DOMINANCE: Exam Events
@@ -36,7 +38,7 @@ export default async function ExamDetail({ params }) {
         "@type": "Exam",
         "name": exam.name,
         "description": `Entrance exam for ${exam.type} courses.`,
-        "url": `https://frontend-blond-nu-51.vercel.app/exam/${params.id}`,
+        "url": `https://ce-intelligence-eight.vercel.app/exam/${id}`,
         "provider": {
           "@type": "Organization",
           "name": exam.conductingBody || "Exam Authority"
@@ -68,7 +70,7 @@ export default async function ExamDetail({ params }) {
   return (
     <>
       <JsonLd data={jsonLd} />
-      <ExamDetailClient id={params.id} initialData={exam} />
+      <ExamDetailClient id={id} initialData={exam} />
     </>
   );
 }
