@@ -1,6 +1,6 @@
 ﻿import axios from "axios";
 
-export const API_BASE = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000").replace(/\/$/, "");
+export const API_BASE = (process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000")).replace(/\/$/, "");
 
 export const api = axios.create({
   baseURL: API_BASE,

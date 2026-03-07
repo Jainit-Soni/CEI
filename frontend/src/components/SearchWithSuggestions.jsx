@@ -19,7 +19,7 @@ export default function SearchWithSuggestions({
   const listRef = useRef(null);
   const debounceRef = useRef(null);
 
-  const apiBase = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:4000";
+  const apiBase = process.env.NEXT_PUBLIC_API_BASE || process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000");
 
   const fetchSuggestions = useCallback(async (searchQuery) => {
     if (!searchQuery.trim()) {
