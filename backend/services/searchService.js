@@ -111,7 +111,7 @@ async function searchViaMongo(q, { limit = 20, filters = {} } = {}) {
         // Try $text index first
         const results = await College.find(
             { $text: { $search: q }, ...mongoFilters },
-            { score: { $meta: 'textScore' }, id: 1, name: 1, shortName: 1, state: 1, rankingTier: 1, ceiScore: 1, location: 1, _id: 0 }
+            { score: { $meta: 'textScore' }, id: 1, name: 1, shortName: 1, state: 1, rankingTier: 1, ceiScore: 1, location: 1 }
         )
             .sort({ score: { $meta: 'textScore' } })
             .limit(limit)
@@ -119,20 +119,20 @@ async function searchViaMongo(q, { limit = 20, filters = {} } = {}) {
 
         if (results.length > 0) {
             metrics.mongo_searches++;
-            return results;
+            return results.map(r => ({ ...r, id: r._id ? r._id.toString() : r.id }));
         }
 
         // If $text misses (short query), try prefix regex on name
         const regex = { $regex: `^${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, $options: 'i' };
         const prefixResults = await College.find(
             { $or: [{ name: regex }, { shortName: regex }], ...mongoFilters },
-            { id: 1, name: 1, shortName: 1, state: 1, rankingTier: 1, ceiScore: 1, location: 1, _id: 0 }
+            { id: 1, name: 1, shortName: 1, state: 1, rankingTier: 1, ceiScore: 1, location: 1 }
         )
             .limit(limit)
             .lean();
 
         metrics.mongo_searches++;
-        return prefixResults;
+        return prefixResults.map(r => ({ ...r, id: r._id ? r._id.toString() : r.id }));
     } catch (err) {
         logger.warn('[SearchService] MongoDB search error', { error: err.message });
         return [];

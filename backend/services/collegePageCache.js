@@ -110,7 +110,14 @@ async function getCollegePage(id) {
     metrics.misses++;
 
     // Mongo fallback
-    const college = await College.findOne({ id }).lean();
+    let mongoQuery;
+    if (/^[0-9a-fA-F]{24}$/.test(id)) {
+        mongoQuery = { $or: [{ _id: id }, { id }] };
+    } else {
+        mongoQuery = { id };
+    }
+
+    const college = await College.findOne(mongoQuery).lean();
     if (!college) return null;
 
     const payload = await assemblePagePayload(college);

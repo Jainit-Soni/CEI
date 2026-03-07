@@ -298,10 +298,24 @@ router.get("/colleges/batch", async (req, res) => {
   }
 
   try {
-    const colleges = await College.find({ id: { $in: ids } }).lean();
+    const objectIds = ids.filter(id => /^[0-9a-fA-F]{24}$/.test(id));
+
+    // Support both string IDs (legacy) and ObjectIds
+    const colleges = await College.find({
+      $or: [
+        { id: { $in: ids } },
+        { _id: { $in: objectIds } }
+      ]
+    }).lean();
+
+    // Ensure id is present for the map
+    const mappedColleges = colleges.map(c => ({
+      ...c,
+      id: c._id ? c._id.toString() : c.id
+    }));
 
     // Preserve order of incoming IDs
-    const collegeMap = new Map(colleges.map(c => [c.id, c]));
+    const collegeMap = new Map(mappedColleges.map(c => [c.id, c]));
     const orderedColleges = ids.map(id => collegeMap.get(id)).filter(Boolean);
 
     res.json(orderedColleges);
