@@ -211,6 +211,26 @@ collegeSchema.index({ isPremium: -1, name: 1 });
 collegeSchema.index({ rankingTier: 1, isPremium: -1 });
 collegeSchema.index({ rankingTier: -1, isPremium: -1 });
 
+// ── SCHEMA-1: Production-critical compound sort+filter indexes ─────────────
+// These cover the highest-traffic query patterns from the Colleges page.
+// Without these, MongoDB performs a full collection scan on every paginated
+// request that combines a state/band filter with a sort key.
+
+// Pattern: GET /colleges?state=Maharashtra&sortBy=placement
+collegeSchema.index({ state: 1, 'placements.highestPackageNumeric': -1 });
+
+// Pattern: GET /colleges?state=Karnataka&sortBy=popularity
+collegeSchema.index({ state: 1, ceiScore: -1 });
+
+// Pattern: GET /colleges?band=Elite&sortBy=placement
+collegeSchema.index({ competitivenessBand: 1, 'placements.highestPackageNumeric': -1 });
+
+// Pattern: GET /colleges?tier=Tier+1 (most common filter)
+collegeSchema.index({ rankingTier: 1, ceiScore: -1 });
+
+// Partial index for anomaly detection engine queries (only indexes flagged docs)
+collegeSchema.index({ hasOpenAnomalies: 1, lastIntegrityCheck: 1 }, { partialFilterExpression: { hasOpenAnomalies: true } });
+
 const College = mongoose.model('College', collegeSchema);
 
 module.exports = College;

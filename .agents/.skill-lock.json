@@ -1,0 +1,55 @@
+{
+  "version": 3,
+  "skills": {
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "skillFolderHash": "bf90d0a4b83ea054653350f9c67f6de235d3a368",
+      "installedAt": "2026-03-06T12:11:59.138Z",
+      "updatedAt": "2026-03-06T12:11:59.138Z"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "fce8b5a24ff4ff2fc5db6aa1051e03b53c6b5bf1",
+      "installedAt": "2026-03-06T12:11:59.235Z",
+      "updatedAt": "2026-03-06T12:11:59.235Z"
+    },
+    "vercel-react-native-skills": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-native-skills/SKILL.md",
+      "skillFolderHash": "8b4c6a51914e2111ab6f4f00cb81778652aa241d",
+      "installedAt": "2026-03-06T12:11:59.332Z",
+      "updatedAt": "2026-03-06T12:11:59.332Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-03-06T12:12:04.696Z",
+      "updatedAt": "2026-03-06T12:12:04.696Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "antigravity"
+  ]
+}

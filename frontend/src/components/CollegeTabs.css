@@ -74,6 +74,42 @@ h3.tab-heading {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Report data trigger — sits at the far-right of the nav */
+.tab-report-trigger {
+    background: transparent;
+    border: 1.5px solid rgba(234, 88, 12, 0.25);
+    color: #ea580c;
+    padding: 8px 14px;
+    border-radius: 99px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tab-report-trigger:hover {
+    background: rgba(234, 88, 12, 0.08);
+    border-color: #ea580c;
+    color: #c2410c;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+    .tab-report-trigger {
+        font-size: 0;
+        padding: 8px 10px;
+        border-radius: 50%;
+    }
+
+    /* Show only the flag icon on mobile */
+}
+
 /* Overview Section */
 .overview-text {
     font-size: 1.05rem;

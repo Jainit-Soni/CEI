@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import ReviewList from "./ReviewList";
 import Button from "./Button";
 import ReviewModal from "./ReviewModal";
+import ReportDataModal from "./ReportDataModal";
 import IntelligenceRadar from "./IntelligenceRadar";
 import PremiumReviews from "./PremiumReviews";
 import ExplainabilityCard from "./ExplainabilityCard";
@@ -50,6 +51,7 @@ export default function CollegeTabs({ college }) {
     const [activeTab, setActiveTab] = useState("overview");
     const [reviewsData, setReviewsData] = useState({ reviews: [], avgRating: 0, totalReviews: 0 });
     const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+    const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
     const sanitizeCurrency = (val) => {
         if (!val) return "N/A";
@@ -99,6 +101,14 @@ export default function CollegeTabs({ college }) {
                             {tab.label}
                         </button>
                     ))}
+                    {/* Report trigger — persistent, visible on every tab */}
+                    <button
+                        className="tab-report-trigger"
+                        onClick={() => setIsReportModalOpen(true)}
+                        title="Report incorrect data about this college"
+                    >
+                        ⚑ Report Data
+                    </button>
                 </div>
             </div>
 
@@ -303,6 +313,12 @@ export default function CollegeTabs({ college }) {
                 onClose={() => setIsReviewModalOpen(false)}
                 collegeId={college.id}
                 onReviewSubmitted={fetchReviews}
+            />
+
+            <ReportDataModal
+                isOpen={isReportModalOpen}
+                onClose={() => setIsReportModalOpen(false)}
+                college={college}
             />
         </div>
     );

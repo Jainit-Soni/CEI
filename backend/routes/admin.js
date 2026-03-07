@@ -1,68 +1,373 @@
+/**
+ * routes/admin.js — CEI Admin API
+ * ================================
+ * All routes protected by Firebase Google Auth (middleware/adminAuth.js).
+ * Only jainitsoni07@gmail.com and jainit.developer@gmail.com can access.
+ *
+ * Write routes invalidate page + ranking caches immediately on change.
+ */
+
 const express = require("express");
 const router = express.Router();
-const { saveCollege, deleteCollege, getColleges, invalidateCache } = require("../services/dataStore");
+const College = require("../models/CollegeSchema");
+const { invalidateCache } = require("../services/dataStore");
+const cache = require("../services/cache");
+const scheduler = require("../lib/scheduler");
+const rankingCache = require("../services/rankingCacheBuilder");
+const pageCache = require("../services/collegePageCache");
+const adminAuth = require("../middleware/adminAuth");
+const TrustReport = require("../models/TrustReport");
+const AdminAuditLog = require("../models/AdminAuditLog");
 
-// Simple Admin Middleware
-const requireAdmin = (req, res, next) => {
-    const adminSecret = req.headers["x-admin-secret"];
-    // For now, hardcoded secret or env var. 
-    // In production, this should be validated properly or use Firebase Auth token verification.
-    // STRICT SECURITY: No fallback allowed in production
-    const { ADMIN_SECRET } = process.env;
+// Apply adminAuth to ALL routes in this file
+router.use(adminAuth);
 
-    if (!ADMIN_SECRET) {
-        console.error("CRITICAL: ADMIN_SECRET is not set in environment variables.");
-        return res.status(500).json({ error: "Server configuration error" });
-    }
+// ── College CRUD ──────────────────────────────────────────────────────────────
 
-    if (adminSecret !== ADMIN_SECRET) {
-        return res.status(403).json({ error: "Unauthorized" });
-    }
-    next();
-};
-
-// Get all colleges for admin (potentially with more details or without pagination)
-router.get("/colleges", requireAdmin, async (req, res) => {
+// Get all colleges for admin (paginated, with search)
+router.get("/colleges", async (req, res) => {
     try {
-        const colleges = await getColleges();
-        res.json(colleges);
+        const { q, page = 1, limit = 50 } = req.query;
+        const pageNum = Math.max(1, parseInt(page));
+        const limitNum = Math.min(200, Math.max(1, parseInt(limit)));
+        const skip = (pageNum - 1) * limitNum;
+
+        const filter = q
+            ? {
+                $or: [
+                    { name: { $regex: q, $options: "i" } },
+                    { shortName: { $regex: q, $options: "i" } },
+                    { id: { $regex: q, $options: "i" } },
+                ]
+            }
+            : {};
+
+        const [colleges, total] = await Promise.all([
+            College.find(filter)
+                .select("id name shortName location state rankingTier ceiScore")
+                .skip(skip).limit(limitNum).lean(),
+            College.countDocuments(filter)
+        ]);
+
+        res.json({ colleges, total, page: pageNum, limit: limitNum, pages: Math.ceil(total / limitNum) });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
 
-// Create or Update College
-router.post("/colleges", requireAdmin, async (req, res) => {
+// Add a new college
+router.post("/colleges", async (req, res) => {
     try {
-        const collegeData = req.body;
-        if (!collegeData.name) {
-            return res.status(400).json({ error: "College name is required" });
-        }
-        const saved = await saveCollege(collegeData);
-        res.json(saved);
+        const college = new College(req.body);
+        const saved = await college.save();
+
+        await cache.delPattern("mongo:colleges:*");
+        await cache.del(`mongo:college:${saved.id}`);
+        await rankingCache.invalidateForCollege(saved);
+        await pageCache.invalidateCollegePage(saved.id);
+        await invalidateCache().catch(() => { });
+
+        res.status(201).json(saved);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
 
-// Delete College
-router.delete("/colleges/:id", requireAdmin, async (req, res) => {
+// Delete a college
+router.delete("/colleges/:id", async (req, res) => {
     try {
         const { id } = req.params;
-        await deleteCollege(id);
+        const college = await College.findOne({ id }).lean();
+        if (!college) return res.status(404).json({ error: "College not found" });
+
+        await College.deleteOne({ id });
+        await cache.delPattern("mongo:colleges:*");
+        await cache.del(`mongo:college:${id}`);
+        await rankingCache.invalidateForCollege(college);
+        await pageCache.invalidateCollegePage(id);
+        await invalidateCache().catch(() => { });
+
         res.json({ success: true, id });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
-// Invalidate/Refresh Cache
-router.post("/cache/invalidate", requireAdmin, async (req, res) => {
+
+// Update a college
+router.patch("/colleges/:id", async (req, res) => {
     try {
-        await invalidateCache();
-        res.json({ success: true, message: "Cache invalidated and reloaded from disk" });
+        const { id } = req.params;
+        const updates = req.body;
+        delete updates._id; delete updates.__v;
+
+        const updated = await College.findOneAndUpdate(
+            { id },
+            { $set: updates },
+            { new: true, lean: true }
+        );
+        if (!updated) return res.status(404).json({ error: "College not found" });
+
+        await cache.del(`mongo:college:${id}`);
+        await cache.delPattern("mongo:colleges:*");
+        await rankingCache.invalidateForCollege(updated);
+        await pageCache.invalidateCollegePage(id);
+
+        res.json(updated);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
+});
+
+// ── Cache Management ──────────────────────────────────────────────────────────
+
+router.post("/cache/invalidate", async (req, res) => {
+    try {
+        await invalidateCache();
+        await cache.delPattern("mongo:*");
+        res.json({ success: true, message: "Cache invalidated and reloaded from MongoDB" });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Rebuild ranking + page caches
+router.post("/cache/rebuild", async (req, res) => {
+    try {
+        const [rankingResult, pageResult] = await Promise.allSettled([
+            rankingCache.rebuildAll(),
+            pageCache.rebuildAll(),
+        ]);
+        res.json({
+            success: true,
+            ranking: rankingResult.status === 'fulfilled' ? rankingResult.value : { error: rankingResult.reason?.message },
+            page: pageResult.status === 'fulfilled' ? pageResult.value : { error: pageResult.reason?.message },
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.get("/cache-status", async (req, res) => {
+    try {
+        const { getRedisClient } = require("../config/redis");
+        const redis = await getRedisClient();
+        if (!redis) return res.json({ redis: 'unavailable' });
+
+        const info = await redis.info('stats');
+        const keyspaceHits = parseInt(info.match(/keyspace_hits:(\d+)/)?.[1] || 0);
+        const keyspaceMisses = parseInt(info.match(/keyspace_misses:(\d+)/)?.[1] || 0);
+        const total = keyspaceHits + keyspaceMisses;
+
+        res.json({
+            redis: 'connected',
+            keyspaceHits,
+            keyspaceMisses,
+            hitRate: total > 0 ? ((keyspaceHits / total) * 100).toFixed(1) + '%' : 'N/A',
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// ── Background Jobs ───────────────────────────────────────────────────────────
+
+router.get("/jobs", (req, res) => {
+    res.json({
+        jobs: [
+            { name: 'weekly-anomaly-scan', schedule: 'Sunday 02:00 IST', description: 'Z-score + rate anomaly detection across all 68k institutions' },
+            { name: 'monthly-integrity-recompute', schedule: '1st of month 03:00 IST', description: 'Recomputes data integrity scores for all verified fields' },
+            { name: 'freeze-window-check', schedule: 'Daily 09:00 IST', description: 'Checks for expiring scoring freeze windows' },
+            { name: 'daily-report-processing', schedule: 'Daily 01:00 IST', description: 'Processes pending trust reports and creates verification tasks' },
+            { name: 'weekly-placement-scan', schedule: 'Wednesday 03:00 IST', description: 'Runs placement reality detector across all colleges' },
+            { name: 'monthly-full-verification', schedule: '2nd of month 04:00 IST', description: 'Re-verifies all field confidence scores and statuses' },
+            { name: 'rebuild-ranking-caches', schedule: 'Every 12h (00:30 and 12:30 UTC)', description: 'Precomputes top-200 ranking lists for all states, tiers, bands into Redis' },
+            { name: 'rebuild-page-caches', schedule: 'Every 6h (00:45, 06:45, 12:45, 18:45 UTC)', description: 'Precomputes full page payload per college (college+anomalies+integrity) into Redis' },
+            { name: 'sync-meilisearch-index', schedule: 'Daily 02:00 UTC', description: 'Syncs college data into Meilisearch for typo-tolerant instant search (noop if MEILISEARCH_URL not set)' },
+        ]
+    });
+});
+
+router.post("/jobs/trigger/:jobName", async (req, res) => {
+    try {
+        const { jobName } = req.params;
+        const result = await scheduler.triggerJob(jobName);
+        res.json({ success: true, jobName, result });
+    } catch (error) {
+        const status = error.message.startsWith('Unknown job') ? 400 : 500;
+        res.status(status).json({ error: error.message });
+    }
+});
+
+// ── Search Management ─────────────────────────────────────────────────────────
+
+router.get("/search-metrics", async (req, res) => {
+    try {
+        const { getProviderInfo } = require("../services/searchService");
+        res.json(getProviderInfo());
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.post("/search/reindex", async (req, res) => {
+    try {
+        const result = await scheduler.triggerJob('sync-meilisearch-index');
+        res.json({ success: true, result });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// ── System Status ─────────────────────────────────────────────────────────────
+
+router.get("/system/status", async (req, res) => {
+    try {
+        const { getRedisClient } = require("../config/redis");
+        const mongoose = require("mongoose");
+
+        const mongoState = ['disconnected', 'connected', 'connecting', 'disconnecting'][mongoose.connection.readyState] || 'unknown';
+        let redisStatus = 'unavailable';
+        try {
+            const redis = await getRedisClient();
+            if (redis) {
+                await redis.ping();
+                redisStatus = 'connected';
+            }
+        } catch { redisStatus = 'error'; }
+
+        const memUsage = process.memoryUsage();
+
+        res.json({
+            status: 'operational',
+            timestamp: new Date().toISOString(),
+            admin: req.admin.email,
+            services: {
+                mongodb: mongoState,
+                redis: redisStatus,
+            },
+            process: {
+                uptime: Math.floor(process.uptime()),
+                memHeapUsedMB: (memUsage.heapUsed / 1024 / 1024).toFixed(1),
+                memHeapTotalMB: (memUsage.heapTotal / 1024 / 1024).toFixed(1),
+                nodeVersion: process.version,
+            },
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// ── Trust Reports ─────────────────────────────────────────────────────────────
+
+router.get("/reports", async (req, res) => {
+    try {
+        const { status = 'pending', page = 1, limit = 50 } = req.query;
+        const skip = (parseInt(page) - 1) * parseInt(limit);
+
+        const filter = status === 'all' ? {} : { status };
+        const [reports, total] = await Promise.all([
+            TrustReport.find(filter)
+                .sort({ createdAt: -1 })
+                .skip(skip).limit(parseInt(limit))
+                .lean(),
+            TrustReport.countDocuments(filter),
+        ]);
+
+        res.json({ reports, total, page: parseInt(page), limit: parseInt(limit) });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.patch("/report/:id/resolve", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { outcome, reviewNote } = req.body;
+
+        if (!['validated', 'rejected'].includes(outcome)) {
+            return res.status(400).json({ error: 'outcome must be "validated" or "rejected"' });
+        }
+
+        const rp = require('../lib/reportProcessor');
+        const result = await rp.resolveReport(id, outcome, req.admin?.uid);
+        if (reviewNote) {
+            await TrustReport.findByIdAndUpdate(id, { reviewNote, reviewedBy: req.admin.email });
+        }
+
+        res.json({ message: `Report ${outcome}.`, reportId: id, outcome, updatedTrustScore: result.updatedTrustScore });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// ── Ranking Cache Monitor ─────────────────────────────────────────────────────
+
+router.get("/ranking-cache", async (req, res) => {
+    try {
+        const { getRedisClient } = require("../config/redis");
+        const redis = await getRedisClient();
+        if (!redis) return res.json({ available: false });
+
+        const keys = await redis.keys('ranking:*');
+        res.json({
+            available: true,
+            totalKeys: keys.length,
+            keyBreakdown: {
+                global: keys.filter(k => k.startsWith('ranking:global')).length,
+                state: keys.filter(k => k.startsWith('ranking:state')).length,
+                tier: keys.filter(k => k.startsWith('ranking:tier')).length,
+                band: keys.filter(k => k.startsWith('ranking:band')).length,
+            },
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// ── Anomalies ─────────────────────────────────────────────────────────────────
+
+router.get("/anomalies", async (req, res) => {
+    try {
+        const Anomaly = require('../models/AnomalySchema');
+        const { page = 1, limit = 50, status } = req.query;
+        const skip = (parseInt(page) - 1) * parseInt(limit);
+        const filter = status ? { status } : { anomalyScore: { $gt: 0 } };
+
+        const [anomalies, total] = await Promise.all([
+            Anomaly.find(filter).sort({ anomalyScore: -1 }).skip(skip).limit(parseInt(limit)).lean(),
+            Anomaly.countDocuments(filter),
+        ]);
+        res.json({ anomalies, total });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// ── Audit Log ─────────────────────────────────────────────────────────────────
+
+router.get("/audit-log", async (req, res) => {
+    try {
+        const { page = 1, limit = 100 } = req.query;
+        const skip = (parseInt(page) - 1) * parseInt(limit);
+        const logs = await AdminAuditLog.find({})
+            .sort({ timestamp: -1 })
+            .skip(skip).limit(parseInt(limit))
+            .lean();
+        res.json({ logs });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// ── Whoami (frontend uses this to verify token is valid post-login) ────────────
+
+router.get("/me", (req, res) => {
+    res.json({
+        email: req.admin.email,
+        name: req.admin.name,
+        picture: req.admin.picture,
+        uid: req.admin.uid,
+    });
 });
 
 module.exports = router;

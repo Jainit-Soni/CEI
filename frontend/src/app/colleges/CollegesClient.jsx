@@ -8,6 +8,7 @@ import GlassPanel from "@/components/GlassPanel";
 import Button from "@/components/Button";
 import FancySelect from "@/components/FancySelect";
 import EmptyState from "@/components/EmptyState";
+import DebouncedSearchInput from "@/components/DebouncedSearchInput";
 import { Heart, Search } from "lucide-react";
 import { CardSkeleton } from "@/components/Skeleton";
 import Pagination from "@/components/Pagination";
@@ -258,8 +259,8 @@ function CollegesContent({ initialData }) {
         setPage(1);
     }, []);
 
-    const handleSearchChange = useCallback((e) => {
-        setQuery(e.target.value);
+    const handleSearchChange = useCallback((value) => {
+        setQuery(value);
         setPage(1);
     }, []);
 
@@ -387,7 +388,7 @@ function CollegesContent({ initialData }) {
                 <div className="results-grid">
                     {displayColleges.map((college, index) => (
                         <RevealOnScroll key={college.id} delay={index * 30}>
-                            <div className="card-wrapper">
+                            <div className="card-wrapper" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
                                 <Card
                                     type="college"
                                     title={college.shortName || college.name}
@@ -498,10 +499,9 @@ function CollegesContent({ initialData }) {
                         </div>
 
                         <div className="filter-search">
-                            <input
-                                type="search"
+                            <DebouncedSearchInput
                                 className="filter-search-input"
-                                value={query}
+                                initialValue={query}
                                 onChange={handleSearchChange}
                                 placeholder="Search by college, district, or program"
                             />

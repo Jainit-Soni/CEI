@@ -15,6 +15,8 @@
 
 const logger = (() => { try { return require('./logger'); } catch { return console; } })();
 const Incident = require('./incident');
+const { rebuildAll: rebuildRankingCaches } = require('../services/rankingCacheBuilder');
+const { rebuildAll: rebuildPageCaches } = require('../services/collegePageCache');
 
 let initialized = false;
 let cron = null;
@@ -186,6 +188,56 @@ async function jobMonthlyFullVerification() {
     return { total: fields.length, updated };
 }
 
+async function jobRebuildRankingCaches() {
+    const result = await rebuildRankingCaches();
+    if (result.skipped) {
+        logger.warn('[Scheduler] Ranking cache rebuild skipped — Redis unavailable');
+        return result;
+    }
+    logger.info('[Scheduler] Ranking cache rebuilt', {
+        keysBuilt: result.keysBuilt,
+        durationMs: result.durationMs,
+    });
+    return result;
+}
+
+async function jobRebuildPageCaches() {
+    const result = await rebuildPageCaches();
+    if (result.skipped) {
+        logger.warn('[Scheduler] College page cache rebuild skipped — Redis unavailable');
+        return result;
+    }
+    logger.info('[Scheduler] College page cache rebuilt', {
+        built: result.built,
+        skippedWarm: result.skipped,
+        durationMs: result.durationMs,
+    });
+    return result;
+}
+
+async function jobSyncMeiliIndex() {
+    const MEILI_URL = process.env.MEILISEARCH_URL;
+    if (!MEILI_URL) {
+        logger.info('[Scheduler] Meilisearch sync skipped — MEILISEARCH_URL not configured');
+        return { skipped: true };
+    }
+    try {
+        const { spawn } = require('child_process');
+        const path = require('path');
+        const script = path.join(__dirname, '../scripts/meiliSync.js');
+        return await new Promise((resolve, reject) => {
+            const child = spawn(process.execPath, [script], { env: process.env });
+            child.on('close', code => code === 0
+                ? resolve({ synced: true })
+                : reject(new Error(`meiliSync exited with code ${code}`))
+            );
+        });
+    } catch (err) {
+        logger.warn('[Scheduler] Meilisearch sync failed', { error: err.message });
+        return { failed: true, error: err.message };
+    }
+}
+
 // ── Scheduler Initialization ──────────────────────────────────────────────────
 
 function start() {
@@ -233,10 +285,27 @@ function start() {
         scheduled: true, timezone: 'UTC'
     });
 
+    // Every 12 hours at 00:30 and 12:30 UTC — ranking cache precompute
+    c.schedule('30 0,12 * * *', () => runJob('rebuild-ranking-caches', jobRebuildRankingCaches), {
+        scheduled: true, timezone: 'UTC'
+    });
+
+    // Every 6 hours at :45 past — college page aggregation cache
+    // Staggered from ranking cache by 15 min to spread Redis write pressure
+    c.schedule('45 0,6,12,18 * * *', () => runJob('rebuild-page-caches', jobRebuildPageCaches), {
+        scheduled: true, timezone: 'UTC'
+    });
+
+    // Daily at 02:00 UTC — Meilisearch index sync (noop if MEILISEARCH_URL not set)
+    c.schedule('0 2 * * *', () => runJob('sync-meilisearch-index', jobSyncMeiliIndex), {
+        scheduled: true, timezone: 'UTC'
+    });
+
     initialized = true;
     logger.info('[Scheduler] All jobs registered.', {
         jobs: ['weekly-anomaly-scan', 'monthly-integrity-recompute', 'freeze-window-check',
-            'daily-report-processing', 'weekly-placement-scan', 'monthly-full-verification']
+            'daily-report-processing', 'weekly-placement-scan', 'monthly-full-verification',
+            'rebuild-ranking-caches', 'rebuild-page-caches', 'sync-meilisearch-index']
     });
 }
 
@@ -250,7 +319,10 @@ async function triggerJob(jobName) {
         'freeze-window-check': jobFreezeWindowCheck,
         'daily-report-processing': jobDailyReportProcessing,
         'weekly-placement-scan': jobWeeklyPlacementScan,
-        'monthly-full-verification': jobMonthlyFullVerification
+        'monthly-full-verification': jobMonthlyFullVerification,
+        'rebuild-ranking-caches': jobRebuildRankingCaches,
+        'rebuild-page-caches': jobRebuildPageCaches,
+        'sync-meilisearch-index': jobSyncMeiliIndex,
     };
     const fn = JOB_MAP[jobName];
     if (!fn) throw new Error(`Unknown job: ${jobName}. Available: ${Object.keys(JOB_MAP).join(', ')}`);

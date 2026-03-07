@@ -1,88 +1,104 @@
 ﻿const express = require("express");
-const { getColleges, getExams } = require("../services/dataStore");
-const { buildFuse } = require("../services/search");
+const { getExams } = require("../services/dataStore");
+const { search, suggest, getProviderInfo } = require("../services/searchService");
+const cache = require("../services/cache");
 
 const router = express.Router();
 
+/**
+ * GET /api/search?q=...&state=...&tier=...
+ *
+ * Unified search — auto-routes to Meilisearch (5ms, typo-tolerant)
+ * or MongoDB $text index (30ms) depending on environment config.
+ */
 router.get("/search", async (req, res) => {
-  const q = (req.query.q || "").toLowerCase().trim();
-  if (!q) return res.json({ colleges: [], exams: [] });
+  const q = (req.query.q || "").trim();
+  if (!q || q.length > 100) return res.json({ colleges: [], exams: [] });
 
-  const { getCollegeFuse, getExamFuse } = require("../services/search");
+  const filters = {};
+  if (req.query.state) filters.state = req.query.state;
+  if (req.query.tier) filters.tier = req.query.tier;
+  if (req.query.band) filters.band = req.query.band;
 
-  const collegeFuse = await getCollegeFuse();
-  const examFuse = await getExamFuse();
+  const cacheKey = `search:unified:${q.toLowerCase()}:${JSON.stringify(filters)}`;
+  const cached = await cache.get(cacheKey);
+  if (cached) return res.json(cached);
 
-  const collegeResults = collegeFuse.search(q).map((r) => r.item);
-  const examResults = examFuse.search(q).map((r) => r.item);
+  try {
+    const [colleges, exams] = await Promise.all([
+      search(q, { limit: 20, filters }),
+      getExams(),
+    ]);
 
-  res.json({ colleges: collegeResults, exams: examResults });
-});
-
-router.get("/suggest", async (req, res) => {
-  const q = (req.query.q || "").toLowerCase().trim();
-  const typeParam = req.query.type; // college or exam
-  if (!q) return res.json([]);
-
-  const colleges = await getColleges();
-  const exams = await getExams();
-
-  let collegeSuggestions = [];
-  if (!typeParam || typeParam === "college" || typeParam === "all") {
-    collegeSuggestions = colleges
-      .map(c => {
-        const name = (c.name || "").toLowerCase();
-        const short = (c.shortName || "").toLowerCase();
-        let score = 0;
-
-        if (short === q) score += 100;
-        else if (short.startsWith(q)) score += 50;
-        else if (name.startsWith(q)) score += 30;
-        else if (name.includes(q) || short.includes(q)) score += 10;
-
-        const initials = name.split(/\s+/).map(w => w[0]).join("");
-        if (initials.includes(q)) score += 40; // High priority for "ii" -> "IIT" etc
-
-        return { ...c, _score: score };
-      })
-      .filter(c => c._score > 0)
-      .sort((a, b) => b._score - a._score)
-      .slice(0, 8)
-      .map(c => ({
-        id: c.id,
-        name: c.name,
-        location: c.location,
-        type: "college"
-      }));
-  }
-
-  let examSuggestions = [];
-  if (!typeParam || typeParam === "exam" || typeParam === "all") {
-    examSuggestions = exams
-      .map(e => {
+    // Exam search — small dataset, in-memory is fine
+    const qLower = q.toLowerCase();
+    const examResults = exams
+      .filter(e => {
         const name = (e.name || "").toLowerCase();
         const short = (e.shortName || "").toLowerCase();
-        let score = 0;
-
-        if (short === q) score += 100;
-        else if (short.startsWith(q)) score += 50;
-        else if (name.startsWith(q)) score += 30;
-        else if (name.includes(q) || short.includes(q)) score += 10;
-
-        return { ...e, _score: score };
+        return name.includes(qLower) || short.includes(qLower) || short.startsWith(qLower);
       })
-      .filter(e => e._score > 0)
-      .sort((a, b) => b._score - a._score)
-      .slice(0, 8)
-      .map(e => ({
-        id: e.id,
-        name: e.shortName || e.name,
-        fullName: e.name,
-        type: "exam"
-      }));
-  }
+      .slice(0, 8);
 
-  res.json([...collegeSuggestions, ...examSuggestions]);
+    const result = { colleges, exams: examResults };
+    await cache.set(cacheKey, result, 120);
+    res.json(result);
+  } catch (err) {
+    console.error("[search] Error:", err.message);
+    res.status(500).json({ error: "Search failed" });
+  }
+});
+
+/**
+ * GET /api/suggest?q=...&type=college|exam|all
+ *
+ * Lightweight typeahead — returns compact id/name/location objects.
+ */
+router.get("/suggest", async (req, res) => {
+  const q = (req.query.q || "").trim();
+  const typeParam = req.query.type;
+  if (!q || q.length > 100) return res.json([]);
+
+  const cacheKey = `suggest:v2:${typeParam || 'all'}:${q.toLowerCase()}`;
+  const cached = await cache.get(cacheKey);
+  if (cached) return res.json(cached);
+
+  try {
+    let collegeSuggestions = [];
+    if (!typeParam || typeParam === "college" || typeParam === "all") {
+      collegeSuggestions = await suggest(q);
+    }
+
+    let examSuggestions = [];
+    if (!typeParam || typeParam === "exam" || typeParam === "all") {
+      const exams = await getExams();
+      const qLower = q.toLowerCase();
+      examSuggestions = exams
+        .filter(e => {
+          const name = (e.name || "").toLowerCase();
+          const short = (e.shortName || "").toLowerCase();
+          return short === qLower || short.startsWith(qLower) || name.startsWith(qLower) || name.includes(qLower);
+        })
+        .slice(0, 5)
+        .map(e => ({ id: e.id, name: e.shortName || e.name, fullName: e.name, type: "exam" }));
+    }
+
+    const result = [...collegeSuggestions, ...examSuggestions];
+    await cache.set(cacheKey, result, 60);
+    res.json(result);
+  } catch (err) {
+    console.error("[suggest] Error:", err.message);
+    res.status(500).json({ error: "Suggest failed" });
+  }
+});
+
+/**
+ * GET /api/search/provider — diagnostic endpoint
+ *
+ * Returns which search backend is active (meilisearch | mongodb) and its metrics.
+ */
+router.get("/search/provider", (req, res) => {
+  res.json(getProviderInfo());
 });
 
 module.exports = router;

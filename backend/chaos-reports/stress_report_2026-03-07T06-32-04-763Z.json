@@ -1,0 +1,226 @@
+{
+  "runAt": "2026-03-07T06:32:04.764Z",
+  "baseUrl": "http://localhost:4000",
+  "mode": "quick",
+  "stages": [
+    50,
+    100,
+    500
+  ],
+  "goal": {
+    "p95_ms": 150,
+    "p99_ms": 400,
+    "max_error_rate": 0.02
+  },
+  "passed": false,
+  "endpoints": [
+    {
+      "id": "A",
+      "label": "Search Queries",
+      "description": "GET /api/search?q=...",
+      "stages": [
+        {
+          "concurrency": 50,
+          "label": "Search Queries",
+          "count": 100,
+          "errorCount": 100,
+          "errorRate": 1,
+          "p50": 20,
+          "p75": 20,
+          "p95": 21,
+          "p99": 22,
+          "min": 17,
+          "max": 22,
+          "avg": 20,
+          "cacheHits": 0
+        },
+        {
+          "concurrency": 100,
+          "label": "Search Queries",
+          "count": 100,
+          "errorCount": 100,
+          "errorRate": 1,
+          "p50": 29,
+          "p75": 31,
+          "p95": 31,
+          "p99": 31,
+          "min": 28,
+          "max": 31,
+          "avg": 30,
+          "cacheHits": 0
+        },
+        {
+          "concurrency": 500,
+          "label": "Search Queries",
+          "count": 500,
+          "errorCount": 500,
+          "errorRate": 1,
+          "p50": 143,
+          "p75": 146,
+          "p95": 149,
+          "p99": 150,
+          "min": 137,
+          "max": 150,
+          "avg": 143,
+          "cacheHits": 0
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "label": "College List",
+      "description": "GET /api/colleges?page=N",
+      "stages": [
+        {
+          "concurrency": 50,
+          "label": "College List",
+          "count": 100,
+          "errorCount": 100,
+          "errorRate": 1,
+          "p50": 19,
+          "p75": 20,
+          "p95": 20,
+          "p99": 21,
+          "min": 18,
+          "max": 21,
+          "avg": 19,
+          "cacheHits": 0
+        },
+        {
+          "concurrency": 100,
+          "label": "College List",
+          "count": 100,
+          "errorCount": 100,
+          "errorRate": 1,
+          "p50": 29,
+          "p75": 30,
+          "p95": 31,
+          "p99": 31,
+          "min": 28,
+          "max": 31,
+          "avg": 29,
+          "cacheHits": 0
+        },
+        {
+          "concurrency": 500,
+          "label": "College List",
+          "count": 500,
+          "errorCount": 500,
+          "errorRate": 1,
+          "p50": 142,
+          "p75": 144,
+          "p95": 147,
+          "p99": 147,
+          "min": 137,
+          "max": 147,
+          "avg": 142,
+          "cacheHits": 0
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "College Detail Page",
+      "description": "GET /api/college/:id",
+      "stages": [
+        {
+          "concurrency": 50,
+          "label": "College Detail Page",
+          "count": 100,
+          "errorCount": 100,
+          "errorRate": 1,
+          "p50": 19,
+          "p75": 19,
+          "p95": 20,
+          "p99": 20,
+          "min": 17,
+          "max": 20,
+          "avg": 18,
+          "cacheHits": 0
+        },
+        {
+          "concurrency": 100,
+          "label": "College Detail Page",
+          "count": 100,
+          "errorCount": 100,
+          "errorRate": 1,
+          "p50": 27,
+          "p75": 27,
+          "p95": 28,
+          "p99": 28,
+          "min": 26,
+          "max": 28,
+          "avg": 27,
+          "cacheHits": 0
+        },
+        {
+          "concurrency": 500,
+          "label": "College Detail Page",
+          "count": 500,
+          "errorCount": 500,
+          "errorRate": 1,
+          "p50": 138,
+          "p75": 142,
+          "p95": 146,
+          "p99": 146,
+          "min": 132,
+          "max": 146,
+          "avg": 139,
+          "cacheHits": 0
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "label": "Ranking / Sort Queries",
+      "description": "GET /api/colleges?sortBy=...&...",
+      "stages": [
+        {
+          "concurrency": 50,
+          "label": "Ranking / Sort Queries",
+          "count": 100,
+          "errorCount": 100,
+          "errorRate": 1,
+          "p50": 17,
+          "p75": 17,
+          "p95": 17,
+          "p99": 17,
+          "min": 16,
+          "max": 17,
+          "avg": 17,
+          "cacheHits": 0
+        },
+        {
+          "concurrency": 100,
+          "label": "Ranking / Sort Queries",
+          "count": 100,
+          "errorCount": 100,
+          "errorRate": 1,
+          "p50": 29,
+          "p75": 29,
+          "p95": 30,
+          "p99": 30,
+          "min": 28,
+          "max": 30,
+          "avg": 29,
+          "cacheHits": 0
+        },
+        {
+          "concurrency": 500,
+          "label": "Ranking / Sort Queries",
+          "count": 500,
+          "errorCount": 500,
+          "errorRate": 1,
+          "p50": 150,
+          "p75": 153,
+          "p95": 156,
+          "p99": 156,
+          "min": 144,
+          "max": 157,
+          "avg": 150,
+          "cacheHits": 0
+        }
+      ]
+    }
+  ]
+}

@@ -87,6 +87,26 @@ function getGlowIntensity(count) {
     return "0 0 25px rgba(52, 211, 153, 0.5), 0 0 50px rgba(52, 211, 153, 0.2)";
 }
 
+// Optimization: Hoist static geometry logic to module level (vercel-react-best-practices server-hoist-static-io)
+const STATIC_CONNECTIONS = (() => {
+    const lines = [];
+    const seen = new Set();
+    Object.entries(STATE_NODES).forEach(([from, node]) => {
+        node.connections.forEach(to => {
+            const pair = [from, to].sort().join("-");
+            if (!seen.has(pair) && STATE_NODES[to]) {
+                lines.push({
+                    from, to,
+                    x1: node.x, y1: node.y,
+                    x2: STATE_NODES[to].x, y2: STATE_NODES[to].y
+                });
+                seen.add(pair);
+            }
+        });
+    });
+    return lines;
+})();
+
 export default function MapPage() {
     const router = useRouter();
     const [stateStats, setStateStats] = useState({});
@@ -149,26 +169,6 @@ export default function MapPage() {
         };
     }, [activeState, stateStats]);
 
-    const connections = useMemo(() => {
-        const lines = [];
-        const seen = new Set();
-
-        Object.entries(STATE_NODES).forEach(([from, node]) => {
-            node.connections.forEach(to => {
-                const pair = [from, to].sort().join("-");
-                if (!seen.has(pair) && STATE_NODES[to]) {
-                    lines.push({
-                        from, to,
-                        x1: node.x, y1: node.y,
-                        x2: STATE_NODES[to].x, y2: STATE_NODES[to].y
-                    });
-                    seen.add(pair);
-                }
-            });
-        });
-        return lines;
-    }, []);
-
     const totalStats = useMemo(() => {
         const counts = Object.values(stateStats).map(st => typeof st === 'object' ? (st.count || 0) : (st || 0));
         return {
@@ -215,7 +215,7 @@ export default function MapPage() {
                                 <div className="constellation-map">
                                     {/* Connection Lines */}
                                     <svg className="connections-layer">
-                                        {connections.map((conn, i) => {
+                                        {STATIC_CONNECTIONS.map((conn, i) => {
                                             const isActive = activeState &&
                                                 (conn.from === activeState || conn.to === activeState);
 

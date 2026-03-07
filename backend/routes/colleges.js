@@ -1,6 +1,8 @@
 ﻿const express = require("express");
 const College = require("../models/CollegeSchema");
 const cache = require("../services/cache");
+const rankingCache = require("../services/rankingCacheBuilder");
+const pageCache = require("../services/collegePageCache");
 
 const router = express.Router();
 
@@ -145,6 +147,69 @@ router.get("/colleges", async (req, res) => {
       return res.status(400).json({ error: "Search query too long (max 100 characters)" });
     }
 
+    // ── RANKING CACHE FAST PATH ────────────────────────────────────────────────
+    // For pure ranking queries (no text search, no district filter),
+    // attempt to serve from the precomputed Redis ranking cache.
+    // Expected response time: 5-15ms (Redis) vs 120-160ms (MongoDB sort).
+    const { page, limit, q, district, sortBy, state, tier, band } = req.query;
+    const pageNum = Math.max(1, parseInt(page, 10) || 1);
+    const limitNum = Math.min(100, Math.max(1, parseInt(limit, 10) || 20));
+
+    const isRankingQuery = !q && !district && (sortBy === 'ceiScore' || sortBy === 'placement' || sortBy === 'popularity' || sortBy === 'ranking');
+
+    if (isRankingQuery && pageNum === 1) {
+      // Resolve the canonical Redis key for this dimension
+      const normSortBy = (sortBy === 'popularity' || sortBy === 'ranking') ? 'ceiScore' : sortBy;
+      let rankKey = null;
+
+      if (state && state !== 'All') {
+        rankKey = rankingCache.rankingKey('state', rankingCache.normalise(state), normSortBy);
+      } else if (tier && tier !== 'All') {
+        rankKey = rankingCache.rankingKey('tier', rankingCache.normalise(tier), normSortBy);
+      } else if (band && band !== 'All') {
+        rankKey = rankingCache.rankingKey('band', rankingCache.normalise(band), normSortBy === 'ceiScore' ? 'placement' : normSortBy);
+      } else {
+        rankKey = `ranking:global:${normSortBy}`;
+      }
+
+      if (rankKey) {
+        const cached = await rankingCache.getRanking(rankKey);
+
+        if (cached !== null) {
+          // Slice for pagination within the precomputed top-200
+          const pageSlice = cached.slice(0, limitNum);
+          res.set('X-Cache', 'RANKING-HIT');
+          res.set('X-Cache-Key', rankKey);
+          return res.json({
+            data: pageSlice,
+            pagination: {
+              page: 1,
+              limit: limitNum,
+              totalCount: cached.length,
+              totalPages: Math.ceil(cached.length / limitNum),
+              hasNext: cached.length > limitNum,
+              hasPrev: false,
+              source: 'ranking_cache',
+            },
+          });
+        }
+
+        // Cache MISS: fire async background rebuild so next request hits cache
+        const mongoFilter = {};
+        const mongoSortField = normSortBy === 'ceiScore'
+          ? 'ceiScore'
+          : 'placements.highestPackageNumeric';
+        if (state && state !== 'All') mongoFilter.state = state;
+        if (tier && tier !== 'All') mongoFilter.rankingTier = tier;
+        if (band && band !== 'All') mongoFilter.competitivenessBand = band;
+        if (normSortBy === 'ceiScore') mongoFilter.ceiScore = { $ne: null };
+        else mongoFilter['placements.highestPackageNumeric'] = { $gt: 0 };
+
+        rankingCache.buildOneAsync(mongoFilter, mongoSortField, rankKey);
+      }
+    }
+    // ────────────────────────────────────────────────────────────────────────
+
     const key = `mongo:colleges:${JSON.stringify(req.query)}`;
 
     const cached = await cache.get(key);
@@ -152,10 +217,6 @@ router.get("/colleges", async (req, res) => {
       return res.json(cached);
     }
 
-    const { page, limit, q } = req.query;
-
-    const pageNum = Math.max(1, parseInt(page, 10) || 1);
-    const limitNum = Math.min(100, Math.max(1, parseInt(limit, 10) || 20)); // Clamp 1–100
     const skip = (pageNum - 1) * limitNum;
 
     const query = buildCollegeQuery(req.query);
@@ -192,22 +253,29 @@ router.get("/colleges", async (req, res) => {
   }
 });
 
+
 router.get("/college/:id", async (req, res) => {
   try {
-    const key = `mongo:college:${req.params.id}`;
-    const cached = await cache.get(key);
-    if (cached) return res.json(cached);
+    const { id } = req.params;
 
-    const college = await College.findOne({ id: req.params.id }).lean();
-    if (!college) return res.status(404).json({ error: "College not found" });
+    // ── COLLEGE PAGE AGGREGATION CACHE ────────────────────────────────────────
+    // Returns precomputed payload: college + anomalies + integrity + verifications.
+    // Cache hit: 5-15ms | Cache miss: assembles from Mongo, writes through.
+    const page = await pageCache.getCollegePage(id);
+    if (page) {
+      res.set('X-Cache', 'PAGE-HIT');
+      return res.json(page);
+    }
 
-    cache.set(key, college, 3600); // 1 hour cache For individual colleges
-    res.json(college);
+    // Hard fallback: pageCache.getCollegePage already handles Mongo misses,
+    // but if it returns null the college genuinely doesn't exist.
+    return res.status(404).json({ error: "College not found" });
   } catch (error) {
     console.error("Error fetching college from MongoDB:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 
 // Batch get colleges by IDs
 router.get("/colleges/batch", async (req, res) => {

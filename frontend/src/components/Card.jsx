@@ -1,11 +1,12 @@
-﻿import TrustBadge from "./TrustBadge";
+﻿import { memo } from "react";
+import TrustBadge from "./TrustBadge";
 import AddToCompareButton from "./AddToCompareButton";
 import FavoriteButton from "./FavoriteButton";
 import AddToChoiceButton from "./AddToChoiceButton";
 import PredictionBadge from "./PredictionBadge";
 import "./Card.css";
 
-export default function Card({ title, subtitle, tags = [], meta = [], type = "default", variant, href, trust, badge, data = {}, ...props }) {
+function Card({ title, subtitle, tags = [], meta = [], type = "default", variant, href, trust, badge, data = {}, ...props }) {
   const resolvedType = variant || type;
   const metaList = Array.isArray(meta) ? meta : meta ? [meta] : [];
   const isExternal = href && (href.startsWith('http') || href.startsWith('//'));
@@ -107,3 +108,8 @@ export default function Card({ title, subtitle, tags = [], meta = [], type = "de
     </a>
   ) : card;
 }
+
+export default memo(Card, (prevProps, nextProps) => {
+  // Strict primitive equality checking to prevent 68k layout thrashing
+  return prevProps.data?.id === nextProps.data?.id && prevProps.href === nextProps.href;
+});
