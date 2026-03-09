@@ -1,0 +1,186 @@
+[
+    {
+        "id": "sbi-asha-graduate",
+        "name": "SBI Platinum Jubilee Asha Scholarship (Graduate)",
+        "provider": "SBI Foundation",
+        "category": "Merit-Based",
+        "amount": "₹50,000 per annum",
+        "eligibility": [
+            "Enrollment in first year of UG",
+            "Min 75% marks in Class 12",
+            "Family income < ₹6 Lakhs"
+        ],
+        "deadline": "Rolling Basis",
+        "applicationUrl": "https://www.sbiashascholarship.co.in",
+        "logo": "https://www.sbifoundation.in/images/logos/sbi-foundation-logo.png"
+    },
+    {
+        "id": "aicte-pragati-degree",
+        "name": "AICTE Pragati Scholarship for Girl Students (Degree)",
+        "provider": "AICTE, Govt of India",
+        "category": "Girls Only",
+        "amount": "₹50,000 per annum",
+        "eligibility": [
+            "Girl student in first year Degree",
+            "Maximum 2 girls per family",
+            "Family income < ₹8 Lakhs"
+        ],
+        "deadline": "31st Dec 2025",
+        "applicationUrl": "https://scholarships.gov.in",
+        "logo": "https://www.aicte-india.org/sites/default/files/logo_1.png"
+    },
+    {
+        "id": "aicte-saksham-degree",
+        "name": "AICTE Saksham Scholarship for Specially-Abled Students",
+        "provider": "AICTE, Govt of India",
+        "category": "Disability",
+        "amount": "₹50,000 per annum",
+        "eligibility": [
+            "Specially-abled student (Degree/Diploma)",
+            "Disability level > 40%",
+            "Family income < ₹8 Lakhs"
+        ],
+        "deadline": "31st Dec 2025",
+        "applicationUrl": "https://scholarships.gov.in"
+    },
+    {
+        "id": "nspg-postgraduate",
+        "name": "National Scholarship for Post-Graduate Studies (NSPG)",
+        "provider": "University Grants Commission (UGC)",
+        "category": "Merit-Based",
+        "amount": "₹15,000 per month (10 months/year)",
+        "eligibility": [
+            "First year master's student",
+            "Age < 30 years",
+            "Recognized university enrollment"
+        ],
+        "deadline": "30th Nov 2025",
+        "applicationUrl": "https://scholarships.gov.in"
+    },
+    {
+        "id": "mahadbt-post-matric-obc",
+        "name": "Post-Matric Scholarship for OBC Students",
+        "provider": "Govt of Maharashtra (MahaDBT)",
+        "category": "State Govt",
+        "amount": "Variable (Tuition Fee + Stiped)",
+        "eligibility": [
+            "Maharashtra Domicile",
+            "OBC Category",
+            "Family Income < ₹1.5 Lakhs (or above with creamy layer rules)"
+        ],
+        "deadline": "31st Mar 2026",
+        "applicationUrl": "https://mahadbt.maharashtra.gov.in"
+    },
+    {
+        "id": "ssp-karnataka-obc",
+        "name": "Post-Matric Scholarship (Vidyasiri)",
+        "provider": "Govt of Karnataka (SSP)",
+        "category": "State Govt",
+        "amount": "Maintenance Allowance + Fee",
+        "eligibility": [
+            "Karnataka Domicile",
+            "OBC/SC/ST/Minority",
+            "Previous exam passed without arrears"
+        ],
+        "deadline": "31st Jan 2026",
+        "applicationUrl": "https://ssp.postmatric.karnataka.gov.in"
+    },
+    {
+        "id": "pm-yasasvi-bc-post-matric",
+        "name": "PM YASASVI Post-Matric Scholarship for OBC/EBC",
+        "provider": "Ministry of Social Justice",
+        "category": "Minority",
+        "amount": "₹5,000 - ₹20,000 per annum",
+        "eligibility": [
+            "OBC/EBC/DNT Category",
+            "Class 9 to 12 or UG",
+            "Family income < ₹2.5 Lakhs"
+        ],
+        "deadline": "31st Dec 2025",
+        "applicationUrl": "https://scholarships.gov.in"
+    },
+    {
+        "id": "sandeepani-brahmin",
+        "name": "Sandeepani Shishya Vethana Scholarship",
+        "provider": "Karnataka State Brahmin Development Board",
+        "category": "Merit-cum-Means",
+        "amount": "Upto ₹25,000",
+        "eligibility": [
+            "Brahmin community student",
+            "Karnataka Resident",
+            "Family income < ₹8 Lakhs"
+        ],
+        "deadline": "31st Dec 2025",
+        "applicationUrl": "https://ksbdb.karnataka.gov.in"
+    },
+    {
+        "id": "kotak-kanya-scholarship",
+        "name": "Kotak Kanya Scholarship",
+        "provider": "Kotak Education Foundation",
+        "category": "Girls Only",
+        "amount": "₹1,50,000 per year",
+        "eligibility": [
+            "Girl student in first year of Degree (Professional)",
+            "Min 75% in Class 12",
+            "Family income < ₹6 Lakhs"
+        ],
+        "deadline": "31st Oct 2025",
+        "applicationUrl": "https://kotakeducation.org"
+    },
+    {
+        "id": "loreal-for-young-women",
+        "name": "L'Oréal India For Young Women In Science",
+        "provider": "L'Oréal India",
+        "category": "Science",
+        "amount": "₹2,50,000 for graduation",
+        "eligibility": [
+            "Girls who passed Class 12 in 2025",
+            "Min 85% in PCB/PCM",
+            "Pursuing Science graduation"
+        ],
+        "deadline": "Oct 2025",
+        "applicationUrl": "https://www.loreal.com"
+    },
+    {
+        "id": "fair-and-lovely-career",
+        "name": "Glow & Lovely Career Foundation Scholarship",
+        "provider": "Hindustan Unilever Limited",
+        "category": "Girls Only",
+        "amount": "₹25,000 to ₹50,000",
+        "eligibility": [
+            "Girls aged 15-30",
+            "Min 60% in Class 10 & 12",
+            "Pursuing Graduation/Post-graduation"
+        ],
+        "deadline": "Limited Slots",
+        "applicationUrl": "https://www.glowandlovelycareers.in"
+    },
+    {
+        "id": "dr-reddy-foundation-science",
+        "name": "Sashakt Scholarship (Dr. Reddy's Foundation)",
+        "provider": "Dr. Reddy's Foundation",
+        "category": "Science",
+        "amount": "₹2,40,000 over 3 years",
+        "eligibility": [
+            "Girls pursuing B.Sc in Pure/Natural Sciences",
+            "Interest in scientific research",
+            "Merit-based selection"
+        ],
+        "deadline": "Aug 2025",
+        "applicationUrl": "https://www.drreddysfoundation.org"
+    },
+    {
+        "id": "buddy4study-fixed-deposit",
+        "name": "Buddy4Study Fixed Deposit Scholarship",
+        "provider": "Buddy4Study Foundation",
+        "category": "Merit-Based",
+        "amount": "Fixed Deposit interest coverage",
+        "eligibility": [
+            "Students from Class 1 to UG",
+            "Family income < ₹3 Lakhs",
+            "Special preference to crisis cases"
+        ],
+        "deadline": "Open",
+        "applicationUrl": "https://www.buddy4study.com"
+    }
+]
