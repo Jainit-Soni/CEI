@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import Container from "@/components/Container";
 import GlassPanel from "@/components/GlassPanel";
