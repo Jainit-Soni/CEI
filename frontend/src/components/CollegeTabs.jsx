@@ -52,6 +52,7 @@ export default function CollegeTabs({ college }) {
     const [reviewsData, setReviewsData] = useState({ reviews: [], avgRating: 0, totalReviews: 0 });
     const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
     const [isReportModalOpen, setIsReportModalOpen] = useState(false);
+    const [showAllPrograms, setShowAllPrograms] = useState(false);
 
     const sanitizeCurrency = (val) => {
         if (!val) return "N/A";
@@ -151,13 +152,22 @@ export default function CollegeTabs({ college }) {
                         <div className="premium-tab-card">
                             <h3 className="tab-heading">Programs Offered</h3>
                             <ul className="program-list-compact">
-                                {(college.courses || []).map((course, idx) => (
+                                {(college.courses || []).slice(0, showAllPrograms ? undefined : 6).map((course, idx) => (
                                     <li key={idx}>
                                         <span className="prog-name">{course.name}</span>
                                         <span className="prog-dur">{course.duration}</span>
                                     </li>
                                 ))}
                             </ul>
+                            {college.courses?.length > 6 && (
+                                <button
+                                    className="show-more-btn"
+                                    onClick={() => setShowAllPrograms(!showAllPrograms)}
+                                    style={{ marginTop: '12px', background: 'transparent', border: '1px solid #e5e7eb', padding: '6px 12px', borderRadius: '6px', fontSize: '0.85rem', cursor: 'pointer', color: '#374151' }}
+                                >
+                                    {showAllPrograms ? "Show Less" : `Show all ${college.courses.length} programs`}
+                                </button>
+                            )}
                         </div>
                     </div>
                 )}
@@ -256,11 +266,11 @@ export default function CollegeTabs({ college }) {
                             <DataSourcesPanel collegeId={college.id} />
                         </div>
 
-                        {/* Intelligence Radar — vector visualization */}
+                        {/* Intelligence Radar — Score Breakdown */}
                         <div className="premium-tab-card">
-                            <h3 className="tab-heading" style={{ marginBottom: '12px' }}>Vector Visualization</h3>
+                            <h3 className="tab-heading" style={{ marginBottom: '12px' }}>Score Breakdown Radar</h3>
                             <p className="overview-text" style={{ marginBottom: '16px' }}>
-                                Radar visualization of {college.shortName || college.name}&#39;s 6 scoring vectors relative to the normalized peer strata.
+                                A visual map showing how {college.shortName || college.name} performs across the 6 key areas compared to similar colleges.
                             </p>
                             <div style={{ width: '100%', height: '400px', minHeight: '300px' }}>
                                 <IntelligenceRadar college={college} />

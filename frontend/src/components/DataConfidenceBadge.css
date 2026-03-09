@@ -69,49 +69,82 @@
 /* ── Tooltip ── */
 .dcb-tooltip {
     position: absolute;
-    bottom: calc(100% + 10px);
+    bottom: calc(100% + 12px);
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
     width: 260px;
-    padding: 14px 16px;
-    background: #1e293b;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-    color: #e2e8f0;
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(79, 70, 229, 0.15), inset 0 1px 0 rgba(255, 255, 255, 1);
+    color: #1A1A2E;
     pointer-events: none;
+    animation: tooltipFadeUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes tooltipFadeUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.dcb-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
 }
 
 .dcb-tooltip strong {
     display: block;
     font-size: 0.85rem;
-    margin-bottom: 6px;
-    color: #f8fafc;
+    margin-bottom: 8px;
+    color: #1A1A2E;
+    font-weight: 800;
 }
 
 .dcb-tooltip p {
-    font-size: 0.78rem;
-    line-height: 1.5;
-    color: #94a3b8;
-    margin: 0 0 10px 0;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #4A4A68;
+    margin: 0 0 12px 0;
 }
 
 .dcb-tooltip-link {
     font-size: 0.75rem;
-    color: #60a5fa;
+    color: #4f46e5;
     text-decoration: underline;
     pointer-events: auto;
     cursor: pointer;
+    font-weight: 600;
+    transition: color 0.15s;
 }
 
 .dcb-tooltip-link:hover {
-    color: #93c5fd;
+    color: #312e81;
 }
 
 @media (max-width: 480px) {
     .dcb-tooltip {
         left: 0;
-        transform: none;
+        transform: translateY(0);
+    }
+
+    .dcb-tooltip::after {
+        left: 20px;
     }
 }

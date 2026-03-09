@@ -53,13 +53,7 @@ export default function CollegeHero({ college }) {
                             </div>
                         )}
 
-                        {liveViewers > 1 && (
-                            <div className="live-pulse-badge">
-                                <span className="pulse-dot"></span>
-                                <Users size={12} className="mr-1" />
-                                {liveViewers} viewing now
-                            </div>
-                        )}
+
 
                         <TrustBadge
                             source={college.source}

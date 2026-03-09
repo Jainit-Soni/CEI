@@ -31,9 +31,12 @@ const logger = (() => { try { return require('../lib/logger'); } catch { return 
 const v1RateLimit = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 min
     max: 100,
+    validate: false,
     standardHeaders: true,
     legacyHeaders: false,
-    keyGenerator: (req) => req.apiKey?.key || req.ip || 'anonymous',
+    keyGenerator: (req) => {
+        return req.apiKey?.key || String(req.ip || 'anonymous');
+    },
     message: {
         error: 'Rate limit exceeded on Public API v1.',
         hint: 'Anonymous: 100 req/15min. Request an API key for higher limits.',

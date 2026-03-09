@@ -7,9 +7,10 @@ import Button from "./Button";
 import AuthModal from "./AuthModal";
 import UserDropdown from "./UserDropdown";
 import ScoreInputModal from "./ScoreInputModal";
+import SearchWithSuggestions from "./SearchWithSuggestions";
 import { useAuth } from "@/lib/AuthContext";
 import { useScores } from "@/lib/ScoreContext";
-import { Menu, X, ArrowLeft, Trophy, Heart, User, Sparkles, MapPin, TrendingUp } from "lucide-react";
+import { Menu, X, ArrowLeft, Trophy, Heart, User, Sparkles, MapPin, TrendingUp, Search } from "lucide-react";
 import "./Header.css";
 
 export default function Header() {
@@ -18,6 +19,7 @@ export default function Header() {
   const [showScoreModal, setShowScoreModal] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [choiceCount, setChoiceCount] = useState(0);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const pathname = usePathname();
   const router = useRouter();
@@ -101,6 +103,32 @@ export default function Header() {
 
           {/* RIGHT: Actions */}
           <div className="header-right">
+            {/* Global Search */}
+            <div className={`global-search-container ${isSearchOpen ? "open" : ""}`}>
+              {isSearchOpen ? (
+                <div className="search-overlay-wrapper">
+                  <SearchWithSuggestions
+                    placeholder="Search colleges, exams..."
+                    className="header-search-bar"
+                    onSearch={(q) => {
+                      setIsSearchOpen(false);
+                      router.push(`/colleges?q=${encodeURIComponent(q)}`);
+                    }}
+                  />
+                  <button className="search-close-icon" onClick={() => setIsSearchOpen(false)}>
+                    <X size={18} />
+                  </button>
+                </div>
+              ) : (
+                <button
+                  className="search-toggle-btn"
+                  onClick={() => setIsSearchOpen(true)}
+                  aria-label="Open Search"
+                >
+                  <Search size={20} />
+                </button>
+              )}
+            </div>
 
             {/* Score Button (Desktop) */}
             <button

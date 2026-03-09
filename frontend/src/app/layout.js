@@ -72,26 +72,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrains.variable}`}>
-      <head>
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-22DDHMQFTY`}
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-22DDHMQFTY');
-          `}
-        </Script>
-      </head>
+      <head />
       <body>
         <ClientProviders>
           <ErrorBoundary>
             <div className="flex flex-col min-h-screen">
-              {/* Universal Background */}
+              {/* Universal Background — Spectral Bands */}
               <div className="chromatic-bands">
                 <div className="chromatic-band-3"></div>
                 <div className="chromatic-band-4"></div>
@@ -162,6 +148,19 @@ export default function RootLayout({ children }) {
         </ClientProviders>
         <Analytics />
         <SpeedInsights />
+        {/* Google Analytics - Moved to body to resolve preload warnings */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-22DDHMQFTY`}
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-22DDHMQFTY');
+          `}
+        </Script>
       </body>
     </html>
   );

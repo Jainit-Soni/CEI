@@ -31,7 +31,10 @@ export default function DashboardPage() {
         );
     }
 
-    const { colleges = [], exams = [] } = favorites;
+    const { colleges: rawColleges = [], exams = [] } = favorites;
+    // Filter out invalid colleges defensively to prevent 404 prefetching
+    const colleges = rawColleges.filter(c => c && c.id && c.id !== "undefined");
+
     // Fallback if deadlines are not populated yet
     const deadlines = user.deadlines || [];
 

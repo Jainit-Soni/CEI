@@ -1,16 +1,10 @@
 "use client";
 
 /**
- * ExplainabilityCard.jsx — CEI Institutional Score Explainability
- * ================================================================
- * Renders three progressive layers of explanation for a single institution:
- *
- *  1. Score Breakdown Matrix  — Vector | Weight | Raw% | Contribution
- *  2. Stability & Confidence  — Monte Carlo stability index with deterministic badge
- *  3. Constitutional Anchor   — Version ID, dataset hash, activation date → link to /transparency
- *
- * Data fetched from: GET /api/explain/:id
- * All data is anchored to the active ScoringVersion — never stale or unversioned.
+ * ExplainabilityCard.jsx — "How Was This Score Calculated?"
+ * =========================================================
+ * Human-friendly explanation of a college's CEI score.
+ * Uses plain language so any student can understand what drives rankings.
  */
 
 import { useState, useEffect } from "react";
@@ -19,10 +13,40 @@ import "./ExplainabilityCard.css";
 
 const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000").replace(/\/$/, "");
 
+// Plain-language explanations for each scoring factor
+const FACTOR_PLAIN_ENGLISH = {
+    A: { icon: "🏆", what: "Accreditation Quality", why: "Shows if the college is officially quality-certified (e.g. NAAC A+ grade). Higher grade = more trust." },
+    F: { icon: "🏛️", what: "Institution Age & Track Record", why: "Older, well-established colleges tend to have stronger faculty, alumni networks, and proven outcomes." },
+    I: { icon: "🏗️", what: "Infrastructure & Ownership", why: "Covers campus facilities, land, ownership type (Govt / Autonomous). Better infrastructure = better learning environment." },
+    S: { icon: "📐", what: "Scale of Institution", why: "Universities score higher than autonomous colleges, which score above regular colleges. Broader scale → more opportunities." },
+    D: { icon: "📊", what: "Demand & Selectivity", why: "How competitive admissions are. Higher demand means more students want in — a strong signal of quality." },
+    P: { icon: "💼", what: "Placement Outcomes", why: "Based on actual placement rates and salary packages from the college. Key indicator for your career after graduation." },
+};
+
+function getPlainFactor(code) {
+    return FACTOR_PLAIN_ENGLISH[code] || { icon: "📌", what: code, why: "A scoring factor used in the CEI algorithm." };
+}
+
+function getBandColor(band) {
+    const b = (band || "").toLowerCase();
+    if (b.includes("elite")) return "#4f46e5";
+    if (b.includes("strong")) return "#0ea5e9";
+    if (b.includes("develop")) return "#f59e0b";
+    return "#8C8CA1";
+}
+
+function getStabilityPlainText(index) {
+    if (index === null || index === undefined) return "Reliability score not available yet.";
+    if (index >= 75) return "✅ This score is very reliable — it stays consistent even when we test small data variations.";
+    if (index >= 45) return "⚠️ Moderate reliability. The score could shift slightly if key data changes. Cross-check before deciding.";
+    return "🔴 Lower reliability. This college's score is sensitive to data gaps. Use as a guide, not a final verdict.";
+}
+
 export default function ExplainabilityCard({ college }) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [expanded, setExpanded] = useState(null);
 
     useEffect(() => {
         if (!college?.id) return;
@@ -32,14 +56,14 @@ export default function ExplainabilityCard({ college }) {
         fetch(`${API_URL}/api/explain/${college.id}`)
             .then(r => r.ok ? r.json() : Promise.reject(r.statusText))
             .then(d => { setData(d); setLoading(false); })
-            .catch(e => { setError("Could not load score explanation."); setLoading(false); });
+            .catch(() => { setError("Could not load score explanation."); setLoading(false); });
     }, [college?.id]);
 
     if (loading) {
         return (
             <div className="explain-loading">
                 <div className="explain-spinner" />
-                Loading constitutional score data…
+                Loading score breakdown…
             </div>
         );
     }
@@ -50,6 +74,8 @@ export default function ExplainabilityCard({ college }) {
 
     const { vectorBreakdown, scoreSummary, stabilityMeta, methodology } = data;
     const maxContrib = Math.max(...(vectorBreakdown || []).map(v => v.contribution));
+    const finalScore = scoreSummary.finalScore ?? scoreSummary.derivedScore;
+    const bandColor = getBandColor(college.competitivenessBand);
 
     const confidenceClass =
         stabilityMeta.confidenceBadge === "HIGH" ? "high" :
@@ -59,75 +85,78 @@ export default function ExplainabilityCard({ college }) {
     return (
         <div className="explain-card">
 
-            {/* ── 1. Score Breakdown Matrix ──────────────────────────── */}
-            <div className="explain-matrix-section">
-                <div className="explain-section-label">Score Vector Decomposition</div>
-
-                {/* Summary strip */}
-                <div className="score-summary-strip">
-                    <div className="score-stat">
-                        <span className="score-stat-label">Gross Score</span>
-                        <span className="score-stat-val">{scoreSummary.grossScore}</span>
+            {/* ── Hero Score Summary ──────────────────────────────────── */}
+            <div className="explain-hero">
+                <div className="explain-hero-content">
+                    <div className="explain-hero-score">
+                        <span className="explain-score-big">{Number(finalScore).toFixed(1)}</span>
+                        <span className="explain-score-denom">/100</span>
                     </div>
-                    <div className="score-stat">
-                        <span className="score-stat-label">Data Penalty</span>
-                        <span className="score-stat-val">−{scoreSummary.penalty}</span>
-                    </div>
-                    <div className="score-stat">
-                        <span className="score-stat-label">CEI Score</span>
-                        <span className="score-stat-val final">{scoreSummary.finalScore ?? scoreSummary.derivedScore}</span>
-                    </div>
-                    <div className="score-stat">
-                        <span className="score-stat-label">Band</span>
-                        <span className="score-stat-val">{college.competitivenessBand || "—"}</span>
+                    <div className="explain-hero-meta">
+                        <div className="explain-hero-title">CEI Score</div>
+                        <div className="explain-hero-desc">
+                            College Excellence Index — a composite score across 6 key factors.
+                        </div>
+                        <div className="explain-band-pill" style={{ background: `${bandColor}18`, color: bandColor, borderColor: `${bandColor}35` }}>
+                            {college.competitivenessBand || "—"} Band
+                        </div>
                     </div>
                 </div>
-
-                <table className="explain-matrix" aria-label="Score vector breakdown">
-                    <thead>
-                        <tr>
-                            <th>Vector</th>
-                            <th>Weight</th>
-                            <th>Raw Value</th>
-                            <th>Contribution</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {(vectorBreakdown || []).map(v => (
-                            <tr key={v.code}>
-                                <td>
-                                    <div className="vec-name-cell">
-                                        <span className="vec-code">{v.code}</span>
-                                        <span className="vec-desc">{v.description}</span>
-                                    </div>
-                                </td>
-                                <td>{v.weightPct}</td>
-                                <td>{v.rawPct}</td>
-                                <td>
-                                    <div className="contrib-bar-wrap">
-                                        <div
-                                            className="contrib-bar"
-                                            style={{ width: `${Math.round((v.contribution / maxContrib) * 60)}px` }}
-                                            aria-hidden="true"
-                                        />
-                                        <span className="contrib-val">+{v.contribution.toFixed(1)}</span>
-                                    </div>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colSpan={3}>Total (before penalty)</td>
-                            <td>+{scoreSummary.grossScore}</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                {Number(scoreSummary.penalty) > 0 && (
+                    <div className="explain-penalty-note">
+                        ⚡ A small deduction of <strong>{scoreSummary.penalty} points</strong> was applied due to missing or incomplete data. Colleges with fully filled data score higher.
+                    </div>
+                )}
             </div>
 
-            {/* ── 2. Stability & Confidence ──────────────────────────── */}
+            {/* ── 1. What Makes Up This Score ───────────────────────── */}
+            <div className="explain-matrix-section">
+                <div className="explain-section-label">What makes up this score?</div>
+                <p className="explain-section-intro">
+                    The score is built from 6 factors. Click any factor to learn what it means and why it matters for your decision.
+                </p>
+
+                <div className="explain-factors-list">
+                    {(vectorBreakdown || []).map(v => {
+                        const pf = getPlainFactor(v.code);
+                        const pct = Math.round((v.contribution / maxContrib) * 100);
+                        const isOpen = expanded === v.code;
+                        return (
+                            <div key={v.code} className={`explain-factor-row ${isOpen ? "open" : ""}`}>
+                                <button
+                                    className="explain-factor-header"
+                                    onClick={() => setExpanded(isOpen ? null : v.code)}
+                                    aria-expanded={isOpen}
+                                >
+                                    <span className="explain-factor-icon">{pf.icon}</span>
+                                    <span className="explain-factor-name">{pf.what}</span>
+                                    <div className="explain-factor-bar-wrap">
+                                        <div className="explain-factor-bar-track">
+                                            <div className="explain-factor-bar-fill" style={{ width: `${pct}%` }} />
+                                        </div>
+                                        <span className="explain-factor-score">+{v.contribution.toFixed(1)}</span>
+                                    </div>
+                                    <span className="explain-factor-weight">{v.weightPct} weight</span>
+                                    <span className="explain-factor-chevron">{isOpen ? "▲" : "▼"}</span>
+                                </button>
+                                {isOpen && (
+                                    <div className="explain-factor-detail">
+                                        <p className="explain-factor-why">{pf.why}</p>
+                                        <div className="explain-factor-stats">
+                                            <span>Performance: <strong>{v.rawPct}</strong></span>
+                                            <span>Impact on total: <strong>+{v.contribution.toFixed(1)} pts</strong></span>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+
+            {/* ── 2. How Reliable Is This Score ─────────────────────── */}
             <div className="explain-stability-section">
-                <div className="explain-section-label">Monte Carlo Stability Assessment</div>
+                <div className="explain-section-label">How reliable is this score?</div>
 
                 <div className="stability-panel">
                     <div className="stability-badge" aria-hidden="true">
@@ -160,48 +189,35 @@ export default function ExplainabilityCard({ college }) {
                         )}
 
                         <div className="stability-description">
-                            {stabilityMeta.stabilityIndex !== null
-                                ? `Computed across ${stabilityMeta.monteCarloRuns || 50} Monte Carlo simulations with ±5% vector perturbation. ` +
-                                `A score of ${stabilityMeta.stabilityIndex}/100 indicates ${stabilityMeta.stabilityIndex >= 75
-                                    ? "this institution's ranking is highly robust to minor data variations."
-                                    : stabilityMeta.stabilityIndex >= 45
-                                        ? "moderate sensitivity to data changes — verify core metrics."
-                                        : "significant rank volatility — treat placement in current band with caution."
-                                }`
-                                : "Stability index not computed for this institution in the current scoring run."
-                            }
+                            {getStabilityPlainText(stabilityMeta.stabilityIndex)}
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* ── 3. Constitutional Anchor ───────────────────────────── */}
-            <div className="explain-anchor-section">
-                <div className="explain-section-label">Constitutional Reference</div>
-
-                {methodology ? (
+            {/* ── 3. Data Transparency ───────────────────────────────── */}
+            {methodology && (
+                <div className="explain-anchor-section">
+                    <div className="explain-section-label">Data Transparency</div>
                     <div className="explain-anchor">
+                        <div className="anchor-intro">
+                            🔒 This score is based on verified, versioned data. You can audit exactly which dataset was used and when it was last updated.
+                        </div>
                         <div className="anchor-row">
-                            <span className="anchor-key">Scoring Version</span>
+                            <span className="anchor-key">Scoring Model</span>
                             <span className="anchor-val">
                                 {methodology.versionId}
                                 <Link
                                     href={`/transparency/version/${methodology.versionId}`}
                                     className="anchor-link"
-                                    aria-label="View scoring version details"
+                                    aria-label="Audit scoring version"
                                 >
-                                    ↗ Inspect
+                                    ↗ Audit
                                 </Link>
                             </span>
                         </div>
                         <div className="anchor-row">
-                            <span className="anchor-key">Dataset Hash</span>
-                            <span className="anchor-val anchor-hash">
-                                {methodology.datasetHash?.slice(0, 16)}…{methodology.datasetHash?.slice(-8)}
-                            </span>
-                        </div>
-                        <div className="anchor-row">
-                            <span className="anchor-key">Activated</span>
+                            <span className="anchor-key">Data Updated</span>
                             <span className="anchor-val">
                                 {methodology.activatedAt
                                     ? new Date(methodology.activatedAt).toLocaleDateString("en-IN", {
@@ -211,29 +227,17 @@ export default function ExplainabilityCard({ college }) {
                                 }
                             </span>
                         </div>
-                        <div className="anchor-row">
-                            <span className="anchor-key">Engine</span>
-                            <span className="anchor-val">{methodology.engineVersion || college.ceiEngineVersion || "—"}</span>
-                        </div>
-                        {college._recordHash && (
+                        {methodology.datasetHash && (
                             <div className="anchor-row">
-                                <span className="anchor-key">Record Hash</span>
+                                <span className="anchor-key">Dataset ID</span>
                                 <span className="anchor-val anchor-hash">
-                                    {String(college._recordHash).slice(0, 16)}…
+                                    {methodology.datasetHash?.slice(0, 12)}…
                                 </span>
                             </div>
                         )}
                     </div>
-                ) : (
-                    <div className="no-version-notice">
-                        ⚠️ No active scoring version found. The governance layer must publish a version before constitutional anchoring is available.
-                        <Link href="/transparency" className="anchor-link" style={{ color: "#b45309", marginLeft: 8 }}>
-                            → View Transparency API
-                        </Link>
-                    </div>
-                )}
-            </div>
-
+                </div>
+            )}
         </div>
     );
 }

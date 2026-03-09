@@ -323,15 +323,15 @@ async function invalidateForCollege(data) {
 }
 
 /**
- * buildOneAsync(filter, sortField, redisKey)
+ * buildOneAsync(filter, sortField, redisKey, countFilter)
  *
  * Non-blocking background rebuild of a single ranking key.
  * Called after a cache miss so the next request gets a cache hit.
  */
-async function buildOneAsync(filter, sortField, redisKey) {
+async function buildOneAsync(filter, sortField, redisKey, countFilter = null) {
     const redis = await getRedisClient();
     if (!redis) return;
-    buildOne(redis, filter, sortField, redisKey).catch((err) => {
+    buildOne(redis, filter, sortField, redisKey, countFilter).catch((err) => {
         logger.warn('[RankingCache] Async build error', { key: redisKey, error: err.message });
     });
 }

@@ -3,13 +3,16 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import "./SearchWithSuggestions.css";
+import { suggest } from "@/lib/api";
 
 export default function SearchWithSuggestions({
   placeholder = "Search colleges or exams...",
   onSearch,
+  onChange,
+  initialValue = "",
   className = "",
 }) {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(initialValue || "");
   const [scope, setScope] = useState("All");
   const [suggestions, setSuggestions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +22,12 @@ export default function SearchWithSuggestions({
   const listRef = useRef(null);
   const debounceRef = useRef(null);
 
-  const apiBase = process.env.NEXT_PUBLIC_API_BASE || process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000");
+  // Sync with initial value if it changes
+  useEffect(() => {
+    if (initialValue !== query && !isOpen) {
+      setQuery(initialValue || "");
+    }
+  }, [initialValue]);
 
   const fetchSuggestions = useCallback(async (searchQuery) => {
     if (!searchQuery.trim()) {
@@ -30,21 +38,19 @@ export default function SearchWithSuggestions({
 
     setIsLoading(true);
     try {
-      const response = await fetch(
-        `${apiBase}/api/suggest?q=${encodeURIComponent(searchQuery)}&type=${scope.toLowerCase()}`
-      );
-      if (response.ok) {
-        const data = await response.json();
-        setSuggestions(Array.isArray(data) ? data : []);
-        setIsOpen((data || []).length > 0);
-      }
+      const data = await suggest({
+        q: searchQuery,
+        type: scope.toLowerCase()
+      });
+      setSuggestions(Array.isArray(data) ? data : []);
+      setIsOpen((data || []).length > 0);
     } catch (err) {
       console.error("Failed to fetch suggestions:", err);
       setSuggestions([]);
     } finally {
       setIsLoading(false);
     }
-  }, [apiBase, scope]);
+  }, [scope]);
 
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -57,7 +63,10 @@ export default function SearchWithSuggestions({
 
     debounceRef.current = setTimeout(() => {
       fetchSuggestions(value);
-    }, 200);
+      if (onChange) {
+        onChange(value);
+      }
+    }, 300);
   };
 
   const handleScopeChange = (newScope) => {

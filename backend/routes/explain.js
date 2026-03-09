@@ -41,52 +41,47 @@ function clamp01(v) { return Math.max(0, Math.min(1, v || 0)); }
  * Returns raw [0–1] values for each vector code.
  */
 function deriveVectors(college) {
-    // A — Accreditation
-    const naacGrade = college.meta?.naacGrade || college.accreditation || '';
-    const isElite = /IIT|IIM|NIT|AIIMS|IISc|BITS|Indian Institute of (Technology|Management)/i.test(college.name || '');
-    const rawA = isElite ? 1.0 : (NAAC_MAP[naacGrade?.toUpperCase?.()] ?? 0.15);
+    // A — Academic Excellence / Ranking (25%)
+    let rankingScore = 0;
+    if (college.ranking && college.ranking < 100) rankingScore = 1.0;
+    else if (college.ranking < 300) rankingScore = 0.6;
+    else if (college.rankingTier === 'Tier 1') rankingScore = 0.8;
+    else if (college.rankingTier === 'Tier 2') rankingScore = 0.4;
+    const rawA = rankingScore;
 
-    // F — Faculty Legacy (institutional age as proxy)
+    // F — Faculty & Record (15% - Institutional age benchmark 50 years)
     const estYear = parseInt(college.meta?.establishedYear || college.establishedYear || 1980);
     const age = Math.max(0, 2026 - estYear);
-    const rawF = clamp01(age / 100); // 100-year-old institution = max
+    const rawF = clamp01(age / 50);
 
-    // I — Infrastructure (derived from scale + category)
-    const ownership = (college.meta?.ownership || '').toLowerCase();
-    const isGovt = ownership.includes('government') || ownership.includes('central') || ownership.includes('state');
-    const rawI = isGovt ? 0.80 : 0.50;
+    // I — Infrastructure & Reliability (15%)
+    let rawI = college.rankingTier === 'Tier 1' ? 1.0 : 0.6;
+    if (college.isPremium) rawI = Math.min(1.0, rawI + 0.2);
 
-    // S — Scale (university > autonomous > college)
-    const category = (college.category || college.type || '').toLowerCase();
-    const rawS = category.includes('university') ? 0.90
-        : category.includes('deemed') ? 0.80
-            : category.includes('autonomous') ? 0.65
-                : 0.45;
+    // S — Scale & Programs (10%)
+    const coursesCount = college.courses?.length || 0;
+    const rawS = clamp01(coursesCount / 10);
 
-    // D — Demand / Selectivity (accreditation × elite bonus)
-    const rawD = clamp01(rawA * (isElite ? 1.2 : 1.0));
+    // D — Demand & Exam Tier (15%)
+    let rawD = 0.3;
+    const exams = (college.acceptedExams || []).map(e => (e || "").toLowerCase());
+    if (exams.includes('cat') || exams.includes('gmat') || exams.includes('xat')) rawD = 1.0;
+    else if (exams.includes('cmat') || exams.includes('snap') || exams.includes('nmat')) rawD = 0.7;
 
-    // U — Urban proximity (deterministic: metro > tier-2 > rural)
-    const location = (college.location || college.state || '').toLowerCase();
-    const metros = ['mumbai', 'delhi', 'bangalore', 'bengaluru', 'chennai', 'hyderabad', 'pune', 'kolkata'];
-    const isMetro = metros.some(m => location.includes(m));
-    const rawU = isMetro ? 0.85 : 0.55;
+    // P — Placement Outcomes (35%)
+    const avgLpa = college.placements?.averagePackageNumeric || (college.placements?.highestPackageNumeric ? college.placements.highestPackageNumeric / 3 : 0);
+    const rawP = clamp01(avgLpa / 20);
 
-    // Penalty reconstruction
-    const penaltyPts = (!college.meta?.district ? 2 : 0)
-        + (!college.meta?.establishedYear ? 2 : 0)
-        + (!naacGrade && !isElite ? 3 : 0);
-
-    return { A: rawA, F: rawF, I: rawI, S: rawS, D: rawD, U: rawU, penaltyPts };
+    return { A: rawA, F: rawF, I: rawI, S: rawS, D: rawD, P: rawP };
 }
 
 const VECTOR_DESCRIPTIONS = {
-    A: 'Accreditation quality (NAAC grade or elite institution proxy)',
-    F: 'Faculty legacy (institutional age — proxy for stability & track record)',
-    I: 'Infrastructure capacity (ownership and institutional category)',
-    S: 'Scale of institution (University > Autonomous > College)',
-    D: 'Demand & selectivity (accreditation weighted × elite adjustment)',
-    U: 'Urban proximity (geographic accessibility — deterministic mapping)',
+    A: 'Ranking & Academic Excellence (Top 100 / Tier 1 status)',
+    F: 'Institutional Age & Record (Proven faculty and alumni networks)',
+    I: 'Infrastructure & Reliability (Premium status and facilities)',
+    S: 'Program Breadth (Number of specialized courses offered)',
+    D: 'Entrance Standards (Accepted exams like CAT/GMAT/CMAT)',
+    P: 'Placement Strength (Average package and ROI potential)',
 };
 
 /**
@@ -94,13 +89,14 @@ const VECTOR_DESCRIPTIONS = {
  */
 async function buildExplanation(college, activeVersion) {
     const vectors = deriveVectors(college);
-    const weights = activeVersion?.weights || { A: 0.30, F: 0.15, I: 0.15, S: 0.15, D: 0.15, U: 0.10 };
+    // Weights: A:25%, F:15%, I:15%, S:10%, D:15%, P:35% (Max 90 pts raw scaled to 100)
+    const weights = { A: 0.25, F: 0.15, I: 0.15, S: 0.10, D: 0.15, P: 0.35 };
     const wSum = Object.values(weights).reduce((s, v) => s + v, 0);
 
     const breakdown = Object.keys(weights).map(code => {
         const raw = vectors[code] ?? 0;
         const weight = weights[code] ?? 0;
-        const contribution = raw * weight * 15; // Scale of 15 pts max per vector = 90pt raw
+        const contribution = raw * weight * 100; // Scaled to 100 max
         return {
             code,
             description: VECTOR_DESCRIPTIONS[code] || code,
@@ -114,7 +110,7 @@ async function buildExplanation(college, activeVersion) {
     });
 
     const grossScore = breakdown.reduce((s, v) => s + v.contribution, 0);
-    const penalty = Math.min(activeVersion?.penaltyRules?.maxPenalty ?? 10, vectors.penaltyPts);
+    const penalty = 0; // Simplified for now since we recomputed core values
 
     // Stability meta
     const stabilityIndex = college.stabilityIndex ?? null;
@@ -189,7 +185,8 @@ router.get('/:id', async (req, res) => {
                         ceiScoredAt: 1, ceiEngineVersion: 1, stabilityIndex: 1,
                         confidenceBadge: 1, isScoreVolatile: 1, _recordHash: 1,
                         meta: 1, location: 1, state: 1, category: 1, type: 1,
-                        accreditation: 1, establishedYear: 1
+                        accreditation: 1, establishedYear: 1, ranking: 1, rankingTier: 1,
+                        courses: 1, acceptedExams: 1, placements: 1, isPremium: 1
                     }
                 }
             ),
@@ -231,7 +228,8 @@ router.post('/batch', async (req, res) => {
                         ceiScoredAt: 1, ceiEngineVersion: 1, stabilityIndex: 1,
                         confidenceBadge: 1, isScoreVolatile: 1, _recordHash: 1,
                         meta: 1, location: 1, state: 1, category: 1, type: 1,
-                        accreditation: 1, establishedYear: 1
+                        accreditation: 1, establishedYear: 1, ranking: 1, rankingTier: 1,
+                        courses: 1, acceptedExams: 1, placements: 1, isPremium: 1
                     }
                 }
             ).toArray(),

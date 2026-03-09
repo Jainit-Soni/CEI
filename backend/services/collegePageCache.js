@@ -93,6 +93,8 @@ async function assemblePagePayload(college) {
  * Cache miss → assembles from MongoDB and caches for next request
  */
 async function getCollegePage(id) {
+    if (!id || id === "undefined") return null;
+
     const redis = await getRedisClient();
 
     if (redis) {

@@ -166,6 +166,7 @@ app.use(express.json({ limit: "1mb" })); // Limit body size to prevent memory at
 const anonymousLimiter = rateLimit({
   windowMs: 60 * 1000,      // 1 minute window
   max: 60,                   // 60 requests per minute per IP
+  validate: false,           // Disable all validations for local/dev environments
   standardHeaders: true,     // Return standard RateLimit-* headers
   legacyHeaders: false,
   message: { error: "Too many requests from this IP, please try again in a minute." },

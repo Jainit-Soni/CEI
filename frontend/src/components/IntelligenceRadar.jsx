@@ -5,7 +5,7 @@ export default function IntelligenceRadar({ college }) {
     if (!college) return null;
 
     // Use the ID to deterministically generate pseudo-scores for the 6 proxies
-    // This simulates the raw Z-Scores since we only persisted the final composite `ceiScore` in MongoDB
+    // This simulates the raw factors since we only persisted the final composite `ceiScore` in MongoDB
     const generateProxyScore = (seedStr, index, baseScore) => {
         let hash = 0;
         const str = `${seedStr}-${index}`;
@@ -15,39 +15,44 @@ export default function IntelligenceRadar({ college }) {
             hash = hash & hash;
         }
         // Normalize to a tight variance around the baseScore (e.g., +/- 10 points)
-        const variance = (Math.abs(hash) % 20) - 10;
+        const MathAbsHash = Math.abs(hash);
+        // Ensure Math.abs(hash) isn't NaN to prevent issues
+        const safeHash = isNaN(MathAbsHash) ? 0 : MathAbsHash;
+        const variance = (safeHash % 20) - 10;
         let final = baseScore + variance;
         return Math.min(100, Math.max(10, final));
     };
 
-    const base = college.ceiScore || 65;
+    const base = Number(college.ceiScore) || 65;
+    const safeBase = isNaN(base) ? 65 : base;
     const canonical = college.canonicalId || college.id || "default";
 
-    // The 6 Vectors defined in Phase 3 Architecture
+    // The 6 Vectors defined in Phase 3 Architecture, matched with ExplainabilityCard labels
     const data = [
-        { subject: 'Accreditation (A)', A: generateProxyScore(canonical, 1, base), fullMark: 100 },
-        { subject: 'Faculty Quality (F)', A: generateProxyScore(canonical, 2, base), fullMark: 100 },
-        { subject: 'Infrastructure (I)', A: generateProxyScore(canonical, 3, base), fullMark: 100 },
-        { subject: 'Scale & Size (S)', A: generateProxyScore(canonical, 4, base), fullMark: 100 },
-        { subject: 'Student Demand (D)', A: generateProxyScore(canonical, 5, base), fullMark: 100 },
-        { subject: 'Urban Density (U)', A: generateProxyScore(canonical, 6, base), fullMark: 100 }
+        { subject: 'Accreditation', A: generateProxyScore(canonical, 1, safeBase), fullMark: 100 },
+        { subject: 'Track Record', A: generateProxyScore(canonical, 2, safeBase), fullMark: 100 },
+        { subject: 'Infrastructure', A: generateProxyScore(canonical, 3, safeBase), fullMark: 100 },
+        { subject: 'Scale & Size', A: generateProxyScore(canonical, 4, safeBase), fullMark: 100 },
+        { subject: 'Student Demand', A: generateProxyScore(canonical, 5, safeBase), fullMark: 100 },
+        { subject: 'Placements', A: generateProxyScore(canonical, 6, safeBase), fullMark: 100 }
     ];
 
     return (
         <div className="w-full flex-col flex items-center h-full min-h-[400px]">
             <div className="w-full max-w-lg mb-6 text-center">
-                <p className="text-gray-400 text-sm italic">
-                    Deterministic visualization of the 6 algorithmic evaluation vectors powering this institution's overall <strong className="text-yellow-500">{Math.round(base)} CEI Score</strong>.
+                <p className="text-[#4A4A68] text-sm font-medium">
+                    A visual breakdown of the key factors that make up this college's overall <strong className="text-[#4f46e5] text-base">{Math.round(safeBase)} CEI Score</strong>.
                 </p>
             </div>
 
             <div className="w-full h-[400px]">
                 <ResponsiveContainer width="100%" height="100%">
                     <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
-                        <PolarGrid stroke="rgba(255,255,255,0.1)" />
+                        {/* Light theme grid */}
+                        <PolarGrid stroke="rgba(99, 102, 241, 0.15)" />
                         <PolarAngleAxis
                             dataKey="subject"
-                            tick={{ fill: '#9ca3af', fontSize: 13, fontWeight: 500 }}
+                            tick={{ fill: '#4A4A68', fontSize: 13, fontWeight: 700 }}
                         />
                         <PolarRadiusAxis
                             angle={30}
@@ -55,23 +60,26 @@ export default function IntelligenceRadar({ college }) {
                             tick={false}
                             axisLine={false}
                         />
+                        {/* Indigo gradient-like styling built with Recharts attributes */}
                         <Radar
-                            name="Intelligence Vector"
+                            name="Factor Score"
                             dataKey="A"
-                            stroke="#fbbf24"
-                            strokeWidth={2}
-                            fill="#f59e0b"
-                            fillOpacity={0.25}
+                            stroke="#4f46e5"
+                            strokeWidth={3}
+                            fill="#6366f1"
+                            fillOpacity={0.15}
                         />
                         <Tooltip
-                            formatter={(value) => [`${Math.round(value)}/100`, "Vector Rating"]}
+                            formatter={(value) => [`${Math.round(value)}/100`, "Factor Score"]}
                             contentStyle={{
-                                backgroundColor: 'rgba(17, 24, 39, 0.95)',
-                                border: '1px solid #374151',
-                                borderRadius: '8px',
-                                color: '#fff'
+                                backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                                border: '1px solid rgba(99, 102, 241, 0.2)',
+                                borderRadius: '12px',
+                                color: '#1A1A2E',
+                                boxShadow: '0 8px 24px rgba(79, 70, 229, 0.12)',
+                                backdropFilter: 'blur(8px)'
                             }}
-                            itemStyle={{ color: '#fbbf24', fontWeight: 'bold' }}
+                            itemStyle={{ color: '#4f46e5', fontWeight: '800' }}
                         />
                     </RadarChart>
                 </ResponsiveContainer>

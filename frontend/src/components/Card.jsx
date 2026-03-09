@@ -21,7 +21,7 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
     name: title || data?.name,
     title: title || data?.title,
     subtitle: subtitle || data?.subtitle,
-    shortName: title || data?.shortName || data?.name
+    shortName: data?.shortName || title || data?.name
   };
 
   const card = (
@@ -37,7 +37,12 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
       )}
       <div className="card-top">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
-          <h3>{title}</h3>
+          <div className="card-heading-group">
+            <h3 className="card-full-name">{title || data?.name || data?.shortName || "Unknown Institute"}</h3>
+            {data?.shortName && data.shortName !== title && (
+              <span className="card-acronym">{data.shortName}</span>
+            )}
+          </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px' }}>
             {data?.ceiScore > 0 && (
               <div
@@ -63,7 +68,7 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
             {trust && <TrustBadge {...trust} />}
           </div>
         </div>
-        {subtitle && <p>{subtitle}</p>}
+        {(subtitle || data?.location) ? <p>{subtitle || data?.location}</p> : <p className="text-muted italic">Location not listed</p>}
       </div>
       {tags.length > 0 && (
         <div className="card-tags">
@@ -98,7 +103,9 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
     </div>
   );
 
-  return href ? (
+  const isValidHref = href && !href.includes("undefined");
+
+  return isValidHref ? (
     <a
       href={href}
       {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}

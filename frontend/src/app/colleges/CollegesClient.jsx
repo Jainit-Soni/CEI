@@ -8,7 +8,7 @@ import GlassPanel from "@/components/GlassPanel";
 import Button from "@/components/Button";
 import FancySelect from "@/components/FancySelect";
 import EmptyState from "@/components/EmptyState";
-import DebouncedSearchInput from "@/components/DebouncedSearchInput";
+import SearchWithSuggestions from "@/components/SearchWithSuggestions";
 import { Heart, Search } from "lucide-react";
 import { CardSkeleton } from "@/components/Skeleton";
 import Pagination from "@/components/Pagination";
@@ -391,7 +391,7 @@ function CollegesContent({ initialData }) {
                             <div className="card-wrapper" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
                                 <Card
                                     type="college"
-                                    title={college.shortName || college.name}
+                                    title={college.name || college.shortName}
                                     subtitle={college.location}
                                     badge={getMatchStatus(college)}
                                     tags={(college.acceptedExams || [])
@@ -440,7 +440,7 @@ function CollegesContent({ initialData }) {
                     <div className="list-hero-content">
                         <RevealOnScroll>
                             <span className="list-hero-kicker">
-                                {stateName ? `Colleges in ${stateName}` : "State Catalog"}
+                                {stateName ? `Colleges in ${stateName} ` : "State Catalog"}
                             </span>
                             <h1 className="list-hero-title">
                                 {stateName ? `${stateName} Colleges` : "Colleges, organized for clarity"}
@@ -456,7 +456,7 @@ function CollegesContent({ initialData }) {
                             <div className="list-stats">
                                 <div className="list-stat">
                                     <span className="list-stat-value mono">
-                                        {pagination?.totalCount ? pagination.totalCount.toLocaleString() : (displayColleges.length ? displayColleges.length.toLocaleString() : "--")}
+                                        {(pagination?.totalCount !== undefined) ? pagination.totalCount.toLocaleString() : (displayColleges.length ? displayColleges.length.toLocaleString() : "0")}
                                     </span>
                                     <span className="list-stat-label">
                                         Colleges
@@ -484,7 +484,7 @@ function CollegesContent({ initialData }) {
                 </Button>
             </div>
 
-            <section className={`list-filters-section ${isMobileFiltersOpen ? "mobile-open" : ""}`}>
+            <section className={`list - filters - section ${isMobileFiltersOpen ? "mobile-open" : ""} `}>
                 <Container>
                     <GlassPanel className="filters-panel" variant="strong">
                         {/* Mobile Header */}
@@ -498,9 +498,9 @@ function CollegesContent({ initialData }) {
                             </button>
                         </div>
 
-                        <div className="filter-search">
-                            <DebouncedSearchInput
-                                className="filter-search-input"
+                        <div className="filter-search-wrapper">
+                            <SearchWithSuggestions
+                                className="colleges-main-search"
                                 initialValue={query}
                                 onChange={handleSearchChange}
                                 placeholder="Search by college, district, or program"
@@ -542,7 +542,7 @@ function CollegesContent({ initialData }) {
 
                         <div className="filter-meta">
                             <span className="filter-count">
-                                <strong>{pagination?.totalCount || displayColleges.length}</strong> Colleges Found Matching
+                                <strong>{(pagination?.totalCount !== undefined) ? pagination.totalCount : displayColleges.length}</strong> Colleges Found Matching
                             </span>
                             {hasActiveFilters && (
                                 <Button variant="secondary" onClick={clearFilters}>

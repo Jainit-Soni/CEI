@@ -9,28 +9,31 @@
     align-items: center;
     gap: 8px;
     width: 100%;
-    padding: 10px 16px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 10px;
-    color: #94a3b8;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 244, 255, 0.9));
+    border: 1px dashed rgba(99, 102, 241, 0.25);
+    border-radius: 12px;
+    color: #4f46e5;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
     text-align: left;
-    transition: background 0.2s, border-color 0.2s;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.04);
 }
 
 .dsp-trigger:hover,
 .dsp-trigger.open {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.12);
-    color: #e2e8f0;
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(99, 102, 241, 0.4);
+    color: #312e81;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.08);
 }
 
 .dsp-chevron {
     margin-left: auto;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: transform 0.2s ease;
 }
 
@@ -40,12 +43,15 @@
 
 /* ── Panel ──────────────────────────────────────────────────────── */
 .dsp-panel {
-    margin-top: 8px;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 12px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    border-radius: 16px;
     overflow: hidden;
     animation: dspSlideIn 0.2s ease;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.06);
 }
 
 @keyframes dspSlideIn {
@@ -65,53 +71,55 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.08);
     gap: 12px;
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .dsp-header-left {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
 }
 
 .dsp-institution {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #e2e8f0;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #1A1A2E;
 }
 
 .dsp-last-check {
     font-size: 0.72rem;
-    color: #64748b;
+    color: #4f46e5;
+    font-weight: 500;
 }
 
 /* ── Warnings ───────────────────────────────────────────────────── */
 .dsp-warning {
-    margin: 10px 16px;
-    padding: 10px 14px;
-    border-radius: 8px;
+    margin: 12px 16px;
+    padding: 12px 16px;
+    border-radius: 10px;
     font-size: 0.8rem;
     line-height: 1.5;
 }
 
 .dsp-warning.anomaly {
-    background: rgba(251, 191, 36, 0.08);
-    border: 1px solid rgba(251, 191, 36, 0.2);
-    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px dashed rgba(245, 158, 11, 0.3);
+    color: #b45309;
 }
 
 .dsp-warning.mismatch {
     background: rgba(239, 68, 68, 0.08);
-    border: 1px solid rgba(239, 68, 68, 0.2);
-    color: #f87171;
+    border: 1px dashed rgba(239, 68, 68, 0.3);
+    color: #b91c1c;
 }
 
 /* ── Table ──────────────────────────────────────────────────────── */
 .dsp-table-wrap {
     overflow-x: auto;
-    padding: 0 4px;
+    padding: 0 4px 8px;
 }
 
 .dsp-table {
@@ -121,24 +129,24 @@
 }
 
 .dsp-table thead th {
-    padding: 10px 16px;
+    padding: 12px 16px;
     text-align: left;
-    color: #475569;
+    color: #8C8CA1;
     font-size: 0.72rem;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.08);
     white-space: nowrap;
 }
 
 .dsp-table tbody tr {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.04);
     transition: background 0.15s;
 }
 
 .dsp-table tbody tr:hover {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(99, 102, 241, 0.04);
 }
 
 .dsp-table tbody tr:last-child {
@@ -146,72 +154,79 @@
 }
 
 .dsp-table td {
-    padding: 10px 16px;
-    color: #cbd5e1;
+    padding: 12px 16px;
+    color: #4A4A68;
     vertical-align: middle;
 }
 
 .dsp-field-name {
-    font-weight: 600;
-    color: #e2e8f0;
+    font-weight: 700;
+    color: #1A1A2E;
     white-space: nowrap;
 }
 
 .dsp-date {
     font-size: 0.74rem;
-    color: #64748b;
+    color: #8C8CA1;
     white-space: nowrap;
 }
 
 .dsp-na {
-    color: #475569;
+    color: #B4B4C4;
     font-style: italic;
 }
 
 /* Row shade for unverified fields */
 .dsp-row.unverified {
-    opacity: 0.75;
+    opacity: 0.65;
 }
 
 /* ── Status Pill ─────────────────────────────────────────────────── */
 .dsp-status-pill {
     display: inline-block;
-    padding: 2px 8px;
+    padding: 3px 10px;
     border-radius: 100px;
     font-size: 0.72rem;
-    font-weight: 600;
+    font-weight: 700;
     border: 1px solid transparent;
     white-space: nowrap;
 }
 
 /* ── Loading / Error ─────────────────────────────────────────────── */
 .dsp-loading {
-    padding: 20px;
+    padding: 24px;
     text-align: center;
-    color: #64748b;
+    color: #8C8CA1;
     font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .dsp-error {
     padding: 16px 20px;
-    color: #f87171;
+    color: #dc2626;
     font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(239, 68, 68, 0.05);
+    border-radius: 8px;
+    margin: 16px;
 }
 
 /* ── Footer ─────────────────────────────────────────────────────── */
 .dsp-footer {
-    padding: 12px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 14px 20px;
+    border-top: 1px solid rgba(99, 102, 241, 0.08);
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .dsp-footer-link {
-    font-size: 0.78rem;
-    color: #60a5fa;
+    font-size: 0.8rem;
+    color: #4f46e5;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .dsp-footer-link:hover {
-    color: #93c5fd;
+    color: #312e81;
     text-decoration: underline;
 }
 

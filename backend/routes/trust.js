@@ -22,7 +22,11 @@ const rp = require('../lib/reportProcessor');
 const reportLimiter = rateLimit({
     windowMs: 60 * 60 * 1000, // 1 hour
     max: 5,
-    keyGenerator: (req) => rp.hashIp(req.ip || req.headers['x-forwarded-for'] || 'unknown'),
+    validate: false,
+    keyGenerator: (req) => {
+        const rawIp = req.ip || req.headers['x-forwarded-for'] || 'unknown';
+        return rp.hashIp(String(rawIp));
+    },
     message: { error: 'Too many reports from this IP. Please wait before submitting again.' }
 });
 

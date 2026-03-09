@@ -54,9 +54,9 @@ const nextConfig = {
                     },
                     {
                         key: 'Content-Security-Policy',
-                        // Removed 'unsafe-eval' which allows XSS via eval().
-                        // If a library strictly requires eval, it should be whitelisted specifically.
-                        value: "default-src 'self'; script-src 'self' 'unsafe-inline' blob: https://va.vercel-scripts.com https://*.sentry.io https://apis.google.com https://www.googleapis.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' blob: data: https:; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; connect-src 'self' blob: data: https: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self' https://accounts.google.com https://content.googleapis.com https://*.firebaseapp.com https://*.firebasejs.com; worker-src 'self' blob:;"
+                        // 'unsafe-eval' is required for Next.js Fast Refresh (Development) 
+                        // and some analytics/tracking scripts (GTM, Sentry) to function.
+                        value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://va.vercel-scripts.com https://*.sentry.io https://apis.google.com https://www.googleapis.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' blob: data: https:; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; connect-src 'self' blob: data: https: https://fonts.gstatic.com https://fonts.googleapis.com http://localhost:4000 http://127.0.0.1:4000; frame-src 'self' https://accounts.google.com https://content.googleapis.com https://*.firebaseapp.com https://*.firebasejs.com; worker-src 'self' blob:;"
                     },
                     {
                         key: 'Cross-Origin-Opener-Policy',

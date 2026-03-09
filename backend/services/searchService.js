@@ -122,10 +122,20 @@ async function searchViaMongo(q, { limit = 20, filters = {} } = {}) {
             return results.map(r => ({ ...r, id: r._id ? r._id.toString() : r.id }));
         }
 
-        // If $text misses (short query), try prefix regex on name
-        const regex = { $regex: `^${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, $options: 'i' };
+        // If $text misses (short query), try more advanced regex on name/shortName
+        const safeQ = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(safeQ, 'i');
+        const initialRegex = new RegExp('^' + q.split('').join('.*'), 'i');
+
         const prefixResults = await College.find(
-            { $or: [{ name: regex }, { shortName: regex }], ...mongoFilters },
+            {
+                $or: [
+                    { name: { $regex: regex } },
+                    { shortName: { $regex: regex } },
+                    { name: { $regex: initialRegex } }
+                ],
+                ...mongoFilters
+            },
             { id: 1, name: 1, shortName: 1, state: 1, rankingTier: 1, ceiScore: 1, location: 1 }
         )
             .limit(limit)

@@ -8,10 +8,40 @@
 /* Hero Section */
 .college-hero {
   position: relative;
-  padding: 140px 0 60px;
+  padding: 60px 0 40px;
+  /* Reduced padding since we have a title strip below */
   background: transparent;
   overflow: hidden;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* New Title Strip Styles */
+.college-title-strip {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.college-title-strip .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.college-title-strip .display-name {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.college-title-strip .location-tag {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 600;
 }
 
 .college-hero-bg {

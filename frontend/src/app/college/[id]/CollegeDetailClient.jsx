@@ -70,6 +70,18 @@ export default function CollegeDetailClient({ id, initialData }) {
             {/* 1. Cinematic Hero (Full Width) */}
             <CollegeHero college={college} />
 
+            {/* Premium Title Strip (New) */}
+            <div className="college-title-strip">
+                <Container>
+                    <h1 className="display-name">{college.name}</h1>
+                    {college.location && (
+                        <div className="location-tag">
+                            <span>📍 {college.location}</span>
+                        </div>
+                    )}
+                </Container>
+            </div>
+
             <Container>
                 {/* 2. Tabbed Content Area */}
                 <div className="profile-content-wrapper">

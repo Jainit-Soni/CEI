@@ -8,13 +8,20 @@ export const api = axios.create({
 });
 
 export async function fetchColleges(params = {}) {
-  const { data } = await api.get("/api/colleges", { params });
+  const { data } = await api.get("/api/colleges", { params: { ...params, _t: Date.now() } });
   return data;
 }
 
 export async function fetchCollege(id) {
-  const { data } = await api.get(`/api/college/${id}`);
-  return data;
+  if (!id || id === "undefined") {
+    console.warn("[api] fetchCollege called with invalid id:", id);
+    return null;
+  }
+  const { data } = await api.get(`/api/college/${id}`, { params: { _t: Date.now() } });
+  console.log(`[API] Fetched college ${id} from ${API_BASE}. Score:`, data.ceiScore || data.college?.ceiScore);
+  // If the API returns an enriched payload { college, anomalies, ... }, 
+  // we return just the college object for component compatibility.
+  return data.college || data;
 }
 
 export async function fetchExams(params = {}) {
@@ -37,7 +44,9 @@ export async function searchAll(params = {}) {
   return data;
 }
 
-export async function suggest(params = {}) {
+export async function suggest(q) {
+  // Support both string or { q: '...' } object for flexibility
+  const params = typeof q === 'string' ? { q } : q;
   const { data } = await api.get("/api/suggest", { params });
   return data;
 }

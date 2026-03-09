@@ -1,11 +1,8 @@
 "use client";
 /**
- * ImprovementSimulator.jsx — CEI Institutional Improvement Sandbox (Phase XIII)
+ * ImprovementSimulator.jsx — "What if this college improved?"
  * ===============================================================================
- * A sandboxed what-if simulator for institutions to explore score improvements.
- *
- * CRITICAL: This component never writes to the database.
- * Every result is labeled "Hypothetical" with a clear disclaimer.
+ * A sandboxed what-if simulator for students/institutions to explore score changes.
  */
 
 import { useState } from "react";
@@ -17,11 +14,11 @@ const NAAC_GRADES = ["A++", "A+", "A", "B++", "B+", "B", "C", ""];
 const TIERS = ["Tier 1", "Tier 2", "Tier 3", "University", "Stand Alone"];
 
 const BAND_COLORS = {
-    Elite: { color: "#60a5fa", bg: "rgba(96,165,250,0.12)" },
-    High: { color: "#34d399", bg: "rgba(52,211,153,0.12)" },
-    Competitive: { color: "#fbbf24", bg: "rgba(251,191,36,0.12)" },
-    Moderate: { color: "#f87171", bg: "rgba(248,113,113,0.12)" },
-    Emerging: { color: "#94a3b8", bg: "rgba(148,163,184,0.12)" }
+    Elite: { color: "#4f46e5", bg: "rgba(79, 70, 229, 0.12)", border: "rgba(79, 70, 229, 0.3)" },
+    High: { color: "#0ea5e9", bg: "rgba(14, 165, 233, 0.12)", border: "rgba(14, 165, 233, 0.3)" },
+    Competitive: { color: "#f59e0b", bg: "rgba(245, 158, 11, 0.12)", border: "rgba(245, 158, 11, 0.3)" },
+    Moderate: { color: "#ef4444", bg: "rgba(239, 68, 68, 0.12)", border: "rgba(239, 68, 68, 0.3)" },
+    Emerging: { color: "#8b5cf6", bg: "rgba(139, 92, 246, 0.12)", border: "rgba(139, 92, 246, 0.3)" }
 };
 
 export default function ImprovementSimulator({ college }) {
@@ -67,39 +64,39 @@ export default function ImprovementSimulator({ college }) {
 
     return (
         <div className="sim-root">
-            {/* Watermark banner */}
+            {/* Watermark notice */}
             <div className="sim-watermark-bar">
-                🔬 HYPOTHETICAL SANDBOX — No changes are saved to the database
+                ✨ HYPOTHETICAL SIMULATOR — Does not affect actual college rankings
             </div>
 
             <div className="sim-body">
                 {/* Controls */}
                 <div className="sim-controls">
-                    <h3 className="sim-heading">Improvement Simulator</h3>
+                    <h3 className="sim-heading">Score Simulator</h3>
                     <p className="sim-subtext">
-                        Adjust parameters below to see how changes could affect the CEI score.
-                        Results are approximate and use a simplified model.
+                        Wondering how a better NAAC grade or higher placement rate would impact this college's CEI score? Play around with the sliders below to find out!
                     </p>
 
                     <div className="sim-field">
-                        <label>NAAC Grade</label>
-                        <select value={naacGrade} onChange={e => setNaacGrade(e.target.value)}>
-                            {NAAC_GRADES.map(g => <option key={g} value={g}>{g || "—"}</option>)}
+                        <label>Expected NAAC Grade</label>
+                        <select className="sim-select" value={naacGrade} onChange={e => setNaacGrade(e.target.value)}>
+                            {NAAC_GRADES.map(g => <option key={g} value={g}>{g || "Not Accredited"}</option>)}
                         </select>
                     </div>
 
                     <div className="sim-field">
-                        <label>Placement Rate: <strong>{placementRate}%</strong></label>
+                        <label>Expected Placement Rate: <strong className="sim-val-highlight">{placementRate}%</strong></label>
                         <input
                             type="range" min={0} max={100} step={1}
                             value={placementRate}
                             onChange={e => setPlacementRate(+e.target.value)}
+                            className="sim-slider"
                         />
                     </div>
 
                     <div className="sim-field">
-                        <label>Ranking Tier</label>
-                        <select value={rankingTier} onChange={e => setRankingTier(e.target.value)}>
+                        <label>Expected College Type/Tier</label>
+                        <select className="sim-select" value={rankingTier} onChange={e => setRankingTier(e.target.value)}>
                             {TIERS.map(t => <option key={t} value={t}>{t}</option>)}
                         </select>
                     </div>
@@ -109,7 +106,14 @@ export default function ImprovementSimulator({ college }) {
                         onClick={runSimulation}
                         disabled={loading}
                     >
-                        {loading ? "Simulating..." : "▶ Run Simulation"}
+                        {loading ? (
+                            <>
+                                <span className="sim-spinner"></span>
+                                Calculating...
+                            </>
+                        ) : (
+                            "▶ See New Score"
+                        )}
                     </button>
 
                     {error && <div className="sim-error">⚠️ {error}</div>}
@@ -118,7 +122,7 @@ export default function ImprovementSimulator({ college }) {
                 {/* Result */}
                 {result && (
                     <div className="sim-result">
-                        <div className="sim-result-tag">⚗️ Hypothetical Result</div>
+                        <div className="sim-result-tag">Predicted Score Change</div>
 
                         <div className="sim-score-row">
                             {/* Current */}
@@ -127,7 +131,7 @@ export default function ImprovementSimulator({ college }) {
                                 <div className="sim-score-val">{result.currentScore?.toFixed(1)}</div>
                                 <div
                                     className="sim-band-pill"
-                                    style={{ color: bandCfg(result.currentBand).color, background: bandCfg(result.currentBand).bg }}
+                                    style={{ color: bandCfg(result.currentBand).color, background: bandCfg(result.currentBand).bg, borderColor: bandCfg(result.currentBand).border }}
                                 >
                                     {result.currentBand}
                                 </div>
@@ -135,17 +139,17 @@ export default function ImprovementSimulator({ college }) {
 
                             {/* Arrow */}
                             <div className={`sim-delta-arrow ${result.scoreDelta >= 0 ? "positive" : "negative"}`}>
-                                {result.scoreDelta >= 0 ? "▲" : "▼"}
-                                <span>{Math.abs(result.scoreDelta).toFixed(1)} pts</span>
+                                {result.scoreDelta >= 0 ? "↗" : "↘"}
+                                <span>{result.scoreDelta > 0 ? "+" : ""}{result.scoreDelta?.toFixed(1)} pts</span>
                             </div>
 
                             {/* Simulated */}
                             <div className="sim-score-card highlight">
-                                <div className="sim-score-label">Simulated Score</div>
-                                <div className="sim-score-val">{result.simulatedScore?.toFixed(1)}</div>
+                                <div className="sim-score-label">New Estimated Score</div>
+                                <div className="sim-score-val highlight-val">{result.simulatedScore?.toFixed(1)}</div>
                                 <div
                                     className="sim-band-pill"
-                                    style={{ color: bandCfg(result.simulatedBand).color, background: bandCfg(result.simulatedBand).bg }}
+                                    style={{ color: bandCfg(result.simulatedBand).color, background: bandCfg(result.simulatedBand).bg, borderColor: bandCfg(result.simulatedBand).border }}
                                 >
                                     {result.simulatedBand}
                                 </div>
@@ -153,7 +157,7 @@ export default function ImprovementSimulator({ college }) {
                         </div>
 
                         <div className="sim-disclaimer">
-                            {result.disclaimer}
+                            Note: This is just an estimate using a simplified formula. The real CEI algorithm considers over 40+ dynamic data points to generate the final rank.
                         </div>
                     </div>
                 )}

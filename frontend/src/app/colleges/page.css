@@ -5,7 +5,7 @@
 
 .list-hero {
   position: relative;
-  padding: var(--space-11) 0 var(--space-8);
+  padding: var(--space-7) 0 var(--space-8);
   overflow: visible;
 }
 
@@ -157,6 +157,11 @@
 .filter-search:focus-within {
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.filter-search-wrapper {
+  width: 100%;
+  position: relative;
 }
 
 .filter-search-icon {

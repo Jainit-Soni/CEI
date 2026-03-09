@@ -324,8 +324,8 @@ export default function ReportDataModal({ college, isOpen, onClose }) {
             <style jsx>{`
                 .rdr-overlay {
                     position: fixed; inset: 0; z-index: 9999;
-                    background: rgba(0,0,0,0.65);
-                    backdrop-filter: blur(8px);
+                    background: rgba(79, 70, 229, 0.12);
+                    backdrop-filter: blur(12px);
                     display: flex; align-items: center; justify-content: center;
                     padding: 1rem;
                     animation: rdrFadeIn 0.2s ease;
@@ -333,13 +333,24 @@ export default function ReportDataModal({ college, isOpen, onClose }) {
                 @keyframes rdrFadeIn { from { opacity: 0 } to { opacity: 1 } }
 
                 .rdr-modal {
-                    background: linear-gradient(145deg, #0f1629, #131d35);
-                    border: 1px solid rgba(99,179,237,0.15);
-                    border-radius: 20px;
+                    background: rgba(255, 255, 255, 0.88);
+                    backdrop-filter: blur(28px);
+                    -webkit-backdrop-filter: blur(28px);
+                    border: 1px solid rgba(99, 102, 241, 0.15);
+                    border-radius: 24px;
                     width: 100%; max-width: 560px;
                     max-height: 90vh; overflow-y: auto;
-                    box-shadow: 0 25px 80px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05);
+                    box-shadow: 0 24px 80px rgba(79, 70, 229, 0.15), 0 4px 16px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.95);
                     animation: rdrSlideUp 0.25s cubic-bezier(.16,1,.3,1);
+                    position: relative;
+                    overflow: hidden;
+                }
+                .rdr-modal::before {
+                    content: "";
+                    position: absolute; top: 0; left: 0; right: 0;
+                    height: 3px;
+                    background: linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899);
+                    border-radius: 24px 24px 0 0;
                 }
                 @keyframes rdrSlideUp { from { transform: translateY(24px); opacity: 0 } to { transform: none; opacity: 1 } }
 
@@ -347,19 +358,19 @@ export default function ReportDataModal({ college, isOpen, onClose }) {
                 .rdr-header {
                     display: flex; align-items: center; justify-content: space-between;
                     padding: 1.5rem 1.75rem 1rem;
-                    border-bottom: 1px solid rgba(255,255,255,0.07);
+                    border-bottom: 1px solid rgba(99, 102, 241, 0.08);
                 }
                 .rdr-header-left { display: flex; align-items: center; gap: 0.875rem; }
                 .rdr-icon { font-size: 1.5rem; }
-                .rdr-title { font-size: 1.125rem; font-weight: 700; color: #e2e8f0; margin: 0; }
-                .rdr-subtitle { font-size: 0.75rem; color: #64b5e8; margin: 0; margin-top: 2px; }
+                .rdr-title { font-size: 1.125rem; font-weight: 800; color: #1A1A2E; margin: 0; }
+                .rdr-subtitle { font-size: 0.75rem; color: #4f46e5; margin: 0; margin-top: 2px; font-weight: 600; }
                 .rdr-close {
-                    background: rgba(255,255,255,0.07); border: none; color: #94a3b8;
+                    background: rgba(99, 102, 241, 0.06); border: 1px solid rgba(99, 102, 241, 0.12); color: #8C8CA1;
                     width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
                     font-size: 0.875rem; display: flex; align-items: center; justify-content: center;
                     transition: all 0.15s;
                 }
-                .rdr-close:hover { background: rgba(255,255,255,0.15); color: #e2e8f0; }
+                .rdr-close:hover { background: rgba(99, 102, 241, 0.12); color: #4f46e5; }
 
                 /* Step indicator */
                 .rdr-steps {
@@ -368,25 +379,25 @@ export default function ReportDataModal({ college, isOpen, onClose }) {
                 .rdr-step {
                     display: flex; align-items: center; gap: 0.5rem;
                     flex: 1; padding-bottom: 0.75rem;
-                    border-bottom: 2px solid rgba(255,255,255,0.1);
-                    color: #64748b; font-size: 0.8125rem;
+                    border-bottom: 2px solid rgba(99, 102, 241, 0.1);
+                    color: #B4B4C4; font-size: 0.8125rem;
                     transition: all 0.2s;
                 }
-                .rdr-step.active { color: #63b3ed; border-bottom-color: #63b3ed; }
-                .rdr-step.done { color: #48bb78; border-bottom-color: #48bb78; }
+                .rdr-step.active { color: #4f46e5; border-bottom-color: #4f46e5; }
+                .rdr-step.done { color: #16a34a; border-bottom-color: #16a34a; }
                 .rdr-step-num {
                     width: 22px; height: 22px; border-radius: 50%;
                     border: 1.5px solid currentColor;
                     display: flex; align-items: center; justify-content: center;
                     font-size: 0.7rem; font-weight: 700; flex-shrink: 0;
                 }
-                .rdr-step.active .rdr-step-num { background: #63b3ed; color: #0f1629; border-color: #63b3ed; }
-                .rdr-step.done .rdr-step-num { background: #48bb78; color: #0f1629; border-color: #48bb78; }
-                .rdr-step-label { font-weight: 500; }
+                .rdr-step.active .rdr-step-num { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+                .rdr-step.done .rdr-step-num { background: #16a34a; color: #fff; border-color: #16a34a; }
+                .rdr-step-label { font-weight: 600; }
 
                 /* Body */
                 .rdr-body { padding: 1.5rem 1.75rem; }
-                .rdr-intro { color: #94a3b8; font-size: 0.875rem; margin: 0 0 1.25rem; line-height: 1.6; }
+                .rdr-intro { color: #8C8CA1; font-size: 0.875rem; margin: 0 0 1.25rem; line-height: 1.6; }
 
                 /* Field grid */
                 .rdr-field-grid {
@@ -394,70 +405,71 @@ export default function ReportDataModal({ college, isOpen, onClose }) {
                     gap: 0.5rem; margin-bottom: 1.5rem;
                 }
                 .rdr-field-btn {
-                    background: rgba(255,255,255,0.04);
-                    border: 1.5px solid rgba(255,255,255,0.08);
-                    border-radius: 10px; padding: 0.625rem 0.875rem;
-                    color: #cbd5e1; font-size: 0.8125rem; font-weight: 500;
+                    background: rgba(255, 255, 255, 0.6);
+                    border: 1.5px solid rgba(99, 102, 241, 0.1);
+                    border-radius: 12px; padding: 0.625rem 0.875rem;
+                    color: #4A4A68; font-size: 0.8125rem; font-weight: 600;
                     cursor: pointer; text-align: left;
                     display: flex; justify-content: space-between; align-items: center;
                     transition: all 0.15s;
                 }
-                .rdr-field-btn:hover { background: rgba(99,179,237,0.08); border-color: rgba(99,179,237,0.3); color: #e2e8f0; }
-                .rdr-field-btn.selected { background: rgba(99,179,237,0.12); border-color: #63b3ed; color: #63b3ed; }
-                .rdr-field-check { font-size: 0.875rem; color: #63b3ed; }
+                .rdr-field-btn:hover { background: rgba(255,255,255,0.9); border-color: rgba(99,102,241,0.3); color: #1A1A2E; box-shadow: 0 2px 8px rgba(99,102,241,0.08); }
+                .rdr-field-btn.selected { background: rgba(79, 70, 229, 0.06); border-color: #4f46e5; color: #4f46e5; }
+                .rdr-field-check { font-size: 0.875rem; color: #4f46e5; }
 
                 /* Form elements */
                 .rdr-selected-badge {
                     display: flex; align-items: center; gap: 0.625rem;
-                    background: rgba(99,179,237,0.08); border: 1px solid rgba(99,179,237,0.2);
-                    border-radius: 8px; padding: 0.625rem 0.875rem;
+                    background: rgba(79, 70, 229, 0.06); border: 1px solid rgba(79, 70, 229, 0.15);
+                    border-radius: 10px; padding: 0.625rem 0.875rem;
                     margin-bottom: 1.25rem; font-size: 0.8125rem;
                 }
-                .rdr-badge-label { color: #64748b; }
-                .rdr-badge-value { color: #63b3ed; font-weight: 600; flex: 1; }
-                .rdr-change { background: none; border: none; color: #64b5e8; cursor: pointer; font-size: 0.75rem; text-decoration: underline; padding: 0; }
-                .rdr-change:hover { color: #90cdf4; }
+                .rdr-badge-label { color: #8C8CA1; }
+                .rdr-badge-value { color: #4f46e5; font-weight: 700; flex: 1; }
+                .rdr-change { background: none; border: none; color: #4f46e5; cursor: pointer; font-size: 0.75rem; text-decoration: underline; padding: 0; opacity: 0.75; }
+                .rdr-change:hover { opacity: 1; }
 
                 /* Current value context chip */
                 .rdr-current-value {
                     display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
-                    background: rgba(45,55,72,0.6); border: 1px solid rgba(255,255,255,0.06);
-                    border-radius: 8px; padding: 0.5rem 0.875rem;
+                    background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.2);
+                    border-radius: 10px; padding: 0.5rem 0.875rem;
                     margin-bottom: 1rem; font-size: 0.8125rem;
                 }
-                .rdr-cv-label { color: #64748b; white-space: nowrap; }
+                .rdr-cv-label { color: #8C8CA1; white-space: nowrap; }
                 .rdr-cv-val {
-                    color: #fbbf24; font-weight: 600;
-                    background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.15);
-                    border-radius: 5px; padding: 1px 7px;
+                    color: #b45309; font-weight: 700;
+                    background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2);
+                    border-radius: 6px; padding: 2px 8px;
                 }
 
                 .rdr-label {
-                    display: block; font-size: 0.8125rem; font-weight: 600;
-                    color: #cbd5e1; margin-bottom: 0.375rem; margin-top: 1rem;
+                    display: block; font-size: 0.8125rem; font-weight: 700;
+                    color: #1A1A2E; margin-bottom: 0.375rem; margin-top: 1rem;
                 }
                 .rdr-label:first-of-type { margin-top: 0; }
-                .rdr-required { color: #fc8181; margin-left: 3px; }
-                .rdr-optional { color: #64748b; font-weight: 400; font-size: 0.75rem; }
+                .rdr-required { color: #dc2626; margin-left: 3px; }
+                .rdr-optional { color: #B4B4C4; font-weight: 400; font-size: 0.75rem; }
 
                 .rdr-input, .rdr-textarea {
                     width: 100%; padding: 0.625rem 0.875rem;
-                    background: rgba(255,255,255,0.05);
-                    border: 1.5px solid rgba(255,255,255,0.1);
-                    border-radius: 10px; color: #e2e8f0; font-size: 0.875rem;
+                    background: rgba(255, 255, 255, 0.7);
+                    border: 1.5px solid rgba(99, 102, 241, 0.12);
+                    border-radius: 10px; color: #1A1A2E; font-size: 0.875rem;
                     outline: none; resize: vertical;
                     transition: border-color 0.2s, box-shadow 0.2s;
                     font-family: inherit;
                     box-sizing: border-box;
                 }
                 .rdr-input:focus, .rdr-textarea:focus {
-                    border-color: #63b3ed;
-                    box-shadow: 0 0 0 3px rgba(99,179,237,0.12);
+                    border-color: #4f46e5;
+                    background: rgba(255, 255, 255, 0.9);
+                    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
                 }
-                .rdr-input::placeholder, .rdr-textarea::placeholder { color: #475569; }
+                .rdr-input::placeholder, .rdr-textarea::placeholder { color: #B4B4C4; }
 
-                .rdr-char-count { font-size: 0.7rem; color: #475569; text-align: right; margin: 0.25rem 0 0; }
-                .rdr-hint { font-size: 0.75rem; color: #64748b; margin: 0.375rem 0 0; line-height: 1.5; }
+                .rdr-char-count { font-size: 0.7rem; color: #B4B4C4; text-align: right; margin: 0.25rem 0 0; }
+                .rdr-hint { font-size: 0.76rem; color: #8C8CA1; margin: 0.375rem 0 0; line-height: 1.5; }
 
                 /* Buttons */
                 .rdr-footer {
@@ -465,71 +477,74 @@ export default function ReportDataModal({ college, isOpen, onClose }) {
                     margin-top: 1.5rem;
                 }
                 .rdr-btn-cancel {
-                    background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,255,255,0.12);
-                    color: #94a3b8; padding: 0.625rem 1.25rem; border-radius: 10px;
-                    font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.15s;
+                    background: rgba(0,0,0,0.04); border: 1.5px solid rgba(0,0,0,0.08);
+                    color: #8C8CA1; padding: 0.625rem 1.25rem; border-radius: 10px;
+                    font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: all 0.15s;
                 }
-                .rdr-btn-cancel:hover { background: rgba(255,255,255,0.1); color: #cbd5e1; }
+                .rdr-btn-cancel:hover { background: rgba(0,0,0,0.08); color: #4A4A68; }
                 .rdr-btn-next {
-                    background: linear-gradient(135deg, #3b82f6, #6366f1);
+                    background: linear-gradient(135deg, #4f46e5, #6366f1);
                     border: none; color: #fff; padding: 0.625rem 1.5rem;
-                    border-radius: 10px; font-size: 0.875rem; font-weight: 600;
+                    border-radius: 10px; font-size: 0.875rem; font-weight: 700;
                     cursor: pointer; transition: all 0.15s;
+                    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
                 }
-                .rdr-btn-next:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-1px); }
-                .rdr-btn-next:disabled { opacity: 0.45; cursor: not-allowed; }
+                .rdr-btn-next:hover:not(:disabled) { filter: brightness(1.08); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(79,70,229,0.4); }
+                .rdr-btn-next:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
                 .rdr-btn-submit {
-                    background: linear-gradient(135deg, #e53e3e, #c05621);
+                    background: linear-gradient(135deg, #dc2626, #b91c1c);
                     border: none; color: #fff; padding: 0.625rem 1.5rem;
-                    border-radius: 10px; font-size: 0.875rem; font-weight: 600;
+                    border-radius: 10px; font-size: 0.875rem; font-weight: 700;
                     cursor: pointer; transition: all 0.15s; min-width: 140px;
                     display: flex; align-items: center; justify-content: center;
+                    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.25);
                 }
-                .rdr-btn-submit:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-1px); }
-                .rdr-btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+                .rdr-btn-submit:hover:not(:disabled) { filter: brightness(1.08); transform: translateY(-1px); }
+                .rdr-btn-submit:disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; }
                 .rdr-spinner-row { display: flex; align-items: center; gap: 0.5rem; }
                 .rdr-spinner {
                     width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3);
                     border-top-color: #fff; border-radius: 50%;
-                    animation: spin 0.7s linear infinite;
+                    animation: spinRdr 0.7s linear infinite;
                 }
-                @keyframes spin { to { transform: rotate(360deg) } }
+                @keyframes spinRdr { to { transform: rotate(360deg) } }
 
                 .rdr-error {
-                    color: #fc8181; font-size: 0.8125rem; margin-top: 0.75rem;
-                    background: rgba(252,129,129,0.08); border: 1px solid rgba(252,129,129,0.2);
+                    color: #b91c1c; font-size: 0.8125rem; margin-top: 0.75rem;
+                    background: rgba(220, 38, 38, 0.06); border: 1px solid rgba(220, 38, 38, 0.15);
                     border-radius: 8px; padding: 0.5rem 0.75rem;
                 }
                 .rdr-disclaimer {
-                    font-size: 0.7rem; color: #475569; margin-top: 1rem; text-align: center; line-height: 1.5;
+                    font-size: 0.7rem; color: #B4B4C4; margin-top: 1rem; text-align: center; line-height: 1.5;
                 }
 
                 /* Success state */
                 .rdr-success-body { text-align: center; padding: 2.5rem 1.75rem; }
                 .rdr-success-icon { font-size: 3.5rem; margin-bottom: 1rem; }
-                .rdr-success-title { font-size: 1.375rem; font-weight: 700; color: #e2e8f0; margin: 0 0 0.75rem; }
-                .rdr-success-msg { color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin: 0 0 1.5rem; }
+                .rdr-success-title { font-size: 1.375rem; font-weight: 800; color: #1A1A2E; margin: 0 0 0.75rem; }
+                .rdr-success-msg { color: #8C8CA1; font-size: 0.9rem; line-height: 1.6; margin: 0 0 1.5rem; }
                 .rdr-success-meta {
-                    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-                    border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; text-align: left;
+                    background: rgba(255,255,255,0.6); border: 1px solid rgba(99,102,241,0.1);
+                    border-radius: 14px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; text-align: left;
                 }
                 .rdr-meta-row { display: flex; justify-content: space-between; align-items: center; padding: 0.375rem 0; }
-                .rdr-meta-label { font-size: 0.8rem; color: #64748b; }
-                .rdr-meta-val { font-size: 0.875rem; color: #e2e8f0; font-weight: 600; }
-                code.rdr-meta-val { font-family: monospace; background: rgba(99,179,237,0.1); color: #63b3ed; padding: 2px 6px; border-radius: 4px; }
-                .rdr-boost { color: #68d391; }
-                .rdr-success-note { font-size: 0.8rem; color: #64748b; margin-bottom: 2rem; line-height: 1.6; }
+                .rdr-meta-label { font-size: 0.8rem; color: #8C8CA1; }
+                .rdr-meta-val { font-size: 0.875rem; color: #1A1A2E; font-weight: 700; }
+                code.rdr-meta-val { font-family: monospace; background: rgba(79,70,229,0.08); color: #4f46e5; padding: 2px 8px; border-radius: 5px; }
+                .rdr-boost { color: #16a34a; }
+                .rdr-success-note { font-size: 0.8rem; color: #8C8CA1; margin-bottom: 2rem; line-height: 1.6; }
                 .rdr-btn-done {
-                    background: linear-gradient(135deg, #3b82f6, #6366f1);
+                    background: linear-gradient(135deg, #4f46e5, #6366f1);
                     border: none; color: #fff; padding: 0.75rem 2.5rem;
-                    border-radius: 12px; font-size: 0.9375rem; font-weight: 600;
+                    border-radius: 12px; font-size: 0.9375rem; font-weight: 700;
                     cursor: pointer; transition: all 0.15s;
+                    box-shadow: 0 6px 20px rgba(79,70,229,0.3);
                 }
-                .rdr-btn-done:hover { filter: brightness(1.1); transform: translateY(-1px); }
+                .rdr-btn-done:hover { filter: brightness(1.08); transform: translateY(-1px); }
 
                 @media (max-width: 480px) {
                     .rdr-field-grid { grid-template-columns: 1fr; }
-                    .rdr-modal { border-radius: 16px; }
+                    .rdr-modal { border-radius: 18px; max-height: 95vh; }
                 }
             `}</style>
         </div>

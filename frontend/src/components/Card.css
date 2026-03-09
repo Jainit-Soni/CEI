@@ -134,7 +134,8 @@
   padding: 20px 20px 12px 20px;
 }
 
-.card-top h3 {
+.card-top h3,
+.card-full-name {
   margin: 0;
   font-size: 1.15rem;
   font-weight: 700;
@@ -145,6 +146,25 @@
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.card-heading-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card-acronym {
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(241, 245, 249, 0.8);
+  padding: 2px 8px;
+  border-radius: 6px;
+  width: fit-content;
+  border: 1px solid rgba(226, 232, 240, 0.6);
 }
 
 .card-top p {

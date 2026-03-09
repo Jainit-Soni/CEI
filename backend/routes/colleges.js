@@ -6,6 +6,25 @@ const pageCache = require("../services/collegePageCache");
 
 const router = express.Router();
 
+// Canonicalize location names to handle variations (e.g., Bengaluru vs Bangalore)
+const normalizeLocation = (loc) => {
+  if (!loc) return loc;
+  const canonicalMap = {
+    'bangalore': 'Bengaluru',
+    'bengaluru': 'Bengaluru',
+    'bombay': 'Mumbai',
+    'mumbai': 'Mumbai',
+    'calcutta': 'Kolkata',
+    'kolkata': 'Kolkata',
+    'madras': 'Chennai',
+    'chennai': 'Chennai',
+    'gurgaon': 'Gurugram',
+    'gurugram': 'Gurugram'
+  };
+  const key = loc.toLowerCase().trim();
+  return canonicalMap[key] || loc;
+};
+
 // Helper to construct MongoDB filter query
 const buildCollegeQuery = (reqQuery) => {
   const { state, district, q, tier, course, exam, isPremium } = reqQuery;
@@ -21,7 +40,11 @@ const buildCollegeQuery = (reqQuery) => {
   }
 
   if (district && district !== 'All') {
-    query['meta.district'] = district;
+    query['meta.district'] = normalizeLocation(district);
+  }
+
+  if (reqQuery.location && reqQuery.location !== 'All') {
+    query.location = normalizeLocation(reqQuery.location);
   }
 
   if (tier && tier !== 'All') {
@@ -155,7 +178,7 @@ router.get("/colleges", async (req, res) => {
     const pageNum = Math.max(1, parseInt(page, 10) || 1);
     const limitNum = Math.min(100, Math.max(1, parseInt(limit, 10) || 20));
 
-    const isRankingQuery = !q && !district && (sortBy === 'ceiScore' || sortBy === 'placement' || sortBy === 'popularity' || sortBy === 'ranking');
+    const isRankingQuery = !req.query.cursor && !q && !district && (sortBy === 'ceiScore' || sortBy === 'placement' || sortBy === 'popularity' || sortBy === 'ranking');
 
     if (isRankingQuery && pageNum === 1) {
       // Resolve the canonical Redis key for this dimension
@@ -201,16 +224,26 @@ router.get("/colleges", async (req, res) => {
 
         // Cache MISS: fire async background rebuild so next request hits cache
         const mongoFilter = {};
+        const baseFilter = {};
         const mongoSortField = normSortBy === 'ceiScore'
           ? 'ceiScore'
           : 'placements.highestPackageNumeric';
-        if (state && state !== 'All') mongoFilter.state = state;
-        if (tier && tier !== 'All') mongoFilter.rankingTier = tier;
-        if (band && band !== 'All') mongoFilter.competitivenessBand = band;
+        if (state && state !== 'All') {
+          mongoFilter.state = state;
+          baseFilter.state = state;
+        }
+        if (tier && tier !== 'All') {
+          mongoFilter.rankingTier = tier;
+          baseFilter.rankingTier = tier;
+        }
+        if (band && band !== 'All') {
+          mongoFilter.competitivenessBand = band;
+          baseFilter.competitivenessBand = band;
+        }
         if (normSortBy === 'ceiScore') mongoFilter.ceiScore = { $ne: null };
         else mongoFilter['placements.highestPackageNumeric'] = { $gt: 0 };
 
-        rankingCache.buildOneAsync(mongoFilter, mongoSortField, rankKey);
+        rankingCache.buildOneAsync(mongoFilter, mongoSortField, rankKey, baseFilter);
       }
     }
     // ────────────────────────────────────────────────────────────────────────
@@ -222,21 +255,89 @@ router.get("/colleges", async (req, res) => {
       return res.json(cached);
     }
 
-    const skip = (pageNum - 1) * limitNum;
+    // Cursor processing for limitless pagination
+    const rawCursor = req.query.cursor;
 
     const query = buildCollegeQuery(req.query);
     const sort = buildSortQuery(req.query);
+    const sortKeys = Object.keys(sort);
 
-    const [colleges, totalCount] = await Promise.all([
-      College.find(query)
-        .sort(sort)
-        .skip(skip)
-        .limit(limitNum)
-        .lean(),
+    const primarySortField = sortKeys.find(k => k !== '_id' && k !== 'isPremium');
+    const primarySortDir = primarySortField ? sort[primarySortField] : null;
+
+    if (rawCursor && primarySortField) {
+      try {
+        const decoded = JSON.parse(Buffer.from(rawCursor, 'base64').toString('ascii'));
+        const { v: cursorValue, id: cursorId } = decoded;
+
+        const inequality = primarySortDir === -1 ? '$lt' : '$gt';
+
+        query.$or = query.$or || [];
+        query.$or.push(
+          { [primarySortField]: { [inequality]: cursorValue } },
+          {
+            [primarySortField]: cursorValue,
+            _id: { [primarySortDir === -1 ? '$lt' : '$gt']: cursorId }
+          }
+        );
+      } catch (err) {
+        console.warn('Invalid cursor provided, falling back to page 1');
+      }
+    }
+
+    const skip = rawCursor ? 0 : (pageNum - 1) * limitNum;
+
+    // Phase 1: Aggregation Pipeline to force projection BEFORE sorting
+    const pipeline = [
+      { $match: query }
+    ];
+
+    if (sortKeys.length > 0) {
+      const sortProject = { _id: 1 };
+      sortKeys.forEach(k => { sortProject[k] = 1; });
+      pipeline.push({ $project: sortProject });
+      pipeline.push({ $sort: sort });
+    }
+
+    if (skip > 0) pipeline.push({ $skip: skip });
+    pipeline.push({ $limit: limitNum });
+
+    const [sortedIdsResult, totalCount] = await Promise.all([
+      College.aggregate(pipeline), // Atlas Free drops allowDiskUse anyway
       College.countDocuments(query)
     ]);
 
+    const ids = sortedIdsResult.map(c => c._id);
+
+    // Phase 2: Fetch the full documents ONLY for the IDs on the current page
+    const fetchedColleges = await College.find({ _id: { $in: ids } })
+      .select("shortName name location rankingTier popularity ranking meta.ownership meta.district acceptedExams source lastUpdated pastCutoffs isPremium ceiScore courses placements.highestPackageNumeric placements.averagePackage placements.averagePackageNumeric placements.highestPackage placements.placementRate")
+      .lean();
+
+    const collegeMap = new Map(fetchedColleges.map(c => [c._id.toString(), c]));
+    const colleges = ids.map(id => collegeMap.get(id.toString())).filter(Boolean);
+
+    let debugCursor = {};
+    let nextCursor = null;
+    if (colleges.length === limitNum && primarySortField) {
+      // The items in 'colleges' are already in the exact sorted order dictated by the aggregation
+      const lastItem = colleges[colleges.length - 1];
+
+      let lastValue = lastItem;
+      const parts = primarySortField.split('.');
+      for (const part of parts) {
+        if (lastValue) lastValue = lastValue[part];
+      }
+      debugCursor = { sortField: primarySortField, extractedValue: lastValue, id: lastItem._id };
+
+      if (lastValue !== undefined && lastValue !== null) {
+        const cursorObj = { v: lastValue, id: lastItem._id.toString() };
+        nextCursor = Buffer.from(JSON.stringify(cursorObj)).toString('base64');
+      }
+    }
+
     const totalPages = Math.ceil(totalCount / limitNum);
+
 
     const result = {
       data: colleges.map(c => ({
@@ -248,7 +349,9 @@ router.get("/colleges", async (req, res) => {
         limit: limitNum,
         totalCount,
         totalPages,
-        hasNext: pageNum < totalPages,
+        nextCursor,
+        _debug: debugCursor,
+        hasNext: !!nextCursor,
         hasPrev: pageNum > 1,
       },
     };
@@ -265,6 +368,10 @@ router.get("/colleges", async (req, res) => {
 router.get("/college/:id", async (req, res) => {
   try {
     const { id } = req.params;
+
+    if (!id || id === "undefined") {
+      return res.status(400).json({ error: "Invalid college ID provided" });
+    }
 
     // ── COLLEGE PAGE AGGREGATION CACHE ────────────────────────────────────────
     // Returns precomputed payload: college + anomalies + integrity + verifications.
