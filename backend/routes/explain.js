@@ -90,6 +90,7 @@ const VECTOR_DESCRIPTIONS = {
 async function buildExplanation(college, activeVersion) {
     const vectors = deriveVectors(college);
     // Weights: A:25%, F:15%, I:15%, S:10%, D:15%, P:35% (Max 90 pts raw scaled to 100)
+    // Matches recomputeCeiScores.js: Placement 35, Ranking 25, Exam 15, Breadth 10, Reliability 15
     const weights = { A: 0.25, F: 0.15, I: 0.15, S: 0.10, D: 0.15, P: 0.35 };
     const wSum = Object.values(weights).reduce((s, v) => s + v, 0);
 
@@ -176,9 +177,12 @@ async function buildExplanation(college, activeVersion) {
 // ── GET /api/explain/:id ──────────────────────────────────────────────────────
 router.get('/:id', async (req, res) => {
     try {
+        const { id } = req.params;
+        const isObjectId = mongoose.Types.ObjectId.isValid(id);
+
         const [college, activeVersion] = await Promise.all([
             mongoose.connection.db.collection('colleges').findOne(
-                { id: req.params.id },
+                isObjectId ? { _id: new mongoose.Types.ObjectId(id) } : { id: id },
                 {
                     projection: {
                         id: 1, name: 1, shortName: 1, ceiScore: 1, competitivenessBand: 1,

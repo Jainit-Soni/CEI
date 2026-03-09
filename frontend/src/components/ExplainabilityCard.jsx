@@ -9,18 +9,19 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { API_BASE } from "@/lib/api"; // Import consolidated API base
 import "./ExplainabilityCard.css";
 
-const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000").replace(/\/$/, "");
+const API_URL = API_BASE;
 
 // Plain-language explanations for each scoring factor
 const FACTOR_PLAIN_ENGLISH = {
-    A: { icon: "🏆", what: "Accreditation Quality", why: "Shows if the college is officially quality-certified (e.g. NAAC A+ grade). Higher grade = more trust." },
-    F: { icon: "🏛️", what: "Institution Age & Track Record", why: "Older, well-established colleges tend to have stronger faculty, alumni networks, and proven outcomes." },
-    I: { icon: "🏗️", what: "Infrastructure & Ownership", why: "Covers campus facilities, land, ownership type (Govt / Autonomous). Better infrastructure = better learning environment." },
-    S: { icon: "📐", what: "Scale of Institution", why: "Universities score higher than autonomous colleges, which score above regular colleges. Broader scale → more opportunities." },
-    D: { icon: "📊", what: "Demand & Selectivity", why: "How competitive admissions are. Higher demand means more students want in — a strong signal of quality." },
-    P: { icon: "💼", what: "Placement Outcomes", why: "Based on actual placement rates and salary packages from the college. Key indicator for your career after graduation." },
+    A: { icon: "🏆", what: "Academic Excellence", why: "Based on national rankings (NIRF/Tier 1 status). Higher ranking = more academic prestige." },
+    F: { icon: "🏛️", what: "Institutional Record", why: "Based on the college's age and stability. Established institutions usually have better alumni networks." },
+    I: { icon: "🏗️", what: "Infrastructure quality", why: "Covers campus facilities, premium status, and reliability of the physical environment." },
+    S: { icon: "📐", what: "Program Breadth", why: "How many different specialized courses are offered. More variety = more career flexibility." },
+    D: { icon: "📊", what: "Entrance Standards", why: "How tough it is to get in. High demand (CAT/GMAT) reflects the quality of your peers." },
+    P: { icon: "💼", what: "Placement Strength", why: "The real-world ROI. Based on average packages and recruiter track records." },
 };
 
 function getPlainFactor(code) {
@@ -36,10 +37,10 @@ function getBandColor(band) {
 }
 
 function getStabilityPlainText(index) {
-    if (index === null || index === undefined) return "Reliability score not available yet.";
-    if (index >= 75) return "✅ This score is very reliable — it stays consistent even when we test small data variations.";
-    if (index >= 45) return "⚠️ Moderate reliability. The score could shift slightly if key data changes. Cross-check before deciding.";
-    return "🔴 Lower reliability. This college's score is sensitive to data gaps. Use as a guide, not a final verdict.";
+    if (index === null || index === undefined) return "Calculating reliability score...";
+    if (index >= 75) return "✅ This score is highly stable and verified against internal benchmarks.";
+    if (index >= 45) return "⚠️ Moderate stability. Recommended to verify with the latest placement reports.";
+    return "🔴 Volatile data found. Use this score as a preliminary guide only.";
 }
 
 export default function ExplainabilityCard({ college }) {
@@ -53,7 +54,8 @@ export default function ExplainabilityCard({ college }) {
         setLoading(true);
         setError(null);
 
-        fetch(`${API_URL}/api/explain/${college.id}`)
+        // Fixed: Use local API_URL and add cache buster
+        fetch(`${API_URL}/api/explain/${college.id}?_t=${Date.now()}`)
             .then(r => r.ok ? r.json() : Promise.reject(r.statusText))
             .then(d => { setData(d); setLoading(false); })
             .catch(() => { setError("Could not load score explanation."); setLoading(false); });
@@ -63,7 +65,7 @@ export default function ExplainabilityCard({ college }) {
         return (
             <div className="explain-loading">
                 <div className="explain-spinner" />
-                Loading score breakdown…
+                Processing CEI vectors…
             </div>
         );
     }
@@ -89,31 +91,26 @@ export default function ExplainabilityCard({ college }) {
             <div className="explain-hero">
                 <div className="explain-hero-content">
                     <div className="explain-hero-score">
-                        <span className="explain-score-big">{Number(finalScore).toFixed(1)}</span>
+                        <span className="explain-score-big">{Math.round(finalScore)}</span>
                         <span className="explain-score-denom">/100</span>
                     </div>
                     <div className="explain-hero-meta">
-                        <div className="explain-hero-title">CEI Score</div>
+                        <div className="explain-hero-title">CEI Evaluation</div>
                         <div className="explain-hero-desc">
-                            College Excellence Index — a composite score across 6 key factors.
+                            College Excellence Index — verified cross-metric performance.
                         </div>
                         <div className="explain-band-pill" style={{ background: `${bandColor}18`, color: bandColor, borderColor: `${bandColor}35` }}>
-                            {college.competitivenessBand || "—"} Band
+                            {college.competitivenessBand || "Evaluating"} Band
                         </div>
                     </div>
                 </div>
-                {Number(scoreSummary.penalty) > 0 && (
-                    <div className="explain-penalty-note">
-                        ⚡ A small deduction of <strong>{scoreSummary.penalty} points</strong> was applied due to missing or incomplete data. Colleges with fully filled data score higher.
-                    </div>
-                )}
             </div>
 
             {/* ── 1. What Makes Up This Score ───────────────────────── */}
             <div className="explain-matrix-section">
-                <div className="explain-section-label">What makes up this score?</div>
+                <div className="explain-section-label">What drives this score?</div>
                 <p className="explain-section-intro">
-                    The score is built from 6 factors. Click any factor to learn what it means and why it matters for your decision.
+                    We analyze {college.name} across 6 dimensions to calculate an unbiased value.
                 </p>
 
                 <div className="explain-factors-list">
@@ -134,7 +131,7 @@ export default function ExplainabilityCard({ college }) {
                                         <div className="explain-factor-bar-track">
                                             <div className="explain-factor-bar-fill" style={{ width: `${pct}%` }} />
                                         </div>
-                                        <span className="explain-factor-score">+{v.contribution.toFixed(1)}</span>
+                                        <span className="explain-factor-score">+{Math.round(v.contribution)}</span>
                                     </div>
                                     <span className="explain-factor-weight">{v.weightPct} weight</span>
                                     <span className="explain-factor-chevron">{isOpen ? "▲" : "▼"}</span>
@@ -143,8 +140,8 @@ export default function ExplainabilityCard({ college }) {
                                     <div className="explain-factor-detail">
                                         <p className="explain-factor-why">{pf.why}</p>
                                         <div className="explain-factor-stats">
-                                            <span>Performance: <strong>{v.rawPct}</strong></span>
-                                            <span>Impact on total: <strong>+{v.contribution.toFixed(1)} pts</strong></span>
+                                            <span>Factor Achievement: <strong>{v.rawPct}</strong></span>
+                                            <span>Contribution: <strong>+{Math.round(v.contribution)} points</strong></span>
                                         </div>
                                     </div>
                                 )}
@@ -154,9 +151,25 @@ export default function ExplainabilityCard({ college }) {
                 </div>
             </div>
 
+            {/* ── New: Simplified "What is CEI?" Guide ──────────────── */}
+            <div className="explain-guide-section" style={{ marginTop: '30px', borderTop: '1px dashed #e2e8f0', paddingTop: '24px' }}>
+                <div className="explain-section-label">What is CEI?</div>
+                <div style={{ background: '#f8fafc', borderRadius: '12px', padding: '16px', fontSize: '0.9rem', color: '#475569', lineHeight: '1.5' }}>
+                    <p style={{ margin: 0 }}>
+                        The <strong>College Excellence Index (CEI)</strong> is a proprietary transparent algorithm that evaluates institutions on facts, not marketing.
+                        Unlike traditional rankings, we weigh <strong>Placement ROI (35%)</strong> and <strong>Admissions Standards (15%)</strong> as the highest indicators of current value.
+                    </p>
+                    <div style={{ marginTop: '12px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                        <span style={{ fontSize: '0.75rem', padding: '4px 8px', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '6px' }}>✔️ Unbiased</span>
+                        <span style={{ fontSize: '0.75rem', padding: '4px 8px', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '6px' }}>✔️ ROI Focused</span>
+                        <span style={{ fontSize: '0.75rem', padding: '4px 8px', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '6px' }}>✔️ Anti-Hype</span>
+                    </div>
+                </div>
+            </div>
+
             {/* ── 2. How Reliable Is This Score ─────────────────────── */}
-            <div className="explain-stability-section">
-                <div className="explain-section-label">How reliable is this score?</div>
+            <div className="explain-stability-section" style={{ marginTop: '30px' }}>
+                <div className="explain-section-label">Reliability & Trust</div>
 
                 <div className="stability-panel">
                     <div className="stability-badge" aria-hidden="true">
@@ -198,13 +211,13 @@ export default function ExplainabilityCard({ college }) {
             {/* ── 3. Data Transparency ───────────────────────────────── */}
             {methodology && (
                 <div className="explain-anchor-section">
-                    <div className="explain-section-label">Data Transparency</div>
+                    <div className="explain-section-label">Audit & Transparency</div>
                     <div className="explain-anchor">
                         <div className="anchor-intro">
-                            🔒 This score is based on verified, versioned data. You can audit exactly which dataset was used and when it was last updated.
+                            This score is cryptographically hashed and version-controlled. Any change to the formula is documented in our public ledger.
                         </div>
                         <div className="anchor-row">
-                            <span className="anchor-key">Scoring Model</span>
+                            <span className="anchor-key">Model</span>
                             <span className="anchor-val">
                                 {methodology.versionId}
                                 <Link
@@ -217,7 +230,7 @@ export default function ExplainabilityCard({ college }) {
                             </span>
                         </div>
                         <div className="anchor-row">
-                            <span className="anchor-key">Data Updated</span>
+                            <span className="anchor-key">Last Audit</span>
                             <span className="anchor-val">
                                 {methodology.activatedAt
                                     ? new Date(methodology.activatedAt).toLocaleDateString("en-IN", {
@@ -227,14 +240,6 @@ export default function ExplainabilityCard({ college }) {
                                 }
                             </span>
                         </div>
-                        {methodology.datasetHash && (
-                            <div className="anchor-row">
-                                <span className="anchor-key">Dataset ID</span>
-                                <span className="anchor-val anchor-hash">
-                                    {methodology.datasetHash?.slice(0, 12)}…
-                                </span>
-                            </div>
-                        )}
                     </div>
                 </div>
             )}

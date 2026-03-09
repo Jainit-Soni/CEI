@@ -392,7 +392,7 @@ function CollegesContent({ initialData }) {
                                 <Card
                                     type="college"
                                     title={college.name || college.shortName}
-                                    subtitle={college.location}
+                                    subtitle={college.location || college.meta?.district || college.state || "Location TBA"}
                                     badge={getMatchStatus(college)}
                                     tags={(college.acceptedExams || [])
                                         .slice(0, 3)
