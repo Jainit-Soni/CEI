@@ -136,8 +136,8 @@ export default function DashboardTab({ adminFetch }) {
                         Loading…
                     </div>
                 ) : (
-                    <div style={{ width: '100%', height: 220, minWidth: 0, minHeight: 220 }}>
-                        <ResponsiveContainer width="100%" height="100%" minHeight={220}>
+                    <div style={{ width: '100%', height: '220px', position: 'relative' }}>
+                        <ResponsiveContainer width="100%" height="100%">
                             <AreaChart data={data?.chart ?? []} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                                 <defs>
                                     <linearGradient id="colorActions" x1="0" y1="0" x2="0" y2="1">
@@ -146,14 +146,9 @@ export default function DashboardTab({ adminFetch }) {
                                     </linearGradient>
                                 </defs>
                                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                                <XAxis dataKey="time" axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 11 }} dy={8}
-                                    interval={3}
-                                />
+                                <XAxis dataKey="time" axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 11 }} dy={8} interval={3} />
                                 <YAxis axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 11 }} dx={-6} allowDecimals={false} />
-                                <Tooltip
-                                    contentStyle={{ borderRadius: 12, border: 'none', boxShadow: '0 8px 32px rgba(0,0,0,0.1)', fontSize: '0.875rem' }}
-                                    formatter={(val) => [val, 'Admin actions']}
-                                />
+                                <Tooltip contentStyle={{ borderRadius: 12, border: 'none', boxShadow: '0 8px 32px rgba(0,0,0,0.1)', fontSize: '0.875rem' }} formatter={(val) => [val, 'Admin actions']} />
                                 <Area type="monotone" dataKey="actions" stroke="#4f46e5" strokeWidth={2.5} fillOpacity={1} fill="url(#colorActions)" dot={false} activeDot={{ r: 5, fill: '#4f46e5' }} />
                             </AreaChart>
                         </ResponsiveContainer>
