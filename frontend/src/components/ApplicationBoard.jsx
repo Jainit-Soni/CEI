@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/lib/AuthContext";
 import { fetchUserChoices, saveUserChoices, shareUserChoices } from "@/lib/api";
 import AuthModal from "./AuthModal";
+import { useToast } from "./Toast";
 
 export default function ApplicationBoard() {
     const [items, setItems] = useState([]);
@@ -20,6 +21,8 @@ export default function ApplicationBoard() {
     const [isSharing, setIsSharing] = useState(false);
     const [copySuccess, setCopySuccess] = useState(false);
     const { user } = useAuth();
+    const { addToast } = useToast();
+    const lastSavedRef = useRef(null);
 
     const shareRef = useRef(null);
 
@@ -76,11 +79,16 @@ export default function ApplicationBoard() {
 
     useEffect(() => {
         if (!isLoaded) return;
-        localStorage.setItem("choice-filling-cart", JSON.stringify(items));
+        
+        const currentData = JSON.stringify(items);
+        localStorage.setItem("choice-filling-cart", currentData);
         window.dispatchEvent(new Event("local-storage-update"));
-        if (user) {
+        
+        if (user && currentData !== lastSavedRef.current) {
             const timer = setTimeout(() => {
-                saveUserChoices(user.uid, items).catch(console.error);
+                saveUserChoices(user.uid, items)
+                    .then(() => { lastSavedRef.current = currentData; })
+                    .catch(console.error);
             }, 1000);
             return () => clearTimeout(timer);
         }
@@ -97,8 +105,14 @@ export default function ApplicationBoard() {
 
     const clearAll = async () => {
         if (window.confirm("Clear your entire selection list? This cannot be undone.")) {
-            setItems([]);
-            if (user) await saveUserChoices(user.uid, []);
+            try {
+                setItems([]);
+                if (user) await saveUserChoices(user.uid, []);
+                addToast("List cleared successfully", "info");
+            } catch (err) {
+                console.error("Failed to clear list:", err);
+                addToast("Failed to clear cloud list, but local list reset", "error");
+            }
         }
     };
 
@@ -133,6 +147,8 @@ export default function ApplicationBoard() {
             (item.placements?.averagePackage || "High").toString().replace(/[^\x00-\x7F]/g, "").replace(/\s+/g, " "),
             (item.acceptedExams || []).map(e => (typeof e === 'object' ? (e.code || e.name) : e)).join(", ")
         ]);
+        
+        addToast("Generating strategic PDF report...", "info");
         doc.setFillColor(37, 99, 235);
         doc.rect(0, 0, 8, doc.internal.pageSize.height, 'F');
         autoTable(doc, {
@@ -149,16 +165,20 @@ export default function ApplicationBoard() {
     };
 
     const handleShare = async () => {
-        if (!items || items.length === 0) { alert("Your list is empty. Add some colleges first!"); return; }
+        if (!items || items.length === 0) { 
+            addToast("Your list is empty. Add some colleges first!", "info");
+            return; 
+        }
         setIsSharing(true);
         try {
             const { shareId } = await shareUserChoices(items, user?.displayName || "Anonymous Student");
             if (shareId) {
                 setShareUrl(`${window.location.origin}/share/${shareId}`);
+                addToast("Share link generated!", "success");
             } else { throw new Error("No share ID returned"); }
         } catch (err) {
             console.error("Sharing failed", err);
-            alert("Failed to generate share link. Please try again.");
+            addToast("Failed to generate share link. Using cloud backup...", "error");
         } finally { setIsSharing(false); }
     };
 

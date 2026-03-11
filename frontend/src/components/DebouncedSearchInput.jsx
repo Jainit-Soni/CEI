@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function DebouncedSearchInput({ initialValue, onChange, placeholder, className }) {
     const [value, setValue] = useState(initialValue || "");
@@ -13,14 +13,19 @@ export default function DebouncedSearchInput({ initialValue, onChange, placehold
         setValue(initialValue || "");
     }
 
+    const timerRef = useRef(null);
+
     // Send the value back to parent ONLY after the user stops typing
     useEffect(() => {
-        const timer = setTimeout(() => {
+        if (timerRef.current) clearTimeout(timerRef.current);
+        
+        timerRef.current = setTimeout(() => {
             if (value !== (initialValue || "")) {
                 onChange(value);
             }
-        }, 400); // 400ms debounce
-        return () => clearTimeout(timer);
+        }, 500); // 500ms professional debounce
+        
+        return () => clearTimeout(timerRef.current);
     }, [value, onChange, initialValue]);
 
     return (

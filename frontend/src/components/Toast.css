@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 24px;
     right: 24px;
-    z-index: 1000;
+    z-index: 10000;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -10,41 +10,76 @@
 }
 
 .toast {
-    padding: 12px 20px;
-    border-radius: 8px;
-    background: white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    padding: 16px 24px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    flex-direction: column;
+    gap: 4px;
     pointer-events: auto;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    min-width: 250px;
-    animation: slideIn 0.3s ease forwards;
+    min-width: 320px;
+    max-width: 420px;
+    cursor: pointer;
+    overflow: hidden;
+    animation: toast-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    font-family: var(--font-display);
+    color: var(--color-ink);
+}
+
+.toast-message {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+    font-weight: 500;
 }
 
 .toast-success {
-    border-left: 4px solid #10b981;
+    border-left: 5px solid #10b981;
 }
 
 .toast-error {
-    border-left: 4px solid #ef4444;
+    border-left: 5px solid #ef4444;
 }
 
 .toast-info {
-    border-left: 4px solid #3b82f6;
+    border-left: 5px solid var(--color-primary);
 }
 
-@keyframes slideIn {
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.1);
+    animation: toast-progress linear forwards;
+}
+
+.toast-success .toast-progress { background: #10b981; }
+.toast-error .toast-progress { background: #ef4444; }
+.toast-info .toast-progress { background: var(--color-primary); }
+
+@keyframes toast-in {
     from {
-        transform: translateX(100%);
+        transform: translate3d(100%, 0, 0) scale(0.9);
         opacity: 0;
     }
-
     to {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0) scale(1);
         opacity: 1;
     }
+}
+
+@keyframes toast-progress {
+    from { width: 100%; }
+    to { width: 0%; }
 }

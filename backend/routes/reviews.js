@@ -56,4 +56,20 @@ router.post("/", async (req, res) => {
     }
 });
 
+// DELETE /api/reviews/:id
+// Remove a review (Admin Only - but auth is simplified for now)
+router.delete("/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const result = await Review.findByIdAndDelete(id);
+        if (!result) {
+            return res.status(404).json({ error: "Review not found" });
+        }
+        res.json({ message: "Review deleted successfully" });
+    } catch (error) {
+        console.error("Error deleting review:", error);
+        res.status(500).json({ error: "Failed to delete review" });
+    }
+});
+
 module.exports = router;

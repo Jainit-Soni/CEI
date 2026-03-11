@@ -88,9 +88,18 @@
   --container: 1200px;
 
   /* Fonts (set by layout.js via Next.js) */
-  --font-display: var(--font-display, 'Space Grotesk', system-ui);
+  --font-display: var(--font-outfit, 'Outfit', system-ui);
+  --font-playfair: var(--font-playfair, 'Playfair Display', serif);
   --font-body: var(--font-body, 'Inter', system-ui);
   --font-mono: var(--font-mono, 'JetBrains Mono', monospace);
+
+  /* Intelligence Nexus Theme - Premium Dark */
+  --nexus-bg: #030712;
+  --nexus-card: rgba(17, 24, 39, 0.7);
+  --nexus-border: rgba(255, 255, 255, 0.1);
+  --nexus-primary: #6366f1;
+  --nexus-secondary: #8b5cf6;
+  --nexus-glow: rgba(99, 102, 241, 0.15);
 
   /* Band animation timing (can be boosted by scroll) */
   --band-speed-multiplier: 1;
@@ -476,6 +485,144 @@ main {
 
   50% {
     transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+/* --- NEW: Advanced Motion & Micro-Interactions --- */
+
+/* 1. Staggered Reveals */
+.stagger-1 {
+  animation-delay: 100ms !important;
+}
+
+.stagger-2 {
+  animation-delay: 200ms !important;
+}
+
+/* ========================================
+   PREMIUM CUSTOM SCROLLBAR
+   ======================================== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.15);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
+}
+
+.stagger-3 {
+  animation-delay: 300ms !important;
+}
+
+.stagger-4 {
+  animation-delay: 400ms !important;
+}
+
+.stagger-5 {
+  animation-delay: 500ms !important;
+}
+
+/* 2. Magnetic Hover Parallax */
+.magnetic-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+}
+
+.magnetic-card:hover {
+  transform: translateY(-8px) scale(1.02) rotateX(2deg) rotateY(1deg);
+  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.12), 0 0 0 1px rgba(79, 70, 229, 0.2);
+  z-index: 10;
+}
+
+/* Inner elements pop out */
+.magnetic-card:hover .magnetic-inner {
+  transform: translateZ(20px);
+}
+
+.magnetic-inner {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 3. Number Counter Animation Base */
+.counter-number {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  /* Keeps numbers from shifting horizontally */
+}
+
+/* 4. Elegant Line Reveal for Headers */
+.line-reveal {
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.line-reveal span {
+  animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+@keyframes revealUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 5. Glowing Border Sweep */
+.glow-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  animation: sweep 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sweep {
+  0% {
+    left: -100%;
+  }
+
+  20%,
+  100% {
+    left: 200%;
   }
 }
 

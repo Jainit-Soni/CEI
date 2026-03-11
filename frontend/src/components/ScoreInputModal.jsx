@@ -50,7 +50,15 @@ export default function ScoreInputModal({ isOpen, onClose, currentScores, onSave
     };
 
     const handleSave = () => {
-        onSave(scores);
+        // Final validation sweep before save
+        const cleanScores = {};
+        Object.keys(scores).forEach(key => {
+            const val = parseFloat(scores[key]);
+            if (!isNaN(val)) {
+                cleanScores[key] = Math.min(100, Math.max(0, val));
+            }
+        });
+        onSave(cleanScores);
         onClose();
     };
 

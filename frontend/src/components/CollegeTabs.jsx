@@ -21,6 +21,10 @@ const ROICalculator = dynamic(() => import("./ROICalculator"), {
     loading: () => <div className="p-8 text-center text-slate-500">Loading Calculator...</div>
 });
 
+const CollegeRadarChart = dynamic(() => import("./CollegeRadarChart"), {
+    loading: () => <div className="p-8 text-center text-slate-500">Loading Intelligence Map...</div>
+});
+
 const parseCurrency = (str) => {
     if (!str) return 0;
     let clean = str.toString().toLowerCase().replace(/,/g, '').replace(/₹/g, '').replace(/rs\.?/g, '').trim();
@@ -147,6 +151,15 @@ export default function CollegeTabs({ college }) {
                                     <span>{college.meta?.establishedYear || "—"}</span>
                                 </div>
                             </div>
+                        </div>
+
+                        {/* Interactive Data Visualization */}
+                        <div className="premium-tab-card mt-6">
+                            <h3 className="tab-heading">Performance Radar</h3>
+                            <p className="overview-text mb-4 text-sm">
+                                AI-synthesized performance footprint based on national ranking, historical metadata, and tier level.
+                            </p>
+                            <CollegeRadarChart college={college} />
                         </div>
 
                         <div className="premium-tab-card">

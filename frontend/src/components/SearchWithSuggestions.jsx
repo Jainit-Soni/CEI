@@ -11,6 +11,7 @@ export default function SearchWithSuggestions({
   onChange,
   initialValue = "",
   className = "",
+  hideScopes = false,
 }) {
   const [query, setQuery] = useState(initialValue || "");
   const [scope, setScope] = useState("All");
@@ -164,20 +165,22 @@ export default function SearchWithSuggestions({
   return (
     <div className={`search-with-suggestions ${className}`}>
       <form onSubmit={handleSubmit} className="search-form">
-        <div className="search-scope-toggle" role="radiogroup" aria-label="Search scope">
-          {scopes.map((s) => (
-            <button
-              key={s}
-              type="button"
-              role="radio"
-              aria-checked={scope === s}
-              className={`scope-button ${scope === s ? "scope-button--active" : ""}`}
-              onClick={() => handleScopeChange(s)}
-            >
-              {s}
-            </button>
-          ))}
-        </div>
+        {!hideScopes && (
+          <div className="search-scope-toggle" role="radiogroup" aria-label="Search scope">
+            {scopes.map((s) => (
+              <button
+                key={s}
+                type="button"
+                role="radio"
+                aria-checked={scope === s}
+                className={`scope-button ${scope === s ? "scope-button--active" : ""}`}
+                onClick={() => handleScopeChange(s)}
+              >
+                {s}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="search-input-wrapper">
           <svg

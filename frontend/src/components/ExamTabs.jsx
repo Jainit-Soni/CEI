@@ -14,19 +14,24 @@ export default function ExamTabs({ exam }) {
     const [targetColleges, setTargetColleges] = useState(exam?.acceptedCollegesResolved || []);
     const [isLoadingColleges, setIsLoadingColleges] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
+    const [selectedState, setSelectedState] = useState('');
+    const [selectedDistrict, setSelectedDistrict] = useState('');
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(false);
     const [totalColleges, setTotalColleges] = useState(exam?.acceptedCount || 0);
     const [totalPages, setTotalPages] = useState(1);
 
+    // Available States for dropdown
+    const [availableStates, setAvailableStates] = useState([]);
+
     // Debounce for search
     const searchTimeout = useRef(null);
 
-    const loadColleges = useCallback(async (pageNum, query, append = false) => {
+    const loadColleges = useCallback(async (pageNum, query, stateFilter = selectedState, districtFilter = selectedDistrict, append = false) => {
         if (!exam?.id) return;
         setIsLoadingColleges(true);
         try {
-            const res = await fetchExamColleges(exam.id, { page: pageNum, limit: 18, q: query });
+            const res = await fetchExamColleges(exam.id, { page: pageNum, limit: 18, q: query, state: stateFilter, district: districtFilter });
             if (res && res.data) {
                 setTargetColleges(prev => append ? [...prev, ...res.data] : res.data);
                 setHasMore(res.pagination.hasNext);
@@ -38,14 +43,23 @@ export default function ExamTabs({ exam }) {
         } finally {
             setIsLoadingColleges(false);
         }
-    }, [exam?.id]);
+    }, [exam?.id, selectedState, selectedDistrict]);
 
     // Initial load when switching to colleges tab
     useEffect(() => {
-        if (activeTab === 'colleges' && targetColleges.length <= 50 && page === 1 && !searchQuery) {
-            loadColleges(1, '', false);
+        // Fetch global state list once for the dropdown
+        import('@/lib/api').then(({ fetchFilters }) => {
+            fetchFilters().then(data => {
+                if (data && data.states) setAvailableStates(data.states);
+            }).catch(e => console.error(e));
+        });
+    }, []);
+
+    useEffect(() => {
+        if (activeTab === 'colleges' && targetColleges.length <= 50 && page === 1 && !searchQuery && !selectedState && !selectedDistrict) {
+            loadColleges(1, '', '', '', false);
         }
-    }, [activeTab, loadColleges, targetColleges.length, page, searchQuery]);
+    }, [activeTab, loadColleges, targetColleges.length, page, searchQuery, selectedState, selectedDistrict]);
 
     const handleSearchChange = (e) => {
         const val = e.target.value;
@@ -54,14 +68,32 @@ export default function ExamTabs({ exam }) {
 
         if (searchTimeout.current) clearTimeout(searchTimeout.current);
         searchTimeout.current = setTimeout(() => {
-            loadColleges(1, val, false);
+            loadColleges(1, val, selectedState, selectedDistrict, false);
+        }, 500);
+    };
+
+    const handleStateChange = (e) => {
+        const val = e.target.value;
+        setSelectedState(val);
+        setPage(1);
+        loadColleges(1, searchQuery, val, selectedDistrict, false);
+    };
+
+    const handleDistrictChange = (e) => {
+        const val = e.target.value;
+        setSelectedDistrict(val);
+        setPage(1);
+
+        if (searchTimeout.current) clearTimeout(searchTimeout.current);
+        searchTimeout.current = setTimeout(() => {
+            loadColleges(1, searchQuery, selectedState, val, false);
         }, 500);
     };
 
     const handleLoadMore = () => {
         const nextPage = page + 1;
         setPage(nextPage);
-        loadColleges(nextPage, searchQuery, false);
+        loadColleges(nextPage, searchQuery, selectedState, selectedDistrict, false);
     };
 
     if (!exam) return null;
@@ -269,16 +301,39 @@ export default function ExamTabs({ exam }) {
                 {activeTab === 'colleges' && (
                     <div className="tab-pane fade-in">
                         <div className="mission-card">
-                            <div className="card-header-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem' }}>
-                                <h3 className="card-header" style={{ margin: 0 }}>Target Institutes ({totalColleges} Accepting {exam.shortName})</h3>
-                                <div className="exam-college-search" style={{ position: 'relative', minWidth: '250px' }}>
+                            <div className="card-header-flex" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.5rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', flexWrap: 'wrap', gap: '1rem' }}>
+                                    <h3 className="card-header" style={{ margin: 0 }}>Target Institutes ({totalColleges} Accepting {exam.shortName})</h3>
+                                    <div className="exam-college-search" style={{ position: 'relative', minWidth: '250px', flex: '1', maxWidth: '400px' }}>
+                                        <input
+                                            type="text"
+                                            placeholder="Search specific colleges..."
+                                            value={searchQuery}
+                                            onChange={handleSearchChange}
+                                            className="retro-input"
+                                            style={{ width: '100%', padding: '0.6rem 1rem', borderRadius: '4px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: '#0f172a' }}
+                                        />
+                                    </div>
+                                </div>
+                                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', width: '100%' }}>
+                                    <select
+                                        value={selectedState}
+                                        onChange={handleStateChange}
+                                        className="retro-input"
+                                        style={{ padding: '0.6rem 1rem', borderRadius: '4px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: '#0f172a', flex: '1', minWidth: '200px' }}
+                                    >
+                                        <option value="">All States</option>
+                                        {availableStates.map(st => (
+                                            <option key={st} value={st}>{st}</option>
+                                        ))}
+                                    </select>
                                     <input
                                         type="text"
-                                        placeholder="Search specific colleges..."
-                                        value={searchQuery}
-                                        onChange={handleSearchChange}
+                                        placeholder="Specific City / District..."
+                                        value={selectedDistrict}
+                                        onChange={handleDistrictChange}
                                         className="retro-input"
-                                        style={{ width: '100%', padding: '0.6rem 1rem', borderRadius: '4px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: '#0f172a' }}
+                                        style={{ padding: '0.6rem 1rem', borderRadius: '4px', background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.1)', color: '#0f172a', flex: '1', minWidth: '200px' }}
                                     />
                                 </div>
                             </div>

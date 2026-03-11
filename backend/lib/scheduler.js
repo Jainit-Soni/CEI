@@ -252,53 +252,52 @@ function start() {
         return;
     }
 
-    // Sunday at 02:00 IST (UTC+5:30 → UTC: Saturday 20:30)
-    c.schedule('30 20 * * 6', () => runJob('weekly-anomaly-scan', jobWeeklyAnomalyScan), {
+    // Sunday at 02:00 IST
+    c.schedule('0 2 * * 0', () => runJob('weekly-anomaly-scan', jobWeeklyAnomalyScan), {
         scheduled: true,
-        timezone: 'UTC'
+        timezone: 'Asia/Kolkata'
     });
 
-    // 1st of every month at 03:00 IST (UTC: previous day 21:30)
-    c.schedule('30 21 L * *', () => runJob('monthly-integrity-recompute', jobMonthlyIntegrityRecompute), {
+    // 1st of every month at 03:00 IST
+    c.schedule('0 3 1 * *', () => runJob('monthly-integrity-recompute', jobMonthlyIntegrityRecompute), {
         scheduled: true,
-        timezone: 'UTC'
+        timezone: 'Asia/Kolkata'
     });
 
-    // Daily at 09:00 IST (UTC: 03:30)
-    c.schedule('30 3 * * *', () => runJob('freeze-window-check', jobFreezeWindowCheck), {
+    // Daily at 09:00 IST
+    c.schedule('0 9 * * *', () => runJob('freeze-window-check', jobFreezeWindowCheck), {
         scheduled: true,
-        timezone: 'UTC'
+        timezone: 'Asia/Kolkata'
     });
 
-    // Daily at 01:00 IST (UTC: 19:30 previous day) — trust report processing
-    c.schedule('30 19 * * *', () => runJob('daily-report-processing', jobDailyReportProcessing), {
-        scheduled: true, timezone: 'UTC'
+    // Daily at 01:00 IST — trust report processing
+    c.schedule('0 1 * * *', () => runJob('daily-report-processing', jobDailyReportProcessing), {
+        scheduled: true, timezone: 'Asia/Kolkata'
     });
 
-    // Every Wednesday at 03:00 IST (UTC: Tuesday 21:30) — placement reality scan
-    c.schedule('30 21 * * 2', () => runJob('weekly-placement-scan', jobWeeklyPlacementScan), {
-        scheduled: true, timezone: 'UTC'
+    // Every Wednesday at 03:00 IST — placement reality scan
+    c.schedule('0 3 * * 3', () => runJob('weekly-placement-scan', jobWeeklyPlacementScan), {
+        scheduled: true, timezone: 'Asia/Kolkata'
     });
 
-    // 2nd of every month at 04:00 IST (UTC: 1st 22:30) — full field re-verification
-    c.schedule('30 22 2 * *', () => runJob('monthly-full-verification', jobMonthlyFullVerification), {
-        scheduled: true, timezone: 'UTC'
+    // 2nd of every month at 04:00 IST — full field re-verification
+    c.schedule('0 4 2 * *', () => runJob('monthly-full-verification', jobMonthlyFullVerification), {
+        scheduled: true, timezone: 'Asia/Kolkata'
     });
 
-    // Every 12 hours at 00:30 and 12:30 UTC — ranking cache precompute
-    c.schedule('30 0,12 * * *', () => runJob('rebuild-ranking-caches', jobRebuildRankingCaches), {
-        scheduled: true, timezone: 'UTC'
+    // Every 12 hours at 06:00 and 18:00 IST (roughly 00:30 and 12:30 UTC)
+    c.schedule('0 6,18 * * *', () => runJob('rebuild-ranking-caches', jobRebuildRankingCaches), {
+        scheduled: true, timezone: 'Asia/Kolkata'
     });
 
-    // Every 6 hours at :45 past — college page aggregation cache
-    // Staggered from ranking cache by 15 min to spread Redis write pressure
-    c.schedule('45 0,6,12,18 * * *', () => runJob('rebuild-page-caches', jobRebuildPageCaches), {
-        scheduled: true, timezone: 'UTC'
+    // Every 6 hours at :15 past
+    c.schedule('15 0,6,12,18 * * *', () => runJob('rebuild-page-caches', jobRebuildPageCaches), {
+        scheduled: true, timezone: 'Asia/Kolkata'
     });
 
-    // Daily at 02:00 UTC — Meilisearch index sync (noop if MEILISEARCH_URL not set)
-    c.schedule('0 2 * * *', () => runJob('sync-meilisearch-index', jobSyncMeiliIndex), {
-        scheduled: true, timezone: 'UTC'
+    // Daily at 07:30 IST (02:00 UTC)
+    c.schedule('30 7 * * *', () => runJob('sync-meilisearch-index', jobSyncMeiliIndex), {
+        scheduled: true, timezone: 'Asia/Kolkata'
     });
 
     initialized = true;

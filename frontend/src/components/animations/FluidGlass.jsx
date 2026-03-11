@@ -60,7 +60,19 @@ export default function FluidGlass({
 const LensScene = memo(function LensScene({ isMobile }) {
     const ref = useRef();
     const backgroundRef = useRef();
-    const { viewport: vp, camera, pointer, gl, size } = useThree();
+    // Start mouse at an "off-screen" position to avoid initial top-center sticking
+    const mouse = useRef({ x: -2, y: -2 });
+    const { viewport: vp, camera, gl, size } = useThree();
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            // Map 0 -> windowWidth to -1 -> 1
+            mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1;
+            mouse.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
 
     // Dynamically match screen width to FBO, but cap it on mobile for hyper-performance
     const fboWidth = isMobile ? Math.min(size.width, 256) : size.width * 2;
@@ -78,35 +90,32 @@ const LensScene = memo(function LensScene({ isMobile }) {
 
     const [scene] = useState(() => {
         const s = new THREE.Scene();
-        // Pristine Light Theme Background for external canvas
-        s.background = new THREE.Color('#f8fafc');
+        // Subtle white background to prevent 'black hole' refraction artifacts
+        s.background = new THREE.Color('#ffffff');
         return s;
     });
 
-    // Sleek, minimal cylinder geometry for pure refraction power
-    const fallbackGeometry = useMemo(() => new THREE.CylinderGeometry(1.2, 1.2, 0.1, 64), []);
+    // Soft sphere geometry for a more natural "blob" feel
+    const fallbackGeometry = useMemo(() => new THREE.SphereGeometry(1, 64, 64), []);
 
     useFrame((state, delta) => {
         const { viewport } = state;
         const v = viewport.getCurrentViewport(camera, [0, 0, 5]);
 
-        const destX = (pointer.x * v.width) / 2;
-        const destY = (pointer.y * v.height) / 2;
+        const destX = (mouse.current.x * v.width) / 2;
+        const destY = (mouse.current.y * v.height) / 2;
 
         if (ref.current) {
-            easing.damp3(ref.current.position, [destX, destY, 5], 0.1, delta);
-            easing.damp3(ref.current.rotation, [Math.PI / 2 + pointer.y * 0.1, 0, -pointer.x * 0.1], 0.15, delta);
+            // Only show/move if mouse is actually within reasonable bounds
+            const isActive = mouse.current.x > -1.5 && mouse.current.x < 1.5;
 
-            // Fixed, elegant scale without massive scroll bloating
-            const targetScale = isMobile ? 0.25 : 0.6;
+            easing.damp3(ref.current.position, [destX, destY, 5], 0.1, delta);
+            easing.damp3(ref.current.rotation, [Math.PI / 2 + mouse.current.y * 0.1, 0, -mouse.current.x * 0.1], 0.15, delta);
+
+            const targetScale = isMobile || !isActive ? 0 : 0.6;
             easing.damp(ref.current.scale, 'x', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'y', targetScale, 0.1, delta);
             easing.damp(ref.current.scale, 'z', targetScale, 0.1, delta);
-        }
-
-        if (backgroundRef.current) {
-            backgroundRef.current.rotation.y += 0.001;
-            backgroundRef.current.rotation.x += 0.0005;
         }
 
         gl.setRenderTarget(buffer);
@@ -117,19 +126,10 @@ const LensScene = memo(function LensScene({ isMobile }) {
 
     const innerContent = (
         <group position={[0, 0, 0]}>
-            {/* Dark "X-Ray / Blueprint" cinematic backdrop INSIDE the lens */}
-            <mesh ref={backgroundRef} scale={30}>
-                <sphereGeometry args={[1, 64, 64]} />
-                <meshBasicMaterial
-                    side={THREE.BackSide}
-                    color="#020617" /* Deep slate black */
-                />
-            </mesh>
-
-            {/* Moody, intense lighting for the X-Ray mode */}
-            <ambientLight intensity={0.5} color="#ffffff" />
-            <pointLight position={[0, 0, 0]} intensity={2} color="#6366f1" />
-            <pointLight position={[-10, 10, -5]} intensity={1.5} color="#ec4899" />
+            {/* Minimal atmospheric lighting for the glass itself */}
+            <ambientLight intensity={1} color="#ffffff" />
+            <pointLight position={[0, 0, 10]} intensity={2.5} color="#6366f1" />
+            <pointLight position={[-10, 10, -5]} intensity={2} color="#a855f7" />
 
             {/* Central 3D Text - Huge, glowing, and pristine */}
             {!isMobile && (
@@ -145,7 +145,7 @@ const LensScene = memo(function LensScene({ isMobile }) {
                         textAlign="center"
                         anchorX="center"
                         anchorY="middle"
-                        color="#ffffff" // White text against dark background
+                        color="#0f172a" // Dark text against white background inside lens
                         fillOpacity={1}
                     >
                         INTELLIGENCE{"\n"}ENGINE
@@ -171,26 +171,26 @@ const LensScene = memo(function LensScene({ isMobile }) {
                 geometry={fallbackGeometry}
                 renderOrder={1}
             >
-                {/* Enhanced Premium Glass Material - Lower IOR for legible text, high aberration for styling */}
+                {/* Enhanced Premium Glass Material - optimized for light theme visibility */}
                 <MeshTransmissionMaterial
                     buffer={buffer.texture}
-                    ior={1.1}
+                    ior={1.02} /* Very low IOR to keep text clean */
                     thickness={0.5}
                     anisotropy={isMobile ? 0.1 : 0.3}
-                    chromaticAberration={0.06}
+                    chromaticAberration={0.04} /* Drastically reduced for premium clarity */
                     transmission={1}
-                    roughness={0}
+                    roughness={0} /* Perfectly clear glass */
                     clearcoat={1}
-                    clearcoatRoughness={0.1}
+                    clearcoatRoughness={0.05}
                     backside={false}
-                    distortion={isMobile ? 0.1 : 0.2}
-                    distortionScale={isMobile ? 0.1 : 0.3}
-                    temporalDistortion={isMobile ? 0.0 : 0.1}
+                    distortion={isMobile ? 0.1 : 0.1}
+                    distortionScale={isMobile ? 0.1 : 0.1}
+                    temporalDistortion={isMobile ? 0.0 : 0.05}
                     color="#ffffff"
                     transparent
                     opacity={1}
-                    resolution={isMobile ? 128 : 1024}
-                    samples={isMobile ? 0 : 8}
+                    resolution={isMobile ? 256 : 1024}
+                    samples={isMobile ? 2 : 16} /* High samples for smoothness */
                 />
             </mesh>
         </>

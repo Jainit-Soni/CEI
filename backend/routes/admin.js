@@ -257,6 +257,57 @@ router.get("/system/status", async (req, res) => {
     }
 });
 
+// ── Reviews Management ────────────────────────────────────────────────────────
+
+router.get("/reviews", async (req, res) => {
+    try {
+        const Review = require("../models/Review");
+        const { page = 1, limit = 50, status } = req.query;
+        const skip = (parseInt(page) - 1) * parseInt(limit);
+
+        const filter = status && status !== 'all' ? { status } : {};
+
+        const [reviews, total] = await Promise.all([
+            Review.find(filter)
+                .sort({ createdAt: -1 })
+                .skip(skip).limit(parseInt(limit))
+                .lean(),
+            Review.countDocuments(filter),
+        ]);
+
+        res.json({ reviews, total, page: parseInt(page), limit: parseInt(limit) });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.patch("/reviews/:id/status", async (req, res) => {
+    try {
+        const Review = require("../models/Review");
+        const { id } = req.params;
+        const { status } = req.body;
+
+        if (!["pending", "approved", "rejected"].includes(status)) {
+            return res.status(400).json({ error: "Invalid status" });
+        }
+
+        const review = await Review.findByIdAndUpdate(id, { status }, { new: true });
+        res.json({ success: true, review });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.delete("/reviews/:id", async (req, res) => {
+    try {
+        const Review = require("../models/Review");
+        await Review.findByIdAndDelete(req.params.id);
+        res.json({ success: true });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 // ── Trust Reports ─────────────────────────────────────────────────────────────
 
 router.get("/reports", async (req, res) => {

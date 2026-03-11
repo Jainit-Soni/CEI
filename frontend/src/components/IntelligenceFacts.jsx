@@ -48,7 +48,7 @@ export default function IntelligenceFacts() {
     const [randomBanner, setRandomBanner] = useState(AMAZING_BANNERS[0]);
 
     useEffect(() => {
-        // Shuffle and take 4
+        // Shuffle and take 6 for a dynamic bento grid
         const shuffled = [...AMAZING_FACTS].sort(() => 0.5 - Math.random());
         setRandomPoints(shuffled.slice(0, 4));
 
@@ -59,41 +59,35 @@ export default function IntelligenceFacts() {
     if (randomPoints.length === 0) return null;
 
     return (
-        <section className="intel-facts-section">
+        <section className="intel-facts-nexus">
             <div className="intel-container">
                 <div className="intel-header">
-                    <span className="intel-kicker">ACADEMIC_INSIGHTS</span>
-                    <ScrollReveal as="h2" containerClassName="intel-main-title" baseRotation={1} blurStrength={5}>
-                        Mindblowing Realities.
+                    <span className="intel-kicker fadeIn">PREMIUM_INSIGHTS</span>
+                    <ScrollReveal as="h2" containerClassName="intel-main-title fadeIn delay-1" baseRotation={0.5} blurStrength={10}>
+                        Insights that <span className="serif-accent">refract</span> the noise.
                     </ScrollReveal>
                 </div>
 
-                <div className="intel-grid">
+                <div className="intel-hub-grid">
                     {randomPoints.map((point, index) => (
-                        <div key={point.id} className={`intel-card reveal-up delay-${index}`}>
-                            <div className={`intel-icon-wrapper ${point.accent}`}>
-                                {point.icon}
+                        <div
+                            key={point.id}
+                            className={`intel-hub-card fadeIn delay-${index + 1}`}
+                        >
+                            <div className="hub-card-inner">
+                                <div className={`hub-icon-mini ${point.accent}`}>
+                                    {point.icon}
+                                </div>
+                                <div className="hub-data">
+                                    <div className="hub-value">{point.value}</div>
+                                    <div className="hub-label">{point.label}</div>
+                                </div>
+                                <div className="hub-description-overlay">
+                                    <p>{point.description}</p>
+                                </div>
                             </div>
-                            <div className="intel-value">{point.value}</div>
-                            <div className="intel-label">{point.label}</div>
-                            <p className="intel-desc">{point.description}</p>
                         </div>
                     ))}
-                </div>
-
-                {/* Additional Impact Banner */}
-                <div className="intel-banner reveal-up delay-4">
-                    <div className="banner-content">
-                        <BookOpen size={32} className="banner-icon" />
-                        <div className="banner-text">
-                            <ScrollReveal as="h3" baseOpacity={0.3} blurStrength={3}>
-                                {randomBanner.title}
-                            </ScrollReveal>
-                            <ScrollReveal as="p" baseOpacity={0.2} blurStrength={2}>
-                                {randomBanner.desc}
-                            </ScrollReveal>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

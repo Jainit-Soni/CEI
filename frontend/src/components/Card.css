@@ -17,9 +17,11 @@
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   height: 100%;
+  min-height: 240px;
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
 }
 
 /* Colored top accent bar */
@@ -52,6 +54,26 @@
   transition: none;
   pointer-events: none;
   z-index: 5;
+}
+
+@keyframes cardShimmer {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateX(100%) skewX(-20deg);
+    opacity: 0;
+  }
 }
 
 .card:hover::after {
@@ -131,7 +153,7 @@
 
 /* ---- Card Top ---- */
 .card-top {
-  padding: 20px 20px 12px 20px;
+  padding: 24px 24px 12px 24px;
 }
 
 .card-top h3,
@@ -139,7 +161,8 @@
   margin: 0;
   font-size: 1.15rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #0f172a;
+  /* Deeper ink for premium contrast */
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -167,16 +190,87 @@
   border: 1px solid rgba(226, 232, 240, 0.6);
 }
 
-.card-top p {
+.card-top p,
+.card-subtitle {
   margin: 6px 0 0 0;
   font-size: 0.9rem;
-  color: #64748b;
+  color: #475569;
+  /* Darkened for better readability */
   font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.exam-status-badge,
+.scholarship-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.exam-status-badge {
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+  border: 0.5px solid rgba(239, 68, 68, 0.2);
+}
+
+.scholarship-status-badge {
+  background: rgba(16, 185, 129, 0.08);
+  color: #059669;
+  border: 0.5px solid rgba(16, 185, 129, 0.2);
+}
+
+.exam-status-badge .dot,
+.scholarship-status-badge .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.exam-status-badge .dot {
+  background: #ef4444;
+}
+
+.scholarship-status-badge .dot {
+  background: #10b981;
+}
+
+.card-refraction-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.card:hover .card-refraction-overlay {
+  opacity: 1;
+  animation: refractionSweep 3s infinite linear;
+}
+
+@keyframes refractionSweep {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
 }
 
 /* ---- Tags — Color-Coded ---- */
 .card-tags {
-  padding: 0 20px 12px 20px;
+  padding: 0 24px 16px 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -238,7 +332,7 @@
 
 /* ---- Meta Row ---- */
 .card-meta {
-  padding: 0 20px 20px 20px;
+  padding: 0 24px 24px 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   background: transparent;
   display: flex;

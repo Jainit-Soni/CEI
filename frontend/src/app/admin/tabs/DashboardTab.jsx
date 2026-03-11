@@ -136,8 +136,8 @@ export default function DashboardTab({ adminFetch }) {
                         Loading…
                     </div>
                 ) : (
-                    <div style={{ width: '100%', height: '220px', position: 'relative' }}>
-                        <ResponsiveContainer width="100%" height="100%">
+                    <div style={{ width: '100%', height: '220px', minHeight: '220px', position: 'relative' }}>
+                        <ResponsiveContainer width="99%" aspect={3}>
                             <AreaChart data={data?.chart ?? []} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                                 <defs>
                                     <linearGradient id="colorActions" x1="0" y1="0" x2="0" y2="1">

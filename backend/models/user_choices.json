@@ -38,5 +38,45 @@
       ],
       "addedAt": "2026-02-20T11:41:32.859Z"
     }
+  ],
+  "lpYhvYw4l7U78JMFPxoKGKAT55l1": [],
+  "eLDfzKdZWPgskcIzecfWnvtrzY93": [
+    {
+      "id": "699ea5535e085fcdd9a21db6",
+      "name": "Indian Institute of Technology Kanpur",
+      "shortName": "IIT Kanpur",
+      "rankingTier": "Tier 1",
+      "location": "Kanpur, Kanpur Nagar, Uttar Pradesh",
+      "placements": {
+        "averagePackage": "26.27 LPA",
+        "highestPackage": "1.90 CPA",
+        "highestPackageNumeric": 190
+      },
+      "acceptedExams": [
+        "jee-advanced",
+        "gate",
+        "jam",
+        "cat"
+      ],
+      "addedAt": "2026-03-11T07:27:48.067Z"
+    },
+    {
+      "id": "699ea5535e085fcdd9a21db7",
+      "name": "Indian Institute of Technology (BHU) Varanasi",
+      "shortName": "IIT BHU",
+      "rankingTier": "Tier 1",
+      "location": "Varanasi, Varanasi District, Uttar Pradesh",
+      "placements": {
+        "averagePackage": "20.5 LPA",
+        "highestPackage": "1.80 CPA",
+        "highestPackageNumeric": 180
+      },
+      "acceptedExams": [
+        "jee-advanced",
+        "gate",
+        "gpat"
+      ],
+      "addedAt": "2026-03-11T07:27:59.120Z"
+    }
   ]
 }

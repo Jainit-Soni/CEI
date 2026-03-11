@@ -110,6 +110,8 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+// Handle preflight requests for all routes explicitly
+app.options('*', cors(corsOptions));
 
 // ==========================================
 // 🛣️ URL NORMALIZATION MIDDLEWARE
@@ -204,7 +206,94 @@ app.get("/api/health", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("<h1>CEI Backend</h1><p>Status: Active</p>");
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CEI Core Intelligence Engine</title>
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+          color: white;
+          overflow: hidden;
+        }
+        .container {
+          text-align: center;
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          padding: 3rem 4rem;
+          border-radius: 20px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+          animation: float 6s ease-in-out infinite;
+        }
+        h1 {
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+          background: linear-gradient(to right, #818cf8, #c084fc);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .status {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: #a7f3d0;
+          background: rgba(16, 185, 129, 0.1);
+          padding: 8px 16px;
+          border-radius: 9999px;
+          border: 1px solid rgba(16, 185, 129, 0.2);
+          margin-top: 1rem;
+        }
+        .status-dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #10b981;
+          box-shadow: 0 0 10px #10b981, 0 0 20px #10b981;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .version {
+          margin-top: 2rem;
+          font-size: 0.85rem;
+          color: #94a3b8;
+          letter-spacing: 0.05em;
+        }
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+          100% { transform: translateY(0px); }
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: .5; }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>CEI Core Intelligence Engine</h1>
+        <div class="status">
+          <div class="status-dot"></div>
+          Backend Services Active & Secure
+        </div>
+        <div class="version">VERSION 1.0.0 | ENVIRONMENT: ${process.env.NODE_ENV || 'development'}</div>
+      </div>
+    </body>
+    </html>
+  `);
 });
 
 // ==========================================
@@ -256,7 +345,29 @@ const PORT = process.env.PORT || 4000;
 
 if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
   app.listen(PORT, () => {
-    console.log(`CEI backend running on port ${PORT}`);
+    const c = {
+      cyan: '\x1b[36m',
+      green: '\x1b[32m',
+      yellow: '\x1b[33m',
+      magenta: '\x1b[35m',
+      reset: '\x1b[0m',
+      bold: '\x1b[1m',
+      blue: '\x1b[34m'
+    };
+
+    const isMissingEnv = isMaintenanceMode ? `${c.yellow}ACTIVE ⚠️ (Missing Env Vars)${c.reset}` : `${c.green}Inactive (Healthy)${c.reset}`;
+    const redisStatus = process.env.REDIS_URL ? `${c.green}Connected & Active${c.reset}` : `${c.yellow}Local / Missing${c.reset}`;
+    const envStatus = process.env.NODE_ENV || 'development';
+
+    console.log(`\n${c.cyan}${c.bold}================================================================${c.reset}`);
+    console.log(`${c.magenta}${c.bold}   ✨ CEI CORE INTELLIGENCE ENGINE ONLINE ✨${c.reset}`);
+    console.log(`${c.cyan}${c.bold}================================================================${c.reset}\n`);
+    console.log(`  ${c.bold}🚀 API Base URL     :${c.reset} ${c.blue}http://localhost:${PORT}${c.reset}`);
+    console.log(`  ${c.bold}🌍 Environment      :${c.reset} ${c.cyan}${envStatus}${c.reset}`);
+    console.log(`  ${c.bold}🛡️  Maintenance Mode :${c.reset} ${isMissingEnv}`);
+    console.log(`  ${c.bold}⚡ Real-time Cache   :${c.reset} ${redisStatus}`);
+    console.log(`\n${c.cyan}${c.bold}================================================================${c.reset}\n`);
+    console.log(`${c.green}Ready to accept connections...${c.reset}\n`);
   });
 }
 

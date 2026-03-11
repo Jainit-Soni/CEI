@@ -2,61 +2,59 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, GraduationCap } from 'lucide-react';
+import "./Card.css";
 
 export default function ScholarshipCard({ scholarship }) {
     const [imgError, setImgError] = useState(false);
 
-    // V2: Removed redundant badge logic for cleaner look.
-    // Focusing on typography and whitespace.
-
     return (
-        <Link href={`/scholarship/${scholarship.id}`} className="block group h-full">
-            <div className="h-full bg-white/60 backdrop-blur-md border border-white/60 rounded-[32px] p-8 md:p-10 transition-all duration-300 hover:bg-white/80 hover:shadow-xl hover:shadow-indigo-900/5 hover:-translate-y-1 flex flex-col">
-
-                {/* Header: Logo Only (Clean) */}
-                <div className="mb-8 flex justify-between items-start">
-                    <div className="w-14 h-14 rounded-2xl bg-white shadow-sm border border-slate-100 p-3 flex items-center justify-center">
-                        {!imgError && scholarship.logo ? (
-                            <img
-                                src={scholarship.logo}
-                                alt={scholarship.provider}
-                                className="w-full h-full object-contain"
-                                onError={() => setImgError(true)}
-                            />
-                        ) : (
-                            <span className="text-xl font-bold text-slate-300">
-                                {scholarship.provider[0]}
-                            </span>
-                        )}
-                    </div>
-                    {/* Badge is now minimal text only */}
-                    <span className="text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-50 px-3 py-1 rounded-full">{scholarship.category}</span>
+        <Link href={`/scholarship/${scholarship.id}`} className="card-wrapper" style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
+            <div className="card card-scholarship" data-type="scholarship">
+                {/* 1. Category Badge */}
+                <div className="card-badge" style={{ background: 'linear-gradient(135deg, #10b981, #059669)' }}>
+                    {scholarship.category || "Scholarship"}
                 </div>
 
-                {/* Content - Massive Numbers */}
-                <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2 leading-tight group-hover:text-indigo-600 transition-colors font-display">
-                        {scholarship.name}
-                    </h3>
-                    <p className="text-sm text-slate-500 font-medium mb-8 truncate">{scholarship.provider}</p>
-
-                    <div className="space-y-4">
-                        <div className="flex flex-col">
-                            <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">Grant Amount</span>
-                            <span className="text-lg md:text-3xl font-bold text-slate-900 tracking-tight">{scholarship.amount}</span>
+                <div className="card-top">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
+                        <div className="card-heading-group">
+                            <h3 className="card-full-name">{scholarship.name}</h3>
+                            <span className="card-acronym" style={{ background: '#ecfdf5', color: '#059669', borderColor: '#d1fae5' }}>
+                                {scholarship.provider}
+                            </span>
+                        </div>
+                        <div className="w-12 h-12 rounded-xl bg-white shadow-sm border border-slate-100 p-2 flex items-center justify-center flex-shrink-0">
+                            {!imgError && scholarship.logo ? (
+                                <img
+                                    src={scholarship.logo}
+                                    alt={scholarship.provider}
+                                    className="w-full h-full object-contain"
+                                    onError={() => setImgError(true)}
+                                />
+                            ) : (
+                                <GraduationCap size={24} className="text-emerald-500" />
+                            )}
                         </div>
                     </div>
                 </div>
 
-                {/* Subtle Footer */}
-                <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+                {/* Content - Massive Numbers */}
+                <div className="card-tags">
+                    <span style={{ fontSize: '0.65rem', color: '#64748b' }}>Grant Amount</span>
+                    <div style={{ width: '100%', fontSize: '1.25rem', fontWeight: '800', color: '#0f172a', marginTop: '4px' }}>
+                        {scholarship.amount}
+                    </div>
+                </div>
+
+                {/* footer */}
+                <div className="card-footer">
                     <div className="flex flex-col">
-                        <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">Deadline</span>
-                        <span className="text-sm font-bold text-slate-700">{scholarship.deadline}</span>
+                        <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', fontWeight: '600', color: '#94a3b8' }}>Deadline</span>
+                        <span style={{ fontSize: '0.85rem', fontWeight: '700', color: '#475569' }}>{scholarship.deadline}</span>
                     </div>
 
-                    <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
+                    <div className="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
                         <ArrowUpRight size={18} />
                     </div>
                 </div>

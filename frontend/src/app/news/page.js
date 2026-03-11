@@ -66,7 +66,7 @@ export default function NewsPage() {
         return (
             <div className="results-grid">
                 {news.map((item, index) => (
-                    <RevealOnScroll key={item.id} delay={index * 40}>
+                    <RevealOnScroll key={`${item.id}-${index}`} delay={index * 40}>
                         <div className="card-wrapper">
                             <Card
                                 type="news"

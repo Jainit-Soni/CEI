@@ -7,13 +7,21 @@ import ClientProviders from "../components/ClientProviders";
 import CompareFloatingBar from "../components/CompareFloatingBar";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Outfit, Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import PageLoading from "@/components/PageLoading";
 
-const spaceGrotesk = Space_Grotesk({
+const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-display",
+  variable: "--font-outfit",
+  adjustFontFallback: false,
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
   adjustFontFallback: false,
 });
 
@@ -71,7 +79,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${playfair.variable} ${inter.variable} ${jetbrains.variable}`}>
       <head />
       <body>
         <ClientProviders>
@@ -130,6 +138,9 @@ export default function RootLayout({ children }) {
                   animation: 'orbFloat1 22s ease-in-out infinite reverse'
                 }} />
               </div>
+
+              {/* Universal Top-Level Loader (Light Theme) */}
+              <PageLoading />
 
               {/* Universal Header */}
               <Header />

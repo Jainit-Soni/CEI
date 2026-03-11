@@ -1,4 +1,4 @@
-﻿.search-with-suggestions {
+.search-with-suggestions {
   position: relative;
   width: 100%;
 }
@@ -140,6 +140,16 @@
   overflow-y: auto;
   z-index: 100;
   animation: scaleIn 0.2s ease-out;
+}
+
+/* Colleges page: keep suggestions in-flow so they don't overlap cards */
+.colleges-main-search .search-suggestions {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  z-index: 1;
+  margin-bottom: var(--space-4);
 }
 
 .suggestion-item {

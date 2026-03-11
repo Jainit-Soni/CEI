@@ -1,4 +1,4 @@
-.intel-facts-section {
+.intel-facts-nexus {
     padding: 120px 40px;
     background: transparent;
     position: relative;
@@ -20,170 +20,203 @@
 
 .intel-kicker {
     font-size: 0.75rem;
-    font-weight: 900;
-    color: #2563eb;
-    letter-spacing: 0.3em;
+    font-weight: 800;
+    color: var(--color-ink-muted);
+    letter-spacing: 0.4em;
     display: block;
     margin-bottom: 24px;
     text-transform: uppercase;
 }
 
 .intel-main-title {
+    font-family: var(--font-display);
     font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 950;
+    font-weight: 1000;
     line-height: 1;
     letter-spacing: -0.05em;
-    color: #0f172a;
+    color: var(--color-ink);
 }
 
-.serif-italic {
-    font-family: 'Ibarra Real Nova', 'Playfair Display', serif;
+.serif-accent {
+    font-family: var(--font-playfair);
     font-style: italic;
     font-weight: 400;
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-.intel-grid {
+/* ==========================================================
+   INTELLIGENCE HUB (Dense Redesign)
+   ========================================================== */
+.intel-hub-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 16px;
 }
 
-.intel-card {
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 44px;
+.intel-hub-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    height: 220px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: default;
+}
+
+.intel-hub-card:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-4px);
+    border-color: var(--color-accent-light);
+    box-shadow: var(--shadow-lg);
+}
+
+.hub-card-inner {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.05),
-        0 20px 40px -4px rgba(0, 0, 0, 0.02);
 }
 
-.intel-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    background: rgba(255, 255, 255, 0.65);
-    box-shadow:
-        0 40px 80px -15px rgba(0, 0, 0, 0.1),
-        0 20px 40px -10px rgba(0, 0, 0, 0.05);
-    border-color: rgba(37, 99, 235, 0.3);
-}
-
-.intel-icon-wrapper {
-    width: 60px;
-    height: 60px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 36px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.intel-icon-wrapper.blue {
-    background: #eff6ff;
-    color: #2563eb;
-}
-
-.intel-icon-wrapper.purple {
-    background: #f5f3ff;
-    color: #7c3aed;
-}
-
-.intel-icon-wrapper.emerald {
-    background: #ecfdf5;
-    color: #10b981;
-}
-
-.intel-icon-wrapper.slate {
-    background: #f1f5f9;
-    color: #475569;
-}
-
-.intel-icon-wrapper svg {
-    width: 28px;
-    height: 28px;
-}
-
-.intel-value {
-    font-size: 3rem;
-    font-weight: 950;
-    color: #0f172a;
-    letter-spacing: -0.04em;
-    margin-bottom: 12px;
-    line-height: 1;
-}
-
-.intel-label {
-    font-size: 0.75rem;
-    font-weight: 900;
-    color: #64748b;
-    letter-spacing: 0.2em;
+.hub-icon-mini {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
     margin-bottom: 24px;
+    transition: transform 0.3s ease;
+}
+
+.intel-hub-card:hover .hub-icon-mini {
+    transform: scale(1.1);
+}
+
+.hub-icon-mini.blue {
+    color: #4f46e5;
+    background: rgba(79, 70, 229, 0.05);
+}
+
+.hub-icon-mini.purple {
+    color: #9333ea;
+    background: rgba(147, 51, 234, 0.05);
+}
+
+.hub-icon-mini.emerald {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.hub-icon-mini.slate {
+    color: #64748b;
+    background: rgba(100, 116, 139, 0.05);
+}
+
+.hub-icon-mini svg {
+    width: 18px;
+    height: 18px;
+}
+
+.hub-value {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 1000;
+    color: var(--color-ink);
+    line-height: 1.1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.hub-label {
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: var(--color-ink-muted);
+    letter-spacing: 0.2em;
     text-transform: uppercase;
 }
 
-.intel-desc {
-    font-size: 1.05rem;
-    color: #475569;
-    line-height: 1.6;
-    margin: 0;
-    font-weight: 500;
-}
-
-/* Banner Section (Refined Glass) */
-.intel-banner {
-    margin-top: 80px;
-    padding: 80px;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(40px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 56px;
-    color: #0f172a;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.04);
-}
-
-.banner-content {
+.hub-description-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.95);
     display: flex;
     align-items: center;
-    gap: 60px;
-}
-
-.banner-icon {
-    color: #2563eb;
-    flex-shrink: 0;
-    filter: drop-shadow(0 10px 20px rgba(37, 99, 235, 0.2));
-}
-
-.banner-text h3 {
-    font-size: 2.2rem;
-    font-weight: 950;
-    margin-bottom: 16px;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-}
-
-.banner-text p {
-    font-size: 1.35rem;
-    color: #475569;
-    line-height: 1.5;
-    margin: 0;
-    font-weight: 500;
-}
-
-/* Base Styles (Staggered Animation) */
-.reveal-up {
+    justify-content: center;
+    text-align: center;
     opacity: 0;
-    transform: translateY(40px);
-    animation: reveal-key 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.intel-hub-card:hover .hub-description-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hub-description-overlay p {
+    font-size: 0.85rem;
+    color: var(--color-ink-secondary);
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Header Tweaks */
+.intel-facts-nexus {
+    padding: 80px 40px;
+}
+
+.intel-header {
+    margin-bottom: 60px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .intel-hub-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .intel-hub-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intel-hub-card {
+        height: 180px;
+    }
+}
+
+/* Keep previous animations */
+.fadeIn {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: nexusReveal 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes nexusReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animations from Hero */
+.fadeIn {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: nexusReveal 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes nexusReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .delay-0 {
@@ -206,83 +239,10 @@
     animation-delay: 0.5s;
 }
 
-@keyframes reveal-key {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.delay-5 {
+    animation-delay: 0.6s;
 }
 
-@media (max-width: 1200px) {
-    .intel-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .intel-card {
-        padding: 30px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .intel-facts-section {
-        padding: 60px 24px;
-    }
-
-    .intel-header {
-        margin-bottom: 40px;
-    }
-
-    .intel-main-title {
-        font-size: clamp(2rem, 8vw, 3rem);
-    }
-
-    .intel-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .intel-card {
-        padding: 28px;
-        border-radius: 32px;
-    }
-
-    .intel-value {
-        font-size: 2.2rem;
-    }
-
-    .intel-banner {
-        margin-top: 40px;
-        padding: 30px;
-        border-radius: 32px;
-    }
-
-    .banner-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .banner-text h3 {
-        font-size: 1.5rem;
-    }
-
-    .banner-text p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 360px) {
-    .intel-facts-section {
-        padding: 40px 16px;
-    }
-
-    .intel-card {
-        padding: 20px;
-    }
-
-    .intel-value {
-        font-size: 1.8rem;
-    }
+.delay-6 {
+    animation-delay: 0.7s;
 }

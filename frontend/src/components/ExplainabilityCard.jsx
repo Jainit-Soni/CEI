@@ -154,59 +154,30 @@ export default function ExplainabilityCard({ college }) {
             {/* ── New: Simplified "What is CEI?" Guide ──────────────── */}
             <div className="explain-guide-section" style={{ marginTop: '30px', borderTop: '1px dashed #e2e8f0', paddingTop: '24px' }}>
                 <div className="explain-section-label">What is CEI?</div>
-                <div style={{ background: '#f8fafc', borderRadius: '12px', padding: '16px', fontSize: '0.9rem', color: '#475569', lineHeight: '1.5' }}>
-                    <p style={{ margin: 0 }}>
-                        The <strong>College Excellence Index (CEI)</strong> is a proprietary transparent algorithm that evaluates institutions on facts, not marketing.
-                        Unlike traditional rankings, we weigh <strong>Placement ROI (35%)</strong> and <strong>Admissions Standards (15%)</strong> as the highest indicators of current value.
+                <div style={{ background: '#f8fafc', borderRadius: '16px', padding: '24px', fontSize: '0.9rem' }}>
+                    <p className="text-gray-600 mb-8" style={{ lineHeight: '1.6', fontSize: '0.95rem' }}>
+                        The <strong>College Excellence Index (CEI)</strong> is a data-driven score (0-100) that measures how good a college actually is for your career. We use real data like <strong>verified placements, entrance exam difficulty (CAT/CMAT), and academic reputation</strong> to give you one honest number.
                     </p>
-                    <div style={{ marginTop: '12px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                        <span style={{ fontSize: '0.75rem', padding: '4px 8px', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '6px' }}>✔️ Unbiased</span>
-                        <span style={{ fontSize: '0.75rem', padding: '4px 8px', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '6px' }}>✔️ ROI Focused</span>
-                        <span style={{ fontSize: '0.75rem', padding: '4px 8px', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '6px' }}>✔️ Anti-Hype</span>
-                    </div>
-                </div>
-            </div>
 
-            {/* ── 2. How Reliable Is This Score ─────────────────────── */}
-            <div className="explain-stability-section" style={{ marginTop: '30px' }}>
-                <div className="explain-section-label">Reliability & Trust</div>
-
-                <div className="stability-panel">
-                    <div className="stability-badge" aria-hidden="true">
-                        {stabilityMeta.stabilityIcon}
-                    </div>
-                    <div className="stability-body">
-                        <div className="stability-label">
-                            <span className={stabilityMeta.stabilityColor}>
-                                {stabilityMeta.stabilityLabel}
-                            </span>
-                            {stabilityMeta.confidenceBadge && (
-                                <span className={`confidence-badge-pill ${confidenceClass}`}>
-                                    {stabilityMeta.confidenceBadge} CONFIDENCE
-                                </span>
-                            )}
-                        </div>
-
-                        {stabilityMeta.stabilityIndex !== null && (
-                            <div className="stability-index-row">
-                                <div className="stability-index-bar-track">
-                                    <div
-                                        className={`stability-index-bar-fill ${stabilityMeta.stabilityColor}`}
-                                        style={{ width: `${stabilityMeta.stabilityIndex}%` }}
-                                    />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {[
+                            { title: "Placement Power (35%)", desc: "Verified average & highest salaries vs. what they claim.", icon: "💰" },
+                            { title: "Entrance Standard (15%)", desc: "The quality of peers (based on CAT/XAT/CMAT cutoffs).", icon: "🎯" },
+                            { title: "Industry Trust (25%)", desc: "How top companies and recruiters value the degree.", icon: "🏢" },
+                            { title: "Legacy & Scale (25%)", desc: "Institutional history and breadth of specialized programs.", icon: "🏛️" }
+                        ].map((item, i) => (
+                            <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-100 shadow-sm transition-all hover:shadow-md">
+                                <span style={{ fontSize: '1.5rem' }}>{item.icon}</span>
+                                <div>
+                                    <h4 className="text-sm font-bold text-gray-900" style={{ margin: '0 0 4px 0' }}>{item.title}</h4>
+                                    <p className="text-xs text-gray-500" style={{ margin: 0, lineHeight: '1.4' }}>{item.desc}</p>
                                 </div>
-                                <span className="stability-index-val">
-                                    {stabilityMeta.stabilityIndex}/100
-                                </span>
                             </div>
-                        )}
-
-                        <div className="stability-description">
-                            {getStabilityPlainText(stabilityMeta.stabilityIndex)}
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
+
 
             {/* ── 3. Data Transparency ───────────────────────────────── */}
             {methodology && (

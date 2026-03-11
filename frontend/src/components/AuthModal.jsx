@@ -162,8 +162,8 @@ export default function AuthModal({ isOpen, onClose }) {
             setTimeout(() => {
                 setIsSuccess(false);
                 setLocalError("");
-            }, 500);
-        }, 1200);
+            }, 300);
+        }, 800);
     };
 
     const handleGoogleSignIn = async () => {

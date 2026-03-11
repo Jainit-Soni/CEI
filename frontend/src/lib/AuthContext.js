@@ -46,6 +46,7 @@ async function getFirebaseAuth() {
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [refreshing, setRefreshing] = useState(false);
     const [error, setError] = useState(null);
     const [authInitialized, setAuthInitialized] = useState(false);
 
@@ -63,32 +64,51 @@ export function AuthProvider({ children }) {
                     console.log("[Auth] User state changed:", firebaseUser ? firebaseUser.uid : "No user");
 
                     if (firebaseUser) {
+                        // Optimistic Update: Set the firebase user immediately so UI responds fast
+                        // We also preserve existing user data if we're just re-syncing
+                        setUser(prev => ({ ...firebaseUser, ...prev, uid: firebaseUser.uid }));
+                        setLoading(false); // Immediate responsiveness
+
                         try {
                             const { API_BASE } = await import("./api");
                             const axios = (await import("axios")).default;
 
                             // Fetch the real, cryptographically secure Firebase JWT token
                             const idToken = await firebaseUser.getIdToken(true);
-
                             const res = await axios.get(`${API_BASE}/api/auth/sync`, {
                                 headers: { Authorization: `Bearer ${idToken}` }
                             });
 
-                            setUser(res.data.user);
+                            const userData = res.data.user;
+
+                            // Merge backend data with firebase data to ensure photoURL doesn't vanish
+                            // Also normalize avatarUrl to photoURL for consistency
+                            setUser(prev => {
+                                const merged = {
+                                    ...firebaseUser,
+                                    ...prev,
+                                    ...userData,
+                                    uid: firebaseUser.uid
+                                };
+                                // Normalize fields
+                                if (merged.avatarUrl && !merged.photoURL) {
+                                    merged.photoURL = merged.avatarUrl;
+                                }
+                                return merged;
+                            });
                         } catch (syncErr) {
                             if (syncErr.response?.status === 503) {
-                                console.warn("[Auth] Backend auth sync is unconfigured or temporarily unavailable. Using local Firebase session.");
+                                console.warn("[Auth] Backend auth sync is unconfigured. Using local Firebase session.");
                             } else {
                                 console.error("[Auth] Sync with MongoDB failed:", syncErr.message || syncErr);
                             }
-                            // Fallback to purely firebase if backend is down
-                            setUser(firebaseUser);
+                            // Fallback is already handled by the optimistic set above
                         }
                     } else {
                         setUser(null);
+                        setLoading(false);
                     }
 
-                    setLoading(false);
                     setAuthInitialized(true);
                 });
             } catch (err) {
@@ -98,13 +118,8 @@ export function AuthProvider({ children }) {
             }
         };
 
-        // Small delay to not block initial render
-        const timer = setTimeout(initAuth, 100);
-
-        return () => {
-            clearTimeout(timer);
-            unsubscribe();
-        };
+        // Initialize immediately
+        initAuth();
     }, []);
 
     const signInWithGoogle = useCallback(async () => {
@@ -117,7 +132,11 @@ export function AuthProvider({ children }) {
             return result.user;
         } catch (err) {
             console.error("Google sign-in error:", err);
-            setError(err.message);
+            const msg = getErrorMessage(err.code);
+            setError(msg);
+            window.dispatchEvent(new CustomEvent('api-error', { 
+                detail: { title: "Auth Anomaly", message: msg, type: 'error' } 
+            }));
             throw err;
         }
     }, []);
@@ -166,6 +185,62 @@ export function AuthProvider({ children }) {
         }
     }, []);
 
+    // Deadline Management
+    const addDeadline = useCallback(async (deadlineData) => {
+        const newDeadline = {
+            id: Date.now().toString(),
+            date: new Date().toISOString(), // Fallback if not provided
+            ...deadlineData,
+            status: 'upcoming'
+        };
+
+        setUser(prev => {
+            if (!prev) return prev;
+            const updated = {
+                ...prev,
+                deadlines: [...(prev.deadlines || []), newDeadline]
+            };
+            return updated;
+        });
+
+        // Sync with backend if logged in
+        if (user?.uid) {
+            try {
+                const { API_BASE } = await import("./api");
+                const axios = (await import("axios")).default;
+                const idToken = await (await getFirebaseAuth()).currentUser.getIdToken();
+                await axios.post(`${API_BASE}/api/user/deadlines`, { deadline: newDeadline }, {
+                    headers: { Authorization: `Bearer ${idToken}` }
+                });
+            } catch (err) {
+                console.error("[Auth] Deadline sync failed:", err);
+            }
+        }
+    }, [user?.uid]);
+
+    const removeDeadline = useCallback(async (deadlineId) => {
+        setUser(prev => {
+            if (!prev) return prev;
+            return {
+                ...prev,
+                deadlines: (prev.deadlines || []).filter(d => d.id !== deadlineId)
+            };
+        });
+
+        if (user?.uid) {
+            try {
+                const { API_BASE } = await import("./api");
+                const axios = (await import("axios")).default;
+                const idToken = await (await getFirebaseAuth()).currentUser.getIdToken();
+                await axios.delete(`${API_BASE}/api/user/deadlines/${deadlineId}`, {
+                    headers: { Authorization: `Bearer ${idToken}` }
+                });
+            } catch (err) {
+                console.error("[Auth] Deadline removal sync failed:", err);
+            }
+        }
+    }, [user?.uid]);
+
     const value = {
         user,
         loading,
@@ -174,6 +249,8 @@ export function AuthProvider({ children }) {
         signInWithEmail,
         signUpWithEmail,
         logout,
+        addDeadline,
+        removeDeadline,
     };
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

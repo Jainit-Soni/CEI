@@ -16,8 +16,8 @@ import { useEffect, useRef, useState } from "react";
  * return <div ref={ref} className={isVisible ? "revealed" : ""}>Content</div>
  */
 export function useIntersectionObserver({
-    threshold = 0.1,
-    rootMargin = "0px 0px -50px 0px",
+    threshold = 0.05,
+    rootMargin = "100px 0px -50px 0px",
     triggerOnce = true,
 } = {}) {
     const ref = useRef(null);

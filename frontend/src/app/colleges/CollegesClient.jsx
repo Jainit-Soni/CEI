@@ -50,6 +50,80 @@ const getPopularityScore = (college) => {
 
 const SORT_OPTIONS = ["Highest Placement", "Most Popular", "Top Tier", "Name A-Z", "Name Z-A", "Most Exams"];
 
+const DEFAULT_SORT_TOKEN = "placement";
+
+const SORT_LABEL_TO_TOKEN = {
+    "Highest Placement": "placement",
+    "Most Popular": "popularity",
+    "Top Tier": "tier",
+    "Name A-Z": "name_asc",
+    "Name Z-A": "name_desc",
+    "Most Exams": "exams",
+};
+
+const SORT_TOKEN_TO_LABEL = Object.fromEntries(
+    Object.entries(SORT_LABEL_TO_TOKEN).map(([label, token]) => [token, label])
+);
+
+function coerceSortToken(raw) {
+    if (!raw) return DEFAULT_SORT_TOKEN;
+    const v = String(raw).trim();
+
+    // New stable tokens
+    if (SORT_TOKEN_TO_LABEL[v]) return v;
+
+    // Legacy: URL stored UI label (e.g., "Highest Placement")
+    if (SORT_LABEL_TO_TOKEN[v]) return SORT_LABEL_TO_TOKEN[v];
+
+    // Legacy: URL stored backend-ish sortBy (e.g., "placement", "popularity", "tier", "name")
+    if (v === "placement") return "placement";
+    if (v === "popularity") return "popularity";
+    if (v === "tier") return "tier";
+    if (v === "exams") return "exams";
+    if (v === "name") return "name_asc";
+
+    return DEFAULT_SORT_TOKEN;
+}
+
+function buildApiSortParams(sortToken) {
+    switch (sortToken) {
+        case "name_asc":
+            return { sortBy: "name", order: "asc" };
+        case "name_desc":
+            return { sortBy: "name", order: "desc" };
+        case "tier":
+            return { sortBy: "tier", order: "desc" };
+        case "exams":
+            return { sortBy: "exams", order: "desc" };
+        case "popularity":
+            return { sortBy: "popularity", order: "desc" };
+        case "placement":
+        default:
+            return { sortBy: "placement", order: "desc" };
+    }
+}
+
+function normalizeDidYouMeanSuggestions(raw) {
+    if (!Array.isArray(raw)) return [];
+    return raw
+        .map((item) => {
+            if (!item) return null;
+            if (typeof item === "string") return item.trim() || null;
+            if (typeof item === "object") {
+                const label =
+                    item.text ||
+                    item.name ||
+                    item.shortName ||
+                    item.fullName ||
+                    item.title;
+                return label ? String(label).trim() : null;
+            }
+            return null;
+        })
+        .filter(Boolean)
+        .slice(0, 8);
+}
+
 function CollegesContent({ initialData }) {
     const searchParams = useSearchParams();
     const stateFilter = searchParams.get("state");
@@ -65,7 +139,7 @@ function CollegesContent({ initialData }) {
     const [isLoading, setIsLoading] = useState(!initialData?.data?.length);
     const [error, setError] = useState(null);
     const [query, setQuery] = useState("");
-    const [sortBy, setSortBy] = useState("Highest Placement");
+    const [sortToken, setSortToken] = useState(DEFAULT_SORT_TOKEN);
     const [filters, setFilters] = useState({
         state: "All",
         district: "All",
@@ -83,6 +157,16 @@ function CollegesContent({ initialData }) {
     const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
     const ITEMS_PER_PAGE = 18;
 
+    // Lock body scroll when mobile filters are open
+    useEffect(() => {
+        if (!isMobileFiltersOpen) return;
+        const prev = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = prev;
+        };
+    }, [isMobileFiltersOpen]);
+
     // Initialize state from URL params
     useEffect(() => {
         const q = searchParams.get("q") || "";
@@ -91,12 +175,12 @@ function CollegesContent({ initialData }) {
         const course = searchParams.get("course") || "All";
         const tier = searchParams.get("tier") || "All";
         const band = searchParams.get("band") || "All";
-        const sort = searchParams.get("sortBy") || "Highest Placement";
+        const sort = searchParams.get("sort") || searchParams.get("sortBy") || DEFAULT_SORT_TOKEN;
         const p = parseInt(searchParams.get("page")) || 1;
 
         setQuery(q);
         setFilters({ state, district, course, tier, band });
-        setSortBy(sort);
+        setSortToken(coerceSortToken(sort));
         setPage(p);
         setIsInitialized(true);
     }, [searchParams]);
@@ -108,23 +192,19 @@ function CollegesContent({ initialData }) {
         const params = new URLSearchParams();
         if (query) params.set("q", query);
 
-        // Use the actual state filter value, allow it to be "All" even if stateFilter from URL exists
         if (filters.state !== "All") {
             params.set("state", filters.state);
-        } else if (!searchParams.has("state")) {
-            // Only if state is NOT in URL and filter is NOT "All" would we add nothing
-            // But if it IS in URL and we set to "All", we don't add it to params, thus clearing it on replace
         }
 
         if (filters.district !== "All") params.set("district", filters.district);
         if (filters.course !== "All") params.set("course", filters.course);
         if (filters.tier !== "All") params.set("tier", filters.tier);
         if (filters.band !== "All") params.set("band", filters.band);
-        if (sortBy !== "Highest Placement") params.set("sortBy", sortBy);
+        if (sortToken !== DEFAULT_SORT_TOKEN) params.set("sort", sortToken);
         if (page > 1) params.set("page", page.toString());
 
         router.replace(`?${params.toString()}`, { scroll: false });
-    }, [query, filters, sortBy, page, router, isInitialized, searchParams]);
+    }, [query, filters, sortToken, page, router, isInitialized]);
 
     // Load filter options based on active filters (Debounced)
     useEffect(() => {
@@ -162,28 +242,10 @@ function CollegesContent({ initialData }) {
             if (!isInitialized) return; // Wait for init
 
             setIsLoading(true);
+            setError(null);
             try {
                 const params = { page, limit: ITEMS_PER_PAGE };
-
-                if (sortBy === "Name A-Z") {
-                    params.sortBy = "name";
-                    params.order = "asc";
-                } else if (sortBy === "Name Z-A") {
-                    params.sortBy = "name";
-                    params.order = "desc";
-                } else if (sortBy === "Top Tier") {
-                    params.sortBy = "tier";
-                    params.order = "desc";
-                } else if (sortBy === "Most Exams") {
-                    params.sortBy = "exams";
-                    params.order = "desc";
-                } else if (sortBy === "Most Popular") {
-                    params.sortBy = "popularity";
-                    params.order = "desc";
-                } else if (sortBy === "Highest Placement") {
-                    params.sortBy = "placement";
-                    params.order = "desc";
-                }
+                Object.assign(params, buildApiSortParams(sortToken));
 
                 if (query) params.q = query;
                 if (filters.state !== "All") params.state = filters.state;
@@ -191,7 +253,6 @@ function CollegesContent({ initialData }) {
                 if (filters.course !== "All") params.course = filters.course;
                 if (filters.tier !== "All") params.tier = filters.tier;
                 if (filters.band !== "All") params.band = filters.band;
-
                 const response = await fetchColleges(params);
 
                 if (response.data && response.pagination) {
@@ -217,7 +278,7 @@ function CollegesContent({ initialData }) {
                 if (query) {
                     try {
                         const suggs = await suggest({ q: query });
-                        setSuggestions(suggs);
+                        setSuggestions(normalizeDidYouMeanSuggestions(suggs));
                     } catch (e) {
                         // ignore suggestion error
                     }
@@ -227,7 +288,7 @@ function CollegesContent({ initialData }) {
             }
         };
         load();
-    }, [page, query, sortBy, filters.state, filters.district, filters.course, filters.tier, filters.band, stateFilter, isInitialized]);
+    }, [page, query, sortToken, filters.state, filters.district, filters.course, filters.tier, filters.band, stateFilter, isInitialized]);
 
     // Map stats removed as per user request
 
@@ -255,7 +316,7 @@ function CollegesContent({ initialData }) {
     }, []);
 
     const handleSortChange = useCallback((value) => {
-        setSortBy(value);
+        setSortToken(coerceSortToken(value));
         setPage(1);
     }, []);
 
@@ -266,16 +327,18 @@ function CollegesContent({ initialData }) {
 
     const clearFilters = useCallback(() => {
         setQuery("");
-        setSortBy("Most Popular");
+        setSortToken(DEFAULT_SORT_TOKEN);
         setFilters({ state: "All", district: "All", course: "All", tier: "All", band: "All" });
         setPage(1);
+        setError(null);
+        setSuggestions([]);
         setIsMobileFiltersOpen(false); // Close mobile panel
         router.push("/colleges");
     }, [router]);
 
     const hasActiveFilters =
         query ||
-        sortBy !== "Most Popular" ||
+        sortToken !== DEFAULT_SORT_TOKEN ||
         filters.state !== "All" ||
         filters.district !== "All" ||
         filters.course !== "All" ||
@@ -318,7 +381,7 @@ function CollegesContent({ initialData }) {
                     actionLabel={hasActiveFilters ? "Clear Filters" : undefined}
                     onAction={hasActiveFilters ? clearFilters : undefined}
                 >
-                    {suggestions.length > 0 && (
+                    {!error && suggestions.length > 0 && (
                         <div className="mt-4 text-center">
                             <p className="text-gray-600 mb-2">Did you mean?</p>
                             <div className="flex gap-2 justify-center flex-wrap">
@@ -326,12 +389,12 @@ function CollegesContent({ initialData }) {
                                     <button
                                         key={i}
                                         onClick={() => {
-                                            setQuery(s.text || s);
+                                            setQuery(s);
                                             setPage(1);
                                         }}
                                         className="text-blue-600 hover:underline bg-blue-50 px-3 py-1 rounded-full text-sm"
                                     >
-                                        {s.text || s}
+                                        {s}
                                     </button>
                                 ))}
                             </div>
@@ -341,11 +404,7 @@ function CollegesContent({ initialData }) {
                     <div className="mobile-filter-actions">
                         <button
                             className="filter-btn-reset"
-                            onClick={() => {
-                                setFilters({ state: 'All', district: 'All', course: 'All', tier: 'All', band: 'All' });
-                                setQuery(""); // Assuming 'q' is for query
-                                setIsMobileFiltersOpen(false);
-                            }}
+                            onClick={clearFilters}
                         >
                             Clear All
                         </button>
@@ -394,9 +453,7 @@ function CollegesContent({ initialData }) {
                                     title={college.name || college.shortName}
                                     subtitle={college.location || college.meta?.district || college.state || "Location TBA"}
                                     badge={getMatchStatus(college)}
-                                    tags={(college.acceptedExams || [])
-                                        .slice(0, 3)
-                                        .map((exam) => exam.toUpperCase())}
+                                    tags={[]}
                                     meta={[
                                         college.rankingTier || college.ranking,
                                         college.meta?.ownership,
@@ -484,7 +541,7 @@ function CollegesContent({ initialData }) {
                 </Button>
             </div>
 
-            <section className={`list - filters - section ${isMobileFiltersOpen ? "mobile-open" : ""} `}>
+            <section className={`list-filters-section ${isMobileFiltersOpen ? "mobile-open" : ""}`}>
                 <Container>
                     <GlassPanel className="filters-panel" variant="strong">
                         {/* Mobile Header */}
@@ -504,6 +561,7 @@ function CollegesContent({ initialData }) {
                                 initialValue={query}
                                 onChange={handleSearchChange}
                                 placeholder="Search by college, district, or program"
+                                hideScopes={true}
                             />
                         </div>
 

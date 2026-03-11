@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Button from "./Button";
 import { Shield, Activity, Globe } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import FluidGlass from "./animations/FluidGlass";
-// Lazy load the heavy 3D element so it doesn't block mobile PageSpeed Execution
 import dynamic from 'next/dynamic';
 const FluidGlassDynamic = dynamic(() => import('./animations/FluidGlass'), { ssr: false });
 import "./PremiumHome.css";
@@ -18,7 +17,6 @@ export default function PremiumHome() {
     const spotlightRef = useRef(null);
     const sectionRef = useRef(null);
 
-    // Strict Device Detection to completely unmount WebGL on mobile
     const [isMounted, setIsMounted] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -36,7 +34,8 @@ export default function PremiumHome() {
         const handleMouseMove = (e) => {
             if (spotlightRef.current) {
                 const { clientX, clientY } = e;
-                spotlightRef.current.style.background = `radial-gradient(1000px circle at ${clientX}px ${clientY}px, rgba(79, 70, 229, 0.12), transparent 40%)`;
+                // Premium wide wash for light theme
+                spotlightRef.current.style.background = `radial-gradient(1000px circle at ${clientX}px ${clientY}px, rgba(99, 102, 241, 0.12), transparent 70%)`;
             }
         };
 
@@ -45,77 +44,86 @@ export default function PremiumHome() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="premium-home-drilldown" data-vercel-cache-bust="v16">
+        <section ref={sectionRef} className="premium-home-light" data-vercel-cache-bust="v18">
             {/* The sticky container holds everything that stays on screen while pinning */}
             <div className="premium-home-sticky">
 
-                {/* Interactive Background Spotlight */}
+                {/* 1. CHROMATIC PULSE — Original Spectral Bands */}
+                <div className="chromatic-bands">
+                    <div className="chromatic-band-3" />
+                    <div className="chromatic-band-4" />
+                </div>
+
+                {/* 2. Interactive Background Spotlight */}
                 <div ref={spotlightRef} className="premium-spotlight" />
 
-                {/* Subtle Artistic Texture */}
+                {/* 3. Subtle Artistic Texture */}
                 <div className="premium-overlay" />
 
-                {/* Desktop: The Heavy 3D Intelligence Lens Overlay (No Scroll Dependency) */}
-                {isMounted && !isMobile && <FluidGlassDynamic />}
+                {/* Desktop: The Heavy 3D Intelligence Lens Overlay */}
+                {isMounted && !isMobile && (
+                    <div className="hero-fluidglass" aria-hidden="true">
+                        <FluidGlassDynamic />
+                    </div>
+                )}
 
                 {/* The HTML Content */}
                 <div className="premium-container pointer-events-auto">
                     {/* Brand Signal */}
                     <div className="premium-kicker fadeIn">
                         <div className="kicker-dot" />
-                        <span>CEI — INDIA'S ULTIMATE COLLEGE PLATFORM</span>
+                        <span>CEI · PREMIUM INTELLIGENCE</span>
                     </div>
 
-                    {/* The Primary Statement with Typography Pop (Fixed ScrollReveal issue) */}
+                    {/* The Primary Statement with Typography Pop */}
                     <h1 className="premium-title fadeIn delay-1">
-                        Discover. Rank. <span className="serif-accent">Hype.</span>
+                        High-Fidelity <span className="serif-accent">Clarity</span> for your path.
                     </h1>
 
-                    {/* PPT-Style Concise Feature List */}
-                    <div className="premium-features-list fadeIn delay-2">
-                        <div className="feature-bullet">
-                            <Activity className="feature-icon" size={24} />
-                            <div>
-                                <h3>Real-Time Analytics</h3>
-                                <p>Live cutoffs & predictive admission tracking.</p>
+                    <p className="premium-subtitle fadeIn delay-1">
+                        CEI synthesizes thousands of data points into a single, structured intelligence layer.
+                        No noise. No bias. Just the facts for your final decision.
+                    </p>
+
+                    {/* Intelligence Console - Immersive Data Layer */}
+                    <div className="intelligence-console fadeIn delay-2">
+                        <div className="console-header">
+                            <div className="console-status">
+                                <span className="status-dot pulse" />
+                                <span className="status-text">INTELLIGENCE ENGINE ACTIVE</span>
+                            </div>
+                            <div className="console-metadata">
+                                SCANNED: 2.8k INSTITUTES · REAL-TIME SYNC
                             </div>
                         </div>
-                        <div className="feature-bullet">
-                            <Globe className="feature-icon" size={24} />
-                            <div>
-                                <h3>Elite Campuses</h3>
-                                <p>Deep-dive data on India's top institutions.</p>
+
+                        <div className="console-grid">
+                            <div className="console-item">
+                                <span className="item-label">INSTITUTES</span>
+                                <h2 className="item-value">2,800+</h2>
+                                <span className="item-detail">Verified Data Points</span>
+                            </div>
+
+                            <div className="console-item">
+                                <span className="item-label">ENGINE STATUS</span>
+                                <h2 className="item-value">ACTIVE</h2>
+                                <span className="item-detail">Real-Time Cutoffs</span>
+                            </div>
+
+                            <div className="console-item">
+                                <span className="item-label">CONFIDENCE</span>
+                                <h2 className="item-value">99.8%</h2>
+                                <span className="item-detail">Data Integrity Level</span>
                             </div>
                         </div>
-                        <div className="feature-bullet">
-                            <Shield className="feature-icon" size={24} />
-                            <div>
-                                <h3>Verified Fan Wars</h3>
-                                <p>Champion your college on the national leaderboard.</p>
-                            </div>
+
+                        <div className="console-footer">
+                            <div className="footer-tag">AI VALIDATED</div>
+                            <div className="footer-tag">PLACEMENT INTEL</div>
+                            <div className="footer-tag">ROI OPTIMIZED</div>
                         </div>
                     </div>
 
-                    {/* Static Intelligence Dashboard */}
-                    <div className="intelligence-dashboard-static fadeIn delay-2">
-                        <div className="hq-circle-panel hq-circle-static">
-                            <span className="hq-kicker">INSTITUTES</span>
-                            <h2 className="hq-value">1,200+</h2>
-                            <span className="hq-detail">Validated Colleges</span>
-                        </div>
-
-                        <div className="hq-circle-panel hq-circle-static">
-                            <span className="hq-kicker">LIVE ENGINE</span>
-                            <h2 className="hq-value">Predict</h2>
-                            <span className="hq-detail">Real-Time Cutoffs</span>
-                        </div>
-
-                        <div className="hq-circle-panel hq-circle-static">
-                            <span className="hq-kicker">COMMUNITY</span>
-                            <h2 className="hq-value">Wars</h2>
-                            <span className="hq-detail">College Leaderboards</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

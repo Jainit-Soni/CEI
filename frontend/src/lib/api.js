@@ -1,11 +1,54 @@
-﻿import axios from "axios";
+import axios from "axios";
 
-export const API_BASE = (process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000")).replace(/\/$/, "");
+// Force localhost instead of 127.0.0.1 to avoid CORS and cookie issues in dev
+let apiBaseUrl = process.env.NEXT_PUBLIC_API_URL;
+if (apiBaseUrl && apiBaseUrl.includes("127.0.0.1")) {
+  apiBaseUrl = apiBaseUrl.replace("127.0.0.1", "localhost");
+}
+
+export const API_BASE = (apiBaseUrl || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000")).replace(/\/$/, "");
 
 export const api = axios.create({
   baseURL: API_BASE,
-  timeout: 12000,
+  timeout: 15000,
+  withCredentials: true,
 });
+
+// Professional Interceptor Layer
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    const status = error.response ? error.response.status : null;
+    let message = "An unexpected intelligence disruption occurred.";
+    let title = "System Anomaly";
+
+    if (status === 401) {
+      title = "Session Expired";
+      message = "Please sign in again to continue your session.";
+    } else if (status === 403) {
+      title = "Access Restricted";
+      message = "You don't have permission for this strategic data.";
+    } else if (status === 404) {
+      title = "Resource Missing";
+      message = "The requested intelligence could not be located.";
+    } else if (status === 500) {
+      title = "Core Failure";
+      message = "The backend processing unit encountered an error.";
+    } else if (error.code === 'ECONNABORTED') {
+      title = "Network Timeout";
+      message = "The request took too long. Please check your connection.";
+    }
+
+    // Dispatch global event for Toast system to pick up
+    if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('api-error', { 
+            detail: { title, message, type: 'error' } 
+        }));
+    }
+
+    return Promise.reject(error);
+  }
+);
 
 export async function fetchColleges(params = {}) {
   const { data } = await api.get("/api/colleges", { params: { ...params, _t: Date.now() } });

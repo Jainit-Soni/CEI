@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, createContext, useContext } from "rea
 import { useAuth } from "./AuthContext";
 import { saveFavorite, removeFavorite as removeFirestoreFavorite, getUserFavorites, syncLocalFavorites, subscribeToFavorites } from "./firestore";
 import { useToast } from "@/components/Toast";
+import SafeStorage from "@/utils/SafeStorage";
 
 const STORAGE_KEY = "cei_favorites";
 
@@ -57,13 +58,9 @@ export function FavoritesProvider({ children }) {
 
         const loadLocal = () => {
             if (!isMounted) return;
-            try {
-                const stored = localStorage.getItem(STORAGE_KEY);
-                if (stored) setFavorites(JSON.parse(stored));
-                else setFavorites({ colleges: [], exams: [] });
-            } catch (err) {
-                console.error("Failed to load local favorites:", err);
-            }
+            const stored = SafeStorage.get(STORAGE_KEY);
+            if (stored) setFavorites(stored);
+            else setFavorites({ colleges: [], exams: [] });
             setLoading(false);
 
             if (!user) {
@@ -114,7 +111,7 @@ export function FavoritesProvider({ children }) {
     }, [user, addToast]);
 
     const saveToLocal = (newFavorites) => {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(newFavorites));
+        SafeStorage.set(STORAGE_KEY, newFavorites);
     };
 
     // Helper to normalize type (handle "exams" vs "exam")

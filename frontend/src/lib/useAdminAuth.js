@@ -27,7 +27,13 @@ const ADMIN_WHITELIST = [
     "jainit.developer@gmail.com",
 ];
 
-const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL || "https://ce-intelligence-backend.vercel.app";
+// Force localhost instead of 127.0.0.1 to avoid CORS and cookie issues in dev
+let apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || process.env.NEXT_PUBLIC_BACKEND_URL;
+if (apiBaseUrl && apiBaseUrl.includes("127.0.0.1")) {
+    apiBaseUrl = apiBaseUrl.replace("127.0.0.1", "localhost");
+}
+
+const BACKEND = (apiBaseUrl || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000")).replace(/\/$/, "");
 
 export function useAdminAuth() {
     const [user, setUser] = useState(null);

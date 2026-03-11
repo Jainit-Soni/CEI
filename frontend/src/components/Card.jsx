@@ -10,6 +10,8 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
   const resolvedType = variant || type;
   const metaList = Array.isArray(meta) ? meta : meta ? [meta] : [];
   const isExternal = href && (href.startsWith('http') || href.startsWith('//'));
+  const isExam = resolvedType === "exam";
+  const isScholarship = resolvedType === "scholarship";
 
   // Detect tier from tags or data for CSS color-coding
   const tierTag = tags.find(t => /tier\s*\d/i.test(t)) || data?.rankingTier || data?.ranking || "";
@@ -61,15 +63,35 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
                   border: '1px solid #4b5563'
                 }}
               >
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                {Math.round(data.ceiScore)} CEI Score
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  {Math.round(data.ceiScore)} CEI Score
+                </div>
+                {data.ceiScore >= 80 && (
+                  <div className="verification-badge" style={{ fontSize: '9px', color: '#10b981', background: '#ecfdf5', padding: '2px 6px', borderRadius: '8px', border: '1px solid #d1fae5', marginTop: '2px', textAlign: 'center' }}>
+                    Verified Elite
+                  </div>
+                )}
               </div>
             )}
             {trust && <TrustBadge {...trust} />}
+            {isExam && data?.registrationDeadline && (
+              <div className="exam-status-badge">
+                <span className="dot animate-pulse"></span>
+                Deadline: {data.registrationDeadline}
+              </div>
+            )}
+            {isScholarship && data?.deadline && (
+              <div className="scholarship-status-badge">
+                <span className="dot animate-pulse"></span>
+                Apply by: {data.deadline}
+              </div>
+            )}
           </div>
         </div>
-        {(subtitle || data?.location) ? <p>{subtitle || data?.location}</p> : <p className="text-muted italic">Location not listed</p>}
+        {subtitle || data?.location ? <p className="card-subtitle">{subtitle || data?.location}</p> : null}
       </div>
+      <div className="card-refraction-overlay" aria-hidden="true" />
       {tags.length > 0 && (
         <div className="card-tags">
           {tags.map((t) => (

@@ -161,7 +161,7 @@ router.get("/exam/:id", async (req, res) => {
 
 router.get("/exam/:id/colleges", async (req, res) => {
   try {
-    const { page, limit, q } = req.query;
+    const { page, limit, q, state, district } = req.query;
     const pageNum = parseInt(page, 10) || 1;
     const limitNum = parseInt(limit, 10) || 20;
     const skip = (pageNum - 1) * limitNum;
@@ -170,20 +170,35 @@ router.get("/exam/:id/colleges", async (req, res) => {
     if (!exam) return res.status(404).json({ error: "Exam not found" });
 
     let collegeQuery = buildExamCollegeQuery(exam);
+    let andConditions = [collegeQuery];
 
     let projection = {};
     let sort = { isPremium: -1, name: 1 };
 
     if (q) {
       const safeQ = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const searchOr = {
+      andConditions.push({
         $or: [
           { name: { $regex: safeQ, $options: 'i' } },
           { shortName: { $regex: safeQ, $options: 'i' } }
         ]
-      };
-      collegeQuery = { $and: [collegeQuery, searchOr] };
+      });
     }
+
+    if (state) {
+      andConditions.push({ state: { $regex: `^${state.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, $options: 'i' } });
+    }
+
+    if (district) {
+      andConditions.push({
+        $or: [
+          { "meta.district": { $regex: `^${district.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, $options: 'i' } },
+          { location: { $regex: `^${district.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')},`, $options: 'i' } } // Fallback for location starting with City "City, State"
+        ]
+      });
+    }
+
+    collegeQuery = andConditions.length > 1 ? { $and: andConditions } : andConditions[0];
 
     const [colleges, totalCount] = await Promise.all([
       College.find(collegeQuery, 'id name shortName isPremium state rankingTier meta', projection)

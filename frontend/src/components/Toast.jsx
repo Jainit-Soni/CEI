@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback } from "react";
+import { createContext, useContext, useState, useCallback, useEffect } from "react";
 import "./Toast.css";
 
 const ToastContext = createContext();
@@ -8,21 +8,42 @@ const ToastContext = createContext();
 export function ToastProvider({ children }) {
     const [toasts, setToasts] = useState([]);
 
-    const addToast = useCallback((message, type = "info") => {
-        const id = Date.now();
-        setToasts((prev) => [...prev, { id, message, type }]);
+    const addToast = useCallback((message, type = "info", title = "") => {
+        const id = Math.random().toString(36).substr(2, 9);
+        const autoDelete = type === 'success' ? 4000 : 7000;
+        
+        setToasts((prev) => [...prev, { id, message, type, title }]);
+        
         setTimeout(() => {
             setToasts((prev) => prev.filter((t) => t.id !== id));
-        }, 3000);
+        }, autoDelete);
     }, []);
 
+    // Global Interceptor Listener
+    useEffect(() => {
+        const handleApiError = (e) => {
+            const { title, message, type } = e.detail;
+            addToast(message, type, title);
+        };
+        window.addEventListener('api-error', handleApiError);
+        return () => window.removeEventListener('api-error', handleApiError);
+    }, [addToast]);
+
+    const removeToast = (id) => {
+        setToasts((prev) => prev.filter((t) => t.id !== id));
+    };
+
     return (
-        <ToastContext.Provider value={{ addToast }}>
+        <ToastContext.Provider value={{ addToast, removeToast }}>
             {children}
             <div className="toast-container">
                 {toasts.map((toast) => (
-                    <div key={toast.id} className={`toast toast-${toast.type} reveal`}>
-                        {toast.message}
+                    <div key={toast.id} className={`toast toast-${toast.type} reveal`} onClick={() => removeToast(toast.id)}>
+                        <div className="toast-content">
+                            {toast.title && <div className="toast-title">{toast.title}</div>}
+                            <div className="toast-message">{toast.message}</div>
+                        </div>
+                        <div className="toast-progress" style={{ animationDuration: `${toast.type === 'success' ? 4 : 7}s` }} />
                     </div>
                 ))}
             </div>

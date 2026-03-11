@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    HEADER — Floating Pill with Scroll Fade
    ========================================= */
 
@@ -60,11 +60,13 @@
 .brand-logo {
   font-family: var(--font-display, sans-serif);
   font-size: 1.85rem;
-  /* Increased from 1.5rem */
   font-weight: 900;
   color: #0f172a;
   text-decoration: none;
   letter-spacing: -0.04em;
+  display: block;
+  min-width: 60px; /* Prevents push-back during font load */
+  line-height: 1;
 }
 
 /* --- CENTER: Navigation Pill --- */
@@ -162,6 +164,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 40px; /* Space for the avatar */
 }
 
 .dashboard-btn {

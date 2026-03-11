@@ -54,10 +54,13 @@ export default function UserDropdown() {
                         className="user-avatar"
                         width={32}
                         height={32}
-                        unoptimized={true} // Google avatar URLs can be tricky with resizing proxies
+                        unoptimized={true}
+                        priority={true} // Ensure profile pic loads with highest priority
                     />
                 ) : (
-                    <span className="user-avatar-placeholder">{initial}</span>
+                    <div className="user-avatar-placeholder">
+                        {initial}
+                    </div>
                 )}
                 <svg
                     className={`user-dropdown-arrow ${isOpen ? "open" : ""}`}

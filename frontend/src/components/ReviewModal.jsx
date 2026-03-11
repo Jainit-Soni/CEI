@@ -7,6 +7,7 @@ import { Star, X } from "lucide-react";
 import { useAuth } from "@/lib/AuthContext";
 import { useToast } from "./Toast";
 import { postReview } from "@/lib/api";
+import { sanitize } from "@/lib/sanitize";
 
 const SENTIMENTS = {
     1: "Terrible 😡",
@@ -42,12 +43,13 @@ export default function ReviewModal({ isOpen, onClose, collegeId, onReviewSubmit
 
         setIsSubmitting(true);
         try {
+            const cleanComment = sanitize(comment);
             await postReview({
                 collegeId,
                 userId: user.uid,
                 userName: user.displayName || "Student",
                 rating,
-                comment
+                comment: cleanComment
             });
 
             addToast("Review submitted successfully!", "success");

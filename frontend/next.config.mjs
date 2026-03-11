@@ -3,6 +3,7 @@ import { withSentryConfig } from "@sentry/nextjs";
 const nextConfig = {
     experimental: {
         optimizePackageImports: ['lucide-react'],
+        instrumentationHook: true,
     },
     webpack: (config, { isServer }) => {
         config.ignoreWarnings = [
@@ -61,6 +62,18 @@ const nextConfig = {
                     {
                         key: 'Cross-Origin-Opener-Policy',
                         value: 'same-origin-allow-popups'
+                    },
+                    {
+                        key: 'Access-Control-Allow-Origin',
+                        value: '*' // Allow all origins for Vercel <-> Local testing
+                    },
+                    {
+                        key: 'Access-Control-Allow-Methods',
+                        value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT'
+                    },
+                    {
+                        key: 'Access-Control-Allow-Headers',
+                        value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization'
                     }
                 ]
             }
@@ -80,9 +93,6 @@ export default withSentryConfig(nextConfig, {
     // Only enable Sentry webpack plugin when DSN is configured
     disableServerWebpackPlugin: !process.env.NEXT_PUBLIC_SENTRY_DSN,
     disableClientWebpackPlugin: !process.env.NEXT_PUBLIC_SENTRY_DSN,
-
-    // Automatically tree-shake Sentry logger statements to reduce bundle size
-    disableLogger: true,
 
     // Hides source maps from generated client bundles
     hideSourceMaps: true,

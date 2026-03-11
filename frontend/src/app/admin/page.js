@@ -7,7 +7,7 @@ import { RevealOnScroll } from '@/lib/useIntersectionObserver';
 import {
     ShieldCheck, LayoutDashboard, Newspaper, LogOut,
     Activity, TerminalSquare, Database, Server,
-    FileWarning, AlertTriangle
+    FileWarning, AlertTriangle, MessageSquare
 } from "lucide-react";
 import { useAdminAuth } from "@/lib/useAdminAuth";
 import "./admin.css";
@@ -19,6 +19,7 @@ const IntegrityTab = dynamic(() => import("./tabs/IntegrityTab"), { loading: () 
 const LogsTab = dynamic(() => import("./tabs/LogsTab"), { loading: () => <TabSkeleton /> });
 const TrustReportsTab = dynamic(() => import("./tabs/TrustReportsTab"), { loading: () => <TabSkeleton /> });
 const SystemTab = dynamic(() => import("./tabs/SystemTab"), { loading: () => <TabSkeleton /> });
+const ReviewsTab = dynamic(() => import("./tabs/ReviewsTab"), { loading: () => <TabSkeleton /> });
 
 const TabSkeleton = () => (
     <div style={{ height: '400px', borderRadius: '24px', background: '#f1f5f9', animation: 'pulse 1.5s ease-in-out infinite' }} />
@@ -164,6 +165,7 @@ export default function AdminPage() {
                     <SidebarLink id="system" activeTab={activeTab} onSelect={setActiveTab} icon={Server} label="System &amp; Cache" />
                     <span className="admin-sidebar-label" style={{ marginTop: 16 }}>Content</span>
                     <SidebarLink id="news" activeTab={activeTab} onSelect={setActiveTab} icon={Newspaper} label="News Dispatcher" />
+                    <SidebarLink id="reviews" activeTab={activeTab} onSelect={setActiveTab} icon={MessageSquare} label="User Reviews" />
                     <SidebarLink id="logs" activeTab={activeTab} onSelect={setActiveTab} icon={TerminalSquare} label="Audit Logs" />
                 </div>
 
@@ -192,6 +194,7 @@ export default function AdminPage() {
                 {activeTab === "integrity" && <IntegrityTab adminFetch={adminFetch} />}
                 {activeTab === "system" && <SystemTab adminFetch={adminFetch} />}
                 {activeTab === "news" && <NewsTab />}
+                {activeTab === "reviews" && <ReviewsTab adminFetch={adminFetch} />}
                 {activeTab === "logs" && <LogsTab adminFetch={adminFetch} />}
             </main>
 

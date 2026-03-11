@@ -1,7 +1,11 @@
 "use client";
 
 import PremiumHome from "../components/PremiumHome";
+import CorePaths from "../components/CorePaths";
+import WhyCei from "../components/WhyCei";
 import IntelligenceFacts from "../components/IntelligenceFacts";
+import TrustTransparency from "../components/TrustTransparency";
+import IntelligencePipeline from "../components/CommunityExtras";
 
 export default function HomeClient() {
     return (
@@ -10,7 +14,11 @@ export default function HomeClient() {
             {/* 2. THE PREMIUM CONTENT WRAPPER */}
             <main className="content-scroller" style={{ position: 'relative', zIndex: 1, background: 'transparent' }}>
                 <PremiumHome />
+                <CorePaths />
+                <WhyCei />
                 <IntelligenceFacts />
+                <TrustTransparency />
+                <IntelligencePipeline />
             </main>
         </div>
     );
