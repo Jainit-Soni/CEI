@@ -19,13 +19,25 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-// Prevent duplicate initialization in Next.js hot-reload
-const app = getApps().length > 0 ? getApps()[0] : initializeApp(firebaseConfig);
+let app;
+let auth;
+let googleProvider;
 
-export const auth = getAuth(app);
-export const googleProvider = new GoogleAuthProvider();
+// Only initialize if we have the minimum required config (API Key)
+// and we are on the client or in a valid environment.
+try {
+    if (firebaseConfig.apiKey) {
+        app = getApps().length > 0 ? getApps()[0] : initializeApp(firebaseConfig);
+        auth = getAuth(app);
+        googleProvider = new GoogleAuthProvider();
+        googleProvider.setCustomParameters({ prompt: "select_account" });
+    } else {
+        console.warn("[Firebase] Config missing. Initialization skipped.");
+    }
+} catch (err) {
+    console.error("[Firebase] Initialization error:", err);
+}
 
-// Force account picker every time (prevents auto-signing wrong account)
-googleProvider.setCustomParameters({ prompt: "select_account" });
-
+export { auth, googleProvider };
 export default app;
+
