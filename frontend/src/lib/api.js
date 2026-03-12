@@ -10,7 +10,7 @@ export const API_BASE = (apiBaseUrl || (process.env.VERCEL || process.env.NODE_E
 
 export const api = axios.create({
   baseURL: API_BASE,
-  timeout: 15000,
+  timeout: 20000,
   withCredentials: true,
 });
 

@@ -71,11 +71,11 @@ const app = express();
 // ==========================================
 // 🌐 CORS CONFIGURATION (MUST BE FIRST)
 // ==========================================
-const rawOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
+// Robust environment variable parsing: Strip quotes, split, trim, and normalize slashes
+const rawOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.replace(/['"]+/g, '').split(",") : [];
 const normalizedOrigins = rawOrigins
-  .map(o => o.trim())
-  .filter(Boolean)
-  .map(o => o.replace(/\/$/, ""));
+  .map(o => o.trim().toLowerCase().replace(/\/$/, ""))
+  .filter(Boolean);
 
 const allowedOrigins = [
   "http://localhost:3000",
@@ -88,19 +88,16 @@ const allowedOrigins = [
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin) return callback(null, true);
-    const isTrustedVercelPreview = /^https:\/\/ce-intelligence-[a-z0-9-]+-jainit-sonis-projects\.vercel\.app$/.test(origin);
-    if (isTrustedVercelPreview) return callback(null, true);
 
     const normalizedOrigin = origin.toLowerCase().replace(/\/$/, "");
-    const isAllowed = allowedOrigins.some(allowed => {
-      if (allowed === "*") return true;
-      return allowed.toLowerCase().replace(/\/$/, "") === normalizedOrigin;
-    });
+    const isAllowed = allowedOrigins.some(allowed => allowed === normalizedOrigin);
 
     if (isAllowed) {
       callback(null, true);
     } else {
-      console.warn(`[CORS] Rejected origin: ${origin} (Normalized: ${normalizedOrigin})`);
+      // Diagnostic logging for Production debugging without exposing sensitive data
+      console.warn(`[CORS] Access Denied: Origin "${origin}" is not in the authorized whitelist.`);
+      console.debug(`[CORS] Normalized: "${normalizedOrigin}" | Allowed Count: ${allowedOrigins.length}`);
       callback(null, false);
     }
   },
