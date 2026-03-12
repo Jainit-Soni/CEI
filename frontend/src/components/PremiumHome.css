@@ -3,42 +3,65 @@
     --text-muted: #64748b;
     --accent-blue: #4f46e5;
     --accent-violet: #8b5cf6;
-    /* Keep this if not explicitly removed, but the instruction implies it might be replaced by --accent-blue in some places */
     --font-serif: var(--font-playfair), serif;
     --font-sans: var(--font-display), sans-serif;
 
-    min-height: 100vh;
+    min-height: 135vh;
     position: relative;
     z-index: 10;
-    background: white;
+    background: transparent; /* Full transparency for global chromatic bands */
     color: var(--text-primary);
-    /* Changed from white to text-primary */
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.05) 0, transparent 60%), 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 80px 80px, 80px 80px;
+}
+
+@keyframes backgroundDrift {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 10% 10%; }
 }
 
 .premium-home-sticky {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 40px;
-    position: relative;
+    padding: 0 5vw;
+    position: sticky;
+    top: 0;
     overflow: hidden;
-    padding-top: 80px;
+    transform-style: preserve-3d;
+}
+
+/* ==========================================================
+   INTERACTIVE LENS (HERO FLUIDGLASS)
+   ========================================================== */
+.hero-fluidglass {
+    position: absolute;
+    inset: 0;
+    z-index: 2000; /* Absolute dominance to ensure it sits on top of all content */
+    pointer-events: none;
+    transform-style: preserve-3d;
+    overflow: hidden;
 }
 
 /* ==========================================================
    TYPOGRAPHY & CONTENT
    ========================================================== */
 .premium-container {
-    max-width: 1100px;
+    max-width: 1200px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     position: relative;
-    z-index: 10;
+    /* Removed explicit z-index to let hero-fluidglass sit on top without conflict */
+    transform: perspective(1000px) translate3D(0, 0, 0);
+    will-change: transform, opacity;
 }
 
 .premium-kicker {
@@ -287,14 +310,7 @@
     transition: background 0.15s ease-out;
 }
 
-.hero-fluidglass {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 15;
-    /* Above background, behind nav/primary content */
-    overflow: hidden;
-}
+/* hero-fluidglass consolidated above */
 
 
 /* Animations */
@@ -321,7 +337,9 @@
 
 @media (max-width: 1024px) {
     .premium-home-sticky {
-        padding-top: 120px;
+        padding-top: 140px; /* Extra clearance for fixed header */
+        height: auto;
+        min-height: 100vh;
     }
 
     .premium-title {
@@ -339,6 +357,20 @@
 }
 
 @media (max-width: 768px) {
+    .premium-home-sticky {
+        padding-top: 160px; /* Progressive clearance for smaller viewports */
+    }
+
+    .premium-title {
+        font-size: clamp(2rem, 14vw, 4rem);
+        margin-bottom: 20px;
+    }
+
+    .premium-kicker {
+        margin-bottom: 24px;
+        font-size: 0.65rem;
+    }
+
     .hero-cta-row {
         flex-direction: column;
         width: 100%;

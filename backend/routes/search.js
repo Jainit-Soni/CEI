@@ -1,4 +1,4 @@
-﻿const express = require("express");
+const express = require("express");
 const { getExams } = require("../services/dataStore");
 const { search, suggest, getProviderInfo } = require("../services/searchService");
 const cache = require("../services/cache");
@@ -41,11 +41,12 @@ router.get("/search", async (req, res) => {
       .slice(0, 8);
 
     const result = { colleges, exams: examResults };
-    await cache.set(cacheKey, result, 120);
+    await cache.set(cacheKey, result, 300); // 5 min
     res.json(result);
   } catch (err) {
-    console.error("[search] Error:", err.message);
-    res.status(500).json({ error: "Search failed" });
+    console.warn("[search] Fallback triggered:", err.message);
+    // Return empty results instead of crashing the front-end
+    res.json({ colleges: [], exams: [] });
   }
 });
 
@@ -84,11 +85,11 @@ router.get("/suggest", async (req, res) => {
     }
 
     const result = [...collegeSuggestions, ...examSuggestions];
-    await cache.set(cacheKey, result, 60);
+    await cache.set(cacheKey, result, 600); // 10 min
     res.json(result);
   } catch (err) {
-    console.error("[suggest] Error:", err.message);
-    res.status(500).json({ error: "Suggest failed" });
+    console.warn("[suggest] Fallback triggered:", err.message);
+    res.json([]); // Return empty list to prevent UI breakage
   }
 });
 

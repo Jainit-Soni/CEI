@@ -189,7 +189,11 @@ async function search(q, options = {}) {
 
     // Cache results
     if (redis && results.length > 0) {
-        redis.set(cacheKey, JSON.stringify(results), 'EX', 120).catch(() => { });
+        redis.set(cacheKey, JSON.stringify(results), 'EX', 120).catch((err) => {
+            if (!err.message.includes("quota exceeded") && !err.message.includes("limit exceeded")) {
+                logger.warn('[SearchService] Cache set error', { error: err.message });
+            }
+        });
     }
 
     return results;

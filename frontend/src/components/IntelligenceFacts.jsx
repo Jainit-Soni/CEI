@@ -82,9 +82,9 @@ export default function IntelligenceFacts() {
                                     <div className="hub-value">{point.value}</div>
                                     <div className="hub-label">{point.label}</div>
                                 </div>
-                                <div className="hub-description-overlay">
-                                    <p>{point.description}</p>
-                                </div>
+                            </div>
+                            <div className="hub-description-overlay">
+                                <p>{point.description}</p>
                             </div>
                         </div>
                     ))}

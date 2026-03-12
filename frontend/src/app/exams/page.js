@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import Card from "@/components/Card";
@@ -130,23 +130,46 @@ export default function ExamsPage() {
       );
     }
 
+    const getStatusLabel = (dates) => {
+      if (!dates) return null;
+      const now = new Date();
+      const registration = dates.registration || "";
+      const examWindow = dates.examWindow || "";
+      const result = dates.result || "";
+
+      if (result.toLowerCase().includes("declared")) return { label: "Results Declared", type: "success" };
+      if (examWindow.toLowerCase().includes("upcoming")) return { label: "Exam Upcoming", type: "warning" };
+      if (registration.toLowerCase().includes("August") || registration.toLowerCase().includes("Expected")) return { label: "Registering Soon", type: "info" };
+      if (registration.toLowerCase().includes("Completed") || examWindow.toLowerCase().includes("Completed")) return { label: "Cycle Ended", type: "muted" };
+      
+      return null;
+    };
+
     return (
       <div className="results-grid">
-        {sortedExams.map((exam, index) => (
-          <RevealOnScroll key={exam.id} delay={index * 40}>
-            <div className="card-wrapper">
-              <FavoriteButton type="exams" id={exam.id} item={exam} size="sm" className="card-favorite" />
-              <Card
-                type="exam"
-                title={exam.shortName || exam.name}
-                subtitle={exam.type}
-                tags={[exam.type]} // Replaced syllabus with just Type
-                meta={`Accepted by ${exam.acceptedCount ?? (exam.acceptedColleges || exam.collegesAccepting || []).length} colleges`}
-                href={`/exam/${exam.id}`}
-              />
-            </div>
-          </RevealOnScroll>
-        ))}
+        {sortedExams.map((exam, index) => {
+          const status = getStatusLabel(exam.dates);
+          return (
+            <RevealOnScroll key={exam.id} delay={index * 40}>
+              <div className="card-wrapper">
+                <FavoriteButton type="exams" id={exam.id} item={exam} size="sm" className="card-favorite" />
+                {status && (
+                  <div className={`status-badge status-badge--${status.type}`}>
+                    {status.label}
+                  </div>
+                )}
+                <Card
+                  type="exam"
+                  title={exam.shortName || exam.name}
+                  subtitle={exam.type}
+                  tags={exam.pattern && exam.pattern.length > 0 ? [exam.pattern[0].split(':')[0]] : [exam.type]}
+                  meta={`Accepted by ${exam.acceptedCount ?? (exam.acceptedColleges || exam.collegesAccepting || []).length} colleges`}
+                  href={`/exam/${exam.id}`}
+                />
+              </div>
+            </RevealOnScroll>
+          );
+        })}
       </div>
     );
   };

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ScrollReveal from "./animations/ScrollReveal";
 import GlassPanel from "./GlassPanel";
 import Button from "./Button";
 import "./HomeSections.css";
@@ -46,7 +47,9 @@ export default function CorePaths() {
       <div className="home-section-inner">
         <header className="nexus-section-header">
           <span className="nexus-kicker fadeIn">PATHS_INTO_CEI</span>
-          <h2 className="fadeIn delay-1">Choose your way into the <span className="serif-accent">decision</span>.</h2>
+          <ScrollReveal as="h2" containerClassName="fadeIn delay-1" baseRotation={-1} blurStrength={8}>
+            Choose your way into the <span className="serif-accent">decision</span>.
+          </ScrollReveal>
           <p className="fadeIn delay-1">
             CEI turns scattered information into a few calm, navigable doors. Pick the
             one that fits how you think.
@@ -58,7 +61,7 @@ export default function CorePaths() {
             <GlassPanel
               key={card.id}
               variant="default"
-              className={`nexus-glass-card nexus-core-path-card fadeIn delay-${index + 2}`}
+              className={`nexus-glass-card nexus-core-path-card anti-gravity-card fadeIn delay-${index + 2}`}
             >
               <div className="core-path-body">
                 <h3>{card.title}</h3>

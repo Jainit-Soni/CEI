@@ -45,8 +45,22 @@ export default function IntelligenceRadar({ college }) {
                 </p>
             </div>
 
-            <div className="w-full h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
+            <div className="w-full h-[400px] relative">
+                {/* 3D Glass Floor Effect */}
+                <div style={{
+                    position: 'absolute',
+                    bottom: '10%',
+                    left: '10%',
+                    right: '10%',
+                    height: '100px',
+                    background: 'radial-gradient(ellipse at center, rgba(99, 102, 241, 0.08) 0%, transparent 70%)',
+                    transform: 'rotateX(75deg)',
+                    borderRadius: '50%',
+                    filter: 'blur(10px)',
+                    zIndex: 0
+                }} />
+                
+                <ResponsiveContainer width="100%" height="100%" style={{ zIndex: 1, position: 'relative' }}>
                     <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
                         {/* Light theme grid */}
                         <PolarGrid stroke="rgba(99, 102, 241, 0.15)" />

@@ -1,0 +1,214 @@
+.nexus-3d-wrapper {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 1500px;
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.03) 0%, transparent 70%);
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.nexus-3d-scene {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform: rotateX(60deg) rotateZ(-45deg);
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nexus-3d-wrapper:hover .nexus-3d-scene {
+    transform: rotateX(55deg) rotateZ(-35deg);
+}
+
+/* ── Floor ─────────────────────────────────────────────────── */
+.nexus-floor {
+    position: absolute;
+    inset: -50px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 100px rgba(99, 102, 241, 0.1);
+    transform: translateZ(-10px);
+}
+
+.nexus-grid-lines {
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* ── Floating Medallion (Center) ─────────────────────────────── */
+.nexus-medallion-float {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin: -40px 0 0 -40px;
+    transform-style: preserve-3d;
+    animation: floatMedallion 4s ease-in-out infinite;
+}
+
+@keyframes floatMedallion {
+    0%, 100% { transform: translateZ(80px) rotateY(0deg); }
+    50% { transform: translateZ(110px) rotateY(180deg); }
+}
+
+.nexus-diamond {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.diamond-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    backface-visibility: visible;
+}
+
+.diamond-face.top { transform: rotateX(0deg) translateZ(40px); background: #6366f1; }
+.diamond-face.front { transform: rotateY(90deg) translateZ(40px); background: #4338ca; font-size: 0.8rem; }
+.diamond-face.right { transform: rotateX(90deg) translateZ(40px); background: #3730a3; font-size: 0.8rem; }
+
+.diamond-shadow {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    filter: blur(20px);
+    transform: translateZ(-80px) scale(0.8);
+    border-radius: 50%;
+}
+
+/* ── Volumetric Pillars ─────────────────────────────────────── */
+.nexus-pillars-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.nexus-pillar-wrap {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform-style: preserve-3d;
+}
+
+/* Radial Positioning */
+.p-0 { top: 10%; left: 50%; margin-left: -20px; }
+.p-1 { top: 25%; left: 85%; margin-left: -20px; }
+.p-2 { top: 75%; left: 85%; margin-left: -20px; }
+.p-3 { top: 90%; left: 50%; margin-left: -20px; }
+.p-4 { top: 75%; left: 15%; margin-left: -20px; }
+.p-5 { top: 25%; left: 15%; margin-left: -20px; }
+
+.nexus-pillar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.pillar-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pillar-face.top {
+    transform: translateZ(var(--h));
+    background: var(--c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.pillar-face.front {
+    height: var(--h);
+    transform: rotateX(-90deg) translateY(calc(var(--h) / -2)) translateZ(20px);
+    background: linear-gradient(to bottom, var(--c), #000);
+    filter: brightness(0.8);
+    transform-origin: top;
+}
+
+.pillar-face.right {
+    height: var(--h);
+    width: 40px;
+    transform: rotateY(90deg) rotateX(-90deg) translateY(calc(var(--h) / -2)) translateZ(20px);
+    background: linear-gradient(to bottom, var(--c), #000);
+    filter: brightness(0.6);
+    transform-origin: top;
+}
+
+.pillar-icon {
+    font-size: 1.2rem;
+    transform: rotate(-45deg) scale(1.2); /* Fix orientation for isometric */
+    display: block;
+}
+
+.pillar-label {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(45deg) rotateX(-60deg);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.p-score {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--c);
+}
+
+.p-text {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #8C8CA1;
+    text-transform: uppercase;
+}
+
+/* ── Legend ────────────────────────────────────────────────── */
+.nexus-legend {
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #4A4A68;
+}
+
+.legend-item .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}

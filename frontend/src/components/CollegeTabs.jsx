@@ -14,6 +14,7 @@ import ExplainabilityCard from "./ExplainabilityCard";
 import DataConfidenceBadge from "./DataConfidenceBadge";
 import DataSourcesPanel from "./DataSourcesPanel";
 import ImprovementSimulator from "./ImprovementSimulator";
+import Nexus3DCore from "./Nexus3DCore";
 import { fetchReviews as getReviews } from "@/lib/api";
 import "./CollegeTabs.css";
 
@@ -272,27 +273,19 @@ export default function CollegeTabs({ college }) {
                         {/* Explainability Card — constitutional score breakdown */}
                         <div className="premium-tab-card" style={{ marginBottom: '16px' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                                <h3 className="tab-heading" style={{ margin: 0 }}>Score Explainability</h3>
+                                <h3 className="tab-heading" style={{ margin: 0 }}>CEI Intelligence Core</h3>
                                 <Button href="/methodology" variant="ghost" size="sm">Methodology →</Button>
                             </div>
                             <ExplainabilityCard college={college} />
-                            <DataSourcesPanel collegeId={college.id} />
                         </div>
 
-                        {/* Intelligence Radar — Score Breakdown */}
                         <div className="premium-tab-card">
-                            <h3 className="tab-heading" style={{ marginBottom: '12px' }}>Score Breakdown Radar</h3>
-                            <p className="overview-text" style={{ marginBottom: '16px' }}>
-                                A visual map showing how {college.shortName || college.name} performs across the 6 key areas compared to similar colleges.
+                            <h3 className="tab-heading" style={{ marginBottom: '4px' }}>Nexus Intelligence Engine</h3>
+                            <p className="overview-text mb-8" style={{ fontSize: '0.85rem' }}>
+                                A real-world 3D volumetric projection of {college.shortName}'s score factors.
                             </p>
-                            <div style={{ width: '100%', height: '400px', minHeight: '300px' }}>
-                                <IntelligenceRadar college={college} />
-                            </div>
+                            <Nexus3DCore college={college} />
                         </div>
-
-                        {/* Phase XIII: Improvement Simulator — sandbox hypothetical */}
-                        <ImprovementSimulator college={college} />
-
                     </div>
                 )}
 

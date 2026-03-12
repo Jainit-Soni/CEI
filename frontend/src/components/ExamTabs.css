@@ -257,6 +257,12 @@
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
 }
 
+.step-item.past .step-marker {
+    border-color: #10b981;
+    background: #10b981;
+    opacity: 0.6;
+}
+
 .step-date {
     display: block;
     font-size: 0.85rem;
@@ -265,9 +271,75 @@
     margin-bottom: 4px;
 }
 
+.step-item.past .step-date {
+    color: #64748b;
+}
+
 .step-title {
     font-weight: 600;
     color: #1e293b;
+}
+
+/* Syllabus Grid */
+.syllabus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.sector-tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(14, 165, 233, 0.05);
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    transition: all 0.2s;
+}
+
+.sector-tag:hover {
+    background: rgba(14, 165, 233, 0.1);
+    transform: translateX(4px);
+}
+
+.sector-icon {
+    color: #0ea5e9;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.sector-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.mission-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mission-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.mission-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.7rem;
+    color: #0ea5e9;
+    opacity: 0.6;
+}
+
+.marking-grid-mini {
+    display: flex;
+    gap: 20px;
 }
 
 .custom-list {
@@ -371,4 +443,75 @@
         height: 1px;
         margin: 0;
     }
+}
+
+/* Archives Vault */
+.archives-vault-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.vault-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vault-item:hover {
+    background: white;
+    border-color: #0ea5e9;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.08);
+    transform: translateY(-2px);
+}
+
+.vault-icon {
+    width: 44px;
+    height: 44px;
+    background: #f0f9ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #0369a1;
+}
+
+.vault-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.vault-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.vault-meta {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.vault-item.official-portal {
+    background: rgba(14, 165, 233, 0.05);
+    border-color: rgba(14, 165, 233, 0.2);
+}
+
+.vault-item.official-portal .vault-icon {
+    background: #0ea5e9;
+    color: white;
+}
+
+.vault-item.official-portal .vault-label {
+    color: #0369a1;
 }

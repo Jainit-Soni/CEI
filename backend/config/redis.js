@@ -3,6 +3,7 @@ const Redis = require("ioredis");
 let redisClient = null;
 let lastError = null;
 let lastClose = false;
+let breakerUntil = 0; // Timestamp when circuit breaker resets
 
 function createRedisClient() {
     if (redisClient) {
@@ -13,6 +14,8 @@ function createRedisClient() {
 
     redisClient = new Redis(redisUrl, {
         retryStrategy(times) {
+            // If breaker is active, don't even try to reconnect
+            if (Date.now() < breakerUntil) return null;
             const delay = Math.min(times * 50, 2000);
             return delay;
         },
@@ -25,10 +28,21 @@ function createRedisClient() {
         console.log("✅ Redis connected");
         lastError = null;
         lastClose = false;
+        breakerUntil = 0; // Reset breaker on successful manual connection
     });
 
     redisClient.on("error", (err) => {
-        // Only log unique errors once to avoid spamming the console in fail-safe mode
+        // Detect Upstash / Redis quota limits
+        if (err.message.includes("max requests limit exceeded") || err.message.includes("quota exceeded")) {
+             if (Date.now() > breakerUntil) {
+                 const COOLDOWN_MINUTES = 10;
+                 breakerUntil = Date.now() + (COOLDOWN_MINUTES * 60 * 1000);
+                 console.warn(`🚨 REDIS QUOTA: Circuit Breaker active for ${COOLDOWN_MINUTES}m. Switching to local-only mode.`);
+             }
+             return;
+        }
+
+        // Only log unique errors once to avoid spamming the console
         if (err.message !== lastError) {
             console.error("❌ Redis error:", err.message);
             lastError = err.message;
@@ -36,8 +50,8 @@ function createRedisClient() {
     });
 
     redisClient.on("close", () => {
-        if (!lastClose) {
-            console.log("⚠️  Redis connection closed. (Warnings silenced for this session)");
+        if (!lastClose && Date.now() > breakerUntil) {
+            console.log("⚠️  Redis connection closed.");
             lastClose = true;
         }
     });
@@ -46,6 +60,11 @@ function createRedisClient() {
 }
 
 async function getRedisClient() {
+    // 1. Check Circuit Breaker
+    if (Date.now() < breakerUntil) {
+        return null;
+    }
+
     if (!redisClient) {
         redisClient = createRedisClient();
     }
@@ -58,50 +77,37 @@ async function getRedisClient() {
     }
 
     if (status === "connecting" || status === "reconnecting") {
-        // Wait for it to be ready with a timeout
+        // Wait for it to be ready with a short timeout
         return new Promise((resolve) => {
             const timeout = setTimeout(() => {
-                // Only warn once about timeout
-                if (!lastError) {
-                    console.warn("⚠️  Redis ready timeout. Proceeding without cache.");
-                }
                 resolve(null);
-            }, 200);
+            }, 100);
 
             redisClient.once("ready", () => {
                 clearTimeout(timeout);
                 resolve(redisClient);
             });
 
-            redisClient.once("error", (err) => {
+            redisClient.once("error", () => {
                 clearTimeout(timeout);
-                if (err.message !== lastError) {
-                    console.warn(`⚠️  Redis error during wait: ${err.message}`);
-                    lastError = err.message;
-                }
                 resolve(null);
             });
         });
     }
 
-    // Only connect if it's actually disconnected/end
     try {
-        // Add a 2s timeout to the connection attempt
         const connectionPromise = redisClient.connect();
         const timeoutPromise = new Promise((_, reject) =>
-            setTimeout(() => reject(new Error("Redis connection timeout")), 200)
+            setTimeout(() => reject(new Error("Redis connection timeout")), 500) // Slightly longer timeout
         );
 
         await Promise.race([connectionPromise, timeoutPromise]);
         return redisClient;
     } catch (err) {
-        if (err.message.includes("already connecting")) {
+        if (err.message.includes("already connecting") || err.message.includes("already connected")) {
             return redisClient;
         }
-        if (err.message !== lastError) {
-            console.warn(`⚠️  Redis connection issue: ${err.message}. Proceeding without cache.`);
-            lastError = err.message;
-        }
+        // Silence log on timeout/standard end to prevent spam
         return null;
     }
 }

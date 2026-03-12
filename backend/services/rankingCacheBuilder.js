@@ -276,7 +276,9 @@ async function invalidateAll() {
         logger.info(`[RankingCache] Invalidated ${deleted} ranking keys`);
         return deleted;
     } catch (err) {
-        logger.warn('[RankingCache] Invalidation error', { error: err.message });
+        if (!err.message.includes("quota exceeded") && !err.message.includes("limit exceeded")) {
+            logger.warn('[RankingCache] Invalidation error', { error: err.message });
+        }
         return 0;
     }
 }
@@ -317,7 +319,9 @@ async function invalidateForCollege(data) {
         logger.info(`[RankingCache] Surgically invalidated ${count} keys for ${data.id || 'unknown'}`);
         return count;
     } catch (err) {
-        logger.warn('[RankingCache] Surgical invalidation error', { error: err.message });
+        if (!err.message.includes("quota exceeded") && !err.message.includes("limit exceeded")) {
+            logger.warn('[RankingCache] Surgical invalidation error', { error: err.message });
+        }
         return 0;
     }
 }
@@ -332,7 +336,9 @@ async function buildOneAsync(filter, sortField, redisKey, countFilter = null) {
     const redis = await getRedisClient();
     if (!redis) return;
     buildOne(redis, filter, sortField, redisKey, countFilter).catch((err) => {
-        logger.warn('[RankingCache] Async build error', { key: redisKey, error: err.message });
+        if (!err.message.includes("quota exceeded") && !err.message.includes("limit exceeded")) {
+            logger.warn('[RankingCache] Async build error', { key: redisKey, error: err.message });
+        }
     });
 }
 

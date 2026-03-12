@@ -161,17 +161,17 @@
   },
   {
     "id": "dr-ambedkar-post-matric",
-    "name": "Dr. Ambedkar Post Matric Scholarship",
-    "provider": "Ministry of Social Justice",
-    "category": "EBC",
-    "amount": "Full Fee Reimbursement",
+    "name": "Dr. Ambedkar Post-Matric Scholarship",
+    "provider": "Ministry of Social Justice & Empowerment",
+    "category": "Government (EBC)",
+    "amount": "Tuition Fee + Maintenance Allowance",
     "eligibility": [
-      "EBC Students",
-      "Income limits apply",
-      "Domicile requirements"
+      "Economically Backward Class (EBC) students",
+      "General category included",
+      "Family Income < ₹2.5 Lakhs"
     ],
-    "deadline": "31st Mar 2026",
-    "applicationUrl": "https://socialjustice.gov.in"
+    "deadline": "Dec 2025",
+    "applicationUrl": "https://scholarships.gov.in"
   },
   {
     "id": "santoor-women",
@@ -203,31 +203,34 @@
   },
   {
     "id": "keep-india-smiling",
-    "name": "Colgate Keep India Smiling",
-    "provider": "Colgate-Palmolive",
-    "category": "General",
-    "amount": "₹30,000 per annum",
+    "name": "Keep India Smiling Foundational Scholarship",
+    "provider": "Colgate-Palmolive (India)",
+    "category": "Vocational/Professional",
+    "amount": "₹30,000 per year",
     "eligibility": [
-      "Class 11, Diploma, UG, BDS",
-      "Meritorious students",
-      "EWS Category"
+      "Students in Class 11, B.E./B.Tech, BDS, etc.",
+      "Min 60% to 75% in Class 10/12 Board Exams (Depends on stream)",
+      "Family Income < ₹5 Lakhs to ₹8 Lakhs (Depends on stream)",
+      "Special support for sportspersons and dental students (BDS/MDS)"
     ],
-    "deadline": "Dec 2025",
-    "applicationUrl": "https://www.buddy4study.com/page/colgate-keep-india-smiling-foundational-scholarship-programme"
+    "deadline": "Rolling Basis",
+    "applicationUrl": "https://www.buddy4study.com/page/colgate-keep-india-smiling-foundational-scholarship-programme",
+    "logo": "https://d2w7l1p59qkl0r.cloudfront.net/static/images/buddy4study-logo-new.png",
+    "description": "Initiative by Colgate-Palmolive (India) Limited to provide foundational support to deserving and meritorious individuals who may lack the resources to pursue their dreams."
   },
   {
     "id": "kind-circle",
     "name": "Kind Circle Scholarship",
-    "provider": "Kind Circle",
-    "category": "Merit-Based",
-    "amount": "Minimum ₹6,000",
+    "provider": "Kind Circle Foundation",
+    "category": "Private",
+    "amount": "Min ₹6,000",
     "eligibility": [
-      "School to College students",
-      "Score > 75% in last exam",
-      "Income < ₹6 Lakhs"
+      "Students from poor backgrounds",
+      "Merit record",
+      "Must be continuing education"
     ],
-    "deadline": "Open",
-    "applicationUrl": "https://www.kindcircle.org"
+    "deadline": "Rolling Basis",
+    "applicationUrl": "https://kindcircle.org"
   },
   {
     "id": "swami-vivekananda-wb",
@@ -245,16 +248,16 @@
   },
   {
     "id": "mahadbt",
-    "name": "MahaDBT Rajarshi Shahu Maharaj Scheme",
-    "provider": "Govt of Maharashtra",
-    "category": "State Govt",
-    "amount": "50% of Tuition Fee",
+    "name": "MahaDBT Scholarship",
+    "provider": "Government of Maharashtra",
+    "category": "State Government",
+    "amount": "50% to 100% Tuition Fee Waiver",
     "eligibility": [
-      "Domicile of Maharashtra",
-      "EBC Category",
-      "Through CAP Rounds"
+      "Maharashtra Domicile",
+      "EBC/OBC/SEBC students",
+      "Family Income < ₹8 Lakhs"
     ],
-    "deadline": "31st Mar 2026",
+    "deadline": "31st Jan 2026",
     "applicationUrl": "https://mahadbt.maharashtra.gov.in"
   },
   {
@@ -556,20 +559,6 @@
     "applicationUrl": "https://www.vidyasaarathi.co.in/Vidyasaarathi/scholarship"
   },
   {
-    "id": "dr-ambedkar-post-matric",
-    "name": "Dr. Ambedkar Post-Matric Scholarship",
-    "provider": "Ministry of Social Justice & Empowerment",
-    "category": "Government (EBC)",
-    "amount": "Tuition Fee + Maintenance Allowance",
-    "eligibility": [
-      "Economically Backward Class (EBC) students",
-      "General category included",
-      "Family Income < ₹2.5 Lakhs"
-    ],
-    "deadline": "Dec 2025",
-    "applicationUrl": "https://scholarships.gov.in"
-  },
-  {
     "id": "karnataka-ssp",
     "name": "State Scholarship Portal (SSP) Karnataka",
     "provider": "Government of Karnataka",
@@ -582,20 +571,6 @@
     ],
     "deadline": "Variable",
     "applicationUrl": "https://ssp.postmatric.karnataka.gov.in"
-  },
-  {
-    "id": "mahadbt",
-    "name": "MahaDBT Scholarship",
-    "provider": "Government of Maharashtra",
-    "category": "State Government",
-    "amount": "50% to 100% Tuition Fee Waiver",
-    "eligibility": [
-      "Maharashtra Domicile",
-      "EBC/OBC/SEBC students",
-      "Family Income < ₹8 Lakhs"
-    ],
-    "deadline": "31st Jan 2026",
-    "applicationUrl": "https://mahadbt.maharashtra.gov.in"
   },
   {
     "id": "up-scholarship",
@@ -640,20 +615,6 @@
     "applicationUrl": "https://buildyourfuture.withgoogle.com/scholarships/venkat-panchapakesan-memorial-scholarship"
   },
   {
-    "id": "kind-circle",
-    "name": "Kind Circle Scholarship",
-    "provider": "Kind Circle Foundation",
-    "category": "Private",
-    "amount": "Min ₹6,000",
-    "eligibility": [
-      "Students from poor backgrounds",
-      "Merit record",
-      "Must be continuing education"
-    ],
-    "deadline": "Rolling Basis",
-    "applicationUrl": "https://kindcircle.org"
-  },
-  {
     "id": "ongc-merit",
     "name": "ONGC Scholarship for Meritorious Students",
     "provider": "ONGC",
@@ -666,19 +627,5 @@
     ],
     "deadline": "March 2026",
     "applicationUrl": "https://ongcscholar.org"
-  },
-  {
-    "id": "keep-india-smiling",
-    "name": "Keep India Smiling Foundational Scholarship",
-    "provider": "Colgate-Palmolive (India)",
-    "category": "Vocational/Professional",
-    "amount": "₹30,000 per year",
-    "eligibility": [
-      "Students in Class 11, B.E./B.Tech, BDS, etc.",
-      "Min 75% in Class 12",
-      "Family Income < ₹5 Lakhs"
-    ],
-    "deadline": "Rolling Basis",
-    "applicationUrl": "https://www.colgate.com/en-in/smile-foundation"
   }
 ]

@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   /* ========================================
      CHROMATIC PULSE — Light Theme
      Moving spectral bands over clean white
@@ -58,6 +58,24 @@
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
   --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.1);
   --shadow-glow: 0 0 24px rgba(79, 70, 229, 0.15);
+  
+  /* Monolith 3D System (Legacy/Rigid) */
+  --shadow-monolith: 
+    0 2px 4px rgba(0,0,0,0.05), 
+    0 10px 20px rgba(0,0,0,0.08), 
+    0 25px 50px rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  --radius-monolith: 32px;
+  --extrusion-color: rgba(0, 0, 0, 0.05);
+
+  /* Anti-Gravity Depth System (New Level) */
+  --spatial-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.08), 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+  --depth-layer-1: translateZ(20px);
+  --depth-layer-2: translateZ(50px);
+  --depth-layer-3: translateZ(90px);
+  --depth-layer-4: translateZ(140px);
+  --material-glass: rgba(255, 255, 255, 0.55);
+  --material-blur: blur(25px) saturate(160%);
 
   /* Structure */
   --radius-xs: 4px;
@@ -624,6 +642,37 @@ main {
   100% {
     left: 200%;
   }
+}
+
+/* 3D Monolith Utilities */
+.extrusion-3d {
+  position: relative;
+  border-bottom: 4px solid var(--extrusion-color);
+  border-right: 2px solid var(--extrusion-color);
+  transition: all var(--transition-medium);
+}
+
+.extrusion-3d:active {
+  transform: translate(1px, 2px);
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+}
+
+/* Anti-Gravity Material Utilities */
+.anti-gravity-card {
+  background: var(--material-glass);
+  backdrop-filter: var(--material-blur);
+  -webkit-backdrop-filter: var(--material-blur);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: var(--spatial-shadow);
+  border-radius: var(--radius-xl);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.anti-gravity-card:hover {
+  transform: translateY(-10px) rotateX(1deg);
+  box-shadow: 0 60px 120px -20px rgba(0, 0, 0, 0.12);
 }
 
 .skeleton {

@@ -1,204 +1,189 @@
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
-import { Calendar, ArrowUpRight, Clock, Tag, ExternalLink, AlertCircle } from 'lucide-react';
+import { Calendar, ArrowRight, ShieldCheck, Clock, Download, ExternalLink, Info, Star } from 'lucide-react';
+import { format, differenceInHours } from 'date-fns';
+import GlassPanel from './GlassPanel';
 
-export default function NewsCard({ item, variant = "standard" }) {
-    // Variants: "standard", "featured", "compact"
+export default function NewsCard({ item }) {
+    if (!item) return null;
 
-    const isFeatured = variant === "featured";
-    const isUrgent = item.urgent;
+    const publishDate = new Date(item.date);
+    const hoursSincePublish = differenceInHours(new Date(), publishDate);
+    const isVeryRecent = hoursSincePublish < 24;
+    const formattedDate = format(publishDate, 'MMMM dd, HH:mm');
+
+    const getStatusLabel = () => {
+        if (item.category === 'Results') return { label: 'Result Declared', type: 'success' };
+        if (item.category === 'Admit Cards') return { label: 'Admit Card Out', type: 'warning' };
+        if (item.urgency === 5) return { label: 'Critical Update', type: 'error' };
+        if (isVeryRecent) return { label: 'Just Posted', type: 'info' };
+        return null;
+    };
+
+    const status = getStatusLabel();
 
     return (
-        <article className={`news-card group ${isFeatured ? 'featured' : ''} ${isUrgent ? 'urgent' : ''}`}>
-            {item.image && (
-                <div className="news-image-wrapper">
-                    <img src={item.image} alt={item.title} className="news-image" />
-                    <div className="news-overlay" />
-                </div>
-            )}
-
-            <div className="news-content">
-                <div className="news-meta-top">
-                    <span className={`news-category ${item.category.toLowerCase().replace(" ", "-")}`}>
-                        {isUrgent && <AlertCircle size={12} className="mr-1" />}
-                        {item.category}
-                    </span>
-                    <span className="news-date">
-                        <Clock size={12} className="mr-1" />
-                        {new Date(item.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}
+        <div className="news-card-wrapper transition-all duration-300 hover:-translate-y-1">
+            <GlassPanel className="news-card-panel" variant="primary">
+                {status && (
+                    <div className={`status-badge status-badge--${status.type}`}>
+                        {status.label}
+                    </div>
+                )}
+                
+                <div className="card-header">
+                    <span className="category-kicker">{item.category}</span>
+                    <span className="time-meta">
+                        <Clock size={12} />
+                        {formattedDate}
                     </span>
                 </div>
 
-                <h3 className="news-title">
-                    <Link href={item.url || `/news/${item.id}`} className="hover:text-indigo-600 transition-colors">
-                        {item.title}
-                    </Link>
-                </h3>
-
-                <p className="news-excerpt">{item.summary}</p>
-
-                <div className="news-footer">
-                    <span className="source-tag">{item.source}</span>
-                    <Link href={item.url || `/news/${item.id}`} className="read-more-btn">
-                        Read Story <ArrowUpRight size={16} />
-                    </Link>
+                <div className="card-content">
+                    <h3 className="card-headline">{item.title}</h3>
+                    <p className="card-summary">{item.summary}</p>
                 </div>
-            </div>
+
+                <div className="card-footer">
+                    <div className="source-meta">
+                        <div className={item.isOfficial ? "official-source" : "expert-source"}>
+                            {item.isOfficial ? <ShieldCheck size={14} /> : <Star size={14} />}
+                            <span>{item.authority || (item.isOfficial ? "Official Portal" : "Expert Analysis")}</span>
+                        </div>
+                    </div>
+                    
+                    <a href={item.url} className="action-button" target="_blank" rel="noopener noreferrer">
+                        <span>{item.actionLabel || "View Update"}</span>
+                        <ArrowRight size={16} />
+                    </a>
+                </div>
+            </GlassPanel>
 
             <style jsx>{`
-                .news-card {
-                    background: #ffffff;
-                    border: 1px solid rgba(226, 232, 240, 0.8);
-                    border-radius: 20px;
-                    overflow: hidden;
+                .news-card-wrapper {
+                    height: 100%;
+                }
+
+                :global(.news-card-panel) {
+                    padding: 24px;
                     display: flex;
                     flex-direction: column;
                     height: 100%;
-                    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-                    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
                     position: relative;
                 }
 
-                .news-card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-                    border-color: #6366f1;
-                }
-                
-                .news-card.urgent {
-                    border-left: 4px solid #ef4444;
-                    background: #fffafa;
-                }
-
-                .news-image-wrapper {
-                    position: relative;
-                    height: 220px;
-                    overflow: hidden;
-                }
-                
-                .featured .news-image-wrapper {
-                    height: 400px;
+                .status-badge {
+                    position: absolute;
+                    top: -10px;
+                    right: 20px;
+                    padding: 4px 12px;
+                    border-radius: 100px;
+                    font-size: 0.7rem;
+                    font-weight: 700;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+                    z-index: 5;
                 }
 
-                .news-image {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: transform 0.5s ease;
-                }
+                .status-badge--success { background: #dcfce7; color: #166534; }
+                .status-badge--warning { background: #fef9c3; color: #854d0e; }
+                .status-badge--error { background: #fee2e2; color: #991b1b; }
+                .status-badge--info { background: #e0f2fe; color: #075985; }
 
-                .news-card:hover .news-image {
-                    transform: scale(1.05);
-                }
-
-                .news-content {
-                    padding: 28px;
-                    display: flex;
-                    flex-direction: column;
-                    flex: 1;
-                }
-
-                .news-meta-top {
+                .card-header {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     margin-bottom: 16px;
                 }
 
-                .news-category {
-                    font-size: 0.7rem;
+                .category-kicker {
+                    font-size: 0.65rem;
                     font-weight: 800;
                     text-transform: uppercase;
-                    letter-spacing: 0.05em;
-                    padding: 6px 12px;
-                    border-radius: 8px;
-                    background: #f1f5f9;
-                    color: #475569;
-                    display: flex;
-                    align-items: center;
+                    letter-spacing: 0.1em;
+                    color: var(--color-accent);
                 }
 
-                .news-category.exam-alert { background: #fee2e2; color: #b91c1c; }
-                .news-category.results { background: #ebf8ff; color: #2b6cb0; }
-                .news-category.admissions { background: #f0fdf4; color: #15803d; }
-
-                .news-date {
-                    font-size: 0.8rem;
-                    color: #94a3b8;
+                .time-meta {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    font-size: 0.7rem;
+                    color: var(--color-ink-secondary);
                     font-weight: 600;
-                    display: flex;
-                    align-items: center;
                 }
 
-                .news-title {
-                    font-family: var(--font-display);
-                    font-size: 1.35rem;
-                    font-weight: 800;
-                    line-height: 1.35;
-                    color: #1e293b;
-                    margin-bottom: 12px;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    letter-spacing: -0.02em;
-                }
-                
-                .featured .news-title {
-                    font-size: 2.5rem;
-                    line-height: 1.1;
-                    letter-spacing: -0.03em;
-                }
-
-                .news-excerpt {
-                    font-size: 1rem;
-                    color: #64748b;
-                    line-height: 1.6;
-                    margin-bottom: 24px;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
+                .card-content {
                     flex: 1;
+                    margin-bottom: 24px;
                 }
 
-                .news-footer {
-                    margin-top: auto;
-                    padding-top: 24px;
-                    border-top: 1px solid #f1f5f9;
+                .card-headline {
+                    font-family: var(--font-display);
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    line-height: 1.3;
+                    color: var(--color-ink);
+                    margin: 0 0 12px 0;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                .card-summary {
+                    font-size: 0.9rem;
+                    line-height: 1.6;
+                    color: var(--color-ink-secondary);
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                .card-footer {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    padding-top: 20px;
+                    border-top: 1px solid rgba(0, 0, 0, 0.03);
                 }
-                
-                .source-tag {
+
+                .source-meta {
                     font-size: 0.75rem;
-                    color: #94a3b8;
                     font-weight: 700;
-                    text-transform: uppercase;
                 }
 
-                .read-more-btn {
-                    display: inline-flex;
+                .official-source {
+                    display: flex;
                     align-items: center;
-                    gap: 6px;
-                    font-size: 0.9rem;
-                    font-weight: 700;
-                    color: #4f46e5;
-                    transition: all 0.2s;
-                    padding: 8px 16px;
-                    border-radius: 8px;
-                    background: #eef2ff;
+                    gap: 4px;
+                    color: #10b981;
                 }
 
-                .read-more-btn:hover {
+                .expert-source {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    color: var(--color-accent);
+                }
+
+                .action-button {
+                    display: flex;
+                    align-items: center;
                     gap: 8px;
-                    color: #4338ca;
-                    background: #e0e7ff;
+                    font-size: 0.8rem;
+                    font-weight: 800;
+                    color: var(--color-accent);
+                    text-decoration: none;
+                    transition: all 0.2s;
+                }
+
+                .action-button:hover {
+                    gap: 12px;
                 }
             `}</style>
-        </article>
+        </div>
     );
 }

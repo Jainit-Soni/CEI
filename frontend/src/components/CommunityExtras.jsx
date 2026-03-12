@@ -69,9 +69,9 @@ export default function IntelligencePipeline() {
                   <div className="hub-label">{stage.label}</div>
                   <div className="hub-title-mini">{stage.title}</div>
                 </div>
-                <div className="hub-description-overlay">
-                  <p>{stage.description}</p>
-                </div>
+              </div>
+              <div className="hub-description-overlay">
+                <p>{stage.description}</p>
               </div>
             </div>
           ))}

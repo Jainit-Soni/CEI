@@ -99,11 +99,12 @@ export default function ExamTabs({ exam }) {
     if (!exam) return null;
 
     const tabs = [
-        { id: 'overview', label: 'Briefing' },
-        { id: 'timeline', label: 'Timeline' },
-        { id: 'syllabus', label: 'Intel (Syllabus)' },
-        { id: 'prep', label: 'Training' },
-        { id: 'colleges', label: 'Targets (Colleges)' },
+        { id: 'overview', label: 'Overview' },
+        { id: 'timeline', label: 'Schedule' },
+        { id: 'syllabus', label: 'Syllabus' },
+        { id: 'prep', label: 'Preparation' },
+        { id: 'archives', label: 'Documents' },
+        { id: 'colleges', label: 'Colleges' },
     ];
 
     return (
@@ -129,7 +130,7 @@ export default function ExamTabs({ exam }) {
                     <div className="tab-pane fade-in">
                         <div className="mission-grid-2">
                             <div className="mission-card">
-                                <h3 className="card-header">Mission Profile</h3>
+                                <h3 className="card-header">Exam Profile</h3>
                                 <p className="mission-text">
                                     {exam.name} ({exam.shortName}) is a {exam.level || "national"}-level
                                     entrance exam conducted by {exam.conductingBody}.
@@ -141,7 +142,7 @@ export default function ExamTabs({ exam }) {
                             </div>
 
                             <div className="mission-card">
-                                <h3 className="card-header">Target Parameters</h3>
+                                <h3 className="card-header">Academic Parameters</h3>
                                 {exam.safeScore ? (
                                     <div className="safe-score-box">
                                         <div className="sc-item">
@@ -155,7 +156,7 @@ export default function ExamTabs({ exam }) {
                                         </div>
                                     </div>
                                 ) : (
-                                    <p className="no-data">Intel pending.</p>
+                                    <p className="no-data">Data pending.</p>
                                 )}
                             </div>
 
@@ -188,33 +189,35 @@ export default function ExamTabs({ exam }) {
                 {activeTab === 'timeline' && (
                     <div className="tab-pane fade-in">
                         <div className="mission-card">
-                            <h3 className="card-header">Operation Schedule</h3>
+                            <h3 className="card-header">Official Schedule</h3>
                             {exam.dates ? (
                                 <div className="timeline-stepper">
-                                    <div className="step-item">
-                                        <div className="step-marker"></div>
-                                        <div className="step-content">
-                                            <span className="step-date mono">{exam.dates.registration}</span>
-                                            <span className="step-title">Registration Phase</span>
-                                        </div>
-                                    </div>
-                                    <div className="step-item active">
-                                        <div className="step-marker pulse"></div>
-                                        <div className="step-content">
-                                            <span className="step-date mono">{exam.dates.examWindow}</span>
-                                            <span className="step-title">Execution (Exam) Date</span>
-                                        </div>
-                                    </div>
-                                    <div className="step-item">
-                                        <div className="step-marker"></div>
-                                        <div className="step-content">
-                                            <span className="step-date mono">{exam.dates.result}</span>
-                                            <span className="step-title">Debrief (Result)</span>
-                                        </div>
-                                    </div>
+                                    {[
+                                        { label: "Registration Phase", date: exam.dates.registration },
+                                        { label: "Execution (Exam) Date", date: exam.dates.examWindow },
+                                        { label: "Debrief (Result)", date: exam.dates.result }
+                                    ].filter(s => s.date).map((step, idx) => {
+                                        const isPast = (dateStr) => {
+                                            if (!dateStr) return false;
+                                            const lower = dateStr.toLowerCase();
+                                            if (lower.includes("completed") || lower.includes("declared") || lower.includes("done")) return true;
+                                            const match = dateStr.match(/([A-Za-z]+ \d{1,2}, \d{4})/);
+                                            return match ? new Date(match[1]) < new Date() : false;
+                                        };
+
+                                        return (
+                                            <div key={idx} className={`step-item ${isPast(step.date) ? 'past' : 'active'}`}>
+                                                <div className="step-marker"></div>
+                                                <div className="step-content">
+                                                    <span className="step-date mono">{step.date}</span>
+                                                    <span className="step-title">{step.label}</span>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             ) : (
-                                <p>Dates classified.</p>
+                                <p className="no-data">Operational dates classified or pending.</p>
                             )}
                         </div>
                     </div>
@@ -227,24 +230,41 @@ export default function ExamTabs({ exam }) {
                             <div className="mission-card">
                                 <h3 className="card-header">Exam Pattern</h3>
                                 {exam.pattern && exam.pattern.length > 0 ? (
-                                    <ul className="custom-list">
-                                        {exam.pattern.map((p, i) => <li key={i}>{p}</li>)}
+                                    <ul className="custom-list mission-list">
+                                        {exam.pattern.map((p, i) => <li key={i} className="mono-text">{p}</li>)}
                                     </ul>
                                 ) : (
-                                    <p className="no-data">Pattern details not available yet.</p>
+                                    <p className="no-data">Pattern details unavailable.</p>
                                 )}
-                            </div>
-                            {/* Only show syllabus card if syllabus is genuinely different from pattern */}
-                            {exam.syllabus && exam.syllabus.length > 0 && JSON.stringify(exam.syllabus) !== JSON.stringify(exam.pattern) && (
-                                <div className="mission-card">
-                                    <h3 className="card-header">Syllabus Sections</h3>
-                                    <div className="syllabus-tags">
-                                        {exam.syllabus.map(s => (
-                                            <span key={s} className="mission-chip">{s}</span>
-                                        ))}
+                                <div className="marking-summary mt-4" style={{ marginTop: '1.5rem', borderTop: '1px dashed rgba(14, 165, 233, 0.2)', paddingTop: '1rem' }}>
+                                    <div className="marking-grid-mini">
+                                        <div className="mark-item positive">
+                                            <span className="mark-val">+{exam.markingScheme?.correct || "4"}</span>
+                                            <span className="mark-desc">Correct</span>
+                                        </div>
+                                        <div className="mark-item negative">
+                                            <span className="mark-val">-{exam.markingScheme?.incorrect || "1"}</span>
+                                            <span className="mark-desc">Incorrect</span>
+                                        </div>
                                     </div>
                                 </div>
-                            )}
+                            </div>
+                            
+                            <div className="mission-card">
+                                <h3 className="card-header">Core Syllabus</h3>
+                                <div className="syllabus-grid">
+                                    {exam.syllabus?.length > 0 ? (
+                                        exam.syllabus.map((s, i) => (
+                                            <div key={i} className="sector-tag">
+                                                <span className="sector-icon">▣</span>
+                                                <span className="sector-name">{s}</span>
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <span className="no-data">Specific modules not mapped yet.</span>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 )}
@@ -261,38 +281,56 @@ export default function ExamTabs({ exam }) {
                                             <li key={i}><strong>{r.type ? r.type + ": " : ""}</strong>{r.title}</li>
                                         ))}
                                         {exam.prepResources.length > 5 && (
-                                            <li className="more-items">+{exam.prepResources.length - 5} more resources availabe in full guide</li>
+                                            <li className="more-items">+{exam.prepResources.length - 5} more modules available</li>
                                         )}
                                     </ul>
                                 </div>
                             ) : (
                                 <div className="mission-card">
-                                    <h3 className="card-header">Preparation Resources</h3>
-                                    <p className="no-data">Exam-specific preparation resources are being curated. Check back soon.</p>
+                                    <h3 className="card-header">Training Resources</h3>
+                                    <p className="no-data">Training modules are being decrypted. Check back soon.</p>
                                 </div>
                             )}
-                            {exam.pastPapers && exam.pastPapers.length > 0 && (
-                                <div className="mission-card">
-                                    <h3 className="card-header">Past Papers & Resources</h3>
-                                    <ul className="check-list">
-                                        {exam.pastPapers.map((p, i) => (
-                                            <li key={i}>
-                                                <a href={p.url} target="_blank" rel="noopener noreferrer" className="mini-college-card" style={{ display: 'inline-block', textDecoration: 'none' }}>
-                                                    {p.label} ↗
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-                            {exam.officialUrl && (
-                                <div className="mission-card">
-                                    <h3 className="card-header">Official Resources</h3>
-                                    <a href={exam.officialUrl} target="_blank" rel="noopener noreferrer" className="mini-college-card" style={{ display: 'inline-block', textDecoration: 'none' }}>
-                                        Visit Official Website ↗
+                            <div className="mission-card">
+                                <h3 className="card-header">Exam Strategy</h3>
+                                <p className="mission-text">
+                                    Analyze the official syllabus and pattern in the <strong>Syllabus</strong> tab to build your strategy. 
+                                    Target the <strong>Safe Target</strong> scores outlined in the overview for a successful result.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* 4.5 ARCHIVES TAB */}
+                {activeTab === 'archives' && (
+                    <div className="tab-pane fade-in">
+                        <div className="mission-card">
+                            <h3 className="card-header">Official Resource Archive</h3>
+                            <div className="archives-vault-grid">
+                                {(exam.pastPapers && exam.pastPapers.length > 0) ? (
+                                    exam.pastPapers.map((p, i) => (
+                                        <a href={p.url} key={i} target="_blank" rel="noopener noreferrer" className="vault-item">
+                                            <div className="vault-icon">📄</div>
+                                            <div className="vault-info">
+                                                <span className="vault-label">{p.label}</span>
+                                                <span className="vault-meta">Official Archive ↗</span>
+                                            </div>
+                                        </a>
+                                    ))
+                                ) : (
+                                    <p className="no-data">No official archives available for this node yet.</p>
+                                )}
+                                {exam.officialUrl && (
+                                    <a href={exam.officialUrl} target="_blank" rel="noopener noreferrer" className="vault-item official-portal">
+                                        <div className="vault-icon">🌐</div>
+                                        <div className="vault-info">
+                                            <span className="vault-label">Official Portal</span>
+                                            <span className="vault-meta">{exam.conductingBody || "NTA"} ↗</span>
+                                        </div>
                                     </a>
-                                </div>
-                            )}
+                                )}
+                            </div>
                         </div>
                     </div>
                 )}
@@ -303,7 +341,7 @@ export default function ExamTabs({ exam }) {
                         <div className="mission-card">
                             <div className="card-header-flex" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.5rem' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', flexWrap: 'wrap', gap: '1rem' }}>
-                                    <h3 className="card-header" style={{ margin: 0 }}>Target Institutes ({totalColleges} Accepting {exam.shortName})</h3>
+                                    <h3 className="card-header" style={{ margin: 0 }}>Accepting Institutions ({totalColleges} Colleges)</h3>
                                     <div className="exam-college-search" style={{ position: 'relative', minWidth: '250px', flex: '1', maxWidth: '400px' }}>
                                         <input
                                             type="text"

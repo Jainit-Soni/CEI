@@ -154,10 +154,16 @@
    ========================================================== */
 
 .nexus-home-section {
-  padding: 120px 0;
-  background: transparent;
+  padding: 80px 0;
+  background: transparent; /* Full transparency for global chromatic bands */
+  background-image: 
+      radial-gradient(at 50% 100%, rgba(255, 255, 255, 0.03) 0px, transparent 50%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 80px 80px, 80px 80px;
   position: relative;
   z-index: 10;
+  transform-style: preserve-3d;
 }
 
 .nexus-home-section .home-section-inner {
@@ -167,7 +173,7 @@
 .nexus-section-header {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 80px auto;
+  margin: 0 auto 48px auto; /* Tighter padding into grid */
 }
 
 .nexus-section-header h2 {
@@ -197,22 +203,22 @@
   text-transform: uppercase;
 }
 
-/* Nexus Glass Card (Light) */
+/* Nexus Glass Card (Anti-Gravity Variant) */
 .nexus-glass-card {
-  background: rgba(255, 255, 255, 0.4) !important;
-  backdrop-filter: blur(40px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(40px) saturate(200%) !important;
+  background: var(--material-glass) !important;
+  backdrop-filter: var(--material-blur) !important;
+  -webkit-backdrop-filter: var(--material-blur) !important;
   border: 1px solid rgba(255, 255, 255, 0.6) !important;
-  border-radius: 36px !important;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+  border-radius: 40px !important;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.8s ease !important;
+  box-shadow: var(--spatial-shadow) !important;
+  transform-style: preserve-3d;
 }
 
 .nexus-glass-card:hover {
-  background: rgba(255, 255, 255, 0.8) !important;
-  border-color: rgba(99, 102, 241, 0.2) !important;
-  transform: translateY(-8px) scale(1.02) !important;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  transform: translateY(-12px) rotateX(2deg) rotateY(1deg) !important;
+  box-shadow: 0 60px 120px -20px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Specific Grid Overrides for Nexus */

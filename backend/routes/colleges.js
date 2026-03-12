@@ -1,4 +1,4 @@
-﻿const express = require("express");
+const express = require("express");
 const College = require("../models/CollegeSchema");
 const cache = require("../services/cache");
 const rankingCache = require("../services/rankingCacheBuilder");
@@ -450,7 +450,10 @@ router.get("/sitemap-batch", async (req, res) => {
       .limit(parseInt(limit))
       .lean();
 
-    await cache.set(key, colleges, 86400); // 24 hour cache
+    // Only cache in Redis if it's NOT development to save quota
+    if (process.env.NODE_ENV !== 'development' || process.env.VERCEL) {
+        await cache.set(key, colleges, 86400); // 24 hour cache
+    }
     res.json(colleges);
   } catch (error) {
     console.error("Error in sitemap-batch:", error);

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * services/dataStore.js — CEI Data Layer v3.0
  * ============================================
  * Blue-Green Cache Architecture:
@@ -206,85 +206,92 @@ async function initializeCache() {
   }
 
   // ── Distributed lock — prevent thundering herd ──
-  const lockAcquired = await redis.set(HYDRATION_LOCK_KEY, "1", "NX", "EX", TTL.HYDRATE_LOCK);
-  if (!lockAcquired) {
-    logger.info && logger.info("[dataStore] Hydration already in progress (lock held). Waiting for active key...");
-    // Poll until the active pointer appears (another instance is hydrating)
-    for (let i = 0; i < 30; i++) {
-      await new Promise(r => setTimeout(r, 500));
-      const activeKey = await redis.get(ACTIVE_POINTER_KEY);
-      if (activeKey) {
-        logger.info && logger.info("[dataStore] Active key appeared. Proceeding.");
-        return;
+  try {
+    const lockAcquired = await redis.set(HYDRATION_LOCK_KEY, "1", "NX", "EX", TTL.HYDRATE_LOCK);
+    if (!lockAcquired) {
+      logger.info && logger.info("[dataStore] Hydration already in progress (lock held). Waiting for active key...");
+      // Poll until the active pointer appears (another instance is hydrating)
+      for (let i = 0; i < 30; i++) {
+        await new Promise(r => setTimeout(r, 500));
+        const activeKey = await redis.get(ACTIVE_POINTER_KEY);
+        if (activeKey) {
+          logger.info && logger.info("[dataStore] Active key appeared. Proceeding.");
+          return;
+        }
       }
+      logger.warn && logger.warn("[dataStore] Timed out waiting for hydration. Falling back to disk.");
+      if (!LOCAL_CACHE) {
+        LOCAL_CACHE = loadStateCollegeFiles();
+        preComputeGlobalData();
+      }
+      return;
     }
-    logger.warn && logger.warn("[dataStore] Timed out waiting for hydration. Falling back to disk.");
+
+    try {
+      // 1. Load + deduplicate from state JSON files (Premium/Manual data)
+      const jsonColleges = loadStateCollegeFiles();
+
+      // 2. Load from MongoDB (Full 68k dataset)
+      logger.info && logger.info("[dataStore] Fetching full dataset from MongoDB...");
+      const mongoColleges = await College.find({}).lean();
+      logger.info && logger.info("[dataStore] Fetched " + mongoColleges.length + " colleges from MongoDB.");
+
+      // ── HYBRID MERGE ──
+      const masterMap = new Map();
+      mongoColleges.forEach(c => masterMap.set(c.id, c));
+      jsonColleges.forEach(c => {
+        const existing = masterMap.get(c.id);
+        masterMap.set(c.id, existing ? { ...existing, ...c } : c);
+      });
+
+      // 3. Apply admin overrides
+      const updates = loadAdminUpdates();
+      const deletedSet = new Set(updates.deleted);
+      const finalCollegesList = Array.from(masterMap.values())
+        .filter(c => !deletedSet.has(c.id))
+        .map(c => {
+          const adminEdit = updates.added.find(a => a.id === c.id);
+          return adminEdit ? { ...c, ...adminEdit } : c;
+        });
+
+      updates.added.forEach(c => {
+        if (!masterMap.has(c.id)) finalCollegesList.push(c);
+      });
+
+      LOCAL_CACHE = finalCollegesList;
+      LOCAL_LAST_UPDATE = Date.now();
+
+      const exams = loadJson("exams.json") || [];
+      const activeKey = await hydrateGreen(redis, LOCAL_CACHE, exams);
+      
+      logger.info && logger.info("[dataStore] ✅ Cache hydration complete", {
+        colleges: LOCAL_CACHE.length,
+        exams: exams.length,
+        activeKey
+      });
+
+      preComputeGlobalData();
+    } catch (innerErr) {
+      if (innerErr.message.includes("quota exceeded") || innerErr.message.includes("limit exceeded")) {
+        logger.warn && logger.warn("[dataStore] Hydration aborted: Redis Quota Exceeded. Falling back to L1/L3.");
+      } else {
+        logger.error && logger.error("[dataStore] Hydration failed", { error: innerErr.message });
+      }
+      if (!LOCAL_CACHE) {
+        LOCAL_CACHE = loadStateCollegeFiles();
+        preComputeGlobalData();
+      }
+    } finally {
+      await redis.del(HYDRATION_LOCK_KEY).catch(() => { });
+    }
+  } catch (err) {
+    if (!err.message.includes("quota exceeded") && !err.message.includes("limit exceeded")) {
+      logger.error && logger.error("[dataStore] initializeCache fatal error", { error: err.message });
+    }
     if (!LOCAL_CACHE) {
       LOCAL_CACHE = loadStateCollegeFiles();
       preComputeGlobalData();
     }
-    return;
-  }
-
-  try {
-    // 1. Load + deduplicate from state JSON files (Premium/Manual data)
-    const jsonColleges = loadStateCollegeFiles();
-
-    // 2. Load from MongoDB (Full 68k dataset)
-    logger.info && logger.info("[dataStore] Fetching full dataset from MongoDB...");
-    const mongoColleges = await College.find({}).lean();
-    logger.info && logger.info("[dataStore] Fetched " + mongoColleges.length + " colleges from MongoDB.");
-
-    // ── HYBRID MERGE ──
-    // We use a Map to merge. JSON data (curated/premium) overwrites MongoDB data for the same ID.
-    const masterMap = new Map();
-
-    // First populate with MongoDB data
-    mongoColleges.forEach(c => masterMap.set(c.id, c));
-
-    // Then overwrite/add with JSON data (higher quality)
-    jsonColleges.forEach(c => {
-      const existing = masterMap.get(c.id);
-      masterMap.set(c.id, existing ? { ...existing, ...c } : c);
-    });
-
-    // 3. Apply admin overrides (additions/deletions)
-    const updates = loadAdminUpdates();
-    const deletedSet = new Set(updates.deleted);
-
-    // Filter deletions and merge additions
-    const finalCollegesList = Array.from(masterMap.values())
-      .filter(c => !deletedSet.has(c.id))
-      .map(c => {
-        const adminEdit = updates.added.find(a => a.id === c.id);
-        return adminEdit ? { ...c, ...adminEdit } : c;
-      });
-
-    // Ensure manual additions that aren't in Map yet are included
-    updates.added.forEach(c => {
-      if (!masterMap.has(c.id)) finalCollegesList.push(c);
-    });
-
-    // Set L1 immediately so requests don't wait for Redis pipeline
-    LOCAL_CACHE = finalCollegesList;
-    LOCAL_LAST_UPDATE = Date.now();
-
-    // Load exams
-    const exams = loadJson("exams.json") || [];
-
-    // Perform blue-green hydration (write to GREEN, swap pointer)
-    const activeKey = await hydrateGreen(redis, LOCAL_CACHE, exams);
-
-    logger.info && logger.info("[dataStore] ✅ Cache hydration complete", {
-      colleges: LOCAL_CACHE.length,
-      exams: exams.length,
-      activeKey
-    });
-
-    preComputeGlobalData();
-  } finally {
-    // Always release the lock
-    await redis.del(HYDRATION_LOCK_KEY);
   }
 }
 

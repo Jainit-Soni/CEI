@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import Button from "./Button";
 import AuthModal from "./AuthModal";
@@ -103,32 +104,6 @@ export default function Header() {
 
           {/* RIGHT: Actions */}
           <div className="header-right">
-            {/* Global Search */}
-            <div className={`global-search-container ${isSearchOpen ? "open" : ""}`}>
-              {isSearchOpen ? (
-                <div className="search-overlay-wrapper">
-                  <SearchWithSuggestions
-                    placeholder="Search colleges, exams..."
-                    className="header-search-bar"
-                    onSearch={(q) => {
-                      setIsSearchOpen(false);
-                      router.push(`/colleges?q=${encodeURIComponent(q)}`);
-                    }}
-                  />
-                  <button className="search-close-icon" onClick={() => setIsSearchOpen(false)}>
-                    <X size={18} />
-                  </button>
-                </div>
-              ) : (
-                <button
-                  className="search-toggle-btn"
-                  onClick={() => setIsSearchOpen(true)}
-                  aria-label="Open Search"
-                >
-                  <Search size={20} />
-                </button>
-              )}
-            </div>
 
             {/* Score Button (Desktop) */}
             <button
@@ -183,7 +158,7 @@ export default function Header() {
               <div className="mobile-user-card">
                 <div className="mobile-user-avatar">
                   {user.photoURL ? (
-                    <img src={user.photoURL} alt="Profile" />
+                    <Image src={user.photoURL} alt="Profile" width={50} height={50} className="rounded-full" />
                   ) : (
                     <User size={28} className="text-blue-500" />
                   )}

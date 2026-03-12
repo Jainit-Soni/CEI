@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "./animations/ScrollReveal";
 import GlassPanel from "./GlassPanel";
 import "./HomeSections.css";
 
@@ -27,7 +28,9 @@ export default function WhyCei() {
       <div className="home-section-inner">
         <header className="nexus-section-header">
           <span className="nexus-kicker fadeIn">WHY_CEI_EXISTS</span>
-          <h2 className="fadeIn delay-1">Because “just Google it” is not a <span className="serif-accent">decision system</span>.</h2>
+          <ScrollReveal as="h2" containerClassName="fadeIn delay-1" baseRotation={1} blurStrength={8}>
+            Because “just Google it” is not a <span className="serif-accent">decision system</span>.
+          </ScrollReveal>
           <p className="fadeIn delay-1">
             CEI is built for the moment when you stop collecting links and start asking:
             “What should I actually do?”
@@ -39,7 +42,7 @@ export default function WhyCei() {
             <GlassPanel
               key={p.id}
               variant="default"
-              className={`nexus-glass-card nexus-why-cei-card fadeIn delay-${index + 2}`}
+              className={`nexus-glass-card nexus-why-cei-card anti-gravity-card fadeIn delay-${index + 2}`}
             >
               <h3>{p.title}</h3>
               <p>{p.body}</p>

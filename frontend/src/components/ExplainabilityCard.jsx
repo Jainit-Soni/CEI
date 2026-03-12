@@ -179,41 +179,6 @@ export default function ExplainabilityCard({ college }) {
             </div>
 
 
-            {/* ── 3. Data Transparency ───────────────────────────────── */}
-            {methodology && (
-                <div className="explain-anchor-section">
-                    <div className="explain-section-label">Audit & Transparency</div>
-                    <div className="explain-anchor">
-                        <div className="anchor-intro">
-                            This score is cryptographically hashed and version-controlled. Any change to the formula is documented in our public ledger.
-                        </div>
-                        <div className="anchor-row">
-                            <span className="anchor-key">Model</span>
-                            <span className="anchor-val">
-                                {methodology.versionId}
-                                <Link
-                                    href={`/transparency/version/${methodology.versionId}`}
-                                    className="anchor-link"
-                                    aria-label="Audit scoring version"
-                                >
-                                    ↗ Audit
-                                </Link>
-                            </span>
-                        </div>
-                        <div className="anchor-row">
-                            <span className="anchor-key">Last Audit</span>
-                            <span className="anchor-val">
-                                {methodology.activatedAt
-                                    ? new Date(methodology.activatedAt).toLocaleDateString("en-IN", {
-                                        day: "numeric", month: "long", year: "numeric"
-                                    })
-                                    : "—"
-                                }
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            )}
         </div>
     );
 }

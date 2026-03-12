@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -22,9 +22,9 @@ export default function Footer() {
               The intelligence layer for your academic future. Verified data, zero noise.
             </p>
             <div className="footer-social-links">
-              <a href="#" className="social-icon" aria-label="Twitter"><Twitter size={20} /></a>
-              <a href="#" className="social-icon" aria-label="LinkedIn"><Linkedin size={20} /></a>
-              <a href="#" className="social-icon" aria-label="Instagram"><Instagram size={20} /></a>
+              <a href="#" className="social-icon" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><Twitter size={20} /></a>
+              <a href="#" className="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
+              <a href="#" className="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
             </div>
           </div>
 

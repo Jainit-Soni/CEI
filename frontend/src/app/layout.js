@@ -10,6 +10,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Outfit, Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import PageLoading from "@/components/PageLoading";
+import GlobalLinkHandler from "@/components/GlobalLinkHandler";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -141,6 +142,9 @@ export default function RootLayout({ children }) {
 
               {/* Universal Top-Level Loader (Light Theme) */}
               <PageLoading />
+
+              {/* Strict External Link Enforcement */}
+              <GlobalLinkHandler />
 
               {/* Universal Header */}
               <Header />
