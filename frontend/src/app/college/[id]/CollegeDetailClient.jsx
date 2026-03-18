@@ -7,32 +7,78 @@ import Button from "@/components/Button";
 import EmptyState from "@/components/EmptyState";
 import { DetailSkeleton } from "@/components/Skeleton";
 import GlassPanel from "@/components/GlassPanel";
-import CollegeHero from "@/components/CollegeHero";
-import CollegeTabs from "@/components/CollegeTabs";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import PrestigeDetailLayout from "@/components/PrestigeDetailLayout";
+import TacticalHUD from "@/components/TacticalHUD";
+import PrestigeHero from "@/components/PrestigeHero";
+import NarrativeOverview from "@/components/NarrativeOverview";
+import NarrativeFoundation from "@/components/NarrativeFoundation";
+import NarrativeIntel from "@/components/NarrativeIntel";
+import NarrativeCampus from "@/components/NarrativeCampus";
+import NarrativePedigree from "@/components/NarrativePedigree";
+import NarrativeGeography from "@/components/NarrativeGeography";
+import NarrativeBranches from "@/components/NarrativeBranches";
+import NarrativeVault from "@/components/NarrativeVault";
+import NarrativeEdge from "@/components/NarrativeEdge";
+import NarrativeSentiment from "@/components/NarrativeSentiment";
+import NarrativeGateway from "@/components/NarrativeGateway";
+import PrestigeIntelligenceTabs from "@/components/PrestigeIntelligenceTabs";
+import IntelligenceRadar from "@/components/IntelligenceRadar";
+import ROICalculator from "@/components/ROICalculator";
+
+import { useAuth } from "@/lib/AuthContext";
 
 export default function CollegeDetailClient({ id, initialData }) {
+    const { user } = useAuth();
     const [college, setCollege] = useState(initialData);
     const [isLoading, setIsLoading] = useState(!initialData);
     const [error, setError] = useState(null);
+    const [activeTab, setActiveTab] = useState("overview");
 
-    // Only fetch if no initialData provided (fallback)
+    const tabs = [
+        { id: "overview", label: "Overview" },
+        { id: "courses", label: "Courses Offered" },
+        { id: "seats", label: "Seats/Intake" },
+        { id: "cutoffs", label: "Cut offs" },
+        { id: "ceiscore", label: "CEI Score" },
+        { id: "roi", label: "ROI" },
+        { id: "reviews", label: "Reviews" },
+        { id: "report", label: "Report" }
+    ];
+
+    // Load data with personality injection
     useEffect(() => {
-        if (initialData) return;
-
         const load = async () => {
+            console.log(`[CEI][UI][detail] Mounting detail for: ${id}`);
             try {
+                if (initialData && !user) {
+                    console.log(`[CEI][UI][detail] Using hydrated initialData`);
+                    setCollege(initialData);
+                    setIsLoading(false);
+                    return;
+                }
+
+                setIsLoading(true);
                 setError(null);
-                const data = await fetchCollege(id);
-                setCollege(data);
+                const data = await fetchCollege(id, user?.uid);
+                
+                if (!data) {
+                    console.warn(`[CEI][UI][detail] No data returned for ${id}`);
+                    setError("College intelligence not found in current sector.");
+                } else {
+                    console.log(`[CEI][UI][detail] Data resolved: ${data.name}`);
+                    setCollege(data);
+                }
             } catch (err) {
-                console.error("Failed to load college", err);
-                setError("Failed to load college details.");
+                console.error("[CEI][UI][detail] Load failed:", err);
+                setError("Strategic connection to CEI data engine failed.");
             } finally {
                 setIsLoading(false);
             }
         };
         load();
-    }, [id, initialData]);
+    }, [id, initialData, user?.uid]);
 
     if (isLoading) {
         return (
@@ -66,16 +112,103 @@ export default function CollegeDetailClient({ id, initialData }) {
     }
 
     return (
-        <div className="college-detail-page">
-            {/* 1. Cinematic Hero (Full Width) */}
-            <CollegeHero college={college} />
+        <PrestigeDetailLayout college={college}>
+            {/* 0. Tactical Intelligence HUD */}
+            <TacticalHUD college={college} />
 
-            <Container>
-                {/* 2. Tabbed Content Area */}
-                <div className="college-content-container">
-                    <CollegeTabs college={college} />
-                </div>
-            </Container>
-        </div>
+            {/* 1. Cinematic Aura (Hero) - PERSISTENT */}
+            <PrestigeHero college={college} />
+
+            {/* 2. Tactical Intelligence Matrix (Tabs) */}
+            <PrestigeIntelligenceTabs 
+                tabs={tabs} 
+                activeTab={activeTab} 
+                onTabChange={setActiveTab} 
+            />
+
+            {/* 3. Dynamic Tab Viewport */}
+            <div className="prestige-tab-viewport">
+                {activeTab === "overview" && (
+                    <div className="tab-pane fade-in">
+                        <NarrativeOverview college={college} />
+                        <NarrativeFoundation college={college} />
+                        <NarrativeGeography college={college} />
+                        <div className="prestige-section">
+                            <div className="section-container">
+                                <IntelligenceRadar college={college} />
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {activeTab === "courses" && (
+                    <div className="tab-pane fade-in">
+                        <NarrativeBranches college={college} />
+                    </div>
+                )}
+
+                {activeTab === "seats" && (
+                    <div className="tab-pane fade-in">
+                        <NarrativeCampus college={college} />
+                    </div>
+                )}
+
+                {activeTab === "cutoffs" && (
+                    <div className="tab-pane fade-in">
+                        <NarrativeGateway collegeId={college.id} />
+                    </div>
+                )}
+
+                {activeTab === "ceiscore" && (
+                    <div className="tab-pane fade-in">
+                        <NarrativeIntel college={college} />
+                        <NarrativePedigree college={college} />
+                    </div>
+                )}
+
+                {activeTab === "roi" && (
+                    <div className="tab-pane fade-in">
+                        {/* 1. Standard ROI Narrative Content */}
+                        <NarrativeVault collegeId={college.id} />
+                        <NarrativeEdge college={college} />
+                        
+                        {/* 2. Embedded Interactive True ROI Simulator */}
+                        <div className="prestige-section">
+                            <Container>
+                                <ROICalculator 
+                                    title={`Financial ROI Simulation: ${college.name}`}
+                                    initialData={{
+                                        tuition: college.fees?.[0]?.amount || 800000,
+                                        avgPackage: (college.placements?.[0]?.value * 100000) || 1200000
+                                    }}
+                                />
+                            </Container>
+                        </div>
+                    </div>
+                )}
+
+                {activeTab === "reviews" && (
+                    <div className="tab-pane fade-in">
+                        <NarrativeSentiment college={college} />
+                    </div>
+                )}
+
+                {activeTab === "report" && (
+                    <div className="tab-pane fade-in">
+                        <div className="prestige-section">
+                            <Container>
+                                <GlassPanel variant="strong" className="report-alert-panel">
+                                    <h3 className="prestige-heading">Report Data Discrepancy</h3>
+                                    <p className="prestige-body-text">
+                                        Help us maintain the integrity of CEI Intelligence. If you've found an inaccuracy in cutoffs, fees, or placements, please flag it for our technical auditors.
+                                    </p>
+                                    <Button className="mt-6">Open Audit Ticket</Button>
+                                </GlassPanel>
+                            </Container>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </PrestigeDetailLayout>
     );
 }

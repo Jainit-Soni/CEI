@@ -1,0 +1,218 @@
+.prestige-hero {
+  height: 80vh; 
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.hero-bg-layer.prestige-light-mesh {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08), transparent 40%),
+              radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 40%),
+              radial-gradient(circle at 50% 80%, rgba(56, 189, 248, 0.05), transparent 50%),
+              var(--color-bg);
+  z-index: 1;
+  transition: transform 0.1s linear;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.hero-overlay.glass-light {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.6) 40%,
+    rgba(255, 255, 255, 0.9) 70%,
+    var(--color-bg) 100%
+  );
+  z-index: 2;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 10;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 160px 40px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* BREADCRUMBS */
+.hero-breadcrumbs {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 48px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(15, 23, 42, 0.4);
+}
+
+.crumb.active {
+  color: var(--color-accent);
+}
+
+/* TRUST PILLS */
+.hero-trust-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.trust-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.trust-pill.verified {
+  border-color: rgba(99, 102, 241, 0.2);
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.trust-pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 850;
+  line-height: 1.05;
+  margin-bottom: 32px;
+  max-width: 900px;
+  letter-spacing: -0.04em;
+}
+
+/* SCORE PILL */
+.hero-score-pill {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 16px 32px;
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+}
+
+.score-label {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  opacity: 0.8;
+}
+
+.score-value {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: var(--font-display);
+  color: var(--color-ink);
+}
+
+.hero-meta-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+  color: var(--color-ink-secondary);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero-score-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(79, 70, 229, 0.05);
+  border: 1px solid rgba(79, 70, 229, 0.15);
+  padding: 6px 16px;
+  border-radius: 99px;
+  margin-left: 8px;
+}
+
+.badge-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6rem;
+  color: var(--color-accent);
+  letter-spacing: 0.15em;
+  font-weight: 800;
+}
+
+.badge-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-ink);
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-ink-muted);
+  opacity: 0.6;
+}
+
+.hint-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.hint-icon {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-8px);}
+  60% {transform: translateY(-4px);}
+}
