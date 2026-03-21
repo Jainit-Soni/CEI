@@ -1,0 +1,53 @@
+.truth-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.tc-icon {
+    font-size: 0.85rem;
+}
+
+/* Evaluated: Strong but calm green */
+.tc-evaluated {
+    background: rgba(16, 185, 129, 0.08);
+    color: #059669;
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+/* Stale: Muted Amber */
+.tc-stale {
+    background: rgba(245, 158, 11, 0.08);
+    color: #d97706;
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+/* Pending: Blue */
+.tc-pending {
+    background: rgba(59, 130, 246, 0.08);
+    color: #2563eb;
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Conflict: Red/Warning */
+.tc-conflict {
+    background: rgba(239, 68, 68, 0.08);
+    color: #dc2626;
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+/* Unavailable: Grey */
+.tc-unavailable {
+    background: rgba(148, 163, 184, 0.08);
+    color: #64748b;
+    border-color: rgba(148, 163, 184, 0.2);
+}

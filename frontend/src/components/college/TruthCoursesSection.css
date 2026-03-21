@@ -1,0 +1,134 @@
+.truth-courses-section {
+    padding: 0;
+}
+
+/* ── INTEL STRIP V5 ── */
+.courses-intel-strip {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 40px;
+    padding: 0 8px;
+}
+
+.cis-item {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+}
+
+.cis-val {
+    font-size: 2.5rem;
+    font-weight: 950;
+    color: #6366f1;
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.cis-lab {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* ── PROGRAM CATALOG V5 ── */
+.courses-catalog-v4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.course-card-v4 {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.course-card-v4:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 20px 40px -20px rgba(99, 102, 241, 0.15);
+}
+
+.cc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.cc-title {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.cc-degree {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #6366f1;
+    background: rgba(99, 102, 241, 0.08);
+    padding: 2px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.cc-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cc-spec {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cc-label {
+    font-size: 0.6rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.cc-value {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+}
+
+.cc-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.cc-tag {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #94a3b8;
+    background: #f8fafc;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .courses-catalog-v4 { grid-template-columns: 1fr; }
+    .cis-val { font-size: 2rem; }
+}
