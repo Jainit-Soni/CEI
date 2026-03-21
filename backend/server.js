@@ -196,9 +196,17 @@ app.use(apiKeyAuth); // Per-key rate limiting on top of IP limiting
 app.get("/api/health", async (req, res) => {
   const { getRedisStatus } = require("./services/dataStore");
   const cacheStatus = await getRedisStatus().catch(() => ({ status: "error" }));
+  const mongoose = require("mongoose");
+  
   res.json({
     status: "ok",
     time: new Date().toISOString(),
+    database: {
+      status: mongoose.connection.readyState === 1 ? "connected" : "disconnected",
+      state: mongoose.connection.readyState, // 0: disconnected, 1: connected, 2: connecting, 3: disconnecting
+      host: mongoose.connection.host,
+      name: mongoose.connection.name
+    },
     cache: cacheStatus
   });
 });
