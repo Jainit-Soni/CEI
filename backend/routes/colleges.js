@@ -27,8 +27,16 @@ const normalizeLocation = (loc) => {
 
 // Helper to construct MongoDB filter query
 const buildCollegeQuery = (reqQuery) => {
-  const { state, district, q, tier, course, exam, isPremium } = reqQuery;
-  const query = {};
+  const { state, district, q, tier, course, exam, isPremium, all } = reqQuery;
+  
+  // Default to only verified colleges to maintain 12k parity with old system
+  const query = { verificationStatus: 'VERIFIED' };
+  
+  // Explicitly allow searching all colleges if needed (e.g. for admin/analytics)
+  if (all === 'true') {
+      delete query.verificationStatus;
+  }
+
   const andConditions = [];
 
   if (isPremium) {
