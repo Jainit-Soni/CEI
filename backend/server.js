@@ -1,11 +1,11 @@
 require('dotenv').config({ path: require('path').resolve(__dirname, '.env.local') });
 
-// ── 1. Lock Environment Validation at Startup ─────────────────────────────
+// --- 1. Lock Environment Validation at Startup ---
+// Only strictly blockade the core system if DB or JWT is missing.
+// Firebase and Backup keys are handled gracefully by individual routes.
 const requiredEnv = [
   "JWT_SECRET",
-  "BACKUP_ENCRYPTION_KEY",
-  "MONGODB_URI",
-  "FIREBASE_SERVICE_ACCOUNT_KEY"
+  "MONGODB_URI"
 ];
 
 const missingEnv = requiredEnv.filter(key => !process.env[key]);

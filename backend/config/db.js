@@ -42,8 +42,9 @@ const connectDB = async () => {
 
         console.log(`MongoDB Connected: ${conn.connection.host}/${conn.connection.name}`);
     } catch (error) {
-        console.error(`Error connecting to MongoDB: ${error.message}`);
-        process.exit(1);
+        console.error(`❌ [DB] Connection failure: ${error.message}`);
+        // Do not process.exit(1) in production/Vercel to avoid FUNCTION_INVOCATION_FAILED.
+        // The server.js maintenance middleware will handle the error.
     }
 };
 

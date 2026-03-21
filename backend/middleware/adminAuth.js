@@ -54,9 +54,28 @@ function getFirebaseApp() {
             Buffer.from(serviceAccountRaw, 'base64').toString('utf8')
         );
 
-        // Critical fix for private_key newline formatting
+        // Critical fix for private_key newline formatting & ASN.1 cleanup
         if (serviceAccount.private_key && typeof serviceAccount.private_key === 'string') {
-            serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
+            let pk = serviceAccount.private_key;
+            
+            // 1. Convert literal \n to real newlines
+            pk = pk.replace(/\\n/g, '\n');
+            
+            // 2. Remove any carriage returns
+            pk = pk.replace(/\r/g, '');
+            
+            // 3. Reformat with strict 64-char lines to ensure max compatibility
+            const header = "-----BEGIN PRIVATE KEY-----";
+            const footer = "-----END PRIVATE KEY-----";
+            let body = pk.replace(header, "").replace(footer, "").replace(/\s/g, "");
+            
+            // Rebuild with standard 64-char wrapping
+            const lines = body.match(/.{1,64}/g);
+            if (lines) {
+                pk = `${header}\n${lines.join('\n')}\n${footer}`;
+            }
+            
+            serviceAccount.private_key = pk;
         }
 
         firebaseApp = admin.initializeApp({

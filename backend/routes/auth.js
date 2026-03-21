@@ -30,9 +30,28 @@ try {
 
             serviceAccount = JSON.parse(jsonString);
             
-            // Critical fix for private_key newline formatting
+            // Critical fix for private_key newline formatting & ASN.1 cleanup
             if (serviceAccount.private_key && typeof serviceAccount.private_key === 'string') {
-                serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
+                let pk = serviceAccount.private_key;
+                
+                // 1. Convert literal \n to real newlines
+                pk = pk.replace(/\\n/g, '\n');
+                
+                // 2. Remove any carriage returns
+                pk = pk.replace(/\r/g, '');
+                
+                // 3. Reformat with strict 64-char lines to ensure max compatibility
+                const header = "-----BEGIN PRIVATE KEY-----";
+                const footer = "-----END PRIVATE KEY-----";
+                let body = pk.replace(header, "").replace(footer, "").replace(/\s/g, "");
+                
+                // Rebuild with standard 64-char wrapping
+                const lines = body.match(/.{1,64}/g);
+                if (lines) {
+                    pk = `${header}\n${lines.join('\n')}\n${footer}`;
+                }
+                
+                serviceAccount.private_key = pk;
             }
         } catch (e) {
             console.error("[Auth] Firebase Key Parsing Error:", e.message);
@@ -67,15 +86,25 @@ const verifyFirebaseToken = async (req, res, next) => {
         if (process.env.NODE_ENV === "production") {
             return res.status(503).json({ error: "Authentication service not configured" });
         }
-        // In local dev only: decode Base64 payload as a dev convenience
-        // DO NOT use this fallback in production
-        console.warn("[DEV ONLY] Using insecure Base64 token fallback. Configure FIREBASE_SERVICE_ACCOUNT_KEY.");
+        // In local dev only: decode JWT payload without verification as a temporary fallback
+        // for when the FIREBASE_SERVICE_ACCOUNT_KEY is malformed/broken.
+        console.warn("[DEV ONLY] Broken Firebase Key: Using insecure JWT payload decoding fallback.");
         try {
-            const decoded = JSON.parse(Buffer.from(token, "base64").toString("utf-8"));
-            req.user = decoded;
-            return next();
-        } catch {
-            return res.status(401).json({ error: "Invalid token format" });
+            const parts = token.split('.');
+            if (parts.length === 3) {
+                const payload = JSON.parse(Buffer.from(parts[1], "base64").toString("utf-8"));
+                req.user = {
+                    uid: payload.user_id || payload.uid,
+                    email: payload.email,
+                    displayName: payload.name || payload.email?.split("@")[0],
+                    photoURL: payload.picture || ""
+                };
+                return next();
+            }
+            throw new Error("Invalid JWT format");
+        } catch (e) {
+            console.error("[Auth] Dev Fallback Failed:", e.message);
+            return res.status(401).json({ error: "Invalid token format for fallback" });
         }
     }
 
