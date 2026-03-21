@@ -10,7 +10,7 @@ import "./developers.css";
 export const metadata = {
     title: "CEI Developer API — Public API v1 Documentation",
     description:
-        "CEI Public API v1: Access verified institution scores, data provenance, and methodology — all tied to an immutable ScoringVersion. Open, documented, verifiable.",
+        "CEI Public API v1: Access evaluated institution scores, data provenance, and methodology — all tied to an immutable ScoringVersion. Open, documented, verifiable.",
 };
 
 const BASE_URL = "https://ce-intelligence-backend.vercel.app";
@@ -199,7 +199,7 @@ const computedHash = crypto
   .digest("hex");
 
 // 3. Compare
-console.log(computedHash === snapshotHash ? "✅ VERIFIED" : "❌ MISMATCH");`}</pre>
+console.log(computedHash === snapshotHash ? "✅ EVALUATED" : "❌ MISMATCH");`}</pre>
                 </div>
             </section>
 

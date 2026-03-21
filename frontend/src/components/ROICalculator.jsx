@@ -30,9 +30,15 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
     }, [tuitionPerYear, livingPerMonth, avgPackage, duration, projectionYears]);
 
     const calculateStats = () => {
+        // Ensure inputs are numbers and finite
+        const safeTuition = Number.isFinite(tuitionPerYear) ? tuitionPerYear : 0;
+        const safeLiving = Number.isFinite(livingPerMonth) ? livingPerMonth : 0;
+        const safePkg = Number.isFinite(avgPackage) ? avgPackage : 0;
+        const safeDuration = Number.isFinite(duration) ? Math.max(1, duration) : 2;
+
         // Costs
-        const totalFees = tuitionPerYear * duration;
-        const totalLiving = livingPerMonth * 12 * duration;
+        const totalFees = safeTuition * safeDuration;
+        const totalLiving = safeLiving * 12 * safeDuration;
         const totalInvest = totalFees + totalLiving;
 
         // Progressive Tax Logic
@@ -43,11 +49,11 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
             return annual * 0.70; // 30% for high earners
         };
 
-        const annualInHand = calculateInHand(avgPackage);
+        const annualInHand = calculateInHand(safePkg);
         const monthlyInHand = annualInHand / 12;
 
         // Dynamic Horizon with Inflation Discounting (6%)
-        const yearsToProject = projectionYears;
+        const yearsToProject = Number.isFinite(projectionYears) ? projectionYears : 10;
         const inflationRate = 0.06;
         const hikeRate = 0.10;
 
@@ -71,37 +77,39 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
 
             newChartData.push({
                 year: `Year ${i + 1}`,
-                Investment: totalInvest, // Flat line for total investment
-                Earnings: Math.round(currentCumulativeEarnings) // Curving line for cumulative real earnings
+                Investment: totalInvest || 1, // Prevent zero division if possible, though Recharts handles it
+                Earnings: Math.round(currentCumulativeEarnings)
             });
         }
 
         setChartData(newChartData);
 
         // Multiplier based on Real Value
-        const multiplier = (totalEarnings / totalInvest).toFixed(1);
+        const denominator = totalInvest || 1;
+        const multiplier = (totalEarnings / denominator).toFixed(1);
 
         // ROI Score
-        const score = Math.min(100, Math.max(0, (multiplier / projectionYears) * 100));
+        const score = Math.min(100, Math.max(0, (multiplier / yearsToProject) * 100));
 
         setStats({
-            totalInvest,
-            totalFees,
-            totalLiving,
-            monthlyInHand,
-            annualInHand,
-            multiplier,
-            score,
-            totalEarnings: Math.round(totalEarnings),
-            nominalEarnings: Math.round(nominalEarnings),
-            taxRate: Math.round((1 - (annualInHand / avgPackage)) * 100)
+            totalInvest: totalInvest || 0,
+            totalFees: totalFees || 0,
+            totalLiving: totalLiving || 0,
+            monthlyInHand: monthlyInHand || 0,
+            annualInHand: annualInHand || 0,
+            multiplier: multiplier || "0.0",
+            score: score || 0,
+            totalEarnings: Math.round(totalEarnings) || 0,
+            nominalEarnings: Math.round(nominalEarnings) || 0,
+            taxRate: safePkg > 0 ? Math.round((1 - (annualInHand / safePkg)) * 100) : 0
         });
     };
 
     const formatMoney = (amount) => {
+        if (amount === null || amount === undefined || isNaN(amount)) return "₹0";
         if (amount >= 10000000) return `₹${(amount / 10000000).toFixed(2)} Cr`;
         if (amount >= 100000) return `₹${(amount / 100000).toFixed(2)} L`;
-        return `₹${amount.toLocaleString()}`;
+        return `₹${Math.round(amount).toLocaleString('en-IN')}`;
     };
 
     // Scenarios

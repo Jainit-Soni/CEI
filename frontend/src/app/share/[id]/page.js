@@ -66,7 +66,7 @@ export default function SharePage() {
                         marginBottom: '20px'
                     }}>
                         <Shield size={16} />
-                        VERIFIED STRATEGIC ROADMAP
+                        EVALUATED STRATEGIC ROADMAP
                     </div>
                     <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '3rem', fontWeight: 800, color: '#1e3a8a', marginBottom: '16px' }}>
                         {data.userName.split(' ')[0]}'s <span style={{ color: '#2563eb' }}>Choice List</span>
@@ -179,7 +179,7 @@ export default function SharePage() {
                     <TrendingUp size={48} style={{ marginBottom: '24px', opacity: 0.9 }} />
                     <h2 style={{ fontSize: '2.25rem', fontWeight: 800, marginBottom: '20px' }}>Build Your Own Roadmap</h2>
                     <p style={{ fontSize: '1.1rem', opacity: 0.8, marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
-                        Architect your future with CEI Intelligence. Get verified data, real-time sync, and strategic ROI projections.
+                        Architect your future with CEI Intelligence. Get evaluated data, real-time sync, and strategic ROI projections.
                     </p>
                     <Link href="/colleges" style={{
                         background: 'white',

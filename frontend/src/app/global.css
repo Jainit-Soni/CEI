@@ -13,6 +13,8 @@
   --color-surface: #FFFFFF;
   --color-surface-raised: rgba(255, 255, 255, 0.9);
   --color-surface-overlay: rgba(255, 255, 255, 0.7);
+  --color-glass-white: rgba(255, 255, 255, 0.85);
+  --color-glass-border: rgba(255, 255, 255, 0.4);
 
   /* Borders & Strokes */
   --color-border: rgba(0, 0, 0, 0.08);
@@ -32,10 +34,10 @@
   --color-accent-hover: #4338CA;
 
   /* Spectral Band Colors (for animated background) — BOOSTED */
-  --band-rose: rgba(255, 160, 170, 0.40);
-  --band-sky: rgba(160, 200, 255, 0.38);
-  --band-mint: rgba(160, 240, 200, 0.32);
-  --band-amber: rgba(255, 220, 160, 0.36);
+  --band-rose: rgba(255, 120, 150, 0.45);
+  --band-sky: rgba(120, 180, 255, 0.42);
+  --band-mint: rgba(120, 255, 180, 0.38);
+  --band-amber: rgba(255, 200, 120, 0.40);
 
   /* Tier Color System */
   --tier-1: #6366f1;
@@ -1311,4 +1313,103 @@ main {
 
 .h-1\.5 {
   height: 0.375rem;
+}
+
+/* ========================================
+   SHARED LIST INTERFACE
+   Consistent grid and hero layouts
+======================================== */
+.list-page {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  width: 100%;
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+.list-hero {
+  position: relative;
+  padding: var(--space-10) 0 var(--space-8);
+  overflow: visible;
+  text-align: center;
+}
+
+.list-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.list-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  margin-bottom: var(--space-3);
+  line-height: 1.1;
+}
+
+.list-hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-ink-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.list-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.list-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.list-stat-value {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.list-stat-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.list-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }

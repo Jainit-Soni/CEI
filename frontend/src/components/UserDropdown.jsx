@@ -52,8 +52,8 @@ export default function UserDropdown() {
                         src={user.photoURL}
                         alt={displayName}
                         className="user-avatar"
-                        width={32}
-                        height={32}
+                        width={36}
+                        height={36}
                         unoptimized={true}
                         priority={true} // Ensure profile pic loads with highest priority
                     />

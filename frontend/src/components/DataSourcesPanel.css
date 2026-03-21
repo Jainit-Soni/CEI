@@ -176,8 +176,8 @@
     font-style: italic;
 }
 
-/* Row shade for unverified fields */
-.dsp-row.unverified {
+/* Row shade for unindexed fields */
+.dsp-row.unindexed {
     opacity: 0.65;
 }
 

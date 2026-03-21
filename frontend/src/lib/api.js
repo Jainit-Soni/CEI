@@ -1,12 +1,25 @@
 import axios from "axios";
 
-// Force localhost instead of 127.0.0.1 to avoid CORS and cookie issues in dev
+// Read raw environment variable
 let apiBaseUrl = process.env.NEXT_PUBLIC_API_URL;
 if (apiBaseUrl && apiBaseUrl.includes("127.0.0.1")) {
   apiBaseUrl = apiBaseUrl.replace("127.0.0.1", "localhost");
 }
 
-export const API_BASE = (apiBaseUrl || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000")).replace(/\/$/, "");
+// Fallback logic
+export const API_BASE = (
+  apiBaseUrl || 
+  (process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000")
+).replace(/\/$/, "");
+
+// 🚨 Production Guardrail: Ensure localhost never leaks into the live site
+if (process.env.NODE_ENV === "production" && API_BASE.includes("localhost")) {
+  console.error(
+    "🔥 CRITICAL DEPLOYMENT ERROR: API_BASE is resolving to localhost in production. " +
+    "Please check your Vercel Environment Variables to ensure NEXT_PUBLIC_API_URL is " +
+    "set to your live backend domain."
+  );
+}
 
 export const api = axios.create({
   baseURL: API_BASE,
@@ -14,11 +27,20 @@ export const api = axios.create({
   withCredentials: true,
 });
 
-// Professional Interceptor Layer
+// Professional Interceptor Layer with Automated Resilience
 api.interceptors.response.use(
   (response) => response,
-  (error) => {
-    const status = error.response ? error.response.status : null;
+  async (error) => {
+    const { config, response } = error;
+    const status = response ? response.status : null;
+    
+    // Resilience: Silent Retry once for timeouts or server blips
+    if ((error.code === 'ECONNABORTED' || status === 500) && !config._retry) {
+      config._retry = true;
+      console.warn(`[API Resilience] Retrying ${config.url} due to ${error.code || status}...`);
+      return api(config);
+    }
+
     let message = "An unexpected intelligence disruption occurred.";
     let title = "System Anomaly";
 
@@ -36,7 +58,7 @@ api.interceptors.response.use(
       message = "The backend processing unit encountered an error.";
     } else if (error.code === 'ECONNABORTED') {
       title = "Network Timeout";
-      message = "The request took too long. Please check your connection.";
+      message = "The request took too long. We're retrying once...";
     }
 
     // Dispatch global event for Toast system to pick up
@@ -50,26 +72,125 @@ api.interceptors.response.use(
   }
 );
 
+const isDev = process.env.NODE_ENV === 'development';
+
+const ceiLog = (context, msg, data) => {
+    if (isDev) {
+        console.log(`[CEI][UI][${context}] ${msg}`, data || '');
+    }
+};
+
+/**
+ * CEI v2 Normalization Layer
+ * Ensures UI components receive predictable data structures.
+ */
+const normalizeCeiDetail = (res) => {
+    if (!res) return null;
+    const rawData = res.college || res;
+    const canonical = rawData.canonical || {};
+    const rawFields = rawData.raw || {};
+    
+    // Safety check for location/meta
+    const name = canonical.canonicalCollegeName || rawFields.name || rawData.name;
+    const state = canonical.state || rawFields.state || rawData.state;
+    const city = canonical.city || rawFields.district || rawData.city || rawData.district;
+    const location = (city && state) ? `${city}, ${state}` : (state || city || "Location TBA");
+    
+    return {
+        ...rawData,
+        id: rawData.stableKey || rawData._id || rawData.id,
+        stableKey: rawData.stableKey || rawData._id,
+        name,
+        location,
+        state,
+        city,
+        collegeType: canonical.collegeType || rawFields.profile?.instituteType,
+        ownership: canonical.ownership || rawFields.profile?.ownership,
+        courses: res.courseOfferings || rawData.courseOfferings || rawData.courses || [],
+        engineeringCutoffs: res.engineeringCutoffsSummary || rawData.engineeringCutoffs || [],
+        rankings: res.rankings || rawData.rankings || [],
+        medicalCounselling: res.medicalCounsellingSummary || rawData.medicalCounselling || null
+    };
+};
+
 export async function fetchColleges(params = {}) {
-  const { data } = await api.get("/api/colleges", { params });
+  const startTime = Date.now();
+  ceiLog('search', 'Fetching colleges...', params);
+  try {
+    const { data } = await api.get("/api/colleges", { params });
+    const count = data.data?.length || 0;
+    ceiLog('search', `Success. ${count} results in ${Date.now() - startTime}ms`);
+    return data;
+  } catch (err) {
+    console.error(`[CEI][UI][search] Error:`, err.message);
+    throw err;
+  }
+}
+
+export async function fetchCollege(id, uid = null) {
+  if (!id || id === "undefined") {
+    if (isDev) console.warn("[CEI][UI][detail] Invalid id requested:", id);
+    return null;
+  }
+  const startTime = Date.now();
+  ceiLog('detail', `Fetching college: ${id} (uid: ${uid || 'none'})`);
+  try {
+    const params = uid ? { uid } : {};
+    const { data } = await api.get(`/api/college/${id}`, { params });
+    const normalized = normalizeCeiDetail(data);
+    
+    ceiLog('detail', `Success in ${Date.now() - startTime}ms.`, {
+        offerings: normalized.courses.length,
+        cutoffs: normalized.engineeringCutoffs.length,
+        rankings: normalized.rankings.length
+    });
+    
+    return normalized;
+  } catch (err) {
+    console.error(`[CEI][UI][detail] Error:`, err.message);
+    throw err;
+  }
+}
+
+export async function fetchCollegeTruthSeats(id) {
+  if (!id) return null;
+  const { data } = await api.get(`/api/colleges/${id}/truth/seats`);
   return data;
 }
 
-export async function fetchCollege(id) {
-  if (!id || id === "undefined") {
-    console.warn("[api] fetchCollege called with invalid id:", id);
-    return null;
-  }
-  const { data } = await api.get(`/api/college/${id}`);
-  console.log(`[API] Fetched college ${id} from ${API_BASE}. Score:`, data.ceiScore || data.college?.ceiScore);
-  // If the API returns an enriched payload { college, anomalies, ... }, 
-  // we return just the college object for component compatibility.
-  return data.college || data;
+export async function fetchCollegeTruthCutoffs(id) {
+  if (!id) return null;
+  const { data } = await api.get(`/api/colleges/${id}/truth/cutoffs`);
+  return data;
+}
+
+export async function fetchCollegeTruthCourses(id) {
+  if (!id) return null;
+  const { data } = await api.get(`/api/colleges/${id}/truth/courses`);
+  return data;
+}
+
+export async function fetchCollegeTruthFees(id) {
+  if (!id) return null;
+  const { data } = await api.get(`/api/colleges/${id}/truth/fees`);
+  return data;
+}
+
+export async function fetchCollegeTruthPlacements(id) {
+  if (!id) return null;
+  const { data } = await api.get(`/api/colleges/${id}/truth/placements`);
+  return data;
 }
 
 export async function fetchExams(params = {}) {
-  const { data } = await api.get("/api/exams", { params });
-  return data;
+  try {
+    const { data } = await api.get("/api/exams", { params });
+    console.log("[CEI][UI][exams] fetchExams result:", Array.isArray(data) ? data.length : "Not an array");
+    return data;
+  } catch (err) {
+    console.error("[CEI][UI][exams] fetchExams failed:", err.message);
+    throw err;
+  }
 }
 
 export async function fetchExam(id) {
@@ -96,6 +217,11 @@ export async function suggest(q) {
 
 export async function fetchStateStats(params = {}) {
   const { data } = await api.get("/api/states/stats", { params });
+  return data;
+}
+
+export async function fetchAggregateStats() {
+  const { data } = await api.get("/api/stats/aggregate");
   return data;
 }
 
@@ -218,5 +344,22 @@ export async function fetchReviews(collegeId) {
 
 export async function postReview(reviewData) {
   const { data } = await api.post("/api/reviews", reviewData);
+  return data;
+}
+
+// ── Trust & Reporting ─────────────────────────────────────────────────────
+export async function postReport(reportData) {
+  const { data } = await api.post("/api/trust/report", reportData);
+  return data;
+}
+
+export async function fetchReports(collegeId) {
+  const { data } = await api.get(`/api/trust/reports/${collegeId}`);
+  return data;
+}
+
+// ── Benchmarking ──────────────────────────────────────────────────────────
+export async function fetchBenchmarks(collegeId) {
+  const { data } = await api.get(`/api/college/${collegeId}/benchmarks`);
   return data;
 }

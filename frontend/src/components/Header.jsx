@@ -9,6 +9,7 @@ import AuthModal from "./AuthModal";
 import UserDropdown from "./UserDropdown";
 import ScoreInputModal from "./ScoreInputModal";
 import SearchWithSuggestions from "./SearchWithSuggestions";
+import HeaderSignal from "./home/HeaderSignal";
 import { useAuth } from "@/lib/AuthContext";
 import { useScores } from "@/lib/ScoreContext";
 import { Menu, X, ArrowLeft, Trophy, Heart, User, Sparkles, MapPin, TrendingUp, Search } from "lucide-react";
@@ -64,13 +65,13 @@ export default function Header() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Colleges", path: "/colleges" },
+    { name: "Map", path: "/map" },
     { name: "Exams", path: "/exams" },
     { name: "Scholarships", path: "/scholarships" },
-    { name: "News", path: "/news" },
-    { name: "Prediction Engine", path: "/decision" },
     { name: "Fan Wars", path: "/hype" },
-    { name: "Map", path: "/map" },
-    { name: "ROI Tool", path: "/roi-calculator" },
+    { name: "News", path: "/news" },
+    { name: "Admission", path: "/admission-calculator" },
+    { name: "ROI", path: "/roi-calculator" },
   ];
 
   return (
@@ -78,9 +79,12 @@ export default function Header() {
       <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
         <div className="header-container">
 
-          {/* LEFT: Logo */}
+          {/* LEFT: Logo & Signal */}
           <div className="header-left">
             <Link href="/" className="brand-logo">CEI</Link>
+            <div className="desktop-only border-l border-white/10 ml-4 pl-4">
+              <HeaderSignal />
+            </div>
           </div>
 
           {/* CENTER: Desktop Navigation */}
@@ -210,12 +214,6 @@ export default function Header() {
                 <span>My List</span>
               </Link>
 
-              <Link href="/map" className="mq-action-btn" onClick={() => setIsMobileMenuOpen(false)}>
-                <div className="mq-icon-box" style={{ background: '#fef3c7', color: '#d97706' }}>
-                  <MapPin size={20} />
-                </div>
-                <span>Map Explore</span>
-              </Link>
 
               <Link href="/roi-calculator" className="mq-action-btn" onClick={() => setIsMobileMenuOpen(false)}>
                 <div className="mq-icon-box" style={{ background: '#e0f2fe', color: '#0284c7' }}>

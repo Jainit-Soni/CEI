@@ -5,7 +5,7 @@
  * Renders per-field provenance for each critical data field of an institution.
  * Data fetched from: GET /api/verification/integrity/:collegeId
  *
- * Shows: Field name | Source type | Verification status | Last verified
+ * Shows: Field name | Source type | Verification status | Last evaluated
  * Displayed inside the ExplainabilityCard / CEI Intelligence tab.
  */
 
@@ -40,10 +40,10 @@ const SOURCE_TYPE_LABELS = {
 };
 
 const STATUS_CONFIG = {
-    manually_verified: { label: "Manually Verified", color: "#34d399" },
-    auto_verified: { label: "Auto-Verified", color: "#60a5fa" },
+    manually_evaluated: { label: "Manually Evaluated", color: "#34d399" },
+    auto_evaluated: { label: "Auto-Evaluated", color: "#60a5fa" },
     disputed: { label: "Disputed", color: "#f87171" },
-    unverified: { label: "Unverified", color: "#94a3b8" }
+    unindexed: { label: "Unindexed", color: "#94a3b8" }
 };
 
 const VERIFIER_LABELS = {
@@ -138,16 +138,16 @@ export default function DataSourcesPanel({ collegeId }) {
                                         <th>Field</th>
                                         <th>Source Type</th>
                                         <th>Verification</th>
-                                        <th>Verified By</th>
-                                        <th>Last Verified</th>
+                                        <th>Evaluated By</th>
+                                        <th>Last Evaluated</th>
                                         <th>Confidence</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {entries.map(([key, label]) => {
                                         const src = fieldSources[key];
-                                        const status = src?.verification_status || "unverified";
-                                        const sc = STATUS_CONFIG[status] || STATUS_CONFIG.unverified;
+                                        const status = src?.verification_status || "unindexed";
+                                        const sc = STATUS_CONFIG[status] || STATUS_CONFIG.unindexed;
                                         return (
                                             <tr key={key} className={`dsp-row ${status}`}>
                                                 <td className="dsp-field-name">{label}</td>
@@ -166,9 +166,9 @@ export default function DataSourcesPanel({ collegeId }) {
                                                 </td>
                                                 <td>{VERIFIER_LABELS[src?.verifier_type] || "—"}</td>
                                                 <td className="dsp-date">
-                                                    {src?.verified_at
-                                                        ? new Date(src.verified_at).toLocaleDateString("en-IN")
-                                                        : <span className="dsp-na">Not verified</span>}
+                                                    {src?.evaluated_at
+                                                        ? new Date(src.evaluated_at).toLocaleDateString("en-IN")
+                                                        : <span className="dsp-na">Not evaluated</span>}
                                                 </td>
                                                 <td>
                                                     {src?.confidence_level

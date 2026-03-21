@@ -1,197 +1,21 @@
-﻿/* ========= EXAM DETAIL PAGE V2 ========= */
-.exam-detail-page-v2 {
-  padding: 80px 0 60px;
-  background: transparent;
-}
-
-/* Back button */
-.back-btn-simple {
-  font-size: 0.9rem;
-}
-
-/* — Override detail hero for exam detail to prevent overlap — */
-.exam-detail-page-v2 .detail-hero-card {
-  padding: 32px !important;
-  border-radius: 20px;
+/* ── DASHBOARD LAYOUT SHELL ── */
+.dashboard-root {
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
-}
-
-.exam-detail-page-v2 .detail-hero-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.exam-detail-page-v2 .detail-hero-top h1 {
-  font-family: var(--font-display, sans-serif);
-  font-size: 2.4rem;
-  margin: 0 0 8px;
-  line-height: 1.15;
+  background: radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 90% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 50% 90%, rgba(56, 189, 248, 0.1) 0%, transparent 60%),
+              linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background-attachment: fixed;
   color: #0f172a;
-  letter-spacing: -0.02em;
-  word-break: break-word;
+  overflow-x: hidden;
+  padding-bottom: 120px;
 }
 
-.exam-detail-page-v2 .detail-stats {
-  display: flex;
-  gap: 16px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.exam-detail-page-v2 .detail-stat {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 14px 20px;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 100px;
-}
-
-.exam-detail-page-v2 .detail-stat-value {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #0d9488;
-  font-family: var(--font-mono, monospace);
-}
-
-.exam-detail-page-v2 .detail-stat-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #94a3b8;
-  font-weight: 600;
-}
-
-/* Section blocks */
-.exam-detail-page-v2 .detail-section {
-  padding: 24px 0 0;
-}
-
-.exam-detail-page-v2 .detail-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .exam-detail-page-v2 .detail-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-}
-
-.exam-detail-page-v2 .detail-panel {
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
-  background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 24px;
-  border-radius: 16px;
-}
-
-.exam-detail-page-v2 .detail-panel h2 {
-  margin: 0 0 12px;
-  font-family: var(--font-display, sans-serif);
-  font-size: 1.1rem;
-}
-
-.exam-detail-page-v2 .detail-panel ul {
-  margin: 0;
-  padding-left: 20px;
-  color: #475569;
-}
-
-.exam-detail-page-v2 .detail-panel ul li {
-  margin-bottom: 6px;
-  line-height: 1.5;
-}
-
-/* Chips */
-.exam-detail-page-v2 .chip.pill {
-  padding: 6px 12px;
-  border-radius: 99px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.exam-detail-page-v2 .chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-/* Meta line */
-.exam-detail-page-v2 .detail-meta-line {
-  display: flex;
-  gap: 16px;
-  font-size: 0.85rem;
-  color: #64748b;
-  margin-top: 8px;
-  flex-wrap: wrap;
-}
-
-/* --- RESPONSIVE — prevent overlapping --- */
-@media (max-width: 768px) {
-  .exam-detail-page-v2 {
-    padding: 70px 0 40px;
-  }
-
-  .exam-detail-page-v2 .detail-hero-card {
-    padding: 20px !important;
-    border-radius: 16px;
-  }
-
-  .exam-detail-page-v2 .detail-hero-top {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .exam-detail-page-v2 .detail-hero-top h1 {
-    font-size: 1.6rem;
-  }
-
-  .exam-detail-page-v2 .detail-stats {
-    gap: 10px;
-  }
-
-  .exam-detail-page-v2 .detail-stat {
-    padding: 10px 14px;
-    min-width: 80px;
-  }
-
-  .exam-detail-page-v2 .detail-stat-value {
-    font-size: 1rem;
-  }
-
-  .exam-detail-page-v2 .detail-panel {
-    padding: 18px;
-  }
-
-  .exam-detail-page-v2 .detail-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .exam-detail-page-v2 .detail-hero-top h1 {
-    font-size: 1.3rem;
-  }
-
-  .exam-detail-page-v2 .detail-stat {
-    padding: 8px 12px;
-    border-radius: 10px;
-  }
-
-  .exam-detail-page-v2 .detail-stat-value {
-    font-size: 0.9rem;
-  }
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 40px 40px; /* 120px Top to clear header */
+  position: relative;
+  z-index: 10;
 }

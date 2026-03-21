@@ -1,7 +1,6 @@
-'use client';
-
 import React, { useEffect, useState } from 'react';
-import { MapPin, ExternalLink, ArrowDown } from 'lucide-react';
+import { MapPin, ExternalLink, ArrowDown, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 import './PrestigeHero.css';
 
 /**
@@ -31,21 +30,22 @@ const PrestigeHero = ({ college }) => {
 
       {/* Content Layer */}
       <div className="hero-content-container">
-        {/* 1. BREADCRUMBS */}
-        <nav className="hero-breadcrumbs">
-          <span className="crumb">Search</span>
-          <span className="crumb-sep">/</span>
-          <span className="crumb">Colleges</span>
-          <span className="crumb-sep">/</span>
-          <span className="crumb active">{college?.name}</span>
-        </nav>
+        {/* 1. BACK BUTTON */}
+        <Link href="/colleges" className="hero-back-btn">
+          <ArrowLeft size={16} /> Back to Colleges
+        </Link>
 
         <div className="aura-identity">
           {/* 2. TRUST PILLS */}
           <div className="hero-trust-row">
-            <span className="trust-pill verified">
-              <span className="dot" /> Verified Intelligence
+            <span className="trust-pill evaluated">
+              <span className="dot" /> Evaluated Intelligence
             </span>
+            {college?.competitivenessBand && (
+              <span className="trust-pill band-pill">
+                <span className="dot" /> {college.competitivenessBand} Band
+              </span>
+            )}
             <span className="trust-pill official">Official Institution</span>
           </div>
 
@@ -58,6 +58,16 @@ const PrestigeHero = ({ college }) => {
               <MapPin size={16} />
               <span>{college?.location}</span>
             </div>
+            {college?.location && (
+              <a 
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${college.name} ${college.location}`)}`}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="maps-button"
+              >
+                Open in Maps <ExternalLink size={14} />
+              </a>
+            )}
             {college?.university && college.university !== 'NOT APPLICABLE' && (
               <div className="meta-item">
                 <span>Affiliated to {college.university}</span>
@@ -67,8 +77,8 @@ const PrestigeHero = ({ college }) => {
 
           {/* 3. PERFORMANCE ACCENT (Score) */}
           <div className="hero-score-pill">
-            <span className="score-label">CEI INDEX</span>
-            <span className="score-value">{college?.score || '8.4'}</span>
+            <span className="score-label">CEI SCORE</span>
+            <span className="score-value">{college?.ceiScore ? Number(college.ceiScore).toFixed(2) : 'Evaluating'}</span>
           </div>
         </div>
 

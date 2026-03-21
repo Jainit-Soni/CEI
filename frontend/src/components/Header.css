@@ -7,7 +7,7 @@
   top: 16px;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 3000; /* Must stay above hero lens (z:2000) */
   padding: 0 20px;
   pointer-events: none;
   transition: top 0.3s ease;
@@ -20,22 +20,22 @@
 /* --- Floating Pill Container --- */
 .header-container {
   pointer-events: auto;
-  max-width: 1200px;
+  max-width: min(1400px, 96vw); /* Fluid constraint for all viewports */
   margin: 0 auto;
-  height: 56px;
-  padding: 0 20px;
-  display: flex;
+  height: 58px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* True centering trick */
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 8px;
   border-radius: 999px;
 
-  /* Initially transparent — bands show through */
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: none;
+  /* Opaque for visibility on solid light backgrounds */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -48,37 +48,47 @@
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.02),
-    0 12px 24px -4px rgba(0, 0, 0, 0.06),
+    0 12px 24px -4px rgba(0, 0, 0, 0.1),
     inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
 
 /* --- LEFT: Logo --- */
 .header-left {
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: fit-content;
+  gap: 16px; /* Added gap between logo and signal */
 }
 
 .brand-logo {
   font-family: var(--font-display, sans-serif);
   font-size: 1.85rem;
-  font-weight: 900;
+  font-weight: 1000; /* Extra bold */
   color: #0f172a;
   text-decoration: none;
-  letter-spacing: -0.04em;
-  display: block;
-  min-width: 60px; /* Prevents push-back during font load */
-  line-height: 1;
+  letter-spacing: -0.06em;
+  display: inline-flex;
+  align-items: center;
+  min-width: 60px;
+  line-height: normal;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
 }
 
 /* --- CENTER: Navigation Pill --- */
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-self: center; /* Force centering in the grid slot */
+  gap: 2px;
   background: rgba(0, 0, 0, 0.04);
-  padding: 5px;
+  padding: 2px;
   border-radius: 999px;
   height: 48px;
-  /* Fixed height for alignment */
 }
 
 .site-header.scrolled .header-nav {
@@ -86,52 +96,53 @@
 }
 
 .nav-item {
-  font-size: 0.95rem;
-  /* Increased from 0.85rem */
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: #475569;
   text-decoration: none;
-  padding: 0 18px;
+  padding: 0 10px;
   height: 100%;
-  /* Fill height */
   border-radius: 999px;
-  transition: all 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Centered text */
   gap: 8px;
   white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
 .nav-item:hover {
-  color: #0f172a;
-  background: rgba(255, 255, 255, 0.5);
+  color: #1e40af;
+  background: rgba(37, 99, 235, 0.05);
+  transform: translateY(-1px);
+  letter-spacing: 0.04em;
 }
 
 .nav-item.active {
   background: #fff;
-  color: #0f172a;
+  color: #2563eb; /* Use brand color for active */
   font-weight: 700;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
 }
 
 .badge-count {
   background: #ef4444;
   color: white;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.65rem;
+  font-weight: 800;
   padding: 1px 6px;
   border-radius: 99px;
   line-height: normal;
+  border: 1.5px solid white;
 }
 
 /* --- RIGHT: Actions --- */
 .header-right {
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
+  justify-content: flex-end; /* Align to right edge of column 3 */
+  gap: 12px;
 }
 
 .score-btn {
@@ -194,7 +205,7 @@
 }
 
 /* --- Responsive: Hide desktop nav on smaller screens --- */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .desktop-only {
     display: none !important;
   }
@@ -212,6 +223,8 @@
   }
 
   .header-container {
+    display: flex;
+    justify-content: space-between;
     height: 48px;
     padding: 0 16px;
   }
@@ -580,4 +593,98 @@
     display: none;
     /* Hide global desktop search on mobile */
   }
+}
+
+/* --- Header Signal Intel Pill --- */
+.header-signal-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 3px 12px;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+    max-width: 320px;
+    overflow: hidden;
+}
+
+.header-signal-pill:hover {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.signal-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.signal-dot::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    animation: signalPulse 2s infinite;
+}
+
+.signal-dot.critical { background: #ef4444; color: #ef4444; }
+.signal-dot.warning { background: #f59e0b; color: #f59e0b; }
+.signal-dot.info { background: #6366f1; color: #6366f1; }
+
+@keyframes signalPulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+.signal-tag {
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: #475569;
+    letter-spacing: 0.05em;
+    padding-right: 8px;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.signal-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1e293b;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.signal-arrow {
+    color: #94a3b8;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: all 0.3s ease;
+}
+
+.header-signal-pill:hover .signal-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    animation: signalIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fade-out {
+    animation: signalOut 0.4s ease forwards;
+}
+
+@keyframes signalIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes signalOut {
+    to { opacity: 0; transform: translateY(-8px); }
 }

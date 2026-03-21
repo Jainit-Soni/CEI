@@ -35,13 +35,13 @@ const REGION_GRADIENTS = {
     "Islands": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
 };
 
-// Get tier color
+// Get tier color — VIBRANT PALETTE
 function getTierColor(count) {
-    if (count === 0) return { bg: "rgba(148, 163, 184, 0.1)", text: "#94a3b8", glow: "none", tier: "—" };
-    if (count >= 3000) return { bg: "rgba(251, 191, 36, 0.12)", text: "#f59e0b", glow: "0 0 20px rgba(251, 191, 36, 0.3)", tier: "🔥" };
-    if (count >= 1000) return { bg: "rgba(96, 165, 250, 0.12)", text: "#3b82f6", glow: "0 0 15px rgba(96, 165, 250, 0.2)", tier: "⭐" };
-    if (count >= 100) return { bg: "rgba(167, 139, 250, 0.12)", text: "#8b5cf6", glow: "0 0 12px rgba(167, 139, 250, 0.2)", tier: "✦" };
-    return { bg: "rgba(52, 211, 153, 0.1)", text: "#10b981", glow: "0 0 10px rgba(52, 211, 153, 0.15)", tier: "·" };
+    if (count === 0) return { bg: "rgba(148, 163, 184, 0.05)", text: "#94a3b833", glow: "none", tier: "" };
+    if (count >= 3000) return { bg: "rgba(251, 191, 36, 0.12)", text: "#fbbf24", glow: "0 0 20px rgba(251, 191, 36, 0.3)", tier: "🔥" };
+    if (count >= 1000) return { bg: "rgba(59, 130, 246, 0.12)", text: "#3b82f6", glow: "0 0 15px rgba(59, 130, 246, 0.2)", tier: "⭐" };
+    if (count >= 100) return { bg: "rgba(139, 92, 246, 0.12)", text: "#8b5cf6", glow: "0 0 12px rgba(139, 92, 246, 0.2)", tier: "✦" };
+    return { bg: "rgba(16, 185, 129, 0.1)", text: "#10b981", glow: "0 0 10px rgba(16, 185, 129, 0.15)", tier: "·" };
 }
 
 export default function MobileMapList({ stateStats, totalStats, onStateClick }) {
@@ -176,8 +176,8 @@ export default function MobileMapList({ stateStats, totalStats, onStateClick }) 
             {/* Legend */}
             <div className="mobile-map-legend">
                 <div className="legend-row">
-                    <span className="legend-dot" style={{ background: "#f59e0b" }} />
-                    <span>3000+ Colleges</span>
+                    <span className="legend-dot" style={{ background: "#fbbf24" }} />
+                    <span>3000+</span>
                 </div>
                 <div className="legend-row">
                     <span className="legend-dot" style={{ background: "#3b82f6" }} />
@@ -190,6 +190,10 @@ export default function MobileMapList({ stateStats, totalStats, onStateClick }) 
                 <div className="legend-row">
                     <span className="legend-dot" style={{ background: "#10b981" }} />
                     <span>1-100</span>
+                </div>
+                <div className="legend-row">
+                    <span className="legend-dot" style={{ background: "rgba(148, 163, 184, 0.1)" }} />
+                    <span>None</span>
                 </div>
             </div>
         </div>

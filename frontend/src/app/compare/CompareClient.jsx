@@ -1,6 +1,6 @@
 "use client";
 
-import { useCompare } from "@/lib/CompareContext";
+import { useComparator } from "@/hooks/useComparator";
 import Container from "@/components/Container";
 import GlassPanel from "@/components/GlassPanel";
 import Button from "@/components/Button";
@@ -13,36 +13,10 @@ import ScoringComparisonMatrix from "@/components/ScoringComparisonMatrix";
 import "./ComparePage.css";
 
 export default function CompareClient() {
-    const { compareList, removeFromCompare } = useCompare();
-    const [fullColleges, setFullColleges] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const { pinnedColleges, unpinCollege, isLoading } = useComparator();
 
-    useEffect(() => {
-        if (compareList.length === 0) {
-            setFullColleges([]);
-            return;
-        }
 
-        const ids = compareList.map(c => c.id).filter(id => id);
-        if (ids.length === 0) return;
-
-        const load = async () => {
-            setIsLoading(true);
-            try {
-                const data = await fetchCollegesBatch(ids);
-                // Ensure the order matches compareList
-                const ordered = ids.map(id => data.find(c => c.id === id)).filter(Boolean);
-                setFullColleges(ordered);
-            } catch (err) {
-                console.error("Batch fetch failed", err);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-        load();
-    }, [compareList]);
-
-    if (compareList.length === 0) {
+    if (pinnedColleges.length === 0) {
         return (
             <div className="compare-page">
                 <Container>
@@ -58,7 +32,7 @@ export default function CompareClient() {
         );
     }
 
-    const displayList = fullColleges.length > 0 ? fullColleges : compareList;
+    const displayList = pinnedColleges;
 
     const getHighlightClass = (type, value, allValues) => {
         // User requested removing "green recommended" highlights
@@ -98,7 +72,7 @@ export default function CompareClient() {
                                     <th key={c.id} className="college-col">
                                         <div className="college-header">
                                             <Button
-                                                onClick={() => removeFromCompare(c.id)}
+                                                onClick={() => unpinCollege(c.id)}
                                                 className="remove-btn"
                                                 variant="ghost"
                                                 size="xs"
@@ -224,7 +198,7 @@ export default function CompareClient() {
                                         <h3>{c.shortName || c.name}</h3>
                                         <p className="college-loc">{c.location}</p>
                                     </div>
-                                    <Button onClick={() => removeFromCompare(c.id)} variant="ghost" size="xs" className="remove-btn">Remove</Button>
+                                    <Button onClick={() => unpinCollege(c.id)} variant="ghost" size="xs" className="remove-btn">Remove</Button>
                                 </div>
                             ))}
                         </div>
@@ -255,8 +229,8 @@ export default function CompareClient() {
                 </div>
 
                 {/* ── CEI Scoring Decomposition Matrix ── */}
-                {fullColleges.length >= 2 && (
-                    <ScoringComparisonMatrix colleges={fullColleges} />
+                {pinnedColleges.length >= 2 && (
+                    <ScoringComparisonMatrix colleges={pinnedColleges} />
                 )}
 
             </Container>

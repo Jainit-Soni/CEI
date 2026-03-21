@@ -1,5 +1,5 @@
-﻿import "./page.css";
-import CollegeDetailClient from "./CollegeDetailClient";
+import "./CollegeDashboard.css";
+import CollegeDashboardClient from "./CollegeDashboardClient";
 
 import JsonLd from "@/components/JsonLd";
 import { fetchCollege } from "@/lib/api";
@@ -14,12 +14,30 @@ export async function generateMetadata({ params }) {
     if (!college) return { title: "College Not Found" };
 
     return {
-      title: college.name,
-      description: `Detailed information about ${college.name}, including courses, fees, admission process, and reviews.`,
+      title: `${college.name} — CEI Intelligence`,
+      description: `Explore ${college.name}: Admission process, cutoffs, placements, and courses. Evaluated engineering and management data for 2026.`,
+      alternates: {
+        canonical: `https://ce-intelligence-eight.vercel.app/college/${id}`,
+      },
       openGraph: {
-        title: college.name,
-        description: `Learn more about ${college.name} on CEI.`,
-        images: [college.logo || "/default-college.png"],
+        title: `${college.name} | CEI College Intelligence`,
+        description: `Everything you need to know about ${college.name}. Fees, placements, and student reviews.`,
+        url: `https://ce-intelligence-eight.vercel.app/college/${id}`,
+        siteName: 'CEI Intelligence',
+        locale: 'en_IN',
+        type: 'website',
+        images: [{ 
+            url: college.logo || "https://ce-intelligence-eight.vercel.app/og-default.png",
+            width: 1200,
+            height: 630,
+            alt: `${college.name} Campus`
+        }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: `${college.name} | CEI Intelligence`,
+        description: `Full institutional analysis of ${college.name}.`,
+        images: [college.logo || "https://ce-intelligence-eight.vercel.app/og-default.png"],
       },
     };
   } catch (error) {
@@ -65,8 +83,9 @@ export default async function CollegeDetail({ params }) {
 
   return (
     <>
+      <link rel="canonical" href={`https://ce-intelligence-eight.vercel.app/college/${id}`} />
       <JsonLd data={jsonLd} />
-      <CollegeDetailClient id={id} initialData={college} />
+      <CollegeDashboardClient id={id} initialData={college} />
     </>
   );
 }

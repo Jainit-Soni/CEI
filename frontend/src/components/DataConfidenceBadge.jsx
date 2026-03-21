@@ -15,19 +15,19 @@ const CONFIG = {
     high: {
         emoji: "🟢",
         label: "High Confidence",
-        description: "This institution's data has been cross-verified against government sources (AISHE/UGC/AICTE) and/or independently audited.",
+        description: "This institution's data has been cross-checked against government sources (AISHE/UGC/AICTE) and/or independently audited.",
         className: "dcb-high"
     },
     moderate: {
         emoji: "🟡",
         label: "Moderate Confidence",
-        description: "Core data is verified but not all fields have been cross-checked against official government registries.",
+        description: "Core data is evaluated but not all fields have been cross-checked against official government registries.",
         className: "dcb-moderate"
     },
     low: {
         emoji: "🔴",
         label: "Low / Self-Declared",
-        description: "Data is primarily self-declared or unverified. Treat placement figures and metrics with caution.",
+        description: "Data is primarily self-declared or unindexed. Treat placement figures and metrics with caution.",
         className: "dcb-low"
     }
 };

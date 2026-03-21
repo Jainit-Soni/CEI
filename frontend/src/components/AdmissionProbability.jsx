@@ -294,7 +294,7 @@ export default function AdmissionProbability() {
                     branch: "Historical Data Unavailable",
                     status: "Data Pending",
                     color: "#94a3b8",
-                    note: `We don't have verified cutoff data for ${selectedExam || "this exam"} yet.`
+                    note: `We don't have evaluated cutoff data for ${selectedExam || "this exam"} yet.`
                 });
             }
 
@@ -306,9 +306,9 @@ export default function AdmissionProbability() {
     return (
         <GlassPanel className="prob-tool-card" variant="strong" glow>
             <div className="prob-tool-header">
-                <div className="verified-badge">
+                <div className="evaluated-badge">
                     <span className="v-icon">🛡️</span>
-                    100% Verified Data
+                    100% Indexed Data
                 </div>
                 <h2>Admission Probability 🎯</h2>
                 <p>Check your admission chances based on historical trends.</p>

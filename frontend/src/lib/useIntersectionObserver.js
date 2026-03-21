@@ -134,6 +134,7 @@ export function RevealOnScroll({
     delay = 0,
     threshold = 0.1,
     as: Component = "div",
+    ...props
 }) {
     const [ref, isVisible] = useIntersectionObserver({ threshold });
 
@@ -144,6 +145,7 @@ export function RevealOnScroll({
             ref={ref}
             className={`reveal ${isVisible ? "revealed" : ""} ${className}`}
             style={style}
+            {...props}
         >
             {children}
         </Component>

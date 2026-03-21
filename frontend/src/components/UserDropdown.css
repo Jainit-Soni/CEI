@@ -19,9 +19,12 @@
 }
 
 .user-avatar {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border: 1.5px solid rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.3), 0 0 10px rgba(99, 102, 241, 0.15);
@@ -35,8 +38,10 @@
 }
 
 .user-avatar-placeholder {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;

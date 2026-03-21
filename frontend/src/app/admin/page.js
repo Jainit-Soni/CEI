@@ -99,7 +99,7 @@ export default function AdminPage() {
                         <h1 className="admin-login-title">CEI CONTROL CENTER</h1>
                         <p className="admin-login-subtitle">Authorized Personnel Only</p>
                         <p className="admin-login-desc">
-                            Access restricted to verified CEI administrators.<br />
+                            Access restricted to evaluated CEI administrators.<br />
                             Sign in with your authorized Google account.
                         </p>
                         <GoogleSignInButton onClick={handleGoogleSignIn} loading={signingIn} />

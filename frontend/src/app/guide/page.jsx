@@ -64,7 +64,7 @@ export default function GuidePage() {
                         <AlertTriangle color="#d97706" size={20} />
                     </div>
                     <p style={{ fontSize: '0.85rem', color: '#92400e', margin: 0, fontWeight: 500 }}>
-                        <strong>ADVISORY:</strong> This guide provides a workflow for using CEI tools. All dates, cutoffs, and data points must be verified against
+                        <strong>ADVISORY:</strong> This guide provides a workflow for using CEI tools. All dates, cutoffs, and data points must be evaluated against
                         <strong> Official Exam Notifications</strong> and University Gazettes. We provide intelligence for reference, not for finality.
                     </p>
                 </div>

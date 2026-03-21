@@ -96,9 +96,9 @@ export default function FancySelect({
             />
           )}
           <div className="fancy-options">
-            {filtered.map((opt) => (
+            {filtered.map((opt, index) => (
               <button
-                key={opt}
+                key={`${opt}-${index}`}
                 type="button"
                 className={`fancy-option ${opt === value ? "active" : ""}`}
                 onClick={() => handleSelect(opt)}

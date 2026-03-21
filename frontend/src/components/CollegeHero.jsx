@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { ArrowLeft, MapPin, ExternalLink } from 'lucide-react';
 import Button from './Button';
 import TrustBadge from './TrustBadge';
 import AddToChoiceButton from './AddToChoiceButton';
 import PredictionBadge from './PredictionBadge';
+import FitBadge from './FitBadge';
 import './CollegeHero.css';
 import ScrollReveal from './animations/ScrollReveal';
 import { postActivityPing, fetchLiveActivity } from '@/lib/api';
 
 export default function CollegeHero({ college }) {
     const [liveViewers, setLiveViewers] = useState(0);
-    // Note: setLiveViewers is called in useEffect, but liveViewers state is not defined in the provided snippet.
-    // This might be an oversight or handled elsewhere. Keeping the call as per instruction.
+
     useEffect(() => {
         if (!college?._id && !college?.id) return;
         const collegeId = college._id || college.id;
@@ -22,118 +24,124 @@ export default function CollegeHero({ college }) {
 
     if (!college) return null;
 
+    // Metadata Sanitization & Trust Filter
+    const sanitize = (val) => {
+        if (!val) return null;
+        const upper = val.toUpperCase();
+        if (upper === 'NOT APPLICABLE' || upper === 'NULL' || upper === 'NOT AVAILABLE' || upper === 'PENDING') return null;
+        return val;
+    };
+
+    const cleanLocation = sanitize(college.location);
+    const cleanUniversity = sanitize(college.university);
+    const cleanType = sanitize(college.ownership || college.type);
+
+    // Filter meaningful metrics for the light intelligence row
+    const quickIntel = [
+        { label: 'Avg Package', value: college.placements?.averagePackage, icon: '💰' },
+        { label: 'Annual Fees', value: college.tuition, icon: '📜' },
+        { label: 'Ranking', value: college.rankingTier || college.nirfRanking, icon: '🏆' }
+    ].filter(m => m.value && sanitize(m.value));
+
     return (
-        <div className="terminal-hero">
-            <div className="terminal-bg">
-                <div className="terminal-mesh"></div>
-                <div className="terminal-gradient-orb"></div>
-            </div>
-
-            <div className="terminal-content">
-                <div className="terminal-container">
-                    {/* Top Action Row */}
-                    <div className="terminal-top-nav">
-                        <Button href="/colleges" variant="ghost" size="sm" className="terminal-back-btn">
-                            ← Intelligence Database
-                        </Button>
-                        <div className="terminal-badges">
-                            <PredictionBadge college={college} />
-                            <TrustBadge
-                                source={college.source}
-                                lastUpdated={college.lastUpdated}
-                                type="data"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Main Executive Layout */}
-                    <div className="terminal-main">
-                        <div className="terminal-identity-panel">
-                            <div className="terminal-logo-container">
-                                {college.logo ? (
-                                    <img src={college.logo} alt={`${college.name} Logo`} className="terminal-logo" />
-                                ) : (
-                                    <div className="terminal-logo-placeholder">
-                                        {college.shortName ? college.shortName.substring(0, 2) : "C"}
-                                    </div>
-                                )}
+        <section className="cei-hero-v5">
+            <div className="hero-shell-v5">
+                <div className="hero-core-v5">
+                    <div className="hero-logo-v5">
+                        {college.logo ? (
+                            <img src={college.logo} alt={college.name} className="logo-img" />
+                        ) : (
+                            <div className="logo-placeholder-v5">
+                                <span className="logo-icon">🏛️</span>
                             </div>
-                            <div className="terminal-identity-text">
-                                <h1 className="terminal-title">{college.name}</h1>
+                        )}
+                    </div>
+                    
+                    <div className="hero-info-v5">
+                        {cleanLocation && (
+                            <div className="location-strip-v5">
+                                <MapPin size={14} className="pin-v5" />
+                                <span className="loc-text-v5">{cleanLocation}</span>
                                 <a 
-                                    href={college.location !== "Not Available" ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(college.name + " " + college.location)}` : "#"}
-                                    target={college.location !== "Not Available" ? "_blank" : "_self"}
+                                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${college.name} ${cleanLocation}`)}`}
+                                    target="_blank" 
                                     rel="noopener noreferrer"
-                                    className={`terminal-location-link ${college.location === "Not Available" ? "link-disabled" : ""}`}
-                                    title={college.location !== "Not Available" ? "View on Google Maps" : "Location Not Available"}
-                                    onClick={(e) => college.location === "Not Available" && e.preventDefault()}
+                                    className="maps-action-v5"
                                 >
-                                    <span className="loc-marker">📍</span>
-                                    <span className="loc-text">{college.location}</span>
-                                    {college.location !== "Not Available" && (
-                                        <svg className="loc-external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                                    )}
+                                    Open in Maps <ExternalLink size={12} />
                                 </a>
-                                {college.rankingTier && (
-                                    <div className="terminal-tier-row">
-                                        <span className="tier-tag">{college.rankingTier}</span>
-                                    </div>
-                                )}
                             </div>
-                        </div>
-
-                        {/* Intelligence HUD (Right Side Data) */}
-                        <div className="terminal-intelligence-hud">
-                            <div className="hud-card">
-                                <div className="hud-label">AVERAGE PACKAGE</div>
-                                <div className={`hud-value ${college.placements?.averagePackage === "Not Available" ? "hud-value-na" : ""}`}>
-                                    {college.placements?.averagePackage || "Not Available"}
-                                </div>
-                                {college.placements?.averagePackage !== "Not Available" && <div className="hud-status status-online"></div>}
-                            </div>
-                            <div className="hud-card">
-                                <div className="hud-label">ESTABLISHED</div>
-                                <div className={`hud-value ${college.meta?.establishedYear === "Not Available" ? "hud-value-na" : ""}`}>
-                                    {college.meta?.establishedYear || "Not Available"}
-                                </div>
-                            </div>
-                            <div className="hud-card">
-                                <div className="hud-label">TUITION (ANNUAL)</div>
-                                <div className={`hud-value ${college.tuition === "Not Available" ? "hud-value-na" : ""}`}>
-                                    {college.tuition || "Not Available"}
-                                </div>
-                            </div>
-                            <div className="hud-card cei-highlight">
-                                <div className="hud-label">CEI SCORE</div>
-                                <div className="hud-value">{Math.round(college.ceiScore || 0)}</div>
-                                <div className="hud-subvalue">{college.competitivenessBand || "Validated"}</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Action Hub */}
-                    <div className="terminal-actions">
-                        <div className="action-cluster">
-                            <AddToChoiceButton college={college} className="terminal-add-btn" />
+                        )}
+                        
+                        <h1 className="hero-name-v5">{college.name}</h1>
+                        
+                        <div className="hero-signals-v5">
+                            {cleanUniversity && (
+                                <span className="h-sig univ-v5">{cleanUniversity}</span>
+                            )}
+                            {college.courses?.length > 0 && (
+                                <span className="h-sig"><strong>{college.courses.length}</strong> Programs</span>
+                            )}
                             {college.officialUrl && college.officialUrl !== "Not Available" && (
-                                <a
-                                    href={college.officialUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="terminal-official-btn"
-                                >
-                                    <span>Official Portal</span>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
+                                <a href={college.officialUrl} target="_blank" rel="noopener noreferrer" className="h-sig s-ver hover:opacity-80 transition-opacity flex items-center gap-1">
+                                    Official Hub <ExternalLink size={10} />
                                 </a>
+                            )}
+                            {cleanType && (
+                                <span className="h-sig s-type">{cleanType}</span>
                             )}
                         </div>
                     </div>
                 </div>
+
+                <div className="hero-score-v5">
+                    {college.ceiScore && college.ceiScore > 0 ? (
+                        <Link href="/methodology" className="sf-metric green-metric tooltip group cursor-pointer">
+                            <span className="tooltiptext text-xs text-left p-3 w-64 bg-slate-900 leading-relaxed shadow-xl border border-slate-700">
+                                <strong>How is this calculated?</strong><br/><br/>
+                                This AI score is derived mathematically. It does not reflect a legal endorsement. Click to view the open-source Algorithm Methodology.
+                            </span>
+                            <div className="sf-value group-hover:text-emerald-300 transition-colors">{Number(college.ceiScore).toFixed(2)}</div>
+                            <div className="sf-label flex items-center justify-center gap-1">
+                                CEI SCORE <Info size={10} className="opacity-50" />
+                            </div>
+                        </Link>
+                    ) : (
+                        <div className="score-status-v5">
+                            <div className="ss-label">INSTITUTION STATUS</div>
+                            <div className="ss-value">Vetted</div>
+                            <div className="ss-hint">Score calculation in progress</div>
+                        </div>
+                    )}
+                </div>
             </div>
-        </div>
+
+            <div className="hero-tray-v5">
+                <div className="tray-metrics-v5">
+                    {quickIntel.map((m, i) => (
+                        <div key={i} className="tm-unit-v5">
+                            <span className="tm-lab-v5">{m.label}</span>
+                            <span className="tm-val-v5">{m.value}</span>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="tray-actions-v5">
+                    <AddToChoiceButton college={college} className="btn-choice-v5" />
+                    {college.officialUrl && college.officialUrl !== "Not Available" && (
+                        <a href={college.officialUrl} target="_blank" rel="noopener noreferrer" className="btn-portal-v5">
+                            <span>Portal</span>
+                            <ExternalLink size={14} />
+                        </a>
+                    )}
+                    {liveViewers > 0 && (
+                        <div className="live-stat-v5">
+                            <span className="live-point-v5"></span>
+                            {liveViewers} Analyzing Now
+                        </div>
+                    )}
+                </div>
+            </div>
+        </section>
     );
 }

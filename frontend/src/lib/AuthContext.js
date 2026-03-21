@@ -50,65 +50,51 @@ export function AuthProvider({ children }) {
     const [error, setError] = useState(null);
     const [authInitialized, setAuthInitialized] = useState(false);
 
+    const syncUserWithBackend = useCallback(async (firebaseUser) => {
+        try {
+            const { API_BASE } = await import("./api");
+            const axios = (await import("axios")).default;
+            const idToken = await firebaseUser.getIdToken(true);
+            const res = await axios.get(`${API_BASE}/api/auth/sync`, {
+                headers: { Authorization: `Bearer ${idToken}` }
+            });
+
+            const userData = res.data.user;
+            setUser(prev => {
+                const merged = {
+                    ...firebaseUser,
+                    ...prev,
+                    ...userData,
+                    uid: firebaseUser.uid
+                };
+                if (merged.avatarUrl && !merged.photoURL) {
+                    merged.photoURL = merged.avatarUrl;
+                }
+                return merged;
+            });
+        } catch (syncErr) {
+            console.error("[Auth] Sync failed:", syncErr.message);
+        }
+    }, []);
+
     // Initialize auth listener lazily
     useEffect(() => {
         let unsubscribe = () => { };
 
         const initAuth = async () => {
             try {
-                console.log("[Auth] Initializing...");
                 const auth = await getFirebaseAuth();
                 const { onAuthStateChanged } = await import("firebase/auth");
 
                 unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
-                    console.log("[Auth] User state changed:", firebaseUser ? firebaseUser.uid : "No user");
-
                     if (firebaseUser) {
-                        // Optimistic Update: Set the firebase user immediately so UI responds fast
-                        // We also preserve existing user data if we're just re-syncing
                         setUser(prev => ({ ...firebaseUser, ...prev, uid: firebaseUser.uid }));
-                        setLoading(false); // Immediate responsiveness
-
-                        try {
-                            const { API_BASE } = await import("./api");
-                            const axios = (await import("axios")).default;
-
-                            // Fetch the real, cryptographically secure Firebase JWT token
-                            const idToken = await firebaseUser.getIdToken(true);
-                            const res = await axios.get(`${API_BASE}/api/auth/sync`, {
-                                headers: { Authorization: `Bearer ${idToken}` }
-                            });
-
-                            const userData = res.data.user;
-
-                            // Merge backend data with firebase data to ensure photoURL doesn't vanish
-                            // Also normalize avatarUrl to photoURL for consistency
-                            setUser(prev => {
-                                const merged = {
-                                    ...firebaseUser,
-                                    ...prev,
-                                    ...userData,
-                                    uid: firebaseUser.uid
-                                };
-                                // Normalize fields
-                                if (merged.avatarUrl && !merged.photoURL) {
-                                    merged.photoURL = merged.avatarUrl;
-                                }
-                                return merged;
-                            });
-                        } catch (syncErr) {
-                            if (syncErr.response?.status === 503) {
-                                console.warn("[Auth] Backend auth sync is unconfigured. Using local Firebase session.");
-                            } else {
-                                console.error("[Auth] Sync with MongoDB failed:", syncErr.message || syncErr);
-                            }
-                            // Fallback is already handled by the optimistic set above
-                        }
+                        setLoading(false);
+                        await syncUserWithBackend(firebaseUser);
                     } else {
                         setUser(null);
                         setLoading(false);
                     }
-
                     setAuthInitialized(true);
                 });
             } catch (err) {
@@ -118,9 +104,8 @@ export function AuthProvider({ children }) {
             }
         };
 
-        // Initialize immediately
         initAuth();
-    }, []);
+    }, [syncUserWithBackend]);
 
     const signInWithGoogle = useCallback(async () => {
         try {
@@ -134,9 +119,6 @@ export function AuthProvider({ children }) {
             console.error("Google sign-in error:", err);
             const msg = getErrorMessage(err.code);
             setError(msg);
-            window.dispatchEvent(new CustomEvent('api-error', { 
-                detail: { title: "Auth Anomaly", message: msg, type: 'error' } 
-            }));
             throw err;
         }
     }, []);
@@ -159,10 +141,10 @@ export function AuthProvider({ children }) {
         try {
             setError(null);
             const auth = await getFirebaseAuth();
-            const { createUserWithEmailAndPassword, updateProfile } = await import("firebase/auth");
+            const { createUserWithEmailAndPassword, updateProfile: fireUpdate } = await import("firebase/auth");
             const result = await createUserWithEmailAndPassword(auth, email, password);
             if (displayName) {
-                await updateProfile(result.user, { displayName });
+                await fireUpdate(result.user, { displayName });
             }
             return result.user;
         } catch (err) {
@@ -185,31 +167,47 @@ export function AuthProvider({ children }) {
         }
     }, []);
 
+    // Intelligence Spine Profile Update
+    const updateProfile = useCallback(async (updates) => {
+        if (!user) return;
+        try {
+            const { API_BASE } = await import("./api");
+            const axios = (await import("axios")).default;
+            const auth = await getFirebaseAuth();
+            const idToken = await auth.currentUser.getIdToken(true);
+            
+            const response = await axios.post(`${API_BASE}/api/auth/profile`, updates, {
+                headers: { Authorization: `Bearer ${idToken}` }
+            });
+            
+            await syncUserWithBackend(auth.currentUser);
+            return response.data;
+        } catch (err) {
+            console.error("[Auth] Profile update failed:", err);
+            throw err;
+        }
+    }, [user, syncUserWithBackend]);
+
     // Deadline Management
     const addDeadline = useCallback(async (deadlineData) => {
         const newDeadline = {
             id: Date.now().toString(),
-            date: new Date().toISOString(), // Fallback if not provided
+            date: new Date().toISOString(),
             ...deadlineData,
             status: 'upcoming'
         };
 
         setUser(prev => {
             if (!prev) return prev;
-            const updated = {
-                ...prev,
-                deadlines: [...(prev.deadlines || []), newDeadline]
-            };
-            return updated;
+            return { ...prev, deadlines: [...(prev.deadlines || []), newDeadline] };
         });
 
-        // Sync with backend if logged in
         if (user?.uid) {
             try {
                 const { API_BASE } = await import("./api");
                 const axios = (await import("axios")).default;
                 const idToken = await (await getFirebaseAuth()).currentUser.getIdToken();
-                await axios.post(`${API_BASE}/api/user/deadlines`, { deadline: newDeadline }, {
+                await axios.post(`${API_BASE}/api/auth/deadlines`, deadlineData, {
                     headers: { Authorization: `Bearer ${idToken}` }
                 });
             } catch (err) {
@@ -251,6 +249,8 @@ export function AuthProvider({ children }) {
         logout,
         addDeadline,
         removeDeadline,
+        updateProfile,
+        isAuthenticated: !!user,
     };
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

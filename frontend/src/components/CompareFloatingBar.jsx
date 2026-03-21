@@ -10,7 +10,7 @@ export default function CompareFloatingBar() {
     const router = useRouter();
     const pathname = usePathname();
 
-    if (pathname?.startsWith("/admin")) return null;
+    if (pathname !== "/colleges" && !pathname?.startsWith("/colleges?")) return null;
     if (compareList.length === 0) return null;
 
     const clearAll = () => {

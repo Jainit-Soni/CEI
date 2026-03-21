@@ -1,0 +1,186 @@
+/* Chromatic Intelligence - Design System Alignment v1.0 */
+:root {
+  /* THEME: CEI ELITE LIGHT GLASS */
+  --color-bg: #f8fafc;
+  --color-ink: #0f172a;
+  --color-accent: #6366f1; /* Purple */
+  --color-accent-soft: rgba(99, 102, 241, 0.08);
+  
+  --glass-card: rgba(255, 255, 255, 0.85);
+  --glass-blur: blur(20px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  
+  /* EDITORIAL TYPOGRAPHY */
+  --font-display: var(--font-outfit, 'Outfit', sans-serif);
+  --font-body: var(--font-inter, 'Inter', sans-serif);
+  
+  /* SPACIOUS COMPOSITION */
+  --section-padding: 120px 0;
+  --container-width: 1240px;
+  --border-radius-lg: 32px;
+}
+
+/* 1. SPECTRAL PASTEL BACKGROUND BANDS */
+.prestige-story-root {
+  background: var(--color-bg) !important;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.prestige-story-root::before,
+.prestige-story-root::after {
+  content: '';
+  position: fixed;
+  width: 70vw;
+  height: 70vw;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6; /* Boosted visibility */
+  filter: blur(120px);
+}
+
+.prestige-story-root::before {
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 60%); /* Indigo/Purple */
+}
+
+.prestige-story-root::after {
+  bottom: -20%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 60%); /* Hot Pink / Magenta */
+}
+
+/* EXTRA SPECTRAL LAYER */
+.spectral-ambient-band {
+  position: fixed;
+  top: 30%;
+  right: -20%;
+  width: 100vw;
+  height: 100vw;
+  background: radial-gradient(circle, #f5f3ff 0%, transparent 70%); /* Lavender */
+  opacity: 0.1;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 2. EDITORIAL TYPOGRAPHY UTILS */
+/* 3. ROUNDED GLASS CARD SYSTEM */
+.glass-card-root {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--border-radius-lg);
+  padding: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.prestige-heading {
+  font-family: var(--font-display);
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--color-ink);
+}
+
+.prestige-subheading {
+  font-size: 0.7rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-accent);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.prestige-body-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(15, 23, 42, 0.7);
+  font-weight: 450;
+}
+
+/* Glass Section Container */
+.prestige-section {
+  padding: var(--section-padding);
+  position: relative;
+  z-index: 1;
+}
+
+.section-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* 4. DATA DENSITY: EDITORIAL TABLES */
+.editorial-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.editorial-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.editorial-table th {
+  text-align: left;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--color-accent);
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.editorial-table td {
+  padding: 24px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.editorial-table tr:last-child td {
+  border-bottom: none;
+}
+
+.prestige-tab-viewport {
+  min-height: 70vh;
+  position: relative;
+}
+
+.tab-pane {
+  animation: tabFadeIn 0.4s cubic-bezier(0.2, 0, 0, 1) forwards;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Narrative Card Overlay Fix */
+.narrative-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--chromatic-border);
+  border-radius: 40px;
+  padding: 60px;
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}

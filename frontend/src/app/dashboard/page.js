@@ -1,260 +1,355 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import { useAuth } from "@/lib/AuthContext";
+import { useRouter } from "next/navigation";
+import { 
+    Trophy, 
+    Sparkles, 
+    Calendar, 
+    User, 
+    LayoutDashboard, 
+    Bookmark, 
+    History, 
+    ShieldCheck, 
+    LogOut,
+    Plus,
+    ChevronRight,
+    Binary,
+    Settings
+} from "lucide-react";
 import GlassPanel from "@/components/GlassPanel";
 import Button from "@/components/Button";
-import { useFavorites } from "@/lib/useFavorites";
 import Link from "next/link";
-import { Bookmark, Calendar, Clock, LogOut, ChevronRight, User, Sparkles, Trophy, Plus, X } from "lucide-react";
-import DeadlineModal from "@/components/DeadlineModal";
+import IdentityPulseCard from "@/components/IdentityPulseCard";
+import NextBestAction from "@/components/NextBestAction";
+import ShortlistHealth from "@/components/ShortlistHealth";
+import axios from "axios";
 import "./dashboard.css";
 
 export default function DashboardPage() {
-    const { user, loading: authLoading, logout, addDeadline, removeDeadline } = useAuth();
-    const { favorites, clearAllFavorites } = useFavorites();
+    const { user, loading: authLoading, logout } = useAuth();
     const router = useRouter();
     const [activeTab, setActiveTab] = useState("overview");
-    const [isDeadlineModalOpen, setIsDeadlineModalOpen] = useState(false);
-    const [priorityItems, setPriorityItems] = useState([]);
+    const [intelligence, setIntelligence] = useState(null);
+    const [intelLoading, setIntelLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
+    const [localList, setLocalList] = useState([]);
 
     useEffect(() => {
+        setIsMounted(true);
         if (!authLoading && !user) {
-            router.push("/login");
+            router.push("/auth/login");
+        }
+        
+        // Restore active tab from patterns
+        const savedTab = localStorage.getItem("cei_dashboard_prefs");
+        if (savedTab) {
+            setActiveTab(savedTab);
         }
     }, [user, authLoading, router]);
 
-    // Sync Priority List
+    const handleTabChange = (tab) => {
+        setActiveTab(tab);
+        localStorage.setItem("cei_dashboard_prefs", tab);
+    };
+
+    // Reactive Local List Sync
     useEffect(() => {
-        const updatePriority = () => {
-            const stored = localStorage.getItem("choice-filling-cart");
-            if (stored) {
-                try {
-                    setPriorityItems(JSON.parse(stored));
-                } catch (e) {
-                    console.error("Priority sync failed", e);
-                }
+        const updateList = () => {
+            if (typeof window !== "undefined") {
+                const stored = localStorage.getItem("choice-filling-cart");
+                const items = stored ? JSON.parse(stored) : [];
+                setLocalList(items);
             }
         };
-        updatePriority();
-        window.addEventListener("local-storage-update", updatePriority);
-        return () => window.removeEventListener("local-storage-update", updatePriority);
+        updateList();
+        window.addEventListener("storage", updateList);
+        window.addEventListener("local-storage-update", updateList);
+        return () => {
+            window.removeEventListener("storage", updateList);
+            window.removeEventListener("local-storage-update", updateList);
+        };
     }, []);
 
-    if (authLoading || !user) {
+    useEffect(() => {
+        const fetchIntelligence = async () => {
+            if (!user) return;
+            try {
+                // Corrected route to match backend implementation
+                const response = await axios.get(`http://localhost:4000/api/intelligence/dashboard?uid=${user.uid || user.id}`);
+                setIntelligence(response.data);
+            } catch (error) {
+                console.error("Error fetching intelligence:", error);
+            } finally {
+                setIntelLoading(false);
+            }
+        };
+
+        if (user) fetchIntelligence();
+    }, [user]);
+
+    if (authLoading || !user || !isMounted) {
         return (
-            <main className="dashboard-page loading">
-                <div className="spinner"></div>
-                <h2>Loading your dashboard...</h2>
-            </main>
+            <div className="loading-overlay">
+                <div className="loading-spinner" />
+            </div>
         );
     }
 
-    const { colleges: favoriteColleges = [], exams = [] } = favorites;
-    const colleges = favoriteColleges.filter(c => c && c.id && c.id !== "undefined");
-    const deadlines = user.deadlines || [];
-
-    const handleLogout = async () => {
-        await logout();
-        router.push("/");
+    const getTimeGreeting = () => {
+        const hour = new Date().getHours();
+        if (hour < 12) return "Good morning";
+        if (hour < 17) return "Good afternoon";
+        return "Good evening";
     };
 
+    const favoriteColleges = user.favoriteColleges || [];
+    const priorityItems = favoriteColleges.filter(c => c && c.priority);
+    const colleges = favoriteColleges.filter(c => c && c.id && c.id !== "undefined");
+    const exams = user.exams || [];
+    const deadlines = user.deadlines || [];
+
     return (
-        <main className="dashboard-page">
-            <div className="dashboard-container">
-                {/* Sidebar Menu */}
-                <aside className="dashboard-sidebar">
-                    <GlassPanel className="sidebar-panel">
-                        <div className="user-profile">
-                            <div className="avatar">
-                                {user.photoURL ? (
-                                    <img src={user.photoURL} alt="Avatar" />
-                                ) : (
-                                    <User size={32} color="var(--color-primary)" />
-                                )}
-                                <div className="avatar-ring" />
-                            </div>
-                            <h3>{user.displayName || "Student"}</h3>
-                            <p>{user.email}</p>
+        <main className="dashboard-reboot">
+            <div className="dashboard-reboot-container">
+                {/* 2. INTELLIGENCE HUD */}
+                <header className="iq-hud">
+                    {/* Profile Node */}
+                    <GlassPanel className="iq-node iq-profile-node">
+                        <div className="iq-avatar-wrapper">
+                            {user.photoURL ? (
+                                <img src={user.photoURL} alt={user.displayName} />
+                            ) : (
+                                <div className="avatar-placeholder"><User size={40} /></div>
+                            )}
+                            <div className="iq-avatar-glow" />
                         </div>
-
-                        <nav className="dashboard-nav">
-                            <button
-                                className={`nav-item ${activeTab === 'overview' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('overview')}
-                            >
-                                <Bookmark size={18} /> Overview
-                            </button>
-                            <button
-                                className={`nav-item ${activeTab === 'colleges' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('colleges')}
-                            >
-                                <Bookmark size={18} /> My Shortlist ({[...priorityItems, ...colleges.filter(f => !priorityItems.some(p => p.id === f.id))].length})
-                            </button>
-                            <button
-                                className={`nav-item ${activeTab === 'deadlines' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('deadlines')}
-                            >
-                                <Calendar size={18} /> Deadlines ({deadlines.length})
-                            </button>
-                        </nav>
-
-                        <div className="sidebar-footer">
-                            <button className="logout-btn" onClick={handleLogout}>
-                                <LogOut size={16} /> Sign Out
-                            </button>
-                        </div>
+                        <h2>{user.displayName?.split(' ')[0] || "Student"}</h2>
+                        <p>Batch 2026 • Premium</p>
                     </GlassPanel>
-                </aside>
 
-                {/* Main Content Area */}
-                <section className="dashboard-main">
-                    <div className="dashboard-header">
-                        <h1>{activeTab === "overview" ? "Welcome back!" :
-                            activeTab === "colleges" ? "Your Shortlist" : "Application Deadlines"}</h1>
-                        <p className="dashboard-subtitle">
-                            Manage your higher education journey in one place.
+                    {/* Main Greeting Node */}
+                    <div className="iq-header-node">
+                        <h1>{getTimeGreeting()}.</h1>
+                        <p>
+                            {intelligence ? 
+                                `Your intelligence layer has analyzed ${colleges.length} priorities and ${exams.length} exams.` :
+                                "Your personalized academic engine is synchronized."
+                            }
                         </p>
+                        <div className="iq-intelligence-bar">
+                            <Sparkles size={14} className="text-indigo-500" />
+                            <span>
+                                {colleges.length > 0 ? 
+                                    `Ready to analyze ${colleges[0].name.split(' ')[0]} and ${colleges.length - 1} more.` : 
+                                    "Ready to begin your strategic college discovery."
+                                }
+                            </span>
+                        </div>
                     </div>
 
+                    {/* Quick Stats Node */}
+                    <GlassPanel className="iq-node iq-stats-node">
+                        <div className="iq-stat-row">
+                            <span className="iq-stat-label">Priorities</span>
+                            <span className="iq-stat-value">{localList.length || colleges.length}</span>
+                        </div>
+                        <div className="iq-stat-row">
+                            <span className="iq-stat-label">Exams</span>
+                            <span className="iq-stat-value">{exams.length}</span>
+                        </div>
+                        <div className="iq-stat-row">
+                            <span className="iq-stat-label">Milestones</span>
+                            <span className="iq-stat-value">{deadlines.length}</span>
+                        </div>
+                    </GlassPanel>
+                </header>
+
+                {/* 3. SWITCHBOARD NAVIGATION */}
+                <nav className="iq-switchboard">
+                    <button 
+                        className={`switch-item ${activeTab === "overview" ? "active" : ""}`}
+                        onClick={() => handleTabChange("overview")}
+                    >
+                        <LayoutDashboard size={18} />
+                        Overview
+                    </button>
+                    <button 
+                        className={`switch-item ${activeTab === "colleges" ? "active" : ""}`}
+                        onClick={() => handleTabChange("colleges")}
+                    >
+                        <Bookmark size={18} />
+                        Priorities
+                    </button>
+                    <button 
+                        className={`switch-item ${activeTab === "deadlines" ? "active" : ""}`}
+                        onClick={() => handleTabChange("deadlines")}
+                    >
+                        <Calendar size={18} />
+                        Milestones
+                    </button>
+                    <button 
+                        className={`switch-item ${activeTab === "profile" ? "active" : ""}`}
+                        onClick={() => handleTabChange("profile")}
+                    >
+                        <Settings size={18} />
+                        Settings
+                    </button>
+                    <button className="switch-item" onClick={logout} style={{ color: '#ef4444' }}>
+                        <LogOut size={18} />
+                        Sign Out
+                    </button>
+                </nav>
+
+                {/* 4. CORE ENGINE CONTENT */}
+                <section className="iq-pulse-content">
                     {activeTab === "overview" && (
-                        <div className="overview-grid">
-                            {/* Summary Cards */}
-                            <GlassPanel className="summary-card">
-                                <div className="card-refraction-overlay" />
-                                <div className="card-icon blue"><Trophy size={24} /></div>
-                                <div className="card-info">
-                                    <h3>{priorityItems.length}</h3>
-                                    <p>Priority Selections</p>
-                                </div>
-                                <Link href="/my-list" className="card-link"><ChevronRight size={18} /></Link>
-                            </GlassPanel>
+                        <div className="iq-grid">
+                            {/* Profile Intelligence Card */}
+                            <div className="iq-card iq-card-span-4">
+                                <IdentityPulseCard 
+                                    user={user} 
+                                    intelligence={intelligence} 
+                                    loading={intelLoading} 
+                                />
+                            </div>
 
-                            <GlassPanel className="summary-card">
-                                <div className="card-refraction-overlay" />
-                                <div className="card-icon purple"><Calendar size={24} /></div>
-                                <div className="card-info">
-                                    <h3>{deadlines.length}</h3>
-                                    <p>Active Milestones</p>
-                                </div>
-                                <button className="card-link" onClick={() => setActiveTab('deadlines')}><ChevronRight size={18} /></button>
-                            </GlassPanel>
+                            {/* AI Action Card */}
+                            <div className="iq-card iq-card-span-8">
+                                {intelLoading ? (
+                                    <div className="loading-skeleton" style={{ height: '300px' }} />
+                                ) : (
+                                    <NextBestAction action={intelligence?.nextBestAction} />
+                                )}
+                            </div>
 
-                            <GlassPanel className="summary-card">
-                                <div className="card-refraction-overlay" />
-                                <div className="card-icon orange"><Sparkles size={24} /></div>
-                                <div className="card-info">
-                                    <h3>{exams.length}</h3>
-                                    <p>Tracked Exams</p>
-                                </div>
-                                <Link href="/exams" className="card-link"><ChevronRight size={18} /></Link>
-                            </GlassPanel>
-
-                            {/* Recent Activity or Next Steps */}
-                            <div className="action-section">
-                                <h2>Next Steps</h2>
-                                <GlassPanel className="action-panel">
-                                    {colleges.length === 0 ? (
-                                        <div className="empty-state">
-                                            <p>You haven't saved any colleges yet. Start exploring!</p>
-                                            <Link href="/colleges">
-                                                <Button size="sm">Browse Colleges</Button>
-                                            </Link>
-                                        </div>
-                                    ) : (
-                                        <div className="empty-state">
-                                            <p>Ready to compare your shortlisted colleges?</p>
-                                            <Link href="/compare">
-                                                <Button size="sm" variant="outline">Compare Now</Button>
-                                            </Link>
-                                        </div>
-                                    )}
-                                </GlassPanel>
+                            {/* Shortlist Health */}
+                            <div className="iq-card iq-card-span-12">
+                                {intelLoading ? (
+                                    <div className="loading-skeleton" style={{ height: '200px' }} />
+                                ) : (
+                                    <ShortlistHealth health={intelligence?.shortlistHealth} />
+                                )}
                             </div>
                         </div>
                     )}
 
                     {activeTab === "colleges" && (
-                        <div className="list-section">
-                            {[...priorityItems, ...colleges.filter(f => !priorityItems.some(p => p.id === f.id))].length === 0 ? (
-                                <GlassPanel className="empty-panel">
-                                    <Bookmark size={48} color="#9ca3af" style={{ marginBottom: '1rem' }} />
-                                    <h3>Your shortlist is empty</h3>
-                                    <p>Save colleges while browsing to easily access them here.</p>
-                                    <Link href="/colleges"><Button className="mt-4">Explore Colleges</Button></Link>
-                                </GlassPanel>
-                            ) : (
-                                <div className="item-list">
-                                    {[...priorityItems, ...colleges.filter(f => !priorityItems.some(p => p.id === f.id))].map((c, i) => (
-                                        <GlassPanel key={i} className="list-item">
-                                            <div className="card-refraction-overlay" />
-                                            <div className="item-details">
-                                                <h4>{c.name || c.id}</h4>
-                                                <span className="item-tag">{priorityItems.some(p => p.id === c.id) ? "Strategic Priority" : "Saved"}</span>
+                        <div className="iq-card iq-card-span-12">
+                            <h3 className="iq-card-title"><Bookmark /> Your Strategic Priorities</h3>
+                            <div className="iq-list">
+                                {localList.length === 0 && colleges.length === 0 ? (
+                                    <p className="p-8 text-center text-muted">No priorities set. Explore colleges to begin.</p>
+                                ) : (
+                                    [...colleges, ...(localList || []).filter(l => !colleges.find(c => String(c.id || c._id) === String(l.id || l._id)))].map((c, i) => (
+                                        <div key={i} className="iq-list-item">
+                                            <div className="iq-list-item-main">
+                                                <div className="iq-college-avatar">
+                                                    {(c.name || c.shortName || "C").charAt(0)}
+                                                    <div className="iq-avatar-glow" />
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-bold">{c.name || c.shortName || "Strategic Choice"}</h4>
+                                                    <p className="text-sm opacity-60">
+                                                        {localList.find(l => String(l.id || l._id) === String(c.id || c._id)) ? "Direct Selection (Actionable)" : "Evaluated Strategic Partner"}
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div className="item-actions">
-                                                <Link href={`/college/${c.id}`}><Button size="sm" variant="outline">View</Button></Link>
-                                            </div>
-                                        </GlassPanel>
-                                    ))}
-                                </div>
-                            )}
+                                            <Link href={`/college/${c.id || c._id}`}>
+                                                <Button size="sm" variant="outline">Analyze</Button>
+                                            </Link>
+                                        </div>
+                                    ))
+                                )}
+                            </div>
                         </div>
                     )}
 
                     {activeTab === "deadlines" && (
-                        <div className="list-section">
-                            {deadlines.length === 0 ? (
-                                <GlassPanel className="empty-panel">
-                                    <Calendar size={48} color="#9ca3af" style={{ marginBottom: '1rem' }} />
-                                    <h3>No upcoming milestones</h3>
-                                    <p>Build your roadmap by adding custom admission deadlines.</p>
-                                    <Button className="mt-4" onClick={() => setIsDeadlineModalOpen(true)}>
-                                        <Plus size={16} className="mr-2" /> Add Milestone
-                                    </Button>
-                                </GlassPanel>
-                            ) : (
-                                <div className="item-list">
-                                    <div className="list-actions-header">
-                                        <Button size="sm" variant="outline" onClick={() => setIsDeadlineModalOpen(true)}>
-                                            <Plus size={14} className="mr-1" /> Add New
-                                        </Button>
-                                    </div>
-                                    {deadlines.map((d, i) => (
-                                        <GlassPanel key={i} className="list-item deadline-item">
-                                            <div className="card-refraction-overlay" />
-                                            <div className="deadline-date black">
-                                                <span className="month">{new Date(d.date + 'T00:00:00').toLocaleString('default', { month: 'short' })}</span>
-                                                <span className="day">{new Date(d.date + 'T00:00:00').getDate()}</span>
-                                            </div>
-                                            <div className="item-details">
-                                                <div className="flex justify-between items-start">
-                                                    <h4>{d.title}</h4>
-                                                    <button
-                                                        onClick={() => removeDeadline(d.id)}
-                                                        className="text-slate-300 hover:text-red-500 transition-colors p-1"
-                                                    >
-                                                        <X size={14} />
-                                                    </button>
+                        <div className="iq-card iq-card-span-12">
+                            <h3 className="iq-card-title"><Calendar /> Upcoming Milestones</h3>
+                            <div className="iq-list">
+                                {deadlines.length === 0 ? (
+                                    <p className="p-8 text-center text-muted">No deadlines tracked. Your timeline is clear.</p>
+                                ) : (
+                                    deadlines.map((d, i) => {
+                                        const milestoneDate = new Date(d.date);
+                                        const now = new Date();
+                                        const diffTime = milestoneDate - now;
+                                        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                                        const isUrgent = diffDays > 0 && diffDays <= 7;
+                                        const isOverdue = diffDays <= 0;
+
+                                        return (
+                                            <div key={i} className="iq-list-item">
+                                                <div className="iq-list-item-main">
+                                                    <div className={`iq-milestone-marker ${isUrgent ? 'urgent' : isOverdue ? 'overdue' : ''}`} />
+                                                    <div>
+                                                        <h4 className="font-bold">{d.title}</h4>
+                                                        <p className="text-sm opacity-60">{d.location || "Central Engine Verification"}</p>
+                                                    </div>
                                                 </div>
-                                                <p className="item-notes">{d.notes}</p>
-                                                <span className="item-tag deadline-tag"><Clock size={12} /> {d.type}</span>
+                                                <div className="iq-milestone-status">
+                                                    {isOverdue ? (
+                                                        <span className="text-xs font-bold text-red-500">PAST DUE</span>
+                                                    ) : (
+                                                        <span className={`text-xs font-bold ${isUrgent ? 'text-orange-500' : 'text-blue-500'}`}>
+                                                            {diffDays} DAYS LEFT
+                                                        </span>
+                                                    )}
+                                                    <span className="badge badge-accent">Tracked</span>
+                                                </div>
                                             </div>
-                                        </GlassPanel>
-                                    ))}
+                                        );
+                                    })
+                                )}
+                            </div>
+                        </div>
+                    )}
+
+                    {activeTab === "profile" && (
+                        <div className="settings-grid">
+                            <div className="iq-card iq-card-span-6">
+                                <h3 className="iq-card-title"><User /> Account Intelligence</h3>
+                                <div className="profile-detail-card">
+                                    <div className="profile-detail-row">
+                                        <span className="label">Display Name</span>
+                                        <span className="value">{user.displayName}</span>
+                                    </div>
+                                    <div className="profile-detail-row">
+                                        <span className="label">Primary Email</span>
+                                        <span className="value">{user.email}</span>
+                                    </div>
+                                    <div className="profile-detail-row">
+                                        <span className="label">Membership</span>
+                                        <span className="value premium-badge">Premium Elite</span>
+                                    </div>
                                 </div>
-                            )}
+                            </div>
+                            <div className="iq-card iq-card-span-6">
+                                <h3 className="iq-card-title"><Binary /> System Preferences</h3>
+                                <div className="iq-list">
+                                    <div className="iq-list-item">
+                                        <div>
+                                            <h4 className="font-bold">Adaptive Navigation</h4>
+                                            <p className="text-sm opacity-60">Remember last active dashboard tab</p>
+                                        </div>
+                                        <div className="status-indicator active">Enabled</div>
+                                    </div>
+                                    <div className="iq-list-item">
+                                        <div>
+                                            <h4 className="font-bold">Intelligence Overlay</h4>
+                                            <p className="text-sm opacity-60">Dynamic HUD personalized insights</p>
+                                        </div>
+                                        <div className="status-indicator active">Enabled</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     )}
                 </section>
             </div>
-
-            <DeadlineModal
-                isOpen={isDeadlineModalOpen}
-                onClose={() => setIsDeadlineModalOpen(false)}
-                onAdd={addDeadline}
-            />
         </main>
     );
 }

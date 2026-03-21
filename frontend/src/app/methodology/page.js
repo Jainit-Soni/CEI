@@ -66,7 +66,7 @@ export default function MethodologyPage() {
         {
             title: "Data Ingestion",
             icon: <Database className="text-blue-400" />,
-            desc: "We pull raw data from the official AISHE database, placement reports, and accreditation boards covering 68,000+ colleges."
+            desc: "We pull raw data from the official AISHE database and state registries, surfacing our evaluated 12,000+ institution catalog."
         },
         {
             title: "Normalization",
@@ -199,12 +199,38 @@ export default function MethodologyPage() {
                             </div>
                         </section>
 
+                        <section id="calculation" className="main-section mb-16">
+                            <h2 className="main-section-title">How is the CEI Score calculated?</h2>
+                            <p className="main-section-desc mb-8">
+                                We strip away the marketing noise and rely purely on data. Here is the exact 4-step process behind every score:
+                            </p>
+                            
+                            <div className="space-y-4">
+                                <div className="p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
+                                    <h4 className="text-emerald-400 font-bold mb-2">Step 1: Raw Data Ingestion</h4>
+                                    <p className="text-sm text-slate-300">We extract raw, audited metrics for the college. For example: <em>Average Package (12 LPA)</em>, <em>NIRF Rank (45)</em>, <em>Median Fees (8L)</em>.</p>
+                                </div>
+                                <div className="p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
+                                    <h4 className="text-indigo-400 font-bold mb-2">Step 2: Z-Score Normalization</h4>
+                                    <p className="text-sm text-slate-300">Raw numbers don't tell the full story. We compare these metrics against the <strong>national average</strong>. If a college's placement is 2 standard deviations above the mean, it earns a high mathematical Z-Score.</p>
+                                </div>
+                                <div className="p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
+                                    <h4 className="text-blue-400 font-bold mb-2">Step 3: Apply Vector Weights</h4>
+                                    <p className="text-sm text-slate-300">We multiply the normalized Z-Scores by our strictly defined weights. Placements (ROI) account for 35%, while Infrastructure accounts for only 15%. Outcomes matter more than campuses.</p>
+                                </div>
+                                <div className="p-6 bg-slate-900/50 border border-slate-800 rounded-xl">
+                                    <h4 className="text-amber-400 font-bold mb-2">Step 4: The 100-Point Scale</h4>
+                                    <p className="text-sm text-slate-300">The weighted sum is mathematically scaled onto a 0-100 curve. A CEI Score of 85+ places the institution in the top 5% nationally (Elite Band).</p>
+                                </div>
+                            </div>
+                        </section>
+
                         <section id="formula" className="main-section formula-callout">
                             <div className="formula-box">
                                 <div className="formula-icon"><BarChart4 /></div>
                                 <div className="formula-text">
-                                    <h3>Total Transparency</h3>
-                                    <p>Our formula is open. We don't sell rankings. If an institute improves its placement data or accreditation, the score updates automatically in the next audit cycle.</p>
+                                    <h3>Total Transparency & Zero Affiliation</h3>
+                                    <p>Our algorithm is deterministic and open. We do not accept payment for higher rankings. If an institute improves its placement or accreditation metrics, the mathematical model will automatically adjust their score in the next ingestion cycle.</p>
                                 </div>
                             </div>
                         </section>
@@ -215,7 +241,7 @@ export default function MethodologyPage() {
                     <h2 className="text-2xl font-bold text-white mb-2">Ready to find your match?</h2>
                     <p className="text-gray-400 mb-8">All rankings are based on the latest scoring audit from March 2026.</p>
                     <Button href="/colleges" variant="primary" size="lg">
-                        Browse Verified Results →
+                        Browse Evaluated Results →
                     </Button>
                 </div>
             </Container>

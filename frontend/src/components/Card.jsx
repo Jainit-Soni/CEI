@@ -1,9 +1,13 @@
-﻿import { memo } from "react";
+import { memo } from "react";
+import { Sparkles, ExternalLink, FileText, Globe } from "lucide-react";
 import TrustBadge from "./TrustBadge";
 import AddToCompareButton from "./AddToCompareButton";
+import { useAuth } from "@/lib/AuthContext";
+import { useComparator } from "@/hooks/useComparator";
 import FavoriteButton from "./FavoriteButton";
 import AddToChoiceButton from "./AddToChoiceButton";
 import PredictionBadge from "./PredictionBadge";
+import FitBadge from "./FitBadge";
 import "./Card.css";
 
 function Card({ title, subtitle, tags = [], meta = [], type = "default", variant, href, trust, badge, data = {}, ...props }) {
@@ -26,72 +30,117 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
     shortName: data?.shortName || title || data?.name
   };
 
-  const card = (
-    <div className={`card card-${resolvedType}`} data-tier={tierTag || undefined} data-type={resolvedType}>
-      {/* 1. AI Prediction Badge (Top Priority) */}
-      {resolvedType === "college" && <PredictionBadge college={collegeData} />}
+  const { user } = useAuth();
+  const { setGhostCollege } = useComparator();
+  const isCollege = type === 'college';
 
-      {/* 2. Manual Badge (e.g. "Admissions Open") */}
-      {badge && !(<PredictionBadge college={collegeData} />) && (
-        <div className="card-badge" style={{ backgroundColor: badge.color }}>
+  const card = (
+    <div
+      className={`card card-${resolvedType} ${isCollege ? 'cursor-pointer' : ''}`}
+      data-tier={tierTag || undefined}
+      data-type={resolvedType}
+      onMouseEnter={() => isCollege && setGhostCollege(data)}
+      onMouseLeave={() => isCollege && setGhostCollege(null)}
+    >
+      {/* 1. Intelligent Fit Signal */}
+      {resolvedType === "college" && data?.fit && (
+        <FitBadge fit={data.fit} compact />
+      )}
+
+      {/* 2. Manual Badge (e.g. "Admissions Open" or "Dream/Match") */}
+      {badge && (
+        <div className="card-badge" style={{ backgroundColor: badge.color || '#6366f1' }}>
           {badge.text}
         </div>
       )}
+
       <div className="card-top">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
           <div className="card-heading-group">
-            <h3 className="card-full-name">{title || data?.name || data?.shortName || "Unknown Institute"}</h3>
-            {data?.shortName && data.shortName !== title && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+              <h3 className="card-full-name" title={data?.displayName || title || data?.name || data?.shortName}>
+                {data?.displayName || title || data?.name || data?.shortName || "Unknown Institute"}
+              </h3>
+              {resolvedType === 'college' && (
+                <TrustBadge 
+                  source={data?.trustSource || data?.source || trust?.source} 
+                  lastUpdated={data?.updatedAt || trust?.lastUpdated}
+                />
+              )}
+            </div>
+            {data?.shortName && data.shortName !== title && !data?.displayName?.includes(`(${data.shortName})`) && (
               <span className="card-acronym">{data.shortName}</span>
             )}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px' }}>
-            {data?.ceiScore > 0 && (
+            {/* CEI Score Badge - ALWAYS show if score exists */}
+            {(data?.ceiScore > 0 || trust?.score > 0) && (
               <div
-                title={`${data.competitivenessBand || 'Evaluated'} Tier: ${data.ceiScore.toFixed(1)}`}
+                className="cc-cei-badge"
+                title={`CEI Score: ${(data?.ceiScore || trust?.score)?.toFixed(2)}`}
                 style={{
-                  background: 'linear-gradient(135deg, #111827, #374151)',
-                  color: '#fbbf24',
+                  background: (data?.ceiScore || trust?.score) >= 75 ? 'linear-gradient(135deg, #1e1b4b, #312e81)' : 'linear-gradient(135deg, #f8fafc, #f1f5f9)',
+                  color: (data?.ceiScore || trust?.score) >= 75 ? '#fbbf24' : '#64748b',
                   fontWeight: '700',
-                  padding: '4px 10px',
+                  padding: '6px 12px',
                   borderRadius: '12px',
-                  fontSize: '0.75rem',
+                  fontSize: '0.85rem',
                   display: 'flex',
+                  flexDirection: 'column',
                   alignItems: 'center',
-                  gap: '4px',
-                  boxShadow: '0 2px 4px rgba(0,0,0,0.15)',
-                  border: '1px solid #4b5563'
+                  minWidth: '70px',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+                  border: (data?.ceiScore || trust?.score) >= 75 ? '1.5px solid #fbbf24' : '1px solid #e2e8f0'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                  {Math.round(data.ceiScore)} CEI Score
+                <div style={{ fontSize: '0.65rem', textTransform: 'uppercase', opacity: 0.8, letterSpacing: '0.05em', marginBottom: '2px' }}>
+                  CEI Score
                 </div>
-                {data.ceiScore >= 80 && (
-                  <div className="verification-badge" style={{ fontSize: '9px', color: '#10b981', background: '#ecfdf5', padding: '2px 6px', borderRadius: '8px', border: '1px solid #d1fae5', marginTop: '2px', textAlign: 'center' }}>
-                    Verified Elite
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '1rem' }}>
+                  <span className="cc-cei-value">
+                    {(data?.ceiScore || trust?.score).toFixed(2)}
+                  </span>
+                </div>
+                {(data?.ceiScore >= 85 || (trust?.score >= 85)) && (
+                  <div style={{ fontSize: '9px', color: '#10b981', marginTop: '2px', fontWeight: '800' }}>
+                    ELITE
                   </div>
                 )}
               </div>
             )}
-            {trust && <TrustBadge {...trust} />}
-            {isExam && data?.registrationDeadline && (
-              <div className="exam-status-badge">
-                <span className="dot animate-pulse"></span>
-                Deadline: {data.registrationDeadline}
-              </div>
-            )}
-            {isScholarship && data?.deadline && (
-              <div className="scholarship-status-badge">
-                <span className="dot animate-pulse"></span>
-                Apply by: {data.deadline}
+            
+            {isExam && props.userScore && (
+              <div className="exam-meta-badges">
+                <div className="user-score-badge">
+                  <Sparkles size={12} className="text-amber-500" />
+                  <span>Your Score: {props.userScore}</span>
+                </div>
               </div>
             )}
           </div>
         </div>
-        {subtitle || data?.location ? <p className="card-subtitle">{subtitle || data?.location}</p> : null}
+        
+        {(subtitle || data?.location) && (
+          <p className="card-subtitle" title={subtitle || data?.location}>
+            {(subtitle || data?.location)}
+          </p>
+        )}
+
+        {/* Prediction Signal for Colleges */}
+        {resolvedType === 'college' && (
+          <PredictionBadge college={data} />
+        )}
+
+        {isScholarship && data?.deadline && (
+          <div className="scholarship-status-badge mt-2">
+            <span className="dot animate-pulse"></span>
+            Apply by: {data.deadline}
+          </div>
+        )}
       </div>
+
       <div className="card-refraction-overlay" aria-hidden="true" />
+      
       {tags.length > 0 && (
         <div className="card-tags">
           {tags.map((t) => (
@@ -99,10 +148,11 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
           ))}
         </div>
       )}
+
       {metaList.length > 0 && (
         <div className="card-meta">
           {metaList.map((m, i) => (
-            <span key={i}>{m}</span>
+            m ? <span key={i}>{m}</span> : null
           ))}
         </div>
       )}
@@ -122,6 +172,44 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
           <AddToChoiceButton college={collegeData} />
         </div>
       )}
+
+      {isExam && !props.hideFooter && (
+        <div
+          className="card-footer card-footer--exam"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          }}
+        >
+          <div className="card-footer-left">
+            {data.officialUrl && (
+              <a 
+                href={data.officialUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="icon-action-btn" 
+                title="Official Website"
+              >
+                <Globe size={16} />
+              </a>
+            )}
+            {data.pastPapers?.length > 0 && (
+              <a 
+                href={data.pastPapers[0].url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="icon-action-btn" 
+                title="Past Papers"
+              >
+                <FileText size={16} />
+              </a>
+            )}
+          </div>
+          <a href={href} className="view-details-btn">
+            View Details
+          </a>
+        </div>
+      )}
     </div>
   );
 
@@ -138,7 +226,4 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
   ) : card;
 }
 
-export default memo(Card, (prevProps, nextProps) => {
-  // Strict primitive equality checking to prevent 68k layout thrashing
-  return prevProps.data?.id === nextProps.data?.id && prevProps.href === nextProps.href;
-});
+export default memo(Card);

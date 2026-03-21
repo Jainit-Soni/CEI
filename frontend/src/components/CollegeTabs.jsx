@@ -15,6 +15,10 @@ import DataConfidenceBadge from "./DataConfidenceBadge";
 import DataSourcesPanel from "./DataSourcesPanel";
 import ImprovementSimulator from "./ImprovementSimulator";
 import Nexus3DCore from "./Nexus3DCore";
+import TruthSeatsSection from "./college/TruthSeatsSection";
+import TruthCutoffsSection from "./college/TruthCutoffsSection";
+import TruthFeesSection from "./college/TruthFeesSection";
+import TruthPlacementsSection from "./college/TruthPlacementsSection";
 import { fetchReviews as getReviews } from "@/lib/api";
 import "./CollegeTabs.css";
 
@@ -27,24 +31,39 @@ const CollegeRadarChart = dynamic(() => import("./CollegeRadarChart"), {
 });
 
 const parseCurrency = (str) => {
-    if (!str) return 0;
-    let clean = str.toString().toLowerCase().replace(/,/g, '').replace(/₹/g, '').replace(/rs\.?/g, '').trim();
+    if (!str || typeof str !== 'string') return 0;
+    
+    // Normalize string
+    let clean = str.toLowerCase().replace(/,/g, '').replace(/₹/g, '').replace(/rs\.?/g, '').trim();
     let multiplier = 1;
 
+    // Detect multipliers
     if (clean.includes('cr') || clean.includes('crore')) {
         multiplier = 10000000;
         clean = clean.replace(/crores?/g, '').replace(/cr/g, '');
     } else if (clean.includes('lakh') || clean.includes('lpa')) {
         multiplier = 100000;
         clean = clean.replace(/lakhs?/g, '').replace(/lpa/g, '');
+    } else if (clean.includes('k')) {
+        multiplier = 1000;
+        clean = clean.replace(/k/g, '');
     }
 
-    const match = clean.match(/[\d\.]+/);
-    if (!match) return 0;
+    // Handle ranges (e.g., "15-25")
+    const ranges = clean.match(/[\d\.]+/g);
+    if (!ranges || ranges.length === 0) return 0;
 
-    let val = parseFloat(match[0]);
+    // If it's a range, take the average
+    let val = 0;
+    if (ranges.length >= 2) {
+        val = (parseFloat(ranges[0]) + parseFloat(ranges[1])) / 2;
+    } else {
+        val = parseFloat(ranges[0]);
+    }
+
     if (isNaN(val)) return 0;
 
+    // Intelligent heuristic for unit-less numbers (if < 500, assume Lakhs for salaries)
     if (multiplier === 1 && val > 0 && val < 500) {
         multiplier = 100000;
     }
@@ -68,14 +87,27 @@ export default function CollegeTabs({ college }) {
     const avgPkg = sanitizeCurrency(college.placements?.averagePackage);
     const highPkg = sanitizeCurrency(college.placements?.highestPackage);
 
-    const tabs = [
+    const rawTabs = [
         { id: "overview", label: "Overview", icon: "🏢" },
+        { id: "seats", label: "Seats / Intake", icon: "🪑" },
         { id: "cutoffs", label: "Cutoffs", icon: "📊" },
+        { id: "fees", label: "Fees", icon: "💰" },
         { id: "placements", label: "Placements", icon: "💼" },
         { id: "intelligence", label: "CEI Intelligence", icon: "🧠" },
-        { id: "roi", label: "ROI Analysis", icon: "💰" },
+        { id: "roi", label: "ROI Analysis", icon: "🧮" },
         { id: "reviews", label: "Reviews", icon: "⭐" }
     ];
+
+    // Filter tabs based on backend-provided visibility map
+    const availableSections = college.availableSections || {
+        overview: "show",
+        seats: "show",
+        cutoffs: "show",
+        intelligence: "show",
+        reviews: "show"
+    };
+
+    const tabs = rawTabs.filter(tab => availableSections[tab.id] === "show");
 
     const fetchReviews = async () => {
         try {
@@ -123,65 +155,82 @@ export default function CollegeTabs({ college }) {
 
                 {activeTab === "overview" && (
                     <div className="tab-pane fade-in">
-                        <div className="premium-tab-card">
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '10px', marginBottom: '12px' }}>
-                                <h3 className="tab-heading" style={{ margin: 0 }}>About {college.shortName || "Institute"}</h3>
-                                {college.dataConfidenceLabel && (
-                                    <DataConfidenceBadge
-                                        label={college.dataConfidenceLabel}
-                                        score={college.dataIntegrityScore}
-                                    />
-                                )}
-                            </div>
-                            <p className="overview-text">
-                                {college.overview || `${college.name} is a premier institute located in ${college.location}. It offers a wide range of programs and has a strong reputation for academic excellence.`}
-                            </p>
+                        <div className="overview-layout">
+                            {/* Primary Intel Block */}
+                                <div className="intel-content">
+                                    <div className="overview-grid-v7">
+                                        <div className="overview-main-v7">
+                                            <h3 className="tab-heading">Institutional Identity</h3>
+                                            <p className="tab-description-v7">
+                                                {college.name} serves as a key node in the {college.state} higher education matrix. 
+                                                Classified as a {college.ownership || college.type} institution, it maintains active evaluated data layers for intake and admissions.
+                                            </p>
 
-                            <div className="detail-meta-blocks">
-                                <div className="meta-block">
-                                    <strong>Campus Size</strong>
-                                    {/* Use meta.campusSize if available, otherwise check if campus field looks like a size, else N/A */}
-                                    <span>{college.meta?.campusSize || (college.campus && college.campus.includes("Acres") ? college.campus : "N/A")}</span>
+                                            <div className="foundation-grid-v7">
+                                                <div className="foundation-box-v7">
+                                                    <span className="fb-label">Established Authority</span>
+                                                    <span className="fb-value">{college.university || 'Independent / Autonomous'}</span>
+                                                </div>
+                                                <div className="foundation-box-v7">
+                                                    <span className="fb-label">Regional Presence</span>
+                                                    <span className="fb-value">{college.city}, {college.state}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="program-inventory-v7">
+                                            <div className="pi-header-v7">
+                                                <h3 className="tab-heading">Program Inventory</h3>
+                                                <div className="pi-count-v7">{college.courses?.length || 0} Modules</div>
+                                            </div>
+                                            
+                                            <div className="program-grid">
+                                                {(college.courses || []).slice(0, showAllPrograms ? undefined : 8).map((course, idx) => (
+                                                    <div key={idx} className="program-mini-card">
+                                                        <div className="pmc-name">{course.courseName || course.name}</div>
+                                                        <div className="pmc-footer">
+                                                            {course.degree && <span className="pmc-tag">{course.degree}</span>}
+                                                            {course.durationYears && <span className="pmc-tag">{course.durationYears} Years</span>}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            {college.courses?.length > 8 && (
+                                                <button
+                                                    className="intel-action-btn mt-6"
+                                                    onClick={() => setShowAllPrograms(!showAllPrograms)}
+                                                >
+                                                    {showAllPrograms ? "Show Less" : `View all ${college.courses.length} programs`}
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="meta-block">
-                                    <strong>Ownership</strong>
-                                    <span>{college.meta?.ownership || "Private"}</span>
-                                </div>
-                                <div className="meta-block">
-                                    <strong>Estd. Year</strong>
-                                    <span>{college.meta?.establishedYear || "—"}</span>
-                                </div>
-                            </div>
                         </div>
 
-                        {/* Interactive Data Visualization */}
-                        <div className="premium-tab-card mt-6">
-                            <h3 className="tab-heading">Performance Radar</h3>
-                            <p className="overview-text mb-4 text-sm">
-                                AI-synthesized performance footprint based on national ranking, historical metadata, and tier level.
-                            </p>
-                            <CollegeRadarChart college={college} />
+                        {/* Performance Radar */}
+                        <div className="premium-tab-card radar-intel-card">
+                            <div className="intel-header mb-8">
+                                <div className="intel-header-info">
+                                    <h3 className="tab-heading">Performance Vector</h3>
+                                    <p className="tab-subheading">AI-synthesized footprint based on national validation and institutional tier.</p>
+                                </div>
+                            </div>
+                            <div className="radar-container">
+                                <CollegeRadarChart college={college} />
+                            </div>
                         </div>
+                    </div>
+                )}
 
+                {activeTab === "seats" && (
+                    <div className="tab-pane fade-in">
                         <div className="premium-tab-card">
-                            <h3 className="tab-heading">Programs Offered</h3>
-                            <ul className="program-list-compact">
-                                {(college.courses || []).slice(0, showAllPrograms ? undefined : 6).map((course, idx) => (
-                                    <li key={idx}>
-                                        <span className="prog-name">{course.name}</span>
-                                        <span className="prog-dur">{course.duration}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                            {college.courses?.length > 6 && (
-                                <button
-                                    className="show-more-btn"
-                                    onClick={() => setShowAllPrograms(!showAllPrograms)}
-                                    style={{ marginTop: '12px', background: 'transparent', border: '1px solid #e5e7eb', padding: '6px 12px', borderRadius: '6px', fontSize: '0.85rem', cursor: 'pointer', color: '#374151' }}
-                                >
-                                    {showAllPrograms ? "Show Less" : `Show all ${college.courses.length} programs`}
-                                </button>
-                            )}
+                            <h3 className="tab-heading">Seats & Intake</h3>
+                            <p className="overview-text mb-6">
+                                Evaluated intake and program-wise seat availability from official regulatory sources.
+                            </p>
+                            <TruthSeatsSection collegeId={college.id} />
                         </div>
                     </div>
                 )}
@@ -189,82 +238,36 @@ export default function CollegeTabs({ college }) {
                 {activeTab === "cutoffs" && (
                     <div className="tab-pane fade-in">
                         <div className="premium-tab-card">
-                            <div className="cutoff-header">
-                                <h3 className="tab-heading" style={{ margin: 0 }}>Accepted Exams</h3>
-                                <div className="exam-badges">
-                                    {(college.acceptedExams || []).map(e => (
-                                        <span key={e} className="exam-badge">
-                                            {/* Clean exam name: remove year patterns like 2024, 2023 */}
-                                            {e.replace(/\s*20\d\d\s*/, "").toUpperCase()}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {college.pastCutoffs?.length > 0 ? (
-                                <div className="cutoff-list">
-                                    {college.pastCutoffs.map((cutoff, idx) => (
-                                        <div key={idx} className="cutoff-row">
-                                            <div className="cutoff-exam">{cutoff.examId.replace(/\s*20\d\d\s*/, "").toUpperCase()} {cutoff.year}</div>
-                                            <div className="cutoff-data">
-                                                {cutoff.cutoff.toLowerCase().includes("check official website") ? (
-                                                    <a
-                                                        href={college.officialUrl}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="cutoff-link"
-                                                        style={{ color: '#2563eb', textDecoration: 'underline', cursor: 'pointer' }}
-                                                    >
-                                                        Check Official Website ↗
-                                                    </a>
-                                                ) : (
-                                                    cutoff.cutoff.split('|').map((c, i) => (
-                                                        <span key={i} className="cutoff-chip">{c.trim()}</span>
-                                                    ))
-                                                )}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            ) : (
-                                <div className="empty-tab-state">
-                                    Detailed cutoff data is being aggregated. Please check back soon.
-                                </div>
-                            )}
+                            <h3 className="tab-heading">Cutoffs & Thresholds</h3>
+                            <p className="overview-text mb-6">
+                                Evaluated admission thresholds including opening/closing ranks across all categories, quotas, and rounds.
+                            </p>
+                            <TruthCutoffsSection collegeId={college.id} />
                         </div>
                     </div>
                 )}
 
                 {activeTab === "placements" && (
                     <div className="tab-pane fade-in">
-                        {college.placements && college.isPremium ? (
-                            <div className="premium-tab-card">
-                                <h3 className="tab-heading">Placement Highlights 🚀</h3>
-                                <div className="placement-grid-premium">
-                                    <div className="placement-card highlight">
-                                        <span className="p-label">Average Package</span>
-                                        <span className="p-value">{avgPkg}</span>
-                                    </div>
-                                    <div className="placement-card">
-                                        <span className="p-label">Highest Package</span>
-                                        <span className="p-value">{highPkg}</span>
-                                    </div>
-                                </div>
+                        <div className="premium-tab-card">
+                            <h3 className="tab-heading">Placement Records</h3>
+                            <p className="overview-text mb-6">
+                                Evaluated institutional placement outcomes including salary packages and employment rates.
+                            </p>
+                            <TruthPlacementsSection collegeId={college.id} />
+                        </div>
+                    </div>
+                )}
 
-                                <div className="recruiters-section">
-                                    <h4 style={{ marginBottom: '16px', fontWeight: '600', color: '#334155' }}>Top Recruiters</h4>
-                                    <div className="recruiters-cloud">
-                                        {(college.topRecruiters || []).map((r, i) => (
-                                            <span key={i} className="recruiter-tag">{r}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="premium-tab-card empty-tab-state">
-                                Placement reports are yet to be officially verified for this institute.
-                            </div>
-                        )}
+                {activeTab === "fees" && (
+                    <div className="tab-pane fade-in">
+                        <div className="premium-tab-card">
+                            <h3 className="tab-heading">Fee Structure</h3>
+                            <p className="overview-text mb-6">
+                                Official institutional fee breakdown evaluated from regulatory orders and institute disclosures.
+                            </p>
+                            <TruthFeesSection collegeId={college.id} />
+                        </div>
                     </div>
                 )}
 

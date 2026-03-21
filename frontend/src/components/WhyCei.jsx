@@ -9,7 +9,7 @@ export default function WhyCei() {
     {
       id: "trusted-data",
       title: "Trusted structure, not anecdotes",
-      body: "CEI draws from verified sources, cross‑checks anomalies, and surfaces confidence so you always know which numbers are firm and which are soft.",
+      body: "CEI draws from evaluated sources, cross‑checks anomalies, and surfaces confidence so you always know which numbers are firm and which are soft.",
     },
     {
       id: "decision-context",

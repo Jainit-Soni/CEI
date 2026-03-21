@@ -1,230 +1,137 @@
 "use client";
 
-import Container from "@/components/Container";
+import React from "react";
 import Link from "next/link";
-import { ShieldCheck, Scale, Gavel, Lock, Info, ExternalLink, ChevronRight } from "lucide-react";
+import { ShieldAlert, Scale, FileText, AlertTriangle, ShieldCheck } from "lucide-react";
 
-export default function TermsAndConditionsPage() {
-    const lastUpdated = "February 13, 2026";
-
+export default function TermsAndConditions() {
     return (
-        <div className="legal-page" style={{
-            paddingTop: '120px',
-            paddingBottom: '100px',
-            background: '#f8fafc',
-            color: '#334155'
-        }}>
-            <Container>
-                <div className="legal-layout" style={{
-                    maxWidth: '900px',
-                    margin: '0 auto'
-                }}>
-                    {/* Header Section */}
-                    <div className="legal-header" style={{ marginBottom: '60px', textAlign: 'center' }}>
-                        <div style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '10px',
-                            background: '#eff6ff',
-                            color: '#2563eb',
-                            padding: '8px 20px',
-                            borderRadius: '99px',
-                            fontSize: '0.9rem',
-                            fontWeight: 700,
-                            marginBottom: '24px',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.05em'
-                        }}>
-                            <ShieldCheck size={18} />
-                            Universal Legal Framework
-                        </div>
-                        <h1 style={{
-                            fontSize: '3.5rem',
-                            fontWeight: 900,
-                            color: '#1e3a8a',
-                            marginBottom: '16px',
-                            letterSpacing: '-0.02em'
-                        }}>
-                            Terms & <span style={{ color: '#2563eb' }}>Conditions</span>
-                        </h1>
-                        <p style={{ color: '#64748b', fontSize: '1.1rem', fontWeight: 500 }}>
-                            Incorporating Privacy Policy & Usage Guidelines • Last Updated: {lastUpdated}
-                        </p>
-                    </div>
-
-                    {/* Quick Access Grid */}
-                    <div className="legal-nav-grid" style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                        gap: '16px',
-                        marginBottom: '60px'
-                    }}>
-                        {[
-                            { icon: Info, label: "Usage Terms", id: "usage" },
-                            { icon: Lock, label: "Privacy & Data", id: "privacy" },
-                            { icon: Scale, label: "Liability Shield", id: "liability" },
-                            { icon: Gavel, label: "Jurisdiction", id: "legal" }
-                        ].map((item, i) => (
-                            <a key={i} href={`#${item.id}`} style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '12px',
-                                padding: '16px',
-                                background: 'white',
-                                borderRadius: '12px',
-                                border: '1px solid #e2e8f0',
-                                textDecoration: 'none',
-                                color: '#1e3a8a',
-                                fontWeight: 700,
-                                transition: 'all 0.2s'
-                            }} className="legal-nav-item">
-                                <item.icon size={20} color="#2563eb" />
-                                {item.label}
-                            </a>
-                        ))}
-                    </div>
-
-                    {/* Main Content */}
-                    <div className="legal-body" style={{
-                        background: 'white',
-                        padding: '60px',
-                        borderRadius: '32px',
-                        border: '1px solid #e2e8f0',
-                        boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-                        lineHeight: 1.8,
-                        fontSize: '1.05rem'
-                    }}>
-
-                        {/* 1. INTRODUCTION */}
-                        <section id="introduction" style={{ marginBottom: '60px' }}>
-                            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                <ChevronRight color="#2563eb" /> 1. Overview and Acceptance
-                            </h2>
-                            <p>
-                                Welcome to CEI (the "Platform"). By accessing or using our websites, services, applications, and tools, you acknowledge that you have read, understood, and agreed to be bound by the terms and conditions set forth in this document (the "Agreement").
-                            </p>
-                            <p style={{ marginTop: '16px', background: '#fff7ed', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #f97316', fontWeight: 600, color: '#9a3412' }}>
-                                MANDATORY NOTICE: This is a legally binding agreement. If you do not agree to any part of these terms, you are NOT authorized to use the Platform and must cease all usage immediately.
-                            </p>
-                        </section>
-
-                        {/* 2. NATURE OF SERVICE */}
-                        <section id="usage" style={{ marginBottom: '60px' }}>
-                            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                <ChevronRight color="#2563eb" /> 2. "Reference Only" Nature of Service
-                            </h2>
-                            <p>
-                                CEI operates as an automated data aggregator and information intermediary. We collect, synthesize, and present educational data—including but not limited to college rankings, fee structures, cutoffs, and placement statistics—for **general reference purposes only**.
-                            </p>
-                            <ul style={{ paddingLeft: '20px', marginTop: '16px' }}>
-                                <li style={{ marginBottom: '12px' }}><strong>Intermediary Status:</strong> Pursuant to Section 79 of the Information Technology Act (India), 2000, CEI claims safe harbor protection as an intermediary providing access to third-party information.</li>
-                                <li style={{ marginBottom: '12px' }}><strong>No Representation:</strong> CEI is not an official representative, affiliate, or agent of any listed institution, university, or government board.</li>
-                                <li style={{ marginBottom: '12px' }}><strong>Verification Mandate:</strong> Users are expressly mandated to cross-verify all Platform data with official government gazettes, university websites, or counseling portals (e.g., MCC, JOSAA, AICTE) before making any academic or financial commitments.</li>
-                            </ul>
-                        </section>
-
-                        {/* 3. PRIVACY & DATA POLICY */}
-                        <section id="privacy" style={{ marginBottom: '60px' }}>
-                            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                <ChevronRight color="#2563eb" /> 3. Comprehensive Privacy Policy
-                            </h2>
-                            <p>
-                                Your privacy is integral to our operation. This section outlines our data practices in compliance with global standards and the Digital Personal Data Protection (DPDP) norms.
-                            </p>
-                            <div style={{ marginTop: '20px', padding: '24px', background: '#f8fafc', borderRadius: '16px' }}>
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '12px' }}>A. Data We Collect</h3>
-                                <p style={{ fontSize: '0.95rem' }}>
-                                    • <strong>Registration Data:</strong> Email addresses and names provided during account creation, managed via Firebase Authentication.<br />
-                                    • <strong>User Preferences:</strong> Stored lists, selections, and filtered choices saved to our Redis high-performance synchronization layer.<br />
-                                    • <strong>Technical Logs:</strong> IP addresses, browser types, and navigation paths collected for security audit and performance optimization.
-                                </p>
-                            </div>
-                            <div style={{ marginTop: '20px', padding: '24px', background: '#f8fafc', borderRadius: '16px' }}>
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '12px' }}>B. Usage of Data</h3>
-                                <p style={{ fontSize: '0.95rem' }}>
-                                    We do NOT sell personal user data to third-party advertisers. Collected data is used exclusively to:
-                                    <br />1. Facilitate cloud-sync for your college priority lists.
-                                    <br />2. Provide personalized "Strategic Choice" suggestions.
-                                    <br />3. Maintain the integrity of our voting and rating systems.
-                                </p>
-                            </div>
-                        </section>
-
-                        {/* 4. LIABILITY SHIELD */}
-                        <section id="liability" style={{ marginBottom: '60px' }}>
-                            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                <ChevronRight color="#2563eb" /> 4. Disclaimers and Liability Shield
-                            </h2>
-                            <div style={{ background: '#f1f5f9', padding: '30px', borderRadius: '20px', borderLeft: '8px solid #1e3a8a' }}>
-                                <p style={{ fontWeight: 700, textTransform: 'uppercase', fontSize: '0.9rem', marginBottom: '16px', color: '#1e3a8a' }}>Absolute Limitation of Liability</p>
-                                <p style={{ fontSize: '0.95rem', lineHeight: 2 }}>
-                                    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, CEI AND ITS OPERATORS SHAL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO:
-                                    (I) ERRORS IN FEE CALCULATIONS, (II) MISSED ADMISSION DEADLINES, (III) LOSS OF SEAT IN ANY INSTITUTION, OR (IV) ANY ACADEMIC DISRUPTIONS.
-                                    ALL DATA IS PROVIDED "AS IS" AND "AS AVAILABLE". WE EXPRESSLY DISCLAIM ANY WARRANTIES OF ACCURACY, COMPLETENESS, OR FITNESS FOR A PARTICULAR PURPOSE.
-                                </p>
-                            </div>
-                        </section>
-
-                        {/* 5. LEGAL JURISDICTION */}
-                        <section id="legal">
-                            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                <ChevronRight color="#2563eb" /> 5. Intellectual Property & Jurisdiction
-                            </h2>
-                            <p>
-                                The proprietary algorithms, "Selection Intelligence" UI, and synthesized data sets are the intellectual property of CEI. Unauthorized automated scraping or commercial redistribution of this data is strictly prohibited and will be prosecuted to the fullest extent of the law.
-                            </p>
-                            <p style={{ marginTop: '16px' }}>
-                                <strong>Jurisdiction:</strong> These terms are governed by the laws of India. Any litigation or legal proceeding shall be subject to the exclusive jurisdiction of the courts located within our primary city of operations.
-                            </p>
-                        </section>
-
-                    </div>
-
-                    {/* Footer CTA */}
-                    <div style={{
-                        marginTop: '40px',
-                        textAlign: 'center',
-                        padding: '40px',
-                        background: '#1e3a8a',
-                        borderRadius: '24px',
-                        color: 'white'
-                    }}>
-                        <ShieldCheck size={48} style={{ marginBottom: '20px', opacity: 0.8 }} />
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '12px' }}>Committed to Transparency</h3>
-                        <p style={{ opacity: 0.8, marginBottom: '32px', maxWidth: '500px', margin: '0 auto 32px' }}>
-                            We believe in empowering students through data while maintaining the highest standards of legal and ethical conduct.
-                        </p>
-                        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                            <Link href="/" style={{
-                                background: 'white',
-                                color: '#1e3a8a',
-                                padding: '12px 32px',
-                                borderRadius: '12px',
-                                fontWeight: 700,
-                                textDecoration: 'none'
-                            }}>Return Home</Link>
-                            <Link href="/guide" style={{
-                                border: '1px solid rgba(255,255,255,0.3)',
-                                color: 'white',
-                                padding: '12px 32px',
-                                borderRadius: '12px',
-                                fontWeight: 600,
-                                textDecoration: 'none'
-                            }}>Read Guide</Link>
-                        </div>
-                    </div>
+        <main className="min-h-screen bg-slate-950 text-slate-300 py-32 px-6 sm:px-12 relative overflow-hidden">
+            {/* Background elements */}
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-slate-950 -z-10"></div>
+            <div className="absolute top-40 right-[-10%] w-[40rem] h-[40rem] bg-indigo-900/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            
+            <div className="max-w-4xl mx-auto">
+                <div className="flex items-center gap-3 mb-6 text-indigo-400">
+                    <Scale size={32} />
+                    <span className="font-bold tracking-widest uppercase text-sm">Legal & Compliance</span>
                 </div>
-            </Container>
+                
+                <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+                    Terms, Conditions & <br className="hidden md:block" /> Comprehensive Disclaimer
+                </h1>
+                
+                <p className="text-slate-400 text-lg mb-12 max-w-2xl leading-relaxed">
+                    By accessing or using the College Essentials of India (CEI) platform, you explicitly agree to these terms. If you do not agree to be bound by these provisions, you must immediately cease usage of this platform.
+                </p>
 
-            <style jsx>{`
-                .legal-nav-item:hover {
-                    border-color: #2563eb !important;
-                    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-                    transform: translateY(-2px);
-                }
-                section { scroll-margin-top: 140px; }
-                p { margin-bottom: 20px; }
-            `}</style>
-        </div>
+                {/* Quick Nav */}
+                <div className="flex flex-wrap gap-3 mb-16 p-4 bg-slate-900/50 border border-slate-800 rounded-2xl backdrop-blur-sm">
+                    <a href="#disclaimer" className="text-sm px-4 py-2 bg-slate-800 hover:bg-slate-700 hover:text-white rounded-lg transition-colors">1. Disclaimer of Liability</a>
+                    <a href="#predictive" className="text-sm px-4 py-2 bg-slate-800 hover:bg-slate-700 hover:text-white rounded-lg transition-colors">2. Predictive Engine Notice</a>
+                    <a href="#privacy" className="text-sm px-4 py-2 bg-slate-800 hover:bg-slate-700 hover:text-white rounded-lg transition-colors">3. Privacy Policy</a>
+                    <a href="#intellectual" className="text-sm px-4 py-2 bg-slate-800 hover:bg-slate-700 hover:text-white rounded-lg transition-colors">4. Intellectual Property</a>
+                </div>
+
+                <div className="space-y-16">
+                    
+                    {/* SECTION 1: Disclaimer of Liability */}
+                    <section id="disclaimer" className="scroll-mt-32">
+                        <div className="flex items-center gap-3 mb-6">
+                            <ShieldAlert className="text-rose-500" size={24} />
+                            <h2 className="text-2xl font-bold text-white">1. Absolute Disclaimer of Liability</h2>
+                        </div>
+                        <div className="p-6 bg-rose-950/20 border border-rose-900/50 rounded-2xl text-rose-200/80 mb-6 font-mono text-sm leading-relaxed">
+                            THE CEI PLATFORM, INCLUDING ALL DATA, SCORES, RANKINGS, AND PREDICTIVE ENGINES, IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. UNDER NO CIRCUMSTANCES SHALL COLLEGE ESSENTIALS OF INDIA, ITS CREATORS, AFFILIATES, OR DATA PROVIDERS BE HELD LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THIS PLATFORM.
+                        </div>
+                        <div className="prose prose-invert prose-slate max-w-none">
+                            <p>
+                                <strong>Information Accuracy:</strong> While we utilize complex data aggregation and mathematical modeling, CEI acts exclusively as an algorithmic intelligence layer. We do not guarantee the absolute accuracy, completeness, or timeliness of any data (including fees, placement statistics, cutoffs, or admission statuses).
+                            </p>
+                            <p>
+                                <strong>No Legal Endorsement:</strong> The term "Verified" or "Evaluated" on our platform strictly refers to mathematical data normalization protocols and does NOT constitute a legal endorsement, accreditation, or partnership with any university or institution.
+                            </p>
+                            <p>
+                                <strong>User Responsibility:</strong> You must independently verify all information (such as application deadlines, eligibility criteria, and fee structures) directly with the official institution authorities before making any financial or academic decisions. We bear zero liability for missed deadlines, rejected applications, or financial loss.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* SECTION 2: Predictive Engine Notice */}
+                    <section id="predictive" className="scroll-mt-32">
+                        <div className="flex items-center gap-3 mb-6">
+                            <AlertTriangle className="text-amber-500" size={24} />
+                            <h2 className="text-2xl font-bold text-white">2. Predictive Engine & Algorithms</h2>
+                        </div>
+                        <div className="prose prose-invert prose-slate max-w-none">
+                            <p>
+                                The CEI platform features proprietary predictive technology, including the <strong>Admission Predictor</strong>, <strong>ROI Simulator</strong>, and <strong>CEI Score (Z-Score Percentile)</strong>.
+                            </p>
+                            <ul className="list-disc pl-5 mt-4 space-y-2">
+                                <li><strong>Not a Guarantee:</strong> The Admission Predictor relies on historical cutoff data and Monte Carlo simulations. An indication of a "Safe" or "High Probability" match is an algorithmic estimate, <strong>not an admission guarantee</strong>. Actual admission depends on cohort dynamics, changing institutional policies, and reservation matrices which are outside our control.</li>
+                                <li><strong>ROI Simulator Variability:</strong> Projected salaries and Return on Investment (ROI) trajectories are estimations based on past declared placements. Past performance does not guarantee future outcomes. CEI holds zero liability for disparate career outcomes.</li>
+                                <li><strong>Methodology:</strong> You may review our open-source <Link href="/methodology" className="text-indigo-400 hover:text-indigo-300 underline">Ranking Methodology</Link>, which uses standardized vectors to normalize institutional performance. We reserve the right to alter the weightage and algorithms at any time without prior notice.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    {/* SECTION 3: Privacy Policy */}
+                    <section id="privacy" className="scroll-mt-32">
+                        <div className="flex items-center gap-3 mb-6">
+                            <ShieldCheck className="text-emerald-500" size={24} />
+                            <h2 className="text-2xl font-bold text-white">3. Privacy Policy</h2>
+                        </div>
+                        <div className="prose prose-invert prose-slate max-w-none">
+                            <p>
+                                This Privacy Policy is incorporated into, and is subject to, these Terms and Conditions. By utilizing the CEI platform, you consent to our data collection and processing practices.
+                            </p>
+                            <h3>Data Collection & Usage</h3>
+                            <ul className="list-disc pl-5 space-y-2 mt-4">
+                                <li><strong>Account Information:</strong> If you use authenticated features (e.g., Firebase Auth), we securely store your email and profile name. We do not sell your personal identifying information to third parties.</li>
+                                <li><strong>Academic Telemetry:</strong> To power the Admission Predictor and Choice Filling algorithms, we locally or remotely store the mock scores and exam percentiles you input.</li>
+                                <li><strong>Cookies & Local Storage:</strong> We heavily utilize browser Local Storage and minimal cookies to cache your search preferences, comparison lists, and session states for performance. You can clear this at any time via your browser settings.</li>
+                            </ul>
+                            <h3>Third-Party Integrations</h3>
+                            <p>
+                                We utilize third-party services (e.g., Vercel, Firebase) for hosting and backend infrastructure. These providers operate under their own strict privacy compliances. CEI acts merely as a conduit and cannot be held liable for third-party infrastructure breaches.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* SECTION 4: Intellectual Property */}
+                    <section id="intellectual" className="scroll-mt-32">
+                        <div className="flex items-center gap-3 mb-6">
+                            <FileText className="text-indigo-400" size={24} />
+                            <h2 className="text-2xl font-bold text-white">4. Intellectual Property</h2>
+                        </div>
+                        <div className="prose prose-invert prose-slate max-w-none">
+                            <p>
+                                <strong>Ownership:</strong> The algorithms, codebase, UI/UX design (including the "Premium Light Glass" and "Elite" aesthetics), logic structures, and structured datasets presented on CEI are the exclusive intellectual property of College Essentials of India.
+                            </p>
+                            <p>
+                                <strong>Scraping & API Usage:</strong> Unauthorized automated data extraction (scraping) is strictly prohibited. If you wish to utilize our Intelligence Layer programmatically, you must utilize the official <Link href="/developers" className="text-indigo-400 hover:text-indigo-300 underline">Developer API</Link>. Unsanctioned scraping will result in immediate API blacklisting and potential legal recourse.
+                            </p>
+                            <p>
+                                <strong>Trademarks:</strong> All college names, logos, official examination marks (e.g., CAT, GATE, JEE), and institutional crests displayed on this platform remain the property and trademarks of their respective owners/authorities. Their inclusion on CEI is strictly for nominative fair use and educational identification.
+                            </p>
+                        </div>
+                    </section>
+
+                    <hr className="border-slate-800 my-12" />
+
+                    <section className="text-center pb-12">
+                        <p className="text-slate-500 text-sm">
+                            Last Updated: March 2026. <br />
+                            These terms constitute the entire agreement between you and CEI. Continual use of the site signifies binding acceptance of these terms and any subsequent modifications.
+                        </p>
+                        <div className="mt-8">
+                            <Link href="/" className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition-all shadow-lg shadow-indigo-900/20">
+                                Acknowledge & Return Home
+                            </Link>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
     );
 }

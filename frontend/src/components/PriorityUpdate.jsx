@@ -42,7 +42,7 @@ export default function PriorityUpdate({ item }) {
                         <div className="source-verification">
                             <div className="verify-badge">
                                 <ShieldCheck size={14} className="text-emerald-500" />
-                                <span>{item.authority} • Verified Node</span>
+                                <span>{item.authority} • Authorized Node</span>
                             </div>
                         </div>
                     </div>

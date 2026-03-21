@@ -1,9 +1,7 @@
-"use client";
-
 import { AuthProvider } from "@/lib/AuthContext";
 import { ToastProvider } from "./Toast";
 import { FavoritesProvider } from "@/lib/useFavorites";
-import { CompareProvider } from "@/lib/CompareContext";
+import { ComparatorProvider } from "@/hooks/useComparator";
 import { ScoreProvider } from "@/lib/ScoreContext";
 
 export default function ClientProviders({ children }) {
@@ -11,11 +9,11 @@ export default function ClientProviders({ children }) {
         <ToastProvider>
             <AuthProvider>
                 <FavoritesProvider>
-                    <CompareProvider>
+                    <ComparatorProvider>
                         <ScoreProvider>
                             {children}
                         </ScoreProvider>
-                    </CompareProvider>
+                    </ComparatorProvider>
                 </FavoritesProvider>
             </AuthProvider>
         </ToastProvider>

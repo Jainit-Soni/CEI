@@ -79,6 +79,6 @@ export function ScoreProvider({ children }) {
     );
 }
 
-export function useScores() {
+export const useScores = () => {
     return useContext(ScoreContext);
-}
+};

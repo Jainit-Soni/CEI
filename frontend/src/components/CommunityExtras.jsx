@@ -10,7 +10,7 @@ const PIPELINE_STAGES = [
     title: "Data Harvesting",
     value: "10M+",
     label: "DATA POINTS",
-    description: "Real-time aggregation of placement data, NIRF metrics, and student sentiment from verified nodes.",
+    description: "Real-time aggregation of placement data, NIRF metrics, and student sentiment from evaluated nodes.",
     icon: <Database className="w-5 h-5" />,
     accent: "blue"
   },

@@ -1,29 +1,21 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import Card from "@/components/Card";
-import Container from "@/components/Container";
-import GlassPanel from "@/components/GlassPanel";
-import Button from "@/components/Button";
-import FancySelect from "@/components/FancySelect";
-import EmptyState from "@/components/EmptyState";
-import { CardSkeleton } from "@/components/Skeleton";
-import FavoriteButton from "@/components/FavoriteButton";
-import { RevealOnScroll } from "@/lib/useIntersectionObserver";
+import { useState, useEffect, useMemo } from "react";
 import { fetchExams } from "@/lib/api";
-import "../colleges/page.css";
-import "./page.css";
+import { useScores } from "@/lib/ScoreContext";
+import Container from "@/components/Container";
+import EmptyState from "@/components/EmptyState";
+import FavoriteButton from "@/components/FavoriteButton";
+import Card from "@/components/Card";
+import { CardSkeleton } from "@/components/Skeleton";
+import { RevealOnScroll } from "@/lib/useIntersectionObserver";
+import "../colleges/page.css"; // Harmonized styles
 
 export default function ExamsPage() {
+  const { scores } = useScores();
   const [exams, setExams] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [query, setQuery] = useState("");
-  const [filters, setFilters] = useState({
-    type: "All",
-    section: "All",
-  });
-  const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
   useEffect(() => {
     const load = async () => {
@@ -43,34 +35,9 @@ export default function ExamsPage() {
     load();
   }, []);
 
-  const typeOptions = useMemo(() => {
-    const unique = new Set(exams.map((exam) => exam.type).filter(Boolean));
-    return ["All", ...Array.from(unique)];
-  }, [exams]);
-
-  const sectionOptions = useMemo(() => {
-    const unique = new Set(
-      exams.flatMap((exam) => exam.syllabus || exam.pattern || [])
-    );
-    return ["All", ...Array.from(unique)];
-  }, [exams]);
-
-  const filteredExams = useMemo(() => {
-    const normalized = query.toLowerCase();
-    return exams.filter((exam) => {
-      const matchesQuery = `${exam.name} ${exam.shortName} ${exam.type}`
-        .toLowerCase()
-        .includes(normalized);
-      const matchesType = filters.type === "All" || exam.type === filters.type;
-      const matchesSection =
-        filters.section === "All" || (exam.syllabus || []).includes(filters.section);
-      return matchesQuery && matchesType && matchesSection;
-    });
-  }, [exams, query, filters]);
-
   const sortedExams = useMemo(() => {
     // Default Sort: Popularity (Accepted Count)
-    return [...filteredExams].sort((a, b) => {
+    return [...exams].sort((a, b) => {
       const countA = a.acceptedCount ?? (a.acceptedColleges || a.collegesAccepting || []).length;
       const countB = b.acceptedCount ?? (b.acceptedColleges || b.collegesAccepting || []).length;
 
@@ -80,18 +47,7 @@ export default function ExamsPage() {
       // Fallback to name
       return (a.name || "").localeCompare(b.name || "");
     });
-  }, [filteredExams]);
-
-  const handleFilterChange = (id, value) => {
-    setFilters((prev) => ({ ...prev, [id]: value }));
-  };
-
-  const clearFilters = () => {
-    setQuery("");
-    setFilters({ type: "All", section: "All" });
-  };
-
-  const hasActiveFilters = query || filters.type !== "All" || filters.section !== "All";
+  }, [exams]);
 
   const renderContent = () => {
     if (isLoading) {
@@ -116,31 +72,26 @@ export default function ExamsPage() {
       );
     }
 
-    if (filteredExams.length === 0) {
+    if (sortedExams.length === 0) {
       return (
         <EmptyState
           icon="🔍"
           title="No exams found"
-          description={hasActiveFilters
-            ? "Try adjusting your search or filters"
-            : "No exams available at the moment"}
-          actionLabel={hasActiveFilters ? "Clear Filters" : undefined}
-          onAction={hasActiveFilters ? clearFilters : undefined}
+          description={"No exams available at the moment"}
         />
       );
     }
 
     const getStatusLabel = (dates) => {
       if (!dates) return null;
-      const now = new Date();
       const registration = dates.registration || "";
       const examWindow = dates.examWindow || "";
       const result = dates.result || "";
 
       if (result.toLowerCase().includes("declared")) return { label: "Results Declared", type: "success" };
       if (examWindow.toLowerCase().includes("upcoming")) return { label: "Exam Upcoming", type: "warning" };
-      if (registration.toLowerCase().includes("August") || registration.toLowerCase().includes("Expected")) return { label: "Registering Soon", type: "info" };
-      if (registration.toLowerCase().includes("Completed") || examWindow.toLowerCase().includes("Completed")) return { label: "Cycle Ended", type: "muted" };
+      if (registration.toLowerCase().includes("august") || registration.toLowerCase().includes("expected")) return { label: "Registering Soon", type: "info" };
+      if (registration.toLowerCase().includes("completed") || examWindow.toLowerCase().includes("completed")) return { label: "Cycle Ended", type: "muted" };
       
       return null;
     };
@@ -149,6 +100,9 @@ export default function ExamsPage() {
       <div className="results-grid">
         {sortedExams.map((exam, index) => {
           const status = getStatusLabel(exam.dates);
+          const examKey = (exam.shortName || exam.name || "").toUpperCase();
+          const userScore = scores[examKey];
+
           return (
             <RevealOnScroll key={exam.id} delay={index * 40}>
               <div className="card-wrapper">
@@ -162,9 +116,14 @@ export default function ExamsPage() {
                   type="exam"
                   title={exam.shortName || exam.name}
                   subtitle={exam.type}
-                  tags={exam.pattern && exam.pattern.length > 0 ? [exam.pattern[0].split(':')[0]] : [exam.type]}
-                  meta={`Accepted by ${exam.acceptedCount ?? (exam.acceptedColleges || exam.collegesAccepting || []).length} colleges`}
+                  tags={exam.pattern && exam.pattern.length > 0 ? [exam.pattern[0].split(':')[0]] : [exam.category]}
+                  meta={[
+                    exam.stats?.fee ? `Fee: ${exam.stats.fee.split('(')[0].trim()}` : null,
+                    exam.dates?.examWindow ? `Exam: ${exam.dates.examWindow}` : null
+                  ].filter(Boolean)}
                   href={`/exam/${exam.id}`}
+                  userScore={userScore}
+                  data={exam}
                 />
               </div>
             </RevealOnScroll>
@@ -192,20 +151,14 @@ export default function ExamsPage() {
               </p>
             </RevealOnScroll>
 
+            {/* Stats */}
             <RevealOnScroll delay={100}>
               <div className="list-stats">
                 <div className="list-stat">
                   <span className="list-stat-value mono">
-                    {isLoading ? <div className="h-8 w-16 bg-white/20 animate-pulse rounded-md inline-block" /> : (typeOptions.length - 1 || "--")}
-                  </span>
-                  <span className="list-stat-label">Exam types</span>
-                </div>
-
-                <div className="list-stat">
-                  <span className="list-stat-value mono">
                     {isLoading ? <div className="h-8 w-16 bg-white/20 animate-pulse rounded-md inline-block" /> : (exams.length || "--")}
                   </span>
-                  <span className="list-stat-label">Exams</span>
+                  <span className="list-stat-label">Total Exams</span>
                 </div>
               </div>
             </RevealOnScroll>
@@ -213,103 +166,9 @@ export default function ExamsPage() {
         </Container>
       </section>
 
-      {/* Mobile Filter Toggle */}
-      <div className="mobile-filter-toggle-container">
-        <Button
-          variant="secondary"
-          className="w-full justify-between"
-          onClick={() => setIsMobileFiltersOpen(!isMobileFiltersOpen)}
-        >
-          <div className="flex items-center gap-2">
-            <span>{isMobileFiltersOpen ? "Hide Filters" : "Filter Exams"}</span>
-          </div>
-          <span className="text-xs bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full">
-            {filteredExams.length} Results
-          </span>
-        </Button>
-      </div>
+      {/* Filter Section Removed Entirely as per user request to mirror Scholarships */}
 
-      <section className={`list-filters-section ${isMobileFiltersOpen ? "mobile-open" : ""}`}>
-        <Container>
-          <GlassPanel className="filters-panel" variant="strong">
-            {/* Mobile Header */}
-            <div className="mobile-filter-header">
-              <h3>Filters</h3>
-              <button className="filter-close-btn" onClick={() => setIsMobileFiltersOpen(false)}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M18 6L6 18M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="filter-search">
-              <svg
-                className="filter-search-icon"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.35-4.35" />
-              </svg>
-              <input
-                type="search"
-                className="filter-search-input"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search by exam name or type"
-              />
-            </div>
-
-            <div className="filter-row">
-              <FancySelect
-                label="Type"
-                value={filters.type}
-                options={typeOptions}
-                onChange={(val) => handleFilterChange("type", val)}
-              />
-              <FancySelect
-                label="Section"
-                value={filters.section}
-                options={sectionOptions}
-                onChange={(val) => handleFilterChange("section", val)}
-              />
-            </div>
-
-            <div className="filter-meta">
-              <span className="filter-count">
-                Showing <strong>{filteredExams.length}</strong> matches
-              </span>
-              {hasActiveFilters && (
-                <Button variant="secondary" onClick={clearFilters}>Reset filters</Button>
-              )}
-            </div>
-
-            {/* Mobile Sticky Actions */}
-            <div className="mobile-filter-actions">
-              <Button
-                variant="secondary"
-                className="flex-1"
-                onClick={clearFilters}
-              >
-                Clear All
-              </Button>
-              <Button
-                className="flex-1"
-                onClick={() => setIsMobileFiltersOpen(false)}
-              >
-                Apply Filters
-              </Button>
-            </div>
-          </GlassPanel>
-        </Container>
-      </section>
-
-      <section className="list-results">
+      <section className="list-results pt-12">
         <Container>
           {renderContent()}
         </Container>
@@ -317,4 +176,3 @@ export default function ExamsPage() {
     </div>
   );
 }
-

@@ -96,8 +96,8 @@ const LensScene = memo(function LensScene({ isMobile, progress }) {
         const { viewport } = state;
         const v = viewport.getCurrentViewport(camera, [0, 0, 5]);
 
-        const destX = (mouse.current.x * v.width) / 2.2;
-        const destY = (mouse.current.y * v.height) / 2.2 + (progress * 5);
+        const destX = (mouse.current.x * v.width) / 2;
+        const destY = (mouse.current.y * v.height) / 2;
 
         if (ref.current) {
             easing.damp3(ref.current.position, [destX, destY, 5], 0.2, delta);

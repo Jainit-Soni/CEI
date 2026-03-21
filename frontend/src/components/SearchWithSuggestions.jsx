@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -12,9 +12,10 @@ export default function SearchWithSuggestions({
   initialValue = "",
   className = "",
   hideScopes = false,
+  defaultScope = "All",
 }) {
   const [query, setQuery] = useState(initialValue || "");
-  const [scope, setScope] = useState("All");
+  const [scope, setScope] = useState(defaultScope);
   const [suggestions, setSuggestions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +40,16 @@ export default function SearchWithSuggestions({
 
     setIsLoading(true);
     try {
+      // Map frontend scopes to backend expected types
+      const typeMap = {
+        "All": "all",
+        "Colleges": "college",
+        "Exams": "exam"
+      };
+
       const data = await suggest({
         q: searchQuery,
-        type: scope.toLowerCase()
+        type: typeMap[scope] || "all"
       });
       setSuggestions(Array.isArray(data) ? data : []);
       setIsOpen((data || []).length > 0);

@@ -6,11 +6,11 @@
         "conductingBody": "NTA",
         "website": "cmat.nta.nic.in",
         "dates": {
-            "notification": "2025-02-15",
-            "registration": "2025-03-15",
-            "admitCard": "2025-04-25",
-            "examWindow": "2025-05-05",
-            "result": "2025-05-25"
+            "notification": "2026-02-15",
+            "registration": "2026-03-15",
+            "admitCard": "2026-04-25",
+            "examWindow": "2026-05-05",
+            "result": "2026-05-25"
         }
     },
     {
@@ -24,7 +24,7 @@
             "registration": "2024-09-13",
             "admitCard": "2024-11-05",
             "examWindow": "2024-11-24",
-            "result": "2025-01-05"
+            "result": "2026-01-05"
         }
     },
     {
@@ -34,11 +34,11 @@
         "conductingBody": "AIMA",
         "website": "mat.aima.in",
         "dates": {
-            "notification": "2025-01-01",
-            "registration": "2025-02-20",
-            "admitCard": "2025-02-25",
-            "examWindow": "2025-03-02",
-            "result": "2025-03-20"
+            "notification": "2026-01-01",
+            "registration": "2026-02-20",
+            "admitCard": "2026-02-25",
+            "examWindow": "2026-03-02",
+            "result": "2026-03-20"
         }
     },
     {
@@ -51,8 +51,8 @@
             "notification": "2024-07-15",
             "registration": "2024-11-30",
             "admitCard": "2024-12-20",
-            "examWindow": "2025-01-05",
-            "result": "2025-01-20"
+            "examWindow": "2026-01-05",
+            "result": "2026-01-20"
         }
     },
     {
@@ -66,7 +66,7 @@
             "registration": "2024-11-22",
             "admitCard": "2024-12-04",
             "examWindow": "2024-12-10",
-            "result": "2025-01-08"
+            "result": "2026-01-08"
         }
     },
     {
@@ -80,7 +80,7 @@
             "registration": "2024-10-10",
             "admitCard": "2024-10-10",
             "examWindow": "2024-12-19",
-            "result": "2025-01-15"
+            "result": "2026-01-15"
         }
     },
     {
@@ -90,11 +90,11 @@
         "conductingBody": "State CET Cell",
         "website": "cetcell.mahacet.org",
         "dates": {
-            "notification": "2025-01-10",
-            "registration": "2025-02-12",
-            "admitCard": "2025-03-01",
-            "examWindow": "2025-03-09",
-            "result": "2025-03-30"
+            "notification": "2026-01-10",
+            "registration": "2026-02-12",
+            "admitCard": "2026-03-01",
+            "examWindow": "2026-03-09",
+            "result": "2026-03-30"
         }
     },
     {
@@ -105,10 +105,10 @@
         "website": "tiss.edu",
         "dates": {
             "notification": "2024-12-10",
-            "registration": "2025-01-20",
-            "admitCard": "2025-02-15",
-            "examWindow": "2025-02-24",
-            "result": "2025-03-25"
+            "registration": "2026-01-20",
+            "admitCard": "2026-02-15",
+            "examWindow": "2026-02-24",
+            "result": "2026-03-25"
         }
     },
     {
@@ -122,7 +122,7 @@
             "registration": "2024-11-14",
             "admitCard": "2024-12-05",
             "examWindow": "2024-12-18",
-            "result": "2025-01-10"
+            "result": "2026-01-10"
         }
     },
     {
@@ -147,7 +147,7 @@
         "website": "atmaaims.com",
         "dates": {
             "notification": "2024-12-25",
-            "registration": "2025-02-11",
+            "registration": "2026-02-11",
             "admitCard": "2025-02-14",
             "examWindow": "2025-02-18",
             "result": "2025-02-23"

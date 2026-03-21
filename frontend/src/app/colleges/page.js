@@ -1,4 +1,4 @@
-﻿import CollegesClient from "./CollegesClient";
+import CollegesClient from "./CollegesClient";
 import { fetchColleges } from "@/lib/api";
 
 export default async function CollegesPage({ searchParams }) {
@@ -10,13 +10,9 @@ export default async function CollegesPage({ searchParams }) {
     district: searchParams.district !== 'All' ? searchParams.district : undefined,
     course: searchParams.course !== 'All' ? searchParams.course : undefined,
     tier: searchParams.tier !== 'All' ? searchParams.tier : undefined,
+    band: searchParams.band !== 'All' ? searchParams.band : undefined,
     q: searchParams.q || undefined,
-    sortBy: searchParams.sortBy === 'Name A-Z' ? 'name' :
-      searchParams.sortBy === 'Name Z-A' ? 'name' :
-        searchParams.sortBy === 'Top Tier' ? 'tier' :
-          searchParams.sortBy === 'Most Exams' ? 'exams' :
-            searchParams.sortBy === 'Highest Placement' ? 'placement' : 'placement', // Default to placement
-    order: searchParams.sortBy === 'Name Z-A' || searchParams.sortBy === 'Top Tier' || searchParams.sortBy === 'Most Exams' || searchParams.sortBy === 'Highest Placement' || !searchParams.sortBy ? 'desc' : undefined
+    sort: searchParams.sort || undefined
   };
 
   let initialData = { data: [], pagination: null };

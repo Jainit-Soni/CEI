@@ -80,7 +80,7 @@ export default function ExamHero({ exam }) {
                     {/* Portal Header */}
                     <div className="mission-terminal-header">
                         <div className="terminal-left">
-                            <span className="terminal-mode">ACADEMIC_INTELLIGENCE: VERIFIED</span>
+                            <span className="terminal-mode">ACADEMIC_INTELLIGENCE: EVALUATED</span>
                             <span className="terminal-id">REF: {exam.shortName || "EXM"}_v2026</span>
                         </div>
                         <div className="terminal-right">
@@ -187,12 +187,12 @@ export default function ExamHero({ exam }) {
                                         <circle cx="50" cy="50" r="45" className="node-circle-bg" />
                                         <circle cx="50" cy="50" r="45" className="node-circle-progress" style={{ strokeDashoffset: '180' }} />
                                     </svg>
-                                    <span className="node-icon">🏛️</span>
+                                    <span className="node-icon">📊</span>
                                 </div>
                                 <div className="node-data">
-                                    <span className="node-label">ACCEPTED BY</span>
+                                    <span className="node-label">TOTAL MARKS</span>
                                     <span className="node-value mono">
-                                        {exam.acceptedCount || "1000+"} Inst.
+                                        {exam.totalMarks || "N/A"}
                                     </span>
                                 </div>
                             </div>

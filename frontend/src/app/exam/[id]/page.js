@@ -1,4 +1,4 @@
-﻿import "./page.css";
+import "./page.css";
 import ExamDetailClient from "./ExamDetailClient";
 
 import JsonLd from "@/components/JsonLd";
@@ -24,13 +24,14 @@ export async function generateMetadata({ params }) {
 
 export default async function ExamDetail({ params }) {
   const { id } = await params;
-  const exam = await fetchExam(id);
+  let exam = null;
+  
+  try {
+    exam = await fetchExam(id);
+  } catch (err) {
+    console.error("Fetch error on Server Component:", err);
+  }
 
-  /*
-    SEO DOMINANCE: Exam Events
-    - Event (Shows "Exam Date" in Google)
-    - EducationalOccupationalCredential
-  */
   const jsonLd = exam ? {
     "@context": "https://schema.org",
     "@graph": [

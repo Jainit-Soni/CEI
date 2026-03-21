@@ -1,0 +1,319 @@
+/* ============================================================
+   CEI Admission Strategist — Premium Light Theme
+   Fused from the Prediction Engine UI/UX
+   ============================================================ */
+
+.calculator-page {
+    min-height: 100vh;
+    background: #f8fbff;
+    font-family: 'Inter', sans-serif;
+    padding: 100px 20px 60px;
+}
+
+/* ── Hero ────────────────────────────────────────────── */
+
+.calculator-hero {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.calculator-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.calculator-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin: 0 0 12px;
+}
+
+.calculator-hero h1 span {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.calculator-hero p {
+    font-size: 1.0625rem;
+    color: #64748b;
+    margin: 0 auto;
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+/* ── Wizard ───────────────────────────────────────── */
+
+.calculator-wizard-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calculator-steps-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.calculator-steps-row::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: #e2e8f0;
+    z-index: 0;
+}
+
+.calculator-step-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.calculator-step-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.calculator-step-dot.active {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+}
+
+.calculator-step-dot.done {
+    background: #10b981;
+    color: white;
+}
+
+.calculator-step-dot.pending {
+    background: white;
+    border-color: #e2e8f0;
+    color: #94a3b8;
+}
+
+.calculator-step-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.calculator-step-label.active {
+    color: #3b82f6;
+}
+
+/* ── Card ─────────────────────────────────────────── */
+
+.calculator-card {
+    background: white;
+    border-radius: 28px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 64px rgba(0, 0, 0, 0.04);
+    padding: 48px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calculator-card-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.calculator-card-subtitle {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 32px;
+}
+
+/* ── Inputs ───────────────────────────────────────── */
+
+.calc-input-group {
+    margin-bottom: 24px;
+}
+
+.calc-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.calc-input, .calc-select {
+    width: 100%;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border: 2px solid #f1f5f9;
+    border-radius: 16px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #0f172a;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.calc-input:focus, .calc-select:focus {
+    background: white;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.calc-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m6 9 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+
+/* ── Navigation ───────────────────────────────────── */
+
+.calc-nav {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.calc-btn-back {
+    padding: 16px 32px;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.calc-btn-next {
+    flex: 1;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    border: none;
+    border-radius: 16px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.calc-btn-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+}
+
+.calc-btn-next:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ── Loading ───────────────────────────────────────── */
+
+.calc-loading {
+    text-align: center;
+}
+
+.calc-loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #f1f5f9;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 24px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── Results ───────────────────────────────────────── */
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.results-title h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.03em;
+}
+
+.results-meta {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.tier-section {
+    margin-bottom: 48px;
+}
+
+.tier-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tier-label h3 {
+    font-size: 1.125rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.tier-safe h3 { color: #10b981; }
+.tier-target h3 { color: #f59e0b; }
+.tier-dream h3 { color: #8b5cf6; }
+
+.results-grid {
+    display: grid;
+    gap: 16px;
+}

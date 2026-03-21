@@ -1,20 +1,21 @@
 "use client";
 
-import { useCompare } from "../lib/CompareContext";
+import { useComparator } from "@/hooks/useComparator";
 import "./AddToCompareButton.css";
 
 export default function AddToCompareButton({ college, className = "", showText = false }) {
-    const { addToCompare, removeFromCompare, isInCompare } = useCompare();
-    const isSelected = isInCompare(college.id);
+    const { pinCollege, unpinCollege, isPinned } = useComparator();
+    const isSelected = isPinned(college.id);
 
     const toggleCompare = (e) => {
         e.preventDefault();
         e.stopPropagation();
 
         if (isSelected) {
-            removeFromCompare(college.id);
+            unpinCollege(college.id);
         } else {
-            addToCompare(college);
+            // Comparator now takes ID only, fetch handles details
+            pinCollege(college.id || college._id);
         }
     };
 

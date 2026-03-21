@@ -78,7 +78,7 @@ export default function ScholarshipDetail() {
                             <div className="flex-1 text-center md:text-left">
                                 <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-4">
                                     <span className="badge-emerald px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">
-                                        Verified Grant
+                                        Evaluated Grant
                                     </span>
                                     <span className="badge-indigo px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">
                                         {scholarship.category}

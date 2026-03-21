@@ -59,32 +59,32 @@ const STATE_NODES = {
     "Lakshadweep": { x: 14, y: 82, connections: ["Kerala"] },
 };
 
-// Get node color based on absolute count thresholds
+// Get node color based on absolute count thresholds — VIBRANT PALETTE
 function getNodeColor(count) {
-    if (count === 0) return "#64748b";
-    if (count >= 3000) return "#fbbf24"; // Gold (High)
-    if (count >= 1000) return "#60a5fa"; // Blue (Medium)
-    if (count >= 100) return "#a78bfa"; // Purple (Low)
-    return "#34d399"; // Green (Few)
+    if (count === 0) return "rgba(100, 116, 139, 0.2)"; // Dimmed
+    if (count >= 3000) return "#fbbf24"; // Chrome/Gold
+    if (count >= 1000) return "#3b82f6"; // Electric Blue
+    if (count >= 100) return "#8b5cf6"; // Deep Violet
+    return "#10b981"; // Emerald
 }
 
-// Get node size based on count
+// Get node size based on count — More contrast
 function getNodeSize(count) {
-    const base = 24;
+    const base = 12; // Smaller for empty
     if (count === 0) return base;
-    if (count >= 3000) return 48;
-    if (count >= 1000) return 40;
-    if (count >= 100) return 32;
-    return 28;
+    if (count >= 3000) return 52;
+    if (count >= 1000) return 42;
+    if (count >= 100) return 34;
+    return 30;
 }
 
-// Get glow intensity
+// Get glow intensity — Higher saturation
 function getGlowIntensity(count) {
-    if (count === 0) return "0 0 20px rgba(100, 116, 139, 0.4)";
-    if (count >= 3000) return "0 0 40px rgba(251, 191, 36, 0.8), 0 0 80px rgba(251, 191, 36, 0.4)";
-    if (count >= 1000) return "0 0 35px rgba(96, 165, 250, 0.7), 0 0 70px rgba(96, 165, 250, 0.3)";
-    if (count >= 100) return "0 0 30px rgba(167, 139, 250, 0.6), 0 0 60px rgba(167, 139, 250, 0.2)";
-    return "0 0 25px rgba(52, 211, 153, 0.5), 0 0 50px rgba(52, 211, 153, 0.2)";
+    if (count === 0) return "none"; // No glow for empty
+    if (count >= 3000) return "0 0 30px rgba(251, 191, 36, 0.6), 0 0 60px rgba(251, 191, 36, 0.3)";
+    if (count >= 1000) return "0 0 25px rgba(59, 130, 246, 0.5), 0 0 50px rgba(59, 130, 246, 0.2)";
+    if (count >= 100) return "0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2)";
+    return "0 0 15px rgba(16, 185, 129, 0.3), 0 0 30px rgba(16, 185, 129, 0.1)";
 }
 
 // Optimization: Hoist static geometry logic to module level (vercel-react-best-practices server-hoist-static-io)
@@ -382,23 +382,23 @@ export default function MapPage() {
                     <div className="legend-title">College Density</div>
                     <div className="legend-nodes">
                         <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#fbbf24", boxShadow: "0 0 20px #fbbf24" }}></span>
+                            <span className="node-dot" style={{ background: "#fbbf24", boxShadow: "0 0 15px rgba(251, 191, 36, 0.4)" }}></span>
                             <span>High (3000+)</span>
                         </div>
                         <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#60a5fa", boxShadow: "0 0 20px #60a5fa" }}></span>
+                            <span className="node-dot" style={{ background: "#3b82f6", boxShadow: "0 0 15px rgba(59, 130, 246, 0.4)" }}></span>
                             <span>Medium (1000-3000)</span>
                         </div>
                         <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#a78bfa", boxShadow: "0 0 20px #a78bfa" }}></span>
+                            <span className="node-dot" style={{ background: "#8b5cf6", boxShadow: "0 0 15px rgba(139, 92, 246, 0.4)" }}></span>
                             <span>Low (100-1000)</span>
                         </div>
                         <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#34d399", boxShadow: "0 0 20px #34d399" }}></span>
+                            <span className="node-dot" style={{ background: "#10b981", boxShadow: "0 0 15px rgba(16, 185, 129, 0.4)" }}></span>
                             <span>Few (1-100)</span>
                         </div>
                         <div className="legend-node">
-                            <span className="node-dot" style={{ background: "#64748b", boxShadow: "0 0 20px #64748b" }}></span>
+                            <span className="node-dot" style={{ background: "rgba(100, 116, 139, 0.2)", border: "1px solid rgba(100, 116, 139, 0.1)" }}></span>
                             <span>None</span>
                         </div>
                     </div>

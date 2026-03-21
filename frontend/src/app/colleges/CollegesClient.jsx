@@ -16,6 +16,7 @@ import FavoriteButton from "@/components/FavoriteButton";
 import { RevealOnScroll } from "@/lib/useIntersectionObserver";
 import { fetchColleges, fetchFilters, suggest, fetchStateStats } from "@/lib/api";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/lib/AuthContext";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
@@ -135,8 +136,9 @@ function CollegesContent({ initialData }) {
         tiers: ["All"],
         bands: ["All"]
     });
-    // If we have initial data, we aren't loading!
-    const [isLoading, setIsLoading] = useState(!initialData?.data?.length);
+    // Deployment Hardening: If we have searchParams, we MUST wait for the effect to sync them
+    const hasUrlParams = searchParams.toString().length > 0;
+    const [isLoading, setIsLoading] = useState(hasUrlParams); 
     const [error, setError] = useState(null);
     const [query, setQuery] = useState("");
     const [sortToken, setSortToken] = useState(DEFAULT_SORT_TOKEN);
@@ -237,9 +239,11 @@ function CollegesContent({ initialData }) {
         return () => clearTimeout(timer);
     }, [filters.state, filters.district, filters.course, filters.tier, filters.band, query]);
 
+    const { user } = useAuth();
+
     useEffect(() => {
         const load = async () => {
-            if (!isInitialized) return; // Wait for init
+            if (!isInitialized) return;
 
             setIsLoading(true);
             setError(null);
@@ -253,7 +257,14 @@ function CollegesContent({ initialData }) {
                 if (filters.course !== "All") params.course = filters.course;
                 if (filters.tier !== "All") params.tier = filters.tier;
                 if (filters.band !== "All") params.band = filters.band;
+                if (user?.uid) params.uid = user.uid;
+
                 const response = await fetchColleges(params);
+                console.log(`[CEI][UI][catalog] Data received:`, {
+                    count: response.data?.length,
+                    total: response.pagination?.total,
+                    params
+                });
 
                 if (response.data && response.pagination) {
                     setColleges(response.data);
@@ -274,21 +285,22 @@ function CollegesContent({ initialData }) {
                 console.error("Failed to load colleges", err);
                 setError("Failed to load colleges. Please try again.");
 
-                // If search failed or empty, try suggestions
                 if (query) {
                     try {
                         const suggs = await suggest({ q: query });
                         setSuggestions(normalizeDidYouMeanSuggestions(suggs));
-                    } catch (e) {
-                        // ignore suggestion error
-                    }
+                    } catch (e) {}
                 }
             } finally {
                 setIsLoading(false);
             }
         };
-        load();
-    }, [page, query, sortToken, filters.state, filters.district, filters.course, filters.tier, filters.band, stateFilter, isInitialized]);
+
+        // Debounce search query changes specifically
+        const delay = query ? 500 : 0;
+        const timer = setTimeout(load, delay);
+        return () => clearTimeout(timer);
+    }, [page, query, sortToken, filters.state, filters.district, filters.course, filters.tier, filters.band, stateFilter, isInitialized, user?.uid]);
 
     // Map stats removed as per user request
 
@@ -419,6 +431,30 @@ function CollegesContent({ initialData }) {
             );
         }
 
+        const formatPremiumText = (str) => {
+            if (!str) return str;
+            // Clean up common symbols
+            const clean = str.replace(/['"]/g, '').trim();
+            
+            return clean.split(/([\s,/-]+)/).map(part => {
+                const upper = part.toUpperCase();
+                // If the part is alphabetical (2+ letters)
+                if (/^[A-Z]{2,}$/i.test(part)) {
+                    // Common words to lowercase/TitleCase even if all-caps
+                    const smallWords = ['OF', 'AND', 'THE', 'FOR', 'WITH', 'IN', 'ON', 'OR', 'AT', 'TO', 'BY', 'OF', 'AM'];
+                    if (smallWords.includes(upper)) return part.toLowerCase();
+                    
+                    // Known acronyms to preserve EXACTLY (no matter original case)
+                    const acronyms = ['IIT', 'NIT', 'AIIMS', 'IIIT', 'IIM', 'BITS', 'VIT', 'MIT', 'UP', 'MP', 'HP', 'AP', 'TS', 'TN', 'KL', 'KA', 'MH', 'GJ', 'RJ', 'PB', 'HR', 'UK', 'JK', 'SNJB', 'B.TECH', 'B.E', 'M.TECH', 'MBA', 'PH.D'];
+                    if (acronyms.includes(upper)) return upper;
+
+                    // Otherwise, Title Case
+                    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+                }
+                return part;
+            }).join('');
+        };
+
         const mentorMode = searchParams.get("mentor") === "true";
         const userRank = parseInt(searchParams.get("rank"));
 
@@ -446,23 +482,24 @@ function CollegesContent({ initialData }) {
             <>
                 <div className="results-grid">
                     {displayColleges.map((college, index) => (
-                        <RevealOnScroll key={college.id} delay={index * 30}>
+                        <RevealOnScroll key={college.id || `college-${index}`} delay={index * 30}>
                             <div className="card-wrapper" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
                                 <Card
                                     type="college"
-                                    title={college.name || college.shortName}
-                                    subtitle={college.location || college.meta?.district || college.state || "Location TBA"}
+                                    title={formatPremiumText(college.name)}
+                                    subtitle={formatPremiumText(college.location || (college.city ? `${college.city}${college.state ? ', ' + college.state : ''}` : college.state))}
                                     badge={getMatchStatus(college)}
                                     tags={[]}
                                     meta={[
-                                        college.rankingTier || college.ranking,
-                                        college.meta?.ownership,
+                                        formatPremiumText(college.type),
+                                        formatPremiumText(college.ownership),
+                                        college.rankingTier,
                                     ].filter(Boolean)}
                                     href={`/college/${college.id}`}
                                     data={college}
                                     trust={{
-                                        source: college.source || "Official Website",
-                                        lastUpdated: college.lastUpdated || new Date().toISOString()
+                                        level: college.trustLevel || 'evaluated',
+                                        score: college.ceiScore
                                     }}
                                 />
                             </div>
@@ -504,7 +541,7 @@ function CollegesContent({ initialData }) {
                             </h1>
                             <p className="list-hero-subtitle">
                                 {stateName
-                                    ? `Explore ${displayColleges.length} colleges in ${stateName} with verified data on programs, exams, and rankings.`
+                                    ? `Explore ${displayColleges.length} colleges in ${stateName} with evaluated data on programs, exams, and rankings.`
                                     : "Explore colleges with structured programs, exams, and tiers in a clean interface."}
                             </p>
                         </RevealOnScroll>
@@ -557,11 +594,13 @@ function CollegesContent({ initialData }) {
 
                         <div className="filter-search-wrapper">
                             <SearchWithSuggestions
-                                className="colleges-main-search"
+                                placeholder="Search by institution name..."
+                                onSearch={(q) => { setQuery(q); setPage(1); }}
+                                onChange={(q) => { setQuery(q); setPage(1); }}
                                 initialValue={query}
-                                onChange={handleSearchChange}
-                                placeholder="Search by college, district, or program"
                                 hideScopes={true}
+                                defaultScope="Colleges"
+                                className="colleges-main-search"
                             />
                         </div>
 

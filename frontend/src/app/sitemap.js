@@ -3,7 +3,7 @@ import { fetchExams } from '@/lib/api';
 const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://ce-intelligence-backend.vercel.app').replace(/\/$/, '');
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://ce-intelligence-eight.vercel.app').replace(/\/$/, '');
 const SITEMAP_LIMIT = 10000;
-const TOTAL_COLLEGES_APPROX = 67000;
+const TOTAL_COLLEGES_APPROX = 55000;
 
 export async function generateSitemaps() {
     const sitemaps = [];
@@ -61,12 +61,22 @@ export default async function sitemap({ id }) {
         });
         if (res.ok) {
             const colleges = await res.json();
-            const collegeItems = colleges.map((college) => ({
-                url: `${baseUrl}/college/${college.id}`,
-                lastModified: college.updatedAt ? new Date(college.updatedAt) : new Date(),
-                changeFrequency: 'weekly',
-                priority: 0.9,
-            }));
+            const collegeItems = colleges.map((college) => {
+                // Determine SEO priority based on Ranking Tier
+                let priority = 0.8;
+                if (college.rankingTier) {
+                    const tier = college.rankingTier.toLowerCase();
+                    if (tier.includes('tier 1')) priority = 1.0;
+                    else if (tier.includes('tier 2')) priority = 0.9;
+                }
+
+                return {
+                    url: `${baseUrl}/college/${college.id}`,
+                    lastModified: college.updatedAt ? new Date(college.updatedAt) : new Date(),
+                    changeFrequency: 'weekly',
+                    priority: priority,
+                };
+            });
             items.push(...collegeItems);
         }
     } catch (error) {

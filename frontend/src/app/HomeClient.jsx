@@ -23,6 +23,7 @@ const IntelligencePipeline = dynamic(() => import("../components/CommunityExtras
 export default function HomeClient() {
     return (
         <div className="home-master-container" style={{ position: 'relative', width: '100%', background: 'transparent', overflowX: 'hidden' }}>
+            
             {/* The PREMIUM CONTENT WRAPPER */}
             <main className="content-scroller" style={{ position: 'relative', zIndex: 1, background: 'transparent' }}>
                 <PremiumHome />

@@ -38,7 +38,7 @@ function getBandColor(band) {
 
 function getStabilityPlainText(index) {
     if (index === null || index === undefined) return "Calculating reliability score...";
-    if (index >= 75) return "✅ This score is highly stable and verified against internal benchmarks.";
+    if (index >= 75) return "✅ This score is highly stable and evaluated against internal benchmarks.";
     if (index >= 45) return "⚠️ Moderate stability. Recommended to verify with the latest placement reports.";
     return "🔴 Volatile data found. Use this score as a preliminary guide only.";
 }
@@ -97,7 +97,7 @@ export default function ExplainabilityCard({ college }) {
                     <div className="explain-hero-meta">
                         <div className="explain-hero-title">CEI Evaluation</div>
                         <div className="explain-hero-desc">
-                            College Excellence Index — verified cross-metric performance.
+                            College Excellence Index — evaluated cross-metric performance.
                         </div>
                         <div className="explain-band-pill" style={{ background: `${bandColor}18`, color: bandColor, borderColor: `${bandColor}35` }}>
                             {college.competitivenessBand || "Evaluating"} Band
@@ -156,12 +156,12 @@ export default function ExplainabilityCard({ college }) {
                 <div className="explain-section-label">What is CEI?</div>
                 <div style={{ background: '#f8fafc', borderRadius: '16px', padding: '24px', fontSize: '0.9rem' }}>
                     <p className="text-gray-600 mb-8" style={{ lineHeight: '1.6', fontSize: '0.95rem' }}>
-                        The <strong>College Excellence Index (CEI)</strong> is a data-driven score (0-100) that measures how good a college actually is for your career. We use real data like <strong>verified placements, entrance exam difficulty (CAT/CMAT), and academic reputation</strong> to give you one honest number.
+                        The <strong>College Excellence Index (CEI)</strong> is a data-driven score (0-100) that measures how good a college actually is for your career. We use real data like <strong>evaluated placements, entrance exam difficulty (CAT/CMAT), and academic reputation</strong> to give you one honest number.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
-                            { title: "Placement Power (35%)", desc: "Verified average & highest salaries vs. what they claim.", icon: "💰" },
+                            { title: "Placement Power (35%)", desc: "Evaluated average & highest salaries vs. what they claim.", icon: "💰" },
                             { title: "Entrance Standard (15%)", desc: "The quality of peers (based on CAT/XAT/CMAT cutoffs).", icon: "🎯" },
                             { title: "Industry Trust (25%)", desc: "How top companies and recruiters value the degree.", icon: "🏢" },
                             { title: "Legacy & Scale (25%)", desc: "Institutional history and breadth of specialized programs.", icon: "🏛️" }

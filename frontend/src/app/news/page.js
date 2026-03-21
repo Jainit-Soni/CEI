@@ -91,7 +91,7 @@ export default function NewsPage() {
                             <span className="list-hero-kicker">Live Updates</span>
                             <h1 className="list-hero-title">Real academic updates, organized for clarity</h1>
                             <p className="list-hero-subtitle">
-                                Stay ahead of the curve with verified signals from official education portals, filtered for immediate action.
+                                Stay ahead of the curve with evaluated signals from official education portals, filtered for immediate action.
                             </p>
                         </RevealOnScroll>
 

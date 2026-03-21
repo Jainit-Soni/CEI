@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { postReport } from "@/lib/api";
 
 // ── Reportable Fields ──────────────────────────────────────────────────────────
 // Maps fieldName (API key) → human label + type hint for the input
@@ -100,33 +101,22 @@ export default function ReportDataModal({ college, isOpen, onClose }) {
         setLoading(true); setError("");
 
         try {
-            const res = await fetch(`${BACKEND}/api/trust/report`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    collegeId: college.id,
-                    fieldName: fieldKey,
-                    reportedValue: reportedValue.trim(),
-                    reportReason: reportReason.trim(),
-                    evidenceURL: evidenceURL.trim() || null,
-                }),
+            const data = await postReport({
+                collegeId: college.id,
+                fieldName: fieldKey,
+                reportedValue: reportedValue.trim(),
+                reportReason: reportReason.trim(),
+                evidenceURL: evidenceURL.trim() || null,
             });
-
-            const data = await res.json();
-
-            if (!res.ok) {
-                if (res.status === 429) {
-                    setError("You've submitted too many reports recently. Please wait before submitting again.");
-                } else {
-                    setError(data.error || "Submission failed. Please try again.");
-                }
-                return;
-            }
 
             setResult(data);
             setStep(3);
-        } catch {
-            setError("Network error. Please check your connection.");
+        } catch (err) {
+            if (err.response?.status === 429) {
+                setError("You've submitted too many reports recently. Please wait before submitting again.");
+            } else {
+                setError(err.response?.data?.error || "Submission failed. Please try again.");
+            }
         } finally {
             setLoading(false);
         }
