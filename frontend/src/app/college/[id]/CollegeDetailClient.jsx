@@ -14,7 +14,7 @@ import TacticalHUD from "@/components/TacticalHUD";
 import PrestigeHero from "@/components/PrestigeHero";
 import NarrativeOverview from "@/components/NarrativeOverview";
 import NarrativeFoundation from "@/components/NarrativeFoundation";
-import NarrativeIntel from "@/components/NarrativeIntel";
+import NarrativeIntel from "@/components/NarrativeIntel.jsx";
 import NarrativeCampus from "@/components/NarrativeCampus";
 import NarrativePedigree from "@/components/NarrativePedigree";
 import NarrativeGeography from "@/components/NarrativeGeography";
