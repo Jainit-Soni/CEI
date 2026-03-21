@@ -5,7 +5,6 @@ const requiredEnv = [
   "JWT_SECRET",
   "BACKUP_ENCRYPTION_KEY",
   "MONGODB_URI",
-  "REDIS_URL",
   "FIREBASE_SERVICE_ACCOUNT_KEY"
 ];
 
@@ -13,7 +12,9 @@ const missingEnv = requiredEnv.filter(key => !process.env[key]);
 const isMaintenanceMode = missingEnv.length > 0;
 
 if (isMaintenanceMode) {
-  console.error("⚠️  MAINTENANCE MODE: Missing required environment variables:", missingEnv.join(", "));
+  console.error("⚠️  MAINTENANCE MODE: Missing required environment variables:", missingEnv);
+} else {
+  console.log("✅ All required environment variables present:", requiredEnv);
 }
 // ──────────────────────────────────────────────────────────────────────────
 

@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const College = require("../models/CollegeSchema");
 const cache = require("../services/cache");
 const rankingCache = require("../services/rankingCacheBuilder");
@@ -423,10 +424,14 @@ router.get("/colleges/batch", async (req, res) => {
       ]
     }).lean();
 
-    // Ensure id is present for the map
+    console.log(`[Batch Fetch] DB: ${mongoose.connection.name} | Collection: ${College.collection.name} | IDs: ${ids.join(', ')} | Found: ${colleges.length}`);
+
+    // Ensure id is present for the map. 
+    // If c.id exists (the AISHE code or slug), keep it. 
+    // Fallback to _id only if id is missing.
     const mappedColleges = colleges.map(c => ({
       ...c,
-      id: c._id ? c._id.toString() : c.id
+      id: c.id || (c._id ? c._id.toString() : null)
     }));
 
     // Preserve order of incoming IDs

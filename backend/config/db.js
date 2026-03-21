@@ -15,21 +15,32 @@ const mongoose = require('mongoose');
  */
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect(process.env.MONGODB_URI, {
+        let uri = process.env.MONGODB_URI;
+        const dbName = process.env.MONGODB_DB;
+        
+        // If URI doesn't contain the DB name but MONGODB_DB is provided, append it
+        if (dbName && uri && !uri.includes(`/${dbName}`) && uri.endsWith('/')) {
+            uri = `${uri}${dbName}`;
+        } else if (dbName && uri && !uri.includes(`/${dbName}`) && !uri.includes('?', uri.indexOf('://') + 3)) {
+            // Handle case where URI might not end in / and doesn't have params
+            if (!uri.split('/').pop().includes(':')) {
+                // Already has a DB name? Let's be safe and just log it
+            } else {
+                uri = `${uri}/${dbName}`;
+            }
+        }
+
+        console.log(`[DB] Connecting to URI: ${uri}`);
+        const conn = await mongoose.connect(uri, {
             serverSelectionTimeoutMS: 5000,
-            // ── Read Replica (Option 3) ───────────────────────────────────────
-            // Routes all read ops to secondary when replica set is active.
-            // Falls back to primary silently when no replica exists.
             readPreference: 'secondaryPreferred',
-            // ── Connection Pool ───────────────────────────────────────────────
-            maxPoolSize: 20,      // Handle burst concurrency (default: 5)
-            minPoolSize: 2,       // Keep warm connections alive
-            // ── Timeouts ─────────────────────────────────────────────────────
+            maxPoolSize: 20,
+            minPoolSize: 2,
             socketTimeoutMS: 30000,
             heartbeatFrequencyMS: 10000,
         });
 
-        console.log(`MongoDB Connected: ${conn.connection.host} (readPreference: secondaryPreferred)`);
+        console.log(`MongoDB Connected: ${conn.connection.host}/${conn.connection.name}`);
     } catch (error) {
         console.error(`Error connecting to MongoDB: ${error.message}`);
         process.exit(1);

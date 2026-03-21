@@ -22,34 +22,17 @@ try {
         const trimmedKey = serviceAccountKey.trim();
         try {
             let jsonString;
-            // Check if it's base64 encoded (common in Vercel/Production)
             if (trimmedKey.startsWith('{')) {
                 jsonString = trimmedKey;
             } else {
-                // Ensure we remove any whitespace that might break base64 decoding
-                const cleanBase64 = trimmedKey.replace(/\s/g, '');
-                jsonString = Buffer.from(cleanBase64, 'base64').toString('utf8');
+                jsonString = Buffer.from(trimmedKey.replace(/\s/g, ''), 'base64').toString('utf8');
             }
 
-            // FINAL ROBUST SCRUB: Remove all literal newlines, carriage returns, and tabs.
-            // These are not allowed inside JSON string literals and can be safely 
-            // removed from the structural parts of the JSON if it's not minified.
-            // This preserves the literal '\\n' sequences used in the private_key.
-            const finalScrub = (str) => {
-                return str
-                    .replace(/[\x00-\x1F\x7F-\x9F]/g, ' ') // Replace all control chars with space
-                    .replace(/\s+/g, ' ')                  // Collapse all whitespace to single spaces
-                    .trim();
-            };
-
-            const cleanedStr = finalScrub(jsonString);
-
-            try {
-                serviceAccount = JSON.parse(cleanedStr);
-            } catch (e1) {
-                console.error("[Auth] Primary cleaned parse failed:", e1.message);
-                // Fallback: try raw string
-                serviceAccount = JSON.parse(jsonString);
+            serviceAccount = JSON.parse(jsonString);
+            
+            // Critical fix for private_key newline formatting
+            if (serviceAccount.private_key && typeof serviceAccount.private_key === 'string') {
+                serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
             }
         } catch (e) {
             console.error("[Auth] Firebase Key Parsing Error:", e.message);

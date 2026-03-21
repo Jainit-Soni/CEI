@@ -53,6 +53,12 @@ function getFirebaseApp() {
         const serviceAccount = JSON.parse(
             Buffer.from(serviceAccountRaw, 'base64').toString('utf8')
         );
+
+        // Critical fix for private_key newline formatting
+        if (serviceAccount.private_key && typeof serviceAccount.private_key === 'string') {
+            serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
+        }
+
         firebaseApp = admin.initializeApp({
             credential: admin.credential.cert(serviceAccount),
         });

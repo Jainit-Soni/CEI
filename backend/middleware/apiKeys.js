@@ -30,6 +30,10 @@ async function apiKeyAuth(req, res, next) {
     }
 
     if (!redis) {
+        if (process.env.NODE_ENV === "development") {
+            console.warn("[apiKeyAuth] Redis unavailable in development. Skipping API key validation.");
+            return next();
+        }
         // Redis unavailable — fail closed for API key requests to prevent auth bypass
         return res.status(503).json({ error: "Authentication service temporarily unavailable. Please retry." });
     }
