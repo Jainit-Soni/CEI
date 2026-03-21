@@ -8,7 +8,9 @@ import Link from "next/link";
 import { ShieldCheck, BarChart4, Scaling, Activity, Building, Award, Star, TrendingUp, Zap, Info, Database, Workflow, Cpu, Layers } from "lucide-react";
 import "./page.css";
 
-const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000").replace(/\/$/, "");
+import { API_BASE } from "@/lib/api";
+
+const API_URL = API_BASE;
 
 const VECTOR_ICONS = {
     A: <Award size={18} />,

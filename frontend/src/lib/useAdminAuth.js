@@ -33,7 +33,7 @@ if (apiBaseUrl && apiBaseUrl.includes("127.0.0.1")) {
     apiBaseUrl = apiBaseUrl.replace("127.0.0.1", "localhost");
 }
 
-const BACKEND = (apiBaseUrl || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000")).replace(/\/$/, "");
+const BACKEND = (apiBaseUrl || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://backend-hazel-theta-62.vercel.app" : "http://localhost:4000")).replace(/\/$/, "");
 
 export function useAdminAuth() {
     const [user, setUser] = useState(null);

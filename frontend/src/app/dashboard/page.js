@@ -24,7 +24,7 @@ import Link from "next/link";
 import IdentityPulseCard from "@/components/IdentityPulseCard";
 import NextBestAction from "@/components/NextBestAction";
 import ShortlistHealth from "@/components/ShortlistHealth";
-import axios from "axios";
+import { api } from "@/lib/api";
 import "./dashboard.css";
 
 export default function DashboardPage() {
@@ -77,7 +77,10 @@ export default function DashboardPage() {
             if (!user) return;
             try {
                 // Corrected route to match backend implementation
-                const response = await axios.get(`http://localhost:4000/api/intelligence/dashboard?uid=${user.uid || user.id}`);
+                // Use standardized 'api' instance from @/lib/api
+                const { data: response } = await api.get(`/api/intelligence/dashboard`, {
+                    params: { uid: user.uid || user.id }
+                });
                 setIntelligence(response.data);
             } catch (error) {
                 console.error("Error fetching intelligence:", error);

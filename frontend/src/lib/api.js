@@ -6,10 +6,11 @@ if (apiBaseUrl && apiBaseUrl.includes("127.0.0.1")) {
   apiBaseUrl = apiBaseUrl.replace("127.0.0.1", "localhost");
 }
 
-// Fallback logic
+// Fallback logic — Centralized Source of Truth
+// Standardize to the hazel-theta backend which is current active production
 export const API_BASE = (
   apiBaseUrl || 
-  (process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000")
+  (process.env.NODE_ENV === "production" ? "https://backend-hazel-theta-62.vercel.app" : "http://localhost:4000")
 ).replace(/\/$/, "");
 
 // 🚨 Production Guardrail: Ensure localhost never leaks into the live site

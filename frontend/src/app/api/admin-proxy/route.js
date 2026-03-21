@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 // This is a Server-Side Route Handler
 // It hides the ADMIN_SECRET from the client.
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://ce-intelligence-backend.vercel.app" : "http://localhost:4000");
+const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL || process.env.NODE_ENV === "production" ? "https://backend-hazel-theta-62.vercel.app" : "http://localhost:4000");
 const ADMIN_SECRET = process.env.ADMIN_SECRET;
 const ADMIN_EMAILS = (process.env.NEXT_PUBLIC_ADMIN_EMAILS || "").split(",").map(e => e.trim().toLowerCase());
 
