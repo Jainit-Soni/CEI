@@ -19,7 +19,7 @@ const NarrativeGeography = ({ college }) => {
             <span className="prestige-subheading">Geographic Pulse</span>
             <h2 className="prestige-heading">Regional Context</h2>
             
-            <div className="dossier-stamp">Location Verified: {college.city || 'Regional Core'}</div>
+            <div className="dossier-stamp">Location Evaluated: {college.city || 'Regional Core'}</div>
             
             <p className="geo-text">
               Strategically positioned in <span className="highlight-dark">{college.location}</span>, this institution 

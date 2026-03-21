@@ -1,0 +1,126 @@
+.narrative-campus {
+  background: transparent;
+  padding: 100px 0;
+}
+
+.campus-intel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 60px 0;
+}
+
+.campus-intel-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.intel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.intel-row:last-child {
+  border-bottom: none;
+}
+
+.intel-row-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.intel-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+  padding: 32px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.intel-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-accent);
+}
+
+.card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(var(--color-accent));
+  opacity: 0.1;
+}
+
+.intel-icon {
+  color: var(var(--color-accent));
+  margin-bottom: 24px;
+}
+
+.intel-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.intel-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  opacity: 0.7;
+}
+
+.intel-value {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.campus-meta-footer {
+  margin-top: 40px;
+  display: flex;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.metric-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(15, 23, 42, 0.4);
+}
+
+.campus-blueprint-mock {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 40px;
+  gap: 2px;
+  opacity: 0.2;
+}
+
+.grid-cell {
+  background: transparent;
+  border-radius: 4px;
+}
+
+@keyframes scan {
+  from { top: 0; }
+  to { top: 100%; }
+}
+
+@media (max-width: 968px) {
+  .campus-intel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

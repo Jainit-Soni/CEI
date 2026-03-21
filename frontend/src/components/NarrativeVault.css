@@ -1,0 +1,15 @@
+.vault-card {
+  transition: transform 0.3s ease;
+}
+
+.vault-header {
+  margin-bottom: 48px;
+}
+
+.vault-intro {
+  margin-top: 24px;
+}
+
+.vault-content-frame {
+  margin-top: 40px;
+}

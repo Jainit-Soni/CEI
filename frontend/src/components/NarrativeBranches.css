@@ -1,0 +1,72 @@
+.narrative-branches {
+  background: var(var(--color-ink));
+  padding: 120px 0;
+  color: white;
+}
+
+.narrative-branches .prestige-heading {
+  color: white;
+}
+
+.narrative-branches .prestige-subheading {
+  color: var(var(--color-accent));
+}
+
+.branches-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 40px;
+}
+
+.branch-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: padding-left 0.3s ease;
+}
+
+.branch-card:last-child {
+  border-bottom: none;
+}
+
+.branch-card:hover {
+  padding-left: 12px;
+}
+
+.branch-icon-ring {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-soft);
+  flex-shrink: 0;
+}
+
+.branch-name {
+  font-size: 1.1rem;
+  font-weight: 850;
+  color: var(--color-ink);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.branch-focus {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .branches-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

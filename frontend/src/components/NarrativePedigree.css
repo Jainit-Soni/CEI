@@ -1,0 +1,130 @@
+.narrative-pedigree {
+  background: transparent;
+  padding: 120px 0;
+}
+
+.pedigree-flex {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-top: 60px;
+}
+
+.pedigree-content {
+  flex: 1.2;
+}
+
+.pedigree-intro {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(var(--color-ink));
+  margin-bottom: 48px;
+  opacity: 0.8;
+}
+
+.pedigree-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.pedigree-node {
+  display: flex;
+  gap: 20px;
+}
+
+.node-icon-box {
+  width: 44px;
+  height: 44px;
+  background: var(#ffffff);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(var(--color-accent));
+  border: 1px solid var(var(--color-border));
+}
+
+.node-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.node-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.node-value {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(var(--color-ink));
+}
+
+.node-sub {
+  font-size: 0.75rem;
+  opacity: 0.4;
+  font-weight: 600;
+}
+
+.pedigree-hero-stat {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.stat-circle {
+  width: 300px;
+  height: 300px;
+  border: 1px solid var(var(--color-border));
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(#ffffff);
+}
+
+.stat-val {
+  font-size: 3.5rem;
+  font-weight: 1000;
+  color: var(var(--color-accent));
+  letter-spacing: -0.05em;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+}
+
+.stat-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@media (max-width: 968px) {
+  .pedigree-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .pedigree-node {
+    justify-content: center;
+  }
+}
