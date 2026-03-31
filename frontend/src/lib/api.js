@@ -95,7 +95,7 @@ const normalizeCeiDetail = (res) => {
     const name = canonical.canonicalCollegeName || rawFields.name || rawData.name;
     const state = canonical.state || rawFields.state || rawData.state;
     const city = canonical.city || rawFields.district || rawData.city || rawData.district;
-    const location = (city && state) ? `${city}, ${state}` : (state || city || "Location TBA");
+    const location = (city && state) ? `${city}, ${state}` : (state || city || null);
     
     return {
         ...rawData,
