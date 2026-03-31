@@ -37,6 +37,16 @@ backend/.env.local
 *.csv.bak
 output/scoring/*.csv
 
+# Raw Data & Intermediate Processing (Not for Deployment)
+phase1_foundation/
+phase2a/
+phase3_acpc/
+normalized/
+Apify/
+Final/
+cei_raw/
+*.html.download
+*.js.download
 
 # Frontend specific
 frontend/node_modules/
