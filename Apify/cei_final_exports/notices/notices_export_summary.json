@@ -1,0 +1,32 @@
+{
+  "input_file": "E:\\CMAT-PROBLEM\\Apify\\cei_normalized\\cei_import_ready\\notices_cei_ready.ndjson",
+  "output_dir": "E:\\CMAT-PROBLEM\\Apify\\cei_final_exports\\notices",
+  "total_records": 130,
+  "authority_counts": {
+    "JoSAA": 105,
+    "NTA": 25
+  },
+  "doc_type_counts": {
+    "schedule": 9,
+    "information_bulletin": 6,
+    "certificate_format": 22,
+    "seat_matrix": 2,
+    "faq": 4,
+    "document": 56,
+    "opening_closing_rank": 2,
+    "notice": 29
+  },
+  "session_year_counts": {
+    "2025": 10,
+    "2024": 8,
+    "2023": 7,
+    "2022": 4,
+    "2021": 1,
+    "unknown": 100
+  },
+  "files_written": {
+    "notices_all": "E:\\CMAT-PROBLEM\\Apify\\cei_final_exports\\notices\\notices_all.json",
+    "notices_index": "E:\\CMAT-PROBLEM\\Apify\\cei_final_exports\\notices\\notices_index.json",
+    "by_authority_dir": "E:\\CMAT-PROBLEM\\Apify\\cei_final_exports\\notices\\notices_by_authority"
+  }
+}

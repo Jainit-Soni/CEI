@@ -1,0 +1,7 @@
+{
+  "source_id": "nta_exam_pages",
+  "authority": "NTA",
+  "type": "exam_pages",
+  "source_page": "https://www.nta.ac.in/",
+  "local_docs_dir": "cei_raw/nta_exam_pages/docs"
+}

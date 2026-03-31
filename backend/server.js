@@ -4,8 +4,7 @@ require('dotenv').config({ path: require('path').resolve(__dirname, '.env.local'
 // Only strictly blockade the core system if DB or JWT is missing.
 // Firebase and Backup keys are handled gracefully by individual routes.
 const requiredEnv = [
-  "JWT_SECRET",
-  "MONGODB_URI"
+  "JWT_SECRET"
 ];
 
 const missingEnv = requiredEnv.filter(key => !process.env[key]);
@@ -45,7 +44,7 @@ const explainRoutes = require("./routes/explain");
 const verificationRoutes = require("./routes/verification");
 const adminAuthRoutes = require("./routes/adminAuth");
 const reviewsRoutes = require("./routes/reviews");
-const connectDB = require("./config/db");
+// const connectDB = require("./config/db"); // Disabled for NDJSON file-based architecture
 const { getRedisClient } = require("./config/redis");
 const logger = require("./lib/logger");
 const scheduler = require("./lib/scheduler");
@@ -137,9 +136,26 @@ app.use((req, res, next) => {
   next();
 });
 
+// ==========================================
+// 📦 WAIT FOR IN-MEMORY NDJSON DATASTORE
+// ==========================================
+app.use(async (req, res, next) => {
+  if (req.path === '/api/health') return next(); // Let health check through immediately
+  const dataStore = require("./lib/dataStore");
+  try {
+    if (!global.dbReady) {
+      await dataStore.ready;
+    }
+    next();
+  } catch (err) {
+    console.error("[DataStore] Readiness error:", err);
+    res.status(500).json({ error: "Internal Server Error: Dataset unavailable" });
+  }
+});
+
 // Connect to MongoDB & Start Services
 if (process.env.NODE_ENV !== 'test' && !isMaintenanceMode) {
-  connectDB();
+  // connectDB(); // Disabled Mongoose connection
   if (!process.env.VERCEL) {
     scheduler.start();
   }
@@ -196,16 +212,15 @@ app.use(apiKeyAuth); // Per-key rate limiting on top of IP limiting
 app.get("/api/health", async (req, res) => {
   const { getRedisStatus } = require("./services/dataStore");
   const cacheStatus = await getRedisStatus().catch(() => ({ status: "error" }));
-  const mongoose = require("mongoose");
   
   res.json({
     status: "ok",
     time: new Date().toISOString(),
     database: {
-      status: mongoose.connection.readyState === 1 ? "connected" : "disconnected",
-      state: mongoose.connection.readyState, // 0: disconnected, 1: connected, 2: connecting, 3: disconnecting
-      host: mongoose.connection.host,
-      name: mongoose.connection.name
+      status: "disconnected", // MongoDB replaced with in-memory NDJSON
+      state: 0,
+      host: "local-ndjson",
+      name: "file-system"
     },
     cache: cacheStatus
   });
@@ -347,31 +362,26 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ error: err.message || "Internal server error" });
 });
 
+const dataStore = require("./lib/dataStore");
 const PORT = process.env.PORT || 4000;
 
 if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
-  app.listen(PORT, () => {
-    const c = {
-      cyan: '\x1b[36m',
-      green: '\x1b[32m',
-      yellow: '\x1b[33m',
-      magenta: '\x1b[35m',
-      reset: '\x1b[0m',
-      bold: '\x1b[1m',
-      blue: '\x1b[34m'
-    };
+  app.listen(PORT, async () => {
+    // Force Data Load on Startup
+    try {
+      await dataStore.loadDataFromNDJSON();
+    } catch (e) {
+      console.error("❌ Critical Ingestion Failure:", e.message);
+    }
 
-    const isMissingEnv = isMaintenanceMode ? `${c.yellow}ACTIVE ⚠️ (Missing Env Vars)${c.reset}` : `${c.green}Inactive (Healthy)${c.reset}`;
-    const redisStatus = process.env.REDIS_URL ? `${c.green}Connected & Active${c.reset}` : `${c.yellow}Local / Missing${c.reset}`;
-    const envStatus = process.env.NODE_ENV || 'development';
-
+    const c = { cyan: '\x1b[36m', green: '\x1b[32m', yellow: '\x1b[33m', magenta: '\x1b[35m', reset: '\x1b[0m', bold: '\x1b[1m', blue: '\x1b[34m' };
+    const isMissingEnv = missingEnv.length > 0 ? `${c.yellow}ACTIVE ⚠️ (Missing Env Vars)${c.reset}` : `${c.green}Inactive (Healthy)${c.reset}`;
     console.log(`\n${c.cyan}${c.bold}================================================================${c.reset}`);
     console.log(`${c.magenta}${c.bold}   ✨ CEI CORE INTELLIGENCE ENGINE ONLINE ✨${c.reset}`);
     console.log(`${c.cyan}${c.bold}================================================================${c.reset}\n`);
     console.log(`  ${c.bold}🚀 API Base URL     :${c.reset} ${c.blue}http://localhost:${PORT}${c.reset}`);
-    console.log(`  ${c.bold}🌍 Environment      :${c.reset} ${c.cyan}${envStatus}${c.reset}`);
+    console.log(`  ${c.bold}🌍 Environment      :${c.reset} ${c.cyan}${process.env.NODE_ENV || 'development'}${c.reset}`);
     console.log(`  ${c.bold}🛡️  Maintenance Mode :${c.reset} ${isMissingEnv}`);
-    console.log(`  ${c.bold}⚡ Real-time Cache   :${c.reset} ${redisStatus}`);
     console.log(`\n${c.cyan}${c.bold}================================================================${c.reset}\n`);
     console.log(`${c.green}Ready to accept connections...${c.reset}\n`);
   });

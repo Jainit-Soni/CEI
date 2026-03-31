@@ -12,70 +12,29 @@
  */
 
 const mongoose = require('mongoose');
+const mingo = require('mingo');
 
-const VERIFIABLE_FIELDS = [
-    'established_year', 'campus_size', 'courses_offered', 'accreditation',
-    'student_intake', 'faculty_count', 'placement_rate', 'avg_package',
-    'highest_package', 'companies_visiting', 'hostel_capacity', 'ownership_type'
-];
+// Mock MongoQuery wrapper (simplified for this model)
+class MongoQuery {
+    constructor(data) { this.data = data; }
+    lean() { return this; }
+    // Add other chainable methods if needed
+    then(resolve) { resolve(this.data); }
+}
 
-const VerifiedFieldSchema = new mongoose.Schema({
-    // ── Identity ───────────────────────────────────────────────────────────────
-    collegeId: { type: String, required: true, index: true },
-    fieldName: { type: String, required: true, enum: VERIFIABLE_FIELDS, index: true },
-
-    // ── Current Best Value ─────────────────────────────────────────────────────
-    fieldValue: { type: mongoose.Schema.Types.Mixed, default: null },
-
-    // ── Confidence ─────────────────────────────────────────────────────────────
-    confidenceScore: {
-        type: Number, min: 0, max: 100, default: 0, index: true
+const VerifiedFieldMock = {
+    find: (query = {}) => {
+        const q = new mingo.Query(query);
+        const result = q.find(global.verifiedFields || []).all();
+        return new MongoQuery(result);
     },
-    verificationStatus: {
-        type: String,
-        enum: ['Verified', 'Likely Accurate', 'Needs Review', 'Untrusted'],
-        default: 'Untrusted',
-        index: true
+    findOne: (query = {}) => {
+        const q = new mingo.Query(query);
+        const result = q.find(global.verifiedFields || []).all();
+        return new MongoQuery(result.length > 0 ? result[0] : null);
     },
-
-    // ── Source IDs (SourceEvidence._id refs) ───────────────────────────────────
-    sourceIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'SourceEvidence' }],
-    sourceCount: { type: Number, default: 0 },
-
-    // ── Anomaly Boost (from TrustReports) ─────────────────────────────────────
-    anomalyBoost: { type: Number, default: 0 }, // each pending report adds weight
-
-    // ── Lifecycle ──────────────────────────────────────────────────────────────
-    lastVerifiedAt: { type: Date, default: null },
-    nextVerificationAt: { type: Date, default: null },
-
-    // ── Linked VerificationTask ────────────────────────────────────────────────
-    activeTaskRef: { type: String, default: null }
-
-}, {
-    collection: 'verified_fields',
-    timestamps: true,
-    versionKey: false
-});
-
-// Compound index for fast per-college field queries
-VerifiedFieldSchema.index({ collegeId: 1, fieldName: 1 }, { unique: true });
-VerifiedFieldSchema.index({ verificationStatus: 1, confidenceScore: 1 });
-
-// ── Status Derivation Helper ───────────────────────────────────────────────────
-VerifiedFieldSchema.methods.deriveStatus = function () {
-    const s = this.confidenceScore;
-    if (s >= 90) return 'Verified';
-    if (s >= 70) return 'Likely Accurate';
-    if (s >= 40) return 'Needs Review';
-    return 'Untrusted';
+    save: async (doc) => doc,
+    schema: { methods: {} }
 };
 
-VerifiedFieldSchema.pre('save', function (next) {
-    this.verificationStatus = this.deriveStatus();
-    this.sourceCount = this.sourceIds?.length || 0;
-    next();
-});
-
-module.exports = mongoose.models.VerifiedField ||
-    mongoose.model('VerifiedField', VerifiedFieldSchema);
+module.exports = VerifiedFieldMock;

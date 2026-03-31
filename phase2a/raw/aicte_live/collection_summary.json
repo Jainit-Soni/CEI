@@ -1,0 +1,26 @@
+{
+  "input_file": "phase2a\\manual_inputs\\aicte\\aicte_colleges-response-lakshadweep.json",
+  "output_dir": "phase2a\\raw\\aicte_live_lakshadweep",
+  "limit": 100000,
+  "year": "2025-2026",
+  "course_token": "1",
+  "results": [
+    {
+      "institute_id": "1-44638727473",
+      "status": "populated",
+      "rows": 3,
+      "file": "phase2a\\raw\\aicte_live_lakshadweep\\1-44638727473__course_1__year_2025-2026.json",
+      "request_url": "https://facilities.aicte-india.org/dashboard/pages/php/approvedcourse.php?method=fetchdata&aicteid=%2F1-44638727473%2F&course=%2F1%2F&year=%2F2025-2026%2F"
+    }
+  ],
+  "totals": {
+    "considered": 1,
+    "successful": 1,
+    "populated": 1,
+    "empty": 0,
+    "malformed": 0,
+    "failed": 0,
+    "skipped_existing": 0,
+    "rows_returned": 3
+  }
+}

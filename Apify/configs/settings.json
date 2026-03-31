@@ -1,0 +1,6 @@
+{
+  "base_raw_dir": "cei_raw",
+  "base_normalized_dir": "cei_normalized",
+  "default_timeout_seconds": 60,
+  "user_agent": "Mozilla/5.0"
+}

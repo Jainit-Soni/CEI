@@ -1,0 +1,7 @@
+{
+  "source_id": "nta_exam_pages",
+  "source_type": "official_exam_pages",
+  "source_url": "https://www.nta.ac.in/",
+  "collector": "collect_nta_exam_pages.py",
+  "raw_output_dir": "cei_raw/nta_exam_pages"
+}

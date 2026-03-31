@@ -1,0 +1,7 @@
+{
+  "source_id": "nta_noticeboard",
+  "source_type": "official_notice_archive",
+  "source_url": "https://www.nta.ac.in/NoticeBoardArchive",
+  "collector": "collect_nta_notice_archive.py",
+  "raw_output_dir": "cei_raw/nta_noticeboard"
+}

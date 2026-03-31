@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEI Data Infrastructure Command Center</title>
+    
+    <!-- Chosen Palette: Slate & Cyan Truth (Cool neutrals with cyan accents for a technical, data-driven feel) -->
+    <!-- Application Structure Plan: The SPA is structured as a 'Command Center' dashboard. It is divided into logical, task-oriented views: 1. Core Mandate (Project definition & truth policy), 2. Data Targets (Visualizing the scope of acquisition), 3. The Swarm (Interactive agent directory), 4. Execution Pipeline (Timeline of waves), 5. QA & Workspace (Validation gates and file structure). This non-linear, sectioned approach allows users to understand the 'What', 'Who', 'How', and 'Validation' of the CEI system interactively without reading a static wall of text. -->
+    <!-- Visualization & Content Choices: 
+         1. Data Categories -> Goal: Inform/Organize -> Viz: Chart.js Polar Area Chart -> Interaction: Hover for details -> Justification: Shows the multi-faceted nature of the data target in a compact, technical format. NO SVG/Mermaid. 
+         2. Swarm Agents -> Goal: Organize -> Viz: Interactive Grid Cards -> Interaction: Click to expand responsibilities -> Justification: Digests 11 agents into scannable entities, keeping UI clean. NO SVG/Mermaid. 
+         3. Execution Waves -> Goal: Change/Process -> Viz: CSS Timeline -> Interaction: Hover states -> Justification: Clearly displays the chronological workflow. NO SVG/Mermaid. 
+         4. Workspace & Gates -> Goal: Relationships/Organize -> Viz: Interactive Folder Tree & Toggleable Checklists -> Interaction: Click to expand folders/gates -> Justification: Allows deep diving into technical structures without overwhelming the top-level view. NO SVG/Mermaid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 450px;
+            }
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #0891b2;
+            color: #0891b2;
+            font-weight: 600;
+        }
+        .agent-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .agent-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .folder-toggle {
+            cursor: pointer;
+            user-select: none;
+        }
+        .folder-toggle::before {
+            content: '📁 ';
+        }
+        .folder-toggle.open::before {
+            content: '📂 ';
+        }
+        .file-item::before {
+            content: '📄 ';
+        }
+        .timeline-line {
+            width: 2px;
+            background: #cbd5e1;
+            position: absolute;
+            left: 11px;
+            top: 24px;
+            bottom: -24px;
+        }
+        .wave-item:last-child .timeline-line {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl mr-2">⚙️</span>
+                    <span class="font-bold text-xl tracking-tight text-slate-800">CEI Command</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <button onclick="navTo('overview')" id="nav-overview" class="nav-link active text-slate-500 hover:text-slate-900 px-1 py-2 text-sm font-medium transition-colors">Overview</button>
+                    <button onclick="navTo('data-targets')" id="nav-data-targets" class="nav-link text-slate-500 hover:text-slate-900 px-1 py-2 text-sm font-medium transition-colors">Data Scope</button>
+                    <button onclick="navTo('swarm')" id="nav-swarm" class="nav-link text-slate-500 hover:text-slate-900 px-1 py-2 text-sm font-medium transition-colors">Agent Swarm</button>
+                    <button onclick="navTo('pipeline')" id="nav-pipeline" class="nav-link text-slate-500 hover:text-slate-900 px-1 py-2 text-sm font-medium transition-colors">Pipeline</button>
+                    <button onclick="navTo('validation')" id="nav-validation" class="nav-link text-slate-500 hover:text-slate-900 px-1 py-2 text-sm font-medium transition-colors">QA & Gates</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <section id="overview" class="content-section py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12 mb-8">
+                <div class="inline-block px-3 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-bold tracking-wide uppercase mb-4">Project Definition</div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">College & Exam Intelligence (CEI)</h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-3xl leading-relaxed">
+                    An India-focused education data infrastructure project designed to build a <strong>truthful, official-source-based data system</strong> for Indian colleges, universities, institutes, exams, counselling systems, seat matrices, cutoffs, fees, placements, approvals, accreditations, rankings, and related education signals.
+                </p>
+                <div class="grid md:grid-cols-3 gap-6 text-sm">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <span class="text-xl mb-2 block">🚫</span>
+                        <h3 class="font-bold text-slate-800 mb-1">Not a Listing Task</h3>
+                        <p class="text-slate-500">This is not a generic college listing or content writing assignment. We do not generate text descriptions.</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <span class="text-xl mb-2 block">🏢</span>
+                        <h3 class="font-bold text-slate-800 mb-1">Official Data Only</h3>
+                        <p class="text-slate-500">Canonical truth comes only from official domains (AISHE, AICTE, UGC, NAAC, NIRF, JoSAA, etc.).</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <span class="text-xl mb-2 block">📦</span>
+                        <h3 class="font-bold text-slate-800 mb-1">Strict Deliverables</h3>
+                        <p class="text-slate-500">Returns either <code class="bg-slate-200 px-1 rounded">CEI_REAL_OFFICIAL_DATA.zip</code> or <code class="bg-slate-200 px-1 rounded">CEI_BLOCKER_REPORT.zip</code>. No fake success.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-red-50 rounded-2xl border border-red-200 p-8 md:p-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-3xl">🛡️</span>
+                    <h2 class="text-2xl font-bold text-red-900">The Truth Policy (Non-Negotiable)</h2>
+                </div>
+                <p class="text-red-700 mb-6 max-w-4xl">
+                    The CEI infrastructure is strictly governed by a zero-tolerance policy for fabricated, guessed, or unofficial data. If official sources disagree, both values are kept in a conflicts registry.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-8 text-red-800 font-medium text-sm">
+                    <div class="flex items-start gap-2"><span class="text-red-500">✖</span> never guess</div>
+                    <div class="flex items-start gap-2"><span class="text-red-500">✖</span> never fabricate rows</div>
+                    <div class="flex items-start gap-2"><span class="text-red-500">✖</span> never generate fake production data</div>
+                    <div class="flex items-start gap-2"><span class="text-red-500">✖</span> never create mock/sample/demo records</div>
+                    <div class="flex items-start gap-2"><span class="text-red-500">✖</span> never use unofficial aggregators as truth</div>
+                    <div class="flex items-start gap-2"><span class="text-red-500">✖</span> never convert missing values to inferred</div>
+                    <div class="flex items-start gap-2"><span class="text-red-500">✖</span> never silently overwrite conflicts</div>
+                    <div class="flex items-start gap-2 text-green-700"><span class="text-green-600">✔</span> always preserve provenance</div>
+                    <div class="flex items-start gap-2 text-green-700"><span class="text-green-600">✔</span> always prefer truth over coverage</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-targets" class="content-section hidden py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Target Data Domains</h2>
+                <p class="text-slate-600 max-w-3xl">
+                    This section illustrates the breadth of data CEI is mandated to collect. The system harvests 9 distinct categories of official education signals. Interact with the chart below to view the specific data points required for each domain.
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8 items-center bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <div class="w-full lg:w-1/2">
+                    <div class="chart-container">
+                        <canvas id="domainChart"></canvas>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 bg-slate-50 p-6 rounded-xl border border-slate-200 min-h-[300px]" id="domain-details">
+                    <div class="text-center text-slate-500 mt-24">
+                        <span class="text-4xl block mb-4">👆</span>
+                        <p>Hover over or click a category on the chart to view specific target fields.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="swarm" class="content-section hidden py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="mb-8 flex justify-between items-end">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">The Autonomous Agent Swarm</h2>
+                    <p class="text-slate-600 max-w-3xl">
+                        CEI operates via an 11-agent multi-agent architecture. Each agent has specific ownership domains ranging from source discovery to final QA packaging. Click on an agent to reveal its designated responsibilities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="agent-grid">
+            </div>
+        </section>
+
+        <section id="pipeline" class="content-section hidden py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Execution Pipeline</h2>
+                <p class="text-slate-600 max-w-3xl">
+                    Data acquisition follows a strict 5-wave chronological order, prioritizing high-yield bulk layers before expanding into targeted extractions and final QA.
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative">
+                <div id="timeline-container" class="space-y-8 relative pl-4">
+                </div>
+            </div>
+        </section>
+
+        <section id="validation" class="content-section hidden py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">QA Gates & Workspace Output</h2>
+                <p class="text-slate-600 max-w-3xl">
+                    CEI output is completely dependent on passing 7 hard acceptance gates. The required workspace structure enforces the segregation of raw, parsed, and normalized data, alongside extensive evidence logging.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+                        <span>🚧</span> Hard Acceptance Gates
+                    </h3>
+                    <div class="space-y-3" id="gates-list">
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 text-slate-300 p-6 rounded-2xl shadow-sm border border-slate-800 font-mono text-sm overflow-hidden flex flex-col">
+                    <h3 class="text-xl font-bold text-white mb-4 font-sans flex items-center gap-2">
+                        <span>🗄️</span> Required Workspace Structure
+                    </h3>
+                    <div class="flex-grow overflow-y-auto bg-slate-950 p-4 rounded-lg border border-slate-800" id="file-tree">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-auto py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
+            CEI Project Protocol &middot; Automated Data Acquisition System &middot; Strict Official Sources Only
+        </div>
+    </footer>
+
+    <script>
+        const navState = {
+            current: 'overview'
+        };
+
+        function navTo(sectionId) {
+            document.querySelectorAll('.content-section').forEach(el => {
+                el.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+
+            document.querySelectorAll('.nav-link').forEach(el => {
+                el.classList.remove('active', 'border-b-2', 'border-cyan-600', 'text-cyan-600', 'font-semibold');
+                el.classList.add('text-slate-500');
+            });
+            
+            const activeBtn = document.getElementById('nav-' + sectionId);
+            activeBtn.classList.remove('text-slate-500');
+            activeBtn.classList.add('active', 'text-cyan-600');
+
+            if (sectionId === 'data-targets') {
+                initChart();
+            }
+            if (sectionId === 'swarm' && !document.getElementById('agent-grid').hasChildNodes()) {
+                renderAgents();
+            }
+            if (sectionId === 'pipeline' && !document.getElementById('timeline-container').hasChildNodes()) {
+                renderTimeline();
+            }
+            if (sectionId === 'validation' && !document.getElementById('gates-list').hasChildNodes()) {
+                renderGatesAndTree();
+            }
+        }
+
+        const domainData = {
+            labels: [
+                'Institution Master', 'Programs / Courses', 'Seats / Intake', 
+                'Cutoffs / Admissions', 'Fees', 'Placements / Outcomes', 
+                'Approvals / Accreditations', 'Rankings', 'Notices & Exams'
+            ],
+            details: [
+                ['Institution name, alternate names', 'Institution type & ownership', 'State, district, city, address', 'Website & affiliation', 'Regulator IDs & establishment year'],
+                ['Program name & degree', 'Specialization & level', 'Duration & mode', 'Department', 'Intake (if official)'],
+                ['Approved intake', 'Quota-wise seats', 'Category-wise seats', 'Round-wise seat matrices'],
+                ['Exam & counselling authority', 'Year & round', 'Institute, course, quota, category', 'Opening & closing rank', 'Score / percentile'],
+                ['Tuition fee', 'Semester/annual/total fee', 'Quota-specific fee', 'Hostel/recurring charges'],
+                ['Placement year', 'Eligible students', 'Placed students', 'Median salary', 'Official placement metrics only'],
+                ['AICTE/UGC/NAAC/NBA/NMC etc.', 'Approval/accreditation status', 'Grade/validity/branch-level'],
+                ['Official NIRF rankings', 'Category', 'Rank', 'Score', 'Year'],
+                ['Official admission/exam notices', 'Seat matrix notices', 'Result/scholarship notices', 'Structured metadata']
+            ]
+        };
+
+        let chartInstance = null;
+
+        function initChart() {
+            if (chartInstance) return;
+            
+            const ctx = document.getElementById('domainChart').getContext('2d');
+            
+            chartInstance = new Chart(ctx, {
+                type: 'polarArea',
+                data: {
+                    labels: domainData.labels,
+                    datasets: [{
+                        data: [10, 10, 10, 10, 10, 10, 10, 10, 10],
+                        backgroundColor: [
+                            'rgba(8, 145, 178, 0.7)',
+                            'rgba(13, 148, 136, 0.7)',
+                            'rgba(5, 150, 105, 0.7)',
+                            'rgba(2, 132, 199, 0.7)',
+                            'rgba(37, 99, 235, 0.7)',
+                            'rgba(79, 70, 229, 0.7)',
+                            'rgba(124, 58, 237, 0.7)',
+                            'rgba(147, 51, 234, 0.7)',
+                            'rgba(71, 85, 105, 0.7)'
+                        ],
+                        borderWidth: 1,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            ticks: { display: false },
+                            grid: { color: 'rgba(0,0,0,0.05)' }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                font: { family: 'ui-sans-serif, system-ui, sans-serif' },
+                                padding: 15
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ' ' + context.label;
+                                }
+                            }
+                        }
+                    },
+                    onHover: (event, activeElements) => {
+                        const detailsContainer = document.getElementById('domain-details');
+                        if (activeElements.length > 0) {
+                            event.native.target.style.cursor = 'pointer';
+                            const idx = activeElements[0].index;
+                            const title = domainData.labels[idx];
+                            const items = domainData.details[idx];
+                            
+                            let html = `<h3 class="text-2xl font-bold text-slate-800 mb-4 border-b border-slate-200 pb-2">${title}</h3><ul class="space-y-3">`;
+                            items.forEach(item => {
+                                html += `<li class="flex items-start gap-2 text-slate-700"><span class="text-cyan-600 font-bold">&#8226;</span> ${item}</li>`;
+                            });
+                            html += `</ul>`;
+                            detailsContainer.innerHTML = html;
+                        } else {
+                            event.native.target.style.cursor = 'default';
+                        }
+                    }
+                }
+            });
+        }
+
+        const agents = [
+            { id: 0, name: 'Orchestrator', icon: '🧠', owns: ['Planning & coordination', 'Anti-fake enforcement', 'Final decision to ship/fail'] },
+            { id: 1, name: 'Source Registry', icon: '📡', owns: ['Official source discovery', 'Source validation', 'Source registry creation', 'Access notes'] },
+            { id: 2, name: 'Institution Harvester', icon: '🏛️', owns: ['Bulk institution data acquisition', 'Institution master normalization'] },
+            { id: 3, name: 'Programs Harvester', icon: '📚', owns: ['Program/course extraction', 'Approval/regulator structures', 'Intake-linked program data'] },
+            { id: 4, name: 'Rankings Harvester', icon: '🏆', owns: ['NIRF ranking extraction', 'Official ranking extraction'] },
+            { id: 5, name: 'Seat Harvester', icon: '🪑', owns: ['JoSAA, CSAB, MCC', 'State counselling authorities', 'Cutoffs, round data, matrices'] },
+            { id: 6, name: 'Document Extraction', icon: '📄', owns: ['PDF parsing', 'Table extraction', 'Page-level evidence', 'Document manifests'] },
+            { id: 7, name: 'Fees Expansion', icon: '💰', owns: ['Official fee documents', 'Placement disclosures', 'Mandatory disclosures', 'Targeted expansion'] },
+            { id: 8, name: 'Entity Resolution', icon: '🔗', owns: ['Linking institutions across sources', 'Linking programs to institutes', 'Conflict preservation', 'Linkage map generation'] },
+            { id: 9, name: 'QA / Governance', icon: '⚖️', owns: ['Placeholder/empty detection', 'Invalid key/provenance checks', 'Threshold & sanity checks'] },
+            { id: 10, name: 'Packaging', icon: '📦', owns: ['Manifest generation', 'File index creation', 'Final archive creation'] }
+        ];
+
+        function renderAgents() {
+            const grid = document.getElementById('agent-grid');
+            agents.forEach(a => {
+                const card = document.createElement('div');
+                card.className = 'agent-card bg-white border border-slate-200 rounded-xl p-5 cursor-pointer flex flex-col h-full';
+                
+                let ownsList = '';
+                a.owns.forEach(task => {
+                    ownsList += `<li class="text-sm text-slate-600 mb-1 flex items-start gap-2"><span class="text-cyan-500 text-xs mt-1">&#9656;</span> <span>${task}</span></li>`;
+                });
+
+                card.innerHTML = `
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-xl">${a.icon}</div>
+                        <div>
+                            <div class="text-xs font-bold text-cyan-600 uppercase tracking-wider">Agent ${a.id}</div>
+                            <div class="font-bold text-slate-800">${a.name}</div>
+                        </div>
+                    </div>
+                    <div class="hidden-details hidden mt-2 pt-3 border-t border-slate-100 flex-grow">
+                        <div class="text-xs font-semibold text-slate-400 uppercase mb-2">Owns:</div>
+                        <ul class="ml-1">${ownsList}</ul>
+                    </div>
+                `;
+
+                card.onclick = () => {
+                    const details = card.querySelector('.hidden-details');
+                    if (details.classList.contains('hidden')) {
+                        document.querySelectorAll('.hidden-details').forEach(el => el.classList.add('hidden'));
+                        document.querySelectorAll('.agent-card').forEach(el => el.classList.remove('ring-2', 'ring-cyan-500'));
+                        details.classList.remove('hidden');
+                        card.classList.add('ring-2', 'ring-cyan-500');
+                    } else {
+                        details.classList.add('hidden');
+                        card.classList.remove('ring-2', 'ring-cyan-500');
+                    }
+                };
+                grid.appendChild(card);
+            });
+        }
+
+        const waves = [
+            { num: 1, title: 'Acquire Bulk Layers', desc: 'High-yield official bulk: Institution master, approvals/programs, rankings, counselling cutoffs.' },
+            { num: 2, title: 'Normalize & Validate', desc: 'Process and standardize the raw bulk layers into uniform NDJSON formats.' },
+            { num: 3, title: 'Targeted Expansion', desc: 'Extract official fees, placements, and complex document structures.' },
+            { num: 4, title: 'Resolve & QA', desc: 'Resolve entities, generate linkage maps, preserve conflicts, run stringent QA rules.' },
+            { num: 5, title: 'Gate & Package', desc: 'Check all 7 acceptance gates. Package as CEI_REAL_OFFICIAL_DATA.zip if successful.' }
+        ];
+
+        function renderTimeline() {
+            const container = document.getElementById('timeline-container');
+            waves.forEach(w => {
+                const item = document.createElement('div');
+                item.className = 'wave-item relative pl-10 pt-2 pb-6';
+                item.innerHTML = `
+                    <div class="timeline-line"></div>
+                    <div class="absolute left-0 top-3 w-6 h-6 rounded-full bg-cyan-100 border-2 border-cyan-500 flex items-center justify-center text-xs font-bold text-cyan-700 z-10">${w.num}</div>
+                    <div class="bg-slate-50 border border-slate-100 rounded-lg p-4 hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-slate-800 text-lg mb-1">Wave ${w.num}: ${w.title}</h4>
+                        <p class="text-slate-600 text-sm">${w.desc}</p>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        const gates = [
+            { id: 1, name: 'Real raw files exist', reqs: '≥25 real raw files from ≥4 distinct official source families.' },
+            { id: 2, name: 'Core datasets populated', reqs: 'source_registry, institutions, +2 of rankings/cutoffs/seats/programs/accreditations.' },
+            { id: 3, name: 'Minimum row counts', reqs: 'Registry ≥15, Inst ≥1000, +1 specific dataset volume threshold.' },
+            { id: 4, name: 'Provenance quality', reqs: '≥90% core rows must have sourceUrl, sourceFamily, evidencePointer.' },
+            { id: 5, name: 'No placeholder contamination', reqs: 'Zero mock/sample/todo/placeholder strings in production datasets.' },
+            { id: 6, name: 'Archive size sanity', reqs: 'Final archive must be ≥5 MB.' },
+            { id: 7, name: 'QA Report Verifications', reqs: 'Explicit gate-by-gate verdict in qa_report.md.' }
+        ];
+
+        const fsData = [
+            { type: 'folder', name: 'cei_real_official_data', children: [
+                { type: 'folder', name: 'raw', children: [{type:'file', name:'institutions/'}, {type:'file', name:'approvals/'}, {type:'file', name:'rankings/'}] },
+                { type: 'folder', name: 'parsed', children: [{type:'file', name:'institutions/'}, {type:'file', name:'documents/'}] },
+                { type: 'folder', name: 'normalized', children: [{type:'file', name:'institutions.ndjson'}, {type:'file', name:'cutoffs.ndjson'}, {type:'file', name:'conflicts.ndjson'}] },
+                { type: 'folder', name: 'evidence', children: [{type:'file', name:'document_manifest.ndjson'}, {type:'file', name:'field_provenance.ndjson'}] },
+                { type: 'folder', name: 'logs', children: [{type:'file', name:'agent_activity.log'}, {type:'file', name:'qa_log.ndjson'}] },
+                { type: 'folder', name: 'reports', children: [{type:'file', name:'qa_report.md'}, {type:'file', name:'final_manifest.md'}] }
+            ]}
+        ];
+
+        function renderGatesAndTree() {
+            const gateList = document.getElementById('gates-list');
+            gates.forEach(g => {
+                const div = document.createElement('div');
+                div.className = 'flex items-start gap-3 p-3 rounded-lg border border-slate-100 bg-slate-50';
+                div.innerHTML = `
+                    <div class="mt-0.5 text-slate-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div>
+                        <div class="font-bold text-slate-800 text-sm">Gate ${g.id}: ${g.name}</div>
+                        <div class="text-xs text-slate-500 mt-1">${g.reqs}</div>
+                    </div>
+                `;
+                gateList.appendChild(div);
+            });
+
+            const treeContainer = document.getElementById('file-tree');
+            treeContainer.appendChild(buildTree(fsData));
+        }
+
+        function buildTree(nodes) {
+            const ul = document.createElement('ul');
+            ul.className = 'ml-4 border-l border-slate-700 pl-2 py-1 space-y-1';
+            nodes.forEach(node => {
+                const li = document.createElement('li');
+                if (node.type === 'folder') {
+                    const span = document.createElement('span');
+                    span.className = 'folder-toggle text-cyan-400 hover:text-cyan-300 font-bold';
+                    span.textContent = node.name;
+                    li.appendChild(span);
+                    
+                    const childrenUl = buildTree(node.children);
+                    childrenUl.style.display = 'none';
+                    li.appendChild(childrenUl);
+
+                    span.onclick = function() {
+                        this.classList.toggle('open');
+                        childrenUl.style.display = childrenUl.style.display === 'none' ? 'block' : 'none';
+                    };
+                    
+                    if (node.name === 'cei_real_official_data') {
+                        span.classList.add('open');
+                        childrenUl.style.display = 'block';
+                    }
+                } else {
+                    li.className = 'file-item text-slate-400 ml-4 hover:text-white cursor-default';
+                    li.textContent = node.name;
+                }
+                ul.appendChild(li);
+            });
+            return ul;
+        }
+
+        navTo('overview');
+
+    </script>
+</body>
+</html>

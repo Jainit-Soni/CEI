@@ -1,0 +1,650 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="../App_Themes/NewTheme/css/bootstrap.min.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/NewTheme/css/chosen.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/NewTheme/css/chosen_New.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/NewTheme/css/style.css" type="text/css" rel="stylesheet" /><title>
+	JoSAA
+</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><link rel="icon" href="../images/favicon.ico" type="image/x-icon" /><link href="../FaIcons/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="../Bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="../Scripts/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript" src="../Scripts/Common.js"></script>
+    <script language="javascript" type="text/javascript">
+        window.history.forward(); function noBack() { window.history.forward(); }
+        function burstCache() {
+            if (!navigator.onLine) {
+                window.location = "../SessionExpire.htm";
+            }
+        }
+        history.go(1);
+    </script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./seatmatrixinfo.aspx" id="aspnetForm" autocomplete="off">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="nefx+LkkoHgNGuhrWBChuxmy+CV8ulAwFXeKLa340SYgHJ0gUEnLt+rIyUTqyAuDwWr24UOfActfw8JBnt+H1Xqi+QG1oNuBnsgHqPEp1wxFjqP347nJsXcYuKwRKvw1BeqfBmigY8mA0JmAi3Oqkr0biyM=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="93FE849E" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+        <input type="hidden" name="ctl00$hdnSecKey" id="ctl00_hdnSecKey" />
+        <section class="headerfirst">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-12">
+                        <img src="../Images/jossa_logo.png" class="img-fluid pull-left" alt="" />
+                    </div>
+                    <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12">
+                        <h1 class="text-center pt-2">
+                            <span id="ctl00_lblCounsellingBoardHeader">Joint Seat Allocation Authority 2025</span>
+                        </h1>
+                        <h3 class="text-center pb-2">
+                            <span id="ctl00_lblCounsellingBoardHeaderDesc">IITs, NITs, IIEST, IIITs and Other-GFTIs for the Academic Year 2025-26</span>
+                        </h3>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-12">
+                        <img src="../Images/e-counsellig-logo2020.png" class="img-fluid pull-right pt-2 pb-1" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom p-0">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a id="ctl00_lnkHome" class="nav-link" aria-current="page">Home
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!---------------Start Script to Use active class in Each menu --------------->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var url = window.location;
+                $('ul.navbar-nav li a').each(function () {
+                    if (this.href == url) {
+                        $("ul.nav li a").each(function () {
+                            if ($(this).hasClass("active")) {
+                                $(this).removeClass("active");
+                            }
+                        });
+                        $(this).addClass('active');
+                        //$(this).parents().addClass('active');
+                    }
+
+                });
+
+            });
+        </script>
+        <!---------------End Script to Use active class in Each menu --------------->
+        
+    <div class="container-fluid contentmid">
+        <div class="contentmiddiv">
+            <h4>Seat Information</h4>
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label fs-7 fw-bold text-xl-end text-lg-end">
+                    Institute Type:
+                </label>
+                <div class="col-sm-4">
+                    <select name="ctl00$ContentPlaceHolder1$ddlInstType" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlInstType\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddlInstType" class="chosen-select">
+	<option selected="selected" value="0">ALL</option>
+	<option value="IIT">IITs</option>
+	<option value="NIT">NITs</option>
+	<option value="3IT">III-Ts</option>
+	<option value="CFI">GFTIs</option>
+
+</select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label fs-7 fw-bold text-xl-end text-lg-end">
+                    Select Institute:
+                </label>
+                <div class="col-sm-4">
+                    <select name="ctl00$ContentPlaceHolder1$ddlInstitute" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlInstitute\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddlInstitute" class="chosen-select">
+	<option selected="selected" value="0">ALL</option>
+	<option value="101">Indian Institute  of Technology Bhubaneswar</option>
+	<option value="102">Indian Institute  of Technology Bombay</option>
+	<option value="103">Indian Institute  of Technology Mandi</option>
+	<option value="104">Indian Institute  of Technology Delhi</option>
+	<option value="105">Indian Institute  of Technology Indore</option>
+	<option value="106">Indian Institute  of Technology Kharagpur</option>
+	<option value="107">Indian Institute  of Technology Hyderabad</option>
+	<option value="108">Indian Institute  of Technology Jodhpur</option>
+	<option value="109">Indian Institute  of Technology Kanpur</option>
+	<option value="110">Indian Institute  of Technology Madras</option>
+	<option value="111">Indian Institute  of Technology Gandhinagar</option>
+	<option value="112">Indian Institute  of Technology Patna</option>
+	<option value="113">Indian Institute  of Technology Roorkee</option>
+	<option value="114">Indian Institute  of Technology (ISM) Dhanbad</option>
+	<option value="115">Indian Institute  of Technology Ropar</option>
+	<option value="116">Indian Institute  of Technology (BHU) Varanasi</option>
+	<option value="117">Indian Institute  of Technology Guwahati</option>
+	<option value="118">Indian Institute of Technology Bhilai</option>
+	<option value="119">Indian Institute of Technology Goa</option>
+	<option value="120">Indian Institute  of Technology Palakkad</option>
+	<option value="121">Indian Institute  of Technology Tirupati</option>
+	<option value="122">Indian Institute of Technology Jammu</option>
+	<option value="123">Indian Institute of Technology Dharwad</option>
+	<option value="201">Dr. B R Ambedkar National Institute of Technology, Jalandhar</option>
+	<option value="202">Malaviya National Institute of Technology Jaipur</option>
+	<option value="203">Maulana Azad National Institute of Technology Bhopal</option>
+	<option value="204">Motilal Nehru National Institute of Technology Allahabad</option>
+	<option value="205">National Institute of Technology  Agartala</option>
+	<option value="206">National Institute of Technology Calicut</option>
+	<option value="207">National Institute of Technology Delhi</option>
+	<option value="208">National Institute of Technology Durgapur</option>
+	<option value="209">National Institute of Technology Goa</option>
+	<option value="210">National Institute of Technology Hamirpur</option>
+	<option value="211">National Institute of Technology Karnataka, Surathkal</option>
+	<option value="212">National Institute of Technology Meghalaya</option>
+	<option value="213">National Institute of Technology Nagaland</option>
+	<option value="214">National Institute of Technology Patna</option>
+	<option value="215">National Institute of Technology Puducherry</option>
+	<option value="216">National Institute of Technology Raipur</option>
+	<option value="217">National Institute of Technology Sikkim</option>
+	<option value="218">National Institute of Technology Arunachal Pradesh </option>
+	<option value="219">National Institute of Technology, Jamshedpur</option>
+	<option value="220">National Institute of Technology, Kurukshetra</option>
+	<option value="221">National Institute of Technology, Manipur</option>
+	<option value="222">National Institute of Technology, Mizoram</option>
+	<option value="223">National Institute of Technology, Rourkela</option>
+	<option value="224">National Institute of Technology, Silchar</option>
+	<option value="225">National Institute of Technology, Srinagar</option>
+	<option value="226">National Institute of Technology, Tiruchirappalli</option>
+	<option value="227">National Institute of Technology, Uttarakhand</option>
+	<option value="228">National Institute of Technology, Warangal</option>
+	<option value="229">Sardar Vallabhbhai National Institute of Technology, Surat</option>
+	<option value="230">Visvesvaraya National Institute of Technology, Nagpur</option>
+	<option value="231">National Institute of Technology, Andhra Pradesh</option>
+	<option value="232">Indian Institute of Engineering Science and Technology, Shibpur</option>
+	<option value="301">Atal Bihari Vajpayee Indian Institute of Information Technology &amp; Management Gwalior</option>
+	<option value="302">Indian Institute of Information Technology (IIIT)Kota, Rajasthan</option>
+	<option value="303">Indian Institute of Information Technology Guwahati</option>
+	<option value="304">Indian Institute of Information Technology(IIIT) Kalyani, West Bengal</option>
+	<option value="305">Indian Institute of Information Technology(IIIT) Kilohrad, Sonepat, Haryana</option>
+	<option value="306">Indian Institute of Information Technology(IIIT) Una, Himachal Pradesh</option>
+	<option value="307">Indian Institute of Information Technology (IIIT), Sri City, Chittoor</option>
+	<option value="308">Indian Institute of Information Technology(IIIT), Vadodara, Gujrat</option>
+	<option value="309">Indian Institute of Information Technology, Allahabad</option>
+	<option value="310">Indian Institute of Information Technology, Design &amp; Manufacturing, Kancheepuram</option>
+	<option value="311">Pt. Dwarka Prasad Mishra Indian Institute of Information Technology, Design &amp; Manufacture Jabalpur</option>
+	<option value="313">INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR</option>
+	<option value="314">Indian Institute of Information Technology Tiruchirappalli</option>
+	<option value="315">Indian Institute of Information Technology Lucknow</option>
+	<option value="316">Indian Institute of Information Technology(IIIT) Dharwad </option>
+	<option value="317">Indian Institute of Information Technology Design &amp; Manufacturing Kurnool, Andhra Pradesh</option>
+	<option value="318">Indian Institute of Information Technology(IIIT) Kottayam</option>
+	<option value="319">Indian Institute of Information Technology (IIIT) Ranchi</option>
+	<option value="320">Indian Institute of Information Technology (IIIT) Nagpur</option>
+	<option value="321">Indian Institute of Information Technology (IIIT) Pune</option>
+	<option value="322">Indian Institute of Information Technology Bhagalpur</option>
+	<option value="323">Indian Institute of Information Technology Bhopal</option>
+	<option value="324">Indian Institute of Information Technology Surat</option>
+	<option value="325">Indian Institute of Information Technology, Agartala</option>
+	<option value="326">Indian institute of information technology, Raichur, Karnataka</option>
+	<option value="327">Indian Institute of Information Technology, Vadodara International Campus Diu (IIITVICD)</option>
+	<option value="401">Assam University, Silchar</option>
+	<option value="402">Birla Institute of Technology, Mesra,  Ranchi</option>
+	<option value="403">Gurukula Kangri Vishwavidyalaya, Haridwar</option>
+	<option value="404">Indian Institute of Carpet Technology,  Bhadohi</option>
+	<option value="405">Institute of Infrastructure, Technology, Research and Management-Ahmedabad</option>
+	<option value="406">School of Studies of Engineering and Technology, Guru Ghasidas Vishwavidyalaya, Bilaspur</option>
+	<option value="407">J.K. Institute of Applied Physics &amp; Technology, Department of Electronics &amp; Communication, University of Allahabad- Allahabad</option>
+	<option value="408">National Institute of Electronics and Information Technology, Aurangabad (Maharashtra)</option>
+	<option value="409">National Institute of Advanced Manufacturing Technology, Ranchi</option>
+	<option value="410">Sant Longowal Institute of Engineering and Technology</option>
+	<option value="411">Mizoram University, Aizawl</option>
+	<option value="412">School of Engineering, Tezpur University, Napaam, Tezpur</option>
+	<option value="413">School of Planning &amp; Architecture, Bhopal</option>
+	<option value="414">School of Planning &amp; Architecture, New Delhi</option>
+	<option value="415">School of Planning &amp; Architecture: Vijayawada</option>
+	<option value="416">Shri Mata Vaishno Devi University, Katra, Jammu &amp; Kashmir</option>
+	<option value="420">International Institute of Information Technology, Naya Raipur</option>
+	<option value="421">University of Hyderabad</option>
+	<option value="422">Punjab Engineering College, Chandigarh</option>
+	<option value="423">Jawaharlal Nehru University, Delhi</option>
+	<option value="424">International Institute of Information Technology, Bhubaneswar</option>
+	<option value="425">Central institute of Technology Kokrajar, Assam</option>
+	<option value="426">Puducherry Technological University, Puducherry</option>
+	<option value="427">Ghani Khan Choudhary Institute of Engineering and Technology, Malda, West Bengal</option>
+	<option value="428">Central University of Rajasthan, Rajasthan</option>
+	<option value="430">National Institute of Food Technology Entrepreneurship and Management, Kundli</option>
+	<option value="431">National Institute of Food Technology Entrepreneurship and Management, Thanjavur</option>
+	<option value="432">North Eastern Regional Institute of Science and Technology, Nirjuli-791109 (Itanagar),Arunachal Pradesh
+</option>
+	<option value="433">Indian Institute of Handloom Technology(IIHT), Varanasi</option>
+	<option value="434">Chhattisgarh Swami Vivekanada Technical University, Bhilai (CSVTU Bhilai)</option>
+	<option value="435">Institute of Chemical Technology, Mumbai: Indian Oil Odisha Campus, Bhubaneswar</option>
+	<option value="436">North-Eastern Hill University, Shillong</option>
+	<option value="437">Central University of Jammu</option>
+	<option value="438">Institute of Engineering and Technology, Dr. H. S. Gour University. Sagar (A Central University)</option>
+	<option value="439">Central University of Haryana</option>
+	<option value="440">Birla Institute of Technology, Deoghar Off-Campus</option>
+	<option value="441">Birla Institute of Technology, Patna Off-Campus</option>
+	<option value="442">Indian Institute of Handloom Technology, Salem</option>
+	<option value="443">Gati Shakti Vishwavidyalaya, Vadodara</option>
+	<option value="444">CU Jharkhand</option>
+	<option value="445">National Institute of Electronics and Information Technology, Ropar (Punjab)</option>
+	<option value="446">National Institute of Electronics and Information Technology, Patna (Bihar)</option>
+	<option value="447">National Institute of Electronics and Information Technology, Ajmer (Rajasthan)</option>
+	<option value="448">National Institute of Electronics and Information Technology, Gorakhpur (UP)</option>
+	<option value="449">Rajiv Gandhi National Aviation University, Fursatganj, Amethi (UP)</option>
+	<option value="450">Islamic University of Science and Technology Kashmir</option>
+	<option value="451">Shri G. S. Institute of Technology and Science Indore</option>
+
+</select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label fs-7 fw-bold text-xl-end text-lg-end">
+                    Select Program:
+                </label>
+                <div class="col-sm-4">
+                    <select name="ctl00$ContentPlaceHolder1$ddlBranch" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlBranch\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddlBranch" class="chosen-select">
+	<option selected="selected" value="0">ALL</option>
+	<option value="4109">Civil Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4110">Computer Science and Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4111">Electrical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4114">Electronics and Communication Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4117">Engineering Physics (4 Years, Bachelor of Technology)</option>
+	<option value="4124">Mathematics and Computing (4 Years, Bachelor of Technology)</option>
+	<option value="4125">Mechanical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4127">Metallurgical and Materials Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4101">Aerospace Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4107">Chemical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="410U">Environmental Science and Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4128">Metallurgical Engineering and Materials Science (4 Years, Bachelor of Technology)</option>
+	<option value="412I">Industrial Engineering and Operations Research (4 Years, Bachelor of Technology)</option>
+	<option value="4198">Energy Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4201">Chemistry (4 Years, Bachelor of Science)</option>
+	<option value="4202">Economics (4 Years, Bachelor of Science)</option>
+	<option value="4206">BS in Mathematics (4 Years, Bachelor of Science)</option>
+	<option value="4215">Applied Geophysics (4 Years, Bachelor of Science)</option>
+	<option value="5217">Electrical Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="410Y">B.Tech in General Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="411D">B.Tech in Materials Science and Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="411E">B.Tech in Microelectronics &amp; VLSI (4 Years, Bachelor of Technology)</option>
+	<option value="411F">B.Tech in Mathematics and Computing (4 Years, Bachelor of Technology)</option>
+	<option value="4143">Bio Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4181">Data Science and Artificial Intelligence (4 Years, Bachelor of Technology)</option>
+	<option value="4213">BS in Chemical Sciences (4 Years, Bachelor of Science)</option>
+	<option value="4105">Biotechnology and Biochemical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4112">Electrical Engineering (Power and Automation) (4 Years, Bachelor of Technology)</option>
+	<option value="412[">Abu Dhabi Campus - Energy Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="412T">Design (4 Years, Bachelor of Technology)</option>
+	<option value="412Z">Abu Dhabi Campus - Computer Science and Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4136">Production and Industrial Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4139">Textile Technology (4 Years, Bachelor of Technology)</option>
+	<option value="413A">Abu Dhabi Campus - Chemical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4192">Engineering and Computational Mechanics (4 Years, Bachelor of Technology)</option>
+	<option value="4193">Materials Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="5210">Chemical Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5216">Computer Science and Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5254">Mathematics and Computing (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="413I">Space Science and Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4102">Agricultural and Food Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4115">Electronics and Electrical Communication Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4121">Instrumentation Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4122">Manufacturing Science and Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4130">Mining Engineering  (4 Years, Bachelor of Technology)</option>
+	<option value="4133">Ocean Engineering and Naval Architecture (4 Years, Bachelor of Technology)</option>
+	<option value="4170">Industrial and Systems Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4185">Artificial Intelligence (4 Years, Bachelor of Technology)</option>
+	<option value="4204">Physics (4 Years, Bachelor of Science)</option>
+	<option value="4208">Mathematics and Computing (4 Years, Bachelor of Science)</option>
+	<option value="4209">Applied Geology (4 Years, Bachelor of Science)</option>
+	<option value="4210">Exploration Geophysics (4 Years, Bachelor of Science)</option>
+	<option value="5101">Architecture  (5 Years, Bachelor of Architecture)</option>
+	<option value="410A">Computational Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="410B">Industrial Chemistry (4 Years, Bachelor of Technology)</option>
+	<option value="410T">Electrical Engineering (IC Design and Technology) (4 Years, Bachelor of Technology)</option>
+	<option value="4118">Engineering Science (4 Years, Bachelor of Technology)</option>
+	<option value="4161">Materials Science and Metallurgical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4191">Biomedical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4199">Biotechnology and Bioinformatics (4 Years, Bachelor of Technology)</option>
+	<option value="4113">Electronics Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4141">Civil and Infrastructure Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4188">Artificial Intelligence and Data Science (4 Years, Bachelor of Technology)</option>
+	<option value="4211">Physics with Specialization (4 Years, Bachelor of Science)</option>
+	<option value="4212">Chemistry with Specialization (4 Years, Bachelor of Science)</option>
+	<option value="4103">Biological Sciences and Bioengineering (4 Years, Bachelor of Technology)</option>
+	<option value="4123">Materials Science and Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4203">Mathematics and Scientific Computing (4 Years, Bachelor of Science)</option>
+	<option value="4205">Earth Sciences (4 Years, Bachelor of Science)</option>
+	<option value="4207">Statistics and Data Science (4 Years, Bachelor of Science)</option>
+	<option value="411N">Biological Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="412L">Artificial Intelligence and Data Analytics (4 Years, Bachelor of Technology)</option>
+	<option value="412U">Computational Engineering and Mechanics (4 Years, Bachelor of Technology)</option>
+	<option value="412V">Instrumentation and Biomedical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4132">Naval Architecture and Ocean Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4214">Biological Science (4 Years, Bachelor of Science)</option>
+	<option value="5201">Aerospace Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5227">Engineering Design (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="412J">Integrated Circuit Design &amp; Technology (4 Years, Bachelor of Technology)</option>
+	<option value="4108">Chemical Science and Technology (4 Years, Bachelor of Technology)</option>
+	<option value="4144">Electrical and Electronics Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="521Q">B.Tech. in Electronics and Communication Engineering and M.Tech. in Communication Systems (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5406">B.Tech (Chemical Science and Technology) - MBA in Hospital and Health Care Management (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5407">B.Tech (Civil Engineering) - MBA (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5408">B.Tech (Computer Science and Engineering) - MBA in Digital Business Management (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5409">B.Tech (Electronics and Communication Engineering) - MBA in Hospital and Healthcare Management (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5410">B.Tech (Engineering Physics) - MBA (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5411">B.Tech (Mathematics and Computing) - MBA in Digital Business Management (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5412">B.Tech (Metallurgical and Materials Engineering) - MBA (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5413">B.Tech (Electrical and Electronics Engineering) - MBA (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5414">B.Tech (Artificial Intelligence and Data Science) - MBA in Digital Business Management (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5415">B.Tech (Chemical Engineering) - MBA in Hospital and Health Care Management (IIM Bodh Gaya) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5416">B.Tech (Mechanical Engineering) - MBA (IIM Mumbai) (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5A03">B. Tech in CE. - M. Tech.  in Geotechnical Engineering (5 Years, B.Tech. + M.Tech./MS (Dual Degree))</option>
+	<option value="5A04">B. Tech in CE. - M. Tech.  in Structural Engineering (5 Years, B.Tech. + M.Tech./MS (Dual Degree))</option>
+	<option value="5A05">B. Tech. (CSE) and M.Tech in CSE (5 Years, B.Tech. + M.Tech./MS (Dual Degree))</option>
+	<option value="5A06">B. Tech. (ECE) -M. Tech. in VLSI (5 Years, B.Tech. + M.Tech./MS (Dual Degree))</option>
+	<option value="5A07">B. Tech. (EEE)-M. Tech. in (Power &amp;. Control) (5 Years, B.Tech. + M.Tech./MS (Dual Degree))</option>
+	<option value="5A09">B. Tech. (Mathematics &amp; Computing) M. Tech. in (Mathematics &amp; Computing) (5 Years, B.Tech. + M.Tech./MS (Dual Degree))</option>
+	<option value="5A10">B. Tech. (ME) - M. Tech. in Mechatronics (5 Years, B.Tech. + M.Tech./MS (Dual Degree))</option>
+	<option value="5F0A">BS in Economics with MBA (IIM Bodh Gaya) (5 Years, Bachelor of Science and MBA (Dual Degree))</option>
+	<option value="4194">Biosciences and Bioengineering (4 Years, Bachelor of Technology)</option>
+	<option value="5302">Geological Technology (5 Years, Integrated Master of Technology)</option>
+	<option value="5303">Geophysical Technology (5 Years, Integrated Master of Technology)</option>
+	<option value="5602">Physics (5 Years, Bachelor of Science and Master of Science (Dual Degree))</option>
+	<option value="5606">Mathematics &amp; Computing (5 Years, Bachelor of Science and Master of Science (Dual Degree))</option>
+	<option value="5607">Chemical Sciences (5 Years, Bachelor of Science and Master of Science (Dual Degree))</option>
+	<option value="5608">Economics (5 Years, Bachelor of Science and Master of Science (Dual Degree))</option>
+	<option value="4119">Environmental Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4131">Mining Machinery Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4134">Petroleum Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4189">Mineral and Metallurgical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="5306">Applied Geology (5 Years, Integrated Master of Technology)</option>
+	<option value="5307">Applied Geophysics (5 Years, Integrated Master of Technology)</option>
+	<option value="5C02">B.Tech Mining Engineering and MBA in Logistic and Supply Chain Management (IIM Mumbai) (5 Years, Integrated B. Tech. and MBA)</option>
+	<option value="5H0A">Physical Science (5 Years, Integrated Bachelor of Science-Master of Science)</option>
+	<option value="5H2B">Chemical  Science (5 Years, Integrated Bachelor of Science-Master of Science)</option>
+	<option value="411G">Artificial Intelligence and Data Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="412W">Digital Agriculture (4 Years, Bachelor of Technology)</option>
+	<option value="413B">Electrical Engineering (Integrated Circuit Design and Technology) (4 Years, Bachelor of Technology)</option>
+	<option value="4106">Ceramic Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4126">Metallurgical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="412M">Biochemical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="412N">Bioengineering (4 Years, Bachelor of Technology)</option>
+	<option value="412O">Materials Science and Technology (4 Years, Bachelor of Technology)</option>
+	<option value="4173">Pharmaceutical Engineering &amp; Technology (4 Years, Bachelor of Technology)</option>
+	<option value="4116">Electronics and Electrical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4178">Mechatronics Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4187">Data Science and Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="410D">Chemical and Biochemical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="5609">Interdisciplinary Sciences (5 Years, Bachelor of Science and Master of Science (Dual Degree))</option>
+	<option value="4104">Bio Technology (4 Years, Bachelor of Technology)</option>
+	<option value="410V">Electronics and VLSI Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4146">Information Technology (4 Years, Bachelor of Technology)</option>
+	<option value="4148">Instrumentation and Control Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4149">Industrial and Production Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="412X">Energy and Electrical Vehicle Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4501">Planning (4 Years, Bachelor of Planning)</option>
+	<option value="520F">Mathematics and Data Science (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="522S">B. Tech. and M. Tech. in Engineering and Computational Mechanics (Dual Degree) (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="412H">Materials Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4142">Electronics and Instrumentation Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4145">Production Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="520G">Computational Mathematics (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5267">Engineering Physics (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5604">Chemistry (5 Years, Bachelor of Science and Master of Science (Dual Degree))</option>
+	<option value="411Z">VLSI Design and Technology (4 Years, Bachelor of Technology)</option>
+	<option value="5257">Chemical Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5296">Biotechnology (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5503">Chemistry (5 Years, Integrated Master of Science)</option>
+	<option value="5234">Electronics and Communication Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="410Q">Computational and Data Science (4 Years, Bachelor of Technology)</option>
+	<option value="411B">Mechatronics and Automation Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="411H">Electronics Engineering (VLSI Design and Technology) (4 Years, Bachelor of Technology)</option>
+	<option value="520H">Computer Science and Engineering with Specialization in Data Science (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="520I">Computer Science and Engineering with Specialization in Cyber Security (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="520J">Electronics and Communication Engineering with Specialization in Microelectronics and VLSI System Design (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="520K">Electrical Engineering with Specialization In Power System Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="520L">Mechanical Engineering with Specialization in Manufacturing and Industrial Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="520M">Civil Engineering with Specialization in Construction Technology and Management (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="520N">Material Science and Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="520O">Mathematics and Computing Technology (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="521R">Chemical Technology (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="4152">Bio Medical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="410P">Artificial Intelligence and Machine Learning (4 Years, Bachelor of Technology)</option>
+	<option value="411C">Industrial Internet of Things (4 Years, Bachelor of Technology)</option>
+	<option value="412A">ROBOTICS &amp; AUTOMATION (4 Years, Bachelor of Technology)</option>
+	<option value="412B">Microelectronics &amp; VLSI Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="412D">SUSTAINABLE ENERGY TECHNOLOGIES (4 Years, Bachelor of Technology)</option>
+	<option value="5213">Civil Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5233">Mechanical Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="4155">Industrial Design (4 Years, Bachelor of Technology)</option>
+	<option value="4169">Food Process Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="5243">Metallurgical and Materials Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5247">Mining Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5258">Ceramic Engineering and M.Tech Industrial Ceramic (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5507">Physics (5 Years, Integrated Master of Science)</option>
+	<option value="5508">Mathematics (5 Years, Integrated Master of Science)</option>
+	<option value="5509">Life Science (5 Years, Integrated Master of Science)</option>
+	<option value="410Z">Electronics and Communication Engineering (VLSI Design and Technology) (4 Years, Bachelor of Technology)</option>
+	<option value="412F">Computer Science and Engineering ( Artificial Intelligence &amp; Data Science) (4 Years, Bachelor of Technology)</option>
+	<option value="5B06">Artificial Intelligence (5 Years, Integrated B. Tech. and M. Tech.)</option>
+	<option value="4153">Electronics and Telecommunication Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4156">Metallurgy and Materials Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="411M">Mathematics and Scientific Computing (4 Years, Bachelor of Technology)</option>
+	<option value="5B01">Integrated B. Tech.(IT) and M. Tech (IT) (5 Years, Integrated B. Tech. and M. Tech.)</option>
+	<option value="5C01">Integrated B. Tech.(IT) and MBA (5 Years, Integrated B. Tech. and MBA)</option>
+	<option value="410J">Computer Science and Engineering (Cyber Security) (4 Years, Bachelor of Technology)</option>
+	<option value="412C">CSE ( Data Science &amp; Analytics) (4 Years, Bachelor of Technology)</option>
+	<option value="412E">Computer Science and Engineering (Data Science) (4 Years, Bachelor of Technology)</option>
+	<option value="4186">Information Technology-Business Informatics (4 Years, Bachelor of Technology)</option>
+	<option value="413C">Design Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4176">Smart Manufacturing (4 Years, Bachelor of Technology)</option>
+	<option value="4196">Computer Science and Engineering with Major in Artificial Intelligence (4 Years, Bachelor of Technology)</option>
+	<option value="523T">B.Tech. in Electronics and Communication Engineering and M.Tech. in Microelectronics and VLSI Systems (5 Years, Bachelor and Master of Technology (Dual Degree))</option>
+	<option value="5A11">B.Tech in Mechanical Engineering and M.Tech in AI and Robotics (5 Years, B.Tech. + M.Tech./MS (Dual Degree))</option>
+	<option value="410M">Electronics and Communication Engineering with specialization in VLSI and Embedded Systems (4 Years, Bachelor of Technology)</option>
+	<option value="410R">Computer Science and Engineering with specialization in Artificial Intelligence and Data Science (4 Years, Bachelor of Technology)</option>
+	<option value="413H">Computer Science and Engineering with specialization in Quantum Technologies (4 Years, Bachelor of Technology)</option>
+	<option value="4195">Computer Science and Engineering with specialization in Cyber Security
+ (4 Years, Bachelor of Technology)</option>
+	<option value="413G">Electronics and Communication Engineering (VLSI Design) (4 Years, Bachelor of Technology)</option>
+	<option value="410C">Computer Science and Business (4 Years, Bachelor of Technology)</option>
+	<option value="4184">Computer Science (4 Years, Bachelor of Technology)</option>
+	<option value="4190">Computer Science and Artificial Intelligence (4 Years, Bachelor of Technology)</option>
+	<option value="4174">Electronics and Communication Engineering with specialization in Design and Manufacturing (4 Years, Bachelor of Technology)</option>
+	<option value="4175">Mechanical Engineering with specialization in Design and Manufacturing (4 Years, Bachelor of Technology)</option>
+	<option value="4601">Electronics and Communication Engineering (with Specialization of Embedded Systems and Internet of Things)
+ (4 Years, B. Tech / B. Tech (Hons.))</option>
+	<option value="4602">Computer Science and Engineering (with Specialization of Data Science and Artificial Intelligence)
+ (4 Years, B. Tech / B. Tech (Hons.))</option>
+	<option value="410E">Computer Science Engineering (Artificial lntelligence and Machine Learning) (4 Years, Bachelor of Technology)</option>
+	<option value="410F">Computer Science Engineering (Data Science and Analytics) (4 Years, Bachelor of Technology)</option>
+	<option value="410G">Computer Science Engineering (Human Computer lnteraction and Gaming Technology) (4 Years, Bachelor of Technology)</option>
+	<option value="410H">Electronics and Communication Engineering (Internet of Things) (4 Years, Bachelor of Technology)</option>
+	<option value="411Y">Computer Science and Engineering (Cyber Physical System) (4 Years, Bachelor of Technology)</option>
+	<option value="412G">Computer Science and Engineering (Artificial Intelligence) (4 Years, Bachelor of Technology)</option>
+	<option value="413D">Physics and Computational Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="410W">Computer Science and Engineering (Artificial Intelligence and Machine Learning) (4 Years, Bachelor of Technology)</option>
+	<option value="4168">Agricultural Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4167">Food Engineering  and Technology (4 Years, Bachelor of Technology)</option>
+	<option value="5506">Mathematics and Computing (5 Years, Integrated Master of Science)</option>
+	<option value="5511">Quantitative Economics &amp; Data Science (5 Years, Integrated Master of Science)</option>
+	<option value="4160">Carpet  and Textile Technology (4 Years, Bachelor of Technology)</option>
+	<option value="4151">Computer Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="413F">Animation and VFX (4 Years, Bachelor of Technology)</option>
+	<option value="412K">Electronic Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4164">Food Technology (4 Years, Bachelor of Technology)</option>
+	<option value="4402">Bachelor of Design (4 Years, Bachelor of Design)</option>
+	<option value="5417">B.Tech. (Civil Engineering) - MBA (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5418">B.Tech. (Computer Science and Engineering) - MBA (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5419">B.Tech. (Elctrical Engineering) - MBA (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5420">B.Tech. (Electronics and Communication Engineering) - MBA (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5421">B.Tech. (Food Engineering and Technology) - MBA (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="5422">B.Tech. (Mechanical Engineering) - MBA (5 Years, Bachelor of Technology and MBA (Dual Degree))</option>
+	<option value="412Y">Robotics and AI (4 Years, Bachelor of Technology)</option>
+	<option value="5313">Materials Engineering (5 Years, Integrated Master of Technology)</option>
+	<option value="4603">Computer Science Engineering (Artificial Intelligence) (4 Years, B. Tech / B. Tech (Hons.))</option>
+	<option value="4604">Computer Science Engineering (Data Science) (4 Years, B. Tech / B. Tech (Hons.))</option>
+	<option value="410X">Civil and Environmental Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="4183">Food Technology and Management (4 Years, Bachelor of Technology)</option>
+	<option value="4197">Handloom and Textile Technology (4 Years, Bachelor of Technology)</option>
+	<option value="5D01">Chemical Engineering (5 Years, Integrated Masters in Technology)</option>
+	<option value="410I">Electronics and Communication Engineering (Avionics) (4 Years, Bachelor of Technology)</option>
+	<option value="411O">Aeronautical Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="411P">Dairy Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="411Q">Fashion and Apparel Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="411A">Printing and Packaging Technology (4 Years, Bachelor of Technology)</option>
+	<option value="411R">B.Tech in Electronics &amp; Communication Engineering (Rail Engineering) (4 Years, Bachelor of Technology)</option>
+	<option value="411S">B.Tech in Electrical Engineering ( Rail  Engineering) (4 Years, Bachelor of Technology)</option>
+	<option value="411T">B.Tech in Mechanical Engineering ( Rail  Engineering) (4 Years, Bachelor of Technology)</option>
+	<option value="411U">B.Tech in Civil Engineering (Rail Engineering) (4 Years, Bachelor of Technology)</option>
+	<option value="411V">B.Tech in Artificial Intelligenece and Data Science (Transportation and Logistics) (4 Years, Bachelor of Technology)</option>
+	<option value="411W">B.Tech in Aviation Engineering (4 Years, Bachelor of Technology)</option>
+	<option value="413J">B.Tech in CSE (AI and ML) (4 Years, Bachelor of Technology)</option>
+	<option value="413K">Computer Science and Engineering (Internet of Things, Cyber Security including Block Chain Technology ) (4 Years, Bachelor of Technology)</option>
+	<option value="413L">Computer Science and Engineering with minor in AI and ML (4 Years, Bachelor of Technology)</option>
+	<option value="413M">B. Tech in Electronics and Communication Engineering with minor in Wearable Electronics (4 Years, Bachelor of Technology)</option>
+
+</select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-12 text-center">
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Submit" id="ctl00_ContentPlaceHolder1_btnSubmit" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="contentmiddiv">
+            
+<h4>Legends</h4>
+<div class="table-responsive">
+    <table class="table table-bordered w-100 fs-7">       
+        <tr class="bg-custom text-white">
+            <td>Open
+            </td>
+            <td>Open Seats
+            </td>
+            <td>Open - PwD
+            </td>
+            <td>Open - PwD Seats (Person With Disablity)
+            </td>
+        </tr>
+        <tr>
+            <td>GEN-EWS
+            </td>
+            <td>GEN-EWS Seats
+            </td>
+            <td>GEN-EWS - PwD
+            </td>
+            <td>GEN-EWS-PwD Seats (Person With Disablity)
+            </td>
+        </tr>
+        <tr>
+            <td>OBC-NCL
+            </td>
+            <td>OBC-NCL Seats
+            </td>
+            <td>OBC-NCL-PwD
+            </td>
+            <td>OBC-NCL-PwD Seats (Person With Disablity)
+            </td>
+        </tr>
+        <tr>
+            <td>SC
+            </td>
+            <td>SC Seats
+            </td>
+            <td>SC - PwD
+            </td>
+            <td>SC - PwD Seats (Person With Disablity)
+            </td>
+        </tr>
+        <tr>
+            <td>ST
+            </td>
+            <td>ST Seats
+            </td>
+            <td>ST - PwD
+            </td>
+            <td>ST - PwD Seats (Person With Disablity)
+            </td>
+        </tr>
+    </table>
+</div>
+
+        </div>
+        
+    </div>
+
+
+
+        <section class="footersec">
+            <div class="container footersec">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="copyRights">
+                            <div class="disclaimerText">
+                                <p>
+                                    This site is designed and hosted by NIC and the contents are provided by JoSAA.
+                                    <br />
+                                    For any further information, please contact JoSAA.
+                                </p>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+    <script src="../Scripts/chosen.jquery.js"></script>
+    <script type="text/javascript">
+        var config = { '.chosen-select': {}, }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+        //On UpdatePanel Refresh
+        if (typeof (Sys) !== 'undefined') {
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            if (prm != null) {
+                prm.add_endRequest(function (sender, e) {
+                    if (sender._postBackSettings.panelsToUpdate != null) {
+                        $(".chosen-select").chosen();
+                    }
+                    else {
+                        $(".chosen-select").chosen();
+                    }
+                });
+            };
+        }
+    </script>
+</body>
+</html>

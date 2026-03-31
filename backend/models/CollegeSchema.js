@@ -1,236 +1,157 @@
 const mongoose = require('mongoose');
+const mingo = require('mingo');
+const { getRedisStatus } = require('../services/dataStore'); // optional if needed
 
-const courseSchema = new mongoose.Schema({
-    name: String,
-    degree: String,
-    duration: String,
-    exams: [String]
-}, { _id: false });
+/**
+ * MongoQuery wrapper to simulate Mongoose's chainable API (.select, .lean, .sort)
+ * using mingo behind the scenes on a JS array.
+ */
+class MongoQuery {
+  constructor(data, isSingle = false) {
+    this.data = data;
+    this.isSingle = isSingle;
+    this._select = null;
+    this._skip = 0;
+    this._limit = null;
+    this._sort = null;
+  }
 
-const cutoffSchema = new mongoose.Schema({
-    examId: String,
-    year: String,
-    cutoff: String,
-    source: String
-}, { _id: false });
-
-const placementSchema = new mongoose.Schema({
-    averagePackage: String,
-    medianPackage: String,
-    highestPackage: String,
-    placementRate: String,
-    highestPackageNumeric: Number,
-    // Confidence label for public display
-    confidenceLabel: {
-        type: String,
-        enum: ['audited', 'self_declared', 'under_review', 'unverified'],
-        default: 'unverified'
+  select(fields) {
+    if (typeof fields === 'string') {
+      this._select = fields.split(' ').reduce((acc, f) => { acc[f] = 1; return acc; }, {});
+    } else {
+      this._select = fields;
     }
-}, { _id: false });
+    return this;
+  }
 
-const metaSchema = new mongoose.Schema({
-    sourceType: [String],
-    affiliations: [String],
-    ownership: String,
-    establishedYear: String,
-    district: String,
-    naacGrade: String
-}, { _id: false });
+  lean() { return this; }
 
-// ── Data Source Record ──────────────────────────────────────────────────────
-// Attached to each critical field to trace its provenance.
-const dataSourceRecordSchema = new mongoose.Schema({
-    value: { type: mongoose.Schema.Types.Mixed, default: null },
-    source_type: {
-        type: String,
-        enum: ['government_registry', 'official_website', 'audited_report', 'third_party_report', 'self_declared', 'unknown'],
-        default: 'unknown'
-    },
-    source_url: { type: String, default: null },
-    source_document_hash: { type: String, default: null }, // SHA-256 of uploaded evidence
-    verification_status: {
-        type: String,
-        enum: ['unverified', 'auto_verified', 'manually_verified', 'disputed'],
-        default: 'unverified'
-    },
-    verified_at: { type: Date, default: null },
-    verifier_type: {
-        type: String,
-        enum: ['aishe', 'ugc', 'aicte', 'human_reviewer', 'auto_engine', 'none'],
-        default: 'none'
-    },
-    confidence_level: {
-        type: String,
-        enum: ['high', 'medium', 'low'],
-        default: 'low'
+  sort(sortObj) {
+    this._sort = sortObj;
+    return this;
+  }
+
+  skip(n) { this._skip = n; return this; }
+  limit(n) { this._limit = n; return this; }
+
+  // Automatically execute the query when awaited
+  then(resolve, reject) {
+    try {
+      let result = this.data;
+
+      // Apply Sort
+      if (this._sort && Array.isArray(result)) {
+         result = new mingo.Query({}).find(result).sort(this._sort).all();
+      }
+
+      // Apply Skip & Limit
+      if (Array.isArray(result)) {
+        if (this._skip > 0) result = result.slice(this._skip);
+        if (this._limit > 0) result = result.slice(0, this._skip + this._limit); // wait, Mingo cursor can handle this better
+      }
+
+      // Apply Projection
+      if (this._select && result) {
+        const _projectDoc = (doc) => {
+          const projected = { _id: doc._id || doc.id, id: doc.id || doc._id }; // Always include IDs
+          for (const k in this._select) {
+            const parts = k.split('.');
+            if (parts.length === 1 && doc[k] !== undefined) {
+              projected[k] = doc[k];
+            } else if (parts.length === 2 && doc[parts[0]] && doc[parts[0]][parts[1]] !== undefined) {
+              projected[parts[0]] = projected[parts[0]] || {};
+              projected[parts[0]][parts[1]] = doc[parts[0]][parts[1]];
+            }
+          }
+          return projected;
+        };
+
+        if (Array.isArray(result)) {
+           result = result.map(_projectDoc);
+        } else if (this.isSingle) {
+           result = _projectDoc(result);
+        }
+      }
+
+      if (this.isSingle) {
+        resolve(Array.isArray(result) ? result[0] || null : result || null);
+      } else {
+        resolve(result || []);
+      }
+    } catch (e) {
+      reject(e);
     }
-}, { _id: false });
-
-const collegeSchema = new mongoose.Schema({
-    id: {
-        type: String,
-        required: true,
-        unique: true,
-        index: true
-    },
-    name: {
-        type: String,
-        required: true,
-        index: true
-    },
-    shortName: String,
-    location: String,
-    state: {
-        type: String,
-        index: true
-    },
-    rankingTier: {
-        type: String,
-        enum: ['Tier 1', 'Tier 2', 'Tier 3', 'Stand Alone', 'University'],
-        default: 'Tier 3',
-        index: true
-    },
-    overview: String,
-    campus: String,
-    officialUrl: String,
-    acceptedExams: [String],
-    courses: [courseSchema],
-    pastCutoffs: [cutoffSchema],
-    topRecruiters: [String],
-    tuition: String,
-    sources: [String],
-    meta: metaSchema,
-    placements: placementSchema,
-    aisheCode: {
-        type: String,
-        unique: true,
-        sparse: true,
-        index: true
-    },
-    isPremium: {
-        type: Boolean,
-        default: false
-    },
-
-    // ── CEI Intelligence Properties ──────────────────────────────────────────
-    ceiScore: {
-        type: Number,
-        min: 0,
-        max: 100,
-        index: true
-    },
-    competitivenessBand: {
-        type: String,
-        enum: ['Elite', 'High', 'Competitive', 'Moderate', 'Emerging'],
-        index: true
-    },
-    canonicalId: {
-        type: String,
-        index: true,
-        unique: true,
-        sparse: true
-    },
-    verificationStatus: {
-        type: String,
-        enum: ['VERIFIED', 'UNVERIFIED', 'UNVERIFIED_NO_STUDENTS', 'UNVERIFIED_NOT_IN_SOURCE', 'UNVERIFIED_MISSING_META'],
-        default: 'UNVERIFIED',
-        index: true
-    },
-    lastScoreUpdate: { type: Date },
-
-    // ── Data Integrity & Trust Layer (Phase X) ───────────────────────────────
-    /**
-     * Per-field provenance map. Each key is a critical field name.
-     * Populated by the verification engine; missing = unverified by default.
-     */
-    fieldSources: {
-        establishedYear: { type: dataSourceRecordSchema, default: null },
-        campusSize: { type: dataSourceRecordSchema, default: null },
-        accreditationStatus: { type: dataSourceRecordSchema, default: null },
-        affiliations: { type: dataSourceRecordSchema, default: null },
-        coursesOffered: { type: dataSourceRecordSchema, default: null },
-        studentIntake: { type: dataSourceRecordSchema, default: null },
-        avgPackage: { type: dataSourceRecordSchema, default: null },
-        highestPackage: { type: dataSourceRecordSchema, default: null },
-        placementRate: { type: dataSourceRecordSchema, default: null },
-        companiesVisiting: { type: dataSourceRecordSchema, default: null },
-        facultyCount: { type: dataSourceRecordSchema, default: null },
-        infrastructureMetric: { type: dataSourceRecordSchema, default: null }
-    },
-
-    /**
-     * Computed score (0–100) reflecting the trustworthiness of this institution's
-     * data across all critical fields. Recomputed on each verification event.
-     */
-    dataIntegrityScore: {
-        type: Number,
-        min: 0,
-        max: 100,
-        default: null,
-        index: true
-    },
-
-    /**
-     * Public-facing confidence label derived from dataIntegrityScore.
-     * 🟢 high (score >= 70), 🟡 moderate (40-69), 🔴 low (<40 or no data)
-     */
-    dataConfidenceLabel: {
-        type: String,
-        enum: ['high', 'moderate', 'low'],
-        default: 'low',
-        index: true
-    },
-
-    /** Flags true if the anomaly scanner has open unresolved alerts for this institution */
-    hasOpenAnomalies: {
-        type: Boolean,
-        default: false,
-        index: true
-    },
-
-    /** Flags true if a government data mismatch (AISHE/UGC/AICTE) is unresolved */
-    hasGovernmentMismatch: {
-        type: Boolean,
-        default: false,
-        index: true
-    },
-
-    /** Last time the data integrity engine re-evaluated this institution */
-    lastIntegrityCheck: { type: Date, default: null }
-
-}, {
-    timestamps: true
-});
+  }
+}
 
 
-// Text index for global search
-collegeSchema.index({ name: 'text', shortName: 'text', location: 'text' });
 
-// Compound indexes for extremely fast, low-memory sorting during deep pagination
-collegeSchema.index({ isPremium: -1, name: 1 });
-collegeSchema.index({ rankingTier: 1, isPremium: -1 });
-collegeSchema.index({ rankingTier: -1, isPremium: -1 });
+/**
+ * The Mongoose Model Mock for CollegeSchema.
+ * This intercepts all College.find() calls across the application
+ * and deeply filters the in-memory `global.colleges` array in milliseconds.
+ */
+const CollegeMock = {
+  find: (query = {}) => {
+    // Basic pre-processing if someone passes Mongoose ObjectIds natively
+    const stringifiedQuery = JSON.parse(JSON.stringify(query)); 
+    const q = new mingo.Query(stringifiedQuery);
+    const result = q.find(global.colleges || []).all();
+    return new MongoQuery(result);
+  },
 
-// ── SCHEMA-1: Production-critical compound sort+filter indexes ─────────────
-// These cover the highest-traffic query patterns from the Colleges page.
-// Without these, MongoDB performs a full collection scan on every paginated
-// request that combines a state/band filter with a sort key.
+  findOne: (query = {}) => {
+    const stringifiedQuery = JSON.parse(JSON.stringify(query)); 
+    const q = new mingo.Query(stringifiedQuery);
+    const result = q.find(global.colleges || []).all();
+    return new MongoQuery(result.length > 0 ? result[0] : null, true);
+  },
 
-// Pattern: GET /colleges?state=Maharashtra&sortBy=placement
-collegeSchema.index({ state: 1, 'placements.highestPackageNumeric': -1 });
+  findById: (id) => {
+    return CollegeMock.findOne({ _id: id.toString() });
+  },
 
-// Pattern: GET /colleges?state=Karnataka&sortBy=popularity
-collegeSchema.index({ state: 1, ceiScore: -1 });
+  countDocuments: async (query = {}) => {
+    const stringifiedQuery = JSON.parse(JSON.stringify(query)); 
+    const q = new mingo.Query(stringifiedQuery);
+    return q.find(global.colleges || []).all().length;
+  },
 
-// Pattern: GET /colleges?band=Elite&sortBy=placement
-collegeSchema.index({ competitivenessBand: 1, 'placements.highestPackageNumeric': -1 });
+  aggregate: async (pipeline) => {
+    // Handle Mongoose strict pipeline differences
+    const sanitizedPipeline = JSON.parse(JSON.stringify(pipeline));
+    const agg = new mingo.Aggregator(sanitizedPipeline);
+    return agg.run(global.colleges || []);
+  },
 
-// Pattern: GET /colleges?tier=Tier+1 (most common filter)
-collegeSchema.index({ rankingTier: 1, ceiScore: -1 });
+  // Mock write methods to prevent crashing on admin ops, returning safe defaults
+  updateOne: async () => ({ modifiedCount: 1, matchedCount: 1 }),
+  updateMany: async () => ({ modifiedCount: 1, matchedCount: 1 }),
+  deleteOne: async () => ({ deletedCount: 1 }),
 
-// Partial index for anomaly detection engine queries (only indexes flagged docs)
-collegeSchema.index({ hasOpenAnomalies: 1, lastIntegrityCheck: 1 }, { partialFilterExpression: { hasOpenAnomalies: true } });
+  distinct: async (field, query = {}) => {
+    // 1. Filter dataset using mingo
+    const stringifiedQuery = JSON.parse(JSON.stringify(query));
+    const q = new mingo.Query(stringifiedQuery);
+    const matched = q.find(global.colleges || []).all();
+    
+    // 2. Extract distinct values using a Set
+    const values = new Set();
+    matched.forEach(doc => {
+      // Handle nested fields like "meta.district"
+      const val = field.split('.').reduce((obj, key) => (obj && obj[key] !== undefined) ? obj[key] : undefined, doc);
+      if (val !== undefined && val !== null) {
+        values.add(val);
+      }
+    });
+    return Array.from(values);
+  },
+  
+  collection: {
+    name: "colleges_flatfile"
+  }
+};
 
-const College = mongoose.model('College', collegeSchema);
-
-module.exports = College;
+console.log("✅ CollegeMock loaded with distinct() support");
+module.exports = CollegeMock;

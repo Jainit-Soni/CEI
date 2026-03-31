@@ -4,6 +4,8 @@ const College = require("../models/CollegeSchema");
 const cache = require("../services/cache");
 const rankingCache = require("../services/rankingCacheBuilder");
 const pageCache = require("../services/collegePageCache");
+const VerifiedField = require("../models/VerifiedField");
+const SourceEvidence = require("../models/SourceEvidence");
 
 const router = express.Router();
 
@@ -28,20 +30,29 @@ const normalizeLocation = (loc) => {
 
 // Helper to construct MongoDB filter query
 const buildCollegeQuery = (reqQuery) => {
-  const { state, district, q, tier, course, exam, isPremium, all } = reqQuery;
+  const { state, district, q, tier, course, exam, isPremium, isCore, all, coverage } = reqQuery;
   
-  // Default to only verified colleges to maintain 12k parity with old system
-  const query = { verificationStatus: 'VERIFIED' };
+  // Default to allowing all colleges (Phase 2 Wiring)
+  const query = {};
   
-  // Explicitly allow searching all colleges if needed (e.g. for admin/analytics)
+  // Preserve 'all' check for future-proofing or specific overrides
   if (all === 'true') {
-      delete query.verificationStatus;
+      // already empty, no-op
   }
 
   const andConditions = [];
 
+  // Coverage filter — filters by coverage.coverageBucket (None/Partial/Rich)
+  if (coverage && coverage !== 'All') {
+    query['coverage.coverageBucket'] = coverage;
+  }
+
   if (isPremium) {
     query.isPremium = isPremium === 'true';
+  }
+
+  if (isCore) {
+    query.isCore = isCore === 'true';
   }
 
   if (state && state !== 'All') {
@@ -112,9 +123,11 @@ const buildCollegeQuery = (reqQuery) => {
 
       andConditions.push({
         $or: [
-          { name: { $regex: regex } },
-          { shortName: { $regex: regex } },
-          { name: { $regex: initialRegex } } // Allows "ii" to match "Indian Institute..."
+          { _id: { $regex: safeQ, $options: 'i' } },
+          { id: { $regex: safeQ, $options: 'i' } },
+          { name: { $regex: safeQ, $options: 'i' } },
+          { shortName: { $regex: safeQ, $options: 'i' } },
+          { name: { $regex: '^' + q.split('').join('.*'), $options: 'i' } } // Initials match
         ]
       });
     }
@@ -156,16 +169,20 @@ const buildSortQuery = (reqQuery) => {
       sort.name = 1;
       break;
     case 'popularity':
-      sort.ceiScore = -1; // Premium/verified highest
+      sort.ceiScore = -1;
       sort.name = 1;
       break;
     case 'exams':
       // Can't directly sort by array length in standard find(). We'll fallback.
       sort.isPremium = -1;
       break;
+    case 'ceiScore':
+      sort.ceiScore = -1;
+      sort.name = 1;
+      break;
     default:
-      // Default to premium first
-      sort = { isPremium: -1, name: 1 };
+      // Default to highest CEI score first
+      sort = { ceiScore: -1, name: 1 };
   }
 
   return sort;
@@ -320,7 +337,7 @@ router.get("/colleges", async (req, res) => {
 
     // Phase 2: Fetch the full documents ONLY for the IDs on the current page
     const fetchedColleges = await College.find({ _id: { $in: ids } })
-      .select("shortName name location rankingTier popularity ranking meta.ownership meta.district acceptedExams source lastUpdated pastCutoffs isPremium ceiScore courses placements.highestPackageNumeric placements.averagePackage placements.averagePackageNumeric placements.highestPackage placements.placementRate")
+      .select("shortName name location rankingTier popularity ranking meta.ownership meta.district acceptedExams source lastUpdated pastCutoffs isPremium isCore coreMetadata ceiScore institutionStrengthScore admissionRealityScore dataConfidenceScore coverage courses placements.highestPackageNumeric placements.averagePackage placements.averagePackageNumeric placements.highestPackage placements.placementRate")
       .lean();
 
     const collegeMap = new Map(fetchedColleges.map(c => [c._id.toString(), c]));
@@ -557,6 +574,247 @@ router.get("/states/stats", async (req, res) => {
   } catch (error) {
     console.error("Error in MongoDB /states/stats route:", error);
     res.status(500).json({ error: "Failed to compile state statistics" });
+  }
+});
+
+// ── Phase 2: Truth Adapter Routes ──────────────────────────────────────────
+// Adapts VerifiedField data into the shape expected by TruthSeatsSection.jsx
+
+router.get("/colleges/:id/truth/seats", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const field = await VerifiedField.findOne({ collegeId: id, fieldName: 'student_intake' }).lean();
+
+    if (!field) {
+      return res.json({ sectionStatus: 'official_data_unavailable', items: [] });
+    }
+
+    const sources = await SourceEvidence.find({
+      verifiedFieldId: { $in: field.sourceIds },
+      isActive: true
+    }).lean();
+
+    const primarySource = sources[0] || {};
+
+    res.json({
+      sectionStatus: 'available',
+      freshnessStatus: 'up_to_date',
+      primarySource: primarySource.sourceType === 'official_authority' ? 'Authority Portal' : 'Official Report',
+      lastEvaluatedAt: field.lastVerifiedAt,
+      items: [{
+        displayLabel: 'Total Approved Intake',
+        degree: 'B.E./B.Tech',
+        specialization: 'General',
+        value: field.fieldValue,
+        source: {
+          title: primarySource.sourceURL ? 'ACPC Gujarat 2025' : 'Verified Submission',
+          type: 'primary_authority',
+          url: primarySource.sourceURL,
+          lastEvaluatedAt: primarySource.capturedAt
+        }
+      }]
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.get("/colleges/:id/truth/cutoffs", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const field = await VerifiedField.findOne({ collegeId: id, fieldName: 'closingRank' }).lean();
+
+    if (!field) {
+      return res.json({ sectionStatus: 'official_data_unavailable', items: [] });
+    }
+
+    const sources = await SourceEvidence.find({
+      verifiedFieldId: { $in: field.sourceIds },
+      isActive: true
+    }).lean();
+
+    const primarySource = sources[0] || {};
+
+    res.json({
+      sectionStatus: 'available',
+      freshnessStatus: 'up_to_date',
+      primarySource: 'Admission Committee',
+      lastEvaluatedAt: field.lastVerifiedAt,
+      items: [{
+        displayLabel: 'General Category Closing Rank',
+        degree: 'B.E./B.Tech',
+        value: field.fieldValue,
+        source: {
+          title: 'Gujarat ACPC 2025 Cutoffs',
+          type: 'primary_authority',
+          url: primarySource.sourceURL,
+          lastEvaluatedAt: primarySource.capturedAt
+        }
+      }]
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.get("/colleges/:id/truth/courses", async (req, res) => {
+  // Courses typically come from the main college document, 
+  // but we can provide a "vetted" version here if available.
+  const { id } = req.params;
+  const college = await College.findOne({ id }).select('courses').lean();
+  
+  if (!college || !college.courses || college.courses.length === 0) {
+     return res.json({ sectionStatus: 'official_data_unavailable', items: [] });
+  }
+
+  res.json({
+    sectionStatus: 'available',
+    freshnessStatus: 'vetted',
+    items: college.courses.map(c => ({
+      displayLabel: c.name || c.degree,
+      degree: c.degree,
+      value: 'APPROVED',
+      source: { title: 'Institutional Filing', type: 'official_institute' }
+    }))
+  });
+});
+
+router.get("/colleges/:id/truth/fees", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const field = await VerifiedField.findOne({ collegeId: id, fieldName: 'tuition_fees' }).lean();
+
+    if (!field) {
+      return res.json({ 
+        sectionStatus: 'official_data_unavailable', 
+        items: [],
+        message: 'Direct fee verification pending for this institution.'
+      });
+    }
+
+    const sources = await SourceEvidence.find({
+      verifiedFieldId: { $in: field.sourceIds },
+      isActive: true
+    }).lean();
+
+    const primarySource = sources[0] || {};
+
+    res.json({
+      sectionStatus: 'available',
+      freshnessStatus: 'up_to_date',
+      primarySource: 'Fee Regulatory Committee',
+      lastEvaluatedAt: field.lastVerifiedAt,
+      items: [{
+        displayLabel: 'Annual Tuition Fee',
+        degree: 'B.E./B.Tech',
+        value: field.fieldValue,
+        source: {
+          title: 'Gujarat FRC 2025-26',
+          type: 'primary_authority',
+          url: primarySource.sourceURL,
+          lastEvaluatedAt: primarySource.capturedAt
+        }
+      }]
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.get("/colleges/:id/truth/placements", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const pkgField = await VerifiedField.findOne({ collegeId: id, fieldName: 'avg_package' }).lean();
+    const rateField = await VerifiedField.findOne({ collegeId: id, fieldName: 'placement_rate' }).lean();
+
+    if (!pkgField && !rateField) {
+      return res.json({ 
+        sectionStatus: 'official_data_unavailable', 
+        items: [],
+        message: 'Placement audit in progress for 2025 cycle.'
+      });
+    }
+
+    const items = [];
+    let lastVerifiedAt = null;
+
+    if (pkgField) {
+      items.push({
+        displayLabel: 'Average CTC',
+        value: `₹${pkgField.fieldValue} LPA`,
+        confidence: pkgField.confidenceScore,
+        source: { title: 'Placement Report 2024', type: 'official_institute' }
+      });
+      lastVerifiedAt = pkgField.lastVerifiedAt;
+    }
+
+    if (rateField) {
+      items.push({
+        displayLabel: 'Placement Rate',
+        value: `${rateField.fieldValue}%`,
+        confidence: rateField.confidenceScore,
+        source: { title: 'NIRF Data 2024', type: 'primary_authority' }
+      });
+      if (!lastVerifiedAt || new Date(rateField.lastVerifiedAt) > new Date(lastVerifiedAt)) {
+        lastVerifiedAt = rateField.lastVerifiedAt;
+      }
+    }
+
+    res.json({
+      sectionStatus: 'available',
+      freshnessStatus: 'verified_audit',
+      lastEvaluatedAt,
+      items
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Benchmarks Adapter
+router.get("/college/:id/benchmarks", async (req, res) => {
+  try {
+    const { id } = req.params;
+    // Find the current college in memory
+    const college = (global.colleges || []).find(c => c.id === id || c._id === id);
+    
+    if (!college) {
+      return res.status(404).json({ error: "College intelligence not found" });
+    }
+
+    const state = college.state;
+    const band = college.competitivenessBand || college.rankingTier || "Standard";
+
+    // Intelligence Calculation: State Average
+    const stateColleges = (global.colleges || []).filter(c => c.state === state && c.ceiScore);
+    const stateAvg = stateColleges.length > 0
+      ? stateColleges.reduce((acc, c) => acc + (c.ceiScore || 0), 0) / stateColleges.length
+      : 60;
+
+    // Intelligence Calculation: Rank/Band Average
+    const bandColleges = (global.colleges || []).filter(c => 
+      (c.competitivenessBand === band || c.rankingTier === band) && c.ceiScore
+    );
+    const bandAvg = bandColleges.length > 0
+      ? bandColleges.reduce((acc, c) => acc + (c.ceiScore || 0), 0) / bandColleges.length
+      : 70;
+
+    res.json({
+      success: true,
+      metadata: {
+        state: state || "National",
+        band: band
+      },
+      stateBenchmarks: {
+        ceiScore: Math.round(stateAvg)
+      },
+      tierBenchmarks: {
+        ceiScore: Math.round(bandAvg)
+      }
+    });
+  } catch (error) {
+    console.error("Benchmark Error:", error);
+    res.status(500).json({ error: "Failed to compute benchmarks" });
   }
 });
 

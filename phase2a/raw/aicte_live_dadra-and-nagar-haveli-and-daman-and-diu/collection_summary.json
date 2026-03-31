@@ -1,0 +1,19 @@
+{
+  "input_file": "phase2a\\manual_inputs\\aicte\\aicte_colleges-response-dadra-and-nagar-haveli-and-daman-and-diu.json",
+  "output_dir": "phase2a\\raw\\aicte_live_dadra-and-nagar-haveli-and-daman-and-diu",
+  "limit": 10,
+  "year": "2025-2026",
+  "course_token": "1",
+  "linkage_status": "valid_json_null_zero_institutes",
+  "results": [],
+  "totals": {
+    "considered": 0,
+    "successful": 0,
+    "populated": 0,
+    "empty": 0,
+    "malformed": 0,
+    "failed": 0,
+    "skipped_existing": 0,
+    "rows_returned": 0
+  }
+}

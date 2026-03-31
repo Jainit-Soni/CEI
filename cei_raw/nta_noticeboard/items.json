@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://www.nta.ac.in/NoticeBoardArchive",
+    "crawl": {
+      "loadedUrl": "https://www.nta.ac.in/NoticeBoardArchive",
+      "loadedTime": "2026-03-22T06:30:53.399Z",
+      "referrerUrl": "https://www.nta.ac.in/NoticeBoardArchive",
+      "httpStatusCode": 200,
+      "depth": 0,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "metadata": {
+      "title": "National Testing Agency",
+      "description": null,
+      "author": null,
+      "keywords": "",
+      "languageCode": null,
+      "jsonLd": null,
+      "headers": {
+        "cache-control": "public, max-age=161",
+        "content-type": "text/html; charset=utf-8",
+        "content-encoding": "gzip",
+        "expires": "Sun, 22 Mar 2026 06:33:27 GMT",
+        "last-modified": "Sun, 22 Mar 2026 06:28:27 GMT",
+        "vary": "*",
+        "x-xss-protection": "1; mode=block",
+        "x-frame-options": "SAMEORIGIN: no-referrer, allow: none",
+        "x-content-type-options": "nosniff: max-age=31536000; includeSubDomains",
+        "referrer-policy": "none",
+        "date": "Sun, 22 Mar 2026 06:30:45 GMT",
+        "x-firefox-spdy": "h2"
+      }
+    },
+    "screenshotUrl": null,
+    "text": "National Testing Agency\nPage Zoom\nScale the entire page\nFont Size\nAdjust text size across the page\nColor Blind Mode\nApply vision-friendly colour filters",
+    "markdown": "# National Testing Agency\n\nPage Zoom\n\nScale the entire page\n\nFont Size\n\nAdjust text size across the page\n\nColor Blind Mode\n\nApply vision-friendly colour filters",
+    "debug": {
+      "requestHandlerMode": "browser"
+    }
+  }
+]

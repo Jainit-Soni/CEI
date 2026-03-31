@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/approved -->
+<html ng-app="myApp" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <link rel="icon" href="https://facilities.aicte-india.org/dashboard/pages/images/aictetitle.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://facilities.aicte-india.org/images/aictetitle.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./aicte_files/w3.css">
+	<link rel="stylesheet" href="./aicte_files/w3-colors-2017.css">
+    <link rel="stylesheet" href="./aicte_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./aicte_files/jquery.dataTables.min.css">
+<style type="text/css"></style></head>
+
+
+<body class="w3-light-gray" oncontextmenu="return false">
+
+    <div class="w3-top" style="z-index:4">
+        
+   <script src="./aicte_files/jquery.min.js.download"></script>
+
+    <div class="w3-bar w3-text-white w3-padding w3-small" style="background-color:#f75700" id="menubar">
+        <a href="http://www.aicte-india.org/" style="width:3%" class="w3-bar-item  w3-mobile w3-button w3-hide-small w3-hover-white  w3-hover-text-red w3-hide-medium w3-tooltip"><i class="fa fa-home fa-fw"></i><span style="position:fixed;margin-top:15px" class="w3-text w3-tag w3-orange w3-text-white w3-round w3-animate-opacity"><h6>AICTE Website</h6></span></a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/approved" style="width:7%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Dashboard</a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/approved" style="width:12%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Universities/Institutes</a>
+        <div class="w3-dropdown-click"> <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/otherapprovals" class="w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium" onmouseover="myFunction()" onmouseout="myFunction1()">Other Approvals</a>
+		
+		<div id="message" class="w3-dropdown-content w3-bar-block w3-card w3-padding">
+		<a class="w3-bar-item w3-border-bottom w3-text-red">Message&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#" class="w3-bar-item w3-button w3-border-bottom">Non Resident Indian(s)(NRI)</a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#" class="w3-bar-item w3-button w3-border-bottom">PIO-FN-CIWG</a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#" class="w3-bar-item w3-button w3-border-bottom">Twining Programs</a>
+		<a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#" class="w3-bar-item w3-button w3-border-bottom">Vocational Courses</a>
+		<a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#" class="w3-bar-item w3-button w3-border-bottom">Dual Degree/Integrated Courses</a>
+		<a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#" class="w3-bar-item w3-button w3-border-bottom">Open Distance Learning</a>
+		<a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#" class="w3-bar-item w3-button w3-border-bottom">Online Courses</a>
+		<a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#" class="w3-bar-item w3-button w3-border-bottom">Regional Language</a>
+		<a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#" class="w3-bar-item w3-button w3-border-bottom">Grant of Graded Autonomy</a>
+      </div></div>
+	  		<a href="https://facilities.aicte-india.org/dashboard/pages/aicte_nba.php" style="width:5%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">NBA</a>
+		<a href="https://facilities.aicte-india.org/dashboard/pages/aicte_autonomus.php" style="width:9%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Autonomous</a>
+				<a href="https://facilities.aicte-india.org/dashboard/pages/working_professional.php" style="width:12%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Working Professional</a>
+
+        <a href="https://facilities.aicte-india.org/dashboard/pages/faculties.php" style="width:8%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Faculties</a>
+       <!-- <a href="angulardashboard.php#!/graphs" style="width:11%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Graphs & Charts</a>-->
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/closedcourse" style="width:10%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Closed Courses</a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/closedinstitute" style="width:11%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Closed Institutes</a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/unapproved" style="width:9%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Unapproved</a>
+		 
+
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/unapproved" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"> <i class="fa fa-exclamation-triangle"></i><span class="w3-text">&nbsp;Unapproved</span></a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/closedinstitute" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"><i class="fa fa-times"></i><span class="w3-text">&nbsp;Closed Institutes</span></a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/closedcourse" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"><i class="fa fa-ban"></i><span class="w3-text">&nbsp;Closed Courses</span></a>
+        <!-- <a href="#!" class="w3-bar-item w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red"> <i class="fa fa-bar-chart-o"></i></a>
+   	<a href="#!" class="w3-bar-item w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red"> <i class="fa fa-users"></i></a>
+    <a href="#!" class="w3-bar-item w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"><i class="fa fa-globe"></i><span class="w3-text">&nbsp;NRI/PIO-FN-CIWG/TP</span></a>-->
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/approved" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"><i class="fa fa-university"></i><span class="w3-text">&nbsp;Universities/Institutes</span></a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/dashboardaicte.php" class="w3-bar-item w3-button w3-large w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"> <i class="fa fa-dashboard"></i><span class="w3-text">&nbsp;Dashboard</span></a>
+        <a href="http://www.aicte-india.org/" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"> <i class="fa fa-home"></i><span class="w3-text">&nbsp;AICTE</span></a>
+        <a class="w3-button w3-large w3-bar-item w3-hover-white w3-hover-text-red  w3-hide-large " onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    </div>
+<!-- Sidebar -->
+<div class="w3-sidebar w3-small w3-bar-block w3-border-right w3-animate-left   w3-hide-large " style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large w3-red">Close ×</button>
+    <a href="http://www.aicte-india.org/" class="w3-bar-item w3-button"><i class="fa fa-home fa-fw"></i>AICTE </a>
+    <a href="https://facilities.aicte-india.org/dashboard/pages/dashboardaicte.php" class="w3-bar-item w3-button"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+    <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/approved" class="w3-bar-item w3-button"><i class="fa fa-university fa-fw"></i>Universities/Institutes</a>
+    <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/nripiofcinstitutes" class="w3-bar-item w3-button"><i class="fa fa-globe fa-fw"></i>Other Approvals</a>
+	<a href="https://facilities.aicte-india.org/dashboard/pages/aicte_nba.php" class="w3-bar-item w3-button"><i class="fa fa-bullseye fa-fw"></i>NBA</a>
+    <a href="https://facilities.aicte-india.org/dashboard/pages/aicte_autonomus.php" class="w3-bar-item w3-button"><i class="fa fa-bell-o fa-fw"></i>Autonomous</a>
+    <a href="https://facilities.aicte-india.org/dashboard/pages/faculties.php" class="w3-bar-item w3-button"><i class="fa fa-users fa-fw"></i>Faculties</a>
+	<a href="https://facilities.aicte-india.org/dashboard/pages/working_professional.php" class="w3-bar-item w3-button"><i class="fa fa-bar-chart-o fa-fw"></i>Graphs &amp; Charts</a>
+   <!-- <a href="angulardashboard.php#!/graphs" class="w3-bar-item w3-button"><i  class="fa fa-bar-chart-o fa-fw"></i>Graphs & Charts</a>-->
+    <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/closedcourse" class="w3-bar-item w3-button"><i class="fa fa-ban fa-fw"></i>Closed Courses</a>
+    <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/closedinstitute" class="w3-bar-item w3-button"><i class="fa fa-times fa-fw"></i>Closed Institutes</a>
+    <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/unapproved" class="w3-bar-item w3-button"><i class="fa fa-exclamation-triangle fa-fw"></i>Unapproved</a>
+</div>
+
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+	if(1275>$( window ).width()<1440)
+	{
+   $("#menubar").addClass("w3-small");
+	console.log($( window ).width());
+	console.log("hello");
+	}
+	else if (1000 >$( window ).width() <1275 )
+	{
+		
+		$("#menubar").addClass("w3-tiny");
+	console.log($( window ).width());
+	}
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("message");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myFunction1() {
+    var x = document.getElementById("message");
+    x.className = x.className.replace(" w3-show", "");
+}
+</script>
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-top:50px;">
+
+        <span us-spinner="{radius:30, width:8, length: 16}" class="ng-scope ng-hide"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%;"><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-0-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(0deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-1-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(30deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-2-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(60deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-3-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(90deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-4-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(120deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-5-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(150deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-6-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(180deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-7-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(210deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-8-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(240deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-9-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(270deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-10-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(300deg) translate(30px, 0px); border-radius: 4px;"></div></div><div style="position: absolute; top: -4px; opacity: 0.25; animation: 1s linear 0s infinite normal none running opacity-100-25-11-12;"><div style="position: absolute; width: 24px; height: 8px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(330deg) translate(30px, 0px); border-radius: 4px;"></div></div></div></span>
+		
+        <!-- ngView: --><div ng-view="" class="ng-scope">
+
+
+<script src="./aicte_files/jquery.dataTables.js.download" type="text/javascript" class="ng-scope"></script>
+
+
+<!-- Top container -->
+<div class="w3-container w3-sidebar w3-bar-block w3-card-2 w3-animate-right w3-border ng-scope" style="display:none;right:0;" id="courses1">
+
+  <button onclick="closeRightMenu1()" class="w3-button w3-large w3-red w3-right">×</button>
+  <br>
+  <div class="w3-padding-16 w3-light-gray w3-text-red w3-center w3-large" id="coursetitles"></div>
+ <div id="coursetable_wrapper" class="dataTables_wrapper"><div class="dataTables_length" id="coursetable_length"><label>Show <select name="coursetable_length" aria-controls="coursetable" class=""><option value="10">10</option><option value="15">15</option><option value="20">20</option><option value="50">50</option></select> entries</label></div><div id="coursetable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" aria-controls="coursetable"></label></div><table id="coursetable" class="w3-table-all w3-tiny w3-responsive w3-bordered tableclass dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="coursetable_info">
+        <thead>
+            <tr class="w3-light-gray" role="row">
+                                <th class="sorting" tabindex="0" aria-controls="coursetable">Programme</th>
+                                            <th class="sorting" tabindex="0" aria-controls="coursetable">University</th>
+											<th class="sorting" tabindex="0" aria-controls="coursetable">Level of the course</th>
+											<th class="sorting" tabindex="0" aria-controls="coursetable">Course</th>
+											<!--<th>Shift</th>-->
+											<!--<th>Full/Part Time</th>-->
+											<!--<th>NRI</th>
+											<th>PIO</th> -->
+											<th align="center" class="sorting" tabindex="0" aria-controls="coursetable">Course Type</th>
+											<th align="center" class="sorting" tabindex="0" aria-controls="coursetable">Intake</th>
+											<th align="center" class="sorting" tabindex="0" aria-controls="coursetable">Enrollment</th>
+											<th align="center" class="sorting" tabindex="0" aria-controls="coursetable">Placement</th>
+											
+				
+                
+            </tr>
+        </thead>
+ 
+        <tfoot>
+       <tr>
+               <th colspan="9">
+			   <div id="datafound" align="center"></div>
+			  </th>
+				 
+              </tr>  
+           
+        </tfoot>
+    <tbody></tbody></table><div class="dataTables_info" id="coursetable_info" role="status" aria-live="polite"></div><div class="dataTables_paginate paging_simple_numbers" id="coursetable_paginate"></div></div>
+     
+</div>
+<div class="w3-container w3-sidebar w3-bar-block w3-card-2 w3-animate-right ng-scope" style="display:none;right:0;" id="faculty1">
+  <button onclick="closeRightMenu2()" class="w3-button w3-large w3-red w3-right">×</button>
+  <br>
+  <div class="w3-padding-16 w3-light-gray w3-text-red w3-center w3-large" id="facultytitles"></div>
+   <table id="facultytable" class="w3-table-all w3-tiny w3-bordered tableclass" cellspacing="0" width="100%">
+        <thead>
+            <tr class="w3-light-gray">
+                                <th>F.ID</th>
+                                            <th>Name</th>
+                                            <th>Gender</th>
+											<th>Designation</th>
+											<th>Date of joining</th>
+											<th>Area of Specialisation</th>
+                                            <th>Appointment Type</th>
+				
+                
+            </tr>
+        </thead>
+ 
+        <tfoot>
+       <tr>
+               <th colspan="9">
+			   <div id="facdatafound" align="center"></div>
+			  </th>
+				 
+              </tr>  
+           
+        </tfoot>
+    </table>
+     
+</div>
+
+<button class="w3-button w3-2017-flame w3-hide-large w3-hover-lime w3-hover-text-light-grey w3-margin ng-scope" onclick="w3_open1();"><i class="fa fa-university"></i>Click to Search Institutes</button>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-small w3-collapse w3-light-gray w3-animate-left w3-border ng-scope" style="z-index:3;width:300px;" id="inputsidebar"><br>
+ <div class="w3-container w3-center"><img src="./aicte_files/logo_updated.png" style="width:100%;height:auto" alt="AICTE"></div>
+ <br><br>
+  <div class="w3-container" style="height:650px">
+   	 
+					
+					<div class="w3-light-gray w3-block w3-padding-4"><label class="w3-text-gray w3-medium" for="year">&nbsp;<b>Year</b></label>
+                                            <select class="w3-select w3-light-gray w3-hover-teal w3-hover-opacity" name="year" id="year">
+											<option selected="" value="2025-2026">2025-2026</option>
+											<option value="2024-2025">2024-2025</option>
+                                            <option value="2023-2024">2023-2024</option>
+											<option value="2022-2023">2022-2023</option>
+                                            <option value="2021-2022">2021-2022</option>
+                                            <option value="2020-2021">2020-2021</option>
+											<option value="2019-2020">2019-2020</option>
+											<option value="2018-2019">2018-2019</option>
+											<option value="2017-2018">2017-2018</option>
+											<option value="2016-2017">2016-2017</option>
+											<option value="2015-2016">2015-2016</option>
+										    <option value="2014-2015">2014-2015</option>
+										    <option value="2013-2014">2013-2014</option>
+											<option value="2012-2013">2012-2013</option>
+                                                             
+                                                
+                                            </select></div>
+			<br>
+			
+					<div class="w3-light-gray w3-block w3-padding-4"><label class="w3-text-gray w3-medium" for="state"><b>&nbsp;Select State</b></label>
+							
+							<select class="w3-select w3-light-gray w3-hover-teal w3-hover-opacity" name="state" id="state">
+							
+							
+							
+ <option value="Andaman and Nicobar Islands ">Andaman and Nicobar Islands </option>
+ <option value="Andhra Pradesh ">Andhra Pradesh </option>
+ <option value="Arunachal Pradesh ">Arunachal Pradesh </option>
+ <option value="Assam ">Assam </option>
+ <option value="Bihar ">Bihar </option>
+ <option value="Chandigarh ">Chandigarh </option>
+ <option value="Chhattisgarh ">Chhattisgarh </option>
+ <option value="Dadra and Nagar Haveli ">Dadra and Nagar Haveli </option>
+ <option value="Daman and Diu ">Daman and Diu </option>
+ <option value="Delhi ">Delhi </option>
+ <option value="Goa ">Goa </option>
+ <option value="Gujarat ">Gujarat </option>
+ <option value="Haryana ">Haryana </option>
+ <option value="Himachal Pradesh ">Himachal Pradesh </option>
+ <option value="Jammu and Kashmir ">Jammu and Kashmir </option>
+ <option value="Jharkhand ">Jharkhand </option>
+ <option value="Karnataka ">Karnataka </option>
+ <option value="Kerala ">Kerala </option>
+ <option value="Madhya Pradesh ">Madhya Pradesh </option>
+ <option value="Maharashtra ">Maharashtra </option>
+ <option value="Manipur ">Manipur </option>
+ <option value="Meghalaya ">Meghalaya </option>
+ <option value="Mizoram ">Mizoram </option>
+ <option value="Nagaland ">Nagaland </option>
+ <option value="Odisha ">Odisha </option>
+ <option value="Orissa ">Orissa </option>
+ <option value="Puducherry ">Puducherry </option>
+ <option value="Punjab ">Punjab </option>
+ <option value="Rajasthan ">Rajasthan </option>
+ <option value="Sikkim ">Sikkim </option>
+ <option value="Tamil Nadu ">Tamil Nadu </option>
+ <option value="Telangana ">Telangana </option>
+ <option value="Tripura ">Tripura </option>
+ <option value="Uttar Pradesh ">Uttar Pradesh </option>
+ <option value="Uttarakhand ">Uttarakhand </option>
+ <option value="West Bengal ">West Bengal </option>
+
+                                            </select></div>
+					<br>
+				
+					<div class="w3-light-gray w3-block w3-padding-4"><label class="w3-text-gray w3-medium" for="program"><b>&nbsp;Select Program</b></label>
+                                            <select class="w3-select w3-hover-teal w3-hover-opacity w3-light-gray" name="program" id="program">
+											<option value="1">--All--</option>
+                                                <option value="Applied Arts and Crafts">Applied Arts and Crafts</option>
+                                                <option value="Architecture and Town Planning">Architecture and Town Planning</option>
+												<option value="Architecture">Architecture</option>
+												<option value="Town Planning">Town Planning</option>
+												<option value="Planning">Planning</option>
+                                                <option value="Engineering and Technology">Engineering and Technology</option>
+                                                <option value="Hotel Management and Catering">Hotel Management and Catering</option>
+                                                <option value="Management">Management</option>
+												<option value="MCA">MCA</option>
+												<option value="Computer Applications">Computer Applications</option>
+												<option value="Pharmacy">Pharmacy</option>
+                                            </select></div>
+						<br>
+					<div class="w3-light-gray w3-block w3-padding-4"><label class="w3-text-gray w3-medium" for="level"><b>&nbsp;Select Level</b></label>
+                                            <select class="w3-select w3-light-gray w3-hover-teal w3-hover-opacity" name="level" id="level">
+											<option value="1">--All--</option>
+                                                <option value="UG">UG</option>
+                                                <option value="PG">PG</option>
+                                                <option value="DIPLOMA">DIPLOMA</option>
+                                                
+                                            </select></div>
+				<br>
+					 <div class="w3-light-gray w3-block w3-padding-4"><label class="w3-text-gray w3-medium" for="course"><b>&nbsp;Course:</b></label>
+			             <input name="course" id="course" type="text" autocomplete="off" onkeyup="showHint(this.value)" class="w3-input w3-hover-teal w3-hover-opacity w3-light-gray" placeholder="Type course name(if any)">	
+<div><b><span class="w3-text-red w3-opacity" id="txtHint">&nbsp;Suggestions</span></b></div>						 
+						</div>
+						
+						<script>
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        };
+        xmlhttp.open("GET", "php/gethint.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+					<br>
+					<div class="w3-light-gray w3-block w3-padding-4"><label class="w3-text-gray w3-medium" for="institutiontype"><b>&nbsp;University/Institution Type</b></label>
+                                            <select class="w3-select w3-light-gray w3-hover-teal w3-hover-opacity" name="institutiontype" id="institutiontype">
+											<option value="1">--All--</option>
+                                                <option value="Central University">Central University</option>
+<option value="Deemed to be University(Govt)">Deemed to be University(Govt)</option>
+<option value="Deemed to be University(Pvt)">Deemed to be University(Pvt)</option>
+<option value="Deemed University(Government)">Deemed University(Government)</option>
+<option value="Deemed University(Private)">Deemed University(Private)</option>
+<option value="Government">Government</option>
+<option value="Govt aided">Govt aided</option>
+<option value="Private-Aided">Private-Aided</option>
+<option value="Private-Self Financing">Private-Self Financing</option>
+<option value="State Government University">State Government University</option>
+<option value="State Private University">State Private University</option>
+<option value="Unaided - Private">Unaided - Private</option>
+<option value="University Managed">University Managed</option>
+<option value="University Managed-Govt">University Managed-Govt</option>
+<option value="University Managed-Private">University Managed-Private</option>
+
+
+
+                                            </select></div>
+		<br>
+				<div class="w3-light-gray w3-block w3-padding-4">
+					<div class="w3-half w3-margin-right">
+						<label class="w3-text-gray w3-medium" for="Minority"><b>&nbsp;Minority</b></label>
+                                            <select class="w3-select w3-light-gray w3-hover-teal w3-hover-opacity" name="Minority" id="Minority">
+                                                <option value="1"></option>
+												
+												<option value="Y">Y</option>
+                                                
+                                            </select>
+											</div>
+											<div class="w3-rest">
+							<label class="w3-text-gray w3-medium" for="Women"><b>&nbsp;Women</b></label>
+                                            <select class="w3-select w3-light-gray w3-hover-teal w3-hover-opacity" name="Women" id="Women">
+											<option value="1"></option>
+                                                
+												<option value="Y">Y</option>
+                                                
+                                            </select>
+											</div>
+			
+					</div>
+					
+				
+			
+					<br>
+					<button type="submit" data-loading-text="Loading..." class="w3-btn w3-block w3-2017-flame" value="Load Table" id="load">Submit</button>
+  </div>
+  
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity ng-scope" onclick="w3_close1()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-container ng-scope" style="margin-left:300px;margin-top:40px;">
+
+<div class="w3-padding-16 w3-light-gray w3-text-red w3-center w3-large" id="titles">List of AICTE approved Institutes for the state Andaman and Nicobar Islands  for the academic year: 2025-2026</div>
+
+<div id="jsontable_wrapper" class="dataTables_wrapper"><div class="dataTables_length" id="jsontable_length"><label>Show <select name="jsontable_length" aria-controls="jsontable" class=""><option value="10">10</option><option value="15">15</option><option value="20">20</option><option value="50">50</option></select> entries</label></div><div id="jsontable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" aria-controls="jsontable"></label></div><table id="jsontable" class="w3-table-all w3-tiny w3-responsive w3-bordered dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="jsontable_info" style="width: 100%;">
+        <thead>
+            <tr class="w3-light-gray" role="row"><th class="w3-hover-white sorting_asc" style="width: 74.925px;" tabindex="0" aria-controls="jsontable" rowspan="1" colspan="1" aria-label="Aicte ID: activate to sort column ascending" aria-sort="ascending">Aicte ID</th><th class="w3-hover-white sorting" style="width: 267.438px;" tabindex="0" aria-controls="jsontable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Name</th><th class="w3-hover-white sorting" style="width: 269.975px;" tabindex="0" aria-controls="jsontable" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Address</th><th class="w3-hover-white sorting" style="width: 41.0375px;" tabindex="0" aria-controls="jsontable" rowspan="1" colspan="1" aria-label="District: activate to sort column ascending">District</th><th class="w3-hover-white sorting" style="width: 60.1375px;" tabindex="0" aria-controls="jsontable" rowspan="1" colspan="1" aria-label="Institution Type: activate to sort column ascending">Institution Type</th><th class="w3-hover-white sorting" style="width: 42.5px;" tabindex="0" aria-controls="jsontable" rowspan="1" colspan="1" aria-label="Women: activate to sort column ascending">Women</th><th class="w3-hover-white sorting" style="width: 46.35px;" tabindex="0" aria-controls="jsontable" rowspan="1" colspan="1" aria-label="Minority: activate to sort column ascending">Minority</th><th class="w3-hover-white sorting" style="width: 38.95px;" tabindex="0" aria-controls="jsontable" rowspan="1" colspan="1" aria-label="Course Details: activate to sort column ascending">Course Details</th><th class="w3-hover-white sorting" style="width: 40.6875px;" tabindex="0" aria-controls="jsontable" rowspan="1" colspan="1" aria-label="Faculty Details: activate to sort column ascending">Faculty Details</th></tr>
+        </thead>
+ 
+        <tfoot>
+       <tr><th colspan="9" rowspan="1">
+			   <div id="showmessage" align="center">Records Found</div>
+			  </th></tr>  
+           
+        </tfoot>
+    <tbody><tr role="row" class="odd"><td class="sorting_1">1-44638801317</td><td>GOVERNMENT POLYTECHNIC DIGLIPUR</td><td>MADHUPUR, DIGLIPUR</td><td>ANDAMANS</td><td>Government</td><td>N</td><td>N</td><td><button class="w3-button w3-teal w3-hover-opacity w3-hover-red w3-opacity w3-tiny w3-right" onclick="openRightMenu1(/1-44638801317/,/1/,/2025-2026/)">Click Here</button></td><td><button class="w3-button w3-teal w3-hover-opacity w3-hover-red  w3-opacity w3-tiny w3-right">NA</button></td></tr><tr role="row" class="even"><td class="sorting_1">1-44641284001</td><td>DR. B.R. AMBEDKAR INSTITUTE OF TECHNOLOGY</td><td>POLYTECHNIC ROAD PAHAR GAON PO JUNGLIGHAT</td><td>PORT BLAIR</td><td>Government</td><td>N</td><td>N</td><td><button class="w3-button w3-teal w3-hover-opacity w3-hover-red w3-opacity w3-tiny w3-right" onclick="openRightMenu1(/1-44641284001/,/1/,/2025-2026/)">Click Here</button></td><td><button class="w3-button w3-teal w3-hover-opacity w3-hover-red  w3-opacity w3-tiny w3-right">NA</button></td></tr><tr role="row" class="odd"><td class="sorting_1">1-44644667441</td><td>JAWAHARLAL NEHRU RAJKEEYA MAHAVIDYALAYA</td><td>SOUTH POINT, ABERDEEN POST</td><td>PORT BLAIR</td><td>Government</td><td>N</td><td>N</td><td><button class="w3-button w3-teal w3-hover-opacity w3-hover-red w3-opacity w3-tiny w3-right" onclick="openRightMenu1(/1-44644667441/,/1/,/2025-2026/)">Click Here</button></td><td><button class="w3-button w3-teal w3-hover-opacity w3-hover-red  w3-opacity w3-tiny w3-right">NA</button></td></tr><tr role="row" class="even"><td class="sorting_1">1-44644880222</td><td>ANDAMAN NICOBAR COLLGE ANCOL</td><td>CHAKKARGAON</td><td>PORT BLAIR</td><td>Government</td><td>N</td><td>N</td><td><button class="w3-button w3-teal w3-hover-opacity w3-hover-red w3-opacity w3-tiny w3-right" onclick="openRightMenu1(/1-44644880222/,/1/,/2025-2026/)">Click Here</button></td><td><button class="w3-button w3-teal w3-hover-opacity w3-hover-red  w3-opacity w3-tiny w3-right">NA</button></td></tr></tbody></table><div class="dataTables_info" id="jsontable_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div><div class="dataTables_paginate paging_simple_numbers" id="jsontable_paginate"><a class="paginate_button previous disabled" aria-controls="jsontable" data-dt-idx="0" tabindex="0" id="jsontable_previous">Previous</a><span><a class="paginate_button current" aria-controls="jsontable" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="jsontable" data-dt-idx="2" tabindex="0" id="jsontable_next">Next</a></div></div>
+	
+
+</div>
+<div class="w3-padding-16 w3-light-gray w3-text-red w3-center w3-large ng-scope" id="titles_note">Note : Faculty Data will display only for Current Academic Year</div>
+  
+ 
+  
+<script type="text/javascript" class="ng-scope">
+// Get the Sidebar
+var mySidebar = document.getElementById("inputsidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open1() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close1() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+
+$(document).ready(function() {
+	$("#load").click(function() {
+    var $btn = $(this);
+    $btn.button('loading');
+    // Then whatever you actually want to do i.e. submit form
+    // After that has finished, reset the button state using
+    setTimeout(function () {
+        $btn.button('reset');
+    }, 1000);
+});
+	//$('#jsontable').dataTable( {
+   //     "ajax": 'arrays.txt'
+   // } );
+
+var oTable =  $('#jsontable').dataTable({"pageLength": 10});  //Initialize the datatable
+
+	
+   
+	$('#load').on('click',function(){
+		
+		$("#showmessage").html("Loading...");
+		$("#titles").html("<img height='40' width='auto' src='load2.gif'>");
+		oTable.fnClearTable();
+	
+   var year = document.getElementById('year').value;
+   var program = document.getElementById('program').value;
+   var level = document.getElementById('level').value;
+   var institutiontype = document.getElementById('institutiontype').value;
+   var Women = document.getElementById('Women').value;
+   var Minority = document.getElementById('Minority').value;
+   var state = document.getElementById('state').value;
+   var course = document.getElementById('course').value;
+   var programs="",levels="",institutiontypes="",Womens="",Minoritys="";
+  	if(course=="")
+	{
+		course=1;
+	}
+   if(institutiontype!=1)
+{
+	institutiontypes='`'+institutiontype+'`';
+}
+if(level!=1)
+{
+	levels='`'+level+'`';
+}
+if(program!=1)
+{
+	programs='`'+program+'`';
+}
+if(Women=='Y')
+{
+	Womens="`Women`";
+}
+if(Minority=='Y')
+{
+	Minoritys="`Minority`";
+}
+   if(program == '1' && level == '1' && institutiontype == '1' && Minority == '1' && Women == '1')
+{
+	var titles='List of AICTE approved Institutes for the state '+state+' for the academic year: '+year;
+}
+else
+{
+	var titles='List of AICTE approved Institutes in '+programs+levels+institutiontypes+Minoritys+Womens+' for the state '+state+' for the academic year: '+year;
+}
+   
+   var link="php/approvedinstituteserver.php?method=fetchdata&year="+year+"&program="+program+"&level="+level+"&institutiontype="+institutiontype+"&Women="+Women+"&Minority="+Minority+"&state="+state+"&course="+course;
+   //console.log(link);
+		var user = $(this).attr('id');
+		
+		if(user != '') 
+		{ 
+		$.ajax({
+			url: link,
+			dataType: 'json',
+			
+			success: function(s){
+				
+				$("#showmessage").html("Records Found");
+				$("button").click(function() {
+    var $btn = $(this);
+    setTimeout(function () {
+        $btn.button('reset');
+    }, 3000);
+	
+});
+        
+   		
+			//console.log(s);
+			//console.log(year);
+			oTable.fnClearTable();
+			
+					document.getElementById("titles").innerHTML = titles;
+					document.getElementById("titles_note").innerHTML = "Note : Faculty Data will display only for Current Academic Year";
+					
+					 	for(var i = 0; i < s.length; i++) {
+							if(year=='2024-2025'){
+						var faculty_dat = "<button class='w3-button w3-teal w3-hover-opacity w3-hover-red  w3-opacity w3-tiny w3-right' onclick='openRightMenu2(`"+s[i][0]+"`,`"+s[i][7]+"`,`"+year+"`)'>Click Here</button>";	
+                         } else {
+						var faculty_dat = "<button class='w3-button w3-teal w3-hover-opacity w3-hover-red  w3-opacity w3-tiny w3-right'>NA</button>";	 
+						 }
+						 oTable.fnAddData([
+                                    s[i][0],
+									s[i][1],
+									s[i][2],
+									s[i][3],
+									s[i][4],
+									s[i][5],
+									s[i][6],
+									"<button class='w3-button w3-teal w3-hover-opacity w3-hover-red w3-opacity w3-tiny w3-right' onclick='openRightMenu1(/"+s[i][0]+"/,/"+course+"/,/"+year+"/)'>Click Here</button>",
+															
+									""+faculty_dat+""
+									
+                                      	   ]);										
+										}
+								// End For
+									
+			},
+			
+			error: function(e){
+			   console.log(e.responseText);	
+			   $("#showmessage").html("No Records Found");
+			   $("#titles").html("No Institues Found in this Category")
+			}
+			
+			});
+			
+		}
+			
+	});
+	
+});
+</script>
+     
+<script class="ng-scope">
+var oTableb = $('#coursetable').dataTable({"pageLength": 10});
+var oTablea =  $('#facultytable').dataTable(); 
+ 
+function openRightMenu1(aicteid,courses,yearss) {
+	var oTableb =  $('#coursetable').dataTable(); 
+	//console.log(aicteid,yearss);	
+    document.getElementById("courses1").style.display = "block";
+	document.getElementById("courses1").style.width = "75%";
+	
+	oTableb.fnClearTable();
+	$("#datafound").html("Loading...");
+		
+	    
+		var user = $(this).attr('id');
+		
+		if(user != '') 
+		{ 
+		$.ajax({
+			url: "php/approvedcourse.php?method=fetchdata&aicteid="+aicteid+"&course="+courses+"&year="+yearss,
+			dataType: 'json',
+			
+			success: function(s){
+				
+				$("#datafound").html("Records Found");
+				document.getElementById("coursetitles").innerHTML ="List of courses of "+s[0][1]+"("+s[0][0]+")" ;      
+   		
+			//console.log(s);
+								
+					 	for(var i = 0; i < s.length; i++) {
+							
+                         oTableb.fnAddData([
+                                    s[i][3],
+									s[i][4],
+									s[i][5],
+									s[i][6],
+									
+									s[i][7],
+									s[i][10],
+									s[i][11],
+								    s[i][12]
+									
+                                      	   ]);										
+										}
+								// End For
+									
+			},
+			
+			error: function(e){
+				$("#datafound").html("No Records Found");
+			   console.log(e.responseText);	
+			   }
+			
+			});
+			
+		}
+}
+function closeRightMenu1() {
+    document.getElementById("courses1").style.display = "none";
+	
+}
+ 
+function openRightMenu2(aicteid,pid,yearss) {
+var oTablea =  $('#facultytable').dataTable();
+		//aicteid=aicteid-1;
+		//pid=pid-1;
+		document.getElementById("faculty1").style.display = "block";
+	document.getElementById("faculty1").style.width = "75%";
+	document.getElementById("facultytitles").innerHTML="";
+	 
+	$("#facdatafound").html("Loading...");
+	
+	    link="php/faculty.php?method=fetchdata&aicteid="+aicteid+"&pid="+pid+"&year="+yearss;
+		//console.log(link);
+		var user = $(this).attr('id');
+		oTablea.fnClearTable();
+		if(user != '') 
+		{ 
+		$.ajax({
+			
+			url: link,
+			dataType: 'json',
+			success: function(s){
+				
+				$("#facdatafound").html("Records Found");
+				
+   		document.getElementById("facultytitles").innerHTML ="List of faculties of "+s[0][7]+"("+aicteid+")";
+			//console.log(s);
+			
+					
+					 	for(var i = 0; i < s.length; i++) {
+							
+                         oTablea.fnAddData([
+                                    s[i][0],
+									s[i][1],
+									s[i][2],
+									s[i][3],
+									s[i][4],
+									s[i][5],
+									s[i][6],
+									
+								
+                                      	   ]);										
+										}
+								// End For
+									
+			},
+			
+			error: function(e){
+				
+				$("#facdatafound").html("No Records Found");
+			   console.log(e.responseText);	
+			   
+			   }
+			
+			});
+			
+		}
+	
+    
+}
+function closeRightMenu2() {
+    document.getElementById("faculty1").style.display = "none";
+	
+}
+
+</script></div>
+    </div>
+
+   <script src="./aicte_files/jquery.min.js.download"></script>
+	<script src="./aicte_files/angular.min.js.download"></script>
+     <script type="text/javascript" src="./aicte_files/spin.min.js.download"></script>
+    <script type="text/javascript" src="./aicte_files/angular-spinner.min.js.download"></script>
+    <script type="text/javascript" src="./aicte_files/angular-loading-spinner.js.download"></script>
+   <script src="./aicte_files/angular-route.js.download"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="./aicte_files/metisMenu.min.js.download"></script>
+    <script src="./aicte_files/bootstrap.min.js.download"></script>
+   
+<script src="./aicte_files/jquery.dataTables.js.download" type="text/javascript"></script>
+
+
+
+
+
+<script>
+    var app = angular.module('myApp', ['ngLoadingSpinner', 'ngRoute']);
+    app.config(function($routeProvider) {
+        $routeProvider
+
+            .when('/otherapprovals', {
+            templateUrl: 'nripiofcinstitutes.php',
+            controller: 'nripiofccontroller'
+        })
+
+        .when('/closedcourse', {
+                templateUrl: 'closedcourse.php',
+                controller: 'closedcourse'
+            })
+            .when('/faculty', {
+                templateUrl: 'faculties.php',
+                controller: ''
+            })
+            .when('/closedinstitute', {
+                templateUrl: 'closedinstitute.php',
+                controller: 'closedinstitute'
+            })
+            .when('/unapproved', {
+                templateUrl: 'unapproved.php',
+                controller: ''
+            })
+            .when('/graphs', {
+                templateUrl: 'graphs.php',
+                controller: ''
+            })
+
+        .when('/approved', {
+                templateUrl: 'approvedinstitutes.php',
+                controller: ''
+            })
+        .when('/pgdm', {
+                templateUrl: '_pgdm.php',
+                controller: ''
+            })
+		.when('/ODLORF', {
+                templateUrl: 'odlofcinstitutes.php',
+                controller: 'odlorfcontroller'
+            })
+			
+			.when('/ONLINEC', {
+                templateUrl: 'oonlinecourse.php',
+                controller: 'onlinecoursecontroller'
+            }) 
+			
+			.when('/REGL', {
+                templateUrl: 'regionallangues.php',
+                controller: 'reglancontroller'
+            })
+            .when('/dashboard', {
+                templateUrl: 'dashboardaicte.php',
+                controller: ''
+            })
+            .otherwise({
+                redirectTo: 'dashboardaicte.php'
+            });
+    });
+
+    app.controller('nripiofccontroller', function($scope, $http) {
+       
+        $http.get("php/nripiofcinstitute.php?q=2021-2022&q1=NRI").then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.buildtable = function() {
+            $scope.names = "";
+            $http.get("php/nripiofcinstitute.php?q=" + $scope.year + "&q1=" + $scope.modelnripiofc).then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+        $scope.academicyear = ["2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017","2017-2018","2018-2019","2019-2020","2020-2021","2021-2022","2022-2023","2023-2024","2024-2025","2025-2026"];
+		//$scope.year = "2017-2018";
+        $scope.selectnripiofc = [{
+            value: "NRI",
+            name: "Non Resident Indian (NRI)"
+        }, {
+            value: "PIO",
+            name: "PIO/FN/CIWG"
+        }, {
+            value: "FC",
+            name: "Twining Program"
+        },
+		{
+			value: "integrated",
+            name: "Dual Degree/Integrated"
+        },
+		{
+            value: "voc",
+            name: "Vocational"
+        },
+
+        {
+            value: "ODL",
+            name: "Open Distance Learning"
+        },
+		
+		{
+            value: "ONLINE",
+            name: "Online Courses"
+        },
+		
+		{
+            value: "LANGUAGE",
+            name: "Regional Languages"
+        },
+		
+		{
+            value: "GGA",
+            name: "Grant of Graded Autonomy"
+        }];
+		
+    });
+	
+	
+	 app.controller('odlorfcontroller', function($scope, $http) {
+       
+        $http.get("php/odlofcinstitute.php?q=2021-2022&q1=ODLORF").then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.buildtable = function() {
+            $scope.names = "";
+            $http.get("php/odlofcinstitute.php?q=2021-2022&q1=ODLORF").then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+        
+    });
+	
+	app.controller('onlinecoursecontroller', function($scope, $http) {
+       
+        $http.get("php/onlinecourse.php?q=2021-2022&q1=ONLINEC").then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.buildtable = function() {
+            $scope.names = "";
+            $http.get("php/onlinecourse.php?q=2021-2022&q1=ONLINEC").then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+        
+    });
+	
+	
+	app.controller('reglancontroller', function($scope, $http) {
+       
+        $http.get("php/regionallangues.php?q=2021-2022&q1=REGL").then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.buildtable = function() {
+            $scope.names = "";
+            $http.get("php/regionallangues.php?q=2021-2022&q1=REGL").then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+        
+    });
+	
+
+    app.controller('closedcourse', function($scope, $http) {
+        $scope.academicyear = ["2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017","2017-2018","2018-2019","2019-2020","2020-2021","2021-2022","2022-2023","2023-2024","2024-2025"];
+         $scope.year = "2024-2025";
+            $http.get("php/closedcourses.php?q=" + $scope.year).then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.myFunction = function() {
+            $scope.names = "";
+            $http.get("php/closedcourses.php?q=" + $scope.year).then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+
+    });
+
+    app.controller('closedinstitute', function($scope, $http) {
+        $scope.academicyear = ["2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017","2017-2018","2018-2019","2019-2020","2020-2021","2021-2022","2022-2023","2023-2024","2024-2025"];
+        $scope.year = "2024-2025";
+       
+            $http.get("php/closedinstitutes.php?q=" + $scope.year).then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.myFunction = function() {
+            $scope.names = "";
+            $http.get("php/closedinstitutes.php?q=" + $scope.year).then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+
+    });
+</script>
+
+<div class="w3-margin-right">
+				<div class="container-fluid pull-right"><font size="1" color="#BF6302">Number of Hits:<b style="color:black">7403003</b><br>* Based on Self Disclosure.<br></font></div>
+		</div>
+</body><text-blaze-app-reference style="display: contents !important;" role="none"><template shadowrootmode="closed"><style>
+      div:before {
+        content: attr(data-content);
+      }
+      div {
+        all: initial;
+        position: absolute;
+        border: 0;
+        margin: -1px;
+        padding: 0;
+        width: 0.1px;
+        height: 0.1px;
+        user-select: none;
+        overflow: hidden;
+        font-size: 0px;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      @media print {
+        * {
+          display: none !important;
+        }
+      }
+      </style><div aria-label="text-blaze-integration" role="group" tabindex="-1" data-content="{&quot;extensionEnabled&quot;:true,&quot;text&quot;:true}" dir="ltr"></div></template></text-blaze-app-reference></html>

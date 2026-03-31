@@ -1,0 +1,7 @@
+{
+  "source_id": "josaa_notices",
+  "authority": "JoSAA",
+  "type": "notice_archive",
+  "source_page": "https://josaa.nic.in/",
+  "local_pdf_dir": "cei_raw/josaa_notices/pdfs"
+}
