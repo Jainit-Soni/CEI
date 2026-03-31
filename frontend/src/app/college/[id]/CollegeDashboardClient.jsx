@@ -13,7 +13,7 @@ import { DetailSkeleton } from "@/components/Skeleton";
 // We keep the internal narrative components to render content without their old wrappers
 import NarrativeFoundation from "@/components/NarrativeFoundation";
 import NarrativeGeography from "@/components/NarrativeGeography";
-import IntelligenceRadar from "@/components/IntelligenceRadar";
+
 import NarrativeBranches from "@/components/NarrativeBranches";
 import NarrativeCampus from "@/components/NarrativeCampus";
 import NarrativeGateway from "@/components/NarrativeGateway";
@@ -23,6 +23,7 @@ import NarrativeVault from "@/components/NarrativeVault";
 import NarrativeEdge from "@/components/NarrativeEdge";
 import NarrativeSentiment from "@/components/NarrativeSentiment";
 import ROICalculator from "@/components/ROICalculator";
+import TruthPlacementsSection from "@/components/college/TruthPlacementsSection";
 import GlassPanel from "@/components/GlassPanel";
 import ReviewModal from "@/components/ReviewModal";
 import ReviewList from "@/components/ReviewList";
@@ -51,7 +52,8 @@ export default function CollegeDashboardClient({ id, initialData }) {
         { id: "courses", label: "Courses Offered" },
         { id: "seats", label: "Seats/Intake" },
         { id: "cutoffs", label: "Cut Offs" },
-        { id: "roi", label: "Placements & ROI" },
+        { id: "placements", label: "Placements" },
+        { id: "roi", label: "ROI" },
         { id: "audit", label: "Truth Audit" },
         { id: "report", label: "Report Data" }
     ];
@@ -181,7 +183,6 @@ export default function CollegeDashboardClient({ id, initialData }) {
                         </div>
 
                         <div className="bento-signals">
-                            <span className="b-sig evaluated"><ShieldCheck size={14}/> Official Data Partner</span>
                             {college.competitivenessBand && (
                                 <span className="b-sig band"><Award size={14} /> {college.competitivenessBand} Tier</span>
                             )}
@@ -192,12 +193,14 @@ export default function CollegeDashboardClient({ id, initialData }) {
                     {/* CEI Score Tile */}
                     <div className="bento-tile bento-score">
                         <div className="sb-ring">
-                            <div className="sb-val">{(college.ceiScore || college.score || college.ceiIndex) ? Number(college.ceiScore || college.score || college.ceiIndex).toFixed(2) : '-'}</div>
+                            <div className="sb-val">{college.ceiScore ? Number(college.ceiScore).toFixed(2) : '-'}</div>
                         </div>
                         <div className="sb-label">Official CEI Score</div>
                         <p className="text-xs opacity-90 mt-2 font-medium px-4 leading-relaxed">Calculated via indexed institutional parameters & outcomes.</p>
                     </div>
                 </div>
+
+
 
                 {/* SEGMENTED TAB NAVIGATION */}
                 <div className="dash-tabs-wrapper">
@@ -220,7 +223,7 @@ export default function CollegeDashboardClient({ id, initialData }) {
                         <div className="animate-fade-in space-y-12">
                             <NarrativeFoundation college={college} />
                             <NarrativeGeography college={college} />
-                            <IntelligenceRadar college={college} benchmarks={benchmarks} />
+
                         </div>
                     )}
                     {activeTab === "courses" && (
@@ -238,10 +241,15 @@ export default function CollegeDashboardClient({ id, initialData }) {
                             <NarrativeGateway collegeId={college.id} />
                         </div>
                     )}
+                    {activeTab === "placements" && (
+                        <div className="animate-fade-in space-y-12">
+                            <TruthPlacementsSection collegeId={college.id} />
+                            <NarrativeEdge college={college} />
+                        </div>
+                    )}
                     {activeTab === "roi" && (
                         <div className="animate-fade-in space-y-12">
                             <NarrativeVault collegeId={college.id} />
-                            <NarrativeEdge college={college} />
                             <ROICalculator 
                                 title={`ROI Simulation: ${college.shortName || college.name}`}
                                 initialData={{

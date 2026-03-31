@@ -32,19 +32,18 @@ const LiquidScoreRing = ({ score = 85, size = 160 }) => {
           
           {/* Animated Wave Liquid */}
           <motion.path
-            d="M 0 100 V 50 Q 25 40 50 50 T 100 50 V 100 H 0 Z"
             fill="url(#liquid-gradient)"
             animate={{
               d: [
-                "M 0 100 V 50 Q 25 40 50 50 T 100 50 V 100 H 0 Z",
-                "M 0 100 V 50 Q 25 60 50 50 T 100 50 V 100 H 0 Z",
-                "M 0 100 V 50 Q 25 40 50 50 T 100 50 V 100 H 0 Z"
+                "M 0 150 V 0 Q 25 -10 50 0 T 100 0 V 150 H 0 Z",
+                "M 0 150 V 0 Q 25 10 50 0 T 100 0 V 150 H 0 Z",
+                "M 0 150 V 0 Q 25 -10 50 0 T 100 0 V 150 H 0 Z"
               ],
               y: `${fillLevel}%`
             }}
             transition={{
               d: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-              y: { duration: 1.5, ease: "easeOut" }
+              y: { duration: 1.5, type: "spring", stiffness: 40 }
             }}
           />
           
@@ -74,7 +73,7 @@ const LiquidScoreRing = ({ score = 85, size = 160 }) => {
 
       {/* Centered Score */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-        <span className="text-4xl font-black text-white drop-shadow-lg leading-none">{score}</span>
+        <span className={`${String(score).length > 3 ? 'text-3xl' : 'text-4xl'} font-black text-white drop-shadow-lg leading-none tracking-tighter`}>{score}</span>
         <span className="text-[8px] font-black text-white/60 uppercase tracking-[0.2em] mt-1">CEI SCORE</span>
       </div>
     </div>

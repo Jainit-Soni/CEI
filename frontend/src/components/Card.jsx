@@ -67,45 +67,58 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
                   lastUpdated={data?.updatedAt || trust?.lastUpdated}
                 />
               )}
+              {data?.isCore && (
+                <span 
+                  title={`Core Institution: ${data?.coreMetadata?.institutionType || 'Target'}`}
+                  style={{
+                    background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)',
+                    color: '#fff',
+                    fontSize: '0.65rem',
+                    fontWeight: 800,
+                    padding: '2px 6px',
+                    borderRadius: '4px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '3px',
+                    textTransform: 'uppercase',
+                    boxShadow: '0 2px 4px rgba(245,158,11,0.2)'
+                  }}
+                >
+                  <span style={{ fontSize: '0.7rem' }}>🏛️</span> CORE
+                </span>
+              )}
             </div>
             {data?.shortName && data.shortName !== title && !data?.displayName?.includes(`(${data.shortName})`) && (
               <span className="card-acronym">{data.shortName}</span>
             )}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px' }}>
-            {/* CEI Score Badge - ALWAYS show if score exists */}
-            {(data?.ceiScore > 0 || trust?.score > 0) && (
+            {/* CEI Strength Badge */}
+            {(data?.institutionStrengthScore > 0 || data?.ceiScore > 0) && (
               <div
                 className="cc-cei-badge"
-                title={`CEI Score: ${(data?.ceiScore || trust?.score)?.toFixed(2)}`}
+                title={`CEI Strength: ${data?.institutionStrengthScore || data?.ceiScore}`}
                 style={{
-                  background: (data?.ceiScore || trust?.score) >= 75 ? 'linear-gradient(135deg, #1e1b4b, #312e81)' : 'linear-gradient(135deg, #f8fafc, #f1f5f9)',
-                  color: (data?.ceiScore || trust?.score) >= 75 ? '#fbbf24' : '#64748b',
-                  fontWeight: '700',
-                  padding: '6px 12px',
-                  borderRadius: '12px',
-                  fontSize: '0.85rem',
+                  position: 'relative',
+                  background: (data?.institutionStrengthScore || data?.ceiScore) >= 75 ? 'linear-gradient(135deg, #1e1b4b, #312e81)' : 'linear-gradient(135deg, #f8fafc, #f1f5f9)',
+                  color: (data?.institutionStrengthScore || data?.ceiScore) >= 75 ? '#fbbf24' : '#64748b',
+                  padding: '4px 8px',
+                  borderRadius: '10px',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  minWidth: '70px',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
-                  border: (data?.ceiScore || trust?.score) >= 75 ? '1.5px solid #fbbf24' : '1px solid #e2e8f0'
+                  minWidth: '54px',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+                  border: (data?.institutionStrengthScore || data?.ceiScore) >= 75 ? '1.5px solid #fbbf24' : '1px solid #e2e8f0'
                 }}
               >
-                <div style={{ fontSize: '0.65rem', textTransform: 'uppercase', opacity: 0.8, letterSpacing: '0.05em', marginBottom: '2px' }}>
+                <div style={{ fontSize: '0.58rem', textTransform: 'uppercase', opacity: 0.8, letterSpacing: '0.05em', marginBottom: '1px' }}>
                   CEI Score
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '1rem' }}>
-                  <span className="cc-cei-value">
-                    {(data?.ceiScore || trust?.score).toFixed(2)}
-                  </span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '2px', fontSize: '0.85rem', fontWeight: '800' }}>
+                   {(data?.ceiScore)?.toFixed(2)}
                 </div>
-                {(data?.ceiScore >= 85 || (trust?.score >= 85)) && (
-                  <div style={{ fontSize: '9px', color: '#10b981', marginTop: '2px', fontWeight: '800' }}>
-                    ELITE
-                  </div>
-                )}
+
               </div>
             )}
             
@@ -120,15 +133,11 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
           </div>
         </div>
         
-        {(subtitle || data?.location) && (
-          <p className="card-subtitle" title={subtitle || data?.location}>
-            {(subtitle || data?.location)}
+        {/* Subtitle: Only show if there's room */}
+        {subtitle && (
+          <p className="card-subtitle" title={subtitle} style={{ WebkitLineClamp: 1, lineClamp: 1 }}>
+            {subtitle}
           </p>
-        )}
-
-        {/* Prediction Signal for Colleges */}
-        {resolvedType === 'college' && (
-          <PredictionBadge college={data} />
         )}
 
         {isScholarship && data?.deadline && (
@@ -169,7 +178,37 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
             <FavoriteButton type="colleges" id={collegeData.id} item={collegeData} size="sm" />
             <AddToCompareButton college={collegeData} />
           </div>
-          <AddToChoiceButton college={collegeData} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            {data?.coverage?.coverageBucket && (
+              <span
+                title={`Data Coverage: ${data.coverage.coverageBucket} (${data.coverage.coverageScore}%)`}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  fontSize: '0.65rem',
+                  fontWeight: 700,
+                  color: data.coverage.coverageBucket === 'Rich' ? '#059669' :
+                         data.coverage.coverageBucket === 'Partial' ? '#d97706' : '#94a3b8',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.04em',
+                  padding: '2px 6px',
+                  borderRadius: '6px',
+                  background: data.coverage.coverageBucket === 'Rich' ? 'rgba(5,150,105,0.08)' :
+                              data.coverage.coverageBucket === 'Partial' ? 'rgba(217,119,6,0.08)' : 'rgba(148,163,184,0.1)',
+                }}
+              >
+                <span style={{
+                  width: '6px', height: '6px', borderRadius: '50%',
+                  background: data.coverage.coverageBucket === 'Rich' ? '#059669' :
+                               data.coverage.coverageBucket === 'Partial' ? '#d97706' : '#cbd5e1',
+                  display: 'inline-block',
+                }} />
+                {data.coverage.coverageBucket}
+              </span>
+            )}
+            <AddToChoiceButton college={collegeData} />
+          </div>
         </div>
       )}
 

@@ -26,6 +26,7 @@ import NarrativeGateway from "@/components/NarrativeGateway";
 import PrestigeIntelligenceTabs from "@/components/PrestigeIntelligenceTabs";
 import IntelligenceRadar from "@/components/IntelligenceRadar";
 import ROICalculator from "@/components/ROICalculator";
+import TruthPlacementsSection from "@/components/college/TruthPlacementsSection";
 
 import { useAuth } from "@/lib/AuthContext";
 
@@ -42,6 +43,7 @@ export default function CollegeDetailClient({ id, initialData }) {
         { id: "seats", label: "Seats/Intake" },
         { id: "cutoffs", label: "Cut offs" },
         { id: "ceiscore", label: "CEI Score" },
+        { id: "placements", label: "Placements" },
         { id: "roi", label: "ROI" },
         { id: "reviews", label: "Reviews" },
         { id: "report", label: "Report" }
@@ -166,13 +168,21 @@ export default function CollegeDetailClient({ id, initialData }) {
                     </div>
                 )}
 
+                {activeTab === "placements" && (
+                    <div className="tab-pane fade-in">
+                        <div className="prestige-section">
+                            <Container>
+                                <TruthPlacementsSection collegeId={college.id} />
+                            </Container>
+                        </div>
+                        <NarrativeEdge college={college} />
+                    </div>
+                )}
+
                 {activeTab === "roi" && (
                     <div className="tab-pane fade-in">
-                        {/* 1. Standard ROI Narrative Content */}
                         <NarrativeVault collegeId={college.id} />
-                        <NarrativeEdge college={college} />
                         
-                        {/* 2. Embedded Interactive True ROI Simulator */}
                         <div className="prestige-section">
                             <Container>
                                 <ROICalculator 

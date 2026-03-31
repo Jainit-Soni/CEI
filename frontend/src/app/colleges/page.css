@@ -218,8 +218,17 @@
 
 .results-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
+  grid-template-columns: repeat(3, 330px);
+  grid-auto-rows: 290px;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card-wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  overflow: visible !important;
 }
 
 .card-wrapper {

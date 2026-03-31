@@ -134,7 +134,8 @@ function CollegesContent({ initialData }) {
         districts: ["All"],
         courses: ["All"],
         tiers: ["All"],
-        bands: ["All"]
+        bands: ["All"],
+        coreOptions: ["All", "Core Only"]
     });
     // Deployment Hardening: If we have searchParams, we MUST wait for the effect to sync them
     const hasUrlParams = searchParams.toString().length > 0;
@@ -148,6 +149,8 @@ function CollegesContent({ initialData }) {
         course: "All",
         tier: "All",
         band: "All",
+        coverage: "All",
+        isCore: "All"
     });
 
     const router = useRouter();
@@ -180,8 +183,11 @@ function CollegesContent({ initialData }) {
         const sort = searchParams.get("sort") || searchParams.get("sortBy") || DEFAULT_SORT_TOKEN;
         const p = parseInt(searchParams.get("page")) || 1;
 
+        const coverage = searchParams.get("coverage") || "All";
+        const isCore = searchParams.get("isCore") || "All";
+
         setQuery(q);
-        setFilters({ state, district, course, tier, band });
+        setFilters({ state, district, course, tier, band, coverage, isCore });
         setSortToken(coerceSortToken(sort));
         setPage(p);
         setIsInitialized(true);
@@ -202,6 +208,8 @@ function CollegesContent({ initialData }) {
         if (filters.course !== "All") params.set("course", filters.course);
         if (filters.tier !== "All") params.set("tier", filters.tier);
         if (filters.band !== "All") params.set("band", filters.band);
+        if (filters.coverage !== "All") params.set("coverage", filters.coverage);
+        if (filters.isCore !== "All") params.set("isCore", filters.isCore);
         if (sortToken !== DEFAULT_SORT_TOKEN) params.set("sort", sortToken);
         if (page > 1) params.set("page", page.toString());
 
@@ -257,9 +265,15 @@ function CollegesContent({ initialData }) {
                 if (filters.course !== "All") params.course = filters.course;
                 if (filters.tier !== "All") params.tier = filters.tier;
                 if (filters.band !== "All") params.band = filters.band;
+                if (filters.coverage !== "All") params.coverage = filters.coverage;
+                if (filters.isCore === "Core Only") params.isCore = "true";
                 if (user?.uid) params.uid = user.uid;
+                
+                // Force fresh scores by bypassing cache
+                params._t = Date.now();
 
                 const response = await fetchColleges(params);
+
                 console.log(`[CEI][UI][catalog] Data received:`, {
                     count: response.data?.length,
                     total: response.pagination?.total,
@@ -300,7 +314,7 @@ function CollegesContent({ initialData }) {
         const delay = query ? 500 : 0;
         const timer = setTimeout(load, delay);
         return () => clearTimeout(timer);
-    }, [page, query, sortToken, filters.state, filters.district, filters.course, filters.tier, filters.band, stateFilter, isInitialized, user?.uid]);
+    }, [page, query, sortToken, filters.state, filters.district, filters.course, filters.tier, filters.band, filters.isCore, stateFilter, isInitialized, user?.uid]);
 
     // Map stats removed as per user request
 
@@ -340,7 +354,15 @@ function CollegesContent({ initialData }) {
     const clearFilters = useCallback(() => {
         setQuery("");
         setSortToken(DEFAULT_SORT_TOKEN);
-        setFilters({ state: "All", district: "All", course: "All", tier: "All", band: "All" });
+        setFilters({ 
+            state: "All", 
+            district: "All", 
+            course: "All", 
+            tier: "All", 
+            band: "All", 
+            coverage: "All", 
+            isCore: "All" 
+        });
         setPage(1);
         setError(null);
         setSuggestions([]);
@@ -355,171 +377,47 @@ function CollegesContent({ initialData }) {
         filters.district !== "All" ||
         filters.course !== "All" ||
         filters.tier !== "All" ||
-        filters.band !== "All";
+        filters.band !== "All" ||
+        filters.coverage !== "All" ||
+        filters.isCore !== "All";
 
-    const renderContent = () => {
-        if (isLoading) {
-            return (
-                <div className="results-grid">
-                    <CardSkeleton count={6} />
-                </div>
-            );
-        }
+    const mentorMode = searchParams.get("mentor") === "true";
+    const userRank = parseInt(searchParams.get("rank"));
 
-        if (error) {
-            return (
-                <div className="error-state">
-                    <EmptyState
-                        icon="⚠️"
-                        title="Something went wrong"
-                        description={error}
-                        actionLabel="Try Again"
-                        onAction={() => window.location.reload()}
-                    />
-                </div>
-            );
-        }
-
-        if (displayColleges.length === 0) {
-            return (
-                <EmptyState
-                    icon="🏫"
-                    title="No colleges found"
-                    description={
-                        hasActiveFilters
-                            ? "Try adjusting your search or filters"
-                            : "No colleges available at the moment"
-                    }
-                    actionLabel={hasActiveFilters ? "Clear Filters" : undefined}
-                    onAction={hasActiveFilters ? clearFilters : undefined}
-                >
-                    {!error && suggestions.length > 0 && (
-                        <div className="mt-4 text-center">
-                            <p className="text-gray-600 mb-2">Did you mean?</p>
-                            <div className="flex gap-2 justify-center flex-wrap">
-                                {suggestions.map((s, i) => (
-                                    <button
-                                        key={i}
-                                        onClick={() => {
-                                            setQuery(s);
-                                            setPage(1);
-                                        }}
-                                        className="text-blue-600 hover:underline bg-blue-50 px-3 py-1 rounded-full text-sm"
-                                    >
-                                        {s}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-                    {/* Mobile Sticky Actions */}
-                    <div className="mobile-filter-actions">
-                        <button
-                            className="filter-btn-reset"
-                            onClick={clearFilters}
-                        >
-                            Clear All
-                        </button>
-                        <button className="filter-btn-apply" onClick={() => {
-                            setIsMobileFiltersOpen(false);
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }}>
-                            Apply Filters
-                        </button>
-                    </div>
-                </EmptyState>
-            );
-        }
-
-        const formatPremiumText = (str) => {
-            if (!str) return str;
-            // Clean up common symbols
-            const clean = str.replace(/['"]/g, '').trim();
-            
-            return clean.split(/([\s,/-]+)/).map(part => {
-                const upper = part.toUpperCase();
-                // If the part is alphabetical (2+ letters)
-                if (/^[A-Z]{2,}$/i.test(part)) {
-                    // Common words to lowercase/TitleCase even if all-caps
-                    const smallWords = ['OF', 'AND', 'THE', 'FOR', 'WITH', 'IN', 'ON', 'OR', 'AT', 'TO', 'BY', 'OF', 'AM'];
-                    if (smallWords.includes(upper)) return part.toLowerCase();
-                    
-                    // Known acronyms to preserve EXACTLY (no matter original case)
-                    const acronyms = ['IIT', 'NIT', 'AIIMS', 'IIIT', 'IIM', 'BITS', 'VIT', 'MIT', 'UP', 'MP', 'HP', 'AP', 'TS', 'TN', 'KL', 'KA', 'MH', 'GJ', 'RJ', 'PB', 'HR', 'UK', 'JK', 'SNJB', 'B.TECH', 'B.E', 'M.TECH', 'MBA', 'PH.D'];
-                    if (acronyms.includes(upper)) return upper;
-
-                    // Otherwise, Title Case
-                    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
-                }
-                return part;
-            }).join('');
-        };
-
-        const mentorMode = searchParams.get("mentor") === "true";
-        const userRank = parseInt(searchParams.get("rank"));
-
-        const getMatchStatus = (college) => {
-            if (!mentorMode || !userRank) return null;
-
-            // Look for cutoff data in pastCutoffs
-            // For simplicity, we find the first available cutoff value
-            let cutoffVal = null;
-            if (college.pastCutoffs && college.pastCutoffs.length > 0) {
-                const firstCutoff = college.pastCutoffs[0].cutoff;
-                // Parse rank from "Branch: Rank | Branch: Rank" format
-                const match = firstCutoff.match(/:\s*(\d+)/);
-                if (match) cutoffVal = parseInt(match[1]);
+    const formatPremiumText = (str) => {
+        if (!str) return str;
+        const clean = str.replace(/['"]/g, '').trim();
+        return clean.split(/([\s,/-]+)/).map(part => {
+            const upper = part.toUpperCase();
+            if (/^[A-Z]{2,}$/i.test(part)) {
+                const smallWords = ['OF', 'AND', 'THE', 'FOR', 'WITH', 'IN', 'ON', 'OR', 'AT', 'TO', 'BY', 'AM'];
+                if (smallWords.includes(upper)) return part.toLowerCase();
+                const acronyms = ['IIT', 'NIT', 'AIIMS', 'IIIT', 'IIM', 'BITS', 'VIT', 'MIT', 'UP', 'MP', 'HP', 'AP', 'TS', 'TN', 'KL', 'KA', 'MH', 'GJ', 'RJ', 'PB', 'HR', 'UK', 'JK', 'SNJB', 'B.TECH', 'B.E', 'M.TECH', 'MBA', 'PH.D'];
+                if (acronyms.includes(upper)) return upper;
+                return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
             }
+            return part;
+        }).join('');
+    };
 
-            if (!cutoffVal) return null;
+    const getMatchStatus = (college) => {
+        if (!mentorMode || !userRank) return null;
 
-            if (userRank <= cutoffVal * 0.8) return { text: "Safe 🛡️", color: "#10b981" };
-            if (userRank <= cutoffVal * 1.2) return { text: "Match 🎯", color: "#f59e0b" };
-            return { text: "Dream ✨", color: "#6366f1" };
-        };
+        // Look for cutoff data in pastCutoffs
+        // For simplicity, we find the first available cutoff value
+        let cutoffVal = null;
+        if (college.pastCutoffs && college.pastCutoffs.length > 0) {
+            const firstCutoff = college.pastCutoffs[0].cutoff;
+            // Parse rank from "Branch: Rank | Branch: Rank" format
+            const match = firstCutoff.match(/:\s*(\d+)/);
+            if (match) cutoffVal = parseInt(match[1]);
+        }
 
-        return (
-            <>
-                <div className="results-grid">
-                    {displayColleges.map((college, index) => (
-                        <RevealOnScroll key={college.id || `college-${index}`} delay={index * 30}>
-                            <div className="card-wrapper" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
-                                <Card
-                                    type="college"
-                                    title={formatPremiumText(college.name)}
-                                    subtitle={formatPremiumText(college.location || (college.city ? `${college.city}${college.state ? ', ' + college.state : ''}` : college.state))}
-                                    badge={getMatchStatus(college)}
-                                    tags={[]}
-                                    meta={[
-                                        formatPremiumText(college.type),
-                                        formatPremiumText(college.ownership),
-                                        college.rankingTier,
-                                    ].filter(Boolean)}
-                                    href={`/college/${college.id}`}
-                                    data={college}
-                                    trust={{
-                                        level: college.trustLevel || 'evaluated',
-                                        score: college.ceiScore
-                                    }}
-                                />
-                            </div>
-                        </RevealOnScroll>
-                    ))}
-                </div>
-                {pagination && pagination.totalPages > 1 && (
-                    <Pagination
-                        page={pagination.page}
-                        totalPages={pagination.totalPages}
-                        hasNext={pagination.hasNext}
-                        hasPrev={pagination.hasPrev}
-                        onPageChange={(p) => {
-                            setPage(p);
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }}
-                    />
-                )}
-            </>
-        );
+        if (!cutoffVal) return null;
+
+        if (userRank <= cutoffVal * 0.8) return { text: "Safe 🛡️", color: "#10b981" };
+        if (userRank <= cutoffVal * 1.2) return { text: "Match 🎯", color: "#f59e0b" };
+        return { text: "Dream ✨", color: "#6366f1" };
     };
 
     return (
@@ -635,6 +533,12 @@ function CollegesContent({ initialData }) {
                                 options={filterOptions.bands}
                                 onChange={(val) => handleFilterChange("band", val)}
                             />
+                            <FancySelect
+                                label="Core Registry"
+                                value={filters.isCore}
+                                options={filterOptions.coreOptions}
+                                onChange={(val) => handleFilterChange("isCore", val)}
+                            />
                         </div>
 
                         <div className="filter-meta">
@@ -673,7 +577,109 @@ function CollegesContent({ initialData }) {
 
             <section className="list-results">
                 <Container>
-                    {renderContent()}
+                    {isLoading ? (
+                        <div className="results-grid">
+                            <CardSkeleton count={6} />
+                        </div>
+                    ) : error ? (
+                        <div className="error-state">
+                            <EmptyState
+                                icon="⚠️"
+                                title="Something went wrong"
+                                description={error}
+                                actionLabel="Try Again"
+                                onAction={() => window.location.reload()}
+                            />
+                        </div>
+                    ) : displayColleges.length === 0 ? (
+                        <EmptyState
+                            icon="🏫"
+                            title="No colleges found"
+                            description={
+                                hasActiveFilters
+                                    ? "Try adjusting your search or filters"
+                                    : "No colleges available at the moment"
+                            }
+                            actionLabel={hasActiveFilters ? "Clear Filters" : undefined}
+                            onAction={hasActiveFilters ? clearFilters : undefined}
+                        >
+                            {!error && suggestions.length > 0 && (
+                                <div className="mt-4 text-center">
+                                    <p className="text-gray-600 mb-2">Did you mean?</p>
+                                    <div className="flex gap-2 justify-center flex-wrap">
+                                        {suggestions.map((s, i) => (
+                                            <button
+                                                key={i}
+                                                onClick={() => {
+                                                    setQuery(s);
+                                                    setPage(1);
+                                                }}
+                                                className="text-blue-600 hover:underline bg-blue-50 px-3 py-1 rounded-full text-sm"
+                                            >
+                                                {s}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                            {/* Mobile Sticky Actions */}
+                            <div className="mobile-filter-actions">
+                                <button
+                                    className="filter-btn-reset"
+                                    onClick={clearFilters}
+                                >
+                                    Clear All
+                                </button>
+                                <button className="filter-btn-apply" onClick={() => {
+                                    setIsMobileFiltersOpen(false);
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }}>
+                                    Apply Filters
+                                </button>
+                            </div>
+                        </EmptyState>
+                    ) : (
+                        <>
+                            <div className="results-grid">
+                                {displayColleges.map((college, index) => (
+                                    <RevealOnScroll key={college.id || `college-${index}`} delay={index * 30}>
+                                        <div className="card-wrapper" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
+                                            <Card
+                                                type="college"
+                                                title={formatPremiumText(college.name)}
+                                                subtitle={formatPremiumText(college.location || (college.city ? `${college.city}${college.state ? ', ' + college.state : ''}` : college.state))}
+                                                badge={getMatchStatus(college)}
+                                                tags={[]}
+                                                meta={[
+                                                    college.type || 'College',
+                                                    college.ownership || 'Private',
+                                                    college.rankingTier || 'Tier 3',
+                                                ].slice(0, 3)}
+                                                href={`/college/${college.id}`}
+                                                data={college}
+                                                trust={{
+                                                    level: college.trustLevel || 'evaluated',
+                                                    score: college.ceiScore
+                                                }}
+                                            />
+                                        </div>
+                                    </RevealOnScroll>
+                                ))}
+                            </div>
+                            {pagination && pagination.totalPages > 1 && (
+                                <Pagination
+                                    page={pagination.page}
+                                    totalPages={pagination.totalPages}
+                                    hasNext={pagination.hasNext}
+                                    hasPrev={pagination.hasPrev}
+                                    onPageChange={(p) => {
+                                        setPage(p);
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    }}
+                                />
+                            )}
+                        </>
+                    )}
                 </Container>
             </section>
         </div>

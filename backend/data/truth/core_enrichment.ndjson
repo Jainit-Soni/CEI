@@ -1,0 +1,42 @@
+{"collegeId":"U-1016","entityType":"program","courseName":"Post Graduate Programme in Management (PGP)","duration":"2 Years","intake":440,"exams":["CAT"]}
+{"collegeId":"U-1016","entityType":"placement","averagePackage":32.7,"highestPackage":115.0,"currency":"LPA","year":"2023"}
+{"collegeId":"U-1016","entityType":"fees","totalFee":2500000,"currency":"INR"}
+{"collegeId":"U-1016","entityType":"ranking","source":"NIRF","rank":1,"year":2023}
+
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYBOMBAY","entityType":"program","courseName":"B.Tech Computer Science and Engineering","duration":"4 Years","intake":174,"exams":["JEE Advanced"]}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYBOMBAY","entityType":"placement","averagePackage":21.8,"highestPackage":150.0,"currency":"LPA","year":"2023"}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYBOMBAY","entityType":"fees","totalFee":800000,"currency":"INR"}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYBOMBAY","entityType":"ranking","source":"NIRF","rank":3,"year":2023}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYDELHI","entityType":"program","courseName":"B.Tech Computer Science and Engineering","duration":"4 Years","intake":99,"exams":["JEE Advanced"]}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYDELHI","entityType":"placement","averagePackage":20.5,"highestPackage":125.0,"currency":"LPA","year":"2023"}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYDELHI","entityType":"fees","totalFee":850000,"currency":"INR"}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYDELHI","entityType":"ranking","source":"NIRF","rank":2,"year":2023}
+
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYMADRAS","entityType":"program","courseName":"B.Tech Computer Science and Engineering","duration":"4 Years","intake":87,"exams":["JEE Advanced"]}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYMADRAS","entityType":"placement","averagePackage":21.4,"highestPackage":131.0,"currency":"LPA","year":"2023"}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYMADRAS","entityType":"fees","totalFee":820000,"currency":"INR"}
+{"collegeId":"CORE-INDIANINSTITUTEOFTECHNOLOGYMADRAS","entityType":"ranking","source":"NIRF","rank":1,"year":2023}
+
+{"collegeId":"CORE-INDIANINSTITUTEOFMANAGEMENTBANGALORE","entityType":"program","courseName":"PGP in Management","duration":"2 Years","intake":480,"exams":["CAT"]}
+{"collegeId":"CORE-INDIANINSTITUTEOFMANAGEMENTBANGALORE","entityType":"placement","averagePackage":35.3,"highestPackage":116.0,"currency":"LPA","year":"2023"}
+{"collegeId":"CORE-INDIANINSTITUTEOFMANAGEMENTBANGALORE","entityType":"fees","totalFee":2450000,"currency":"INR"}
+{"collegeId":"CORE-INDIANINSTITUTEOFMANAGEMENTBANGALORE","entityType":"ranking","source":"NIRF","rank":2,"year":2023}
+{"collegeId":"CORE-NITTRICHY","entityType":"program","courseName":"B.Tech Computer Science and Engineering","duration":"4 Years","intake":1029,"exams":["JEE Main"]}
+{"collegeId":"CORE-NITTRICHY","entityType":"placement","averagePackage":27.27,"highestPackage":52.89,"currency":"LPA","year":"2024"}
+{"collegeId":"CORE-NITTRICHY","entityType":"fees","totalFee":500000,"currency":"INR"}
+{"collegeId":"CORE-NITTRICHY","entityType":"ranking","source":"NIRF","rank":9,"year":2024}
+
+{"collegeId":"CORE-FMSDELHI","entityType":"program","courseName":"MBA Full Time","duration":"2 Years","intake":271,"exams":["CAT"]}
+{"collegeId":"CORE-FMSDELHI","entityType":"placement","averagePackage":34.1,"highestPackage":123.0,"currency":"LPA","year":"2023"}
+{"collegeId":"CORE-FMSDELHI","entityType":"fees","totalFee":200000,"currency":"INR"}
+{"collegeId":"CORE-FMSDELHI","entityType":"ranking","source":"NIRF","rank":10,"year":2023}
+
+{"collegeId":"CORE-XLRIJAMSHEDPUR","entityType":"program","courseName":"PGDM Business Management","duration":"2 Years","intake":240,"exams":["XAT"]}
+{"collegeId":"CORE-XLRIJAMSHEDPUR","entityType":"placement","averagePackage":29.89,"highestPackage":75.0,"currency":"LPA","year":"2024"}
+{"collegeId":"CORE-XLRIJAMSHEDPUR","entityType":"fees","totalFee":2932000,"currency":"INR"}
+{"collegeId":"CORE-XLRIJAMSHEDPUR","entityType":"ranking","source":"NIRF","rank":9,"year":2024}
+
+{"collegeId":"CORE-BITSPILANI","entityType":"program","courseName":"B.E. Computer Science","duration":"4 Years","intake":1040,"exams":["BITSAT"]}
+{"collegeId":"CORE-BITSPILANI","entityType":"placement","averagePackage":19.7,"highestPackage":60.75,"currency":"LPA","year":"2024"}
+{"collegeId":"CORE-BITSPILANI","entityType":"fees","totalFee":1960000,"currency":"INR"}
+{"collegeId":"CORE-BITSPILANI","entityType":"ranking","source":"NIRF","rank":20,"year":2024}
