@@ -106,17 +106,15 @@ export default function TruthPlacementsSection({ collegeId }) {
 
             <div className="metrics-grid">
                 {(data.items || []).map((item, idx) => (
-                    <div key={idx} className={`metric-card ${item.metricType.toLowerCase().replace(/\s+/g, '-')}`}>
+                    <div key={idx} className={`metric-card ${item.metricType ? item.metricType.toLowerCase().replace(/\s+/g, '-') : 'general'}`}>
                         <div className="mc-header">
-                            <span className="mc-icon">{getMetricIcon(item.metricType)}</span>
+                            <span className="mc-icon">{getMetricIcon(item.metricType || item.displayLabel || '')}</span>
                             <span className="mc-label">{item.displayLabel || item.metricType}</span>
                         </div>
                         
                         <div className="mc-value-box">
                             <span className="mc-value">
-                                {item.metricType === 'Placement Rate' 
-                                    ? `${item.value}%` 
-                                    : formatMetricValue(item.value, item.metricType, item.unit, item.currency)}
+                                {item.value}
                             </span>
                             {item.applicableBatchYear && (
                                 <span className="mc-year">Batch {item.applicableBatchYear}</span>

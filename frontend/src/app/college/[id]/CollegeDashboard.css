@@ -158,7 +158,23 @@
   background: var(--color-accent);
   color: white;
   border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
 }
+
+.bento-website-btn-tint {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.bento-website-btn-tint:hover {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+}
+
 
 .bento-signals {
   margin-top: auto;

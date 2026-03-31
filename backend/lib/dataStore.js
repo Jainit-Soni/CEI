@@ -10,6 +10,10 @@ global.verifiedFields = [];
 global.sourceEvidence = [];
 global.truthRows = [];
 global.coreInstitutes = new Map(); // canonicalName -> core metadata
+global.stateBenchmarks = new Map(); // stateName -> { ptr, enrollment }
+global.truthByName = new Map(); // normalizedName -> truthRow[]
+global.websites = new Map(); // aisheCode/id -> websiteUrl
+global.websiteByName = new Map(); // normalizedName -> websiteUrl
 
 /**
  * Streams the unified ndjson file into memory at server startup.
@@ -81,6 +85,16 @@ async function loadDataFromNDJSON() {
       }
     }
     logger.info(`[DataStore] Loaded ${global.truthRows.length} truth rows from ${truthFiles.length} file(s).`);
+
+    global.truthByName.clear();
+    for (const tr of global.truthRows) {
+      if (tr.name) {
+        const key = tr.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (!global.truthByName.has(key)) global.truthByName.set(key, []);
+        global.truthByName.get(key).push(tr);
+      }
+    }
+    logger.info(`[DataStore] Indexed ${global.truthByName.size} truth institutions by name.`);
   }
 
   // --- Build Coverage Lookup Maps (one pass each, before college ingestion) ---
@@ -106,6 +120,30 @@ async function loadDataFromNDJSON() {
     else if (tr.sourceFamily) entry.sourceFamilies.add(tr.sourceFamily);
   }
 
+  // Map: stateName -> benchmarkData
+  global.stateBenchmarks.clear();
+  for (const tr of global.truthRows) {
+    if (tr.entityType === 'state_benchmark' && tr.state) {
+      global.stateBenchmarks.set(tr.state.toLowerCase(), tr);
+    }
+  }
+  logger.info(`[DataStore] Cached ${global.stateBenchmarks.size} state-level benchmarks.`);
+
+  // Map: id/stableKey -> website
+  global.websites.clear();
+  global.websiteByName.clear();
+  for (const tr of global.truthRows) {
+    if (tr.website) {
+      const targetId = tr.stableKey || tr.id;
+      if (targetId) global.websites.set(targetId, tr.website);
+      if (tr.name) {
+          const key = tr.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+          global.websiteByName.set(key, tr.website);
+      }
+    }
+  }
+  logger.info(`[DataStore] Cached ${global.websites.size} websites by ID/Key, ${global.websiteByName.size} by name.`);
+
   // Load Colleges (main ingestion loop)
   const matchedCoreKeys = new Set();
   if (fs.existsSync(dataPath)) {
@@ -127,6 +165,20 @@ async function loadDataFromNDJSON() {
                 obj.isCore = true;
                 obj.coreMetadata = global.coreInstitutes.get(key);
                 matchedCoreKeys.add(key);
+            }
+        }
+
+        // --- Verified Website Linkage ---
+        const cid = obj.id || obj._id;
+        const skey = obj.stableKey;
+        if (skey && global.websites.has(skey)) {
+            obj.website = global.websites.get(skey);
+        } else if (cid && global.websites.has(cid)) {
+            obj.website = global.websites.get(cid);
+        } else if (obj.name) {
+            const key = obj.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            if (global.websiteByName.has(key)) {
+                obj.website = global.websiteByName.get(key);
             }
         }
 

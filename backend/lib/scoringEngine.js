@@ -45,6 +45,14 @@ function computeInstitutionalCeiScore(college, coverage = {}) {
     const courseCount = Array.isArray(college.courses) ? college.courses.length : 0;
     strength += Math.min(5, (courseCount / 30) * 5);
 
+    // Regional Trust Bonus (Compliance)
+    if (college.state && global.stateBenchmarks) {
+        const benchmark = global.stateBenchmarks.get(college.state.toLowerCase());
+        if (benchmark && benchmark.ptr < 25) {
+            strength += 3; // Boost for operating in a state with healthy faculty ratios
+        }
+    }
+
     const institutionStrengthScore = parseFloat(Math.min(99.99, strength + fuzz).toFixed(2));
 
     // 2. Admission Reality Score (0-100) - STATE/TRUTH SCOPED
@@ -61,6 +69,7 @@ function computeInstitutionalCeiScore(college, coverage = {}) {
     confidence += (coverage.sourceFamilies?.length || 0) * 10; // +10 per source family (max 30)
     if (college.verificationStatus === 'VERIFIED') confidence += 20;
     if (coverage.coverageBucket === 'Rich') confidence += 10;
+    if (coverage.hasPlacements) confidence += 15; // Major trust signal
     if (college.isCore) confidence += 40; // Manual curation from official sources
 
     const dataConfidenceScore = parseFloat(Math.min(99.99, confidence + (fuzz * 2)).toFixed(2));

@@ -52,6 +52,16 @@ const metrics = { hits: 0, misses: 0, last_build_ms: 0, last_built_count: 0 };
  */
 async function assemblePagePayload(college) {
     const id = college.id || college._id?.toString();
+    const skey = college.stableKey;
+    
+    // Phase 22: Merge verified website link
+    if (global.websites) {
+        if (skey && global.websites.has(skey)) {
+            college.website = global.websites.get(skey);
+        } else if (id && global.websites.has(id)) {
+            college.website = global.websites.get(id);
+        }
+    }
 
     const [anomalies, integrity, verifications, trustReports] = await Promise.all([
         AnomalyLog

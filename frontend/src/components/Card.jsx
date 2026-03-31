@@ -177,6 +177,18 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
           <div className="card-footer-left">
             <FavoriteButton type="colleges" id={collegeData.id} item={collegeData} size="sm" />
             <AddToCompareButton college={collegeData} />
+            {data?.website && (
+              <a 
+                href={data.website} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="icon-action-btn" 
+                title="Official Website"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Globe size={16} />
+              </a>
+            )}
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
             {data?.coverage?.coverageBucket && (

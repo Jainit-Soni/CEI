@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { fetchCollege, fetchReviews, fetchBenchmarks } from "@/lib/api";
+import { fetchCollege, fetchReviews, fetchBenchmarks, fetchCompliance } from "@/lib/api";
 import Link from "next/link";
-import { ArrowLeft, MapPin, ExternalLink, ShieldCheck, Award, MessageSquare, AlertTriangle, ArrowRightLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, MapPin, ExternalLink, ShieldCheck, Award, MessageSquare, AlertTriangle, ArrowRightLeft, CheckCircle2, Globe } from "lucide-react";
 import { useComparator } from "@/hooks/useComparator";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
@@ -46,6 +46,7 @@ export default function CollegeDashboardClient({ id, initialData }) {
     const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
     const [isReportModalOpen, setIsReportModalOpen] = useState(false);
     const [benchmarks, setBenchmarks] = useState(null);
+    const [compliance, setCompliance] = useState(null);
 
     const tabs = [
         { id: "overview", label: "Overview" },
@@ -74,6 +75,7 @@ export default function CollegeDashboardClient({ id, initialData }) {
                 else {
                     setCollege(data);
                     loadBenchmarks(id);
+                    loadCompliance(id);
                 }
             } catch (err) {
                 setError("Connection to engine failed.");
@@ -90,6 +92,15 @@ export default function CollegeDashboardClient({ id, initialData }) {
             setBenchmarks(data);
         } catch (err) {
             console.error("Failed to load benchmarks:", err);
+        }
+    };
+
+    const loadCompliance = async (collegeId) => {
+        try {
+            const data = await fetchCompliance(collegeId);
+            setCompliance(data);
+        } catch (err) {
+            console.error("Failed to load compliance:", err);
         }
     };
 
@@ -130,7 +141,7 @@ export default function CollegeDashboardClient({ id, initialData }) {
     }
 
     // Derive best location string
-    const locationString = college.location || [college.address?.city || college.city || college.district, college.state].filter(Boolean).join(", ") || 'Details Unavailable';
+    const locationString = college.location || [college.address?.city || college.city || college.district, college.state].filter(Boolean).join(", ") || null;
 
     return (
         <div className="dashboard-root" style={{ paddingTop: '120px' }}>
@@ -175,8 +186,11 @@ export default function CollegeDashboardClient({ id, initialData }) {
                                             <MapPin size={14} /> {locationString} <ExternalLink size={12} />
                                         </a>
                                     )}
-                                    {college.university && college.university !== 'NOT APPLICABLE' && (
-                                        <span className="text-sm font-bold opacity-60 uppercase tracking-wider">{college.university}</span>
+                                    {college.website && (
+                                        <a href={college.website} target="_blank" rel="noopener noreferrer" 
+                                           className="bento-maps-btn bento-website-btn-tint">
+                                            <Globe size={14} /> Official Website <ExternalLink size={12} />
+                                        </a>
                                     )}
                                 </div>
                             </div>
@@ -186,7 +200,6 @@ export default function CollegeDashboardClient({ id, initialData }) {
                             {college.competitivenessBand && (
                                 <span className="b-sig band"><Award size={14} /> {college.competitivenessBand} Tier</span>
                             )}
-                            {college.type && <span className="b-sig">{college.type}</span>}
                         </div>
                     </div>
 
@@ -267,6 +280,26 @@ export default function CollegeDashboardClient({ id, initialData }) {
                             </div>
                             
                             <NarrativeSentiment college={college} benchmarks={benchmarks} />
+                            
+                            {compliance && compliance.sectionStatus === 'available' && (
+                                <div className="mt-12 p-8 bg-blue-50/50 rounded-3xl border border-blue-100/50 flex flex-col gap-6">
+                                    <div className="flex items-center gap-3">
+                                        <ShieldCheck className="text-blue-500" size={24} />
+                                        <h4 className="text-xl font-bold text-slate-800">Regional Compliance & Infrastructure</h4>
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {compliance.items.map((item, i) => (
+                                            <div key={i} className="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                                                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">{item.displayLabel}</div>
+                                                <div className="text-2xl font-black text-slate-900">{item.value}</div>
+                                                <div className="text-[10px] font-bold text-blue-500 mt-2 flex items-center gap-1">
+                                                    <CheckCircle2 size={10} /> Verified: {item.source.title}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     )}
                     {activeTab === "report" && (

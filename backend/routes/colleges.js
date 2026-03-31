@@ -337,7 +337,7 @@ router.get("/colleges", async (req, res) => {
 
     // Phase 2: Fetch the full documents ONLY for the IDs on the current page
     const fetchedColleges = await College.find({ _id: { $in: ids } })
-      .select("shortName name location rankingTier popularity ranking meta.ownership meta.district acceptedExams source lastUpdated pastCutoffs isPremium isCore coreMetadata ceiScore institutionStrengthScore admissionRealityScore dataConfidenceScore coverage courses placements.highestPackageNumeric placements.averagePackage placements.averagePackageNumeric placements.highestPackage placements.placementRate")
+      .select("shortName name location rankingTier popularity ranking meta.ownership meta.district acceptedExams source lastUpdated pastCutoffs isPremium isCore coreMetadata ceiScore institutionStrengthScore admissionRealityScore dataConfidenceScore coverage courses placements.highestPackageNumeric placements.averagePackage placements.averagePackageNumeric placements.highestPackage placements.placementRate website")
       .lean();
 
     const collegeMap = new Map(fetchedColleges.map(c => [c._id.toString(), c]));
@@ -366,10 +366,31 @@ router.get("/colleges", async (req, res) => {
 
 
     const result = {
-      data: colleges.map(c => ({
-        ...c,
-        id: c._id ? c._id.toString() : c.id
-      })),
+      data: colleges.map(c => {
+        const cid = c.id || (c._id ? c._id.toString() : null);
+        const skey = c.stableKey;
+        let website = c.website;
+
+        // Phase 22: Merge verified website link
+        if (global.websites) {
+          if (skey && global.websites.has(skey)) {
+            website = global.websites.get(skey);
+          } else if (cid && global.websites.has(cid)) {
+            website = global.websites.get(cid);
+          } else if (c.name) {
+            const key = c.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            if (global.websiteByName.has(key)) {
+                website = global.websiteByName.get(key);
+            }
+          }
+        }
+
+        return {
+          ...c,
+          id: cid,
+          website: website
+        };
+      }),
       pagination: {
         page: pageNum,
         limit: limitNum,
@@ -727,7 +748,22 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
     const pkgField = await VerifiedField.findOne({ collegeId: id, fieldName: 'avg_package' }).lean();
     const rateField = await VerifiedField.findOne({ collegeId: id, fieldName: 'placement_rate' }).lean();
 
-    if (!pkgField && !rateField) {
+    // --- NDJSON Truth Data Integration (Phase 21) ---
+    const college = (global.colleges || []).find(c => c.id === id || c._id === id || c.stableKey === id);
+    
+    let truthEntries = (global.truthRows || []).filter(tr => 
+      (tr.id === id || tr.stableKey === id || (college && tr.stableKey === college.stableKey)) && 
+      tr.entityType === 'placement'
+    );
+
+    // Name-based fallback (Phase 21.1)
+    if (truthEntries.length === 0 && college && college.name) {
+      const normName = college.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const byName = (global.truthByName || new Map()).get(normName) || [];
+      truthEntries = byName.filter(tr => tr.entityType === 'placement');
+    }
+
+    if (!pkgField && !rateField && truthEntries.length === 0) {
       return res.json({ 
         sectionStatus: 'official_data_unavailable', 
         items: [],
@@ -736,7 +772,27 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
     }
 
     const items = [];
-    let lastVerifiedAt = null;
+    let lastEvaluatedAt = null;
+
+    // Add NDJSON Truth items first (Higher Priority)
+    truthEntries.forEach(tr => {
+      if (tr.medianSalary) {
+        items.push({
+          displayLabel: 'Median Salary (Truth)',
+          value: `₹${(tr.medianSalary/100000).toFixed(2)} LPA`,
+          confidence: 0.98,
+          source: { title: tr.source || 'Official Report', type: 'official_source', url: tr.evidenceUrl }
+        });
+      }
+      if (tr.placedPercentage) {
+        items.push({
+          displayLabel: 'Placement rate (Truth)',
+          value: `${tr.placedPercentage}%`,
+          confidence: 0.95,
+          source: { title: tr.source || 'Official Report', type: 'official_source' }
+        });
+      }
+    });
 
     if (pkgField) {
       items.push({
@@ -745,7 +801,7 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
         confidence: pkgField.confidenceScore,
         source: { title: 'Placement Report 2024', type: 'official_institute' }
       });
-      lastVerifiedAt = pkgField.lastVerifiedAt;
+      lastEvaluatedAt = pkgField.lastVerifiedAt;
     }
 
     if (rateField) {
@@ -764,6 +820,47 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
       sectionStatus: 'available',
       freshnessStatus: 'verified_audit',
       lastEvaluatedAt,
+      items
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.get("/colleges/:id/truth/compliance", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const college = (global.colleges || []).find(c => c.id === id || c._id === id || c.stableKey === id);
+    
+    if (!college) return res.status(404).json({ error: "Institution not found" });
+
+    // Name-based Truth check for compliance-related data (if any)
+    const normName = college.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const truthEntries = (global.truthByName || new Map()).get(normName) || [];
+    const extraCompliance = truthEntries.filter(tr => tr.entityType === 'compliance');
+
+    const stateKey = college.state ? college.state.toLowerCase() : null;
+    const benchmark = stateKey ? (global.stateBenchmarks || new Map()).get(stateKey) : null;
+
+    const items = [];
+    if (benchmark) {
+      items.push({
+        displayLabel: 'Regional Pupil-Teacher Ratio (Benchmark)',
+        value: `1:${Math.round(benchmark.ptr)}`,
+        confidence: 0.85,
+        source: { title: benchmark.source, type: 'government_aggregate' }
+      });
+      items.push({
+        displayLabel: 'Regional Enrollment Density',
+        value: benchmark.enrollment.toLocaleString(),
+        confidence: 0.85,
+        source: { title: benchmark.source, type: 'government_aggregate' }
+      });
+    }
+
+    res.json({
+      sectionStatus: items.length > 0 ? 'available' : 'official_data_unavailable',
+      freshnessStatus: 'official_report',
       items
     });
   } catch (error) {

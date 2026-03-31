@@ -364,3 +364,8 @@ export async function fetchBenchmarks(collegeId) {
   const { data } = await api.get(`/api/college/${collegeId}/benchmarks`);
   return data;
 }
+
+export async function fetchCompliance(collegeId) {
+  const { data } = await api.get(`/api/colleges/${collegeId}/truth/compliance`);
+  return data;
+}
