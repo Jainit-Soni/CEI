@@ -1,7 +1,0 @@
-{
-  "source_id": "nta_noticeboard",
-  "authority": "NTA",
-  "type": "notice_archive",
-  "source_page": "https://www.nta.ac.in/NoticeBoardArchive",
-  "local_pdf_dir": "cei_raw/nta_noticeboard/pdfs"
-}

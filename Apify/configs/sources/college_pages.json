@@ -1,7 +1,0 @@
-{
-  "source_id": "college_pages",
-  "source_type": "official_college_pages",
-  "source_url": "https://example.edu/",
-  "collector": "collect_college_pages.py",
-  "raw_output_dir": "cei_raw/college_pages"
-}

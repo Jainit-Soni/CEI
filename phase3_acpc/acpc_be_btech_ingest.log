@@ -1,2 +1,0 @@
-2026-03-26 15:18:50,700 INFO ACPC ingest summary: seat_raw_rows=1339 seat_rows=1339 cutoff_raw_rows=4869 cutoff_rows=1623 cutoff_duplicates=3246 provenance_rows=6208
-2026-03-26 15:21:00,062 INFO ACPC ingest summary: seat_raw_rows=1339 seat_rows=1339 cutoff_raw_rows=4869 cutoff_rows=1623 cutoff_duplicates=3246 provenance_rows=6208
