@@ -180,12 +180,10 @@ export default function CollegeDashboardClient({ id, initialData }) {
                             <div className="brand-text">
                                 <h1>{college.name}</h1>
                                 <div className="brand-meta">
-                                    {locationString && (
-                                        <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${college.name} ${locationString}`)}`}
-                                           target="_blank" rel="noopener noreferrer" className="bento-maps-btn">
-                                            <MapPin size={14} /> {locationString} <ExternalLink size={12} />
-                                        </a>
-                                    )}
+                                    <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${college.name} ${locationString || ''}`.trim())}`}
+                                       target="_blank" rel="noopener noreferrer" className="bento-maps-btn">
+                                        <MapPin size={14} /> {locationString || "Campus Map"} <ExternalLink size={12} />
+                                    </a>
                                     {college.website && (
                                         <a href={college.website} target="_blank" rel="noopener noreferrer" 
                                            className="bento-maps-btn bento-website-btn-tint">
