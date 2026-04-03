@@ -56,3 +56,4 @@ frontend/.env.local
 backend/data/*.ndjson
 backend/data/truth/*.ndjson
 backend/data/core/*.ndjson
+backend/data/cutoffs_index.ndjson

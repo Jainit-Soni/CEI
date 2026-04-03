@@ -187,11 +187,20 @@ export default function CollegeTabs({ college }) {
                                             <div className="program-grid">
                                                 {(college.courses || []).slice(0, showAllPrograms ? undefined : 8).map((course, idx) => (
                                                     <div key={idx} className="program-mini-card">
-                                                        <div className="pmc-name">{course.courseName || course.name}</div>
-                                                        <div className="pmc-footer">
+                                                        <div className="pmc-name">{course.courseName || course.name || course.programName}</div>
+                                                        <div className="pmc-footer mb-2">
                                                             {course.degree && <span className="pmc-tag">{course.degree}</span>}
-                                                            {course.durationYears && <span className="pmc-tag">{course.durationYears} Years</span>}
+                                                            {(course.durationYears || course.duration) && <span className="pmc-tag">{course.durationYears || course.duration}</span>}
                                                         </div>
+                                                        {course.seatMatrix && (
+                                                            <div className="mt-2 text-xs border-t border-slate-700/50 pt-2 flex flex-wrap gap-2 font-medium">
+                                                                {course.seatMatrix.open > 0 && <span className="text-emerald-400">GEN: {course.seatMatrix.open}</span>}
+                                                                {course.seatMatrix.sc > 0 && <span className="text-blue-400">SC: {course.seatMatrix.sc}</span>}
+                                                                {course.seatMatrix.st > 0 && <span className="text-violet-400">ST: {course.seatMatrix.st}</span>}
+                                                                {course.seatMatrix.obc > 0 && <span className="text-orange-400">OBC: {course.seatMatrix.obc}</span>}
+                                                                {course.seatMatrix.ews > 0 && <span className="text-rose-400">EWS: {course.seatMatrix.ews}</span>}
+                                                            </div>
+                                                        )}
                                                     </div>
                                                 ))}
                                             </div>

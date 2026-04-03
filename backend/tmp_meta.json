@@ -1,0 +1,266 @@
+{
+  "stableKey": "C-21825",
+  "entityType": "institution",
+  "name": "Durga Mahavidyalaya",
+  "sourceFamily": "AISHE",
+  "sourceUrl": "https://aishe.gov.in/documents/",
+  "sourceAuthority": "Department of Higher Education, Ministry of Education, Government of India (AISHE Survey)",
+  "sourceDocumentType": "AISHE master list - Colleges (CSV slice from official download)",
+  "documentDate": "2026-02-25",
+  "fetchedAt": "2026-03-24T12:54:41Z",
+  "extractedAt": "2026-03-24T12:54:41Z",
+  "academicYear": "2021-22",
+  "officialityLevel": "official",
+  "confidence": 0.95,
+  "evidencePointer": "field_provenance.ndjson#C-21825",
+  "aisheCode": "C-21825",
+  "state": "Chhattisgarh",
+  "district": "Raipur",
+  "location": "Urban",
+  "website": "https://www.durgacollege.in",
+  "yearOfEstablishment": "1951",
+  "institutionType": "Affiliated College",
+  "management": "State Government",
+  "universityName": "Pt. Ravishankar Shukla University, Raipur",
+  "universityType": "State Public University",
+  "ceiScore": 30.4,
+  "competitivenessBand": "Emerging",
+  "dataConfidenceScore": 85,
+  "courses": [
+    {
+      "entityType": "program",
+      "collegeId": "C-21825",
+      "programName": "CIVIL ENGINEERING",
+      "degree": "DIPLOMA",
+      "specialization": "CIVIL ENGINEERING",
+      "intake": "60",
+      "duration": "4 Years",
+      "shift": "1st Shift",
+      "programType": "FULL TIME",
+      "sourceFamily": "AICTE-ICEBERG",
+      "session": "2025-26",
+      "state": "Uttar Pradesh",
+      "seatMatrix": {
+        "open": 29,
+        "sc": 9,
+        "st": 5,
+        "obc": 17,
+        "ews": 0,
+        "source": "Official Chhattisgarh Govt Reservation Mandate"
+      }
+    },
+    {
+      "entityType": "program",
+      "collegeId": "C-21825",
+      "programName": "ELECTRICAL ENGINEERING",
+      "degree": "DIPLOMA",
+      "specialization": "ELECTRICAL ENGINEERING",
+      "intake": "60",
+      "duration": "4 Years",
+      "shift": "1st Shift",
+      "programType": "FULL TIME",
+      "sourceFamily": "AICTE-ICEBERG",
+      "session": "2025-26",
+      "state": "Uttar Pradesh",
+      "seatMatrix": {
+        "open": 29,
+        "sc": 9,
+        "st": 5,
+        "obc": 17,
+        "ews": 0,
+        "source": "Official Chhattisgarh Govt Reservation Mandate"
+      }
+    },
+    {
+      "entityType": "program",
+      "collegeId": "C-21825",
+      "programName": "MECHANICAL ENGINEERING PRODUCTION",
+      "degree": "DIPLOMA",
+      "specialization": "MECHANICAL ENGINEERING PRODUCTION",
+      "intake": "60",
+      "duration": "4 Years",
+      "shift": "1st Shift",
+      "programType": "FULL TIME",
+      "sourceFamily": "AICTE-ICEBERG",
+      "session": "2025-26",
+      "state": "Uttar Pradesh",
+      "seatMatrix": {
+        "open": 29,
+        "sc": 9,
+        "st": 5,
+        "obc": 17,
+        "ews": 0,
+        "source": "Official Chhattisgarh Govt Reservation Mandate"
+      }
+    },
+    {
+      "entityType": "program",
+      "collegeId": "C-21825",
+      "programName": "COMPUTER SCIENCE AND ENGINEERING",
+      "degree": "DIPLOMA",
+      "specialization": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "60",
+      "duration": "4 Years",
+      "shift": "1st Shift",
+      "programType": "FULL TIME",
+      "sourceFamily": "AICTE-ICEBERG",
+      "session": "2025-26",
+      "state": "Uttar Pradesh",
+      "seatMatrix": {
+        "open": 29,
+        "sc": 9,
+        "st": 5,
+        "obc": 17,
+        "ews": 0,
+        "source": "Official Chhattisgarh Govt Reservation Mandate"
+      }
+    },
+    {
+      "entityType": "program",
+      "collegeId": "C-21825",
+      "programName": "ENGINEERING AND TECHNOLOGY",
+      "degree": "CIVIL ENGINEERING",
+      "specialization": "Course Institute-1",
+      "shift": "1st Shift",
+      "sourceFamily": "AICTE",
+      "session": "2024-25",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "entityType": "program",
+      "collegeId": "C-21825",
+      "programName": "ENGINEERING AND TECHNOLOGY",
+      "degree": "COMPUTER SCIENCE AND ENGINEERING",
+      "specialization": "Course Institute-1",
+      "shift": "1st Shift",
+      "sourceFamily": "AICTE",
+      "session": "2024-25",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "entityType": "program",
+      "collegeId": "C-21825",
+      "programName": "ENGINEERING AND TECHNOLOGY",
+      "degree": "ELECTRICAL ENGINEERING",
+      "specialization": "Course Institute-1",
+      "shift": "1st Shift",
+      "sourceFamily": "AICTE",
+      "session": "2024-25",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "entityType": "program",
+      "collegeId": "C-21825",
+      "programName": "ENGINEERING AND TECHNOLOGY",
+      "degree": "MECHANICAL ENGINEERING PRODUCTION",
+      "specialization": "Course Institute-1",
+      "shift": "1st Shift",
+      "sourceFamily": "AICTE",
+      "session": "2024-25",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "name": "CIVIL ENGINEERING",
+      "degree": "DIPLOMA",
+      "intake": 60,
+      "duration": "4 Years",
+      "seatMatrix": {
+        "open": 29,
+        "sc": 9,
+        "st": 5,
+        "obc": 17,
+        "ews": 0,
+        "source": "Official Chhattisgarh Govt Reservation Mandate"
+      }
+    },
+    {
+      "name": "ELECTRICAL ENGINEERING",
+      "degree": "DIPLOMA",
+      "intake": 60,
+      "duration": "4 Years",
+      "seatMatrix": {
+        "open": 29,
+        "sc": 9,
+        "st": 5,
+        "obc": 17,
+        "ews": 0,
+        "source": "Official Chhattisgarh Govt Reservation Mandate"
+      }
+    },
+    {
+      "name": "MECHANICAL ENGINEERING PRODUCTION",
+      "degree": "DIPLOMA",
+      "intake": 60,
+      "duration": "4 Years",
+      "seatMatrix": {
+        "open": 29,
+        "sc": 9,
+        "st": 5,
+        "obc": 17,
+        "ews": 0,
+        "source": "Official Chhattisgarh Govt Reservation Mandate"
+      }
+    },
+    {
+      "name": "COMPUTER SCIENCE AND ENGINEERING",
+      "degree": "DIPLOMA",
+      "intake": 60,
+      "duration": "4 Years",
+      "seatMatrix": {
+        "open": 29,
+        "sc": 9,
+        "st": 5,
+        "obc": 17,
+        "ews": 0,
+        "source": "Official Chhattisgarh Govt Reservation Mandate"
+      }
+    },
+    {
+      "name": "ENGINEERING AND TECHNOLOGY",
+      "degree": "CIVIL ENGINEERING",
+      "intake": 0,
+      "shift": "1st Shift",
+      "source": "Official Truth Database"
+    },
+    {
+      "name": "ENGINEERING AND TECHNOLOGY",
+      "degree": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": 0,
+      "shift": "1st Shift",
+      "source": "Official Truth Database"
+    },
+    {
+      "name": "ENGINEERING AND TECHNOLOGY",
+      "degree": "ELECTRICAL ENGINEERING",
+      "intake": 0,
+      "shift": "1st Shift",
+      "source": "Official Truth Database"
+    },
+    {
+      "name": "ENGINEERING AND TECHNOLOGY",
+      "degree": "MECHANICAL ENGINEERING PRODUCTION",
+      "intake": 0,
+      "shift": "1st Shift",
+      "source": "Official Truth Database"
+    }
+  ],
+  "fees": {
+    "total": "₹22,000 INR",
+    "totalNumeric": 22000,
+    "source": "Fee Regulation Slab — Chhattisgarh (2024-25)",
+    "session": "2024-25",
+    "isSlabEstimate": true
+  },
+  "established": 1951,
+  "isTechnical": true,
+  "meta": {
+    "totalIntake": 240,
+    "aicteVerified": true,
+    "locationPrecision": "state-anchor"
+  },
+  "coordinates": {
+    "lat": 21.2787,
+    "lng": 81.8661
+  },
+  "searchBoost": 1
+}
