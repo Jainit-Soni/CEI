@@ -53,3 +53,6 @@ frontend/node_modules/
 frontend/.next/
 frontend/out/
 frontend/.env.local
+backend/data/*.ndjson
+backend/data/truth/*.ndjson
+backend/data/core/*.ndjson
