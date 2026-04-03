@@ -1,23 +1,19 @@
-/**
- * routes/explain.js — CEI Score Explainability API
- * ==================================================
- * Assembles the full explanation payload for one or more institutions.
- * All outputs are anchored to the active ScoringVersion so every
- * explanation is version-referenced and reproducible.
- *
- * Option 1 (current): Vector contributions re-derived from stored MongoDB
- * fields using the same weight vector as the active ScoringVersion.
- * This is deterministically consistent with the scoring engine output.
- *
- * Endpoints:
- *   GET  /api/explain/:id       — Single institution explanation
- *   POST /api/explain/batch     — Multi-institution comparison payload
- */
-
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const ScoringVersion = require('../models/ScoringVersion');
+
+// ── Default Scoring Constitution Fallback ────────────────────────────────────
+// Used when MongoDB is disconnected or ScoringVersion is uninitialized.
+const DEFAULT_CONSTITUTION = {
+    versionId: '2026.04.01-v1',
+    activatedAt: new Date(),
+    datasetHash: 'ndjson-internal-manifest',
+    engineVersion: '3.1.0',
+    freezeUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+    weights: { A: 0.25, F: 0.15, I: 0.15, S: 0.10, D: 0.15, P: 0.35 },
+    monteCarloConfig: { runs: 500 }
+};
 
 // ── Vector derivation logic (mirrors phase3_score.py feature engineering) ─────
 // All values are normalized to [0, 1] range before applying weights.
@@ -59,7 +55,7 @@ function deriveVectors(college) {
     if (college.isPremium) rawI = Math.min(1.0, rawI + 0.2);
 
     // S — Scale & Programs (10%)
-    const coursesCount = college.courses?.length || 0;
+    const coursesCount = (college.courses?.length || 0) + (college.courseOfferings?.length || 0);
     const rawS = clamp01(coursesCount / 10);
 
     // D — Demand & Exam Tier (15%)
@@ -69,8 +65,14 @@ function deriveVectors(college) {
     else if (exams.includes('cmat') || exams.includes('snap') || exams.includes('nmat')) rawD = 0.7;
 
     // P — Placement Outcomes (35%)
-    const avgLpa = college.placements?.averagePackageNumeric || (college.placements?.highestPackageNumeric ? college.placements.highestPackageNumeric / 3 : 0);
-    const rawP = clamp01(avgLpa / 20);
+    // Support both old and new placement data structures
+    const avgLpaVal = college.placements?.averagePackageNumeric || (college.placements?.highestPackageNumeric ? college.placements.highestPackageNumeric / 3 : 0);
+    // Support string packages like "25.0 LPA"
+    let parsedLpa = avgLpaVal;
+    if (typeof avgLpaVal === 'string') {
+        parsedLpa = parseFloat(avgLpaVal.replace(/[^0-9.]/g, '')) || 0;
+    }
+    const rawP = clamp01(parsedLpa / 20);
 
     return { A: rawA, F: rawF, I: rawI, S: rawS, D: rawD, P: rawP };
 }
@@ -89,9 +91,8 @@ const VECTOR_DESCRIPTIONS = {
  */
 async function buildExplanation(college, activeVersion) {
     const vectors = deriveVectors(college);
-    // Weights: A:25%, F:15%, I:15%, S:10%, D:15%, P:35% (Max 90 pts raw scaled to 100)
-    // Matches recomputeCeiScores.js: Placement 35, Ranking 25, Exam 15, Breadth 10, Reliability 15
-    const weights = { A: 0.25, F: 0.15, I: 0.15, S: 0.10, D: 0.15, P: 0.35 };
+    // Weights from the constitution or default
+    const weights = activeVersion?.weights || { A: 0.25, F: 0.15, I: 0.15, S: 0.10, D: 0.15, P: 0.35 };
     const wSum = Object.values(weights).reduce((s, v) => s + v, 0);
 
     const breakdown = Object.keys(weights).map(code => {
@@ -137,9 +138,11 @@ async function buildExplanation(college, activeVersion) {
         stabilityColor = 'volatile';
     }
 
+    const cid = String(college.id || college._id);
+
     return {
         college: {
-            id: college.id,
+            id: cid,
             name: college.name,
             shortName: college.shortName,
             ceiScore: college.ceiScore,
@@ -178,24 +181,18 @@ async function buildExplanation(college, activeVersion) {
 router.get('/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const isObjectId = mongoose.Types.ObjectId.isValid(id);
-
-        const [college, activeVersion] = await Promise.all([
-            mongoose.connection.db.collection('colleges').findOne(
-                isObjectId ? { _id: new mongoose.Types.ObjectId(id) } : { id: id },
-                {
-                    projection: {
-                        id: 1, name: 1, shortName: 1, ceiScore: 1, competitivenessBand: 1,
-                        ceiScoredAt: 1, ceiEngineVersion: 1, stabilityIndex: 1,
-                        confidenceBadge: 1, isScoreVolatile: 1, _recordHash: 1,
-                        meta: 1, location: 1, state: 1, category: 1, type: 1,
-                        accreditation: 1, establishedYear: 1, ranking: 1, rankingTier: 1,
-                        courses: 1, acceptedExams: 1, placements: 1, isPremium: 1
-                    }
-                }
-            ),
-            ScoringVersion.findOne({ status: 'active' }).lean(),
-        ]);
+        
+        // --- Memory-First In-Memory Path (Phase 24) ---
+        let college = (global.colleges || []).find(c => String(c.id || c._id) === String(id));
+        
+        let activeVersion = null;
+        try {
+            activeVersion = await ScoringVersion.findOne({ status: 'active' }).lean();
+        } catch (e) {
+            console.warn('[explain] MongoDB/Mongoose version lookup failed, using fallback.');
+        }
+        
+        if (!activeVersion) activeVersion = DEFAULT_CONSTITUTION;
 
         if (!college) return res.status(404).json({ error: 'Institution not found' });
 
@@ -223,25 +220,20 @@ router.post('/batch', async (req, res) => {
         }
         ids = ids.map(id => String(id).slice(0, 100));
 
-        const [colleges, activeVersion] = await Promise.all([
-            mongoose.connection.db.collection('colleges').find(
-                { id: { $in: ids } },
-                {
-                    projection: {
-                        id: 1, name: 1, shortName: 1, ceiScore: 1, competitivenessBand: 1,
-                        ceiScoredAt: 1, ceiEngineVersion: 1, stabilityIndex: 1,
-                        confidenceBadge: 1, isScoreVolatile: 1, _recordHash: 1,
-                        meta: 1, location: 1, state: 1, category: 1, type: 1,
-                        accreditation: 1, establishedYear: 1, ranking: 1, rankingTier: 1,
-                        courses: 1, acceptedExams: 1, placements: 1, isPremium: 1
-                    }
-                }
-            ).toArray(),
-            ScoringVersion.findOne({ status: 'active' }).lean(),
-        ]);
+        // --- Memory-First In-Memory Path ---
+        const matchedColleges = (global.colleges || []).filter(c => ids.includes(String(c.id || c._id)));
+        
+        let activeVersion = null;
+        try {
+            activeVersion = await ScoringVersion.findOne({ status: 'active' }).lean();
+        } catch (e) {
+            // Silently fallback to default in file-based mode
+        }
+        
+        if (!activeVersion) activeVersion = DEFAULT_CONSTITUTION;
 
         // Preserve order
-        const orderedColleges = ids.map(id => colleges.find(c => c.id === id)).filter(Boolean);
+        const orderedColleges = ids.map(id => matchedColleges.find(c => String(c.id || c._id) === id)).filter(Boolean);
 
         // Version mismatch check
         const versions = [...new Set(orderedColleges.map(c => c.ceiEngineVersion).filter(Boolean))];
@@ -263,7 +255,7 @@ router.post('/batch', async (req, res) => {
             explanations,
         });
     } catch (err) {
-        console.error('[explain/batch] Error:', err.message);
+        console.error('[explain/batch] Error:', err.message, err.stack);
         res.status(500).json({ error: 'Failed to generate batch explanation' });
     }
 });

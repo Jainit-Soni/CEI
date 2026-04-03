@@ -6,8 +6,31 @@ const rankingCache = require("../services/rankingCacheBuilder");
 const pageCache = require("../services/collegePageCache");
 const VerifiedField = require("../models/VerifiedField");
 const SourceEvidence = require("../models/SourceEvidence");
+const dataStore = require("../services/dataStore");
+const { getRedisClient } = require("../config/redis");
 
 const router = express.Router();
+
+router.get('/flush-cache', async (req, res) => {
+    try {
+        await dataStore.invalidateCache();
+        res.json({ success: true, message: 'Global Cache Flushed.' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+router.get('/flush-pages', async (req, res) => {
+    try {
+        const redis = await getRedisClient();
+        if (!redis) return res.status(500).json({ error: 'Redis unvailable' });
+        const keys = await redis.keys('college:page:*');
+        if (keys.length > 0) await redis.del(...keys);
+        res.json({ success: true, message: `Flushed ${keys.length} page caches.` });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
 
 // Canonicalize location names to handle variations (e.g., Bengaluru vs Bangalore)
 const normalizeLocation = (loc) => {
@@ -328,20 +351,88 @@ router.get("/colleges", async (req, res) => {
     if (skip > 0) pipeline.push({ $skip: skip });
     pipeline.push({ $limit: limitNum });
 
-    const [sortedIdsResult, totalCount] = await Promise.all([
-      College.aggregate(pipeline), // Atlas Free drops allowDiskUse anyway
-      College.countDocuments(query)
-    ]);
+    // --- Unified Truth Layer (Memory-First Path) ---
+    const allColleges = await dataStore.getColleges();
+    if (allColleges && allColleges.length > 0 && !req.query.forceMongo) {
+      const filtered = allColleges.filter(c => {
+        if (state && state !== 'All' && c.state !== state) return false;
+        if (tier && tier !== 'All' && c.rankingTier !== tier) return false;
+        if (band && band !== 'All' && c.competitivenessBand !== band) return false;
+        if (q) {
+          const qLower = q.toLowerCase();
+          return (c.name || "").toLowerCase().includes(qLower) || (c.shortName || "").toLowerCase().includes(qLower);
+        }
+        return true;
+      });
+
+      const totalCount = filtered.length;
+      const sorted = filtered.sort((a, b) => (b.ceiScore || 0) - (a.ceiScore || 0) || String(a.id).localeCompare(String(b.id)));
+      const colleges = sorted.slice(skip, skip + limitNum);
+
+      return res.json({
+        data: colleges.map(c => {
+          const cid = String(c.id || c._id || "");
+          const cleanName = c.shortName || c.name || "Unknown";
+          return {
+            id: cid,
+            _id: cid,
+            name: c.name,
+            shortName: c.shortName,
+            location: c.location,
+            rankingTier: c.rankingTier,
+            ceiScore: c.ceiScore,
+            institutionStrengthScore: c.institutionStrengthScore,
+            admissionRealityScore: c.admissionRealityScore,
+            dataConfidenceScore: c.dataConfidenceScore,
+            coverage: c.coverage,
+            isPremium: c.isPremium,
+            isCore: c.isCore,
+            coreMetadata: c.coreMetadata,
+            placements: c.placements,
+            fees: c.fees,
+            website: c.website,
+            slug: `/college/${cid}`
+          };
+        }),
+        pagination: {
+          page: pageNum,
+          limit: limitNum,
+          totalCount,
+          totalPages: Math.ceil(totalCount / limitNum),
+          nextCursor: null,
+          hasNext: skip + limitNum < totalCount,
+          hasPrev: pageNum > 1
+        }
+      });
+    }
+
+    // ── LEGACY MONGODB PATH (Only if memory-first is skipped) ────────────────
+    let sortedIdsResult, totalCount;
+    try {
+      [sortedIdsResult, totalCount] = await Promise.all([
+        College.aggregate(pipeline),
+        College.countDocuments(query)
+      ]);
+    } catch (mongoErr) {
+      return res.status(500).json({ error: "Database failure", message: mongoErr.message });
+    }
 
     const ids = sortedIdsResult.map(c => c._id);
-
-    // Phase 2: Fetch the full documents ONLY for the IDs on the current page
     const fetchedColleges = await College.find({ _id: { $in: ids } })
       .select("shortName name location rankingTier popularity ranking meta.ownership meta.district acceptedExams source lastUpdated pastCutoffs isPremium isCore coreMetadata ceiScore institutionStrengthScore admissionRealityScore dataConfidenceScore coverage courses placements.highestPackageNumeric placements.averagePackage placements.averagePackageNumeric placements.highestPackage placements.placementRate website")
       .lean();
 
-    const collegeMap = new Map(fetchedColleges.map(c => [c._id.toString(), c]));
-    const colleges = ids.map(id => collegeMap.get(id.toString())).filter(Boolean);
+    const collegeMap = new Map();
+    fetchedColleges.forEach(c => {
+      const cid = String(c._id || c.id || "");
+      if (cid) collegeMap.set(cid, c);
+    });
+
+    const colleges = ids.map(id => {
+      const sId = id ? String(id) : "";
+      return sId ? collegeMap.get(sId) : null;
+    }).filter(Boolean);
+
 
     let debugCursor = {};
     let nextCursor = null;
@@ -441,7 +532,14 @@ router.get("/college/:id", async (req, res) => {
 
 // Batch get colleges by IDs
 router.get("/colleges/batch", async (req, res) => {
-  const ids = req.query.ids ? req.query.ids.split(',') : [];
+  let ids = [];
+  if (req.query.ids) {
+    if (Array.isArray(req.query.ids)) {
+      ids = req.query.ids;
+    } else {
+      ids = req.query.ids.split(',');
+    }
+  }
 
   if (ids.length === 0) {
     return res.json([]);
@@ -452,29 +550,24 @@ router.get("/colleges/batch", async (req, res) => {
   }
 
   try {
-    const objectIds = ids.filter(id => /^[0-9a-fA-F]{24}$/.test(id));
+    console.log(`[Batch Fetch] Hydrating top-level metrics for IDs: ${ids.join(', ')}`);
 
-    // Support both string IDs (legacy) and ObjectIds
-    const colleges = await College.find({
-      $or: [
-        { id: { $in: ids } },
-        { _id: { $in: objectIds } }
-      ]
-    }).lean();
+    // Fetch deeply hydrated profiles for the Battle Arena using the exact same pipeline as the Dashboard
+    const fetchedColleges = await Promise.all(
+        ids.map(async (id) => {
+            try {
+                const college = await pageCache.getCollegePage(id);
+                // pageCache.getCollegePage returns null if not found
+                return college || null;
+            } catch (err) {
+                console.error(`Error hydrating ${id} for batch:`, err);
+                return null;
+            }
+        })
+    );
 
-    console.log(`[Batch Fetch] DB: ${mongoose.connection.name} | Collection: ${College.collection.name} | IDs: ${ids.join(', ')} | Found: ${colleges.length}`);
-
-    // Ensure id is present for the map. 
-    // If c.id exists (the AISHE code or slug), keep it. 
-    // Fallback to _id only if id is missing.
-    const mappedColleges = colleges.map(c => ({
-      ...c,
-      id: c.id || (c._id ? c._id.toString() : null)
-    }));
-
-    // Preserve order of incoming IDs
-    const collegeMap = new Map(mappedColleges.map(c => [c.id, c]));
-    const orderedColleges = ids.map(id => collegeMap.get(id)).filter(Boolean);
+    // Filter out nulls and preserve exact ordering
+    const orderedColleges = fetchedColleges.filter(Boolean);
 
     res.json(orderedColleges);
   } catch (error) {

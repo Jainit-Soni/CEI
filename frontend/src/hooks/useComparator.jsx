@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { fetchCollegesBatch } from "@/lib/api";
+import { useToast } from "@/components/Toast";
 
 const ComparatorContext = createContext();
 
@@ -11,6 +12,7 @@ export const ComparatorProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [ghostCollege, setGhostCollege] = useState(null);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const { addToast } = useToast();
 
     // Load from localStorage on mount
     useEffect(() => {
@@ -29,27 +31,36 @@ export const ComparatorProvider = ({ children }) => {
         }
     }, []);
 
-    // Fetch details when IDs change
+    // Persistence Effect
     useEffect(() => {
         if (pinnedIds.length > 0) {
             localStorage.setItem("cei_pinned_ids", JSON.stringify(pinnedIds));
         } else {
             localStorage.removeItem("cei_pinned_ids");
         }
-        
+    }, [pinnedIds]);
+
+    // Fetch details when IDs change
+    useEffect(() => {
         const updateDetails = async () => {
             if (pinnedIds.length === 0) {
                 setPinnedColleges([]);
                 return;
             }
+
+            // check if we already have these colleges to avoid redundant fetch
+            const currentIds = pinnedColleges.map(c => String(c.id || c._id));
+            const hasAll = pinnedIds.every(id => currentIds.includes(id));
+            if (hasAll && pinnedIds.length === currentIds.length) return;
+
             setIsLoading(true);
             try {
                 const data = await fetchCollegesBatch(pinnedIds);
-                // Ensure unique colleges by ID to avoid React key warnings
                 const uniqueData = Array.from(new Map(data.map(item => [item.id || item._id, item])).values());
                 setPinnedColleges(uniqueData);
             } catch (err) {
                 console.error("Comparison fetch failed", err);
+                addToast("Failed to sync arena data.", "error", "Sync Error");
             } finally {
                 setIsLoading(false);
             }
@@ -58,25 +69,30 @@ export const ComparatorProvider = ({ children }) => {
         updateDetails();
     }, [pinnedIds]);
 
-    const pinCollege = (id) => {
-        if (pinnedIds.includes(id)) return;
-        if (pinnedIds.length >= 4) {
-            // Logic for max pins (maybe show a toast?)
-            window.dispatchEvent(new CustomEvent('api-error', { 
-                detail: { title: "Comparison Limit", message: "You can compare up to 4 colleges at a time.", type: 'warning' } 
-            }));
+    const pinCollege = (rawId, name = "Institution") => {
+        const id = String(rawId);
+        if (pinnedIds.includes(id)) {
+            addToast("Already in the Battle Arena.", "info", "Comparison");
+            return;
+        }
+        if (pinnedIds.length >= 5) {
+            addToast("The Arena is full (max 5 combatants).", "warning", "Arena Capacity");
             return;
         }
         setPinnedIds([...pinnedIds, id]);
-        setIsDrawerOpen(true);
+        addToast(`${name} added to comparison.`, "success", "Battle Arena", { label: "Go to Arena ⚔️", href: "/compare" });
     };
 
-    const unpinCollege = (id) => {
-        setPinnedIds(pinnedIds.filter(i => i !== id));
+    const unpinCollege = (rawId) => {
+        const id = String(rawId);
+        // OPTIMISTIC UPDATE: Instant sync
+        setPinnedIds(prev => prev.filter(i => i !== id));
+        setPinnedColleges(prev => prev.filter(c => String(c.id || c._id) !== id));
     };
 
     const clearPins = () => {
         setPinnedIds([]);
+        setPinnedColleges([]);
     };
 
     return (
@@ -84,14 +100,14 @@ export const ComparatorProvider = ({ children }) => {
             pinnedIds,
             pinnedColleges,
             isLoading,
-            isDrawerOpen,
-            setIsDrawerOpen,
             pinCollege,
             unpinCollege,
             clearPins,
-            isPinned: (id) => pinnedIds.includes(id),
+            isPinned: (rawId) => pinnedIds.includes(String(rawId)),
             ghostCollege,
-            setGhostCollege
+            setGhostCollege,
+            isDrawerOpen,
+            setIsDrawerOpen
         }}>
             {children}
         </ComparatorContext.Provider>

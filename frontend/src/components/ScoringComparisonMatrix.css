@@ -1,200 +1,126 @@
-/* ScoringComparisonMatrix.css */
+/* ScoringComparisonMatrix.css — Mobile First Premium Glass */
 
+/* 1. ROOT & LOADING */
 .scm-root {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    font-family: 'Inter', 'IBM Plex Sans', system-ui, sans-serif;
-    font-size: 0.82rem;
-    color: #1a202c;
-    padding-top: 24px;
-    border-top: 2px solid #e2e8f0;
-    margin-top: 24px;
+    gap: 24px;
+    font-family: var(--font-body), system-ui, sans-serif;
+    color: #1e293b;
+    padding-top: 0;
+    border-top: none;
 }
 
 .scm-loading {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 20px 0;
+    padding: 40px 0;
     color: #64748b;
-    font-size: 0.84rem;
+    font-weight: 700;
+    font-size: 0.8rem;
 }
 
 .scm-spinner {
-    width: 15px;
-    height: 15px;
-    border: 2px solid #e2e8f0;
-    border-top-color: #334155;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(99, 102, 241, 0.1);
+    border-top-color: #6366f1;
     border-radius: 50%;
     animation: scm-spin 0.8s linear infinite;
-    flex-shrink: 0;
 }
 
-@keyframes scm-spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
+@keyframes scm-spin { to { transform: rotate(360deg); } }
 
-.scm-error {
-    padding: 12px 14px;
-    background: #fef2f2;
-    border: 1px solid #fecaca;
-    border-radius: 6px;
-    color: #991b1b;
-}
-
-.scm-version-warn {
-    padding: 10px 14px;
-    background: #fefce8;
-    border: 1px solid #fde68a;
-    border-radius: 6px;
-    font-size: 0.77rem;
-    color: #78350f;
-}
-
-.scm-version-pin {
-    font-size: 0.71rem;
-    color: #64748b;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-.scm-ver-link {
-    color: #0ea5e9;
-    text-decoration: none;
-}
-
-.scm-ver-link:hover {
-    text-decoration: underline;
-}
-
-.scm-hash {
-    color: #7dd3fc;
-    font-size: 0.69rem;
-}
-
-.scm-section-label {
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #94a3b8;
-}
-
-/* ── Table ────────────────────────────────────────────────────── */
+/* 2. TABLE INFRASTRUCTURE (MOBILE DEFAULT) */
 .scm-table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 0 -12px;
+    padding: 0 12px;
 }
 
 .scm-table {
     width: 100%;
-    border-collapse: collapse;
-    min-width: 480px;
+    border-collapse: separate;
+    border-spacing: 0 4px;
+    min-width: 500px; /* Reduced min-width for mobile */
 }
 
-/* Score header */
+/* 3. HEADERS (MOBILE DEFAULT) */
 .scm-score-row th {
-    padding: 12px 14px;
+    padding: 16px 8px;
     text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
 }
 
 .scm-label-col {
     text-align: left !important;
-    min-width: 140px;
+    min-width: 120px;
+    padding-right: 12px;
+    font-weight: 850;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
 }
 
 .scm-college-name {
-    font-size: 0.78rem;
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #1e293b;
     margin-bottom: 4px;
+    letter-spacing: -0.01em;
 }
 
 .scm-college-score {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 900;
-    font-variant-numeric: tabular-nums;
+    font-family: var(--font-display);
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     line-height: 1;
 }
 
-.scm-college-band {
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    margin-top: 2px;
-    opacity: 0.8;
-}
-
-/* Column header row */
-.scm-header-row {
-    border-bottom: 2px solid #e2e8f0;
-}
-
-.scm-header-row th {
-    padding: 6px 10px;
-    font-size: 0.66rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #64748b;
-    text-align: right;
-}
-
-.scm-header-row th.scm-label-col {
-    text-align: left;
-}
-
-/* Vector rows */
-.scm-vec-row {
-    border-bottom: 1px solid #f1f5f9;
-}
-
-.scm-vec-row:hover {
-    background: #f8fafc;
-}
+/* 4. ROWS & CELLS (MOBILE DEFAULT) */
+.scm-vec-row:hover { background: rgba(255, 255, 255, 0.4); }
 
 .scm-vec-label {
-    padding: 8px 10px;
+    padding: 12px 0;
     display: flex;
     align-items: center;
-    gap: 6px;
-    vertical-align: middle;
+    gap: 8px;
 }
 
 .scm-vec-code {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     width: 20px;
     height: 20px;
     background: #1e293b;
-    color: #f8fafc;
-    font-size: 0.65rem;
-    font-weight: 800;
-    border-radius: 3px;
+    color: white;
+    font-size: 9px;
+    font-weight: 900;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
 }
 
 .scm-vec-name {
-    color: #475569;
-    font-size: 0.78rem;
-}
-
-.scm-vec-weight {
-    color: #94a3b8;
-    font-size: 0.69rem;
-    margin-left: auto;
-    white-space: nowrap;
+    font-weight: 750;
+    color: #334155;
+    font-size: 0.75rem;
 }
 
 .scm-value-cell {
-    padding: 8px 10px;
-    vertical-align: middle;
+    padding: 12px 8px;
+    text-align: right;
 }
 
-/* Cell bar */
 .cell-bar-wrap {
     display: flex;
     align-items: center;
@@ -204,153 +130,67 @@
 
 .cell-bar-track {
     height: 4px;
-    background: #e2e8f0;
+    background: rgba(0,0,0,0.04);
     border-radius: 2px;
-    width: 60px;
-    flex-shrink: 0;
+    width: 40px;
     overflow: hidden;
 }
 
 .cell-bar-fill {
     height: 100%;
-    background: #94a3b8;
+    background: #cbd5e1;
     border-radius: 2px;
-    transition: width 0.4s ease;
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .cell-bar-fill.leader {
-    background: #1e293b;
+    background: linear-gradient(to right, #6366f1, #818cf8);
 }
 
 .cell-bar-val {
-    font-size: 0.78rem;
-    font-variant-numeric: tabular-nums;
-    color: #475569;
-    min-width: 28px;
-    text-align: right;
-}
-
-.cell-bar-val.leader {
+    font-size: 0.75rem;
     font-weight: 800;
-    color: #0f172a;
+    font-family: var(--font-mono);
+    color: #64748b;
+    min-width: 28px;
 }
 
-.scm-variance-note {
-    font-size: 0.67rem;
-    color: #94a3b8;
-    text-align: right;
-    margin-top: 2px;
-}
-
-/* Penalty row */
-.scm-penalty-row {
-    background: #fef2f2;
-}
-
-.scm-penalty-cell {
-    text-align: right;
-    padding: 6px 10px;
-    color: #991b1b;
-    font-size: 0.78rem;
-    font-weight: 600;
-}
-
-/* Final row */
-.scm-final-row {
-    background: #f1f5f9;
-    border-top: 2px solid #e2e8f0;
-}
-
-.scm-final-cell {
-    text-align: right;
-    padding: 10px;
-    font-size: 1rem;
-    color: #0f172a;
-}
-
-/* Variance toggle */
-.scm-variance-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    font-size: 0.77rem;
-    color: #475569;
-    user-select: none;
-}
-
-.scm-variance-toggle input[type="checkbox"] {
-    accent-color: #1e293b;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-}
-
-/* Strength Differential */
-.scm-differential-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.scm-differential-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
-}
-
+/* 5. STRENGTH DIFFERENTIAL (MOBILE DEFAULT: STACKED) */
 .scm-diff-block {
-    padding: 14px;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    background: #f8fafc;
+    padding: 16px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
 }
 
 .scm-diff-leader {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 8px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6366f1;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f1f5f9;
 }
 
-.scm-diff-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.scm-diff-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.77rem;
-    color: #475569;
-}
-
-.scm-diff-vec {
-    color: #334155;
-}
-
-.scm-diff-delta {
-    font-weight: 700;
-    color: #15803d;
-    font-variant-numeric: tabular-nums;
-}
-
-/* ── Responsive ───────────────────────────────────────────────── */
-@media (max-width: 640px) {
-    .scm-vec-name {
-        display: none;
-    }
-
-    .scm-college-score {
-        font-size: 1.1rem;
-    }
-
-    .cell-bar-track {
-        width: 40px;
-    }
+/* 6. DESKTOP ADAPTATION (MIN-WIDTH: 1024PX) */
+@media (min-width: 1024px) {
+    .scm-root { gap: 40px; }
+    
+    .scm-table-wrap { margin: 0; padding: 0; }
+    .scm-table { min-width: 800px; border-spacing: 0 8px; }
+    
+    .scm-label-col { min-width: 180px; font-size: 0.75rem; }
+    .scm-college-name { font-size: 1rem; }
+    .scm-college-score { font-size: 2.5rem; }
+    
+    .scm-vec-label { padding: 20px 0; gap: 12px; }
+    .scm-vec-code { width: 28px; height: 28px; font-size: 11px; }
+    .scm-vec-name { font-size: 0.9rem; }
+    
+    .cell-bar-track { width: 100px; height: 6px; }
+    .cell-bar-val { font-size: 1rem; }
+    
+    .scm-diff-block { padding: 32px; border-radius: 24px; }
 }

@@ -370,6 +370,10 @@ if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
     // Force Data Load on Startup
     try {
       await dataStore.loadDataFromNDJSON();
+      console.log(`[Server] global.colleges.length after load: ${global.colleges?.length}`);
+      // Initialize the Redis/L1 cache services from the loaded memory data
+      const cacheService = require("./services/dataStore");
+      await cacheService.initializeCache();
     } catch (e) {
       console.error("❌ Critical Ingestion Failure:", e.message);
     }

@@ -20,14 +20,14 @@
 /* --- Floating Pill Container --- */
 .header-container {
   pointer-events: auto;
-  max-width: min(1400px, 96vw); /* Fluid constraint for all viewports */
+  max-width: min(1600px, 98vw); /* Expanded limit for wide nav */
   margin: 0 auto;
   height: 58px;
   padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr; /* True centering trick */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   border-radius: 999px;
 
   /* Opaque for visibility on solid light backgrounds */
@@ -57,6 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-shrink: 0;
   min-width: fit-content;
   gap: 16px; /* Added gap between logo and signal */
 }
@@ -79,11 +80,11 @@
   transform: scale(1.05);
 }
 
-/* --- CENTER: Navigation Pill --- */
 .header-nav {
   display: flex;
   align-items: center;
-  justify-self: center; /* Force centering in the grid slot */
+  flex: 1;
+  justify-content: center;
   gap: 2px;
   background: rgba(0, 0, 0, 0.04);
   padding: 2px;
@@ -137,11 +138,11 @@
   border: 1.5px solid white;
 }
 
-/* --- RIGHT: Actions --- */
 .header-right {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Align to right edge of column 3 */
+  justify-content: flex-end; /* Align to right edge */
+  flex-shrink: 0;
   gap: 12px;
 }
 
@@ -607,7 +608,7 @@
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     white-space: nowrap;
-    max-width: 320px;
+    max-width: 250px;
     overflow: hidden;
 }
 

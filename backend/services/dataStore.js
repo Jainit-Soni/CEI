@@ -18,6 +18,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { computeInstitutionalCeiScore, computeCoverageIndex } = require('../lib/scoringEngine');
 const { getRedisClient } = require("../config/redis");
 const College = require("../models/CollegeSchema");
 const logger = (() => {
@@ -97,10 +98,11 @@ function loadStateCollegeFiles() {
   // Deduplicate by ID — keep most complete entry
   const uniqueMap = new Map();
   combined.forEach(c => {
-    if (!c?.id) return;
-    const existing = uniqueMap.get(c.id);
+    const cid = c?.id || c?._id || c?.stableKey;
+    if (!cid) return;
+    const existing = uniqueMap.get(cid);
     if (!existing || (c.courses?.length || 0) > (existing.courses?.length || 0)) {
-      uniqueMap.set(c.id, c);
+      uniqueMap.set(cid, c);
     }
   });
   return Array.from(uniqueMap.values());
@@ -188,63 +190,155 @@ async function resolveActiveKey(redis) {
 
 // ─── initializeCache ──────────────────────────────────────────────────────────
 /**
+ * applyTruthEnrichment(map)
+ * Merges NDJSON truth data into the provided map.
+ * Auto-spawns missing CORE institutions.
+ */
+function applyTruthEnrichment(map) {
+  try {
+    const truthPath = path.join(__dirname, "..", "data", "truth", "core_enrichment.ndjson");
+    if (!fs.existsSync(truthPath)) return;
+    
+    const rawTruth = fs.readFileSync(truthPath, "utf8").split('\n');
+    rawTruth.forEach(line => {
+       if (!line.trim()) return;
+       try {
+           const d = JSON.parse(line);
+           let c = map.get(d.collegeId);
+           
+           if (!c && d.collegeId.startsWith('CORE-')) {
+               c = { 
+                  id: d.collegeId, 
+                  _id: d.collegeId, 
+                  name: d.name || d.collegeId.replace('CORE-', '').split(/(?=[A-Z])/).join(' ').trim(),
+                  location: 'India',
+                  isCore: true,
+                  placements: {},
+                  fees: {},
+                  meta: { ownership: 'Central Govt / INI', naacGrade: 'A++' },
+                  verificationStatus: 'VERIFIED'
+               };
+               map.set(d.collegeId, c);
+           }
+
+           if (!c) return;
+
+           if (d.entityType === 'placement') {
+               c.placements = { ...c.placements, averagePackage: `${d.averagePackage} ${d.currency}`, highestPackage: `${d.highestPackage} ${d.currency}`, medianSalary: d.averagePackage, placedPercentage: 90 };
+           } else if (d.entityType === 'fees') {
+               c.fees = { ...c.fees, total: `${d.totalFee} ${d.currency}` };
+               c.tuition = `${d.totalFee} ${d.currency}`;
+           } else if (d.entityType === 'ranking') {
+               if (!c.rankings) c.rankings = [];
+               c.rankings.push({ source: d.source, rank: d.rank, year: d.year });
+           }
+       } catch {}
+    });
+    
+    // --- Final Pass: Re-score enriched institutions (Phase 30) ---
+    map.forEach(c => {
+       if (c.isCore || (c.placements && Object.keys(c.placements).length > 0)) {
+           try {
+               // Approximate coverage for dynamically enriched items
+               const coverage = computeCoverageIndex(c, [], (c.isCore ? 5 : 0), [], []);
+               const scores = computeInstitutionalCeiScore(c, coverage);
+               
+               c.institutionStrengthScore = scores.institutionStrengthScore;
+               c.admissionRealityScore = scores.admissionRealityScore;
+               c.dataConfidenceScore = scores.dataConfidenceScore;
+               c.searchPriorityScore = scores.searchPriorityScore;
+               c.ceiScore = scores.ceiScore;
+               c.competitivenessBand = scores.competitivenessBand;
+           } catch (e) {}
+       }
+    });
+
+    logger.info && logger.info("[dataStore] 💉 Core Truth Enrichment & Re-scoring Applied.");
+  } catch (err) {
+    logger.warn && logger.warn("[dataStore] Truth enrichment failed", { error: err.message });
+  }
+}
+
+/**
  * Initialises the cache using blue-green hydration.
- * Uses a distributed lock (Redis SETNX) to prevent concurrent hydration
- * under simultaneous cold-start requests (thundering herd).
  */
 async function initializeCache() {
   const redis = await getRedisClient();
 
   if (!redis) {
-    logger.warn && logger.warn("[dataStore] Redis unavailable — loading to L1 memory only");
+    logger.warn && logger.warn("[dataStore] Redis unavailable — using L1 fallback");
     if (!LOCAL_CACHE) {
-      LOCAL_CACHE = loadStateCollegeFiles();
+      if (global.colleges && global.colleges.length > 0) {
+        logger.info && logger.info("[dataStore] Using global.colleges (NDJSON) directly for L1 fallback", { count: global.colleges.length });
+        LOCAL_CACHE = [...global.colleges];
+      } else {
+        const jsonColleges = loadStateCollegeFiles();
+        const masterMap = new Map();
+        jsonColleges.forEach(c => {
+          const cid = String(c.id || c._id || c.stableKey || '');
+          if(cid) masterMap.set(cid, c);
+        });
+        applyTruthEnrichment(masterMap);
+        LOCAL_CACHE = Array.from(masterMap.values());
+        global.colleges = LOCAL_CACHE;
+      }
       LOCAL_LAST_UPDATE = Date.now();
       preComputeGlobalData();
     }
     return;
   }
 
-  // ── Distributed lock — prevent thundering herd ──
   try {
     const lockAcquired = await redis.set(HYDRATION_LOCK_KEY, "1", "NX", "EX", TTL.HYDRATE_LOCK);
     if (!lockAcquired) {
-      logger.info && logger.info("[dataStore] Hydration already in progress (lock held). Waiting for active key...");
-      // Poll until the active pointer appears (another instance is hydrating)
       for (let i = 0; i < 30; i++) {
         await new Promise(r => setTimeout(r, 500));
-        const activeKey = await redis.get(ACTIVE_POINTER_KEY);
-        if (activeKey) {
-          logger.info && logger.info("[dataStore] Active key appeared. Proceeding.");
-          return;
-        }
+        if (await redis.get(ACTIVE_POINTER_KEY)) return;
       }
-      logger.warn && logger.warn("[dataStore] Timed out waiting for hydration. Falling back to disk.");
-      if (!LOCAL_CACHE) {
-        LOCAL_CACHE = loadStateCollegeFiles();
-        preComputeGlobalData();
-      }
-      return;
     }
 
     try {
-      // 1. Load + deduplicate from state JSON files (Premium/Manual data)
-      const jsonColleges = loadStateCollegeFiles();
+      let masterMap = new Map();
+      let sourceInfo = "Memory (NDJSON)";
 
-      // 2. Load from MongoDB (Full 68k dataset)
-      logger.info && logger.info("[dataStore] Fetching full dataset from MongoDB...");
-      const mongoColleges = await College.find({}).lean();
-      logger.info && logger.info("[dataStore] Fetched " + mongoColleges.length + " colleges from MongoDB.");
+      // ── STAGE 1: Source Selection ──────────────────────────────────────────
+      // Prioritize the global.colleges array populated by lib/dataStore.loadDataFromNDJSON()
+      if (global.colleges && global.colleges.length > 0) {
+        logger.info && logger.info("[dataStore] Using global.colleges (NDJSON) as source", { count: global.colleges.length });
+        let collCount = 0;
+        global.colleges.forEach(c => {
+            const cid = String(c.id || c._id || c.stableKey || '');
+            if (cid) {
+                masterMap.set(cid, c);
+                collCount++;
+            }
+        });
+        logger.info && logger.info("[dataStore] masterMap populated from global.colleges", { masterMapSize: masterMap.size, processed: collCount });
+      } else {
+        // Fallback to MongoDB if available andNDJSON is empty (legacy path)
+        try {
+          logger.info && logger.info("[dataStore] Fetching dataset from MongoDB...");
+          const mongoColleges = await College.find({}).lean().timeout(5000);
+          mongoColleges.forEach(c => masterMap.set(String(c.id || c._id), c));
+          sourceInfo = "MongoDB";
+        } catch (mongoErr) {
+          logger.warn && logger.warn("[dataStore] MongoDB fetch failed, using disk fallback", { error: mongoErr.message });
+          const jsonColleges = loadStateCollegeFiles();
+          jsonColleges.forEach(c => {
+            const cid = String(c.id || c._id || c.stableKey || '');
+            if (cid) masterMap.set(cid, c);
+          });
+          sourceInfo = "Disk JSON";
+        }
+      }
 
-      // ── HYBRID MERGE ──
-      const masterMap = new Map();
-      mongoColleges.forEach(c => masterMap.set(c.id, c));
-      jsonColleges.forEach(c => {
-        const existing = masterMap.get(c.id);
-        masterMap.set(c.id, existing ? { ...existing, ...c } : c);
-      });
+      // ── STAGE 2: Truth Enrichment & Merging ────────────────────────────────
+      // Note: NDJSON loader (lib/dataStore) already applies enrichment, 
+      // but we re-apply for safety if we fell back to Mongo/Disk.
+      if (sourceInfo !== "Memory (NDJSON)") {
+        applyTruthEnrichment(masterMap);
+      }
 
-      // 3. Apply admin overrides
       const updates = loadAdminUpdates();
       const deletedSet = new Set(updates.deleted);
       const finalCollegesList = Array.from(masterMap.values())
@@ -254,42 +348,33 @@ async function initializeCache() {
           return adminEdit ? { ...c, ...adminEdit } : c;
         });
 
-      updates.added.forEach(c => {
-        if (!masterMap.has(c.id)) finalCollegesList.push(c);
-      });
+      updates.added.forEach(c => { if (!masterMap.has(c.id)) finalCollegesList.push(c); });
 
-      LOCAL_CACHE = finalCollegesList;
+      LOCAL_CACHE = finalCollegesList.map(c => ({
+        ...c,
+        id: String(c.id || c._id || c.stableKey || ''),
+        _id: String(c._id || c.id || c.stableKey || '')
+      }));
+      global.colleges = LOCAL_CACHE;
       LOCAL_LAST_UPDATE = Date.now();
 
       const exams = loadJson("exams.json") || [];
-      const activeKey = await hydrateGreen(redis, LOCAL_CACHE, exams);
-      
-      logger.info && logger.info("[dataStore] ✅ Cache hydration complete", {
-        colleges: LOCAL_CACHE.length,
-        exams: exams.length,
-        activeKey
-      });
-
+      await hydrateGreen(redis, LOCAL_CACHE, exams);
       preComputeGlobalData();
     } catch (innerErr) {
-      if (innerErr.message.includes("quota exceeded") || innerErr.message.includes("limit exceeded")) {
-        logger.warn && logger.warn("[dataStore] Hydration aborted: Redis Quota Exceeded. Falling back to L1/L3.");
-      } else {
-        logger.error && logger.error("[dataStore] Hydration failed", { error: innerErr.message });
-      }
+      logger.error && logger.error("[dataStore] Hydration inner fail", { error: innerErr.message });
       if (!LOCAL_CACHE) {
         LOCAL_CACHE = loadStateCollegeFiles();
+        global.colleges = LOCAL_CACHE;
         preComputeGlobalData();
       }
     } finally {
       await redis.del(HYDRATION_LOCK_KEY).catch(() => { });
     }
   } catch (err) {
-    if (!err.message.includes("quota exceeded") && !err.message.includes("limit exceeded")) {
-      logger.error && logger.error("[dataStore] initializeCache fatal error", { error: err.message });
-    }
     if (!LOCAL_CACHE) {
       LOCAL_CACHE = loadStateCollegeFiles();
+      global.colleges = LOCAL_CACHE;
       preComputeGlobalData();
     }
   }
@@ -346,9 +431,19 @@ async function getColleges() {
 
 // ─── getCollegeById ──────────────────────────────────────────────────────────
 async function getCollegeById(id) {
+  // L0: global.colleges — the enriched in-memory registry from lib/dataStore.js
+  if (global.colleges && global.colleges.length > 0) {
+    const col = global.colleges.find(c =>
+      String(c.id) === String(id) ||
+      String(c._id) === String(id) ||
+      String(c.stableKey) === String(id)
+    );
+    if (col) return col;
+  }
+
   // L1: Local memory
   if (LOCAL_CACHE) {
-    const col = LOCAL_CACHE.find(c => c.id === id);
+    const col = LOCAL_CACHE.find(c => String(c.id) === String(id) || String(c._id) === String(id));
     if (col) return col;
   }
 

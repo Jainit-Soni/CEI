@@ -1,300 +1,395 @@
-.compare-page {
-    padding-top: 120px;
-    padding-bottom: var(--space-10);
-    background: transparent;
-    min-height: 80vh;
+/* ComparePage.css — Table-based Prestige Layout */
+
+/* ─── PAGE CANVAS ─────────────────────────────────── */
+.arena-page {
+    min-height: 100vh;
+    /* Gentle chromatic base — not white, not dark */
+    background: linear-gradient(160deg, #f4f3ff 0%, #faf5ff 30%, #f0fdf9 70%, #eff6ff 100%);
+    font-family: var(--font-body, system-ui);
+    color: #0f172a;
+    position: relative;
 }
 
-.compare-mobile-view {
-    display: none;
+.arena-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(900px circle at 10% 30%, rgba(99,102,241,.14), transparent 55%),
+        radial-gradient(700px circle at 90% 20%, rgba(236,72,153,.10), transparent 55%),
+        radial-gradient(800px circle at 55% 90%, rgba(16,185,129,.09), transparent 55%),
+        radial-gradient(500px circle at 75% 55%, rgba(245,158,11,.07), transparent 50%);
+    pointer-events: none;
+    z-index: 0;
 }
 
-.compare-header {
+/* ─── COMMAND BAR ─────────────────────────────────── */
+.arena-bar {
+    position: sticky;
+    top: 0;
+    z-index: 9000;
+    background: rgba(244,243,255,.88);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(99,102,241,.1);
+    padding: 0 24px;
+    height: 52px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--space-6);
+    justify-content: space-between;
 }
 
-.compare-header h1 {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 700;
+.bar-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color .15s;
+}
+.bar-back:hover { color: #0f172a; }
+
+.bar-count {
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: #e2e8f0;
+}
+
+.bar-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 18px;
+    border-radius: 100px;
+    background: #0f172a;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .2s, transform .15s;
+    white-space: nowrap;
+}
+.bar-cta:hover { background: #4f46e5; transform: scale(1.04); }
+
+/* ─── HERO ────────────────────────────────────────── */
+.arena-hero {
+    padding: 64px 32px 40px;
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-eyebrow {
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.hero-title {
+    font-family: var(--font-display, system-ui);
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 1000;
+    line-height: .88;
+    letter-spacing: -.06em;
+    color: #0f172a;
+    margin: 0 0 16px;
+}
+
+.hero-sub {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8;
     margin: 0;
 }
 
-.compare-table-wrapper {
+/* ─── MATRIX WRAPPER ─────────────────────────────── */
+.matrix-wrapper {
     overflow-x: auto;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(0,0,0,.06);
 }
 
-.compare-table {
+.matrix-wrapper::-webkit-scrollbar { height: 4px; }
+.matrix-wrapper::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 4px; }
+.matrix-wrapper::-webkit-scrollbar-track { background: transparent; }
+
+/* ─── THE TABLE ──────────────────────────────────── */
+.cmp-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px;
+    table-layout: fixed;
+    min-width: calc(180px + var(--cols, 5) * 200px);
 }
 
-.compare-table th {
-    padding: 1.5rem;
+/* ─── STICKY HEADER ROW ──────────────────────────── */
+.cmp-table thead tr th {
+    position: sticky;
+    top: 52px; /* below the command bar */
+    z-index: 600;
+    background: rgba(244,243,255,.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0,0,0,.07);
+    padding: 16px 10px;
+    vertical-align: bottom;
+}
+
+/* corner cell — sticky left AND top */
+.th-corner {
+    position: sticky !important;
+    left: 0;
+    z-index: 700 !important;
+    background: rgba(244,243,255,.98) !important;
+    width: 180px;
+    min-width: 180px;
+    padding: 16px 20px !important;
+    border-right: 1px solid rgba(0,0,0,.05);
     text-align: left;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.6);
-    vertical-align: top;
+    vertical-align: bottom;
 }
 
-.label-col,
-.label-cell {
-    width: 200px;
-    background: rgba(249, 250, 251, 0.5);
-    font-weight: 600;
-    color: #4b5563;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+.corner-label {
+    font-size: 0.58rem;
+    font-weight: 900;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #cbd5e1;
 }
 
-.label-cell {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
+/* col headers */
+.th-col { width: 200px; min-width: 180px; }
 
-.compare-table td {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    color: #1f2937;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.college-header {
+/* ─── COLLEGE CARD ───────────────────────────────── */
+.college-card {
+    background: white;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 20px;
+    box-shadow: 0 2px 12px -4px rgba(0,0,0,.08);
+    padding: 20px 14px 18px;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-}
-
-.college-link {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #111827;
-    text-decoration: none;
-}
-
-.college-link:hover {
-    text-decoration: underline;
-    color: #4f46e5;
-}
-
-.college-loc {
-    font-size: 0.85rem;
-    color: #6b7280;
-    font-weight: 400;
-}
-
-.remove-btn {
-    align-self: flex-start;
-    color: #ef4444 !important;
-    padding: 0 !important;
-    font-size: 0.8rem !important;
-}
-
-.loading-tag {
-    font-size: 0.7rem;
-    background: #eef2ff;
-    color: #4f46e5;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.compare-table-wrapper {
-    overflow-x: auto;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    margin-bottom: var(--space-6);
-}
-
-.compare-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 800px;
-}
-
-.section-divider td {
-    background: rgba(243, 244, 246, 0.6);
-    color: #4b5563;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 0.75rem 1.5rem !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.4) !important;
-}
-
-.tier-badge {
-    padding: 4px 10px;
-    background: #f3f4f6;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.85rem;
-}
-
-.tier-badge.tier-1 {
-    background: #fef3c7;
-    color: #92400e;
-    border: 1px solid #fde68a;
-}
-
-.winner-cell {
-    background: #ecfdf5 !important;
-    color: #065f46 !important;
-    font-weight: 700;
+    align-items: center;
+    text-align: center;
     position: relative;
-    border-left: 3px solid #10b981;
+    transition: box-shadow .25s, transform .25s;
 }
 
-.winner-cell::after {
-    content: "✓ Recommended";
+.college-card:hover {
+    box-shadow: 0 12px 32px -8px rgba(0,0,0,.14);
+    transform: translateY(-3px);
+}
+
+.card-rm {
     position: absolute;
-    top: 4px;
-    right: 4px;
-    font-size: 0.6rem;
-    background: #059669;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-
-.compare-footer-note {
-    font-size: 0.85rem;
-    color: #6b7280;
-    font-style: italic;
-    margin-top: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-}
-
-@media (max-width: 1024px) {
-    .compare-table {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .compare-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    .compare-table-wrapper {
-        background: transparent;
-        box-shadow: none;
-        overflow-x: visible;
-    }
-
-    .compare-table {
-        display: none;
-        /* Hide table on mobile */
-    }
-
-    /* Vertical Mobile View */
-    .compare-mobile-view {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .feature-group {
-        background: rgba(255, 255, 255, 0.4);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 20px;
-        padding: 20px;
-        box-shadow: var(--shadow-sm);
-    }
-
-    .feature-group-title {
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        font-weight: 800;
-        color: #1e3a8a;
-        margin-bottom: 16px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid #eff6ff;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .compare-item-mobile {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 0;
-        border-bottom: 1px solid #f3f4f6;
-    }
-
-    .compare-item-mobile:last-child {
-        border-bottom: none;
-    }
-
-    .mobile-college-label {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #64748b;
-        max-width: 40%;
-    }
-
-    .mobile-college-value {
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: #1e293b;
-        text-align: right;
-        flex: 1;
-    }
-
-    .college-header-mobile {
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 16px;
-        padding: 16px;
-        margin-bottom: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .mobile-college-info h3 {
-        font-size: 1rem;
-        font-weight: 700;
-        margin-bottom: 2px;
-    }
-}
-
-.chip-row {
+    top: 10px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    background: #f8fafc;
+    border: 1px solid rgba(0,0,0,.07);
+    border-radius: 50%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all .2s;
+}
+.card-rm:hover { background: #fef2f2; color: #ef4444; border-color: #fecaca; transform: rotate(90deg); }
+
+.card-emblem {
+    width: 48px;
+    height: 48px;
+    background: #f8fafc;
+    border: 1px solid rgba(0,0,0,.04);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
 }
 
-.chip {
+.card-name {
+    font-family: var(--font-display, system-ui);
+    font-size: .95rem;
+    font-weight: 1000;
+    color: #0f172a;
+    letter-spacing: -.025em;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.card-loc {
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #cbd5e1;
+}
+
+/* ─── SECTION HEADER ROW ─────────────────────────── */
+.td-section {
+    padding: 28px 20px 10px;
+    background: transparent;
+    border-bottom: 1px solid rgba(99,102,241,.06);
+    position: sticky;
+    left: 0;
+}
+.tr-stripe .td-section,
+.tr-plain .td-section { background: inherit; }
+
+.section-kicker {
+    font-size: 0.6rem;
+    font-weight: 900;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #6366f1;
     display: inline-flex;
     align-items: center;
-    padding: 4px 10px;
-    background: #eef2ff;
-    color: #4f46e5;
-    border-radius: 6px;
-    font-size: 0.75rem;
+    gap: 10px;
+}
+.section-kicker::after {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, transparent);
+    border-radius: 2px;
+}
+
+/* ─── DATA ROWS ──────────────────────────────────── */
+.tr-plain  { background: rgba(255,255,255,0.55); }
+.tr-stripe { background: rgba(238,242,255,0.45); }
+
+/* ─── LABEL CELL ─────────────────────────────────── */
+.td-label {
+    position: sticky;
+    left: 0;
+    z-index: 200;
+    background: rgba(248,247,255,.97) !important;
+    border-right: 1px solid rgba(99,102,241,.08);
+    padding: 20px 20px;
+    vertical-align: middle;
+    min-width: 180px;
+    width: 180px;
+}
+
+.lbl-name {
+    font-size: 0.72rem;
+    font-weight: 900;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    margin-bottom: 4px;
+}
+
+.lbl-meta {
+    font-size: 0.58rem;
+    font-weight: 600;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* ─── DATA CELL ──────────────────────────────────── */
+.td-data {
+    padding: 8px 8px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid rgba(99,102,241,.05);
+    transition: background .15s;
+}
+
+.td-stripe { background: rgba(238,242,255,.35) !important; }
+
+/* Winner cell states */
+.cell-win { border-radius: 0; }
+.csw-indigo { background: linear-gradient(135deg, rgba(79,70,229,.06), rgba(147,51,234,.06)); }
+.csw-emerald { background: linear-gradient(135deg, rgba(16,185,129,.06), rgba(5,150,105,.06)); }
+.csw-amber   { background: linear-gradient(135deg, rgba(245,158,11,.06), rgba(217,119,6,.06)); }
+.csw-slate   { background: rgba(30,41,59,.03); }
+
+/* ─── DATA NUMBER LAYOUT ─────────────────────────── */
+.num-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 0;
+}
+
+.num-lg  .dv-num { font-size: 1.5rem; }
+.num-md  .dv-num { font-size: 1rem; }
+
+.dv-num {
+    font-family: var(--font-display, system-ui);
+    font-weight: 1000;
+    letter-spacing: -.04em;
+    font-variant-numeric: tabular-nums;
+    color: #0f172a;
+    line-height: 1;
+}
+
+.null-dash {
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 1.2;
+    color: #e2e8f0;
+    font-style: italic;
+}
+
+.winner-tag {
+    font-size: .5rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 100px;
+    color: white;
+    white-space: nowrap;
+}
+
+.tc-indigo  { background: linear-gradient(135deg,#6366f1,#4f46e5); }
+.tc-emerald { background: linear-gradient(135deg,#10b981,#059669); }
+.tc-amber   { background: linear-gradient(135deg,#f59e0b,#d97706); }
+.tc-slate   { background: #334155; }
+
+/* ─── RESPONSIVE ─────────────────────────────────── */
+@media (min-width: 1024px) {
+    .arena-bar  { padding: 0 48px; }
+    .arena-hero { padding: 80px 48px 48px; }
+    .th-corner  { width: 220px; min-width: 220px; padding: 20px 32px !important; }
+    .td-label   { width: 220px; min-width: 220px; padding: 24px 32px; }
+    .td-data    { padding: 10px 10px; }
+    .num-lg .dv-num { font-size: 2.4rem; }
+    .num-md .dv-num { font-size: 1.1rem; }
+    .td-section { padding: 36px 32px 10px; }
+    .college-card { padding: 24px 16px 20px; border-radius: 24px; }
+    .card-emblem { width: 52px; height: 52px; }
+    .card-name  { font-size: 1.05rem; }
+}/* ── TRUTH-VERIFIED BADGE ── */
+.verified-badge-mini {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    border-radius: 50%;
+    flex-shrink: 0;
 }

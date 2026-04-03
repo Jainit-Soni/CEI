@@ -23,6 +23,7 @@
 
 const { getRedisClient } = require('../config/redis');
 const College = require('../models/CollegeSchema');
+const dataStore = require('./dataStore'); // Unified truth layer
 const logger = (() => { try { return require('../lib/logger'); } catch { return console; } })();
 
 // ── Constants ─────────────────────────────────────────────────────────────────
@@ -121,15 +122,8 @@ async function getCollegePage(id) {
 
     metrics.misses++;
 
-    // Mongo fallback
-    let mongoQuery;
-    if (/^[0-9a-fA-F]{24}$/.test(id)) {
-        mongoQuery = { $or: [{ _id: id }, { id }] };
-    } else {
-        mongoQuery = { id };
-    }
-
-    const college = await College.findOne(mongoQuery).lean();
+    // Unified truth layer fallback — handles merge of MongoDB + NDJSON Truth + Static JSON
+    const college = await dataStore.getCollegeById(id);
     if (!college) return null;
 
     const payload = await assemblePagePayload(college);
@@ -205,7 +199,7 @@ async function rebuildAll() {
         await Promise.all(
             toBuild.map(async (col) => {
                 try {
-                    const fullCollege = await College.findOne({ id: col.id }).lean();
+                    const fullCollege = await College.findOne({ _id: col._id || col.id }).lean();
                     if (!fullCollege) return;
                     const payload = await assemblePagePayload(fullCollege);
                     await redis.set(PAGE_KEY(col.id), JSON.stringify(payload), 'EX', TTL);

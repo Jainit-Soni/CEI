@@ -149,6 +149,40 @@ async function searchViaMongo(q, { limit = 20, filters = {} } = {}) {
     }
 }
 
+// ── Memory Fallback Search (NDJSON) ──────────────────────────────────────────
+
+async function searchViaMemory(q, { limit = 20, filters = {} } = {}) {
+    if (!global.colleges || global.colleges.length === 0) return [];
+
+    const qLower = q.toLowerCase();
+    const safeQ = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(safeQ, 'i');
+
+    const results = global.colleges.filter(c => {
+        // Basic name/shortName search
+        const matchName = (c.name || "").toLowerCase().includes(qLower) || 
+                          (c.shortName || "").toLowerCase().includes(qLower);
+        
+        // Exact regex for more precision
+        const matchRegex = regex.test(c.name || "") || regex.test(c.shortName || "");
+
+        if (!matchName && !matchRegex) return false;
+
+        // Apply filters
+        if (filters.state && c.state !== filters.state) return false;
+        if (filters.tier && c.rankingTier !== filters.tier) return false;
+        if (filters.band && c.competitivenessBand !== filters.band) return false;
+
+        return true;
+    });
+
+    // Sort by ceiScore (descending)
+    return results
+        .sort((a, b) => (b.ceiScore || 0) - (a.ceiScore || 0))
+        .slice(0, limit)
+        .map(r => ({ ...r, id: String(r.id || r._id) }));
+}
+
 // ── Unified Search Interface ─────────────────────────────────────────────────
 
 /**
@@ -181,10 +215,13 @@ async function search(q, options = {}) {
         } catch { /* ignore cache errors */ }
     }
 
-    // Try Meilisearch → fall back to MongoDB
+    // Try Meilisearch → fall back to MongoDB → fall back to Memory
     let results = await searchViaMeili(term, { limit, filters });
     if (!results) {
         results = await searchViaMongo(term, { limit, filters });
+    }
+    if (!results || results.length === 0) {
+        results = await searchViaMemory(term, { limit, filters });
     }
 
     // Cache results

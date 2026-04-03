@@ -50,3 +50,15 @@
 {"entityType":"ranking","collegeId":"U-1153","rank":"95","source":"NIRF 2024"}
 {"entityType":"ranking","collegeId":"C-61747","rank":"98","source":"NIRF 2024"}
 {"entityType":"ranking","collegeId":"U-0686","rank":"99","source":"NIRF 2024"}
+{"name":"Indian Institute of Technology Bombay","entityType":"ranking","source":"NIRF","rank":3,"category":"Engineering","year":2024}
+{"name":"Indian Institute of Technology Delhi","entityType":"ranking","source":"NIRF","rank":2,"category":"Engineering","year":2024}
+{"name":"Indian Institute of Technology Madras","entityType":"ranking","source":"NIRF","rank":1,"category":"Engineering","year":2024}
+{"name":"Indian Institute of Management Ahmedabad","entityType":"ranking","source":"NIRF","rank":1,"category":"Management","year":2024}
+{"name":"Indian Institute of Management Bangalore","entityType":"ranking","source":"NIRF","rank":2,"category":"Management","year":2024}
+{"name":"National Institute of Technology Tiruchirappalli","entityType":"ranking","source":"NIRF","rank":9,"category":"Engineering","year":2024}
+{"name":"Indian Institute of Information Technology Hyderabad","entityType":"ranking","source":"NIRF","rank":15,"category":"Engineering","year":2024}
+{"name":"International Institute of Information Technology Bangalore","entityType":"ranking","source":"NIRF","rank":74,"category":"Engineering","year":2024}
+{"name":"Indian Institute of Information Technology Allahabad","entityType":"ranking","source":"NIRF","rank":89,"category":"Engineering","year":2024}
+{"name":"All India Institute of Medical Sciences New Delhi","entityType":"ranking","source":"NIRF","rank":1,"category":"Medical","year":2024}
+{"name":"BITS Pilani","entityType":"ranking","source":"NIRF","rank":24,"category":"Engineering","year":2024}
+{"name":"Vellore Institute of Technology","entityType":"ranking","source":"NIRF","rank":11,"category":"Engineering","year":2024}

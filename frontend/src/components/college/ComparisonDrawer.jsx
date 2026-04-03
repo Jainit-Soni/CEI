@@ -49,12 +49,15 @@ const ComparisonDrawer = () => {
             </div>
 
             {/* Main Content Area */}
-            <div className="w-full bg-slate-900/95 border-t border-white/10 backdrop-blur-2xl shadow-[0_-20px_50px_-12px_rgba(0,0,0,0.8)] min-h-[180px] pb-6 pt-8">
+            <div 
+                className="w-full border-t border-white/10 shadow-[0_-20px_50px_-12px_rgba(0,0,0,0.8)] min-h-[180px] pb-6 pt-8"
+                style={{ backgroundColor: '#0f172a' }}
+            >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between mb-8">
                         <div>
                             <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                                <Layers className="w-5 h-5 text-blue-500" />
+                                <Layers className="w-5 h-5 text-indigo-400" />
                                 Smart Comparison
                             </h3>
                             <p className="text-sm text-slate-400">Benchmark these programs side-by-side using official Truth-Grade data.</p>
@@ -96,20 +99,20 @@ const ComparisonDrawer = () => {
                                     <div className="mb-4">
                                         <h4 className="font-bold text-white line-clamp-1 mb-1">{college.name}</h4>
                                         <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold truncate">
-                                            {college.location}
+                                            {college.location ? college.location.replace(/unknown,\s*/gi, '') : (college.state || "India")}
                                         </p>
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-3 text-center">
-                                        <div className="p-2 rounded-xl bg-blue-500/5 border border-blue-500/10">
-                                            <TrendingUp className="w-3 h-3 text-blue-400 mx-auto mb-1" />
-                                            <span className="text-[10px] text-slate-500 block">NIRF</span>
-                                            <span className="text-xs font-bold text-white">#{(college.rankings?.[0]?.rank) || 'TBA'}</span>
+                                        <div className="p-2 rounded-xl bg-indigo-500/10 border border-indigo-500/20">
+                                            <TrendingUp className="w-3 h-3 text-indigo-400 mx-auto mb-1" />
+                                            <span className="text-[10px] text-slate-500 block">Ranking</span>
+                                            <span className="text-xs font-bold text-white">{college.rankingTier || (college.rankings?.[0]?.rank ? `#${college.rankings[0].rank}` : college.ranking || 'TBA')}</span>
                                         </div>
-                                        <div className="p-2 rounded-xl bg-green-500/5 border border-green-500/10">
+                                        <div className="p-2 rounded-xl bg-green-500/10 border border-green-500/20">
                                             <IndianRupee className="w-3 h-3 text-green-400 mx-auto mb-1" />
                                             <span className="text-[10px] text-slate-500 block">Package</span>
-                                            <span className="text-xs font-bold text-white">{(college.engineeringCutoffs?.[0]?.avgPackage) || '12.5L'}</span>
+                                            <span className="text-xs font-bold text-white">{(college.engineeringCutoffs?.[0]?.avgPackage) || (college.placements?.averagePackage) || 'N/A'}</span>
                                         </div>
                                     </div>
                                 </div>

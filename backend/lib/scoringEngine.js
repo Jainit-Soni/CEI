@@ -1,13 +1,11 @@
 /**
  * backend/lib/scoringEngine.js
- * High-Granularity Institutional Scoring Engine (Phase 13: Evidence-First)
+ * High-Granularity Institutional Scoring Engine (Phase 14: Scaled & Integrated)
  */
 
 /**
- * redone computeInstitutionalCeiScore (Phase 13)
- * Returns a composite object with 4 distinct, evidence-first scores.
- * @param {object} college - The college object
- * @param {object} coverage - The coverage result from computeCoverageIndex
+ * computeInstitutionalCeiScore
+ * Returns a composite object with 4 distinct scores, calibrated for all 67k colleges.
  */
 function computeInstitutionalCeiScore(college, coverage = {}) {
     if (!college) return { 
@@ -19,64 +17,67 @@ function computeInstitutionalCeiScore(college, coverage = {}) {
     };
 
     const id = college.id || college._id || 'unknown';
-    // Helper: Stable Deterministic Fuzzing Factor (0.01 - 0.99)
+    // Helper: Stable Deterministic Fuzzing Factor
     const getFuzz = (str) => {
         let hash = 0;
         for (let i = 0; i < str.length; i++) {
             hash = ((hash << 5) - hash) + str.charCodeAt(i);
             hash |= 0;
         }
-        return (Math.abs(hash) % 100) / 100 * 1.5;
+        return (Math.abs(hash) % 100) / 100 * 0.8;
     };
     const fuzz = getFuzz(id);
 
     // 1. Institution Strength Score (0-100)
-    // Signals: Core Registry, NIRF Proxy, Program Breadth, Intake
-    let strength = 12; // Base floor for all recognized institutes
+    let strength = 20; // Improved Baseline for recognized institutes
+    
+    // Core Status Boost (Priority 1)
     if (college.isCore) {
-        strength += (college.coreMetadata?.coreTier === 1) ? 68 : 58;
+        strength += (college.coreMetadata?.coreTier === 1) ? 65 : 55;
     }
     
-    // Prestige/Ranking signals
-    if (college.rankingTier === 'Tier 1') strength += 15;
-    else if (college.rankingTier === 'Tier 2') strength += 8;
-
-    // Program Breadth (Scale 5)
-    const courseCount = Array.isArray(college.courses) ? college.courses.length : 0;
-    strength += Math.min(5, (courseCount / 30) * 5);
-
-    // Regional Trust Bonus (Compliance)
-    if (college.state && global.stateBenchmarks) {
-        const benchmark = global.stateBenchmarks.get(college.state.toLowerCase());
-        if (benchmark && benchmark.ptr < 25) {
-            strength += 3; // Boost for operating in a state with healthy faculty ratios
-        }
+    // Prestige/Ranking signals from Registry or NIRF
+    const rank = college.ranking || (college.rankings && college.rankings[0]?.rank);
+    if (college.rankingTier === 'Tier 1' || (rank > 0 && rank <= 100)) {
+        strength += 12;
+    } else if (college.rankingTier === 'Tier 2' || (rank > 0 && rank <= 300)) {
+        strength += 6;
     }
+
+    // Program Breadth (Scale) - Calibrated for Management vs Engineering
+    // Engineering needs ~30 programs for full scale, Management needs ~5.
+    const courseCount = Array.isArray(college.courses) ? college.courses.length : 0;
+    const isManagement = college.name?.includes('Management') || college.name?.includes('Business') || college.id?.includes('IIM');
+    const scaleDivisor = isManagement ? 5 : 35;
+    strength += Math.min(3, (courseCount / scaleDivisor) * 3);
 
     const institutionStrengthScore = parseFloat(Math.min(99.99, strength + fuzz).toFixed(2));
 
-    // 2. Admission Reality Score (0-100) - STATE/TRUTH SCOPED
-    // Note: Faking national scores is forbidden. 0 if no truth.
+    // 2. Admission Reality Score (0-100)
     let reality = 0;
-    if (coverage.hasCutoffs || coverage.hasSeatMatrix) {
-        reality = 42 + (coverage.coverageScore / 2.5); 
-        if (college.isCore) reality += 12;
+    if (coverage.hasCutoffs || coverage.hasSeatMatrix || coverage.hasPlacements) {
+        reality = 35 + (coverage.coverageScore / 2.5); 
+        if (college.isCore) reality += 15;
+        // Premium Placement Signal
+        const avgPkg = college.placements?.averagePackageNumeric || 0;
+        if (avgPkg >= 25) reality += 20;
+        else if (avgPkg >= 15) reality += 10;
     }
     const admissionRealityScore = reality > 0 ? parseFloat(Math.min(99.99, reality + fuzz).toFixed(2)) : 0;
 
-    // 3. Data Confidence Score (0-100) - PROVENANCE
-    let confidence = (coverage.truthRowCount || 0) * 5; // +5 per truth row (max 40)
-    confidence += (coverage.sourceFamilies?.length || 0) * 10; // +10 per source family (max 30)
+    // 3. Data Confidence Score (0-100)
+    let confidence = (coverage.truthRowCount || 0) * 10; 
+    confidence += (coverage.sourceFamilies?.length || 0) * 15; 
     if (college.verificationStatus === 'VERIFIED') confidence += 20;
-    if (coverage.coverageBucket === 'Rich') confidence += 10;
-    if (coverage.hasPlacements) confidence += 15; // Major trust signal
-    if (college.isCore) confidence += 40; // Manual curation from official sources
+    if (coverage.hasPlacements) confidence += 20; 
+    if (college.isCore) confidence += 30; 
 
     const dataConfidenceScore = parseFloat(Math.min(99.99, confidence + (fuzz * 2)).toFixed(2));
 
-    // 4. Search Priority Score (Internal Ranker)
-    let searchPriority = (institutionStrengthScore * 0.75) + (dataConfidenceScore * 0.25);
-    if (college.isCore) searchPriority += 15;
+    // 4. Search Priority Score
+    // Balances strength with data availability
+    let searchPriority = (institutionStrengthScore * 0.65) + (dataConfidenceScore * 0.35);
+    if (college.isCore) searchPriority += 10;
     const searchPriorityScore = parseFloat(searchPriority.toFixed(2));
 
     // Band Determination
@@ -91,13 +92,13 @@ function computeInstitutionalCeiScore(college, coverage = {}) {
         admissionRealityScore,
         dataConfidenceScore,
         searchPriorityScore,
-        ceiScore: institutionStrengthScore, // Map Strength as the primary CEI score
+        ceiScore: institutionStrengthScore,
         competitivenessBand: band
     };
 }
 
 /**
- * computeCoverageIndex (Unchanged but validated)
+ * computeCoverageIndex (Scale-Ready)
  */
 function computeCoverageIndex(college, verifiedFieldNames = [], truthRowCount = 0, truthEntityTypes = [], truthSourceFamilies = []) {
     const hasCourses = (Array.isArray(college.courses) && college.courses.length > 0) || 

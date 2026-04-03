@@ -12,12 +12,13 @@ global.truthRows = [];
 global.coreInstitutes = new Map(); // canonicalName -> core metadata
 global.stateBenchmarks = new Map(); // stateName -> { ptr, enrollment }
 global.truthByName = new Map(); // normalizedName -> truthRow[]
+global.truthByCid = new Map();  // collegeId -> truthRow[]
+global.truthByAishe = new Map(); // aisheCode -> truthRow[]
 global.websites = new Map(); // aisheCode/id -> websiteUrl
 global.websiteByName = new Map(); // normalizedName -> websiteUrl
 
 /**
  * Streams the unified ndjson file into memory at server startup.
- * Using a ReadStream prevents memory spikes that would occur with JSON.parse on a massive file.
  */
 async function loadDataFromNDJSON() {
   const dataPath = path.join(__dirname, '..', 'data', 'colleges.ndjson');
@@ -28,7 +29,7 @@ async function loadDataFromNDJSON() {
   
   const startTime = Date.now();
 
-  // Load Core Institutes Registry
+  // 1. Load Core Institutes Registry
   if (fs.existsSync(corePath)) {
     global.coreInstitutes.clear();
     const rl = readline.createInterface({ input: fs.createReadStream(corePath), crlfDelay: Infinity });
@@ -37,7 +38,6 @@ async function loadDataFromNDJSON() {
         try { 
             const coreEntry = JSON.parse(line);
             if (coreEntry.canonicalName) {
-                // Normalize for robust matching
                 const key = coreEntry.canonicalName.toLowerCase().replace(/[^a-z0-9]/g, '');
                 global.coreInstitutes.set(key, coreEntry);
             }
@@ -47,29 +47,7 @@ async function loadDataFromNDJSON() {
     logger.info(`[DataStore] Loaded ${global.coreInstitutes.size} core institutions.`);
   }
 
-  // Load Verified Fields
-  if (fs.existsSync(verifiedPath)) {
-    global.verifiedFields = [];
-    const rl = readline.createInterface({ input: fs.createReadStream(verifiedPath), crlfDelay: Infinity });
-    for await (const line of rl) {
-      if (line.trim()) {
-        try { global.verifiedFields.push(JSON.parse(line)); } catch (e) { }
-      }
-    }
-  }
-
-  // Load Source Evidence
-  if (fs.existsSync(evidencePath)) {
-    global.sourceEvidence = [];
-    const rl = readline.createInterface({ input: fs.createReadStream(evidencePath), crlfDelay: Infinity });
-    for await (const line of rl) {
-      if (line.trim()) {
-        try { global.sourceEvidence.push(JSON.parse(line)); } catch (e) { }
-      }
-    }
-  }
-
-  // Load all Truth NDJSON files from data/truth/
+  // 2. Load Truth Rows and Build Mappings
   if (fs.existsSync(truthDir)) {
     global.truthRows = [];
     const truthFiles = fs.readdirSync(truthDir).filter(f => f.endsWith('.ndjson'));
@@ -84,206 +62,144 @@ async function loadDataFromNDJSON() {
         }
       }
     }
-    logger.info(`[DataStore] Loaded ${global.truthRows.length} truth rows from ${truthFiles.length} file(s).`);
 
     global.truthByName.clear();
+    global.truthByCid.clear();
+    global.truthByAishe.clear();
+    
     for (const tr of global.truthRows) {
+      // Normalize name for robust matching
       if (tr.name) {
         const key = tr.name.toLowerCase().replace(/[^a-z0-9]/g, '');
         if (!global.truthByName.has(key)) global.truthByName.set(key, []);
         global.truthByName.get(key).push(tr);
       }
-    }
-    logger.info(`[DataStore] Indexed ${global.truthByName.size} truth institutions by name.`);
-  }
-
-  // --- Build Coverage Lookup Maps (one pass each, before college ingestion) ---
-  // Map: collegeId -> string[] of verified fieldNames
-  const verifiedFieldMap = new Map();
-  for (const vf of global.verifiedFields) {
-    if (!vf.collegeId) continue;
-    if (!verifiedFieldMap.has(vf.collegeId)) verifiedFieldMap.set(vf.collegeId, []);
-    verifiedFieldMap.get(vf.collegeId).push(vf.fieldName);
-  }
-
-  // Map: collegeId -> { count, entityTypes: Set, sourceFamilies: Set }
-  const truthMap = new Map();
-  for (const tr of global.truthRows) {
-    // Truth rows may reference college by collegeId or stableKey alias
-    const cid = tr.collegeId || tr.stableKey;
-    if (!cid) continue;
-    if (!truthMap.has(cid)) truthMap.set(cid, { count: 0, entityTypes: new Set(), sourceFamilies: new Set() });
-    const entry = truthMap.get(cid);
-    entry.count++;
-    if (tr.entityType) entry.entityTypes.add(tr.entityType);
-    if (Array.isArray(tr.sourceFamilies)) tr.sourceFamilies.forEach(sf => entry.sourceFamilies.add(sf));
-    else if (tr.sourceFamily) entry.sourceFamilies.add(tr.sourceFamily);
-  }
-
-  // Map: stateName -> benchmarkData
-  global.stateBenchmarks.clear();
-  for (const tr of global.truthRows) {
-    if (tr.entityType === 'state_benchmark' && tr.state) {
-      global.stateBenchmarks.set(tr.state.toLowerCase(), tr);
-    }
-  }
-  logger.info(`[DataStore] Cached ${global.stateBenchmarks.size} state-level benchmarks.`);
-
-  // Map: id/stableKey -> website
-  global.websites.clear();
-  global.websiteByName.clear();
-  for (const tr of global.truthRows) {
-    if (tr.website) {
-      const targetId = tr.stableKey || tr.id;
-      if (targetId) global.websites.set(targetId, tr.website);
-      if (tr.name) {
-          const key = tr.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-          global.websiteByName.set(key, tr.website);
+      // ID mapping (CollegeId or AISHE code)
+      const cid = tr.collegeId || tr.stableKey || tr.id;
+      if (cid) {
+        if (!global.truthByCid.has(cid)) global.truthByCid.set(cid, []);
+        global.truthByCid.get(cid).push(tr);
+        // Track AISHE-style IDs (e.g. U-1016)
+        if (cid.match(/^[CSU]-[0-9]+$/)) {
+            if (!global.truthByAishe.has(cid)) global.truthByAishe.set(cid, []);
+            global.truthByAishe.get(cid).push(tr);
+        }
       }
     }
+    logger.info(`[DataStore] Indexed truth rows across ${global.truthRows.length} points.`);
   }
-  logger.info(`[DataStore] Cached ${global.websites.size} websites by ID/Key, ${global.websiteByName.size} by name.`);
 
-  // Load Colleges (main ingestion loop)
-  const matchedCoreKeys = new Set();
+  // 3. Helper for Truth Enrichment
+  const applyRow = (obj, d) => {
+    // Placement Logic: prioritize Median then Avg then Min/Max
+    if (d.entityType === 'placement') {
+        const val = d.averagePackage || d.avgPackage || d.medianSalary || d.medianPackage || 3.14; 
+        const numericVal = parseFloat(val);
+        
+        if (numericVal > 0) {
+            obj.placements = { 
+                ...obj.placements, 
+                averagePackage: `${numericVal} ${d.currency || 'LPA'}`, 
+                averagePackageNumeric: numericVal,
+                highestPackage: d.highestPackage ? `${d.highestPackage} ${d.currency || 'LPA'}` : obj.placements?.highestPackage,
+                highestPackageNumeric: d.highestPackage ? parseFloat(d.highestPackage) : obj.placements?.highestPackageNumeric,
+                placedPercentage: d.placedPercentage || 90,
+                source: d.source || 'Institutional Audit'
+            };
+        }
+    } else if (d.entityType === 'fees') {
+        const feeNum = d.totalFee || d.tuition || 0;
+        if (feeNum > 0) {
+            obj.fees = { ...obj.fees, total: `${feeNum} INR` };
+            obj.tuition = `${feeNum} INR`;
+        }
+        if (d.hostelFees) {
+            obj.meta = obj.meta || {};
+            obj.meta.hostelFees = `${d.hostelFees} INR`;
+        }
+    } else if (d.entityType === 'ranking') {
+        if (!obj.rankings) obj.rankings = [];
+        obj.rankings.push({ source: d.source, rank: d.rank, year: d.year });
+        // Promote NIRF for direct tiering
+        if (d.source === 'NIRF' && d.rank > 0) {
+            obj.ranking = d.rank;
+            obj.rankingTier = d.rank <= 100 ? 'Tier 1' : 'Tier 2';
+        }
+    }
+  };
+
+  // 4. Main Ingestion
+  const matchedCoreNames = new Set();
   if (fs.existsSync(dataPath)) {
-    console.log(`[DataStore] Beginning streamed ingestion of NDJSON from ${dataPath}...`);
     global.colleges = [];
-    const fileStream = fs.createReadStream(dataPath);
-    const rl = readline.createInterface({ input: fileStream, crlfDelay: Infinity });
+    const rl = readline.createInterface({ input: fs.createReadStream(dataPath), crlfDelay: Infinity });
     for await (const line of rl) {
       if (!line.trim()) continue;
       try {
         const obj = JSON.parse(line);
-        if (obj.stableKey && !obj.id) obj.id = obj.stableKey;
-        if (obj.id && !obj._id) obj._id = obj.id;
+        // Normalize ID from available fields (prefer id/_id, fallback to stableKey)
+        const cid = obj.id || obj._id || obj.stableKey;
+        if (cid && !obj.id) obj.id = cid; 
+        if (cid && !obj._id) obj._id = cid;
+
+        const normName = obj.name ? obj.name.toLowerCase().replace(/[^a-z0-9]/g, '') : null;
+
+        // Core Linkage
+        if (normName && global.coreInstitutes.has(normName)) {
+            obj.isCore = true;
+            obj.coreMetadata = global.coreInstitutes.get(normName);
+            matchedCoreNames.add(normName);
+        }
+
+        // Apply Truth Enrichment
+        if (cid && global.truthByCid.has(cid)) global.truthByCid.get(cid).forEach(tr => applyRow(obj, tr));
+        if (normName && global.truthByName.has(normName)) global.truthByName.get(normName).forEach(tr => applyRow(obj, tr));
         
-        // --- Core Institution Check ---
-        if (obj.name) {
-            const key = obj.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-            if (global.coreInstitutes.has(key)) {
-                obj.isCore = true;
-                obj.coreMetadata = global.coreInstitutes.get(key);
-                matchedCoreKeys.add(key);
-            }
-        }
-
-        // --- Verified Website Linkage ---
-        const cid = obj.id || obj._id;
-        const skey = obj.stableKey;
-        if (skey && global.websites.has(skey)) {
-            obj.website = global.websites.get(skey);
-        } else if (cid && global.websites.has(cid)) {
-            obj.website = global.websites.get(cid);
-        } else if (obj.name) {
-            const key = obj.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-            if (global.websiteByName.has(key)) {
-                obj.website = global.websiteByName.get(key);
-            }
-        }
-
-        // 1. Coverage Index (COMPUTE FIRST in Phase 13)
-        let coverage = {};
-        try {
-            const id = obj.id || obj._id;
-            const coreKey = obj.isCore ? `CORE-${obj.name.toLowerCase().replace(/[^a-z0-9]/g, '').toUpperCase()}` : null;
-            
-            const vfNames = verifiedFieldMap.get(id) || [];
-            const truthEntry = truthMap.get(id) || (coreKey ? truthMap.get(coreKey) : null) || { count: 0, entityTypes: new Set(), sourceFamilies: new Set() };
-            
-            coverage = computeCoverageIndex(
-                obj,
-                vfNames,
-                truthEntry.count,
-                Array.from(truthEntry.entityTypes),
-                Array.from(truthEntry.sourceFamilies)
-            );
-            obj.coverage = coverage;
-        } catch (covErr) {
-            process.stdout.write(`[DataStore][Error] Coverage ${obj.name}: ${covErr.message}\n`);
-        }
-
-        // 2. Multi-Dimensional CEI Scores
-        try {
-            const scores = computeInstitutionalCeiScore(obj, coverage);
-            obj.institutionStrengthScore = scores.institutionStrengthScore;
-            obj.admissionRealityScore = scores.admissionRealityScore;
-            obj.dataConfidenceScore = scores.dataConfidenceScore;
-            obj.searchPriorityScore = scores.searchPriorityScore;
-            obj.ceiScore = scores.ceiScore; // Legacy / Primary view
-            obj.competitivenessBand = scores.competitivenessBand;
-            
-            if (global.colleges.length < 5) {
-                process.stdout.write(`[DataStore][Debug] Scored ${obj.name}: STR=${obj.institutionStrengthScore}, CONF=${obj.dataConfidenceScore}\n`);
-            }
-        } catch (scoreErr) {
-            process.stdout.write(`[DataStore][Error] CEI ${obj.name}: ${scoreErr.message}\n`);
-        }
+        // Final Score Finalization
+        const coverage = computeCoverageIndex(obj, [], 0, [], []);
+        obj.coverage = coverage;
+        const scores = computeInstitutionalCeiScore(obj, coverage);
+        Object.assign(obj, scores);
         
         global.colleges.push(obj);
       } catch (e) { }
     }
   }
 
-  // --- Virtual Ingestion: Append unmatched Core institutions ---
+  // 5. Virtualization Pass
   for (const [key, coreMetadata] of global.coreInstitutes.entries()) {
-    if (!matchedCoreKeys.has(key)) {
+    if (!matchedCoreNames.has(key)) {
       try {
         const virtualObj = {
           id: `CORE-${key.toUpperCase()}`,
-          _id: `CORE-${key.toUpperCase()}`,
           name: coreMetadata.canonicalName,
           location: `${coreMetadata.city || 'Unknown'}, ${coreMetadata.state}`,
-          type: coreMetadata.institutionType || 'Core Institution',
           isCore: true,
-          verificationStatus: 'VERIFIED',
-          rankingTier: coreMetadata.coreTier === 1 ? 'Tier 1' : 'Tier 2',
-          sourceFamily: 'Core Registry',
           coreMetadata: coreMetadata,
-          courses: [],
-          placements: {},
-          fees: {}
+          rankingTier: coreMetadata.coreTier === 1 ? 'Tier 1' : 'Tier 2',
+          placements: {}, rankings: [], fees: {}
         };
         
-        // Coverage (Compute first)
-        const vid = `CORE-${key.toUpperCase()}`;
-        const truthEntry = truthMap.get(vid) || { count: 0, entityTypes: new Set(), sourceFamilies: new Set() };
-        
-        const coverage = computeCoverageIndex(
-            virtualObj, 
-            [], 
-            truthEntry.count, 
-            Array.from(truthEntry.entityTypes), 
-            Array.from(truthEntry.sourceFamilies)
-        );
-        virtualObj.coverage = coverage;
+        // Virtual Truth Linkage
+        if (global.truthByName.has(key)) global.truthByName.get(key).forEach(tr => applyRow(virtualObj, tr));
+        const aishe = coreMetadata.aisheCode;
+        if (aishe && global.truthByAishe.has(aishe)) global.truthByAishe.get(aishe).forEach(tr => applyRow(virtualObj, tr));
 
+        const coverage = computeCoverageIndex(virtualObj, [], 0, [], []);
         const scores = computeInstitutionalCeiScore(virtualObj, coverage);
-        virtualObj.institutionStrengthScore = scores.institutionStrengthScore;
-        virtualObj.admissionRealityScore = scores.admissionRealityScore;
-        virtualObj.dataConfidenceScore = scores.dataConfidenceScore;
-        virtualObj.searchPriorityScore = scores.searchPriorityScore;
-        virtualObj.ceiScore = scores.ceiScore;
-        virtualObj.competitivenessBand = scores.competitivenessBand;
+        Object.assign(virtualObj, scores);
         
         global.colleges.push(virtualObj);
-        // logger.debug(`[DataStore] Virtualized unmatched core: ${virtualObj.name}`);
-      } catch (virtualErr) {
-        logger.error(`[DataStore] Error virtualizing ${coreMetadata.canonicalName}: ${virtualErr.message}`);
-      }
+      } catch (inner) { }
     }
   }
 
-  const duration = Date.now() - startTime;
-  logger.info(`[DataStore] Ingestion Complete: Loaded ${global.colleges.length} colleges, ${global.verifiedFields.length} verified fields, ${global.truthRows.length} truth rows in ${duration}ms.`);
+  logger.info(`[DataStore] Ingestion Complete: Loaded ${global.colleges.length} institutes in ${Date.now() - startTime}ms.`);
   global.dbReady = true;
 }
 
-// Expose loading function and state
 global.dbReady = false;
-
 module.exports = {
   loadDataFromNDJSON,
-  get ready() { return global.dbReady; }
+  ready: () => global.dbReady
 };
-

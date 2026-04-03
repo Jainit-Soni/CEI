@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import ClientProviders from "../components/ClientProviders";
-import ComparisonDrawer from "../components/college/ComparisonDrawer";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Outfit, Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
@@ -117,9 +116,6 @@ export default function RootLayout({ children }) {
 
               {/* Universal Footer */}
               <Footer />
-
-              {/* Comparison Drawer */}
-              <ComparisonDrawer />
             </div>
           </ErrorBoundary>
         </ClientProviders>

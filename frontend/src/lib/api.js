@@ -106,11 +106,15 @@ const normalizeCeiDetail = (res) => {
         state,
         city,
         collegeType: canonical.collegeType || rawFields.profile?.instituteType,
-        ownership: canonical.ownership || rawFields.profile?.ownership,
+        ownership: canonical.ownership || rawFields.profile?.ownership || rawData.meta?.ownership,
         courses: res.courseOfferings || rawData.courseOfferings || rawData.courses || [],
         engineeringCutoffs: res.engineeringCutoffsSummary || rawData.engineeringCutoffs || [],
         rankings: res.rankings || rawData.rankings || [],
-        medicalCounselling: res.medicalCounsellingSummary || rawData.medicalCounselling || null
+        medicalCounselling: res.medicalCounsellingSummary || rawData.medicalCounselling || null,
+        meta: rawData.meta || {},
+        fees: rawData.fees || {},
+        placements: rawData.placements || {},
+        tuition: rawData.tuition || null
     };
 };
 
@@ -250,8 +254,13 @@ export async function fetchCollegesBatch(ids) {
       )
     );
 
-    // Merge all data arrays
-    return results.flatMap(res => res.data || res);
+    // Each item from batch is a full page-cache object: { college, rankings, anomalies, ... }
+    // Pass the full item so normalizeCeiDetail can read top-level fields correctly
+    const rawItems = results.flatMap(res => res.data || res);
+    return rawItems.map(item => {
+        // Handle both wrapped { college: {...} } and bare college objects
+        return normalizeCeiDetail(item);
+    }).filter(c => c && (c.id || c._id));
   } catch (err) {
     console.error("Batch fetch failed", err);
     throw err;

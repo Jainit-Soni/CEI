@@ -1,4 +1,5 @@
 import { memo } from "react";
+import Link from "next/link";
 import { Sparkles, ExternalLink, FileText, Globe } from "lucide-react";
 import TrustBadge from "./TrustBadge";
 import AddToCompareButton from "./AddToCompareButton";
@@ -59,7 +60,13 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
           <div className="card-heading-group">
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
               <h3 className="card-full-name" title={data?.displayName || title || data?.name || data?.shortName}>
-                {data?.displayName || title || data?.name || data?.shortName || "Unknown Institute"}
+                <Link 
+                  href={href || "#"} 
+                  className="main-link stretched-link"
+                  {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
+                >
+                  {data?.displayName || title || data?.name || data?.shortName || "Unknown Institute"}
+                </Link>
               </h3>
               {resolvedType === 'college' && (
                 <TrustBadge 
@@ -264,17 +271,7 @@ function Card({ title, subtitle, tags = [], meta = [], type = "default", variant
     </div>
   );
 
-  const isValidHref = href && !href.includes("undefined");
-
-  return isValidHref ? (
-    <a
-      href={href}
-      {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
-      style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}
-    >
-      {card}
-    </a>
-  ) : card;
+  return card;
 }
 
 export default memo(Card);

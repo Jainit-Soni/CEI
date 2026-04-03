@@ -12,6 +12,7 @@ import SearchWithSuggestions from "./SearchWithSuggestions";
 import HeaderSignal from "./home/HeaderSignal";
 import { useAuth } from "@/lib/AuthContext";
 import { useScores } from "@/lib/ScoreContext";
+import { useComparator } from "@/hooks/useComparator";
 import { Menu, X, ArrowLeft, Trophy, Heart, User, Sparkles, MapPin, TrendingUp, Search } from "lucide-react";
 import "./Header.css";
 
@@ -27,6 +28,7 @@ export default function Header() {
   const router = useRouter();
   const { user, loading } = useAuth();
   const { scores, saveScores } = useScores();
+  const { pinnedIds } = useComparator();
 
   // Scroll effect
   useEffect(() => {
@@ -65,6 +67,7 @@ export default function Header() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Colleges", path: "/colleges" },
+    { name: "Compare", path: "/compare" },
     { name: "Map", path: "/map" },
     { name: "Exams", path: "/exams" },
     { name: "Scholarships", path: "/scholarships" },
@@ -96,6 +99,9 @@ export default function Header() {
                 className={`nav-item ${isActive(link.path) ? "active" : ""}`}
               >
                 {link.name}
+                {link.name === "Compare" && pinnedIds?.length > 0 && (
+                  <span className="badge-count" style={{ background: '#6366f1' }}>{pinnedIds.length}</span>
+                )}
               </Link>
             ))}
             <Link
@@ -229,7 +235,12 @@ export default function Header() {
               <span className="mobile-nav-label">Main Domains</span>
               {navLinks.filter(l => !['Map', 'ROI Tool', 'Home'].includes(l.name)).map((link) => (
                 <Link key={link.path} href={link.path} className="mobile-list-link" onClick={() => setIsMobileMenuOpen(false)}>
-                  {link.name}
+                  <div className="flex items-center gap-2">
+                      {link.name}
+                      {link.name === "Compare" && pinnedIds?.length > 0 && (
+                          <span className="bg-indigo-500 text-white min-w-[20px] text-center rounded-full text-[10px] font-bold px-1.5 py-0.5">{pinnedIds.length}</span>
+                      )}
+                  </div>
                   <ArrowLeft size={16} className="rotate-180 opacity-40" />
                 </Link>
               ))}

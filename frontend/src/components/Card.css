@@ -27,6 +27,19 @@
   margin: 0 auto;
 }
 
+/* Stretched link pattern for card-wide click without illegal nesting */
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.main-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Colored top accent bar */
 .card::before {
   content: "";
@@ -320,6 +333,8 @@
     inset 0 2px 6px rgba(255, 255, 255, 0.8);
   color: #475569;
   transition: all 0.2s ease;
+  position: relative;
+  z-index: 2;
 }
 
 /* Tier-specific tag colors */
@@ -416,6 +431,8 @@
   gap: 0.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   background: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .card-footer-left {
