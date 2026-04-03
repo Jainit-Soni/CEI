@@ -1,0 +1,116 @@
+
+=======================================================
+  CEI COLLEGE DATA AUDIT ΓÇö FULL METADATA BIFURCATION
+=======================================================
+
+  TOTAL COLLEGES IN DATASTORE: 67,173
+
+=======================================================
+  1. CORE vs NON-CORE
+=======================================================
+  Core Elite Institutions : 2,257
+    Γå│ From NDJSON (matched): 2,233
+    Γå│ Virtual (core-only)  : 24
+  Non-Core Colleges       : 64,916
+
+=======================================================
+  2. BY RANKING TIER
+=======================================================
+  Unranked            : 67,149
+  Tier 1              : 24
+
+=======================================================
+  3. BY INSTITUTION TYPE (from coreMetadata)
+=======================================================
+  Unknown/General               : 67,113
+  IIM                           : 20
+  IIT                           : 16
+  AIIMS                         : 7
+  Private                       : 6
+  NIT                           : 5
+  IIIT                          : 4
+  University                    : 2
+
+=======================================================
+  4. BY INSTITUTION FAMILY (from coreMetadata)
+=======================================================
+  Unknown                       : 67,113
+  Engineering                   : 28
+  Management                    : 25
+  Medical                       : 7
+
+=======================================================
+  5. BY STATE
+=======================================================
+  Uttar Pradesh                      : 11,204
+  Maharashtra                        : 8,568
+  Karnataka                          : 6,717
+  Rajasthan                          : 5,268
+  Madhya Pradesh                     : 4,059
+  Tamil Nadu                         : 4,033
+  Gujarat                            : 3,598
+  Andhra Pradesh                     : 3,508
+  Telangana                          : 2,672
+  West Bengal                        : 2,442
+  Odisha                             : 2,249
+  Kerala                             : 2,172
+  Bihar                              : 1,639
+  Haryana                            : 1,519
+  Punjab                             : 1,503
+  Chhattisgarh                       : 1,201
+  Assam                              : 871
+  Jharkhand                          : 789
+  Uttarakhand                        : 741
+  Jammu and Kashmir                  : 543
+  Himachal Pradesh                   : 482
+  Delhi                              : 348
+  Manipur                            : 167
+  Meghalaya                          : 124
+  Puducherry                         : 122
+  Mizoram                            : 113
+  Nagaland                           : 104
+  Goa                                : 101
+  Tripura                            : 88
+  Arunachal Pradesh                  : 79
+  Sikkim                             : 51
+  Chandigarh                         : 38
+  The Dadra and Nagar Haveli and Daman and Diu: 25
+  Ladakh                             : 17
+  Andaman and Nicobar Islands        : 11
+  Lakshadweep                        : 7
+
+  Total unique states/UTs  : 36
+
+=======================================================
+  6. METADATA COMPLETENESS (fields populated)
+=======================================================
+  Placements data         : 0 (0.0%)
+  Fees data               : 4,117 (6.1%)
+  Rankings data           : 2,233 (3.3%)
+  CEI Score               : 67,149 (100.0%)
+  Website URL             : 46,511 (69.2%)
+  Courses listed          : 3,370 (5.0%)
+  Accreditation info      : 0 (0.0%)
+  GPS Coordinates         : 0 (0.0%)
+  Phone number            : 0 (0.0%)
+  Email address           : 0 (0.0%)
+  Established year        : 0 (0.0%)
+  Core metadata block     : 60 (0.1%)
+
+=======================================================
+  7. DATA CONFIDENCE SCORE DISTRIBUTION
+=======================================================
+  Score 0ΓÇô20      : 48,372 (72.0%)
+  Score 21ΓÇô40     : 0 (0.0%)
+  Score 41ΓÇô60     : 0 (0.0%)
+  Score 61ΓÇô80     : 0 (0.0%)
+  Score 81ΓÇô100    : 0 (0.0%)
+  Score No Score  : 18,801 (28.0%)
+
+=======================================================
+  8. AVAILABLE TOP-LEVEL FIELDS (on full dataset)
+=======================================================
+  stableKey, entityType, name, sourceFamily, sourceUrl, sourceAuthority, sourceDocumentType, documentDate, fetchedAt, extractedAt, academicYear, officialityLevel, confidence, evidencePointer, aisheCode, state, district, location, website, yearOfEstablishment, institutionType, management, universityName, universityType, ceiScore, competitivenessBand, dataConfidenceScore, placements, fees, meta, isCore, searchBoost, rankings, courses
+
+=======================================================
+

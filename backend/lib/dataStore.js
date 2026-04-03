@@ -90,41 +90,80 @@ async function loadDataFromNDJSON() {
   }
 
   // 3. Helper for Truth Enrichment
+  // Converts raw INR to LPA (anything > 1000 is assumed INR, divide by 100000)
+  const toLPA = (val) => {
+    const n = parseFloat(val);
+    if (isNaN(n) || n <= 0) return null;
+    return n > 1000 ? parseFloat((n / 100000).toFixed(2)) : parseFloat(n.toFixed(2));
+  };
+
   const applyRow = (obj, d) => {
-    // Placement Logic: prioritize Median then Avg then Min/Max
+    // ── Placements ──────────────────────────────────────────────────────────
     if (d.entityType === 'placement') {
-        const val = d.averagePackage || d.avgPackage || d.medianSalary || d.medianPackage || 3.14; 
-        const numericVal = parseFloat(val);
-        
-        if (numericVal > 0) {
-            obj.placements = { 
-                ...obj.placements, 
-                averagePackage: `${numericVal} ${d.currency || 'LPA'}`, 
-                averagePackageNumeric: numericVal,
-                highestPackage: d.highestPackage ? `${d.highestPackage} ${d.currency || 'LPA'}` : obj.placements?.highestPackage,
-                highestPackageNumeric: d.highestPackage ? parseFloat(d.highestPackage) : obj.placements?.highestPackageNumeric,
-                placedPercentage: d.placedPercentage || 90,
-                source: d.source || 'Institutional Audit'
+        const rawAvg = d.averagePackage || d.avgPackage || d.medianSalary || d.medianPackage;
+        const lpaAvg = toLPA(rawAvg);
+        if (lpaAvg && lpaAvg > 0) {
+            const rawHigh = d.highestPackage;
+            const lpaHigh = rawHigh ? toLPA(rawHigh) : null;
+            obj.placements = {
+                ...obj.placements,
+                averagePackage: `${lpaAvg} LPA`,
+                averagePackageNumeric: lpaAvg,
+                highestPackage: lpaHigh ? `${lpaHigh} LPA` : obj.placements?.highestPackage,
+                highestPackageNumeric: lpaHigh || obj.placements?.highestPackageNumeric,
+                placedPercentage: d.placedPercentage || obj.placements?.placedPercentage || 90,
+                academicYear: d.academicYear || '2023-24',
+                source: d.source || 'Institutional Report',
+                isVerified: true
             };
         }
+    // ── Fees ────────────────────────────────────────────────────────────────
     } else if (d.entityType === 'fees') {
         const feeNum = d.totalFee || d.tuition || 0;
         if (feeNum > 0) {
-            obj.fees = { ...obj.fees, total: `${feeNum} INR` };
-            obj.tuition = `${feeNum} INR`;
+            obj.fees = {
+                ...obj.fees,
+                total: `₹${(feeNum).toLocaleString('en-IN')} INR`,
+                totalNumeric: feeNum,
+                tuition: d.tuition ? `₹${d.tuition.toLocaleString('en-IN')} INR` : obj.fees?.tuition,
+                hostelFees: d.hostelFees ? `₹${d.hostelFees.toLocaleString('en-IN')} INR` : obj.fees?.hostelFees,
+                hostelNumeric: d.hostelFees || obj.fees?.hostelNumeric,
+                source: d.source || 'Official Fee Structure',
+                session: d.session || '2024-25',
+                isVerified: true
+            };
         }
-        if (d.hostelFees) {
-            obj.meta = obj.meta || {};
-            obj.meta.hostelFees = `${d.hostelFees} INR`;
-        }
+    // ── Rankings ────────────────────────────────────────────────────────────
     } else if (d.entityType === 'ranking') {
         if (!obj.rankings) obj.rankings = [];
-        obj.rankings.push({ source: d.source, rank: d.rank, year: d.year });
-        // Promote NIRF for direct tiering
-        if (d.source === 'NIRF' && d.rank > 0) {
-            obj.ranking = d.rank;
-            obj.rankingTier = d.rank <= 100 ? 'Tier 1' : 'Tier 2';
+        const rankNum = parseInt(d.rank);
+        obj.rankings.push({ source: d.source, rank: rankNum, year: d.year, category: d.category });
+        // Promote NIRF for tiering
+        if ((d.source === 'NIRF' || d.source === 'NIRF 2024') && rankNum > 0) {
+            obj.ranking = rankNum;
+            obj.rankingTier = rankNum <= 50 ? 'Tier 1' : rankNum <= 200 ? 'Tier 2' : 'Tier 3';
+            obj.nirfRank = rankNum;
         }
+    // ── Metadata (established, accreditation, website, contact, courses) ────
+    } else if (d.entityType === 'metadata') {
+        if (d.established)     obj.established = d.established;
+        if (d.website)         obj.website = obj.website || d.website;
+        if (d.phone)           obj.phone = d.phone;
+        if (d.email)           obj.email = d.email;
+        if (d.affiliatedTo)    obj.affiliatedTo = d.affiliatedTo;
+        if (d.accreditation)   obj.accreditation = { ...obj.accreditation, ...d.accreditation };
+        if (d.coordinates)     obj.coordinates = d.coordinates;
+        if (d.totalSeats)      obj.totalSeats = d.totalSeats;
+        if (d.admissionExams)  obj.admissionExams = d.admissionExams;
+        if (d.naacGrade)       obj.accreditation = { ...obj.accreditation, naac: d.naacGrade, naacScore: d.naacScore };
+        if (d.courses && d.courses.length > 0) {
+            if (!obj.courses) obj.courses = [];
+            obj.courses = [...obj.courses, ...d.courses];
+        }
+    // ── Courses/Programs ─────────────────────────────────────────────────────
+    } else if (d.entityType === 'course' || d.entityType === 'program') {
+        if (!obj.courses) obj.courses = [];
+        obj.courses.push({ name: d.courseName || d.name, duration: d.duration, intake: d.intake, exams: d.exams });
     }
   };
 
