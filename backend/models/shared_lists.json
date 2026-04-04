@@ -1,1 +1,62 @@
-{}
+{
+  "294a35786787": {
+    "choices": [
+      {
+        "id": "699ea5535e085fcdd9a21e25",
+        "name": "Indian Institute of Technology Kharagpur",
+        "shortName": "IIT KGP",
+        "rankingTier": "Tier 1",
+        "location": "Kharagpur, Paschim Medinipur, West Bengal",
+        "placements": {
+          "averagePackage": "24.0 LPA",
+          "highestPackage": "2.14 CPA",
+          "highestPackageNumeric": 214
+        },
+        "acceptedExams": [
+          "jee-advanced",
+          "gate",
+          "jam"
+        ],
+        "addedAt": "2026-03-13T05:38:38.807Z"
+      },
+      {
+        "id": "699ea5535e085fcdd9a21d9d",
+        "name": "Indian Institute of Technology Roorkee",
+        "shortName": "IIT Roorkee",
+        "rankingTier": "Tier 1",
+        "location": "Roorkee, Haridwar, Uttarakhand",
+        "placements": {
+          "averagePackage": "18.34 LPA",
+          "highestPackage": "2.0 CPA",
+          "highestPackageNumeric": 200
+        },
+        "acceptedExams": [
+          "jee-advanced",
+          "gate",
+          "jam"
+        ],
+        "addedAt": "2026-03-13T05:38:39.592Z"
+      },
+      {
+        "id": "699ea5525e085fcdd9a21c55",
+        "name": "Indian Institute of Technology Madras",
+        "shortName": "IIT Madras",
+        "rankingTier": "Tier 1",
+        "location": "Chennai, Tamil Nadu",
+        "placements": {
+          "averagePackage": "26.5 LPA",
+          "highestPackage": "1.98 CPA",
+          "highestPackageNumeric": 198
+        },
+        "acceptedExams": [
+          "jee-advanced",
+          "gate",
+          "jam"
+        ],
+        "addedAt": "2026-03-13T05:38:40.313Z"
+      }
+    ],
+    "userName": "jainit",
+    "createdAt": "2026-04-04T11:56:56.932Z"
+  }
+}
