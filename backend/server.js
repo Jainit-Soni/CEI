@@ -157,6 +157,11 @@ async function ensureHydrated() {
       
       if (process.env.NODE_ENV === 'production' && process.env.VERCEL) {
         await cacheService.initializeCache();
+        
+        // Final Force-Flush of the aggregation stats cache
+        const cache = require("./services/cache");
+        await cache.del("stats:aggregate");
+        console.log("[Startup] 🧨 Stats cache purged—all endpoints now forced to re-aggregate.");
       }
       
       console.log(`[Startup] Hydration Complete! Records: ${global.colleges?.length}`);
