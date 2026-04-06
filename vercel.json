@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "api/colleges.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "api/stats/aggregate.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "server.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  }
+}

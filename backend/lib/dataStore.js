@@ -183,18 +183,16 @@ async function loadDataFromNDJSON() {
 
     const rl = readline.createInterface({ input: inputStream, crlfDelay: Infinity });
     for await (const line of rl) {
-      if (!line.trim()) continue;
+      if (!line || line.length < 5) continue; 
       try {
         const obj = JSON.parse(line);
-        // Normalize ID from available fields (prefer id/_id, fallback to stableKey)
-        const cid = obj.id || obj._id || obj.stableKey;
-        if (cid && !obj.id) obj.id = cid; 
-        if (cid && !obj._id) obj._id = cid;
+        if (!obj.name) continue;
 
-        const normName = obj.name ? obj.name.toLowerCase().replace(/[^a-z0-9]/g, '') : null;
+        const normName = obj.name.toLowerCase().trim();
+        const cid = obj.id || obj._id || obj.stableKey;
 
         // Core Linkage
-        if (normName && global.coreInstitutes.has(normName)) {
+        if (global.coreInstitutes.has(normName)) {
             obj.isCore = true;
             obj.coreMetadata = global.coreInstitutes.get(normName);
             matchedCoreNames.add(normName);
@@ -206,7 +204,6 @@ async function loadDataFromNDJSON() {
         
         // Final Score Finalization
         const coverage = computeCoverageIndex(obj, [], 0, [], []);
-        obj.coverage = coverage;
         const scores = computeInstitutionalCeiScore(obj, coverage);
         Object.assign(obj, scores);
         
