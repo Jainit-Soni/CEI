@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const zlib = require('zlib');
 const logger = require('./logger');
 const { computeInstitutionalCeiScore, computeCoverageIndex } = require('./scoringEngine');
 
@@ -22,6 +23,7 @@ global.websiteByName = new Map(); // normalizedName -> websiteUrl
  */
 async function loadDataFromNDJSON() {
   const dataPath = path.join(__dirname, '..', 'data', 'colleges.ndjson');
+  const gzPath = path.join(__dirname, '..', 'data', 'colleges.ndjson.gz');
   const verifiedPath = path.join(__dirname, '..', 'data', 'verified', 'verified_fields.ndjson');
   const evidencePath = path.join(__dirname, '..', 'data', 'verified', 'source_evidence.ndjson');
   const truthDir = path.join(__dirname, '..', 'data', 'truth');
@@ -169,9 +171,17 @@ async function loadDataFromNDJSON() {
 
   // 4. Main Ingestion
   const matchedCoreNames = new Set();
-  if (fs.existsSync(dataPath)) {
+  const activePath = fs.existsSync(gzPath) ? gzPath : (fs.existsSync(dataPath) ? dataPath : null);
+
+  if (activePath) {
     global.colleges = [];
-    const rl = readline.createInterface({ input: fs.createReadStream(dataPath), crlfDelay: Infinity });
+    const isGzip = activePath.endsWith('.gz');
+    let inputStream = fs.createReadStream(activePath);
+    if (isGzip) {
+        inputStream = inputStream.pipe(zlib.createGunzip());
+    }
+
+    const rl = readline.createInterface({ input: inputStream, crlfDelay: Infinity });
     for await (const line of rl) {
       if (!line.trim()) continue;
       try {
