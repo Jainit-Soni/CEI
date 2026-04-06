@@ -1,0 +1,1290 @@
+[dotenv@17.3.1] injecting env (15) from .env.local -- tip: 🛡️ auth for agents: https://vestauth.com
+[
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES (AIIMS), RAEBARELI",
+    "id": "U-1092",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.aiimsrbl.edu.in"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES MADURAI",
+    "id": "U-1304",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://jipmer.edu.in/announcements/aiims-madurai"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES NAGPUR",
+    "id": "U-1051",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://aiimsnagpur.edu.in"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, BHOPAL",
+    "id": "U-0687",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.aiimsbhopal.edu.in"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, BHUBANESWAR",
+    "id": "U-0688",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.aiimsbhubaneswar.edu.in"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, GUWAHATI",
+    "id": "U-1107",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://aiimsguwahati.ac.in"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, JODHPUR",
+    "id": "U-0689",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.aiimsjodhpur.edu.in"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, MANGALAGIRI",
+    "id": "U-0961",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://aiimsmangalagiri.edu.in"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, PATNA",
+    "id": "U-0686",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.aiimspatna.edu.in"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RAIPUR",
+    "id": "U-0690",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.aiimsraipur.edu.in"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RAJKOT",
+    "id": "U-1191",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://aiimsrajkot.edu.in/"
+  },
+  {
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RISHIKESH",
+    "id": "U-0691",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.aiimsrishikesh.edu.in"
+  },
+  {
+    "name": "All India Institute of Medical Sciences Delhi",
+    "id": "CORE-ALLINDIAINSTITUTEOFMEDICALSCIENCESDELHI",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.aiims.edu"
+  },
+  {
+    "name": "All India Institute of Medical Sciences Gorakhpur",
+    "id": "CORE-ALLINDIAINSTITUTEOFMEDICALSCIENCESGORAKHPUR",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "All India Institute of Medical Sciences, New Delhi",
+    "id": "U-0096",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://aiims.edu"
+  },
+  {
+    "name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management, Gwalior",
+    "id": "U-0267",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitm.ac.in"
+  },
+  {
+    "name": "BITS Pilani",
+    "id": "CORE-BITSPILANI",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.bits-pilani.ac.in"
+  },
+  {
+    "name": "BITS Pilani Goa",
+    "id": "CORE-BITSPILANIGOA",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "BITS Pilani Hyderabad",
+    "id": "CORE-BITSPILANIHYDERABAD",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "BURNPUR HOSPITAL (IISCO) BARDHAMAN",
+    "id": "S-5519",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Barrister Ranjit Mohanty  International Institute of Technology (BRMIIT), Bhubaneswar",
+    "id": "C-30165",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.brm.edu.in"
+  },
+  {
+    "name": "Dr. B. R. Ambedkar National Institute of Technology, Jalandhar",
+    "id": "U-0374",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.nitj.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY",
+    "id": "U-1193",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iiitbhopal.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY BHAGALPUR",
+    "id": "U-0953",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitbh.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY RAICHUR",
+    "id": "U-1089",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iiitr.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SURAT",
+    "id": "U-0954",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iiitsurat.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY VADODARA INTERNATIONAL CAMPUS DIU",
+    "id": "C-63929",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://diu.iiitvadodara.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, DHARWAD",
+    "id": "U-0803",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.iiitdwd.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, GUWAHATI",
+    "id": "U-0795",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iiitg.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KALYANI",
+    "id": "U-0796",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "http://www.iiitkalyani.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KOTA",
+    "id": "U-0799",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitkota.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KOTTAYAM",
+    "id": "U-0802",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitkottayam.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, LUCKNOW",
+    "id": "U-0801",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitl.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, NAGPUR",
+    "id": "U-0841",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitn.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, PUNE",
+    "id": "U-0804",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitp.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, RANCHI",
+    "id": "U-0840",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://iiitranchi.ac.in/"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SENAPATI",
+    "id": "U-0770",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitmanipur.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SONIPAT",
+    "id": "U-0800",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://iiitsonepat.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SRI CITY",
+    "id": "U-0760",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiits.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SRIRANGAM",
+    "id": "U-0754",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iiitt.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, UNA",
+    "id": "U-0797",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitu.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, VADODARA",
+    "id": "U-0798",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iiitvadodara.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT AHMEDABAD",
+    "id": "U-1016",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iima.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT AMRITSAR",
+    "id": "U-1001",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimamritsar.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT AND SCIENCE",
+    "id": "C-65915",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://iimsodisha.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT BANGALORE",
+    "id": "U-1014",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimb.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT BODH GAYA",
+    "id": "U-1006",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iimbg.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT INDORE",
+    "id": "U-1012",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimidr.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT KASHIPUR",
+    "id": "U-1009",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimkashipur.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT KOZHIKODE",
+    "id": "U-1013",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimk.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT LUCKNOW",
+    "id": "U-1008",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iiml.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT RAIPUR",
+    "id": "U-1017",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimraipur.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT RANCHI",
+    "id": "U-1003",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimranchi.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT ROHTAK",
+    "id": "U-1015",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimrohtak.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT SAMBALPUR",
+    "id": "U-1002",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimsambalpur.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT SIRMAUR",
+    "id": "U-1005",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimsirmaur.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT TIRUCHIRAPALLI",
+    "id": "U-1000",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimtrichy.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT UDAIPUR",
+    "id": "U-1010",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimu.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT VISAKHAPATNAM",
+    "id": "U-1007",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimv.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT, JAMMU AND KASHMIR",
+    "id": "U-1004",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iimj.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT, KOLKATA",
+    "id": "U-1019",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimcal.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT, NAGPUR",
+    "id": "U-1018",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimnagpur.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT, SHILLONG",
+    "id": "U-1011",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimshillong.ac.in"
+  },
+  {
+    "name": "INDIAN INSTITUTE OF MANAGEMENT,MUMBAI",
+    "id": "U-1283",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Information Technology Agartala",
+    "id": "U-1158",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitagartala.ac.in"
+  },
+  {
+    "name": "Indian Institute of Information Technology Design And Manufacturing, Kurnool",
+    "id": "U-0863",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitk.ac.in"
+  },
+  {
+    "name": "Indian Institute of Information Technology Gwalior",
+    "id": "CORE-INDIANINSTITUTEOFINFORMATIONTECHNOLOGYGWALIOR",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Information Technology Hyderabad",
+    "id": "CORE-INDIANINSTITUTEOFINFORMATIONTECHNOLOGYHYDERABAD",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Information Technology Jabalpur",
+    "id": "CORE-INDIANINSTITUTEOFINFORMATIONTECHNOLOGYJABALPUR",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Information Technology Kancheepuram",
+    "id": "CORE-INDIANINSTITUTEOFINFORMATIONTECHNOLOGYKANCHEEPURAM",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Information Technology, Allahabad",
+    "id": "U-0516",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiita.ac.in"
+  },
+  {
+    "name": "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram",
+    "id": "U-0455",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iiitdm.ac.in"
+  },
+  {
+    "name": "Indian Institute of Information Technology, Dharwad",
+    "id": "C-56451",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.iiitdwd.ac.in"
+  },
+  {
+    "name": "Indian Institute of Management Calcutta",
+    "id": "CORE-INDIANINSTITUTEOFMANAGEMENTCALCUTTA",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iimcal.ac.in"
+  },
+  {
+    "name": "Indian Institute of Management Jammu",
+    "id": "CORE-INDIANINSTITUTEOFMANAGEMENTJAMMU",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Management Tiruchirappalli",
+    "id": "CORE-INDIANINSTITUTEOFMANAGEMENTTIRUCHIRAPPALLI",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Management and commerce",
+    "id": "C-25468",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iimchyderabad.com / www.iimchyd.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology (Banaras Hindu University), Varanasi",
+    "id": "U-0701",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iitbhu.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology (Indian School of Mines), Dhanbad",
+    "id": "U-0205",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iitism.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology BHU",
+    "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYBHU",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Technology Bhilai",
+    "id": "U-0946",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitbhilai.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology Bhubaneswar",
+    "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYBHUBANESWAR",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Technology Bombay",
+    "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYBOMBAY",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 1,
+    "seats": true,
+    "website": "https://www.iitb.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology Dhanbad",
+    "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYDHANBAD",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Indian Institute of Technology Jammu",
+    "id": "U-0906",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://iitjammu.ac.in/"
+  },
+  {
+    "name": "Indian Institute of Technology Madras",
+    "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYMADRAS",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 1,
+    "seats": true,
+    "website": "https://www.iitm.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Bhubaneshwar",
+    "id": "U-0355",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitbbs.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Chennai",
+    "id": "U-0456",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitm.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Delhi",
+    "id": "U-0100",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 1,
+    "seats": true,
+    "website": "https://www.iitd.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Dharwad",
+    "id": "U-0899",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitdh.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Gandhinagar",
+    "id": "U-0139",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitgn.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Goa",
+    "id": "U-0907",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitgoa.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Guwahati",
+    "id": "U-0053",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitg.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Hyderabad",
+    "id": "U-0013",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://iith.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Indore",
+    "id": "U-0273",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iiti.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Jodhpur",
+    "id": "U-0395",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://iitj.ac.in/"
+  },
+  {
+    "name": "Indian Institute of Technology, Kanpur",
+    "id": "U-0517",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 1,
+    "seats": true,
+    "website": "https://www.iitk.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Kharagpur",
+    "id": "U-0573",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitkgp.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Mandi",
+    "id": "U-0184",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitmandi.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Mumbai",
+    "id": "U-0306",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitb.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Palakkad",
+    "id": "U-0878",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://iitpkd.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Patna",
+    "id": "U-0064",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.iitp.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Roorkee",
+    "id": "U-0560",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitr.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Ropar",
+    "id": "U-0378",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.iitrpr.ac.in"
+  },
+  {
+    "name": "Indian Institute of Technology, Tirupati",
+    "id": "U-0844",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://iittp.ac.in"
+  },
+  {
+    "name": "International Institute of Technology & Management",
+    "id": "C-19308",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iitmanagement.com"
+  },
+  {
+    "name": "MEERUT INTERNATIONAL INSTITUTE OF TECHNOLOGY, MEERUT",
+    "id": "C-46974",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.meerutiit.com"
+  },
+  {
+    "name": "Malaviya National Institute of Technology Jaipur",
+    "id": "CORE-MALAVIYANATIONALINSTITUTEOFTECHNOLOGYJAIPUR",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "Malviya National Institute of Technology, Jaipur",
+    "id": "U-0410",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.mnit.ac.in"
+  },
+  {
+    "name": "Maulana Azad National Institute of Technology, Bhopal",
+    "id": "U-0284",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.manit.ac.in"
+  },
+  {
+    "name": "Motilal Nehru National Institute of Technology, Allahabad",
+    "id": "U-0530",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.mnnit.ac.in"
+  },
+  {
+    "name": "NATIONAL INSTITUTE OF TECHNOLOGY, ANDHRA PRADESH",
+    "id": "U-0855",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.nitandhra.ac.in"
+  },
+  {
+    "name": "National Institute of Technology Arunachal Pradesh",
+    "id": "U-0615",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.nitap.ac.in"
+  },
+  {
+    "name": "National Institute of Technology Delhi",
+    "id": "U-0622",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitdelhi.ac.in"
+  },
+  {
+    "name": "National Institute of Technology Goa",
+    "id": "U-0620",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.nitgoa.ac.in/"
+  },
+  {
+    "name": "National Institute of Technology Karnataka Surathkal",
+    "id": "CORE-NATIONALINSTITUTEOFTECHNOLOGYKARNATAKASURATHKAL",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "National Institute of Technology Manipur",
+    "id": "U-0613",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitmanipur.ac.in"
+  },
+  {
+    "name": "National Institute of Technology Meghalaya",
+    "id": "U-0619",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitm.ac.in"
+  },
+  {
+    "name": "National Institute of Technology Mizoram",
+    "id": "U-0617",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitmz.ac.in"
+  },
+  {
+    "name": "National Institute of Technology Nagaland",
+    "id": "U-0618",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitnagaland.ac.in"
+  },
+  {
+    "name": "National Institute of Technology Puducherry",
+    "id": "U-0621",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitpy.ac.in"
+  },
+  {
+    "name": "National Institute of Technology Sikkim",
+    "id": "U-0614",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.nitsikkim.ac.in"
+  },
+  {
+    "name": "National Institute of Technology Tiruchirappalli",
+    "id": "CORE-NATIONALINSTITUTEOFTECHNOLOGYTIRUCHIRAPPALLI",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 1,
+    "seats": true,
+    "website": "https://www.nitt.edu"
+  },
+  {
+    "name": "National Institute of Technology Uttarakhand",
+    "id": "U-0616",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nituk.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Agartala",
+    "id": "U-0493",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nita.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Calicut",
+    "id": "U-0263",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.nitc.ac.in/"
+  },
+  {
+    "name": "National Institute of Technology, Durgapur",
+    "id": "U-0577",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitdgp.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Hamirpur",
+    "id": "U-0189",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nith.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Jamshedpur",
+    "id": "U-0207",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitjsr.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Karnataka",
+    "id": "U-0237",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.nitk.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Kurukshetra",
+    "id": "U-0172",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitkkr.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Patna",
+    "id": "U-0072",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitp.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Raipur",
+    "id": "U-0092",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://nitrr.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Rourkela",
+    "id": "U-0357",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitrkl.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Silchar",
+    "id": "U-0055",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nits.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Srinagar",
+    "id": "U-0197",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://www.nitsri.ac.in"
+  },
+  {
+    "name": "National Institute of Technology, Tiruchirapalli",
+    "id": "U-0467",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.nitt.edu"
+  },
+  {
+    "name": "National Institute of Technology, Warangal",
+    "id": "U-0025",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "https://nitw.ac.in"
+  },
+  {
+    "name": "Pandhi Dwarka Prasad Mishra Indian Institute of Information Technology & Manufacturing , Jabalpur",
+    "id": "U-0286",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.iiitdmj.ac.in"
+  },
+  {
+    "name": "RENAISSANCE UNIVERSITY IISCS",
+    "id": "S-18502",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "SATYAM INTERNATIONAL INSTITUTE OF TECHNOLOGY",
+    "id": "S-19023",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false
+  },
+  {
+    "name": "SATYAM INTERNATIONAL INSTITUTE OF TECHNOLOGY AND MANAGEMENT",
+    "id": "C-71440",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "http://siitm.org/"
+  },
+  {
+    "name": "Sardar Vallabhbhai National Institute of Technology, Surat",
+    "id": "U-0149",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": true,
+    "website": "http://www.svnit.ac.in"
+  },
+  {
+    "name": "Sine International Institute of Technology,Jaipur",
+    "id": "C-25191",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.siitjaipur.org"
+  },
+  {
+    "name": "Visvesvaraya National Institute of Technology, Nagpur",
+    "id": "U-0334",
+    "fees": true,
+    "placements": true,
+    "cutoffs": 0,
+    "seats": false,
+    "website": "https://www.vnit.ac.in"
+  }
+]

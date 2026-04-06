@@ -53,7 +53,17 @@ frontend/node_modules/
 frontend/.next/
 frontend/out/
 frontend/.env.local
+
+# Data exclusions
 backend/data/*.ndjson
+backend/data/*.ndjson.bak*
+backend/data/*.ndjson.corrupted
+backend/data/*.csv
 backend/data/truth/*.ndjson
 backend/data/core/*.ndjson
 backend/data/cutoffs_index.ndjson
+
+# Logs and Temp
+backend/dev_log_backend.txt
+frontend/dev_log.txt
+tmp/

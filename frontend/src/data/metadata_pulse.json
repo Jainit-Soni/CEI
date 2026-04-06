@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-04-05T09:53:29.945Z",
+  "overall": {
+    "totalColleges": 67149,
+    "verifiedSeats": 4541,
+    "coursesListed": 3413,
+    "cutoffsTracked": 460,
+    "placementData": 1112,
+    "feeStructures": 67149,
+    "nirfRanked": 2798,
+    "websitesVerified": 46862,
+    "gpsMapped": 67149
+  },
+  "percentages": {
+    "verifiedSeats": "6.8",
+    "coursesListed": "5.1",
+    "cutoffsTracked": "0.7",
+    "placementData": "1.7",
+    "feeStructures": "100.0",
+    "nirfRanked": "4.2",
+    "websitesVerified": "69.8",
+    "gpsMapped": "100.0"
+  }
+}

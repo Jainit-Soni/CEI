@@ -302,33 +302,37 @@ async function initializeCache() {
       let sourceInfo = "Memory (NDJSON)";
 
       // ── STAGE 1: Source Selection ──────────────────────────────────────────
-      // Prioritize the global.colleges array populated by lib/dataStore.loadDataFromNDJSON()
-      if (global.colleges && global.colleges.length > 0) {
-        logger.info && logger.info("[dataStore] Using global.colleges (NDJSON) as source", { count: global.colleges.length });
-        let collCount = 0;
-        global.colleges.forEach(c => {
-            const cid = String(c.id || c._id || c.stableKey || '');
-            if (cid) {
-                masterMap.set(cid, c);
-                collCount++;
-            }
-        });
-        logger.info && logger.info("[dataStore] masterMap populated from global.colleges", { masterMapSize: masterMap.size, processed: collCount });
-      } else {
-        // Fallback to MongoDB if available andNDJSON is empty (legacy path)
-        try {
-          logger.info && logger.info("[dataStore] Fetching dataset from MongoDB...");
-          const mongoColleges = await College.find({}).lean().timeout(5000);
+      // Prioritize MongoDB as the System of Record (SSoT)
+      try {
+        logger.info && logger.info("[dataStore] Fetching dataset from MongoDB Architecture...");
+        const mongoColleges = await College.find({}).lean().timeout(15000);
+        
+        if (mongoColleges && mongoColleges.length > 0) {
           mongoColleges.forEach(c => masterMap.set(String(c.id || c._id), c));
           sourceInfo = "MongoDB";
-        } catch (mongoErr) {
-          logger.warn && logger.warn("[dataStore] MongoDB fetch failed, using disk fallback", { error: mongoErr.message });
-          const jsonColleges = loadStateCollegeFiles();
-          jsonColleges.forEach(c => {
-            const cid = String(c.id || c._id || c.stableKey || '');
-            if (cid) masterMap.set(cid, c);
-          });
-          sourceInfo = "Disk JSON";
+          logger.info && logger.info("[dataStore] System of Record (MongoDB) loaded.", { count: mongoColleges.length });
+        } else {
+            throw new Error("MongoDB collection is empty");
+        }
+      } catch (mongoErr) {
+        logger.warn && logger.warn("[dataStore] MongoDB SSoT unavailable, falling back to Local NDJSON", { error: mongoErr.message });
+        
+        // Fallback to local global.colleges (populated from NDJSON by loadDataFromNDJSON)
+        if (global.colleges && global.colleges.length > 0) {
+            global.colleges.forEach(c => {
+                const cid = String(c.id || c._id || c.stableKey || '');
+                if (cid) masterMap.set(cid, c);
+            });
+            sourceInfo = "Memory (NDJSON)";
+            logger.info && logger.info("[dataStore] Fallback: Using global.colleges (NDJSON)", { count: global.colleges.length });
+        } else {
+            logger.warn && logger.warn("[dataStore] NDJSON fallback empty, using disk JSON files");
+            const jsonColleges = loadStateCollegeFiles();
+            jsonColleges.forEach(c => {
+                const cid = String(c.id || c._id || c.stableKey || '');
+                if (cid) masterMap.set(cid, c);
+            });
+            sourceInfo = "Disk JSON";
         }
       }
 

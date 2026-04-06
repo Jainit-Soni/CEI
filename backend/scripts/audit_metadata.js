@@ -131,9 +131,11 @@ async function analyze() {
   console.log(`\n${sep}`);
   console.log('  6. METADATA COMPLETENESS (fields populated)');
   console.log(sep);
-  const hasPlacements    = colleges.filter(c => c.placements?.averagePackageNumeric > 0).length;
-  const hasFees          = colleges.filter(c => c.fees?.total || c.fees?.annualFee || c.fees?.tuition).length;
+  const hasPlacements    = colleges.filter(c => c.placements?.averagePackageNumeric > 0 || c.placements?.medianSalaryLPA > 0).length;
+  const hasFees          = colleges.filter(c => c.fees?.totalNumeric > 0 || c.fees?.total || c.fees?.tuition).length;
   const hasRankings      = colleges.filter(c => (c.rankings && c.rankings.length > 0) || c.ranking > 0).length;
+  const hasCutoffs       = colleges.filter(c => c.pastCutoffs?.length > 0).length;
+  const hasSeats         = colleges.filter(c => c.totalSeats > 0).length;
   const hasCeiScore      = colleges.filter(c => c.ceiScore > 0 || c.institutionStrengthScore > 0).length;
   const hasWebsite       = colleges.filter(c => c.website && c.website.trim()).length;
   const hasCourses       = colleges.filter(c => c.courses?.length > 0).length;
@@ -145,9 +147,11 @@ async function analyze() {
   const hasCoreMetadata  = colleges.filter(c => c.coreMetadata).length;
 
   const pct = (n) => `${n.toLocaleString()} (${((n/total)*100).toFixed(1)}%)`;
-  console.log(`  Placements data         : ${pct(hasPlacements)}`);
-  console.log(`  Fees data               : ${pct(hasFees)}`);
-  console.log(`  Rankings data           : ${pct(hasRankings)}`);
+  console.log(`  Placements (Verified)   : ${pct(hasPlacements)}`);
+  console.log(`  Fees (Verified)         : ${pct(hasFees)}`);
+  console.log(`  Rankings (NIRF)         : ${pct(hasRankings)}`);
+  console.log(`  Cutoffs (Admissions)    : ${pct(hasCutoffs)}`);
+  console.log(`  Seat Intake (Verified)  : ${pct(hasSeats)}`);
   console.log(`  CEI Score               : ${pct(hasCeiScore)}`);
   console.log(`  Website URL             : ${pct(hasWebsite)}`);
   console.log(`  Courses listed          : ${pct(hasCourses)}`);

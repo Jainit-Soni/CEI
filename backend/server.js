@@ -44,7 +44,7 @@ const explainRoutes = require("./routes/explain");
 const verificationRoutes = require("./routes/verification");
 const adminAuthRoutes = require("./routes/adminAuth");
 const reviewsRoutes = require("./routes/reviews");
-// const connectDB = require("./config/db"); // Disabled for NDJSON file-based architecture
+const connectDB = require("./config/db"); // Enabled for Production Database
 const { getRedisClient } = require("./config/redis");
 const logger = require("./lib/logger");
 const scheduler = require("./lib/scheduler");
@@ -155,7 +155,7 @@ app.use(async (req, res, next) => {
 
 // Connect to MongoDB & Start Services
 if (process.env.NODE_ENV !== 'test' && !isMaintenanceMode) {
-  // connectDB(); // Disabled Mongoose connection
+  connectDB(); // Re-activate Mongoose connection
   if (!process.env.VERCEL) {
     scheduler.start();
   }

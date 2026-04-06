@@ -16,6 +16,9 @@ const IntelligenceFacts = dynamic(() => import("../components/IntelligenceFacts"
 const TrustTransparency = dynamic(() => import("../components/TrustTransparency"), { 
     loading: () => <div className="h-[300px] w-full animate-pulse bg-white/5 rounded-3xl" />
 });
+const TransparencyPulse = dynamic(() => import("../components/TransparencyPulse"), { 
+    loading: () => <div className="h-[600px] w-full animate-pulse bg-white/5 rounded-3xl" />
+});
 const IntelligencePipeline = dynamic(() => import("../components/CommunityExtras"), { 
     loading: () => <div className="h-[400px] w-full animate-pulse bg-white/5 rounded-3xl" />
 });
@@ -32,6 +35,7 @@ export default function HomeClient() {
                     <CorePaths />
                     <WhyCei />
                     <IntelligenceFacts />
+                    <TransparencyPulse />
                     <TrustTransparency />
                     <IntelligencePipeline />
                 </div>
