@@ -302,37 +302,38 @@ async function initializeCache() {
       let sourceInfo = "Memory (NDJSON)";
 
       // ── STAGE 1: Source Selection ──────────────────────────────────────────
-      // Prioritize MongoDB as the System of Record (SSoT)
+      // Prioritize MongoDB as the Primary SSoT, else HIGHT-DENSITY MEMORY (NDJSON)
       try {
         logger.info && logger.info("[dataStore] Fetching dataset from MongoDB Architecture...");
-        const mongoColleges = await College.find({}).lean().timeout(15000);
+        const mongoColleges = await College.find({}).lean().timeout(10000);
         
         if (mongoColleges && mongoColleges.length > 0) {
           mongoColleges.forEach(c => masterMap.set(String(c.id || c._id), c));
           sourceInfo = "MongoDB";
           logger.info && logger.info("[dataStore] System of Record (MongoDB) loaded.", { count: mongoColleges.length });
         } else {
-            throw new Error("MongoDB collection is empty");
+            throw new Error("MongoDB collection empty or disconnected");
         }
       } catch (mongoErr) {
-        logger.warn && logger.warn("[dataStore] MongoDB SSoT unavailable, falling back to Local NDJSON", { error: mongoErr.message });
+        logger.warn && logger.warn("[dataStore] MongoDB SSoT unavailable, checking HIGH-DENSITY MEMORY...");
         
-        // Fallback to local global.colleges (populated from NDJSON by loadDataFromNDJSON)
-        if (global.colleges && global.colleges.length > 0) {
+        // CRITICAL FIX: Prioritize global.colleges (populated from colleges.ndjson.gz)
+        // This holds the 67,149 verified records.
+        if (global.colleges && global.colleges.length > 10000) {
             global.colleges.forEach(c => {
                 const cid = String(c.id || c._id || c.stableKey || '');
                 if (cid) masterMap.set(cid, c);
             });
-            sourceInfo = "Memory (NDJSON)";
-            logger.info && logger.info("[dataStore] Fallback: Using global.colleges (NDJSON)", { count: global.colleges.length });
+            sourceInfo = "Memory (High-Density)";
+            logger.info && logger.info("[dataStore] Fallback: Using global.colleges (GZIP/NDJSON)", { count: global.colleges.length });
         } else {
-            logger.warn && logger.warn("[dataStore] NDJSON fallback empty, using disk JSON files");
+            logger.warn && logger.warn("[dataStore] Memory buffer stale/small, falling back to Legacy Disk JSON");
             const jsonColleges = loadStateCollegeFiles();
             jsonColleges.forEach(c => {
                 const cid = String(c.id || c._id || c.stableKey || '');
                 if (cid) masterMap.set(cid, c);
             });
-            sourceInfo = "Disk JSON";
+            sourceInfo = "Disk JSON (Legacy)";
         }
       }
 

@@ -137,15 +137,45 @@ app.use((req, res, next) => {
 });
 
 // ==========================================
-// 📦 WAIT FOR IN-MEMORY NDJSON DATASTORE
+// 📦 VERCEL-READY DATA INITIALIZATION
 // ==========================================
-app.use(async (req, res, next) => {
-  if (req.path === '/api/health') return next(); // Let health check through immediately
-  const dataStore = require("./lib/dataStore");
-  try {
-    if (!global.dbReady) {
-      await dataStore.ready;
+// Serverless environments skip the app.listen() block. 
+// We must ensure the datastore is hydrated on the first request.
+let hydrationPromise = null;
+
+async function ensureHydrated() {
+  if (global.dbReady && hydrationPromise === null) return;
+  if (hydrationPromise) return hydrationPromise;
+
+  hydrationPromise = (async () => {
+    try {
+      const dataStore = require("./lib/dataStore");
+      const cacheService = require("./services/dataStore");
+      
+      console.log("[Startup] Triggering High-Density GZIP Hydration...");
+      await dataStore.loadDataFromNDJSON();
+      
+      if (process.env.NODE_ENV === 'production' && process.env.VERCEL) {
+        await cacheService.initializeCache();
+      }
+      
+      console.log(`[Startup] Hydration Complete! Records: ${global.colleges?.length}`);
+      global.dbReady = true;
+    } catch (e) {
+      console.error("❌ Critical Ingestion Failure:", e.message);
+    } finally {
+      hydrationPromise = null;
     }
+  })();
+
+  return hydrationPromise;
+}
+
+app.use(async (req, res, next) => {
+  if (req.path === '/api/health') return next(); 
+  
+  try {
+    await ensureHydrated();
     next();
   } catch (err) {
     console.error("[DataStore] Readiness error:", err);
@@ -153,10 +183,11 @@ app.use(async (req, res, next) => {
   }
 });
 
-// Connect to MongoDB & Start Services
+// Connect to MongoDB
 if (process.env.NODE_ENV !== 'test' && !isMaintenanceMode) {
   connectDB(); // Re-activate Mongoose connection
   if (!process.env.VERCEL) {
+    const scheduler = require("./lib/scheduler");
     scheduler.start();
   }
 }
@@ -367,17 +398,7 @@ const PORT = process.env.PORT || 4000;
 
 if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
   app.listen(PORT, async () => {
-    // Force Data Load on Startup
-    try {
-      await dataStore.loadDataFromNDJSON();
-      console.log(`[Server] global.colleges.length after load: ${global.colleges?.length}`);
-      // Initialize the Redis/L1 cache services from the loaded memory data
-      const cacheService = require("./services/dataStore");
-      await cacheService.initializeCache();
-    } catch (e) {
-      console.error("❌ Critical Ingestion Failure:", e.message);
-    }
-
+    // Note: Hydration is now handled by ensureHydrated() on first request
     const c = { cyan: '\x1b[36m', green: '\x1b[32m', yellow: '\x1b[33m', magenta: '\x1b[35m', reset: '\x1b[0m', bold: '\x1b[1m', blue: '\x1b[34m' };
     const isMissingEnv = missingEnv.length > 0 ? `${c.yellow}ACTIVE ⚠️ (Missing Env Vars)${c.reset}` : `${c.green}Inactive (Healthy)${c.reset}`;
     console.log(`\n${c.cyan}${c.bold}================================================================${c.reset}`);
