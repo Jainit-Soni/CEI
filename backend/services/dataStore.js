@@ -317,23 +317,24 @@ async function initializeCache() {
       } catch (mongoErr) {
         logger.warn && logger.warn("[dataStore] MongoDB SSoT unavailable, checking HIGH-DENSITY MEMORY...");
         
-        // CRITICAL FIX: Prioritize global.colleges (populated from colleges.ndjson.gz)
+        // CRITICAL FIX: Lock to global.colleges (populated from colleges.ndjson.gz)
         // This holds the 67,149 verified records.
-        if (global.colleges && global.colleges.length > 10000) {
+        if (global.colleges && global.colleges.length > 50000) {
             global.colleges.forEach(c => {
                 const cid = String(c.id || c._id || c.stableKey || '');
                 if (cid) masterMap.set(cid, c);
             });
-            sourceInfo = "Memory (High-Density)";
-            logger.info && logger.info("[dataStore] Fallback: Using global.colleges (GZIP/NDJSON)", { count: global.colleges.length });
+            sourceInfo = "Memory (High-Density GZIP)";
+            logger.info && logger.info("[dataStore] System of Record (High-Density) locked.", { count: global.colleges.length });
         } else {
-            logger.warn && logger.warn("[dataStore] Memory buffer stale/small, falling back to Legacy Disk JSON");
+            // ONLY if memory is empty, fall back to legacy JSON to prevent total system failure
+            logger.warn && logger.warn("[dataStore] Memory buffer stale/empty, falling back to Legacy Disk JSON [Emergency Only]");
             const jsonColleges = loadStateCollegeFiles();
             jsonColleges.forEach(c => {
                 const cid = String(c.id || c._id || c.stableKey || '');
                 if (cid) masterMap.set(cid, c);
             });
-            sourceInfo = "Disk JSON (Legacy)";
+            sourceInfo = "Disk JSON (Emergency Legacy)";
         }
       }
 
