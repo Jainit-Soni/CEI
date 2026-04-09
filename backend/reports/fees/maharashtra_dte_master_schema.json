@@ -1,0 +1,14 @@
+{
+  "totalRows": 354,
+  "detectedFields": [
+    "dte_code",
+    "official_institute_name",
+    "city",
+    "state",
+    "status"
+  ],
+  "normalizationApplied": [
+    "stripped leading zeros for numeric code",
+    "normalized institute name for exact match helper"
+  ]
+}

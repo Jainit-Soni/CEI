@@ -1,0 +1,297 @@
+{
+  "timestamp": "2026-04-09T09:43:31.245Z",
+  "global_summary": {
+    "total": 67167,
+    "isCore": 3466,
+    "fees": 67149,
+    "placements": 1082,
+    "rankings": 2825,
+    "cutoffs": 13,
+    "seats": 1517,
+    "courses": 3368,
+    "websites": 46839,
+    "established": 60739
+  },
+  "coverage_percentages": {
+    "total": "100.00%",
+    "isCore": "5.16%",
+    "fees": "99.97%",
+    "placements": "1.61%",
+    "rankings": "4.21%",
+    "cutoffs": "0.02%",
+    "seats": "2.26%",
+    "courses": "5.01%",
+    "websites": "69.74%",
+    "established": "90.43%"
+  },
+  "state_distribution": [
+    {
+      "_id": "Uttar Pradesh",
+      "count": 11208
+    },
+    {
+      "_id": "Maharashtra",
+      "count": 8561
+    },
+    {
+      "_id": "Karnataka",
+      "count": 6719
+    },
+    {
+      "_id": "Rajasthan",
+      "count": 5269
+    },
+    {
+      "_id": "Madhya Pradesh",
+      "count": 4060
+    },
+    {
+      "_id": "Tamil Nadu",
+      "count": 4024
+    },
+    {
+      "_id": "Gujarat",
+      "count": 3595
+    },
+    {
+      "_id": "Andhra Pradesh",
+      "count": 3509
+    },
+    {
+      "_id": "Telangana",
+      "count": 2674
+    },
+    {
+      "_id": "West Bengal",
+      "count": 2440
+    },
+    {
+      "_id": "Odisha",
+      "count": 2249
+    },
+    {
+      "_id": "Kerala",
+      "count": 2172
+    },
+    {
+      "_id": "Bihar",
+      "count": 1639
+    },
+    {
+      "_id": "Haryana",
+      "count": 1519
+    },
+    {
+      "_id": "Punjab",
+      "count": 1505
+    },
+    {
+      "_id": "Chhattisgarh",
+      "count": 1201
+    },
+    {
+      "_id": "Assam",
+      "count": 871
+    },
+    {
+      "_id": "Jharkhand",
+      "count": 789
+    },
+    {
+      "_id": "Uttarakhand",
+      "count": 741
+    },
+    {
+      "_id": "Jammu and Kashmir",
+      "count": 543
+    },
+    {
+      "_id": "Himachal Pradesh",
+      "count": 482
+    },
+    {
+      "_id": "Delhi",
+      "count": 352
+    },
+    {
+      "_id": "Manipur",
+      "count": 167
+    },
+    {
+      "_id": "Meghalaya",
+      "count": 124
+    },
+    {
+      "_id": "Puducherry",
+      "count": 119
+    },
+    {
+      "_id": "Mizoram",
+      "count": 113
+    },
+    {
+      "_id": "Nagaland",
+      "count": 104
+    },
+    {
+      "_id": "Goa",
+      "count": 101
+    },
+    {
+      "_id": "Tripura",
+      "count": 88
+    },
+    {
+      "_id": "Arunachal Pradesh",
+      "count": 79
+    },
+    {
+      "_id": "Sikkim",
+      "count": 51
+    },
+    {
+      "_id": "Chandigarh",
+      "count": 39
+    },
+    {
+      "_id": "The Dadra and Nagar Haveli and Daman and Diu",
+      "count": 25
+    },
+    {
+      "_id": "Ladakh",
+      "count": 17
+    },
+    {
+      "_id": "Andaman and Nicobar Islands",
+      "count": 11
+    },
+    {
+      "_id": "Lakshadweep",
+      "count": 7
+    }
+  ],
+  "duplicate_aishe_count": 0,
+  "placeholder_records": 4,
+  "elite_sample": [
+    {
+      "name": "Barrister Ranjit Mohanty  International Institute of Technology (BRMIIT), Bhubaneswar",
+      "isCore": true,
+      "hasPlacements": false,
+      "hasFees": true
+    },
+    {
+      "name": "Dr. B. R. Ambedkar National Institute of Technology, Jalandhar",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT AHMEDABAD",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT AMRITSAR",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT AND SCIENCE",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT BANGALORE",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT BODH GAYA",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT INDORE",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT KASHIPUR",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT KOZHIKODE",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT LUCKNOW",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT RAIPUR",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT RANCHI",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT ROHTAK",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT SAMBALPUR",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT SIRMAUR",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT TIRUCHIRAPALLI",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT UDAIPUR",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT VISAKHAPATNAM",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    },
+    {
+      "name": "INDIAN INSTITUTE OF MANAGEMENT, JAMMU AND KASHMIR",
+      "isCore": true,
+      "hasPlacements": true,
+      "hasFees": true
+    }
+  ]
+}

@@ -5,7 +5,9 @@
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "test:nirf": "node scripts/tests/nirf_api_contract.test.js",
+    "verify": "npm run test:nirf"
   },
   "dependencies": {
     "@sentry/node": "^10.42.0",

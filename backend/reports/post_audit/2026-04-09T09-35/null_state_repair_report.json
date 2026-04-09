@@ -1,0 +1,548 @@
+{
+  "timestamp": "2026-04-09T09:37:28.650Z",
+  "totalAnalyzed": 60,
+  "resolved": 60,
+  "uncertain": 0,
+  "proposedFixes": [
+    {
+      "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYMADRAS",
+      "name": "Indian Institute of Technology Madras",
+      "currentLocation": "Chennai, Tamil Nadu",
+      "proposedState": "Tamil Nadu",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Tamil Nadu' in location text: \"Chennai, Tamil Nadu\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYBOMBAY",
+      "name": "Indian Institute of Technology Bombay",
+      "currentLocation": "Mumbai, Maharashtra",
+      "proposedState": "Maharashtra",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Maharashtra' in location text: \"Mumbai, Maharashtra\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYBHU",
+      "name": "Indian Institute of Technology BHU",
+      "currentLocation": "Varanasi, Uttar Pradesh",
+      "proposedState": "Uttar Pradesh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Uttar Pradesh' in location text: \"Varanasi, Uttar Pradesh\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYBHUBANESWAR",
+      "name": "Indian Institute of Technology Bhubaneswar",
+      "currentLocation": "Bhubaneswar, Odisha",
+      "proposedState": "Odisha",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Odisha' in location text: \"Bhubaneswar, Odisha\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYDHANBAD",
+      "name": "Indian Institute of Technology Dhanbad",
+      "currentLocation": "Dhanbad, Jharkhand",
+      "proposedState": "Jharkhand",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Jharkhand' in location text: \"Dhanbad, Jharkhand\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFMANAGEMENTCALCUTTA",
+      "name": "Indian Institute of Management Calcutta",
+      "currentLocation": "Kolkata, West Bengal",
+      "proposedState": "West Bengal",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'West Bengal' in location text: \"Kolkata, West Bengal\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFMANAGEMENTTIRUCHIRAPPALLI",
+      "name": "Indian Institute of Management Tiruchirappalli",
+      "currentLocation": "Tiruchirappalli, Tamil Nadu",
+      "proposedState": "Tamil Nadu",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Tamil Nadu' in location text: \"Tiruchirappalli, Tamil Nadu\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFMANAGEMENTJAMMU",
+      "name": "Indian Institute of Management Jammu",
+      "currentLocation": "Jammu, Jammu and Kashmir",
+      "proposedState": "Jammu and Kashmir",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Jammu and Kashmir' in location text: \"Jammu, Jammu and Kashmir\""
+    },
+    {
+      "id": "CORE-NATIONALINSTITUTEOFTECHNOLOGYTIRUCHIRAPPALLI",
+      "name": "National Institute of Technology Tiruchirappalli",
+      "currentLocation": "Tiruchirappalli, Tamil Nadu",
+      "proposedState": "Tamil Nadu",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Tamil Nadu' in location text: \"Tiruchirappalli, Tamil Nadu\""
+    },
+    {
+      "id": "CORE-NATIONALINSTITUTEOFTECHNOLOGYKARNATAKASURATHKAL",
+      "name": "National Institute of Technology Karnataka Surathkal",
+      "currentLocation": "Surathkal, Karnataka",
+      "proposedState": "Karnataka",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Karnataka' in location text: \"Surathkal, Karnataka\""
+    },
+    {
+      "id": "CORE-MALAVIYANATIONALINSTITUTEOFTECHNOLOGYJAIPUR",
+      "name": "Malaviya National Institute of Technology Jaipur",
+      "currentLocation": "Jaipur, Rajasthan",
+      "proposedState": "Rajasthan",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Rajasthan' in location text: \"Jaipur, Rajasthan\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFINFORMATIONTECHNOLOGYHYDERABAD",
+      "name": "Indian Institute of Information Technology Hyderabad",
+      "currentLocation": "Hyderabad, Telangana",
+      "proposedState": "Telangana",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Telangana' in location text: \"Hyderabad, Telangana\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFINFORMATIONTECHNOLOGYGWALIOR",
+      "name": "Indian Institute of Information Technology Gwalior",
+      "currentLocation": "Gwalior, Madhya Pradesh",
+      "proposedState": "Madhya Pradesh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Madhya Pradesh' in location text: \"Gwalior, Madhya Pradesh\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFINFORMATIONTECHNOLOGYJABALPUR",
+      "name": "Indian Institute of Information Technology Jabalpur",
+      "currentLocation": "Jabalpur, Madhya Pradesh",
+      "proposedState": "Madhya Pradesh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Madhya Pradesh' in location text: \"Jabalpur, Madhya Pradesh\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFINFORMATIONTECHNOLOGYKANCHEEPURAM",
+      "name": "Indian Institute of Information Technology Kancheepuram",
+      "currentLocation": "Kancheepuram, Tamil Nadu",
+      "proposedState": "Tamil Nadu",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Tamil Nadu' in location text: \"Kancheepuram, Tamil Nadu\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFSCIENCE",
+      "name": "Indian Institute of Science",
+      "currentLocation": "Bangalore, Karnataka",
+      "proposedState": "Karnataka",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Karnataka' in location text: \"Bangalore, Karnataka\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFSCIENCEEDUCATIONANDRESEARCHPUNE",
+      "name": "Indian Institute of Science Education and Research Pune",
+      "currentLocation": "Pune, Maharashtra",
+      "proposedState": "Maharashtra",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Maharashtra' in location text: \"Pune, Maharashtra\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFSCIENCEEDUCATIONANDRESEARCHKOLKATA",
+      "name": "Indian Institute of Science Education and Research Kolkata",
+      "currentLocation": "Kolkata, West Bengal",
+      "proposedState": "West Bengal",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'West Bengal' in location text: \"Kolkata, West Bengal\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFSCIENCEEDUCATIONANDRESEARCHMOHALI",
+      "name": "Indian Institute of Science Education and Research Mohali",
+      "currentLocation": "Mohali, Punjab",
+      "proposedState": "Punjab",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Punjab' in location text: \"Mohali, Punjab\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFSCIENCEEDUCATIONANDRESEARCHBHOPAL",
+      "name": "Indian Institute of Science Education and Research Bhopal",
+      "currentLocation": "Bhopal, Madhya Pradesh",
+      "proposedState": "Madhya Pradesh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Madhya Pradesh' in location text: \"Bhopal, Madhya Pradesh\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFSCIENCEEDUCATIONANDRESEARCHTHIRUVANANTHAPURAM",
+      "name": "Indian Institute of Science Education and Research Thiruvananthapuram",
+      "currentLocation": "Thiruvananthapuram, Kerala",
+      "proposedState": "Kerala",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Kerala' in location text: \"Thiruvananthapuram, Kerala\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFSCIENCEEDUCATIONANDRESEARCHTIRUPATI",
+      "name": "Indian Institute of Science Education and Research Tirupati",
+      "currentLocation": "Tirupati, Andhra Pradesh",
+      "proposedState": "Andhra Pradesh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Andhra Pradesh' in location text: \"Tirupati, Andhra Pradesh\""
+    },
+    {
+      "id": "CORE-INDIANINSTITUTEOFSCIENCEEDUCATIONANDRESEARCHBERHAMPUR",
+      "name": "Indian Institute of Science Education and Research Berhampur",
+      "currentLocation": "Berhampur, Odisha",
+      "proposedState": "Odisha",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Odisha' in location text: \"Berhampur, Odisha\""
+    },
+    {
+      "id": "CORE-ALLINDIAINSTITUTEOFMEDICALSCIENCESDELHI",
+      "name": "All India Institute of Medical Sciences Delhi",
+      "currentLocation": "New Delhi, Delhi",
+      "proposedState": "Delhi",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Delhi' in location text: \"New Delhi, Delhi\""
+    },
+    {
+      "id": "CORE-ALLINDIAINSTITUTEOFMEDICALSCIENCESGORAKHPUR",
+      "name": "All India Institute of Medical Sciences Gorakhpur",
+      "currentLocation": "Gorakhpur, Uttar Pradesh",
+      "proposedState": "Uttar Pradesh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Uttar Pradesh' in location text: \"Gorakhpur, Uttar Pradesh\""
+    },
+    {
+      "id": "CORE-JAWAHARLALINSTITUTEOFPOSTGRADUATEMEDICALEDUCATIONANDRESEARCH",
+      "name": "Jawaharlal Institute of Postgraduate Medical Education and Research",
+      "currentLocation": "Puducherry, Puducherry",
+      "proposedState": "Puducherry",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Puducherry' in location text: \"Puducherry, Puducherry\""
+    },
+    {
+      "id": "CORE-CHRISTIANMEDICALCOLLEGEVELLORE",
+      "name": "Christian Medical College Vellore",
+      "currentLocation": "Vellore, Tamil Nadu",
+      "proposedState": "Tamil Nadu",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Tamil Nadu' in location text: \"Vellore, Tamil Nadu\""
+    },
+    {
+      "id": "CORE-POSTGRADUATEINSTITUTEOFMEDICALEDUCATIONANDRESEARCH",
+      "name": "Postgraduate Institute of Medical Education and Research",
+      "currentLocation": "Chandigarh, Chandigarh",
+      "proposedState": "Chandigarh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Chandigarh' in location text: \"Chandigarh, Chandigarh\""
+    },
+    {
+      "id": "CORE-ARMEDFORCESMEDICALCOLLEGE",
+      "name": "Armed Forces Medical College",
+      "currentLocation": "Pune, Maharashtra",
+      "proposedState": "Maharashtra",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Maharashtra' in location text: \"Pune, Maharashtra\""
+    },
+    {
+      "id": "CORE-BITSPILANI",
+      "name": "BITS Pilani",
+      "currentLocation": "Pilani, Rajasthan",
+      "proposedState": "Rajasthan",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Rajasthan' in location text: \"Pilani, Rajasthan\""
+    },
+    {
+      "id": "CORE-BITSPILANIGOA",
+      "name": "BITS Pilani Goa",
+      "currentLocation": "Goa, Goa",
+      "proposedState": "Goa",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Goa' in location text: \"Goa, Goa\""
+    },
+    {
+      "id": "CORE-BITSPILANIHYDERABAD",
+      "name": "BITS Pilani Hyderabad",
+      "currentLocation": "Hyderabad, Telangana",
+      "proposedState": "Telangana",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Telangana' in location text: \"Hyderabad, Telangana\""
+    },
+    {
+      "id": "CORE-VELLOREINSTITUTEOFTECHNOLOGY",
+      "name": "Vellore Institute of Technology",
+      "currentLocation": "Vellore, Tamil Nadu",
+      "proposedState": "Tamil Nadu",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Tamil Nadu' in location text: \"Vellore, Tamil Nadu\""
+    },
+    {
+      "id": "CORE-MANIPALINSTITUTEOFTECHNOLOGY",
+      "name": "Manipal Institute of Technology",
+      "currentLocation": "Manipal, Karnataka",
+      "proposedState": "Karnataka",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Karnataka' in location text: \"Manipal, Karnataka\""
+    },
+    {
+      "id": "CORE-THAPARINSTITUTEOFENGINEERINGANDTECHNOLOGY",
+      "name": "Thapar Institute of Engineering and Technology",
+      "currentLocation": "Patiala, Punjab",
+      "proposedState": "Punjab",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Punjab' in location text: \"Patiala, Punjab\""
+    },
+    {
+      "id": "CORE-SRMINSTITUTEOFSCIENCEANDTECHNOLOGY",
+      "name": "SRM Institute of Science and Technology",
+      "currentLocation": "Chennai, Tamil Nadu",
+      "proposedState": "Tamil Nadu",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Tamil Nadu' in location text: \"Chennai, Tamil Nadu\""
+    },
+    {
+      "id": "CORE-AMRITAVISHWAVIDYAPEETHAM",
+      "name": "Amrita Vishwa Vidyapeetham",
+      "currentLocation": "Coimbatore, Tamil Nadu",
+      "proposedState": "Tamil Nadu",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Tamil Nadu' in location text: \"Coimbatore, Tamil Nadu\""
+    },
+    {
+      "id": "CORE-NIRMAUNIVERSITY",
+      "name": "Nirma University",
+      "currentLocation": "Ahmedabad, Gujarat",
+      "proposedState": "Gujarat",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Gujarat' in location text: \"Ahmedabad, Gujarat\""
+    },
+    {
+      "id": "CORE-DHIRUBHAIAMBANIINSTITUTEOFINFORMATIONANDCOMMUNICATIONTECHNOLOGY",
+      "name": "Dhirubhai Ambani Institute of Information and Communication Technology",
+      "currentLocation": "Gandhinagar, Gujarat",
+      "proposedState": "Gujarat",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Gujarat' in location text: \"Gandhinagar, Gujarat\""
+    },
+    {
+      "id": "CORE-BANARASHINDUUNIVERSITY",
+      "name": "Banaras Hindu University",
+      "currentLocation": "Varanasi, Uttar Pradesh",
+      "proposedState": "Uttar Pradesh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Uttar Pradesh' in location text: \"Varanasi, Uttar Pradesh\""
+    },
+    {
+      "id": "CORE-HYDERABADUNIVERSITY",
+      "name": "Hyderabad University",
+      "currentLocation": "Hyderabad, Telangana",
+      "proposedState": "Telangana",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Telangana' in location text: \"Hyderabad, Telangana\""
+    },
+    {
+      "id": "CORE-JAMIAMILLIAISLAMIA",
+      "name": "Jamia Millia Islamia",
+      "currentLocation": "New Delhi, Delhi",
+      "proposedState": "Delhi",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Delhi' in location text: \"New Delhi, Delhi\""
+    },
+    {
+      "id": "CORE-ALIGARHMUSLIMUNIVERSITY",
+      "name": "Aligarh Muslim University",
+      "currentLocation": "Aligarh, Uttar Pradesh",
+      "proposedState": "Uttar Pradesh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Uttar Pradesh' in location text: \"Aligarh, Uttar Pradesh\""
+    },
+    {
+      "id": "CORE-JADAVPURUNIVERSITY",
+      "name": "Jadavpur University",
+      "currentLocation": "Kolkata, West Bengal",
+      "proposedState": "West Bengal",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'West Bengal' in location text: \"Kolkata, West Bengal\""
+    },
+    {
+      "id": "CORE-COLLEGEOFENGINEERINGPUNE",
+      "name": "College of Engineering Pune",
+      "currentLocation": "Pune, Maharashtra",
+      "proposedState": "Maharashtra",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Maharashtra' in location text: \"Pune, Maharashtra\""
+    },
+    {
+      "id": "CORE-FMSDELHI",
+      "name": "FMS Delhi",
+      "currentLocation": "New Delhi, Delhi",
+      "proposedState": "Delhi",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Delhi' in location text: \"New Delhi, Delhi\""
+    },
+    {
+      "id": "CORE-XLRIJAMSHEDPUR",
+      "name": "XLRI Jamshedpur",
+      "currentLocation": "Jamshedpur, Jharkhand",
+      "proposedState": "Jharkhand",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Jharkhand' in location text: \"Jamshedpur, Jharkhand\""
+    },
+    {
+      "id": "CORE-SPJIMRMUMBAI",
+      "name": "SPJIMR Mumbai",
+      "currentLocation": "Mumbai, Maharashtra",
+      "proposedState": "Maharashtra",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Maharashtra' in location text: \"Mumbai, Maharashtra\""
+    },
+    {
+      "id": "CORE-MDIGURGAON",
+      "name": "MDI Gurgaon",
+      "currentLocation": "Gurugram, Haryana",
+      "proposedState": "Haryana",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Haryana' in location text: \"Gurugram, Haryana\""
+    },
+    {
+      "id": "CORE-TISSMUMBAI",
+      "name": "TISS Mumbai",
+      "currentLocation": "Mumbai, Maharashtra",
+      "proposedState": "Maharashtra",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Maharashtra' in location text: \"Mumbai, Maharashtra\""
+    },
+    {
+      "id": "CORE-SYMBIOSISINSTITUTEOFBUSINESSMANAGEMENT",
+      "name": "Symbiosis Institute of Business Management",
+      "currentLocation": "Pune, Maharashtra",
+      "proposedState": "Maharashtra",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Maharashtra' in location text: \"Pune, Maharashtra\""
+    },
+    {
+      "id": "CORE-INSTITUTEOFMANAGEMENTTECHNOLOGYGHAZIABAD",
+      "name": "Institute of Management Technology Ghaziabad",
+      "currentLocation": "Ghaziabad, Uttar Pradesh",
+      "proposedState": "Uttar Pradesh",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Uttar Pradesh' in location text: \"Ghaziabad, Uttar Pradesh\""
+    },
+    {
+      "id": "CORE-NATIONALLAWSCHOOLOFINDIAUNIVERSITY",
+      "name": "National Law School of India University",
+      "currentLocation": "Bangalore, Karnataka",
+      "proposedState": "Karnataka",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Karnataka' in location text: \"Bangalore, Karnataka\""
+    },
+    {
+      "id": "CORE-NALSARUNIVERSITYOFLAW",
+      "name": "NALSAR University of Law",
+      "currentLocation": "Hyderabad, Telangana",
+      "proposedState": "Telangana",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Telangana' in location text: \"Hyderabad, Telangana\""
+    },
+    {
+      "id": "CORE-WESTBENGALNATIONALUNIVERSITYOFJURIDICALSCIENCES",
+      "name": "West Bengal National University of Juridical Sciences",
+      "currentLocation": "Kolkata, West Bengal",
+      "proposedState": "West Bengal",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'West Bengal' in location text: \"Kolkata, West Bengal\""
+    },
+    {
+      "id": "CORE-NATIONALINSTITUTEOFDESIGNAHMEDABAD",
+      "name": "National Institute of Design Ahmedabad",
+      "currentLocation": "Ahmedabad, Gujarat",
+      "proposedState": "Gujarat",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Gujarat' in location text: \"Ahmedabad, Gujarat\""
+    },
+    {
+      "id": "CORE-NATIONALINSTITUTEOFFASHIONTECHNOLOGYDELHI",
+      "name": "National Institute of Fashion Technology Delhi",
+      "currentLocation": "New Delhi, Delhi",
+      "proposedState": "Delhi",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Delhi' in location text: \"New Delhi, Delhi\""
+    },
+    {
+      "id": "CORE-SCHOOLOFPLANNINGANDARCHITECTUREDELHI",
+      "name": "School of Planning and Architecture Delhi",
+      "currentLocation": "New Delhi, Delhi",
+      "proposedState": "Delhi",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Delhi' in location text: \"New Delhi, Delhi\""
+    },
+    {
+      "id": "CORE-INDIANAGRICULTURALRESEARCHINSTITUTE",
+      "name": "Indian Agricultural Research Institute",
+      "currentLocation": "New Delhi, Delhi",
+      "proposedState": "Delhi",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Delhi' in location text: \"New Delhi, Delhi\""
+    },
+    {
+      "id": "CORE-MANIPALCOLLEGEOFPHARMACEUTICALSCIENCES",
+      "name": "Manipal College of Pharmaceutical Sciences",
+      "currentLocation": "Manipal, Karnataka",
+      "proposedState": "Karnataka",
+      "confidence": 98,
+      "method": "Address/Location Parsing",
+      "evidence": "Found state name 'Karnataka' in location text: \"Manipal, Karnataka\""
+    }
+  ]
+}

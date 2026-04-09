@@ -796,6 +796,27 @@ router.get("/colleges/:id/truth/courses", async (req, res) => {
 router.get("/colleges/:id/truth/fees", async (req, res) => {
   try {
     const { id } = req.params;
+
+    // Phase 1.5 - Bridge Elite Fee Source of Truth Layer
+    const collegeDoc = await College.findOne({ $or: [{ id }, { _id: mongoose.isValidObjectId(id) ? id : null }, { stableKey: id }] }).lean();
+    if (collegeDoc && collegeDoc.fees && collegeDoc.fees.isVerified) {
+      return res.json({
+        sectionStatus: 'available',
+        freshnessStatus: 'up_to_date',
+        primarySource: 'Official Fee Structure',
+        lastEvaluatedAt: collegeDoc.fees.promotedAt || new Date().toISOString(),
+        items: [{
+          displayLabel: 'Annual Fee (Total)',
+          degree: 'All Programs',
+          value: collegeDoc.fees.total || ('₹' + collegeDoc.fees.totalNumeric.toLocaleString()),
+          source: {
+            title: collegeDoc.fees.source || 'Verified Elite Source',
+            type: 'primary_authority'
+          }
+        }]
+      });
+    }
+
     const field = await VerifiedField.findOne({ collegeId: id, fieldName: 'tuition_fees' }).lean();
 
     if (!field) {

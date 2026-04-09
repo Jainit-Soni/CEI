@@ -1,0 +1,37 @@
+{
+  "fees": {
+    "present": 67167,
+    "missing": 0,
+    "coverage": "100.00"
+  },
+  "rankings": {
+    "present": 2825,
+    "missing": 64342,
+    "coverage": "4.21"
+  },
+  "placements": {
+    "present": 65121,
+    "missing": 2046,
+    "coverage": "96.95"
+  },
+  "seats": {
+    "present": 0,
+    "missing": 67167,
+    "coverage": "0.00"
+  },
+  "courses": {
+    "present": 3368,
+    "missing": 63799,
+    "coverage": "5.01"
+  },
+  "cutoffs": {
+    "present": 0,
+    "missing": 67167,
+    "coverage": "0.00"
+  },
+  "source_metadata": {
+    "present": 67008,
+    "missing": 159,
+    "coverage": "99.76"
+  }
+}

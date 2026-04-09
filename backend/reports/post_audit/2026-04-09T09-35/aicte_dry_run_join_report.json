@@ -1,0 +1,14 @@
+{
+  "totalAicteRows": 22379,
+  "matchStats": {
+    "level1": 22351,
+    "level2": 0,
+    "level3": 0,
+    "unmatched": 28
+  },
+  "coverageGainForecast": {
+    "collegesEffected": 3253,
+    "intakePoints": 22351,
+    "programPoints": 22351
+  }
+}

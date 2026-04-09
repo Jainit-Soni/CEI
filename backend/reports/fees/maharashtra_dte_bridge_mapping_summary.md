@@ -1,0 +1,5 @@
+# Maharashtra DTE Official Bridge Summary
+- **official_identifier_verified**: 0
+- **official_name_location_verified**: 22
+- **blocked_conflict**: 0
+- **unresolved**: 332

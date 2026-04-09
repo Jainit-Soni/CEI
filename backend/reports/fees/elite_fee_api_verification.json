@@ -1,0 +1,20 @@
+[
+  {
+    "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYBOMBAY",
+    "name": "IIT Bombay",
+    "status": "❌ ERROR",
+    "error": ""
+  },
+  {
+    "id": "CORE-INDIANINSTITUTEOFTECHNOLOGYMADRAS",
+    "name": "IIT Madras",
+    "status": "❌ ERROR",
+    "error": ""
+  },
+  {
+    "id": "CORE-INDIANINSTITUTEOFMANAGEMENTCALCUTTA",
+    "name": "IIM Calcutta",
+    "status": "❌ ERROR",
+    "error": ""
+  }
+]

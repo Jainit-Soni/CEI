@@ -1,0 +1,20 @@
+[
+  {
+    "priority": 1,
+    "target": "Core Institutes Seat Matrices",
+    "rationale": "JoSAA/CSAB verified intake numbers map deterministically.",
+    "missingEntitiesCount": 67167
+  },
+  {
+    "priority": 2,
+    "target": "National State-Level Fee Dumps (Official identifiers)",
+    "rationale": "Maharashtra pipeline proved capability; requires raw AISHE crosswalk table to leapfrog coverage safely.",
+    "missingEntitiesCount": 0
+  },
+  {
+    "priority": 3,
+    "target": "NIRF Placements Extension",
+    "rationale": "Extending NIRF derived placement statistics to all participating universities, beyond core IIT/NIT.",
+    "missingEntitiesCount": 2046
+  }
+]

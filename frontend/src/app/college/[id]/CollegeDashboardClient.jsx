@@ -54,7 +54,7 @@ export default function CollegeDashboardClient({ id, initialData }) {
         { id: "seats", label: "Seats/Intake" },
         { id: "cutoffs", label: "Cut Offs" },
         { id: "placements", label: "Placements" },
-        { id: "roi", label: "ROI" },
+        { id: "fees", label: "Fees" },
         { id: "audit", label: "Truth Audit" },
         { id: "report", label: "Report Data" }
     ];
@@ -258,14 +258,14 @@ export default function CollegeDashboardClient({ id, initialData }) {
                             <NarrativeEdge college={college} />
                         </div>
                     )}
-                    {activeTab === "roi" && (
+                    {activeTab === "fees" && (
                         <div className="animate-fade-in space-y-12">
                             <NarrativeVault collegeId={college.id} />
                             <ROICalculator 
                                 title={`ROI Simulation: ${college.shortName || college.name}`}
                                 initialData={{
-                                    tuition: Number(String(college.fees?.[0]?.amount).replace(/\D/g, '')) || 800000,
-                                    avgPackage: Number(String(college.placements?.[0]?.value).replace(/\D/g, '')) * 100000 || 1200000
+                                    tuition: Number(String(college.fees?.tuitionNumeric || college.fees?.totalNumeric || 800000)),
+                                    avgPackage: Number(String(college.placements?.averagePackageNumeric || 1200000))
                                 }}
                             />
                         </div>
