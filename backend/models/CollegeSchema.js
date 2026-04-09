@@ -80,7 +80,14 @@ const collegeSchema = new mongoose.Schema({
     
     // External IDs
     nirfRank: { type: Number },
-    aisheCode: { type: String, index: true }
+    aisheCode: { type: String, index: true },
+    
+    // Auditing & Provenance (Strict matching support)
+    sourceMetadata: { type: Object },
+    stateRepairSource: { type: String },
+    stateRepairAppliedAt: { type: Date },
+    stateRepairConfidence: { type: Number },
+    stateRepairEvidence: { type: String }
     
 }, { 
     timestamps: true,

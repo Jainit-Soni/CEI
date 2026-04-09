@@ -20,6 +20,7 @@ const fs = require("fs");
 const path = require("path");
 const { computeInstitutionalCeiScore, computeCoverageIndex } = require('../lib/scoringEngine');
 const { getRedisClient } = require("../config/redis");
+const mongoose = require("mongoose");
 const College = require("../models/CollegeSchema");
 const logger = (() => {
   try { return require("../lib/logger"); }
@@ -437,7 +438,23 @@ async function getColleges() {
 
 // ─── getCollegeById ──────────────────────────────────────────────────────────
 async function getCollegeById(id) {
-  // L0: global.colleges — the enriched in-memory registry from lib/dataStore.js
+  // L -1: MongoDB (Live System of Record Priority for detailed views)
+  if (mongoose.connection.readyState === 1) {
+    try {
+      const mongoCol = await College.findOne({
+        $or: [
+          { id: String(id) },
+          { _id: mongoose.isValidObjectId(id) ? id : null },
+          { stableKey: String(id) }
+        ]
+      }).lean();
+      if (mongoCol) return mongoCol;
+    } catch (e) {
+      logger.warn('[dataStore] Mongo fetch failed in getCollegeById', { id, error: e.message });
+    }
+  }
+
+  // L0: global.colleges — secondary fallback to enriched memory registry
   if (global.colleges && global.colleges.length > 0) {
     const col = global.colleges.find(c =>
       String(c.id) === String(id) ||

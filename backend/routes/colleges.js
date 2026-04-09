@@ -842,21 +842,24 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
     const rateField = await VerifiedField.findOne({ collegeId: id, fieldName: 'placement_rate' }).lean();
 
     // --- NDJSON Truth Data Integration (Phase 21) ---
-    const college = (global.colleges || []).find(c => c.id === id || c._id === id || c.stableKey === id);
+    // Fetch a fresh copy from MongoDB to avoid stale memory-cache issues
+    const collegeDoc = await College.findOne({ $or: [{ id }, { _id: mongoose.isValidObjectId(id) ? id : null }, { stableKey: id }] }).lean();
     
     let truthEntries = (global.truthRows || []).filter(tr => 
-      (tr.id === id || tr.stableKey === id || (college && tr.stableKey === college.stableKey)) && 
+      (tr.id === id || tr.stableKey === id || (collegeDoc && tr.stableKey === collegeDoc.stableKey)) && 
       tr.entityType === 'placement'
     );
 
     // Name-based fallback (Phase 21.1)
-    if (truthEntries.length === 0 && college && college.name) {
-      const normName = college.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (truthEntries.length === 0 && collegeDoc && collegeDoc.name) {
+      const normName = collegeDoc.name.toLowerCase().replace(/[^a-z0-9]/g, '');
       const byName = (global.truthByName || new Map()).get(normName) || [];
       truthEntries = byName.filter(tr => tr.entityType === 'placement');
     }
 
-    if (!pkgField && !rateField && truthEntries.length === 0) {
+    const hasIngestedPlacements = collegeDoc && collegeDoc.placements && collegeDoc.placements.source === 'NIRF 2024';
+
+    if (!pkgField && !rateField && truthEntries.length === 0 && !hasIngestedPlacements) {
       return res.json({ 
         sectionStatus: 'official_data_unavailable', 
         items: [],
@@ -865,7 +868,20 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
     }
 
     const items = [];
-    let lastEvaluatedAt = null;
+    let lastEvaluatedAt = collegeDoc?.sourceMetadata?.promotedAt || null;
+
+    // 1. Ingested NIRF 2024 Truth (Phase 22 - Bridge)
+    if (hasIngestedPlacements) {
+      const p = collegeDoc.placements;
+      items.push({
+        displayLabel: 'Median Salary (NIRF)',
+        value: `₹${(p.averagePackageNumeric / 100000).toFixed(2)} LPA`,
+        confidence: 0.98,
+        metricType: 'Median Salary',
+        applicableBatchYear: p.academicYear,
+        source: { title: 'NIRF 2024', type: 'official_source' }
+      });
+    }
 
     // Add NDJSON Truth items first (Higher Priority)
     truthEntries.forEach(tr => {

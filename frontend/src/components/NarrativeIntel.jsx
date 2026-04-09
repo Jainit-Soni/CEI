@@ -38,6 +38,7 @@ const NarrativeIntel = ({ college }) => {
                   <thead>
                     <tr>
                       <th>Authority</th>
+                      <th>Category</th>
                       <th>Rank</th>
                       <th>Year</th>
                     </tr>
@@ -46,12 +47,13 @@ const NarrativeIntel = ({ college }) => {
                     {rankings.length > 0 ? rankings.map((rank, i) => (
                       <tr key={i}>
                         <td>{rank.source || rank.rankingAuthority}</td>
+                        <td className="text-secondary">{rank.category || 'Overall'}</td>
                         <td className="text-accent font-bold">{rank.rank || rank.rankValue}</td>
                         <td>{rank.year || rank.rankingYear}</td>
                       </tr>
                     )) : (
                       <tr>
-                        <td colSpan="3" className="data-empty-tag">Official Ranking Data Pending Audit</td>
+                        <td colSpan="4" className="data-empty-tag">Official Ranking Data Pending Audit</td>
                       </tr>
                     )}
                   </tbody>

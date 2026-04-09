@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-04-09T10:39:30.627Z",
+  "invalidatedKeys": [],
+  "operations": [
+    "dataStore.invalidateCache"
+  ]
+}

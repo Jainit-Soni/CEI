@@ -231,10 +231,10 @@ export default function CollegeDashboardClient({ id, initialData }) {
                 {/* CONTENT VIEWPORT */}
                 <div className="dash-viewport">
                     {activeTab === "overview" && (
-                        <div className="animate-fade-in space-y-12">
+                        <div className="tab-pane animate-fade-in space-y-12">
                             <NarrativeFoundation college={college} />
+                            <NarrativeIntel college={college} />
                             <NarrativeGeography college={college} />
-
                         </div>
                     )}
                     {activeTab === "courses" && (
