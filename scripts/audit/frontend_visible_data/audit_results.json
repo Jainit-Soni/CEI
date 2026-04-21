@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-04-18T18:42:53.555Z",
+  "denominator": {
+    "apiTotalCount": 67294,
+    "traversedUniqueIds": 67294,
+    "match": true,
+    "explanation": "Exact match between API total and traversal."
+  },
+  "stats": {
+    "totalColleges": 67294,
+    "traversedCount": 67294,
+    "hasAddressText": 66597,
+    "hasAddressLink": 66597,
+    "hasOfficialWebsite": 46888,
+    "hasCutoffs": 0,
+    "hasFees": 7083,
+    "hasPlacements": 331,
+    "hasSeats": 61,
+    "hasCourses": 3420,
+    "hasNIRF": 2885,
+    "hasCore": 3551
+  },
+  "percentages": {
+    "hasAddressText": "98.96%",
+    "hasAddressLink": "98.96%",
+    "hasOfficialWebsite": "69.68%",
+    "hasCutoffs": "0.00%",
+    "hasFees": "10.53%",
+    "hasPlacements": "0.49%",
+    "hasSeats": "0.09%",
+    "hasCourses": "5.08%",
+    "hasNIRF": "4.29%",
+    "hasCore": "5.28%"
+  },
+  "nirfLogic": "rankings.some(r => r.source.toUpperCase().includes('NIRF') && (r.rank !== undefined && r.rank !== null))"
+}

@@ -24,6 +24,7 @@
 const { getRedisClient } = require('../config/redis');
 const College = require('../models/CollegeSchema');
 const dataStore = require('./dataStore'); // Unified truth layer
+const normalizeCollege = require('../lib/collegeNormalizer');
 const logger = (() => { try { return require('../lib/logger'); } catch { return console; } })();
 
 // ── Constants ─────────────────────────────────────────────────────────────────
@@ -201,7 +202,8 @@ async function rebuildAll() {
                 try {
                     const fullCollege = await College.findOne({ _id: col._id || col.id }).lean();
                     if (!fullCollege) return;
-                    const payload = await assemblePagePayload(fullCollege);
+                    const normalized = normalizeCollege(fullCollege);
+                    const payload = await assemblePagePayload(normalized);
                     await redis.set(PAGE_KEY(col.id), JSON.stringify(payload), 'EX', TTL);
                     built++;
                 } catch (err) {

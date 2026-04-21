@@ -1,0 +1,37 @@
+{
+  "name": "cmat-problem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "get_meta_stats.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "fs-extra": "^11.3.4",
+    "minimist": "^1.2.8",
+    "mongodb": "^7.1.1",
+    "pdf-parse": "^2.4.5",
+    "pino": "^10.3.1",
+    "playwright": "^1.59.1",
+    "playwright-core": "^1.58.2",
+    "split2": "^4.2.0",
+    "undici": "^8.0.3",
+    "zod": "^4.3.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jainit-Soni/CEI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jainit-Soni/CEI/issues"
+  },
+  "homepage": "https://github.com/Jainit-Soni/CEI#readme"
+}

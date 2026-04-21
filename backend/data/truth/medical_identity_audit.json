@@ -1,0 +1,68 @@
+{
+  "200502": {
+    "legacy_name": "UNKNOWN_MCC_200502",
+    "legacy_id": "CORE-AIIMS-DELHI",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200505": {
+    "legacy_name": "UNKNOWN_MCC_200505",
+    "legacy_id": "CORE-AIIMS-JODHPUR",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200506": {
+    "legacy_name": "UNKNOWN_MCC_200506",
+    "legacy_id": "CORE-AIIMS-RAIPUR",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200508": {
+    "legacy_name": "UNKNOWN_MCC_200508",
+    "legacy_id": "CORE-AIIMS-PATNA",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200512": {
+    "legacy_name": "UNKNOWN_MCC_200512",
+    "legacy_id": "CORE-AIIMS-DEOGARH",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200513": {
+    "legacy_name": "UNKNOWN_MCC_200513",
+    "legacy_id": "CORE-AIIMS-GORAKHPUR",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200514": {
+    "legacy_name": "UNKNOWN_MCC_200514",
+    "legacy_id": "CORE-AIIMS-KALYANI",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200518": {
+    "legacy_name": "UNKNOWN_MCC_200518",
+    "legacy_id": "CORE-AIIMS-VIJAYPUR",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200519": {
+    "legacy_name": "UNKNOWN_MCC_200519",
+    "legacy_id": "CORE-AIIMS-BIBINAGAR",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200520": {
+    "legacy_name": "UNKNOWN_MCC_200520",
+    "legacy_id": "CORE-AIIMS-BHUBANESWAR",
+    "actual_id": null,
+    "actual_name": null
+  },
+  "200580": {
+    "legacy_name": "UNKNOWN_MCC_200580",
+    "legacy_id": "CORE-AIIMS-MADURAI",
+    "actual_id": null,
+    "actual_name": null
+  }
+}

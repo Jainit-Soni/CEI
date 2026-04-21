@@ -11,15 +11,15 @@ import './NarrativeGateway.css';
  * The final barrier to entry: Seats, Admissions, and Cutoffs.
  * Integrated directly into the narrative scroll.
  */
-const NarrativeGateway = ({ collegeId }) => {
+const NarrativeGateway = ({ collegeId, collegeName, cutoffSearchName }) => {
   return (
-    <section className="prestige-section narrative-gateway">
+    <section id="truth-gateway" className="prestige-section narrative-gateway">
       <div className="section-container">
         <div className="glass-card-root gateway-card">
           <header className="narrative-header">
             <span className="prestige-subheading">Strategic Entry</span>
             <h2 className="prestige-heading">Admission Thresholds</h2>
-            <div className="dossier-stamp">Status: 2026 Cutoffs Evaluated</div>
+            <div className="dossier-stamp">Status: 2025 Cutoffs Evaluated</div>
           </header>
 
           <div className="gateway-narrative">
@@ -30,7 +30,11 @@ const NarrativeGateway = ({ collegeId }) => {
                 <h3 className="prestige-heading small">Institutional Cutoffs</h3>
               </div>
               <div className="data-frame">
-                <TruthCutoffsSection collegeId={collegeId} />
+                <TruthCutoffsSection 
+                    collegeId={collegeId} 
+                    collegeName={collegeName}
+                    cutoffSearchName={cutoffSearchName}
+                />
               </div>
             </div>
           </div>

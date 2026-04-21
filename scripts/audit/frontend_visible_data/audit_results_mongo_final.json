@@ -1,0 +1,24 @@
+{
+  "total": 13096,
+  "stats": {
+    "totalColleges": 13096,
+    "hasAddressText": 13096,
+    "hasOfficialWebsite": 0,
+    "hasNIRF": 0,
+    "hasFees": 0,
+    "hasPlacements": 0,
+    "hasSeats": 0,
+    "hasCourses": 13096,
+    "hasCutoffs": 0
+  },
+  "percentages": {
+    "hasAddressText": "100.00%",
+    "hasOfficialWebsite": "0.00%",
+    "hasNIRF": "0.00%",
+    "hasFees": "0.00%",
+    "hasPlacements": "0.00%",
+    "hasSeats": "0.00%",
+    "hasCourses": "100.00%",
+    "hasCutoffs": "0.00%"
+  }
+}

@@ -67,3 +67,10 @@ backend/data/cutoffs_index.ndjson
 backend/dev_log_backend.txt
 frontend/dev_log.txt
 tmp/
+backend/reports/
+backend/reports/post_audit/
+
+# Generated reports / artifacts
+backend/reports/
+cei-extractors/output/
+cei-extractors/sources/output/

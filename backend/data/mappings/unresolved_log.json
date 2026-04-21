@@ -1,0 +1,2502 @@
+[
+  {
+    "id": "C-10086",
+    "name": "SVES'S B.PED COLLEGE, HARUGERI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10907",
+    "name": "Laxmi Narayan Degree College, Pipilia",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10947",
+    "name": "A.P College, Raruan",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-11154",
+    "name": "Warana Mahavidyalaya, AITAWADE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-11223",
+    "name": "Abhinav Education Society College of Engineering  & Technology, Vaddwadi,",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-11287",
+    "name": "St. Bede's College, Shimla",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-11377",
+    "name": "Govt. College, Barsar, Distt Hamirpur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-11609",
+    "name": "Kuttukaram Polytechnic College, North Paravur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-11634",
+    "name": "Mar Baselios College, Adimaly, Idukki 685 561",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-11785",
+    "name": "Govt. Law College, Ernakulam 682 011",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-11928",
+    "name": "Rani Birla Girls' College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-12118",
+    "name": "R.P. DEGREE COLLEGE, KAMALGANJ,",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-12154",
+    "name": "DAYANAND BACHHRAWAN DEGREE COLLEGE,",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-12411",
+    "name": "RAMWATI DEVI NARAYAN MAHAVIDYALAYA, ASALATGANJ,",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-12527",
+    "name": "THAKUR SHIV PRATAP SINGH MAHAVIDYALAYA, SHAH,",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-12565",
+    "name": "SRI YAGYA NARAYAN PANDEY DEGREE COLLEGE, LALAPUR,",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-12607",
+    "name": "NARAYAN MAHAVIDYALAYA, AUNTA, MEJA,",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-12638",
+    "name": "RAGHURAJ SINGH DEGREE COLLEGE, KUBERPUR,",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-12799",
+    "name": "ERAM GIRLS, DEGREE COLLEGE, INDIRA NAGAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-12924",
+    "name": "K.L.S.College,",
+    "reason": "unique_name_geography_mismatch"
+  },
+  {
+    "id": "C-13",
+    "name": "Directorate of Forensic Science (DFS)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-13616",
+    "name": "Swami Govindashram Mahavidyalay, Pairapur, Mirzapur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1375",
+    "name": "S C T Institute of Technology, BANGALORE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-14070",
+    "name": "Bhagwant Pandey Mahavidyalaya, Bodarwar, Kushinagar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-14249",
+    "name": "Devi Sharan Degree College, Parsauna (Kolhui), Maharajganj",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-14330",
+    "name": "Karma Devi Smriti Mahavidyalaya, Sansarpur, basti",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-14415",
+    "name": "C.S.M. College of Education",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-14811",
+    "name": "Annammal college of Education for women, (Aided)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-14929",
+    "name": "Kamala College of Education",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-15209",
+    "name": "S.D.S. MAHAVIDYALAYA, ETAH",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-15577",
+    "name": "SUDAMA DEVI BALIKA DEGREE COLLEGE, ETAH",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-15882",
+    "name": "Ram Pujan Samarak Mahaviyalaya Gorharpur Atrauliy Azamgarh",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-15923",
+    "name": "Maa Duraga Girls College,Dobhi, Jaunpur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-16003",
+    "name": "Sarvseva Mahavidyalaya, Aabadan Bairan, Ghazipur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-16060",
+    "name": "Raja Ram Mahavidyalaya Ramnagar, Jaunpur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-17029",
+    "name": "SCHOOL OF PLANNING AND ARCHTECTURE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-17145",
+    "name": "Madhab Choudhury College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-17254",
+    "name": "Progati College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-17436",
+    "name": "BHM First Grade College, Besagarahalli",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-17617",
+    "name": "RS College, Tarapur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-17653",
+    "name": "Mahadeo Singh College, Bhagalpur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-17737",
+    "name": "ADB First Grade College, Harpanahalli",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-18079",
+    "name": "Vikas Group of Institutions, Nunna, Vijayawada (Rural)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-18263",
+    "name": "Bela College, Bela",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-18465",
+    "name": "Arun Joshi Education College, Hanuman nagar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-18563",
+    "name": "K. Ramesh Thavad Physical Education College, Rajiv Nagar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-18652",
+    "name": "Physical Education College, Aheri",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-18740",
+    "name": "Acharya Vinoba Bhave Arts Commerce Science College, Ballarpur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-18830",
+    "name": "Adarsh Sanskar Vidyalaya, Hasanbagh Road",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-18880",
+    "name": "Annasaheb Gundawar College, Katol Road",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-18916",
+    "name": "Raje Dharmarao Law College, Gadchiroli",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-19991",
+    "name": "Sanskrit Pathshala, Vishwanathpur, Unaval",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-20073",
+    "name": "Shri Hanumat Sanskrit Mahavidyalaya Hanuman Mandir, Rambagh",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-20428",
+    "name": "Shri Ramdev Sanskrit Mahavidyalaya, Baderi",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-20479",
+    "name": "Rudra Adhyatm Sanskrit Mahavidyalaya, Bhayat, Bhopapur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-20532",
+    "name": "Ramrati Rampyare Sanskrit Mahavidyalaya, Brahmapura, Chouri Choura",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-20581",
+    "name": "Shri Parashuram Sanskrit Mahavidyalaya, Jalalabad",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-20644",
+    "name": "United Mission Degree College, Mission Road, Bangalore-27",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-20759",
+    "name": "Govt. First Grade College, Magadi-562102",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-20816",
+    "name": "Govt. First Grade College, Bangarpet-563114, Kolar Dist.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-210",
+    "name": "Om Insti. Of Eng.& Technology, Junagadh 665",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-212",
+    "name": "L.D.COLLEGE OF ENGINEERING, AHMEDABAD 028",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-21463",
+    "name": "College of Basic Science & Humanities, Bhubaneswar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-21574",
+    "name": "VIKAS DEGREE COLLEGE, RATHNAPUR (V), KAMANPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-21677",
+    "name": "B.M. College, Koliha Pur, Pulgaon, Durg",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-21825",
+    "name": "Durga Mahavidyalaya",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-21917",
+    "name": "RAJKIYA SNATAKOTTAR MAHAVIDYALAYA, BAZPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-22061",
+    "name": "L.B.S. Arya Mahila College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-22466",
+    "name": "Lakshmi  Bai College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-23096",
+    "name": "Global Institute of Engineering and Management",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-23882",
+    "name": "SASI DEGREE COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-24057",
+    "name": "Maharajahs PG College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-24496",
+    "name": "Sri Kolla Veera Swamy Degree College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-24629",
+    "name": "Garg U.G. Degree College, Laksar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-24679",
+    "name": "Pt. Lalit Mohan Sharma Government Post Graduate College Rishikesh",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-24911",
+    "name": "VAMSADHARA COLLEGE OF EDUCATION",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-25206",
+    "name": "Acharya Shri Nanesh Samta Mahavidyalaya",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-25281",
+    "name": "SATAVAHANA COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-25572",
+    "name": "MNR College of Pharmacy",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-25986",
+    "name": "Institute of Seismological Research",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-25990",
+    "name": "St. Francis College for Women",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-26165",
+    "name": "Azad Degree College",
+    "reason": "unique_name_geography_mismatch"
+  },
+  {
+    "id": "C-26601",
+    "name": "Maharshi Womens TT College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-26707",
+    "name": "JN Kalavidyalaya, Gadag",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-26931",
+    "name": "Quba College of Engineering & Technology",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-27352",
+    "name": "Gowthami Degree College, Laxmidevipally, Kothagudem",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-27737",
+    "name": "Gayatri Degree College, Tirupati   Urban",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-28008",
+    "name": "Shanti Devi Law College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-28140",
+    "name": "SADASUKH COLLEGE OF EDUCATION",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-28324",
+    "name": "Shri Baba Mast Nath Institute of Management Studies and Research",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-28530",
+    "name": "PMT Memorial college, Kamuthi",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-28665",
+    "name": "S.D. College Muzaffarnagar Mob.No.9412711425. 9897550514",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-28847",
+    "name": "SUNRISE INSTITUE OF EDUCATION & TECH K. K. ROAD, NEAR DADRI (G.B. NAGAR)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-28902",
+    "name": "BABU BANARSI DAS COLLEGE OF TEACHERS 25 KM STONE BULANDSHAHR ANOOPSHAHR ROAD, JAHANGIRABAD, BULANDSHAHR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-28947",
+    "name": "R.K. COLLEGE, GARH ROAD, KITHORE, MEERUT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-28957",
+    "name": "NEW ERA COLLEGE OF EDUCATION 616, BHIKANPUR, DUHAI, MEERUT ROAD, GHAZIABAD Ph. No. 0120-2675610, 2675710",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-29159",
+    "name": "Govt. Dental College, Amritsar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-29193",
+    "name": "Govt. Medical College, Majitha Road, Amritsar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-29276",
+    "name": "Sri Ram College, Dalla",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-29455",
+    "name": "College of Basic Sciences & Humanities",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-29557",
+    "name": "Pitambara sangeet evam kala Mahavidhyalaya, gwl",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-29617",
+    "name": "Degree College, Supaul",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-30696",
+    "name": "Rainbow College of Nursing, Hyderabad",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-30833",
+    "name": "Xavier Centre of Historical Research",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-30924",
+    "name": "A.N.K. Degree College, Gorantla",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-32502",
+    "name": "World Computer Centre",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-32623",
+    "name": "V.T.J.M. & I.V.T.R. Degree College, Mangalagiri",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-32810",
+    "name": "S.V.R.M. College, Nagaram",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-32924",
+    "name": "St . Lawrence College of Higher Education",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-32980",
+    "name": "PT. J.N.M. MEDICAL COLLEGE, RAIPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33097",
+    "name": "COLLEGE OF HOME SCIENCE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33300",
+    "name": "Rani Durgawati College of Horticulture",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33442",
+    "name": "A.P.N. College, Sadar, Jabalpur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33514",
+    "name": "Indira gandhi institute of development research",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33521",
+    "name": "Walavalkar hospital and dignostic centre",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33576",
+    "name": "Centre for research in mental retardation (CREMERE)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33679",
+    "name": "Unichem laboratories ltd",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33693",
+    "name": "Konkan Education Societys Narayan Nagu Patil Engineering College Pen Dist.Raigad",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33753",
+    "name": "Kishinchand Chellaram College Dinshaw Wachha Road  Churchgate Mumbai  400 020",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33790",
+    "name": "The Institute of Science  Fort Mumbai  400 032",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33872",
+    "name": "G. M. VEDAK COLLEGE OF SCIENCE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-33942",
+    "name": "The research and development department of the indian organic chemicals ltd",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34019",
+    "name": "ITM Trusts Institute of Hotel Management ITM Campus 25 & 26 Institutional Area Sector-4 Kharghar (E) Navi Mumbai  410 210",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34120",
+    "name": "Society for applied microwave electronics engg. and research department of electronics",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34150",
+    "name": "Master Education Society College of Arts  Science and Commerce  Nalasopara  Taluka Vasai Dist  Thane",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34229",
+    "name": "Agricultural Research Station, Radhanpur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34244",
+    "name": "CRSS Jagudan",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34346",
+    "name": "Maulana Azad Education Society's Horniman College of Journalism & Mass Communication",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72753",
+    "name": "ARHAM INTERNATIONAL INSTITUTE OF INFORMATION SECURITY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34472",
+    "name": "Savitribai Phule Mahila Shikshan Prasarak Mandal's Gurukul College of Education, Gurukul Nagar, Beed.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34550",
+    "name": "Aditya Institute of Management & Research Centre, Telegaon Road.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34578",
+    "name": "Millennium Institute of Management, Rauza Bagh, Aurangabad.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-34966",
+    "name": "RISHISHWAR COLLEGE , PHOOF",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-35088",
+    "name": "Jawaharlal Nehru Medical College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-35404",
+    "name": "Christian School of Health Science",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-35405",
+    "name": "Chitamber School of Humanities & Social Sciences",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-35608",
+    "name": "KLEs Arts & Commerce College, Ankola (UK)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-35907",
+    "name": "VIKAS DEGREE COLLEGE,KHAMBAMPADU",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-36191",
+    "name": "Kailash Narayan Patidar College of Science & Technology, Misrod, Bhopal",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-36462",
+    "name": "Dr. M.G.R. Engineering and College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-36901",
+    "name": "Karuna Shikshan Prashikshan Mahavidhyalaya",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-38300",
+    "name": "A N TT College, Sikar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-38373",
+    "name": "Vinayak College, Dausa",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-38501",
+    "name": "Advait Mahila Mahavidyalaya, Dausa",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-38717",
+    "name": "Lord Krishana College of Edu., Alwar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-39057",
+    "name": "Govt. College of Physical, Jodhpur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-39182",
+    "name": "G D College, Jaipur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-39596",
+    "name": "V.H.J.Mohavidyalaya, Nikirai,Kendrapara",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-39802",
+    "name": "Patitapaban Mahavidyalaya,Jarapara,Angul",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-4",
+    "name": "B. V. Patel Pharmaceutical Education & Research Development (PERD) Centre",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-40014",
+    "name": "GOVT. COLLEGE, AMET",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-40453",
+    "name": "St. John's Medical College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-40738",
+    "name": "M.G. Memorial College, Jetsar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-40954",
+    "name": "Jagannath Degree College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41267",
+    "name": "Arihant Institute of Management Studies AIMS SHL Court, Near Pulgate Bus Stand, Camp, Pune 411001",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41324",
+    "name": "Mitcon Institute of Management, Balewadi, Pune 411045",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41351",
+    "name": "Bansilal Ramnath Agarwal Charitable Trusts Vishwakarama Institute of Technology, Apper Indiranagar, Pune  411037",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41425",
+    "name": "P.G.K.M.S. Institute of Management,Pune 411011",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41560",
+    "name": "Navjeevan College of Computer Science, CIDCO, Shivshakti Chowk, Nashik 422009",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41587",
+    "name": "Vishwabharati  Academys College of Engineering, Jamkhed Road, Ahmednagar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41623",
+    "name": "K.E.M.Hospital and Research Institute, Rasta Peth, Sardar Mudalliar Road, Pune 411011",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41670",
+    "name": "K.S.Wani Marathi Pragat Adhayan Organization, Deopur, Dhule 424002",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41732",
+    "name": "Centre for Rheumatic Diseases, Camp,Pune 411001",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-41903",
+    "name": "Dina Institute of Hotel and Business Management, Timanna Nivas, Model Colony, Pune 411016",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-42076",
+    "name": "Maharashtra Institute of Engineering Research, Dindori Road, Nashik 422004",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-42153",
+    "name": "Bhagwati Institute of Hotel Management Shukrawar Peth, Pune",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-42192",
+    "name": "C.E.S.Dr. Arvind B.Telang Institute of Hotel Management, Chinchwad, Pune 411019",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72754",
+    "name": "JAI MAA SUDAMI DEVI BALIKA MAHAVIDYALAYA, KHANPUR, GHAZIPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-42278",
+    "name": "RAJKIYA P.G. COLLEGE, SANGIPUR, PRATAPGARH",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-42389",
+    "name": "BHAGWAT DUTT MAHAVIDYALAYA, AJHARA, PRATAPGARH",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-42596",
+    "name": "RUMA MAHAVIDYALAYA, GOVRI, PRATAPGARH",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-42700",
+    "name": "Malda College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72755",
+    "name": "SHIKASH DEVI DEGREE COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-42911",
+    "name": "Noorjaha Begam Salam Ahmad Arts & Commerce College, Wani.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-43091",
+    "name": "Savitribai Fule Vidyan Mahavidyalaya, Shindkhed Raja.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-43266",
+    "name": "RINPAS, Kanke",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-43371",
+    "name": "Government College of Education, Banipur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-43769",
+    "name": "Oriental College of Hotel Management & Culinary Arts, Vythiri",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-44085",
+    "name": "Radhamadhab Sanskrit College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-44858",
+    "name": "B248 Hallapa Kote College of Education Bidar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-45099",
+    "name": "SREE SIDDESHWARA JAGADGURU COLLEGE, ITAGI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-45136",
+    "name": "CHAUDHARY HARNAM SINGH MAHAVIDYALAYA, BHUTA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-45212",
+    "name": "MB MORE FOUNDATION OF ARTS COMMERCE SCIENCE WOMEN COLLEGE, RAIGAD",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-453",
+    "name": "College of Dairy Science & Technology",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-45636",
+    "name": "K.M. COLLEGE OF PHARMACY (Inst. Code - 029), MADURAI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-45781",
+    "name": "SALESIAN COLLEGE (SILIGURI CAMPAS), DARJILING",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-45887",
+    "name": "ALARD SCHOOL OF BUSINESS MANAGEMENT, PUNE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-45890",
+    "name": "PRADNYA PRATISHTHANS PRADNYA SCHOOL OF BUSINESS MANAGEMENT, PUNE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-46150",
+    "name": "IDEAL SCHOOL OF ARCHITECTURE, GHAZIABAD",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-46201",
+    "name": "AR INSTITUTE OF MANAGEMENT AND TECHNOLOGY, MEERUT.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-46354",
+    "name": "INDIRA GANDHI T T COLLEGE DEVPURA, BUNDI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-46649",
+    "name": "M E S S IDEAL INSTITUTE OF MANAGEMENT AND COMPUTER APPLICATION TECHNICAL CAMPUS, PUNE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-46684",
+    "name": "SHAMBHUNATH INSTITUTE OF MANAGEMENT, ALLAHABAD",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-46730",
+    "name": "SRAJAN INSTITUTE OF MANAGEMENT AND TECHNOLOGY, BAREILLY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-46908",
+    "name": "HIMALAYAN INSTITUTE OF TECHNOLOGY AND MANAGEMENT, LUCKNOW",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-46946",
+    "name": "SURYA COLLEGE OF PHARMACY , LUCKNOW",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-47031",
+    "name": "FACULTY OF MANAGEMENT AND TECHNOLOGY, VARANASI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-47071",
+    "name": "M N COLLEGE OF NURSING, BIKANER",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-47309",
+    "name": "SHRI DEVI SINGH INSTITUTE OF EDUCATION, GAJSTHAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-47350",
+    "name": "ORENTAL B ED COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-47379",
+    "name": "INSTITUTE OF DESIGN ENVIRONMENT AND ARCHITECTURE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-47509",
+    "name": "ALAGAPPA UNIVERSITY EVENING COLLEGE, RAMANATHAPURAM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-47977",
+    "name": "SUVIDYA DEGREE COLLEGE, CHITYAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-48583",
+    "name": "VIDHYADEEP INSTITUTE OF ENGINEERING AND TECHNOLOGY(DIPLOMA), 963",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-48713",
+    "name": "SEVA VARATI B ED COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-48921",
+    "name": "KALPANA MAHAVIDYALAYA, VIJAIPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-49039",
+    "name": "RAO HOSPITAL (Inst. Code - 508), COIMBATORE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-49305",
+    "name": "S.P.MEMORIAL INSTITUTE OF TECHNOLOGY,KAUSHAMBI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-49879",
+    "name": "GOVERNMENT DEGREE COLLEGE FOR WOMEN (JOGIPET)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72757",
+    "name": "KINETIC DIVYANG RESEARCHAND REHABILITATION CENTRE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-50163",
+    "name": "AMBEDKAR MAHILA DEGREE COLLEGE, AMAWAN",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-50303",
+    "name": "SREE SAI DEGREE COLLEGE, KODAKANDLA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-50349",
+    "name": "B D BARAD B ED COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-50487",
+    "name": "GURUKUL COLLEGE, BERASIA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-50760",
+    "name": "BAM VIVEKANANDA B ED COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-51044",
+    "name": "SRI MATHA SARASWATHI DEGREE COLLEGE, ATMAKUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-51212",
+    "name": "k k college Gokul mathura",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-51259",
+    "name": "BAUHRE HARI SINGH COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-51314",
+    "name": "Maa Yashoda Noubat mahavidyalay, Ghazipur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-51656",
+    "name": "WOMENS ISLAMIYA ARTS AND SCIENCE COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-51718",
+    "name": "CT Institute of Higher Studies, Jalandhar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-52179",
+    "name": "Shekhawati M.Ed. College, Dundlod",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-52326",
+    "name": "Sri Sai Shikshan Sansthan",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-52410",
+    "name": "Champa Devi Mahila Mahavidyalay, Jaunpur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-52568",
+    "name": "Thapasvi Degree College, Kubeer (V&M)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-52694",
+    "name": "PIONEER MAHILA MAHAVIDALAYA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-52827",
+    "name": "BABA BIHARILAL EDUCATIONAL INSTITUTE, AMADARVESHPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-52882",
+    "name": "SHRI RAMNIWAS GIRLS COLLEGE, KARNWAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-52940",
+    "name": "ROYAL COLLEGE OF TECHNOLOGY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-53058",
+    "name": "Mangal Sanskrit Mahavidyalaya",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-53208",
+    "name": "HEADWAY COLLEGE OF EDUCATION AND TECHNOLOGY, LAWAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-53295",
+    "name": "Aditya Academy of Architecture & Design",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-53354",
+    "name": "Shri Hanuman Sanskrit Mahavidyalaya",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-53504",
+    "name": "THAKUR SHIVKUMARSINGH MEMORIAL POLYTECHNIC COLLEGE BURHANPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-53955",
+    "name": "S SALINS COLLEGE OF OPTOMETRY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-53971",
+    "name": "SANSKRITI ENGINEERING COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-54046",
+    "name": "DEVI DAYAL MEMORIAL INSTITUTIONS",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-54114",
+    "name": "times  computer",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-54256",
+    "name": "SRI B.S.D. JI AYURVEDIC MEDICAL COLLEGE and  HOSPITAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-55233",
+    "name": "Murti Devi P.G. College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-55700",
+    "name": "College of Veterinary Science and Animal Husbandry",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-55953",
+    "name": "Faculty of Performing Arts",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-56300",
+    "name": "PRO. DEENANATH PANDEY MAHAVIDYALAYA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-56372",
+    "name": "Chanakya Foundation",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-56575",
+    "name": "LALTA PRASAD TIWARI SMARAK MAHAVIDYALAYA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-56918",
+    "name": "RAY UMANATH BALI MAHILA MAHAVIDYALAYA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-57049",
+    "name": "SBVR Agriculture College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-57106",
+    "name": "A M TEACHERS TRAINING INSTITUTE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-57184",
+    "name": "IDEAL BUSINESS SCHOOL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-57553",
+    "name": "CH. SOBRAN SINGH MAHAVIDHYALAYA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-57813",
+    "name": "Jetpur Law College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-57940",
+    "name": "SRI RAM SMARAK MAHAVIDHYALAYA RAJPUR ETAH",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-5798",
+    "name": "Institute for Plasma Research",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-58141",
+    "name": "BIRBHUM NATIONAL INSTITUTE OF HIGHER EDUCATION",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-58398",
+    "name": "AZAD D.ED. TRAINING COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-58413",
+    "name": "EXCEL COLLEGE OF PHARMACY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-58591",
+    "name": "ASHA DEVI COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-58791",
+    "name": "Shree Jawahar Lal Mahavidhalaya Chharra Aligarh",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-58990",
+    "name": "B.R. EDUCATION SAMITI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-5901",
+    "name": "H. A. College of Commerce",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-59124",
+    "name": "sri ram degree college",
+    "reason": "unique_name_geography_mismatch"
+  },
+  {
+    "id": "C-59170",
+    "name": "JAJBA TEACHER TRAINING COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-59254",
+    "name": "NAMO INSTITUTE OF COMPUTER TECHNOLOGY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-59355",
+    "name": "ALIPURDUAR ASHUTOSH B.ED COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-59398",
+    "name": "RAJAJI COLLEGE OF EDUCATION",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-59568",
+    "name": "Brilliant institute of professional studies",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-59685",
+    "name": "ABHINAV COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-59771",
+    "name": "Dev College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-59939",
+    "name": "C651 DEVARAJ MALI PATIL DEGREE COLLEGE UDAGI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-60052",
+    "name": "SHREE RAM EDUCATION COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-6011",
+    "name": "Shri R. P. Anada College of Education",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-60279",
+    "name": "SCHOOL OF EDUCATION",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-60476",
+    "name": "NEW ERA COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-60805",
+    "name": "GOVINDAM T.T. COLLEGE,Palwas Road ,Sikar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-60944",
+    "name": "Dr. Radhakrishanan Integrated College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-60992",
+    "name": "GOVT. NAVEEN COLLEGE, THELKADIH",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61089",
+    "name": "S.S.COLLEGE RAIGARH",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61142",
+    "name": "B R COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61276",
+    "name": "Dronacharya Academy",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61431",
+    "name": "Khadsawphra College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61495",
+    "name": "BHARTI TEACHER TRAINNING MAHILA COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61527",
+    "name": "TRAVANCORE ARTS AND SCIENCE COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61564",
+    "name": "DSSOP PHARMACY COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61603",
+    "name": "JCRE Global College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61756",
+    "name": "B585 SUNRISE DEGREE COLLEGE BIDAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61788",
+    "name": "Govt Degree College Jourian",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62019",
+    "name": "B S BEd COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62160",
+    "name": "KKECS COLLEGE OF NURSING",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62227",
+    "name": "MGM COLLEGE OF PHARMACY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62345",
+    "name": "Baba Ramcheej Mahila Mahavidyalaya",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62444",
+    "name": "JPS Mahavidyalay",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62538",
+    "name": "Faculty of Pharmaceutical Sciences",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62542",
+    "name": "SV GROUP OF INSTITUTION",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62614",
+    "name": "Govt Medical College Datia",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62687",
+    "name": "Choithram College Of Nursing",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-62978",
+    "name": "SCPM COLLEGE OF PHARMACY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-63340",
+    "name": "MARUTHI COLLEGE OF NURSING",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-63518",
+    "name": "SHEELA DEVI MAHAVIDYALAYA BHEDIYA NICHLAUL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-63863",
+    "name": "Awasthi Law College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-6399",
+    "name": "Bharati College",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-64047",
+    "name": "LOK YOJANA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-64364",
+    "name": "APEX TRUST NURSING COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-64387",
+    "name": "PHULO JHANO MEDICAL COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-6458",
+    "name": "Ganga Singh College, Chapra",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-64755",
+    "name": "GOVERNMENT COLLEGE RAJALDESAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-64872",
+    "name": "ROSHINIDEGREECOLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-64977",
+    "name": "SS COLLEGE OF PHARMACY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-65321",
+    "name": "SHRI RAM INSTITUTE OF HOTEL MANAGEMENT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-65391",
+    "name": "GAUTAM BUDDH MAHAVIDYALAYA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-65445",
+    "name": "GOVT COLLEGE SIDHPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-65546",
+    "name": "J P PHARMACY COLLEGE KOTWA SADAK BARABANKI UTTAR PRADESH",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-65822",
+    "name": "RASULPUR PROTIK NURSING INSTITUTION",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-65866",
+    "name": "AACHARYA FIRST GRADE COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-65917",
+    "name": "SHRI RAJENDAR SINGH COLLEGE OF PHARMACY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-65929",
+    "name": "NAVYUG DIPLOMA IN HEALTH AND SANITARY INSPECTOR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-66228",
+    "name": "SHRI SAHAJ INSTITUTE OF PROFESSIONAL STUDIES",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-66234",
+    "name": "CRYSTAL INSTITUTE OF FIRE SAFETY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-66643",
+    "name": "PES SMT PREMA B KARJAGI ARTS AND COMMERCE COLLEGE SINDAGI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-66775",
+    "name": "B.L. PARAMEDICAL COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-66882",
+    "name": "SANTOSH YOGA MAHAVIDHYALAYA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-6695",
+    "name": "GOVERNMENT BED COLLEGE, MEGHRAJ",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-67104",
+    "name": "GOVERNMENT SCHOOL OF NURSING J.A. HOSPITAL GWALIOR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-67194",
+    "name": "DIPAK ABA SALUNKHE PATIL MAHAVIDDYALAYA KOLE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-67349",
+    "name": "RAJA BALWANT SINGH SHIKSHA MAHAVIDHYALAY RAJNAGAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-67402",
+    "name": "SHRI UMESHWAR PRATAP SINGH SMARAK KISAN MAHAVIDYALAY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-67586",
+    "name": "HARVARD INSTITUTE OF FIRE AND SAFETY ENGINEERING",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-6765",
+    "name": "GITANJALI COLLEGE OF EDUCATION TALOD",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-67699",
+    "name": "HOPKINS COLLEGE OF NURSING",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-67986",
+    "name": "RAJKIYA MAHAVIDYALAY PAHI CHITRAKOOT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-68062",
+    "name": "SUKU RAM BHARALI COMMERCE AND MANAGEMENT COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-68324",
+    "name": "ANNUAL COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-68347",
+    "name": "RADHARANI NURSING COLLEGE SHAHDOL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-68519",
+    "name": "INTERNATIONAL BUSINESS COLLEGE PATNA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-68584",
+    "name": "I.S.M. COLLEGE FOR GIRLS",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-68659",
+    "name": "LAW COLLEGE OF ALLAHABAD",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-68732",
+    "name": "SBK COLLEGE OF NURSING,MUDDEBHIHAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-6880",
+    "name": "BED COLLEGE ANDROKHA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-68831",
+    "name": "VENKATESHWARA INSTITUTE OF MEDICAL SCIENCES",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-69184",
+    "name": "KALPTARU YOGA SANSTHAN",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-69330",
+    "name": "SIMILIPAL CLLEGE OF NURSING",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-69357",
+    "name": "RAM NATH MUNSHI MAHILA MAHAVIDYALAYA SADAT GHAZIPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-69767",
+    "name": "CONSTITUENT GOVERNMENT COLLEGE HASANPUR AMROHA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-69910",
+    "name": "BANGALORE NURSING COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-70758",
+    "name": "LEELA DEVI COLLEGE OF PHARMACY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-71016",
+    "name": "NAWJAN INSTITUTE OF NURSING",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-71124",
+    "name": "GOVERNMENT COLLEGE TALERA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-71287",
+    "name": "GOVERNMENT LAW COLLEGE DHAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-71390",
+    "name": "GOVERNMENT COLLEGE KADERA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-71629",
+    "name": "RADHAKANT COLLEGE OF NURSING",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-71807",
+    "name": "PERFECT ACADEMY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-71990",
+    "name": "MURLI MEMORIAL COLLEGE OF PHARMACY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-7225",
+    "name": "Baroda Sanskrit Mahavidhyalay",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72558",
+    "name": "GOBINDA BASUMATARY COLLEGE JARAGURI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72642",
+    "name": "BUDDHA LAW COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72689",
+    "name": "FS PHARMACY INSTITUTE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72732",
+    "name": "RAM SAKHI DEVI INSTITUTE OF PARAMEDICALS SCIENCE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-7520",
+    "name": "Saint Gadage Maharaj Mahavidyalaya, Loha",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8057",
+    "name": "SN COLLEGE, VATAKARA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8085",
+    "name": "COLLEGE OF APPLIED SCIENCES, NATTIKA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8154",
+    "name": "GOVT. COLLEGE, KODENCHERY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8223",
+    "name": "JPE TRAINING COLLEGE, KOORKANCHERY",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8490",
+    "name": "North Lakhimpur College (Autonomous)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8575",
+    "name": "Veerashaiva College, Bellary",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8639",
+    "name": "Akkamahadevi Mahila Mahavidyalay BIDAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8661",
+    "name": "Raj Rajeshwari Arts & Commerce College for Women, Ranebennur-581 115",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8766",
+    "name": "Oriental College of Education",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8811",
+    "name": "200023-DES'S INSTITUTE OF MANAGEMENT, DHULE.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8861",
+    "name": "220031-NTVS'S INSTITUTE OF BUSINESS MANAGEMENT & RESEARCH, NANDURBAR.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-8939",
+    "name": "230035-PSGVPS'S INSTITUTE OF MANAGEMENT, SHAHADA.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-9036",
+    "name": "B214 Shri Siddharameshwara Degree College Kamalnagar",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-9696",
+    "name": "Veena Girls College, Vishrampur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72756",
+    "name": "KALYANAM KAROTI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72759",
+    "name": "JIWAN JYOTI COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72758",
+    "name": "B B S INSTITUTE OF PROFESSIONAL STUDIES PHAPHAMAU PRAYAGRAJ",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72760",
+    "name": "JAY NAND SPECIAL TEACHERS TRAINING INSTITUTE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72761",
+    "name": "MAA DAKHINESWARI INSTITUTE OF MEDICAL SCIENCE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72762",
+    "name": "RENSUM INSTITUTE OF NURSING",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-72763",
+    "name": "RAMYASH LAW COLLEGE",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10",
+    "name": "Institute of Plasma Research (IPR)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1000",
+    "name": "Shri Manibhai Virani and Smt. Navalben Virani Science College, Rajkot",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10000",
+    "name": "SIDDARTHA COLLEGE OF EDUCATION,  JAMKHANDI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10002",
+    "name": "VVS'S ARTS/COMM COLLEGE,  BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10004",
+    "name": "GOVT. FIRST GRADE COLLEGE,  KOKATANOOR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10005",
+    "name": "S S S S'S COLLEGE OF BUSINESS ADMINISTRATION,  BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10006",
+    "name": "SVM ARTS/SCI/COMM COLLEGE,   ILKAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10007",
+    "name": "BASAVESHWARA SCIENCE COLLEGE  BAGALKOT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10008",
+    "name": "AVVSS SHRI PARAPPA SANGAPPA SAJJAN ARTS COLLEGE ,  BEWOOR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10009",
+    "name": "SSVVS KUMARI MONICA BASAVARAJ KANNI B.ED COLLEGE,  BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1001",
+    "name": "A.V.HIRANI  COLLEGE OF JOURNALISM & PERFORMING ARTS-RAJKOT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10010",
+    "name": "SJBVS SHRI S S METI B.ED COLLEGE ,  BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10012",
+    "name": "SMVSS SANGABASAVESHWARS DEGREE COLLEGE,  MASUTI KUDAGI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10014",
+    "name": "GRAMEENA V V SS EDU COLLEGE, NODAGUNDI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10015",
+    "name": "N R E S'S M G ARTS/COMM COLLEGE, NANDAGAD",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10016",
+    "name": "BLDE Association's New Arts College, Tikota",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10017",
+    "name": "KLE'S G I BAGEWADI BBA COLLEGE,  NIPPANI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10018",
+    "name": "SECAB INST., OF BBA/BCA,  COLLEGE, BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1002",
+    "name": "J.H.BHALODIYA WOMEN'S  COLLEGE-RAJKOT (COMMERCE & B.B.A.)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10020",
+    "name": "VMK SRV ARTS/SCI & VSB COMM COLLEGE, HUNAGUND",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10021",
+    "name": "SVM COLLEGE OF BBA,    ILKAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10023",
+    "name": "BLDEAS J S S COLLEGE OF EDU., BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10024",
+    "name": "KUMUD BEN DURBAR COLLEGE OF BCA,  BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10025",
+    "name": "TALUKA SHIKSHANA PRASARAK MANDALI, CHANAVEERAPPA MALLAPPA MANAGULI ARTS,SCIENCE AND COMMERCE COLLEGE,   SINDAGI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10026",
+    "name": "S P M S EDUCATION COLLEGE, HARUGERI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10028",
+    "name": "BLDE ASSOCIATION'S COMMERCE, BHS ARTS AND TGP SCIENCE COLLEGE, JAMAKHANDI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1003",
+    "name": "SHREE A.V.J. OZA INSTITUTE OF B.ED. COLLEGE, LAKHTAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10033",
+    "name": "L.K.KHOT ARTS COLLEGE, HEBBAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10034",
+    "name": "P T E SOCIETY'S BCA/BBA  COLLEGE,  BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10035",
+    "name": "JES'S S K A LOKAPUR ARTS/ SCIE / COMM COLLEGE,  ATHANI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10039",
+    "name": "Vishwabharati First Grade COLLEGE, TURNUR-591123",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1004",
+    "name": "D.K.V. ARTS & SCIENCE COLLEGE, JAMAGAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10040",
+    "name": "Maratha Mandal's Arts, Commerce, Science, and Home Science College, Belgaum",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10042",
+    "name": "M E S'S BACHELOR OF PHYSICAL EDUCATION, MUDALGI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10043",
+    "name": "ANJUMAN ARTS/SCI/COMM COLLEGE,  BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10044",
+    "name": "GOVT FIRST GRADE COLLEGE, ,  INDI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10046",
+    "name": "JAIN COLLEGE OF BBA ,BCA,  B.com   BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10047",
+    "name": "GVV'S SHRI SHANTAVEER ARTS COLLEGE,  BABALESHWAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10048",
+    "name": "KLE SOCIETYS BBA COLLEGE,  KHANAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10050",
+    "name": "SHRI HIRABAI BHARAMA ANNAPPA CHOUGULE ARTS/SCI  COLLEGE,  RAIBAG",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10052",
+    "name": "C L E SOCIETYS COLLEGE OF EDUCATION, CHIKKODI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10053",
+    "name": "SMYK  GOVERNMENT FIRST  GRADE COLLEGE, TELASANG",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10054",
+    "name": "JSS'S BHARATESH COLLEGE OF BUSINESS ADMINISTRATION,  BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10057",
+    "name": "GOVT. FIRST GRADE COLLEGE, AINAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10058",
+    "name": "MGVC ARTS/SCI/COMM COLLEGE MUDDEBIHAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10059",
+    "name": "SHRI SIDDARAMAPPA BASAPPA MAMDAPUR  ARTS/SCI/COMM/COLLEGE,  BADAMI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1006",
+    "name": "SMT. K.S.N.KANSAGARA MAHILA ARTS & COMM. COLLEGE-RAJKOT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10063",
+    "name": "CHAUSON EDUCATION COLLEGE, CHIKKODI (PG)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10064",
+    "name": "B. SHANKARANAND NATIONAL ARTS COLLEGE,  GHATAPRABHA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10065",
+    "name": "SRI V V SS VERESHWAR V V SANGHAS COLLEGE OF EDU., NALATWAD",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10066",
+    "name": "KLE SOCIETYS COMMERCE COLLEGE,  RAIBAG",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10068",
+    "name": "B.D.P.H.W. Association Mathoshri Ambavva Khed Arts,Commerce & Science  College Bijapur.",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10069",
+    "name": "SPM S P PHYSICAL EDU,COLLEGE (BP.ED) ,  RAIBAG",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10070",
+    "name": "THE ADARSH EDU., SOCIETY'S ADARSH ARTS/COMM COLLEGE,SAVADATTI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10071",
+    "name": "KLE'S BAAVPRBHU KORE BBA COLLEGE,  CHIKKODI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10072",
+    "name": "SDVS'S S S ARTS COLLEGE & TP SCIENCE INSTITUTE ,  SANKESHWAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10073",
+    "name": "KLS INST. OF MANAGEMENT EDUCATION & RESEARCH, BELAGAVI (PG)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10075",
+    "name": "GOKAK EDUCATION SOCIETYS COLLEGE OF EDUCATION, GOKAK",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10076",
+    "name": "SHRI K M MAMANI GOVT. FIRST GRADE,  SAVADATTI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10078",
+    "name": "MES'S ISLAMIA ARTS/COMM COLLEGE,   BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10079",
+    "name": "LET'S SRI LAXMANRAO JARKIHOLI COLLEGE OF BBA,  GOKAK",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10165",
+    "name": "KRCESS COLLEGE OF EDUCATION, BAILHONGAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1008",
+    "name": "SHRI TEJENDRA PRASADJI B.ED. COLLEGE-CHARAVADA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10080",
+    "name": "ASS'SMT H A NANDI ARTS COLLEGE, ALMEL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10081",
+    "name": "K.R.C.E.S's S.B.Harkuni BBA College, Bailhongal",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10082",
+    "name": "KNVV'S ARTS & COMMERCE COLLEGE,  KITTUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10083",
+    "name": "JAGADAMBA ARTS/SCI COLLEGE,   HITTINA HALLI-LT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10084",
+    "name": "KUMUD BEN DURBAR COLLEGE OF BUSINESS ADMINISTRATION.  BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10085",
+    "name": "KLE SOCIETYS COLLEGE OF EDUCATION, NIPPANI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10089",
+    "name": "SAGAR B.ED COLLEGE, BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1009",
+    "name": "GURUKUL MAHILA ARTS & COMMERCE COLLEGE-PORBANDAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10090",
+    "name": "JSS ARTS/SCIE/COMM COLLEGE,  GOKAK",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10091",
+    "name": "DMSM'S COLLEGE OF BCA,  BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10092",
+    "name": "BVVS's BASAVESHWAR ARTS COLLEGE,  BAGALKOT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10094",
+    "name": "GOVT FIRST GRADE COLLEGE,  MUDDEBIHAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10095",
+    "name": "VSG ARTS AND COMM COLLEGE,  BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10098",
+    "name": "ANJUMAN - E - ISLAM'S ARTS & COMMERCE COLLEGE,  BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-101",
+    "name": "School of Management, RK University, Rajkot",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1010",
+    "name": "MUNI. ARTS & COMMERCE COLLEGE, UPLETA",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10100",
+    "name": "RAMAKRISHNA VIVEKANANDA BCA COLLEGE,  TIDAGUNDI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10102",
+    "name": "V S M COLLEGE OF BBA & BCA, NIPPANI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10103",
+    "name": "SHRI MURUGRAJIENDRA ARTS COLLEGE, KOLIGUDD",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10104",
+    "name": "GOVT FIRST GRADE BA,B.COM&BBA COLLEGE, RAIBAG",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10106",
+    "name": "ACHARY DESHBHSHANE COLLEGE OF EDUCATION, BEDIHAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10109",
+    "name": "ANGADI COLLEGE OF COMMERCE & SIENCE, BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1011",
+    "name": "SHRI MUKESH JANI B.ED. COLLEGE, AMRELI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10111",
+    "name": "ANJUMAN-E-ISLAM EDU., COLLEGE, BIJAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10112",
+    "name": "S. S. S. SAMITI ' S MAHAVEER P. MIRJI COLLEGE OF COMMERCE,  BELAGAVI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10114",
+    "name": "SRI MALIY APPAIAH SWAMI EDU., COLLEGE,  GADDANKERI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10116",
+    "name": "GLOBAL BUSINESS SCHOOL, BELAGAVI (PG)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10117",
+    "name": "GOVT.COLLEGE OF TEACHERS EDUCATION, BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10118",
+    "name": "S M HILLI DEGREE COLLEGE,  BOLEGAON",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10119",
+    "name": "Shri Shanteshwar Vidyavardhak Sangha Shri. Gulabachand Ravaji Gandhi Arts, Shri Yashavantaray Annaray Patil Commerce and Shri Manikachand Phulachand Doshi Science Degree College, Indi-586209. Dist:Vijayapur",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1012",
+    "name": "M.J.KUNDALIYA EDUCATION & PHYSICAL EDUCATION COLLEGE-RAJKOT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10120",
+    "name": "GOVT FIRST GRADE COLLEGE  BIJAPUR ( 5012)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10122",
+    "name": "GOVT FIRST GRADE COLLEGE, NESARGI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10124",
+    "name": "KLS GOGTE COLLEGE OF COMMERCE,  BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10126",
+    "name": "KJSS'S SHRI ADAVI SIDDESHWARA ARTS COLLEGE,  ANKALGI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10127",
+    "name": "SDVSS'S BBA COLLEGE,  SANKESHWAR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10128",
+    "name": "KLE  SOCIETY 's  SHRI CHANNAGIRISHWAR PRASADIK ARTS, SCIENCE AND   D.D. SHIROL COMMERCE COLLEGE, MAHALINGPUR(PG)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1013",
+    "name": "SHRI M.N. KAMPANI ARTS & A.K. SHAH COMMERCE COLLEGE, MANGROL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10130",
+    "name": "BHARATESH COLLEGE OF COMMERCE,  BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10131",
+    "name": "ANNAPOORNA INSTITUTE OF MANAGEMENT RESEARCH, SANKESHWAR (PG)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10132",
+    "name": "S R KANTHI COLLEGE OF EDUCATION,  ILKAL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-61961",
+    "name": "RATHINAM SCHOOL OF BUSINESS AT TIPS GLOBAL (FORMERLY TIPS SCHOOL OF MANAGEMENT)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10133",
+    "name": "SHRI PADMARAJ VIDYAVARDHAK SANGH 's G P PORWAL ARTS,COMM AND V V SALIMATH SCIENCE COLLEGE,  AP SINDGI 5286128 TQ SINDGI DT VIJAYAPUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10136",
+    "name": "BIRDs BSW COLLEGE, TUKKANATTI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10137",
+    "name": "B. SHANKARANAND ARTS COLLEGE, KUDACHI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10138",
+    "name": "Maratha Mandals Arts and Commerce College, Khanapu",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10139",
+    "name": "SHRI KALIDAS ARTS COLLEGE, KERUR",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10140",
+    "name": "SRI GHANAMATHESHWAR COLLEGE OF EDU,  TALIKOTI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10141",
+    "name": "KLE SOCIETY'S  G I BAGEWADI  ARTS, SCIENCE AND  COMMERCE  COLLEGE,  NIPANI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10144",
+    "name": "SHRI SIDDHIVINAYAKA RURAL COLLEGE OF EDUCATION, HARUGERI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10145",
+    "name": "SRI SADASHIVA B.ED COLLEGE,  MUDHOL",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10147",
+    "name": "KSR COLLEGE OF EDUCATION, BELGAUM",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10148",
+    "name": "SKDV TS SRI VISHWAKARMA FIRST GRADE COLLEGE,  HUVIN HIPARAGI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10149",
+    "name": "S. P. MANDAL'S ARTS AND COMMERCE COLLEGE, RAIBAG",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-1015",
+    "name": "J.J.KUNDALIYA ARTS & COMMERCE COLLEGE-RAJKOT",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10150",
+    "name": "GOVERNMENT FIRST GRADE COLLEGE  RABKAVI BANAHATTI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10152",
+    "name": "S H E S 'S J P SHIRAGAONKAR DEGREE COLLEGE,   PARAMANANDAWADI",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10153",
+    "name": "BVVS PG DEPT. OF EDUCATION, ,  BAGALKOTE (PG)",
+    "reason": "no_strategy_matched"
+  },
+  {
+    "id": "C-10154",
+    "name": "PES BBA COLLEGE,  UGAR-KHURD",
+    "reason": "no_strategy_matched"
+  }
+]

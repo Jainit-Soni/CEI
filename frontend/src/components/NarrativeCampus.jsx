@@ -2,11 +2,21 @@
 
 import React from 'react';
 import TruthSeatsSection from './college/TruthSeatsSection';
+import TruthSeatMatrixSection from './college/TruthSeatMatrixSection';
 import './NarrativeCampus.css';
 
 const NarrativeCampus = ({ college }) => {
+  // 3-state management: 'loading' | 'available' | 'unavailable'
+  // Hint from isEngineering for the initial state
+  const [matrixStatus, setMatrixStatus] = React.useState(college.isEngineering ? 'loading' : 'loading');
+
+  const handleMatrixStatus = (status) => {
+    console.log(`[CEI][NarrativeCampus] Matrix status change: ${status}`);
+    setMatrixStatus(status);
+  };
+
   return (
-    <section className="prestige-section narrative-campus">
+    <section id="truth-campus" className="prestige-section narrative-campus">
       <div className="section-container">
         <div className="glass-card-root capacity-card">
           <header className="narrative-header">
@@ -15,8 +25,29 @@ const NarrativeCampus = ({ college }) => {
             <div className="dossier-stamp">Source: 2026 Seat Matrix</div>
           </header>
 
-          <div className="campus-intel-wrapper">
-            <TruthSeatsSection collegeId={college.id} />
+          {/* Unified Loading Experience */}
+          {matrixStatus === 'loading' && (
+            <div className="truth-section-loading unified-capacity-loading">
+              <span className="spinner"></span>
+              Synchronizing High-Fidelity Intake Data...
+            </div>
+          )}
+
+          {/* Legacy Summary — Primary only if Matrix is unavailable */}
+          {matrixStatus === 'unavailable' && (
+            <div className="campus-intel-wrapper">
+              <TruthSeatsSection collegeId={college.id} />
+            </div>
+          )}
+
+          {/* Official Truth-Grade Seat Matrix — Primary if available */}
+          <div className={`campus-intel-wrapper secondary-intel ${matrixStatus !== 'available' ? 'hidden-truth' : ''}`}>
+            <TruthSeatMatrixSection 
+              collegeId={college.id} 
+              collegeName={college.name} 
+              seatSearchName={college.raw?.names?.cutoffName || college.name} 
+              onStatusChange={handleMatrixStatus}
+            />
           </div>
 
           <div className="campus-meta-footer">
@@ -28,5 +59,6 @@ const NarrativeCampus = ({ college }) => {
     </section>
   );
 };
+
 
 export default NarrativeCampus;

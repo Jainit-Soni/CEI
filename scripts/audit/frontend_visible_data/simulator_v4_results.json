@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "catalogCount": 13096,
+    "searchOnlyCount": 67294,
+    "totalPopulation": 80390
+  },
+  "report": {
+    "catalogVisible": {
+      "denominator": 13096,
+      "counts": {
+        "addressText": 13096,
+        "addressLink": 13096,
+        "websiteUrl": 0,
+        "nirfRanking": 26,
+        "courses": 13096,
+        "truthFees": 366,
+        "truthPlacements": 43,
+        "truthSeats": 0,
+        "truthCutoffs": 0
+      },
+      "samples": {
+        "positive": {
+          "addressText": [
+            "aicte:1-44638801317",
+            "aicte:1-44641284001",
+            "aicte:1-44644880222",
+            "aicte:1-44644667441",
+            "aicte:1-44638507355",
+            "aicte:1-44638553663",
+            "aicte:1-44638554333",
+            "aicte:1-44638555772",
+            "aicte:1-44638406745",
+            "aicte:1-44638537383"
+          ],
+          "addressLink": [
+            "aicte:1-44638801317",
+            "aicte:1-44641284001",
+            "aicte:1-44644880222",
+            "aicte:1-44644667441",
+            "aicte:1-44638507355",
+            "aicte:1-44638553663",
+            "aicte:1-44638554333",
+            "aicte:1-44638555772",
+            "aicte:1-44638406745",
+            "aicte:1-44638537383"
+          ],
+          "websiteUrl": [],
+          "nirfRanking": [
+            "aicte:1-44644319928",
+            "aicte:1-44638088412",
+            "aicte:1-44640144514",
+            "aicte:1-44644966021",
+            "aicte:1-44644442975",
+            "aicte:1-44638453837",
+            "aicte:1-44638613490",
+            "aicte:1-44642131729",
+            "aicte:1-44643735933",
+            "aicte:1-44643348372"
+          ],
+          "courses": [
+            "aicte:1-44638801317",
+            "aicte:1-44641284001",
+            "aicte:1-44644880222",
+            "aicte:1-44644667441",
+            "aicte:1-44638507355",
+            "aicte:1-44638553663",
+            "aicte:1-44638554333",
+            "aicte:1-44638555772",
+            "aicte:1-44638406745",
+            "aicte:1-44638537383"
+          ],
+          "truthFees": [
+            "aicte:1-44638553663",
+            "aicte:1-44638511947",
+            "aicte:1-44638328701",
+            "aicte:1-44638610784",
+            "aicte:1-44638769253",
+            "aicte:1-44638844676",
+            "aicte:1-44640115748",
+            "aicte:1-44639855018",
+            "aicte:1-44639866750",
+            "aicte:1-44640578947"
+          ],
+          "truthPlacements": [
+            "aicte:1-44638610784",
+            "aicte:1-44644319928",
+            "aicte:1-44638088412",
+            "aicte:1-44640228726",
+            "aicte:1-44638922900",
+            "aicte:1-44640144514",
+            "aicte:1-44641321420",
+            "aicte:1-44644966021",
+            "aicte:1-44644442975",
+            "aicte:1-44638453837"
+          ],
+          "truthSeats": [],
+          "truthCutoffs": []
+        },
+        "negative": {
+          "addressText": [],
+          "addressLink": [],
+          "websiteUrl": [
+            "aicte:1-44638801317",
+            "aicte:1-44641284001",
+            "aicte:1-44644880222",
+            "aicte:1-44644667441",
+            "aicte:1-44638507355",
+            "aicte:1-44638553663",
+            "aicte:1-44638554333",
+            "aicte:1-44638555772",
+            "aicte:1-44638406745",
+            "aicte:1-44638537383"
+          ],
+          "nirfRanking": [
+            "aicte:1-44638801317",
+            "aicte:1-44641284001",
+            "aicte:1-44644880222",
+            "aicte:1-44644667441",
+            "aicte:1-44638507355",
+            "aicte:1-44638553663",
+            "aicte:1-44638554333",
+            "aicte:1-44638555772",
+            "aicte:1-44638406745",
+            "aicte:1-44638537383"
+          ],
+          "courses": [],
+          "truthFees": [
+            "aicte:1-44638801317",
+            "aicte:1-44641284001",
+            "aicte:1-44644880222",
+            "aicte:1-44644667441",
+            "aicte:1-44638507355",
+            "aicte:1-44638554333",
+            "aicte:1-44638555772",
+            "aicte:1-44638406745",
+            "aicte:1-44638537383",
+            "aicte:1-44638341961"
+          ],
+          "truthPlacements": [
+            "aicte:1-44638801317",
+            "aicte:1-44641284001",
+            "aicte:1-44644880222",
+            "aicte:1-44644667441",
+            "aicte:1-44638507355",
+            "aicte:1-44638553663",
+            "aicte:1-44638554333",
+            "aicte:1-44638555772",
+            "aicte:1-44638406745",
+            "aicte:1-44638537383"
+          ],
+          "truthSeats": [
+            "aicte:1-44638801317",
+            "aicte:1-44641284001",
+            "aicte:1-44644880222",
+            "aicte:1-44644667441",
+            "aicte:1-44638507355",
+            "aicte:1-44638553663",
+            "aicte:1-44638554333",
+            "aicte:1-44638555772",
+            "aicte:1-44638406745",
+            "aicte:1-44638537383"
+          ],
+          "truthCutoffs": [
+            "aicte:1-44638801317",
+            "aicte:1-44641284001",
+            "aicte:1-44644880222",
+            "aicte:1-44644667441",
+            "aicte:1-44638507355",
+            "aicte:1-44638553663",
+            "aicte:1-44638554333",
+            "aicte:1-44638555772",
+            "aicte:1-44638406745",
+            "aicte:1-44638537383"
+          ]
+        }
+      }
+    },
+    "searchOnly": {
+      "denominator": 67294,
+      "counts": {
+        "addressText": 67294,
+        "addressLink": 67294,
+        "websiteUrl": 46888,
+        "nirfRanking": 2885,
+        "courses": 3413,
+        "truthFees": 67273,
+        "truthPlacements": 1202,
+        "truthSeats": 3311,
+        "truthCutoffs": 0
+      }
+    }
+  }
+}

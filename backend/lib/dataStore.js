@@ -3,6 +3,7 @@ const path = require('path');
 const readline = require('readline');
 const zlib = require('zlib');
 const logger = require('./logger');
+const identityResolver = require('./identityResolver');
 const { computeInstitutionalCeiScore, computeCoverageIndex } = require('./scoringEngine');
 
 // The single source of truth for college data in this flat-file architecture
@@ -69,26 +70,98 @@ async function loadDataFromNDJSON() {
     global.truthByCid.clear();
     global.truthByAishe.clear();
     
+    let unresolvedCount = 0;
+    
     for (const tr of global.truthRows) {
-      // Normalize name for robust matching
+      // 1. Resolve Canonical Identity
+      const nameResolvedId = tr.name ? identityResolver.resolveId(tr.name) : null;
+      const idResolvedId = (tr.collegeId || tr.stableKey || tr.id) ? identityResolver.resolveId(tr.collegeId || tr.stableKey || tr.id) : null;
+      
+      const canonicalId = nameResolvedId || idResolvedId;
+
+      // 2. Index by Canonical ID (Structured per Surface)
+      if (canonicalId) {
+        if (!global.truthByCid.has(canonicalId)) {
+          global.truthByCid.set(canonicalId, {
+            courses: [],
+            cutoffs: [],
+            seats: [],
+            fees: [],
+            placements: [],
+            verified: [],
+            compliance: [],
+            benchmarks: []
+          });
+        }
+        
+        const index = global.truthByCid.get(canonicalId);
+        const record = {
+            ...tr,
+            _canonicalId: canonicalId,
+            _matchBasis: nameResolvedId ? 'name_registry' : 'id_registry',
+            _rawIdentity: tr.name || tr.collegeId || tr.stableKey || tr.id,
+            _sourceFamily: tr.sourceFamily || 'legacy',
+            _surface: tr.entityType
+        };
+
+        // Partition by entityType
+        const type = tr.entityType;
+        if (type === 'placement') index.placements.push(record);
+        else if (type === 'fees' || type === 'fee') index.fees.push(record);
+        else if (type === 'ranking') index.compliance.push(record); // Map ranking to compliance
+        else if (type === 'counsellingCutoff') index.cutoffs.push(record);
+        else if (type === 'counsellingSeatMatrix') index.seats.push(record);
+        else if (type === 'program' || type === 'course') index.courses.push(record);
+        else if (type === 'state_benchmark') index.benchmarks.push(record);
+        else {
+            // Default to compliance for unknown types if they look like truth
+            index.compliance.push(record);
+        }
+      } else {
+        unresolvedCount++;
+        if (unresolvedCount < 10) {
+            logger.warn(`[DataStore] Unresolved truth row: ${tr.name || tr.collegeId || 'Unknown'}`);
+        }
+      }
+
+      // 3. Legacy Name indexing (still used by some parts of the system)
       if (tr.name) {
         const key = tr.name.toLowerCase().replace(/[^a-z0-9]/g, '');
         if (!global.truthByName.has(key)) global.truthByName.set(key, []);
         global.truthByName.get(key).push(tr);
       }
-      // ID mapping (CollegeId or AISHE code)
+
+      // 4. AISHE-style ID tracking
       const cid = tr.collegeId || tr.stableKey || tr.id;
-      if (cid) {
-        if (!global.truthByCid.has(cid)) global.truthByCid.set(cid, []);
-        global.truthByCid.get(cid).push(tr);
-        // Track AISHE-style IDs (e.g. U-1016)
-        if (cid.match(/^[CSU]-[0-9]+$/)) {
-            if (!global.truthByAishe.has(cid)) global.truthByAishe.set(cid, []);
-            global.truthByAishe.get(cid).push(tr);
-        }
+      if (cid && cid.match(/^[CSU]-[0-9]+$/)) {
+        if (!global.truthByAishe.has(cid)) global.truthByAishe.set(cid, []);
+        global.truthByAishe.get(cid).push(tr);
       }
     }
-    logger.info(`[DataStore] Indexed truth rows across ${global.truthRows.length} points.`);
+    logger.info(`[DataStore] Canonicalized truth rows: ${global.truthRows.length - unresolvedCount} resolved, ${unresolvedCount} unresolved.`);
+  }
+
+  // 2.5 Load Verified Fields and Source Evidence
+  if (fs.existsSync(verifiedPath)) {
+    global.verifiedFields = [];
+    const rl = readline.createInterface({ input: fs.createReadStream(verifiedPath), crlfDelay: Infinity });
+    for await (const line of rl) {
+      if (line.trim()) {
+        try { global.verifiedFields.push(JSON.parse(line)); } catch (e) { }
+      }
+    }
+    logger.info(`[DataStore] Loaded ${global.verifiedFields.length} verified fields.`);
+  }
+
+  if (fs.existsSync(evidencePath)) {
+    global.sourceEvidence = [];
+    const rl = readline.createInterface({ input: fs.createReadStream(evidencePath), crlfDelay: Infinity });
+    for await (const line of rl) {
+      if (line.trim()) {
+        try { global.sourceEvidence.push(JSON.parse(line)); } catch (e) { }
+      }
+    }
+    logger.info(`[DataStore] Loaded ${global.sourceEvidence.length} evidence records.`);
   }
 
   // 3. Helper for Truth Enrichment
@@ -100,6 +173,9 @@ async function loadDataFromNDJSON() {
   };
 
   const applyRow = (obj, d) => {
+    // Flag the institution as verified if any valid truth row is applied
+    obj.isVerified = true;
+
     // ── Placements ──────────────────────────────────────────────────────────
     if (d.entityType === 'placement') {
         const rawAvg = d.averagePackage || d.avgPackage || d.medianSalary || d.medianPackage;
@@ -120,12 +196,12 @@ async function loadDataFromNDJSON() {
             };
         }
     // ── Fees ────────────────────────────────────────────────────────────────
-    } else if (d.entityType === 'fees') {
-        const feeNum = d.totalFee || d.tuition || 0;
+    } else if (d.entityType === 'fees' || d.entityType === 'fee' || d.entityType === 'fee_structure') {
+        const feeNum = parseFloat(d.totalFee || d.tuition || d.total || 0);
         if (feeNum > 0) {
             obj.fees = {
                 ...obj.fees,
-                total: `₹${(feeNum).toLocaleString('en-IN')} INR`,
+                total: `₹${feeNum.toLocaleString('en-IN')} INR`,
                 totalNumeric: feeNum,
                 tuition: d.tuition ? `₹${d.tuition.toLocaleString('en-IN')} INR` : obj.fees?.tuition,
                 hostelFees: d.hostelFees ? `₹${d.hostelFees.toLocaleString('en-IN')} INR` : obj.fees?.hostelFees,
@@ -165,7 +241,16 @@ async function loadDataFromNDJSON() {
     // ── Courses/Programs ─────────────────────────────────────────────────────
     } else if (d.entityType === 'course' || d.entityType === 'program') {
         if (!obj.courses) obj.courses = [];
-        obj.courses.push({ name: d.courseName || d.name, duration: d.duration, intake: d.intake, exams: d.exams });
+        const courseName = d.programName || d.courseName || d.degree || d.name || d.program;
+        if (courseName && courseName.length > 2) {
+            obj.courses.push({ 
+                name: courseName, 
+                specialization: d.specialization || d.branch || d.stream,
+                duration: d.duration || '4 Years', 
+                intake: d.intake || d.approvedIntake || 0, 
+                exams: d.exams || d.admissionExams || [] 
+            });
+        }
     }
   };
 
@@ -189,7 +274,8 @@ async function loadDataFromNDJSON() {
         if (!obj.name) continue;
 
         const normName = obj.name.toLowerCase().trim();
-        const cid = obj.id || obj._id || obj.stableKey;
+        const rawCid = obj.id || obj._id || obj.stableKey;
+        const cid = identityResolver.resolveId(rawCid);
 
         // Core Linkage
         if (global.coreInstitutes.has(normName)) {
@@ -199,7 +285,10 @@ async function loadDataFromNDJSON() {
         }
 
         // Apply Truth Enrichment
-        if (cid && global.truthByCid.has(cid)) global.truthByCid.get(cid).forEach(tr => applyRow(obj, tr));
+        if (cid && global.truthByCid.has(cid)) {
+            const index = global.truthByCid.get(cid);
+            Object.values(index).flat().forEach(tr => applyRow(obj, tr));
+        }
         if (normName && global.truthByName.has(normName)) global.truthByName.get(normName).forEach(tr => applyRow(obj, tr));
         
         // Final Score Finalization
@@ -212,12 +301,28 @@ async function loadDataFromNDJSON() {
     }
   }
 
+  // 4.5 Load Registry Mapping for ID Unification
+  const registryPath = path.join(__dirname, '..', 'data', 'truth', 'core_id_mapping_batch1.json');
+  const registryRemap = {};
+  if (fs.existsSync(registryPath)) {
+      try {
+          const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+          Object.entries(registry.engineering_map).forEach(([name, id]) => {
+              const key = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+              registryRemap[key] = id;
+          });
+          // Add AIIMS Delhi
+          registryRemap['allindiainstituteofmedicalsciencesdelhi'] = 'CORE-AIIMS-DELHI';
+      } catch (e) { }
+  }
+
   // 5. Virtualization Pass
   for (const [key, coreMetadata] of global.coreInstitutes.entries()) {
     if (!matchedCoreNames.has(key)) {
       try {
+        const productCid = identityResolver.resolveId(coreMetadata.canonicalName) || `CORE-${key.toUpperCase()}`;
         const virtualObj = {
-          id: `CORE-${key.toUpperCase()}`,
+          id: productCid,
           name: coreMetadata.canonicalName,
           location: `${coreMetadata.city || 'Unknown'}, ${coreMetadata.state}`,
           isCore: true,
@@ -228,6 +333,13 @@ async function loadDataFromNDJSON() {
         
         // Virtual Truth Linkage
         if (global.truthByName.has(key)) global.truthByName.get(key).forEach(tr => applyRow(virtualObj, tr));
+        
+        // Link structured truth by resolved CID
+        if (global.truthByCid.has(productCid)) {
+            const index = global.truthByCid.get(productCid);
+            Object.values(index).flat().forEach(tr => applyRow(virtualObj, tr));
+        }
+
         const aishe = coreMetadata.aisheCode;
         if (aishe && global.truthByAishe.has(aishe)) global.truthByAishe.get(aishe).forEach(tr => applyRow(virtualObj, tr));
 

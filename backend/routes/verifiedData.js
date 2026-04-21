@@ -13,6 +13,7 @@
 
 const express = require('express');
 const router = express.Router();
+const identityResolver = require('../lib/identityResolver');
 
 const VerifiedField = require('../models/VerifiedField');
 const SourceEvidence = require('../models/SourceEvidence');
@@ -34,7 +35,12 @@ async function cacheSet(key, val, ttlSec = 3600) {
 
 // ── GET /api/verified/:collegeId ────────────────────────────────────────────
 router.get('/:collegeId', async (req, res) => {
-    const { collegeId } = req.params;
+    let { collegeId } = req.params;
+    
+    // Resolve Identity
+    const resolvedId = identityResolver.resolveId(collegeId);
+    if (resolvedId) collegeId = resolvedId;
+
     const cacheKey = `verified:all:${collegeId}`;
 
     const cached = await cacheGet(cacheKey);
@@ -61,7 +67,11 @@ router.get('/:collegeId', async (req, res) => {
 
 // ── GET /api/verified/:collegeId/:fieldName ─────────────────────────────────
 router.get('/:collegeId/:fieldName', async (req, res) => {
-    const { collegeId, fieldName } = req.params;
+    let { collegeId, fieldName } = req.params;
+    
+    // Resolve Identity
+    const resolvedId = identityResolver.resolveId(collegeId);
+    if (resolvedId) collegeId = resolvedId;
 
     try {
         const field = await VerifiedField.findOne({ collegeId, fieldName }).lean();
@@ -95,11 +105,15 @@ router.get('/:collegeId/:fieldName', async (req, res) => {
 
 // ── POST /api/verified/submit (admin JWT) ───────────────────────────────────
 router.post('/submit', requireRole('super_admin', 'data_curator'), async (req, res) => {
-    const {
+    let {
         collegeId, fieldName, fieldValue,
         sourceType, sourceURL, capturedAt,
         extractionMethod, rawValue, trustLevel
     } = req.body;
+    
+    // Resolve Identity
+    const resolvedId = identityResolver.resolveId(collegeId);
+    if (resolvedId) collegeId = resolvedId;
 
     if (!collegeId || !fieldName || !sourceType || rawValue === undefined || !trustLevel) {
         return res.status(400).json({ error: 'Missing required fields: collegeId, fieldName, sourceType, rawValue, trustLevel.' });

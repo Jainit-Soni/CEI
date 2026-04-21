@@ -276,7 +276,7 @@ function CollegesContent({ initialData }) {
 
                 console.log(`[CEI][UI][catalog] Data received:`, {
                     count: response.data?.length,
-                    total: response.pagination?.total,
+                    total: response.pagination?.totalCount,
                     params
                 });
 

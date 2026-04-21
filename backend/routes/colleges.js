@@ -8,6 +8,9 @@ const VerifiedField = require("../models/VerifiedField");
 const SourceEvidence = require("../models/SourceEvidence");
 const dataStore = require("../services/dataStore");
 const { getRedisClient } = require("../config/redis");
+const { getCollegeTruthCourses } = require("../services/courseOfferingsReadService");
+const normalizeCollege = require("../lib/collegeNormalizer");
+const identityResolver = require("../lib/collegeIdentityResolver");
 
 const router = express.Router();
 
@@ -30,6 +33,28 @@ router.get('/flush-pages', async (req, res) => {
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
+});
+
+
+// --- ELEVATED TRUTH ROUTES (Hardenings delegated to truth_hardening.js) ---
+
+router.get("/college/:id/benchmarks", async (req, res) => {
+  try {
+    const { id } = req.params;
+    let college = (global.colleges || []).find(c => c.id === id || c._id === id);
+    if (!college) {
+        const key = id.toLowerCase().replace(/[^a-z0-9]/g, '');
+        college = (global.colleges || []).find(c => (c.id && c.id.toLowerCase().replace(/[^a-z0-9]/g, '') === key));
+    }
+    if (!college) return res.status(404).json({ error: "College intelligence not found" });
+    const state = college.state;
+    const band = college.competitivenessBand || college.rankingTier || "Standard";
+    const stateColleges = (global.colleges || []).filter(c => c.state === state && c.ceiScore);
+    const stateAvg = stateColleges.length > 0 ? stateColleges.reduce((acc, c) => acc + (c.ceiScore || 0), 0) / stateColleges.length : 60;
+    const bandColleges = (global.colleges || []).filter(c => (c.competitivenessBand === band || c.rankingTier === band) && c.ceiScore);
+    const bandAvg = bandColleges.length > 0 ? bandColleges.reduce((acc, c) => acc + (c.ceiScore || 0), 0) / bandColleges.length : 70;
+    res.json({ success: true, metadata: { state: state || "National", band: band }, stateBenchmarks: { ceiScore: Math.round(stateAvg) }, tierBenchmarks: { ceiScore: Math.round(bandAvg) } });
+  } catch (error) { res.status(500).json({ error: error.message }); }
 });
 
 // Canonicalize location names to handle variations (e.g., Bengaluru vs Bangalore)
@@ -418,14 +443,15 @@ router.get("/colleges", async (req, res) => {
     }
 
     const ids = sortedIdsResult.map(c => c._id);
-    const fetchedColleges = await College.find({ _id: { $in: ids } })
-      .select("shortName name location rankingTier popularity ranking meta.ownership meta.district acceptedExams source lastUpdated pastCutoffs isPremium isCore coreMetadata ceiScore institutionStrengthScore admissionRealityScore dataConfidenceScore coverage courses placements.highestPackageNumeric placements.averagePackage placements.averagePackageNumeric placements.highestPackage placements.placementRate website")
-      .lean();
+    const fetchedColleges = await College.find({ _id: { $in: ids } }).lean();
 
     const collegeMap = new Map();
-    fetchedColleges.forEach(c => {
-      const cid = String(c._id || c.id || "");
+    fetchedColleges.forEach(rawC => {
+      const c = normalizeCollege(rawC);
+      const cid = c.id;
       if (cid) collegeMap.set(cid, c);
+      // Map by _id too to ensure the sortedIdsResult mapping below can find it!
+      collegeMap.set(String(rawC._id), c);
     });
 
     const colleges = ids.map(id => {
@@ -772,33 +798,45 @@ router.get("/colleges/:id/truth/cutoffs", async (req, res) => {
 });
 
 router.get("/colleges/:id/truth/courses", async (req, res) => {
-  // Courses typically come from the main college document, 
-  // but we can provide a "vetted" version here if available.
-  const { id } = req.params;
-  const college = await College.findOne({ id }).select('courses').lean();
-  
-  if (!college || !college.courses || college.courses.length === 0) {
-     return res.json({ sectionStatus: 'official_data_unavailable', items: [] });
-  }
+  try {
+    const { id } = req.params;
+    const { limit = 200 } = req.query;
+    const db = mongoose.connection.db;
+    
+    // 1. Resolve college with matching ID (robust lookup)
+    const college = await College.findOne({
+      $or: [
+        { id: String(id) },
+        { _id: mongoose.isValidObjectId(id) ? id : null },
+        { stableKey: String(id) }
+      ]
+    }).select('id institution_id courses').lean();
+    
+    if (!college) {
+      return res.status(404).json({ error: 'College not found' });
+    }
 
-  res.json({
-    sectionStatus: 'available',
-    freshnessStatus: 'vetted',
-    items: college.courses.map(c => ({
-      displayLabel: c.name || c.degree,
-      degree: c.degree,
-      value: 'APPROVED',
-      source: { title: 'Institutional Filing', type: 'official_institute' }
-    }))
-  });
+    // 2. Call Bridge Service
+    const result = await getCollegeTruthCourses({
+      db,
+      college,
+      limit
+    });
+
+    res.json(result);
+  } catch (error) {
+    console.error("Error in truth/courses route:", error);
+    res.status(500).json({ error: error.message });
+  }
 });
+
 
 router.get("/colleges/:id/truth/fees", async (req, res) => {
   try {
     const { id } = req.params;
 
     // Phase 1.5 - Bridge Elite Fee Source of Truth Layer
-    const collegeDoc = await College.findOne({ $or: [{ id }, { _id: mongoose.isValidObjectId(id) ? id : null }, { stableKey: id }] }).lean();
+    const collegeDoc = await dataStore.getCollegeById(id);
     if (collegeDoc && collegeDoc.fees && collegeDoc.fees.isVerified) {
       return res.json({
         sectionStatus: 'available',
@@ -827,6 +865,7 @@ router.get("/colleges/:id/truth/fees", async (req, res) => {
       });
     }
 
+    const rawId = collegeDoc ? collegeDoc.stableKey : id;
     const sources = await SourceEvidence.find({
       verifiedFieldId: { $in: field.sourceIds },
       isActive: true
@@ -863,20 +902,17 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
     const rateField = await VerifiedField.findOne({ collegeId: id, fieldName: 'placement_rate' }).lean();
 
     // --- NDJSON Truth Data Integration (Phase 21) ---
-    // Fetch a fresh copy from MongoDB to avoid stale memory-cache issues
-    const collegeDoc = await College.findOne({ $or: [{ id }, { _id: mongoose.isValidObjectId(id) ? id : null }, { stableKey: id }] }).lean();
+    // Fetch a fresh copy using unified system to maintain ID mappings
+    const collegeDoc = await dataStore.getCollegeById(id);
     
+    const aliases = new Set(identityResolver.getAllAliases(id));
+    if (collegeDoc && collegeDoc.stableKey) aliases.add(collegeDoc.stableKey);
+    if (collegeDoc && collegeDoc.id) aliases.add(collegeDoc.id);
+
     let truthEntries = (global.truthRows || []).filter(tr => 
-      (tr.id === id || tr.stableKey === id || (collegeDoc && tr.stableKey === collegeDoc.stableKey)) && 
+      (aliases.has(tr.collegeId) || aliases.has(tr.id) || aliases.has(tr.stableKey)) && 
       tr.entityType === 'placement'
     );
-
-    // Name-based fallback (Phase 21.1)
-    if (truthEntries.length === 0 && collegeDoc && collegeDoc.name) {
-      const normName = collegeDoc.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-      const byName = (global.truthByName || new Map()).get(normName) || [];
-      truthEntries = byName.filter(tr => tr.entityType === 'placement');
-    }
 
     const hasIngestedPlacements = collegeDoc && collegeDoc.placements && collegeDoc.placements.source === 'NIRF 2024';
 
@@ -957,92 +993,6 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
   }
 });
 
-router.get("/colleges/:id/truth/compliance", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const college = (global.colleges || []).find(c => c.id === id || c._id === id || c.stableKey === id);
-    
-    if (!college) return res.status(404).json({ error: "Institution not found" });
-
-    // Name-based Truth check for compliance-related data (if any)
-    const normName = college.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-    const truthEntries = (global.truthByName || new Map()).get(normName) || [];
-    const extraCompliance = truthEntries.filter(tr => tr.entityType === 'compliance');
-
-    const stateKey = college.state ? college.state.toLowerCase() : null;
-    const benchmark = stateKey ? (global.stateBenchmarks || new Map()).get(stateKey) : null;
-
-    const items = [];
-    if (benchmark) {
-      items.push({
-        displayLabel: 'Regional Pupil-Teacher Ratio (Benchmark)',
-        value: `1:${Math.round(benchmark.ptr)}`,
-        confidence: 0.85,
-        source: { title: benchmark.source, type: 'government_aggregate' }
-      });
-      items.push({
-        displayLabel: 'Regional Enrollment Density',
-        value: benchmark.enrollment.toLocaleString(),
-        confidence: 0.85,
-        source: { title: benchmark.source, type: 'government_aggregate' }
-      });
-    }
-
-    res.json({
-      sectionStatus: items.length > 0 ? 'available' : 'official_data_unavailable',
-      freshnessStatus: 'official_report',
-      items
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Benchmarks Adapter
-router.get("/college/:id/benchmarks", async (req, res) => {
-  try {
-    const { id } = req.params;
-    // Find the current college in memory
-    const college = (global.colleges || []).find(c => c.id === id || c._id === id);
-    
-    if (!college) {
-      return res.status(404).json({ error: "College intelligence not found" });
-    }
-
-    const state = college.state;
-    const band = college.competitivenessBand || college.rankingTier || "Standard";
-
-    // Intelligence Calculation: State Average
-    const stateColleges = (global.colleges || []).filter(c => c.state === state && c.ceiScore);
-    const stateAvg = stateColleges.length > 0
-      ? stateColleges.reduce((acc, c) => acc + (c.ceiScore || 0), 0) / stateColleges.length
-      : 60;
-
-    // Intelligence Calculation: Rank/Band Average
-    const bandColleges = (global.colleges || []).filter(c => 
-      (c.competitivenessBand === band || c.rankingTier === band) && c.ceiScore
-    );
-    const bandAvg = bandColleges.length > 0
-      ? bandColleges.reduce((acc, c) => acc + (c.ceiScore || 0), 0) / bandColleges.length
-      : 70;
-
-    res.json({
-      success: true,
-      metadata: {
-        state: state || "National",
-        band: band
-      },
-      stateBenchmarks: {
-        ceiScore: Math.round(stateAvg)
-      },
-      tierBenchmarks: {
-        ceiScore: Math.round(bandAvg)
-      }
-    });
-  } catch (error) {
-    console.error("Benchmark Error:", error);
-    res.status(500).json({ error: "Failed to compute benchmarks" });
-  }
-});
+// Removed (moved to top)
 
 module.exports = router;

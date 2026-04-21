@@ -1,0 +1,138 @@
+.admission-truth-summary {
+    margin-bottom: 24px;
+    padding: 24px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.ats-title {
+    font-size: 1.25rem;
+    font-weight: 850;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+    letter-spacing: -0.02em;
+}
+
+.ats-subtitle {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+    font-weight: 550;
+}
+
+.ats-trust-badge {
+    background: rgba(99, 102, 241, 0.08);
+    color: #6366f1;
+    padding: 6px 12px;
+    border-radius: 99px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.ats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.ats-card {
+    padding: 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.2s ease;
+}
+
+.ats-card.available {
+    background: rgba(16, 185, 129, 0.04);
+    border-color: rgba(16, 185, 129, 0.1);
+}
+
+.ats-card.available .ats-card-status {
+    color: #059669;
+}
+
+.ats-card.unavailable {
+    background: rgba(148, 163, 184, 0.03);
+    border-color: rgba(148, 163, 184, 0.1);
+}
+
+.ats-card.unavailable .ats-card-status {
+    color: #94a3b8;
+}
+
+.ats-card.loading {
+    background: rgba(0, 0, 0, 0.02);
+    animation: ats-pulse 1.5s infinite;
+}
+
+@keyframes ats-pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.ats-card-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 850;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+
+.ats-card-status {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.ats-jump-btn {
+    appearance: none;
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 750;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: fit-content;
+}
+
+.ats-jump-btn:hover {
+    background: #4f46e5;
+}
+
+.ats-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.ats-info-icon { opacity: 0.6; }
+
+@media (max-width: 1024px) {
+    .ats-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,29 @@
+{
+  "denominator": 1789,
+  "stats": {
+    "totalColleges": 1789,
+    "traversedCount": 1789,
+    "hasAddressText": 1789,
+    "hasAddressLink": 1789,
+    "hasOfficialWebsite": 1023,
+    "hasCutoffs": 1767,
+    "hasFees": 1748,
+    "hasPlacements": 1740,
+    "hasSeats": 0,
+    "hasCourses": 1789,
+    "hasNIRF": 0,
+    "hasCore": 117
+  },
+  "percentages": {
+    "hasAddressText": "100.00%",
+    "hasAddressLink": "100.00%",
+    "hasOfficialWebsite": "57.18%",
+    "hasCutoffs": "98.77%",
+    "hasFees": "97.71%",
+    "hasPlacements": "97.26%",
+    "hasSeats": "0.00%",
+    "hasCourses": "100.00%",
+    "hasNIRF": "0.00%",
+    "hasCore": "6.54%"
+  }
+}

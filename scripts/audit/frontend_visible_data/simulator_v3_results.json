@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "catalogCount": 0,
+    "searchOnlyCount": 67294,
+    "totalPopulation": 67294
+  },
+  "report": {
+    "catalogVisible": {
+      "denominator": 0,
+      "counts": {
+        "addressText": 0,
+        "addressLink": 0,
+        "websiteUrl": 0,
+        "nirfRanking": 0,
+        "courses": 0,
+        "truthFees": 0,
+        "truthPlacements": 0,
+        "truthSeats": 0,
+        "truthCutoffs": 0
+      },
+      "samples": {
+        "positive": {
+          "addressText": [],
+          "addressLink": [],
+          "websiteUrl": [],
+          "nirfRanking": [],
+          "courses": [],
+          "truthFees": [],
+          "truthPlacements": [],
+          "truthSeats": [],
+          "truthCutoffs": []
+        },
+        "negative": {
+          "addressText": [],
+          "addressLink": [],
+          "websiteUrl": [],
+          "nirfRanking": [],
+          "courses": [],
+          "truthFees": [],
+          "truthPlacements": [],
+          "truthSeats": [],
+          "truthCutoffs": []
+        }
+      }
+    },
+    "searchOnly": {
+      "denominator": 67294,
+      "counts": {
+        "addressText": 67149,
+        "addressLink": 67149,
+        "websiteUrl": 46888,
+        "nirfRanking": 2885,
+        "courses": 3413,
+        "truthFees": 67269,
+        "truthPlacements": 1202,
+        "truthSeats": 3311,
+        "truthCutoffs": 0
+      }
+    }
+  }
+}

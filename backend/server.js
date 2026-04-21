@@ -38,6 +38,7 @@ const newsRoutes = require("./routes/news");
 const hypeRoutes = require("./routes/hype");
 const predictorRoutes = require("./routes/predictor");
 const authRoutes = require("./routes/auth");
+const truthHardeningRoutes = require("./routes/truth_hardening");
 const transparencyRoutes = require("./routes/transparency");
 const governanceRoutes = require("./routes/governance");
 const explainRoutes = require("./routes/explain");
@@ -356,6 +357,9 @@ app.get("/", (req, res) => {
 // ==========================================
 // 🚀 APPLICATION ROUTES
 // ==========================================
+// Priority Hardened Routes (V12)
+app.use("/api", truthHardeningRoutes);
+
 app.use("/api", collegesRoutes);
 app.use("/api", examsRoutes);
 app.use("/api", searchRoutes);
@@ -379,6 +383,9 @@ app.use("/api/decision", require("./routes/decision"));
 app.use("/api/v1", require("./routes/publicApi"));
 app.use("/api/verify", require("./routes/verify"));
 app.use("/api/evidence", require("./routes/evidence"));
+app.use("/api/cutoffs", require("./routes/engineeringCutoffRoutes"));
+app.use("/api/seats", require("./routes/seatMatrixRoutes"));
+
 // ── Phase XVI — National Data Truth Engine ────────────────────────────────
 app.use("/api/verified", require("./routes/verifiedData"));
 app.use("/api/placement-reality", require("./routes/placementReality"));

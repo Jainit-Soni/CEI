@@ -98,5 +98,5 @@ const collegeSchema = new mongoose.Schema({
 collegeSchema.index({ state: 1, rankingTier: -1 });
 collegeSchema.index({ searchPriorityScore: -1, ceiScore: -1 });
 
-// Ensure the model is named 'College' to match existing references
-module.exports = mongoose.models.College || mongoose.model('College', collegeSchema);
+// Ensure the model is named 'College' and points to the 'institutions' collection
+module.exports = mongoose.models.College || mongoose.model('College', collegeSchema, 'institutions');

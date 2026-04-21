@@ -1,0 +1,740 @@
+[
+  {
+    "enCode": "EN1101",
+    "name": "SHRI SANT GAJANAN MAHARAJ COLL. OF ENGG. SHEGAON",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1105",
+    "name": "PROF. RAM MEGHE INSTITUTE OF TECHNOLOGY & RESEARCH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1107",
+    "name": "P. R. POTE (PATIL) COLLEGE OF ENGINEERING & MGMT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1114",
+    "name": "SIPNA SHIKSHAN PRASARAK MANDAL COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1116",
+    "name": "SHRI SHIVAJI EDUCATION SOCIETY'S COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1119",
+    "name": "ANURADHA ENGINEERING COLLEGE, CHIKHLI",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1120",
+    "name": "JAWAHARLAL DARDA INSTITUTE OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1121",
+    "name": "SHRI HANUMAN VYAYAM PRASARAK MANDALS COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1123",
+    "name": "DR.RAJENDRA GODE INSTITUTE OF TECH & RESEARCH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1125",
+    "name": "RAJARSHI SHAHU COLLEGE OF ENGINEERING, BULDANA",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1126",
+    "name": "DR. SMT. KAMALTAI GAWAI INSTITUTE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1127",
+    "name": "JAGDAMBHA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1128",
+    "name": "PROF RAM MEGHE COLLEGE OF ENGG & MGMT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1130",
+    "name": "PANKAJ LADDHAD INSTITUTE OF TECH & MGMT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1180",
+    "name": "SANMATI ENGINEERING COLLEGE, WASHIM",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1182",
+    "name": "PADMASHRI DR. V.B. KOLTE COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN1265",
+    "name": "MAULI GROUP OF INSTITUTIONS, COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2111",
+    "name": "EVEREST EDUCATION SOCIETY, GROUP OF INST",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2112",
+    "name": "SHREEYASH COLLEGE OF ENGINEERING & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2114",
+    "name": "DEOGIRI INSTITUTE OF ENGG AND MGMT STUDIES",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2116",
+    "name": "MATOSHRI PRATISHTHAN'S GROUP OF INSTITUTION",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2127",
+    "name": "MAHATMA GANDHI MISSIONS COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2129",
+    "name": "M.S. BIDVE ENGINEERING COLLEGE, LATUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2130",
+    "name": "TERNA PUBLIC CHARITABLE TRUST'S COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2131",
+    "name": "SHREE TULJABHAVANI COLLEGE OF ENGINEERING",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2133",
+    "name": "MAHATMA BASAWESHWAR EDUCATION SOC COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2134",
+    "name": "PEOPLES EDUCATION SOCIETY'S COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2135",
+    "name": "HI-TECH INSTITUTE OF TECHNOLOGY, AURANGABAD",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2136",
+    "name": "ADITYA ENGINEERING COLLEGE , BEED",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2138",
+    "name": "MATSYODARI SHIKSHAN COLL OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2146",
+    "name": "K. T. PATIL COLLEGE OF ENGG AND TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2252",
+    "name": "SHRI SHIVAJI INSTITUTE OF ENGG AND MGMT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2254",
+    "name": "VDF SCHOOL OF ENGINEERING & TECHNOLOGY",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2516",
+    "name": "INTL CENTER OF EXCELLENCE IN ENGG AND MGMT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN2522",
+    "name": "SANDIPANI TECHNICAL CAMPUS-FACULTY OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3135",
+    "name": "RAJIV GANDHI INSTITUTE OF TECH, MUMBAI",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3139",
+    "name": "VIDYALANKAR INSTITUTE OF TECHNOLOGY, WADALA",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3146",
+    "name": "ANNASAHEB CHUDAMAN PATIL COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3147",
+    "name": "YADAVRAO TASAGAONKAR INST OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3148",
+    "name": "SHAH & ANCHOR KUTCCHI ENGINEERING COLLEGE",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3154",
+    "name": "SARASWATI COLLEGE OF ENGINEERING, KHARGHAR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3175",
+    "name": "M.G.M.'S COLLEGE OF ENGG AND TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3183",
+    "name": "M.H. SABOO SIDDIK COLLEGE OF ENGINEERING",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3184",
+    "name": "FR. CONCEICAO RODRIGUES COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3185",
+    "name": "VIVEKANAND EDUCATION SOCIETY'S INST OF TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3187",
+    "name": "DATTA MEGHE COLLEGE OF ENGINEERING, AIROLI",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3188",
+    "name": "VASANTDADA PATIL PRATISHTHAN'S COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3189",
+    "name": "BHARATI VIDYAPEETH COLLEGE OF ENGG, BELAPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3190",
+    "name": "TERNA ENGINEERING COLLEGE, NERUL",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3193",
+    "name": "SHIVAJIRAO S. JONDHALE COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3194",
+    "name": "VIDYAVARDHINI'S COLLEGE OF ENGG AND TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3198",
+    "name": "KONKAN GYANPEETH COLLEGE OF ENGINEERING",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3199",
+    "name": "DWARKADAS J. SANGHVI COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3200",
+    "name": "FINOLEX ACADEMY OF MGMT AND TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3201",
+    "name": "RIZVI COLLEGE OF ENGINEERING, BANDRA",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3202",
+    "name": "RAJENDRA MANE COLLEGE OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3203",
+    "name": "ATHARVA COLLEGE OF ENGINEERING, MALAD",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3204",
+    "name": "ST. FRANCIS INSTITUTE OF TECHNOLOGY",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3206",
+    "name": "S.S.P.M.'S COLLEGE OF ENGINEERING",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3207",
+    "name": "PILLAI COLLEGE OF ENGINEERING, NEW PANVEL",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3209",
+    "name": "K J SOMAIYA INST OF ENGG AND IT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3210",
+    "name": "K.C. COLLEGE OF ENGINEERING, THANE",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3212",
+    "name": "WATUMULL INSTITUTE OF ELECTRONICS ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3215",
+    "name": "SARDAR PATEL INSTITUTE OF TECHNOLOGY",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3216",
+    "name": "GHARDA INSTITUTE OF TECHNOLOGY, LAVEL",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3217",
+    "name": "SHIVAJIRAO S. JONDHLE COLL OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3218",
+    "name": "ST. JOHN COLLEGE OF ENGG & MANAGEMENT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3219",
+    "name": "SMT. ALAMURI RATNAMALA INST OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3220",
+    "name": "TASGAONKAR COLL OF ENGG AND MANAGEMENT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3221",
+    "name": "VIVA INSTITUTE OF TECHNOLOGY, SHIRGAON",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3222",
+    "name": "THEEM COLLEGE OF ENGINEERING, BOISAR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3223",
+    "name": "PILLAIS HOC COLLEGE OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3224",
+    "name": "G.V. ACHARYA INSTITUTE OF ENGG AND TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3277",
+    "name": "PRAVIN ROHIDAS PATIL COLL OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3351",
+    "name": "BHARAT COLLEGE OF ENGINEERING, BADLAPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3353",
+    "name": "DILKAP RESEARCH INST OF ENGG AND MGMT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3436",
+    "name": "B.R. HARNE COLLEGE OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3440",
+    "name": "METROPOLITAN INST OF TECH AND MGMT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3445",
+    "name": "VISHWATMAK OM GURUDEV COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3462",
+    "name": "VPM'S MAHARSHI PARSHURAM COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3467",
+    "name": "VISHWANIKETAN'S INSTITUTE OF MGMT & ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3471",
+    "name": "NEW HORIZON INST OF TECH & MGMT, THANE",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3475",
+    "name": "PCT'S A. P. SHAH INSTITUTE OF TECH, THANE",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN3477",
+    "name": "CSM INSTITUTE OF TECHNOLOGY",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4118",
+    "name": "BAPURAO DESHMUKH ENGINEERING COLLEGE",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4123",
+    "name": "PRIYADARSHANI COLLEGE OF ENGG, NAGPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4133",
+    "name": "SMT. RADHIKATAI PANDAV COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4134",
+    "name": "GURU NANAK INSTITUTE OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4135",
+    "name": "SHREE GOVINDRAO WANJARI COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4136",
+    "name": "PRIYADARSHINI J. L. COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4137",
+    "name": "S. B. JAIN INSTITUTE OF TECHNOLOGY, NAGPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4138",
+    "name": "J. D. COLLEGE OF ENGINEERING, NAGPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4139",
+    "name": "JHULELAL INSTITUT OF TECHNOLOGY, NAGPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4141",
+    "name": "VILASRAO DESHMUKH COLL OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4142",
+    "name": "G. H. RAISONI INSTITUTE OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4143",
+    "name": "MANDUKARRAO PANDAV COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4144",
+    "name": "NAGPUR INSTITUTE OF TECHNOLOGY, NAGPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4145",
+    "name": "WAINGANGA COLL OF ENGG AND MGMT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4147",
+    "name": "KARMAVIR DADASAHEB KANNAMWAR COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4151",
+    "name": "TULSHIRAMJI GAIKWAD PATIL COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4163",
+    "name": "RAJIV GANDHI COLL OF ENGG & RES, CHANDRAPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4167",
+    "name": "YESHWANTRAO CHAVAN COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4172",
+    "name": "ANJUMAN COLLEGE OF ENGG & TECH, NAGPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4174",
+    "name": "ST. VINCENT PALLOTTI COLL OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4175",
+    "name": "SHRI SHANKARPRASAD AGNIHOTRI COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4177",
+    "name": "PRIYADARSHINI BHAGWATI COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4181",
+    "name": "NUVA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4190",
+    "name": "SHRI SAI COLLEGE OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4192",
+    "name": "NAGARJUNA INST OF ENGG TECH & MGMT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4193",
+    "name": "VIDHARBHA INSTITUTE OF TECHNOLOGY, NAGPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4196",
+    "name": "GURUNANAK INSTITUTE OF TECH, NAGPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4285",
+    "name": "V M INSTITUTE OF ENGINEERING AND TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4302",
+    "name": "MANOHARBHAI PATEL INST OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4304",
+    "name": "CUMMINS COLLEGE OF ENGG FOR WOMEN, NAGPUR",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4613",
+    "name": "SURYODAYA COLLEGE OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN4648",
+    "name": "R.V. PARANKAR COLL OF ENGG & TECH",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN5103",
+    "name": "BAPUSAHEB SHIVAJI RAO DEORE COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN5104",
+    "name": "SHRAMSADHANA BOMBAY TRUST COLL OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN5106",
+    "name": "K. C. E. SOCIETYS COLL OF ENGG AND IT",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN5108",
+    "name": "KARMAVEER ADV.BABAURAO THAKARE COLL ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN5109",
+    "name": "SANDIP INST OF TECH AND RESEARCH CENTRE",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN5121",
+    "name": "K. K. WAGH INSTITUTE OF ENGG EDUCATION",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  },
+  {
+    "enCode": "EN5124",
+    "name": "S.N.D. COLLEGE OF ENGG",
+    "reason": "no_exact_name_in_aicte_mh",
+    "requiresManualCuration": true
+  }
+]

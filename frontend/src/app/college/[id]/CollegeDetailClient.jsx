@@ -27,6 +27,7 @@ import PrestigeIntelligenceTabs from "@/components/PrestigeIntelligenceTabs";
 import IntelligenceRadar from "@/components/IntelligenceRadar";
 import ROICalculator from "@/components/ROICalculator";
 import TruthPlacementsSection from "@/components/college/TruthPlacementsSection";
+import AdmissionTruthSummary from "@/components/college/AdmissionTruthSummary";
 
 import { useAuth } from "@/lib/AuthContext";
 
@@ -151,13 +152,29 @@ export default function CollegeDetailClient({ id, initialData }) {
 
                 {activeTab === "seats" && (
                     <div className="tab-pane fade-in">
+                        <Container>
+                            <AdmissionTruthSummary 
+                                collegeId={college.id} 
+                                searchName={college.coreMetadata?.canonicalName || college.name} 
+                            />
+                        </Container>
                         <NarrativeCampus college={college} />
                     </div>
                 )}
 
                 {activeTab === "cutoffs" && (
                     <div className="tab-pane fade-in">
-                        <NarrativeGateway collegeId={college.id} />
+                        <Container>
+                            <AdmissionTruthSummary 
+                                collegeId={college.id} 
+                                searchName={college.coreMetadata?.canonicalName || college.name} 
+                            />
+                        </Container>
+                        <NarrativeGateway 
+                            collegeId={college.id} 
+                            collegeName={college.name}
+                            cutoffSearchName={college.coreMetadata?.canonicalName || college.name}
+                        />
                     </div>
                 )}
 

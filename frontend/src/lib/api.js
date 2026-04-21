@@ -378,3 +378,22 @@ export async function fetchCompliance(collegeId) {
   const { data } = await api.get(`/api/colleges/${collegeId}/truth/compliance`);
   return data;
 }
+export async function fetchEngineeringCutoffs(params = {}) {
+  const { data } = await api.get("/api/cutoffs/engineering", { params });
+  return data;
+}
+
+export async function fetchEngineeringCutoffMeta(params = {}) {
+  const { data } = await api.get("/api/cutoffs/engineering/meta", { params });
+  return data;
+}
+
+export async function fetchEngineeringSeatMatrix(params = {}) {
+  const { data } = await api.get("/api/seats/engineering", { params });
+  return data;
+}
+
+export async function fetchEngineeringSeatMatrixMeta(params = {}) {
+  const { data } = await api.get("/api/seats/engineering/meta", { params });
+  return data;
+}

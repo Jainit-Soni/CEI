@@ -1,0 +1,2517 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-21T10:29:51.617Z",
+    "stats": {
+      "engineering_processed": 318,
+      "medical_processed": 11,
+      "remap": 7,
+      "unresolved": 118
+    }
+  },
+  "reconciliation_set": [
+    {
+      "canonical_name": "SATYAM INTERNATIONAL INSTITUTE OF TECHNOLOGY",
+      "legacy_institution_id": "CORE-SATYAM-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY",
+      "actual_institution_id": "CORE-SATYAM-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "SATYAM INTERNATIONAL INSTITUTE OF TECHNOLOGY AND MANAGEMENT",
+      "legacy_institution_id": "CORE-SATYAM-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+      "actual_institution_id": "CORE-SATYAM-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Madras",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "actual_institution_id": "CORE-IIT-MADRAS",
+      "status": "REMAP_REQUIRED",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Madras",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Delhi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Delhi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Bombay",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "actual_institution_id": "CORE-IIT-BOMBAY",
+      "status": "REMAP_REQUIRED",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Bombay",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Kanpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Kanpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Kharagpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Kharagpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Roorkee",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Roorkee",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Guwahati",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Guwahati",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Hyderabad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Hyderabad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Management Ahmedabad",
+      "legacy_institution_id": "CORE-IIM-AHMEDABAD",
+      "actual_institution_id": "CORE-IIM-AHMEDABAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Management Bangalore",
+      "legacy_institution_id": "CORE-IIM-BANGALORE",
+      "actual_institution_id": "CORE-IIM-BANGALORE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Management Calcutta",
+      "legacy_institution_id": "CORE-IIM-CALCUTTA",
+      "actual_institution_id": "CORE-IIM-CALCUTTA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Management Lucknow",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-MANAGEMENT-LUCKNOW",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-MANAGEMENT-LUCKNOW",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Management Kozhikode",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-MANAGEMENT-KOZHIKODE",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-MANAGEMENT-KOZHIKODE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Management Indore",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-MANAGEMENT-INDORE",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-MANAGEMENT-INDORE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "All India Institute of Medical Sciences Delhi",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NEW-DELHI",
+      "actual_institution_id": "CORE-AIIMS-DELHI",
+      "status": "REMAP_REQUIRED",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Tiruchirappalli",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPPALLI",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPPALLI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Tiruchirapalli",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Tiruchirappalli",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPPALLI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "BITS Pilani",
+      "legacy_institution_id": "CORE-BITS-PILANI",
+      "actual_institution_id": "CORE-BITS-PILANI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Science",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-SCIENCE",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-SCIENCE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Vellore Institute of Technology",
+      "legacy_institution_id": "CORE-VELLORE-INSTITUTE-OF-TECHNOLOGY",
+      "actual_institution_id": "CORE-VELLORE-INSTITUTE-OF-TECHNOLOGY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Manipal Institute of Technology",
+      "legacy_institution_id": "CORE-MANIPAL-INSTITUTE-OF-TECHNOLOGY",
+      "actual_institution_id": "CORE-MANIPAL-INSTITUTE-OF-TECHNOLOGY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Thapar Institute of Engineering and Technology",
+      "legacy_institution_id": "CORE-THAPAR-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+      "actual_institution_id": "CORE-THAPAR-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Jadavpur University",
+      "legacy_institution_id": "CORE-JADAVPUR-UNIVERSITY",
+      "actual_institution_id": "CORE-JADAVPUR-UNIVERSITY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Delhi Technological University",
+      "legacy_institution_id": "CORE-DELHI-TECHNOLOGICAL-UNIVERSITY",
+      "actual_institution_id": "CORE-DELHI-TECHNOLOGICAL-UNIVERSITY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Law School of India University",
+      "legacy_institution_id": "CORE-NATIONAL-LAW-SCHOOL-OF-INDIA-UNIVERSITY",
+      "actual_institution_id": "CORE-NATIONAL-LAW-SCHOOL-OF-INDIA-UNIVERSITY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "FMS Delhi",
+      "legacy_institution_id": "CORE-FMS-DELHI",
+      "actual_institution_id": "CORE-FMS-DELHI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "XLRI Jamshedpur",
+      "legacy_institution_id": "CORE-XLRI-JAMSHEDPUR",
+      "actual_institution_id": "CORE-XLRI-JAMSHEDPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "International Institute of Technology & Management",
+      "legacy_institution_id": "CORE-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-MANAGEMENT",
+      "actual_institution_id": "CORE-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-MANAGEMENT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Sine International Institute of Technology,Jaipur",
+      "legacy_institution_id": "CORE-SINE-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "actual_institution_id": "CORE-SINE-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Sine International Institute of TechnologyJaipur",
+      "legacy_institution_id": "CORE-SINE-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "actual_institution_id": "CORE-SINE-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Liberal College, IIM Pithampur Rau, Indore",
+      "legacy_institution_id": "CORE-LIBERAL-COLLEGE-IIM-PITHAMPUR-RAU-INDORE",
+      "actual_institution_id": "CORE-LIBERAL-COLLEGE-IIM-PITHAMPUR-RAU-INDORE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Liberal College IIM Pithampur Rau Indore",
+      "legacy_institution_id": "CORE-LIBERAL-COLLEGE-IIM-PITHAMPUR-RAU-INDORE",
+      "actual_institution_id": "CORE-LIBERAL-COLLEGE-IIM-PITHAMPUR-RAU-INDORE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Barrister Ranjit Mohanty  International Institute of Technology (BRMIIT), Bhubaneswar",
+      "legacy_institution_id": "CORE-BARRISTER-RANJIT-MOHANTY-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-BRMIIT-BHUBANESWAR",
+      "actual_institution_id": "CORE-BARRISTER-RANJIT-MOHANTY-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-BRMIIT-BHUBANESWAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Barrister Ranjit Mohanty International Institute of Technology (BRMIIT) Bhubaneswar",
+      "legacy_institution_id": "CORE-BARRISTER-RANJIT-MOHANTY-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-BRMIIT-BHUBANESWAR",
+      "actual_institution_id": "CORE-BARRISTER-RANJIT-MOHANTY-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-BRMIIT-BHUBANESWAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "MEERUT INTERNATIONAL INSTITUTE OF TECHNOLOGY, MEERUT",
+      "legacy_institution_id": "CORE-MEERUT-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-MEERUT",
+      "actual_institution_id": "CORE-MEERUT-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-MEERUT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "MEERUT INTERNATIONAL INSTITUTE OF TECHNOLOGY MEERUT",
+      "legacy_institution_id": "CORE-MEERUT-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-MEERUT",
+      "actual_institution_id": "CORE-MEERUT-INTERNATIONAL-INSTITUTE-OF-TECHNOLOGY-MEERUT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Information Technology, Dharwad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Information Technology Dharwad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIIT, Dharwad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIIT Dharwad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY VADODARA INTERNATIONAL CAMPUS DIU",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA-INTERNATIONAL-CAMPUS-DIU",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA-INTERNATIONAL-CAMPUS-DIU",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SRI CITY",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRI-CITY",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRI-CITY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SRI CITY",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRI-CITY",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRI-CITY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Tirupati",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Tirupati",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Tirupati",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Tirupati",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NATIONAL INSTITUTE OF TECHNOLOGY, ANDHRA PRADESH",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ANDHRA-PRADESH",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ANDHRA-PRADESH",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NATIONAL INSTITUTE OF TECHNOLOGY ANDHRA PRADESH",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ANDHRA-PRADESH",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ANDHRA-PRADESH",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Information Technology Design And Manufacturing, Kurnool",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Information Technology Design And Manufacturing Kurnool",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIIT Design And Manufacturing, Kurnool",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIIT Design And Manufacturing Kurnool",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, MANGALAGIRI",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-MANGALAGIRI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-MANGALAGIRI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES MANGALAGIRI",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-MANGALAGIRI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-MANGALAGIRI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Arunachal Pradesh",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ARUNACHAL-PRADESH",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ARUNACHAL-PRADESH",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Arunachal Pradesh",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ARUNACHAL-PRADESH",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, GUWAHATI",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-GUWAHATI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-GUWAHATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES GUWAHATI",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-GUWAHATI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-GUWAHATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Guwahati",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Guwahati",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology, Silchar",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Silchar",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Silchar",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Silchar",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, GUWAHATI",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-GUWAHATI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-GUWAHATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY GUWAHATI",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-GUWAHATI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-GUWAHATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY BHAGALPUR",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHAGALPUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHAGALPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology, Patna",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Patna",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Patna",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Patna",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Patna",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Patna",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Patna",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Patna",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, PATNA",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-PATNA",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-PATNA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES PATNA",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-PATNA",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-PATNA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Bhilai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHILAI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHILAI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Bhilai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHILAI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology, Raipur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Raipur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Raipur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Raipur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RAIPUR",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RAIPUR",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RAIPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES RAIPUR",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RAIPUR",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RAIPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "All India Institute of Medical Sciences, New Delhi",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NEW-DELHI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NEW-DELHI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "All India Institute of Medical Sciences New Delhi",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NEW-DELHI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NEW-DELHI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "All India Institute of Medical Sciences, Delhi",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NEW-DELHI",
+      "actual_institution_id": "CORE-AIIMS-DELHI",
+      "status": "REMAP_REQUIRED",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Delhi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Delhi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology Delhi",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DELHI",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DELHI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Delhi",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DELHI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Goa",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Goa",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Goa",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Goa",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology Goa",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-GOA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-GOA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Goa",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-GOA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Sardar Vallabhbhai National Institute of Technology, Surat",
+      "legacy_institution_id": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+      "actual_institution_id": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Sardar Vallabhbhai National Institute of Technology Surat",
+      "legacy_institution_id": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+      "actual_institution_id": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Sardar Vallabhbhai NIT, Surat",
+      "legacy_institution_id": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Sardar Vallabhbhai NIT Surat",
+      "legacy_institution_id": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RAJKOT",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RAJKOT",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RAJKOT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES RAJKOT",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RAJKOT",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RAJKOT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Gandhinagar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Gandhinagar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Gandhinagar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Gandhinagar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SURAT",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SURAT",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SURAT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, VADODARA",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY VADODARA",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SONIPAT",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SONIPAT",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SONIPAT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SONIPAT",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SONIPAT",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SONIPAT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology, Kurukshetra",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Kurukshetra",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Kurukshetra",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Kurukshetra",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, UNA",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-UNA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-UNA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY UNA",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-UNA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-UNA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Mandi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Mandi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Mandi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Mandi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology, Hamirpur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Hamirpur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Hamirpur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Hamirpur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology, Srinagar",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Srinagar",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Srinagar",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Srinagar",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Jammu",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JAMMU",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JAMMU",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Jammu",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JAMMU",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology, Jamshedpur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Jamshedpur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Jamshedpur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Jamshedpur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology (Indian School of Mines), Dhanbad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology (Indian School of Mines) Dhanbad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology (Indian School of Mines), ISM Dhanbad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology (Indian School of Mines) ISM Dhanbad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT (Indian School of Mines), ISM Dhanbad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT (Indian School of Mines) ISM Dhanbad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT (Indian School of Mines), Dhanbad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT (Indian School of Mines) Dhanbad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDIAN-SCHOOL-OF-MINES-DHANBAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, RANCHI",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RANCHI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RANCHI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY RANCHI",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RANCHI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RANCHI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology, Karnataka",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Karnataka",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Karnataka",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Karnataka",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Dharwad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Dharwad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Dharwad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Dharwad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY RAICHUR",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RAICHUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RAICHUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology, Calicut",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Calicut",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Calicut",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Calicut",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KOTTAYAM",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTTAYAM",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTTAYAM",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY KOTTAYAM",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTTAYAM",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTTAYAM",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Palakkad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Palakkad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Palakkad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Palakkad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management, Gwalior",
+      "legacy_institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+      "actual_institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior",
+      "legacy_institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+      "actual_institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management, ABV-IIITM Gwalior",
+      "legacy_institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management ABV-IIITM Gwalior",
+      "legacy_institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Atal Bihari Vajpayee IIIT and Management, Gwalior",
+      "legacy_institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Atal Bihari Vajpayee IIIT and Management Gwalior",
+      "legacy_institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Indore",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Indore",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Indore",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Indore",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Maulana Azad National Institute of Technology, Bhopal",
+      "legacy_institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+      "actual_institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Maulana Azad National Institute of Technology Bhopal",
+      "legacy_institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+      "actual_institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Maulana Azad NIT, Bhopal",
+      "legacy_institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Maulana Azad NIT Bhopal",
+      "legacy_institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Pandhi Dwarka Prasad Mishra Indian Institute of Information Technology & Manufacturing , Jabalpur",
+      "legacy_institution_id": "CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR",
+      "actual_institution_id": "CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Pandhi Dwarka Prasad Mishra Indian Institute of Information Technology & Manufacturing Jabalpur",
+      "legacy_institution_id": "CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR",
+      "actual_institution_id": "CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Pandhi Dwarka Prasad Mishra IIIT & Manufacturing , Jabalpur",
+      "legacy_institution_id": "CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Pandhi Dwarka Prasad Mishra IIIT & Manufacturing  Jabalpur",
+      "legacy_institution_id": "CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, BHOPAL",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-BHOPAL",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-BHOPAL",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES BHOPAL",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-BHOPAL",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-BHOPAL",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES NAGPUR",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NAGPUR",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NAGPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, NAGPUR",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAGPUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAGPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY NAGPUR",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAGPUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAGPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Mumbai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Mumbai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Bombay",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "actual_institution_id": "CORE-IIT-BOMBAY",
+      "status": "REMAP_REQUIRED",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Bombay",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT, Mumbai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Mumbai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Visvesvaraya National Institute of Technology, Nagpur",
+      "legacy_institution_id": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+      "actual_institution_id": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Visvesvaraya National Institute of Technology Nagpur",
+      "legacy_institution_id": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+      "actual_institution_id": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Visvesvaraya NIT, Nagpur",
+      "legacy_institution_id": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Visvesvaraya NIT Nagpur",
+      "legacy_institution_id": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, PUNE",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-PUNE",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-PUNE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY PUNE",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-PUNE",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-PUNE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SENAPATI",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SENAPATI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SENAPATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SENAPATI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SENAPATI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Manipur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MANIPUR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MANIPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Manipur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MANIPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology Meghalaya",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MEGHALAYA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MEGHALAYA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Meghalaya",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MEGHALAYA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology Mizoram",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MIZORAM",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MIZORAM",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Mizoram",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MIZORAM",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology Nagaland",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGALAND",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGALAND",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Nagaland",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGALAND",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, BHUBANESWAR",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-BHUBANESWAR",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-BHUBANESWAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES BHUBANESWAR",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-BHUBANESWAR",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-BHUBANESWAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology, Rourkela",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Rourkela",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Rourkela",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Rourkela",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Bhubaneshwar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Bhubaneshwar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Bhubaneshwar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Bhubaneshwar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology Puducherry",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PUDUCHERRY",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PUDUCHERRY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Puducherry",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PUDUCHERRY",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Dr. B. R. Ambedkar National Institute of Technology, Jalandhar",
+      "legacy_institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+      "actual_institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Dr. B. R. Ambedkar National Institute of Technology Jalandhar",
+      "legacy_institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+      "actual_institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Dr. B. R. Ambedkar NIT, Jalandhar",
+      "legacy_institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Dr. B. R. Ambedkar NIT Jalandhar",
+      "legacy_institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Ropar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Ropar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Ropar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Ropar",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KOTA",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY KOTA",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Malviya National Institute of Technology, Jaipur",
+      "legacy_institution_id": "CORE-MALVIYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "actual_institution_id": "CORE-MALVIYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Malviya National Institute of Technology Jaipur",
+      "legacy_institution_id": "CORE-MALVIYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "actual_institution_id": "CORE-MALVIYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Malviya NIT, Jaipur",
+      "legacy_institution_id": "CORE-MALVIYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Malviya NIT Jaipur",
+      "legacy_institution_id": "CORE-MALVIYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAIPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Jodhpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Jodhpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Jodhpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Jodhpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, JODHPUR",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-JODHPUR",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-JODHPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES JODHPUR",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-JODHPUR",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-JODHPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Sikkim",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SIKKIM",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SIKKIM",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Sikkim",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SIKKIM",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Information Technology Design & Manufacturing Kancheepuram",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIIT, Design & Manufacturing, Kancheepuram",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIIT Design & Manufacturing Kancheepuram",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Chennai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology Chennai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Madras",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "actual_institution_id": "CORE-IIT-MADRAS",
+      "status": "REMAP_REQUIRED",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Madras",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT, Chennai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT Chennai",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology, Tiruchirapalli",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Tiruchirapalli",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Tiruchirapalli",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SRIRANGAM",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRIRANGAM",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRIRANGAM",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SRIRANGAM",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRIRANGAM",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRIRANGAM",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES MADURAI",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-MADURAI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-MADURAI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Hyderabad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Hyderabad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology, Warangal",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Warangal",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Warangal",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Warangal",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Information Technology Agartala",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AGARTALA",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AGARTALA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIIT Agartala",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AGARTALA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology, Agartala",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Agartala",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Agartala",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Agartala",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RISHIKESH",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RISHIKESH",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RISHIKESH",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES RISHIKESH",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RISHIKESH",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-RISHIKESH",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Roorkee",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Roorkee",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology Uttarakhand",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-UTTARAKHAND",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-UTTARAKHAND",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT Uttarakhand",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-UTTARAKHAND",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES (AIIMS), RAEBARELI",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-AIIMS-RAEBARELI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-AIIMS-RAEBARELI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES (AIIMS) RAEBARELI",
+      "legacy_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-AIIMS-RAEBARELI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-AIIMS-RAEBARELI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Information Technology, Allahabad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Information Technology Allahabad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIIT, Allahabad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIIT Allahabad",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Kanpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Kanpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Motilal Nehru National Institute of Technology, Allahabad",
+      "legacy_institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+      "actual_institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Motilal Nehru National Institute of Technology Allahabad",
+      "legacy_institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+      "actual_institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Motilal Nehru NIT, Allahabad",
+      "legacy_institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Motilal Nehru NIT Allahabad",
+      "legacy_institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "Indian Institute of Technology (Banaras Hindu University), Varanasi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology (Banaras Hindu University) Varanasi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT (Banaras Hindu University), Varanasi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "IIT (Banaras Hindu University) Varanasi",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, LUCKNOW",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-LUCKNOW",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-LUCKNOW",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY LUCKNOW",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-LUCKNOW",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-LUCKNOW",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KALYANI",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KALYANI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KALYANI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY KALYANI",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KALYANI",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KALYANI",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "Indian Institute of Technology, Kharagpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR",
+      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT, Kharagpur",
+      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "National Institute of Technology, Durgapur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "National Institute of Technology Durgapur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+      "actual_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "NIT, Durgapur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "NIT Durgapur",
+      "legacy_institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+      "actual_institution_id": null,
+      "status": "UNRESOLVED",
+      "approved": false
+    },
+    {
+      "canonical_name": "All India Institute of Medical Sciences, New Delhi",
+      "legacy_institution_id": "CORE-AIIMS-DELHI",
+      "actual_institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NEW-DELHI",
+      "status": "REMAP_REQUIRED",
+      "reconciliation_basis": "EXPLICIT_MEDICAL_FLAGSHIP_OVERRIDE",
+      "approved": true
+    },
+    {
+      "canonical_name": "MCC_ID_200505",
+      "legacy_institution_id": "CORE-AIIMS-JODHPUR",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    },
+    {
+      "canonical_name": "MCC_ID_200506",
+      "legacy_institution_id": "CORE-AIIMS-RAIPUR",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    },
+    {
+      "canonical_name": "MCC_ID_200508",
+      "legacy_institution_id": "CORE-AIIMS-PATNA",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    },
+    {
+      "canonical_name": "MCC_ID_200512",
+      "legacy_institution_id": "CORE-AIIMS-DEOGARH",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    },
+    {
+      "canonical_name": "MCC_ID_200513",
+      "legacy_institution_id": "CORE-AIIMS-GORAKHPUR",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    },
+    {
+      "canonical_name": "MCC_ID_200514",
+      "legacy_institution_id": "CORE-AIIMS-KALYANI",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    },
+    {
+      "canonical_name": "MCC_ID_200518",
+      "legacy_institution_id": "CORE-AIIMS-VIJAYPUR",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    },
+    {
+      "canonical_name": "MCC_ID_200519",
+      "legacy_institution_id": "CORE-AIIMS-BIBINAGAR",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    },
+    {
+      "canonical_name": "MCC_ID_200520",
+      "legacy_institution_id": "CORE-AIIMS-BHUBANESWAR",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    },
+    {
+      "canonical_name": "MCC_ID_200580",
+      "legacy_institution_id": "CORE-AIIMS-MADURAI",
+      "actual_institution_id": null,
+      "status": "SKIPPED_MISSING_RAW_DATA",
+      "approved": false
+    }
+  ]
+}
