@@ -22,6 +22,8 @@ const { computeInstitutionalCeiScore, computeCoverageIndex } = require('../lib/s
 const { getRedisClient } = require("../config/redis");
 const mongoose = require("mongoose");
 const College = require("../models/CollegeSchema");
+const normalizeCollege = require("../lib/collegeNormalizer");
+const identityResolver = require("../lib/collegeIdentityResolver");
 const logger = (() => {
   try { return require("../lib/logger"); }
   catch { return console; } // Safe fallback during early boot
@@ -195,45 +197,113 @@ async function resolveActiveKey(redis) {
  * Merges NDJSON truth data into the provided map.
  * Auto-spawns missing CORE institutions.
  */
+function toLPA(val) {
+  const n = parseFloat(val);
+  if (isNaN(n) || n <= 0) return null;
+  return n > 1000 ? parseFloat((n / 100000).toFixed(2)) : parseFloat(n.toFixed(2));
+}
+
 function applyTruthEnrichment(map) {
   try {
-    const truthPath = path.join(__dirname, "..", "data", "truth", "core_enrichment.ndjson");
-    if (!fs.existsSync(truthPath)) return;
+    const truthDir = path.join(__dirname, "..", "data", "truth");
+    if (!fs.existsSync(truthDir)) return;
     
-    const rawTruth = fs.readFileSync(truthPath, "utf8").split('\n');
-    rawTruth.forEach(line => {
-       if (!line.trim()) return;
-       try {
-           const d = JSON.parse(line);
-           let c = map.get(d.collegeId);
-           
-           if (!c && d.collegeId.startsWith('CORE-')) {
-               c = { 
-                  id: d.collegeId, 
-                  _id: d.collegeId, 
-                  name: d.name || d.collegeId.replace('CORE-', '').split(/(?=[A-Z])/).join(' ').trim(),
-                  location: 'India',
-                  isCore: true,
-                  placements: {},
-                  fees: {},
-                  meta: { ownership: 'Central Govt / INI', naacGrade: 'A++' },
-                  verificationStatus: 'VERIFIED'
-               };
-               map.set(d.collegeId, c);
-           }
+    const parsedTruth = [];
+    const files = fs.readdirSync(truthDir).filter(f => f.endsWith('.ndjson'));
+    
+    files.forEach(file => {
+        const truthPath = path.join(truthDir, file);
+        const rawTruthLines = fs.readFileSync(truthPath, "utf8").split('\n');
+        rawTruthLines.forEach(line => {
+            if (!line.trim()) return;
+            try { parsedTruth.push(JSON.parse(line)); } catch {}
+        });
+    });
 
-           if (!c) return;
+    // Invoke deterministic resolver to build exact aliases
+    const catalogArray = Array.from(map.values());
+    identityResolver.buildIdentityMaps(catalogArray, parsedTruth);
 
-           if (d.entityType === 'placement') {
-               c.placements = { ...c.placements, averagePackage: `${d.averagePackage} ${d.currency}`, highestPackage: `${d.highestPackage} ${d.currency}`, medianSalary: d.averagePackage, placedPercentage: 90 };
-           } else if (d.entityType === 'fees') {
-               c.fees = { ...c.fees, total: `${d.totalFee} ${d.currency}` };
-               c.tuition = `${d.totalFee} ${d.currency}`;
-           } else if (d.entityType === 'ranking') {
-               if (!c.rankings) c.rankings = [];
-               c.rankings.push({ source: d.source, rank: d.rank, year: d.year });
-           }
-       } catch {}
+    // Globalize it so truth endpoints correctly bind
+    global.truthRows = parsedTruth;
+
+    parsedTruth.forEach((d, idx) => {
+        // Resolve Identity (Phase 4A Synchronized)
+        const canonicalId = identityResolver.resolveCanonicalId(d.collegeId || d.name);
+        if (d.name && (d.name.includes('Bombay') || d.name.includes('Tiruchirappalli'))) {
+            logger.info(`[TruthSync] Found row for ${d.name} -> Resolved ID: ${canonicalId}`);
+        }
+        let c = map.get(canonicalId);
+        if (d.name && (d.name.includes('Bombay') || d.name.includes('Tiruchirappalli')) && c) {
+            logger.info(`[TruthSync] Binding truth for ${canonicalId} onto ${c.name}`);
+        }
+        
+        if (!c && d.collegeId && typeof d.collegeId === 'string' && d.collegeId.startsWith('CORE-')) {
+            c = { 
+               id: d.collegeId, 
+               _id: d.collegeId, 
+               name: d.name || d.collegeId.replace('CORE-', '').split(/(?=[A-Z])/).join(' ').trim(),
+               location: 'India',
+               isCore: true,
+               placements: {},
+               fees: {},
+               meta: { ownership: 'Central Govt / INI', naacGrade: 'A++' },
+               verificationStatus: 'VERIFIED'
+            };
+            map.set(d.collegeId, c);
+        }
+
+        if (!c) return;
+        
+        // Flag top-level verification
+        c.isVerified = true;
+        
+        if (!c.fees) c.fees = {};
+        if (!c.placements) c.placements = {};
+        if (!c.rankings) c.rankings = [];
+        if (!c.courses) c.courses = [];
+        if (!c.cutoffs) c.cutoffs = [];
+        if (!c.seats) c.seats = [];
+
+        if (d.entityType === 'placement') {
+            const lpaAvg = toLPA(d.averagePackage || d.avgPackage || d.medianSalary);
+            const lpaHigh = toLPA(d.highestPackage);
+            c.placements = { 
+                ...c.placements, 
+                averagePackage: lpaAvg ? `${lpaAvg} LPA` : (c.placements.averagePackage || 'Data Unavailable'),
+                highestPackage: lpaHigh ? `${lpaHigh} LPA` : (c.placements.highestPackage || 'Data Unavailable'),
+                averagePackageNumeric: lpaAvg,
+                highestPackageNumeric: lpaHigh,
+                medianSalary: lpaAvg, 
+                placedPercentage: d.placedPercentage || 90 
+            };
+        } else if (d.entityType === 'fees' || d.entityType === 'fee') {
+            const total = d.totalFee || d.tuitionFee || d.tuition;
+            c.fees = { ...c.fees, total: `₹${total.toLocaleString('en-IN')}`, totalNumeric: total };
+            c.tuition = `₹${total.toLocaleString('en-IN')}`;
+        } else if (d.entityType === 'ranking') {
+            c.rankings.push({ 
+                source: d.source, 
+                rank: parseInt(d.rank), 
+                year: d.year,
+                category: d.category || 'Overall'
+            });
+        } else if (d.entityType === 'program' || d.entityType === 'course') {
+            const courseName = d.programName || d.courseName || d.degree || d.name || d.program;
+            if (courseName && courseName.length > 2) {
+                c.courses.push({ 
+                    name: courseName, 
+                    specialization: d.specialization || d.branch || d.stream,
+                    duration: d.duration || '4 Years', 
+                    intake: d.intake || d.approvedIntake || 0, 
+                    exams: d.exams || d.admissionExams || [] 
+                });
+            }
+        } else if (d.entityType === 'counsellingCutoff') {
+            c.cutoffs.push(d);
+        } else if (d.entityType === 'counsellingSeatMatrix') {
+            c.seats.push(d);
+        }
     });
     
     // --- Final Pass: Re-score enriched institutions (Phase 30) ---
@@ -267,34 +337,18 @@ async function initializeCache() {
   const redis = await getRedisClient();
 
   if (!redis) {
-    logger.warn && logger.warn("[dataStore] Redis unavailable — using L1 fallback");
-    if (!LOCAL_CACHE) {
-      if (global.colleges && global.colleges.length > 0) {
-        logger.info && logger.info("[dataStore] Using global.colleges (NDJSON) directly for L1 fallback", { count: global.colleges.length });
-        LOCAL_CACHE = [...global.colleges];
-      } else {
-        const jsonColleges = loadStateCollegeFiles();
-        const masterMap = new Map();
-        jsonColleges.forEach(c => {
-          const cid = String(c.id || c._id || c.stableKey || '');
-          if(cid) masterMap.set(cid, c);
-        });
-        applyTruthEnrichment(masterMap);
-        LOCAL_CACHE = Array.from(masterMap.values());
-        global.colleges = LOCAL_CACHE;
-      }
-      LOCAL_LAST_UPDATE = Date.now();
-      preComputeGlobalData();
-    }
-    return;
+    logger.warn && logger.warn("[dataStore] Redis unavailable — performing direct SSoT hydration");
   }
 
   try {
-    const lockAcquired = await redis.set(HYDRATION_LOCK_KEY, "1", "NX", "EX", TTL.HYDRATE_LOCK);
-    if (!lockAcquired) {
-      for (let i = 0; i < 30; i++) {
-        await new Promise(r => setTimeout(r, 500));
-        if (await redis.get(ACTIVE_POINTER_KEY)) return;
+    // Stage 0: Lock (Skip if Redis is missing)
+    if (redis) {
+      const lockAcquired = await redis.set(HYDRATION_LOCK_KEY, "1", "NX", "EX", TTL.HYDRATE_LOCK);
+      if (!lockAcquired) {
+        for (let i = 0; i < 30; i++) {
+          await new Promise(r => setTimeout(r, 500));
+          if (await redis.get(ACTIVE_POINTER_KEY)) return;
+        }
       }
     }
 
@@ -303,23 +357,40 @@ async function initializeCache() {
       let sourceInfo = "Memory (NDJSON)";
 
       // ── STAGE 1: Source Selection ──────────────────────────────────────────
-      // Prioritize MongoDB as the Primary SSoT, else HIGHT-DENSITY MEMORY (NDJSON)
       try {
         logger.info && logger.info("[dataStore] Fetching dataset from MongoDB Architecture...");
-        const mongoColleges = await College.find({}).lean().timeout(10000);
+        
+        // Ensure connection is ready before querying
+        if (mongoose.connection.readyState !== 1) {
+            logger.info && logger.info("[dataStore] Waiting for MongoDB connection...");
+            await new Promise((resolve) => {
+                if (mongoose.connection.readyState === 1) return resolve();
+                mongoose.connection.once('connected', () => resolve());
+                // Fallback timeout
+                setTimeout(resolve, 3000); 
+            });
+        }
+
+        const mongoColleges = await College.find({}).lean();
         
         if (mongoColleges && mongoColleges.length > 0) {
-          mongoColleges.forEach(c => masterMap.set(String(c.id || c._id), c));
+          mongoColleges.forEach(c => {
+             const norm = normalizeCollege(c);
+             // Phase 4A: Canonical ID Resolution for Truth Binding
+             const cid = identityResolver.resolveCanonicalId(norm.id || norm.name);
+             if (norm.name && (norm.name.includes('Bombay') || norm.name.includes('Tiruchirappalli'))) {
+                 logger.info(`[HydrateSync] Catalog Institution: ${norm.name} -> Core ID: ${cid}`);
+             }
+             masterMap.set(String(cid), norm);
+          });
           sourceInfo = "MongoDB";
           logger.info && logger.info("[dataStore] System of Record (MongoDB) loaded.", { count: mongoColleges.length });
         } else {
             throw new Error("MongoDB collection empty or disconnected");
         }
       } catch (mongoErr) {
+        logger.error && logger.error("[dataStore] MongoDB SSoT failure", { error: mongoErr.message, stack: mongoErr.stack });
         logger.warn && logger.warn("[dataStore] MongoDB SSoT unavailable, checking HIGH-DENSITY MEMORY...");
-        
-        // CRITICAL FIX: Lock to global.colleges (populated from colleges.ndjson.gz)
-        // This holds the 67,149 verified records.
         if (global.colleges && global.colleges.length > 50000) {
             global.colleges.forEach(c => {
                 const cid = String(c.id || c._id || c.stableKey || '');
@@ -328,8 +399,7 @@ async function initializeCache() {
             sourceInfo = "Memory (High-Density GZIP)";
             logger.info && logger.info("[dataStore] System of Record (High-Density) locked.", { count: global.colleges.length });
         } else {
-            // ONLY if memory is empty, fall back to legacy JSON to prevent total system failure
-            logger.warn && logger.warn("[dataStore] Memory buffer stale/empty, falling back to Legacy Disk JSON [Emergency Only]");
+            logger.warn && logger.warn("[dataStore] Memory buffer stale/empty, falling back to Legacy Disk JSON");
             const jsonColleges = loadStateCollegeFiles();
             jsonColleges.forEach(c => {
                 const cid = String(c.id || c._id || c.stableKey || '');
@@ -340,8 +410,6 @@ async function initializeCache() {
       }
 
       // ── STAGE 2: Truth Enrichment & Merging ────────────────────────────────
-      // Note: NDJSON loader (lib/dataStore) already applies enrichment, 
-      // but we re-apply for safety if we fell back to Mongo/Disk.
       if (sourceInfo !== "Memory (NDJSON)") {
         applyTruthEnrichment(masterMap);
       }
@@ -366,7 +434,9 @@ async function initializeCache() {
       LOCAL_LAST_UPDATE = Date.now();
 
       const exams = loadJson("exams.json") || [];
-      await hydrateGreen(redis, LOCAL_CACHE, exams);
+      if (redis) {
+          await hydrateGreen(redis, LOCAL_CACHE, exams);
+      }
       preComputeGlobalData();
     } catch (innerErr) {
       logger.error && logger.error("[dataStore] Hydration inner fail", { error: innerErr.message });
@@ -376,7 +446,9 @@ async function initializeCache() {
         preComputeGlobalData();
       }
     } finally {
-      await redis.del(HYDRATION_LOCK_KEY).catch(() => { });
+      if (redis) {
+        await redis.del(HYDRATION_LOCK_KEY).catch(() => { });
+      }
     }
   } catch (err) {
     if (!LOCAL_CACHE) {
@@ -404,16 +476,17 @@ async function getColleges() {
     }
   }
 
-  // ── L2: Redis version-keyed hash ──
+  // ── L2: Redis version-keyed hash (or direct SSoT if Redis missing) ──
   const redis = await getRedisClient();
+  
+  if (!LOCAL_CACHE) {
+    await initializeCache();
+    if (LOCAL_CACHE) return LOCAL_CACHE;
+  }
+
   if (redis) {
     const activeKey = await resolveActiveKey(redis);
-
-    if (!activeKey) {
-      // No active version → trigger hydration
-      await initializeCache();
-      if (LOCAL_CACHE) return LOCAL_CACHE;
-    } else {
+    if (activeKey) {
       const rawMap = await redis.hgetall(activeKey);
       if (rawMap && Object.keys(rawMap).length > 0) {
         const colleges = Object.values(rawMap).map(s => JSON.parse(s));
@@ -421,9 +494,6 @@ async function getColleges() {
         LOCAL_LAST_UPDATE = parseInt(await redis.get(LAST_UPDATE_KEY) || Date.now());
         return colleges;
       }
-      // Active key exists but hash is empty → stale pointer, re-hydrate
-      await initializeCache();
-      if (LOCAL_CACHE) return LOCAL_CACHE;
     }
   }
 
@@ -445,10 +515,22 @@ async function getCollegeById(id) {
         $or: [
           { id: String(id) },
           { _id: mongoose.isValidObjectId(id) ? id : null },
-          { stableKey: String(id) }
+          { stableKey: String(id) },
+          { institution_id: String(id) },
+          { source_stable_key: String(id) }
         ]
       }).lean();
-      if (mongoCol) return mongoCol;
+      if (mongoCol) {
+          let norm = normalizeCollege(mongoCol);
+          // Phase 4A: Merge fully enriched truth from memory cache (handles isVerified, cutoffs, etc.)
+          if (global.colleges && global.colleges.length > 0) {
+              const enriched = global.colleges.find(c => String(c.id) === String(norm.id) || String(c.stableKey) === String(norm.id));
+              if (enriched) {
+                  norm = { ...norm, ...enriched };
+              }
+          }
+          return norm;
+      }
     } catch (e) {
       logger.warn('[dataStore] Mongo fetch failed in getCollegeById', { id, error: e.message });
     }
