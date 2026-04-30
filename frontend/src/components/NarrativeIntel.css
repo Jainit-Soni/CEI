@@ -3,12 +3,45 @@
   padding: 100px 0;
 }
 
-.intel-intro {
-  margin-top: 16px;
-  font-size: 1.2rem;
-  color: var(--color-ink);
-  opacity: 0.7;
-  max-width: 500px;
+.score-hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.score-meter {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.meter-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--color-accent);
+  opacity: 0.1;
+  border-radius: 50%;
+  transition: width 1s ease-out;
+}
+
+.meter-label {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  position: relative;
+  z-index: 2;
 }
 
 .intel-grid {

@@ -8,6 +8,19 @@
 
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+
+let officialCodes = null;
+try {
+    const codesPath = path.join(__dirname, '..', 'data', 'truth', 'official_code_registry.json');
+    if (fs.existsSync(codesPath)) {
+        officialCodes = JSON.parse(fs.readFileSync(codesPath, 'utf8'));
+    }
+} catch (err) {
+    console.error("[Normalizer] Failed to load official code registry:", err.message);
+}
+
 function normalizeCollege(raw) {
     if (!raw) return null;
 
@@ -46,6 +59,43 @@ function normalizeCollege(raw) {
     const rankingTier = raw.rankingTier || "Tier 3"; // safe fallback
     const isCore = raw.isCore || (id.startsWith('CORE-'));
 
+    // 5. Calculate Identity Confidence
+    let confidence = 'LOW';
+    let mergeSource = 'name';
+    
+    if (id.startsWith('CORE-')) {
+        let hasCode = false;
+        if (officialCodes) {
+            // Check if this ID is mapped in ANY official registry
+            const inJoSAA = Object.values(officialCodes.josaa || {}).includes(id);
+            const inAICTE = Object.values(officialCodes.aicte || {}).includes(id);
+            const inAISHE = Object.values(officialCodes.aishe || {}).includes(id);
+            if (inJoSAA || inAICTE || inAISHE) hasCode = true;
+        }
+
+        if (hasCode) {
+            confidence = 'HIGH';
+            mergeSource = 'code';
+        } else {
+            confidence = 'MEDIUM';
+            mergeSource = 'geography';
+        }
+    }
+
+    const identity = {
+        canonicalId: id,
+        confidence,
+        mergeSource,
+        strictEligible: confidence === 'HIGH',
+        behavior: {
+            allowHydration: confidence === 'HIGH',
+            allowMerge: confidence === 'HIGH',
+            allowUIPromotion: confidence === 'HIGH',
+            allowRankingBoost: confidence !== 'LOW',
+            searchOnly: confidence === 'LOW'
+        }
+    };
+
     // Return the clean adapter representation
     return {
         ...raw, // keep raw fields for backward-compat / truth bridges
@@ -61,6 +111,7 @@ function normalizeCollege(raw) {
         address,
         rankingTier,
         isCore,
+        identity,
         isVerified: raw.isVerified,
         slug: raw.slug || `/college/${id}`,
         

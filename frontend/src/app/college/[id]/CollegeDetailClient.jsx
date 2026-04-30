@@ -27,6 +27,7 @@ import PrestigeIntelligenceTabs from "@/components/PrestigeIntelligenceTabs";
 import IntelligenceRadar from "@/components/IntelligenceRadar";
 import ROICalculator from "@/components/ROICalculator";
 import TruthPlacementsSection from "@/components/college/TruthPlacementsSection";
+import TruthFeesSection from "@/components/college/TruthFeesSection";
 import AdmissionTruthSummary from "@/components/college/AdmissionTruthSummary";
 
 import { useAuth } from "@/lib/AuthContext";
@@ -38,17 +39,30 @@ export default function CollegeDetailClient({ id, initialData }) {
     const [error, setError] = useState(null);
     const [activeTab, setActiveTab] = useState("overview");
 
-    const tabs = [
+    // [CEI] Filter tabs based on the Truth Surface Contract
+    const contract = college?.truthContract || { visibleSections: ['overview'], truthStatus: 'NONE' };
+    
+    const allTabs = [
         { id: "overview", label: "Overview" },
-        { id: "courses", label: "Courses Offered" },
-        { id: "seats", label: "Seats/Intake" },
-        { id: "cutoffs", label: "Cut offs" },
-        { id: "ceiscore", label: "CEI Score" },
+        { id: "courses", label: "Courses" },
+        { id: "seats", label: "Seats & Intake" },
+        { id: "fees", label: "Fees" },
         { id: "placements", label: "Placements" },
+        { id: "cutoffs", label: "Cut offs" },
         { id: "roi", label: "ROI" },
+        { id: "ceiscore", label: "CEI Score" },
         { id: "reviews", label: "Reviews" },
         { id: "report", label: "Report" }
     ];
+
+    // Core tabs that always show if they have a narrative component
+    const persistentTabs = ["overview", "roi", "ceiscore", "reviews", "report"];
+    
+    const tabs = allTabs.filter(tab => 
+        persistentTabs.includes(tab.id) || 
+        contract.visibleSections.includes(tab.id)
+    );
+
 
     // Load data with personality injection
     useEffect(() => {
@@ -114,6 +128,8 @@ export default function CollegeDetailClient({ id, initialData }) {
         );
     }
 
+    const resolvedCollegeId = college.institution_id || college.id || college._id;
+
     return (
         <PrestigeDetailLayout college={college}>
             {/* 0. Tactical Intelligence HUD */}
@@ -134,8 +150,44 @@ export default function CollegeDetailClient({ id, initialData }) {
                 {activeTab === "overview" && (
                     <div className="tab-pane fade-in">
                         <NarrativeOverview college={college} />
+                        
+                        {/* [CEI] Truth Surface Action Layer (Utility-First) */}
+                        {(contract.truthStatus === 'MINIMAL' || contract.truthImportance === 'LOW') && (
+                            <Container className="mb-8">
+                                <GlassPanel variant="strong" className="border-slate-800 bg-slate-900/50">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="text-2xl mt-1 text-amber-500">ℹ️</div>
+                                            <div>
+                                                <h4 className="text-slate-100 font-bold text-base mb-1">Official Admission Data Pending</h4>
+                                                <p className="text-slate-400 text-sm max-w-xl">
+                                                    Official 2024 truth tables for this institute have not yet been released. Use the actions below to view similar colleges with verified admission data.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="flex flex-col gap-3 min-w-[240px]">
+                                            {(contract.nextActions || []).map((action, idx) => (
+                                                <Button 
+                                                    key={idx}
+                                                    variant={action.primary ? "primary" : "secondary"}
+                                                    href={action.type === 'search' ? `/colleges?${new URLSearchParams(action.params).toString()}` : `/compare?id=${id}`}
+                                                    className="w-full text-center"
+                                                >
+                                                    {action.label}
+                                                </Button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </GlassPanel>
+                            </Container>
+                        )}
+
+
+
                         <NarrativeFoundation college={college} />
                         <NarrativeGeography college={college} />
+
                         <div className="prestige-section">
                             <div className="section-container">
                                 <IntelligenceRadar college={college} />
@@ -154,7 +206,7 @@ export default function CollegeDetailClient({ id, initialData }) {
                     <div className="tab-pane fade-in">
                         <Container>
                             <AdmissionTruthSummary 
-                                collegeId={college.id} 
+                                collegeId={resolvedCollegeId} 
                                 searchName={college.coreMetadata?.canonicalName || college.name} 
                             />
                         </Container>
@@ -162,26 +214,14 @@ export default function CollegeDetailClient({ id, initialData }) {
                     </div>
                 )}
 
-                {activeTab === "cutoffs" && (
+                {activeTab === "fees" && (
                     <div className="tab-pane fade-in">
                         <Container>
-                            <AdmissionTruthSummary 
-                                collegeId={college.id} 
-                                searchName={college.coreMetadata?.canonicalName || college.name} 
-                            />
+                            <TruthFeesSection collegeId={resolvedCollegeId} />
                         </Container>
-                        <NarrativeGateway 
-                            collegeId={college.id} 
-                            collegeName={college.name}
-                            cutoffSearchName={college.coreMetadata?.canonicalName || college.name}
-                        />
-                    </div>
-                )}
-
-                {activeTab === "ceiscore" && (
-                    <div className="tab-pane fade-in">
-                        <NarrativeIntel college={college} />
-                        <NarrativePedigree college={college} />
+                        <div className="mt-8">
+                             <NarrativeVault collegeId={resolvedCollegeId} />
+                        </div>
                     </div>
                 )}
 
@@ -189,17 +229,31 @@ export default function CollegeDetailClient({ id, initialData }) {
                     <div className="tab-pane fade-in">
                         <div className="prestige-section">
                             <Container>
-                                <TruthPlacementsSection collegeId={college.id} />
+                                <TruthPlacementsSection collegeId={resolvedCollegeId} />
                             </Container>
                         </div>
                         <NarrativeEdge college={college} />
                     </div>
                 )}
 
+                {activeTab === "cutoffs" && (
+                    <div className="tab-pane fade-in">
+                        <Container>
+                            <AdmissionTruthSummary 
+                                collegeId={resolvedCollegeId} 
+                                searchName={college.coreMetadata?.canonicalName || college.name} 
+                            />
+                        </Container>
+                        <NarrativeGateway 
+                            collegeId={resolvedCollegeId} 
+                            collegeName={college.name}
+                            cutoffSearchName={college.coreMetadata?.canonicalName || college.name}
+                        />
+                    </div>
+                )}
+
                 {activeTab === "roi" && (
                     <div className="tab-pane fade-in">
-                        <NarrativeVault collegeId={college.id} />
-                        
                         <div className="prestige-section">
                             <Container>
                                 <ROICalculator 
@@ -211,6 +265,13 @@ export default function CollegeDetailClient({ id, initialData }) {
                                 />
                             </Container>
                         </div>
+                    </div>
+                )}
+
+                {activeTab === "ceiscore" && (
+                    <div className="tab-pane fade-in">
+                        <NarrativeIntel college={college} />
+                        <NarrativePedigree college={college} />
                     </div>
                 )}
 

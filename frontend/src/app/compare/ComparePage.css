@@ -15,10 +15,9 @@
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(900px circle at 10% 30%, rgba(99,102,241,.14), transparent 55%),
-        radial-gradient(700px circle at 90% 20%, rgba(236,72,153,.10), transparent 55%),
-        radial-gradient(800px circle at 55% 90%, rgba(16,185,129,.09), transparent 55%),
-        radial-gradient(500px circle at 75% 55%, rgba(245,158,11,.07), transparent 50%);
+        radial-gradient(800px circle at 10% 20%, rgba(99,102,241,.06), transparent 55%),
+        radial-gradient(600px circle at 90% 10%, rgba(236,72,153,.04), transparent 55%),
+        radial-gradient(700px circle at 55% 80%, rgba(16,185,129,.04), transparent 55%);
     pointer-events: none;
     z-index: 0;
 }
@@ -80,8 +79,8 @@
 
 /* ─── HERO ────────────────────────────────────────── */
 .arena-hero {
-    padding: 64px 32px 40px;
-    max-width: 1800px;
+    padding: 40px 32px 24px;
+    max-width: 1400px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -101,12 +100,12 @@
 
 .hero-title {
     font-family: var(--font-display, system-ui);
-    font-size: clamp(3rem, 8vw, 6.5rem);
-    font-weight: 1000;
-    line-height: .88;
-    letter-spacing: -.06em;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -.03em;
     color: #0f172a;
-    margin: 0 0 16px;
+    margin: 0 0 12px;
 }
 
 .hero-sub {
@@ -269,7 +268,7 @@
     display: inline-block;
     width: 32px;
     height: 2px;
-    background: linear-gradient(90deg, #6366f1, transparent);
+    background: #e2e8f0;
     border-radius: 2px;
 }
 
@@ -371,7 +370,7 @@
 /* ─── RESPONSIVE ─────────────────────────────────── */
 @media (min-width: 1024px) {
     .arena-bar  { padding: 0 48px; }
-    .arena-hero { padding: 80px 48px 48px; }
+    .arena-hero { padding: 56px 48px 32px; }
     .th-corner  { width: 220px; min-width: 220px; padding: 20px 32px !important; }
     .td-label   { width: 220px; min-width: 220px; padding: 24px 32px; }
     .td-data    { padding: 10px 10px; }

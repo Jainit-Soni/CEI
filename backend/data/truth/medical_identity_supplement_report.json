@@ -1,0 +1,332 @@
+{
+  "timestamp": "2026-04-26T18:52:16.293Z",
+  "existing_count": 454,
+  "supplemented_count": 54,
+  "merged_total": 508,
+  "supplemented_ids": [
+    {
+      "mcc_id": "200101",
+      "medical_entity_id": "MCC-200101-MBBS",
+      "canonical_name": "All India",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200119",
+      "medical_entity_id": "MCC-200119-MBBS",
+      "canonical_name": "All India",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200173",
+      "medical_entity_id": "MCC-200173-MBBS",
+      "canonical_name": "KARNATAK INST. OF MEDICAL SC.",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200181",
+      "medical_entity_id": "MCC-200181-MBBS",
+      "canonical_name": "VIJAYNAGAR INST OF MED. SC",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200185",
+      "medical_entity_id": "MCC-200185-BDS",
+      "canonical_name": "Government Dental College",
+      "program_type": "BDS"
+    },
+    {
+      "mcc_id": "200202",
+      "medical_entity_id": "MCC-200202-MBBS",
+      "canonical_name": "M.G.M. MEDICAL COLLEGE",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200213",
+      "medical_entity_id": "MCC-200213-BDS",
+      "canonical_name": "Maharashtra",
+      "program_type": "BDS"
+    },
+    {
+      "mcc_id": "200217",
+      "medical_entity_id": "MCC-200217-MBBS",
+      "canonical_name": "GOVT. MEDICAL COLLEGE",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200234",
+      "medical_entity_id": "MCC-200234-MBBS",
+      "canonical_name": "NEIGRIHMS",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200240",
+      "medical_entity_id": "MCC-200240-MBBS",
+      "canonical_name": "V.S.S. MEDICAL COLLEGE",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200247",
+      "medical_entity_id": "MCC-200247-MBBS",
+      "canonical_name": "GURU GOVIND SINGH MED COLL",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200316",
+      "medical_entity_id": "MCC-200316-MBBS",
+      "canonical_name": "MEDICAL COLLEGE",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200324",
+      "medical_entity_id": "MCC-200324-MBBS",
+      "canonical_name": "Deemed/Paid Seats Quota",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200330",
+      "medical_entity_id": "MCC-200330-MBBS",
+      "canonical_name": "Gujarat",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200348",
+      "medical_entity_id": "MCC-200348-BDS",
+      "canonical_name": "Sri Siddhartha DentalCollege",
+      "program_type": "BDS"
+    },
+    {
+      "mcc_id": "200361",
+      "medical_entity_id": "MCC-200361-MBBS",
+      "canonical_name": "Deemed/Paid Seats Quota",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200380",
+      "medical_entity_id": "MCC-200380-MBBS",
+      "canonical_name": "Deemed/Paid Seats Quota",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200399",
+      "medical_entity_id": "MCC-200399-MBBS",
+      "canonical_name": "UNKNOWN",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200410",
+      "medical_entity_id": "MCC-200410-MBBS",
+      "canonical_name": "Employees State Insurance",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200413",
+      "medical_entity_id": "MCC-200413-MBBS",
+      "canonical_name": "ESIC Medical College",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200414",
+      "medical_entity_id": "MCC-200414-MBBS",
+      "canonical_name": "Government Medical College",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200418",
+      "medical_entity_id": "MCC-200418-MBBS",
+      "canonical_name": "Employees State Insurance",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200429",
+      "medical_entity_id": "MCC-200429-MBBS",
+      "canonical_name": "Govt Medical College",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200430",
+      "medical_entity_id": "MCC-200430-MBBS",
+      "canonical_name": "Govt Medical College",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200439",
+      "medical_entity_id": "MCC-200439-MBBS",
+      "canonical_name": "Arunachal Pradesh",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200450",
+      "medical_entity_id": "MCC-200450-MBBS",
+      "canonical_name": "(NCT) University College of Medical Sciences",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200472",
+      "medical_entity_id": "MCC-200472-MBBS",
+      "canonical_name": "Deemed/Paid Seats Quota",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200493",
+      "medical_entity_id": "MCC-200493-MBBS",
+      "canonical_name": "Govt Medical College Badaun",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200518",
+      "medical_entity_id": "MCC-200518-MBBS",
+      "canonical_name": "AIIMS Jammu",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200530",
+      "medical_entity_id": "MCC-200530-MBBS",
+      "canonical_name": "Pradesh",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200536",
+      "medical_entity_id": "MCC-200536-MBBS",
+      "canonical_name": "Hubballi",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200545",
+      "medical_entity_id": "MCC-200545-BSC_NURSING",
+      "canonical_name": "(NCT) B.Sc Nursing NEET UG College of Nursing RAK CON",
+      "program_type": "BSC_NURSING"
+    },
+    {
+      "mcc_id": "200547",
+      "medical_entity_id": "MCC-200547-BSC_NURSING",
+      "canonical_name": "B.Sc Nursing NEET UG College of Nursing BHU",
+      "program_type": "BSC_NURSING"
+    },
+    {
+      "mcc_id": "200572",
+      "medical_entity_id": "MCC-200572-MBBS",
+      "canonical_name": "Dr. B.R. Ambedkar State Institute of Medical Sciences",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200615",
+      "medical_entity_id": "MCC-200615-MBBS",
+      "canonical_name": "Faridabad",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200650",
+      "medical_entity_id": "MCC-200650-MBBS",
+      "canonical_name": "All India",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200656",
+      "medical_entity_id": "MCC-200656-MBBS",
+      "canonical_name": "All India",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200668",
+      "medical_entity_id": "MCC-200668-MBBS",
+      "canonical_name": "All India",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "200682",
+      "medical_entity_id": "MCC-200682-MBBS",
+      "canonical_name": "Chitradurga Medical College and Research Institute",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "902811",
+      "medical_entity_id": "MCC-902811-MBBS",
+      "canonical_name": "and Hospital",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "903365",
+      "medical_entity_id": "MCC-903365-MBBS",
+      "canonical_name": "Government Medical college",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904350",
+      "medical_entity_id": "MCC-904350-BDS",
+      "canonical_name": "Government Dental College",
+      "program_type": "BDS"
+    },
+    {
+      "mcc_id": "904351",
+      "medical_entity_id": "MCC-904351-MBBS",
+      "canonical_name": "Goverment Medical College",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904353",
+      "medical_entity_id": "MCC-904353-MBBS",
+      "canonical_name": "Maharishi Chyawan Medical College",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904354",
+      "medical_entity_id": "MCC-904354-MBBS",
+      "canonical_name": "ESIC Medical College and Hospital",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904356",
+      "medical_entity_id": "MCC-904356-MBBS",
+      "canonical_name": "Government Medical College",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904358",
+      "medical_entity_id": "MCC-904358-MBBS",
+      "canonical_name": "SHILONG MEDICAL COLLEGE",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904360",
+      "medical_entity_id": "MCC-904360-MBBS",
+      "canonical_name": "Government Medical College",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904361",
+      "medical_entity_id": "MCC-904361-MBBS",
+      "canonical_name": "(NCT) ESIC MEDICAL COLLEGE AND HOSPITAL",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904362",
+      "medical_entity_id": "MCC-904362-MBBS",
+      "canonical_name": "ESIC MEDICAL COLLEGE AND HOSPITAL",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904367",
+      "medical_entity_id": "MCC-904367-MBBS",
+      "canonical_name": "Government Medical College",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904549",
+      "medical_entity_id": "MCC-904549-MBBS",
+      "canonical_name": "ESIC Medical College & Hospital",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904551",
+      "medical_entity_id": "MCC-904551-MBBS",
+      "canonical_name": "ESIC Medical College and Hospital Varanasi",
+      "program_type": "MBBS"
+    },
+    {
+      "mcc_id": "904552",
+      "medical_entity_id": "MCC-904552-MBBS",
+      "canonical_name": "ESIC Medical College & Hospital",
+      "program_type": "MBBS"
+    }
+  ]
+}

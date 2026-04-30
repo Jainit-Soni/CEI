@@ -80,19 +80,122 @@ async function assemblePagePayload(college) {
             : Promise.resolve([]),
     ]);
 
+    // [CEI] Truth Surface Contract Layer (Phase 23/24)
+    // Determines how the frontend should render the college based on data density.
+    const hasCutoffs = (college.engineeringCutoffs?.length > 0 || (college.coverage?.cutoffCoverage && college.coverage.cutoffCoverage !== 'None'));
+    const hasSeats = (college.seats?.length > 0 || (college.coverage?.seatCoverage && college.coverage.seatCoverage !== 'None'));
+    const hasFees = (college.fees?.isVerified || college.fees?.totalFee || college.fees?.records?.length > 0);
+    const hasPlacements = (college.placements?.isVerified || college.placements?.averagePackage || college.placements?.records?.length > 0);
+    const hasCourses = (college.courses?.length > 0);
+
+    const visibleSections = [];
+    const hiddenSections = [];
+
+    if (hasCutoffs) visibleSections.push('cutoffs'); else hiddenSections.push('cutoffs');
+    if (hasSeats) visibleSections.push('seats'); else hiddenSections.push('seats');
+    if (hasFees) visibleSections.push('fees'); else hiddenSections.push('fees');
+    if (hasPlacements) visibleSections.push('placements'); else hiddenSections.push('placements');
+    if (hasCourses) visibleSections.push('courses'); else hiddenSections.push('courses');
+
+    let truthStatus = 'NONE';
+    let reason = 'unverified_node';
+
+    // Hierarchy of Truth
+    if (hasCutoffs && hasSeats && (hasFees || hasPlacements)) {
+        truthStatus = 'FULL';
+        reason = 'high_density_truth';
+    } else if (hasCutoffs || hasSeats || hasFees || hasPlacements) {
+        truthStatus = 'PARTIAL';
+        reason = 'tactical_truth_only';
+    } else if (college.institution_id || college.id?.startsWith('CORE-')) {
+        truthStatus = 'MINIMAL';
+        reason = 'official_data_unavailable';
+    } else {
+        truthStatus = 'NONE';
+        reason = 'shell_candidate';
+    }
+
+    const truthContract = {
+        truthStatus,
+        visibleSections,
+        hiddenSections,
+        reason,
+        completenessScore: visibleSections.length,
+        isVerified: truthStatus !== 'NONE' && truthStatus !== 'MINIMAL',
+        truthImportance: 'LOW',
+        whyRelevant: [],
+        // [CEI] Next Best Action Layer (Step 1)
+        nextActions: []
+    };
+
+    // [CEI] Deterministic Similarity Engine (Step 1)
+    const authority = college.authority || (college.id?.startsWith('CORE-IIT') || college.id?.startsWith('CORE-NIT') || college.id?.startsWith('CORE-IIIT') ? 'JoSAA' : 'State');
+    const tier = college.rankingTier || 'Standard';
+    const state = college.state || 'National';
+
+    // Calculate Importance & Precision Actions
+    if (hasCutoffs || hasSeats) {
+        truthContract.truthImportance = 'HIGH';
+        if (hasCutoffs) truthContract.whyRelevant.push("Verified Admission Cutoffs");
+        if (hasSeats) truthContract.whyRelevant.push("Official Seat Matrix");
+        
+        truthContract.nextActions.push({
+            label: `Compare with similar ${authority} institutes`,
+            type: "compare",
+            params: { authority, tier },
+            primary: true
+        });
+    } else if (hasFees || hasCourses) {
+        truthContract.truthImportance = 'MEDIUM';
+        if (hasFees) truthContract.whyRelevant.push("Verified Fee Structure");
+        if (hasCourses) truthContract.whyRelevant.push("Official Course Catalog");
+        
+        truthContract.nextActions.push({
+            label: `See ${authority} colleges with active cutoffs`,
+            type: "search",
+            params: { authority, tier, coverage: 'Partial' },
+            primary: true
+        });
+    } else {
+        truthContract.truthImportance = 'LOW';
+        truthContract.whyRelevant.push("Institutional Identity Verified");
+        truthContract.whyRelevant.push("Admission Tracking Active");
+        
+        // Precision Routing: Same Authority + Same State + High Confidence
+        truthContract.nextActions.push({
+            label: `See ${authority} colleges in ${state} with verified cutoffs`,
+            type: "search",
+            params: { 
+                state: state !== 'National' ? state : undefined, 
+                authority: authority !== 'State' ? authority : undefined,
+                coverage: 'Rich' 
+            },
+            primary: true
+        });
+    }
+
+
     return {
         college,
         anomalies,
         integrity,
         verifications,
         trustReports,
+        truthContract,
         meta: {
             assembledAt: new Date().toISOString(),
             hasOpenAnomalies: anomalies.length > 0,
             integrityScore: integrity?.overallScore ?? null,
             verifiedFields: verifications.length,
+            truthStatus: truthStatus,
+            truthImportance: truthContract.truthImportance,
+            truthScore: truthContract.completenessScore,
+            availableActions: truthContract.nextActions.length
         },
     };
+
+
+
 }
 
 // ── Public API ────────────────────────────────────────────────────────────────

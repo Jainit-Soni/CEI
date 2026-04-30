@@ -28,17 +28,43 @@ const collegeSchema = new mongoose.Schema({
     searchPriorityScore: { type: Number, index: true },
     coverage: { type: Object },
     rankingTier: { type: String, index: true },
+    authority: { type: String, index: true }, // JoSAA / State
+    authority_canonical: { 
+        type: String, 
+        enum: ['JOSAA', 'STATE', 'MCC', 'UNKNOWN'], 
+        default: 'UNKNOWN',
+        index: true 
+    },
+    authority_source: { 
+        type: String, 
+        enum: ['derived', 'verified'], 
+        default: 'derived' 
+    },
+    isVisible: { type: Boolean, default: true, index: true },
+    isPremium: { type: Boolean, default: false, index: true },
+    identityConfidence: { type: String, index: true }, // HIGH / MEDIUM / LOW
+    lastCoverageSync: { type: Date, default: Date.now },
+
     
     // Rich Metadata (Enriched from Truth files)
+
     fees: {
         total: String,
+        totalFee: Number,
         totalNumeric: Number,
         tuition: String,
-        hostelFees: String,
+        hostelFees: { type: mongoose.Schema.Types.Mixed },
         hostelNumeric: Number,
         source: String,
         session: String,
-        isVerified: { type: Boolean, default: false }
+        isVerified: { type: Boolean, default: false },
+        provenance: { type: mongoose.Schema.Types.Mixed },
+        // Trust Metadata
+        source_authority: { type: String, enum: ['official_institute', 'primary_authority', 'secondary', 'unverified'], default: 'unverified' },
+        source_url: String,
+        academic_year: String,
+        extracted_at: { type: Date, default: Date.now },
+        stale_after_days: { type: Number, default: 365 }
     },
     placements: {
         averagePackage: String,
@@ -48,7 +74,14 @@ const collegeSchema = new mongoose.Schema({
         placedPercentage: Number,
         academicYear: String,
         source: String,
-        isVerified: { type: Boolean, default: false }
+        isVerified: { type: Boolean, default: false },
+        provenance: { type: mongoose.Schema.Types.Mixed },
+        // Trust Metadata
+        source_authority: { type: String, enum: ['official_institute', 'primary_authority', 'secondary', 'unverified'], default: 'unverified' },
+        source_url: String,
+        academic_year: String,
+        extracted_at: { type: Date, default: Date.now },
+        stale_after_days: { type: Number, default: 365 }
     },
     rankings: [{
         source: String,
@@ -91,8 +124,10 @@ const collegeSchema = new mongoose.Schema({
     
 }, { 
     timestamps: true,
-    strict: false // Allow for additional fields from diverse truth sources
+    strict: false, // Allow for additional fields from diverse truth sources
+    strictQuery: false // Ensure non-schema fields are not stripped from queries
 });
+
 
 // Compound Index for Search & Discovery
 collegeSchema.index({ state: 1, rankingTier: -1 });

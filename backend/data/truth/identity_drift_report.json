@@ -1,0 +1,4961 @@
+{
+  "code_mismatches": [],
+  "state_name_collisions": [
+    {
+      "severity": "LOW",
+      "key": "womeninstituteoftechnology|uttarakhand",
+      "ids": [
+        "CORE-WOMEN-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44640244744"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srijayaraminstituteofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-SRI-JAYARAM-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44639486992"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "noorulislamcollegeofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-NOORUL-ISLAM-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44641110155"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "zenexvisionschoolofbusinessandtechnology|andhra pradesh",
+      "ids": [
+        "CORE-ZENEX-VISION-SCHOOL-OF-BUSINESS-AND-TECHNOLOGY",
+        "aicte:1-44643625065"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jeppiaarengineeringcollege|tamil nadu",
+      "ids": [
+        "CORE-JEPPIAAR-ENGINEERING-COLLEGE",
+        "aicte:1-44639606779"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srivenkateswaracollegeofengineering|tamil nadu",
+      "ids": [
+        "CORE-SRI-VENKATESWARA-COLLEGE-OF-ENGINEERING",
+        "CORE-SRI-VENKATESWARA-COLLEGE-OF-ENGINEERING-C-56050"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "westgodavariinstituteofscienceandengineering|andhra pradesh",
+      "ids": [
+        "CORE-WEST-GODAVARI-INSTITUTE-OF-SCIENCE-AND-ENGINEERING",
+        "aicte:1-44642994973"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kallamharanadhareddyinstituteoftechnology|andhra pradesh",
+      "ids": [
+        "CORE-KALLAM-HARANADHAREDDY-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44638511947"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "adityacollegeofengineeringtechnology|andhra pradesh",
+      "ids": [
+        "CORE-ADITYA-COLLEGE-OF-ENGINEERING-TECHNOLOGY",
+        "aicte:1-44642464094"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "hinducollegeofengineeringandtechnology|andhra pradesh",
+      "ids": [
+        "CORE-HINDU-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640115748"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "seshadriraogudlavalleruengineeringcollege|andhra pradesh",
+      "ids": [
+        "CORE-SESHADRI-RAO-GUDLAVALLERU-ENGINEERING-COLLEGE",
+        "aicte:1-44643398520"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chhotubhaigopalbhaipatelinstituteoftechnology|gujarat",
+      "ids": [
+        "CORE-CHHOTUBHAI-GOPALBHAI-PATEL-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44642355580"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shribalasahebtirpudecollegeofhotelmanagementandcateringtechnology|maharashtra",
+      "ids": [
+        "CORE-SHRI-BALASAHEB-TIRPUDE-COLLEGE-OF-HOTEL-MANAGEMENT-AND-CATERING-TECHNOLOGY",
+        "aicte:1-44641656558"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "trinitycollegeofengineeringandtechnology|telangana",
+      "ids": [
+        "CORE-TRINITY-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44643347040"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mahatmagandhiinstituteoftechnology|telangana",
+      "ids": [
+        "CORE-MAHATMA-GANDHI-INSTITUTE-OF-TECHNOLOGY",
+        "CORE-MAHATMA-GANDHI-INSTITUTE-OF-TECHNOLOGY-C-54697"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "tapidiplomaengineeringcollege|gujarat",
+      "ids": [
+        "CORE-TAPI-DIPLOMA-ENGINEERING-COLLEGE",
+        "aicte:1-44642236575"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "aryacollegeofengineering|rajasthan",
+      "ids": [
+        "CORE-ARYA-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44642511613"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "engineeringcollegebharatpur|rajasthan",
+      "ids": [
+        "CORE-ENGINEERING-COLLEGE-BHARATPUR",
+        "aicte:1-44643404809"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jodhpurinstituteofengineeringtechnology|rajasthan",
+      "ids": [
+        "CORE-JODHPUR-INSTITUTE-OF-ENGINEERING-TECHNOLOGY",
+        "aicte:1-44641552654"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "andhraengineeringcollege|andhra pradesh",
+      "ids": [
+        "CORE-ANDHRA-ENGINEERING-COLLEGE",
+        "aicte:1-44638553663"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srinivasaramanujaninstituteoftechnology|andhra pradesh",
+      "ids": [
+        "CORE-SRINIVASA-RAMANUJAN-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44641661379"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentcollegeofengineering|tamil nadu",
+      "ids": [
+        "CORE-GOVERNMENT-COLLEGE-OF-ENGINEERING",
+        "CORE-GOVERNMENT-COLLEGE-OF-ENGINEERING-C-56586"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "delhiglobalinstituteoftechnology|haryana",
+      "ids": [
+        "CORE-DELHI-GLOBAL-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44638546972"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "collegeofagriculturalengineeringtechnology|haryana",
+      "ids": [
+        "CORE-COLLEGE-OF-AGRICULTURAL-ENGINEERING-TECHNOLOGY",
+        "CORE-COLLEGE-OF-AGRICULTURAL-ENGINEERING-TECHNOLOGY-C-43582"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "goacollegeofengineeringgovernmentofgoa|goa",
+      "ids": [
+        "CORE-GOA-COLLEGE-OF-ENGINEERING-GOVERNMENT-OF-GOA",
+        "aicte:1-44643572001"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "universitycollegeofengineeringtechnology|andhra pradesh",
+      "ids": [
+        "CORE-UNIVERSITY-COLLEGE-OF-ENGINEERING-TECHNOLOGY",
+        "CORE-UNIVERSITY-COLLEGE-OF-ENGINEERING-TECHNOLOGY-C-44450"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bharathinstituteofscienceandtechnology|tamil nadu",
+      "ids": [
+        "CORE-BHARATH-INSTITUTE-OF-SCIENCE-AND-TECHNOLOGY",
+        "aicte:1-44638173868"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rvscollegeofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-RVS-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "CORE-RVS-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY-C-6577"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ssmcollegeofengineering|tamil nadu",
+      "ids": [
+        "CORE-SSM-COLLEGE-OF-ENGINEERING",
+        "CORE-SSM-COLLEGE-OF-ENGINEERING-C-46528"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "daliainstituteoftechnology|gujarat",
+      "ids": [
+        "CORE-DALIA-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44642274216"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "collegeoffoodtechnology|maharashtra",
+      "ids": [
+        "CORE-COLLEGE-OF-FOOD-TECHNOLOGY",
+        "CORE-COLLEGE-OF-FOOD-TECHNOLOGY-C-64641"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mahaguruinstituteoftechnology|kerala",
+      "ids": [
+        "CORE-MAHAGURU-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44641751471"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "measiinstituteofinformationtechnology|tamil nadu",
+      "ids": [
+        "CORE-MEASI-INSTITUTE-OF-INFORMATION-TECHNOLOGY",
+        "aicte:1-44640244298"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sreevenkateswaracollegeofengineering|andhra pradesh",
+      "ids": [
+        "CORE-SREE-VENKATESWARA-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44640800623"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "lucknowinstituteoftechnologylucknow|uttar pradesh",
+      "ids": [
+        "CORE-LUCKNOW-INSTITUTE-OF-TECHNOLOGY-LUCKNOW",
+        "aicte:1-44643631720"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "collegeofengineeringpathanapuram|kerala",
+      "ids": [
+        "CORE-COLLEGE-OF-ENGINEERING-PATHANAPURAM",
+        "aicte:1-44641525184"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "indusinstituteoftechnologyengineering|gujarat",
+      "ids": [
+        "CORE-INDUS-INSTITUTE-OF-TECHNOLOGY-ENGINEERING",
+        "aicte:1-44642237208"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "visatengineeringcollege|kerala",
+      "ids": [
+        "CORE-VISAT-ENGINEERING-COLLEGE",
+        "aicte:1-44640078158"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vidyadayiniinstituteofsciencemanagementandtechnology|madhya pradesh",
+      "ids": [
+        "CORE-VIDYADAYINI-INSTITUTE-OF-SCIENCE-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44892867703"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "annaimiracollegeofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-ANNAI-MIRA-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44639388510"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "pollachiinstituteofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-POLLACHI-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640539943"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sugunacollegeofengineering|tamil nadu",
+      "ids": [
+        "CORE-SUGUNA-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44640267275"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vaigaicollegeofengineering|tamil nadu",
+      "ids": [
+        "CORE-VAIGAI-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44640671817"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rohinicollegeofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-ROHINI-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640177901"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sriramakrishnacollegeofengineering|tamil nadu",
+      "ids": [
+        "CORE-SRI-RAMAKRISHNA-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44641560039"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "thanthaiperiyargovernmentinstituteoftechnology|tamil nadu",
+      "ids": [
+        "CORE-THANTHAI-PERIYAR-GOVERNMENT-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44639673844"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "idealinstituteoftechnology|maharashtra",
+      "ids": [
+        "CORE-IDEAL-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44642924735"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ramgarhengineeringcollegeestdbygovtofjharkhandrunbytechnoindiaunderppp|jharkhand",
+      "ids": [
+        "CORE-RAMGARH-ENGINEERING-COLLEGE-ESTD-BY-GOVT-OF-JHARKHAND-RUN-BY-TECHNO-INDIA-UNDER-PPP",
+        "aicte:1-44639582747"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shreedhanvantarycollegeofengineeringandtechnology|gujarat",
+      "ids": [
+        "CORE-SHREE-DHANVANTARY-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640191315"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nelliandavarinstituteoftechnology|tamil nadu",
+      "ids": [
+        "CORE-NELLIANDAVAR-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44639696454"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "arjuncollegeoftechnology|tamil nadu",
+      "ids": [
+        "CORE-ARJUN-COLLEGE-OF-TECHNOLOGY",
+        "aicte:1-44641357631"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "asiancollegeofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-ASIAN-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44639722766"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jaineecollegeofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-JAINEE-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44641613965"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mangayarkarasicollegeofengineering|tamil nadu",
+      "ids": [
+        "CORE-MANGAYARKARASI-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44640270227"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "arifainstituteoftechnology|tamil nadu",
+      "ids": [
+        "CORE-ARIFA-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44641338364"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "aaacollegeofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-AAA-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44639934036"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ramcoinstituteoftechnology|tamil nadu",
+      "ids": [
+        "CORE-RAMCO-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44639742557"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "prabhatengineeringcollege|uttar pradesh",
+      "ids": [
+        "CORE-PRABHAT-ENGINEERING-COLLEGE",
+        "aicte:1-44643698487"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "adarshinstituteofmanagementandinformationtechnology|karnataka",
+      "ids": [
+        "CORE-ADARSH-INSTITUTE-OF-MANAGEMENT-AND-INFORMATION-TECHNOLOGY",
+        "aicte:1-44643451368"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shreeswaminarayaninstituteoftechnology|gujarat",
+      "ids": [
+        "CORE-SHREE-SWAMINARAYAN-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44640734900"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "centralinstituteofpetrochemicalsengineeringandtechnology|gujarat",
+      "ids": [
+        "CORE-CENTRAL-INSTITUTE-OF-PETROCHEMICALS-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44641134522"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "psginstituteoftechnologyandappliedresearch|tamil nadu",
+      "ids": [
+        "CORE-PSG-INSTITUTE-OF-TECHNOLOGY-AND-APPLIED-RESEARCH",
+        "aicte:1-44640840403"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sardarpatelcollegeofengineering|gujarat",
+      "ids": [
+        "CORE-SARDAR-PATEL-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44641822963"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gomatidistrictpolytechnic|tripura",
+      "ids": [
+        "CORE-GOMATI-DISTRICT-POLYTECHNIC",
+        "aicte:1-44639357864"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jeppiaarinstituteoftechnology|tamil nadu",
+      "ids": [
+        "CORE-JEPPIAAR-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44641480781"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "trinitycollegeofengineering|kerala",
+      "ids": [
+        "CORE-TRINITY-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44640001690"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kctcollegeofengineeringandtechnology|punjab",
+      "ids": [
+        "CORE-KCT-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44644310678"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "carmelcollegeofengineeringandtechnology|kerala",
+      "ids": [
+        "CORE-CARMEL-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640495805"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "dumkaengineeringcollegeestdbygovtofjharkhandrunbytechnoindiaunderppp|jharkhand",
+      "ids": [
+        "CORE-DUMKA-ENGINEERING-COLLEGE-ESTD-BY-GOVT-OF-JHARKHAND-RUN-BY-TECHNO-INDIA-UNDER-PPP",
+        "aicte:1-44640213848"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vedicainstituteoftechnology|madhya pradesh",
+      "ids": [
+        "CORE-VEDICA-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44643479083"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srisatyasaicollegeofengineering|madhya pradesh",
+      "ids": [
+        "CORE-SRI-SATYA-SAI-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44641830268"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "anjumaninstituteoftechnologyandmanagement|karnataka",
+      "ids": [
+        "CORE-ANJUMAN-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44642648492"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "manavschoolofengineeringandtechnology|maharashtra",
+      "ids": [
+        "CORE-MANAV-SCHOOL-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640968993"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ckdinstituteofmanagementandtechnology|punjab",
+      "ids": [
+        "CORE-CKD-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44640850836"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chetansadhaninstituteofscienceandtechnology|bihar",
+      "ids": [
+        "CORE-CHETAN-SADHAN-INSTITUTE-OF-SCIENCE-AND-TECHNOLOGY",
+        "aicte:1-44644731934"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "agnoscollegeoftechnology|madhya pradesh",
+      "ids": [
+        "CORE-AGNOS-COLLEGE-OF-TECHNOLOGY",
+        "aicte:1-44639973983"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteofpolytechnicengineering|madhya pradesh",
+      "ids": [
+        "CORE-INSTITUTE-OF-POLYTECHNIC-ENGINEERING",
+        "aicte:1-44640058680"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "michaelsinstituteofmanagementandtechnology|kerala",
+      "ids": [
+        "CORE-MICHAELS-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44783021469"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechniccollegesendhwa|madhya pradesh",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-COLLEGE-SENDHWA",
+        "aicte:1-44641283529"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "manthanpolytechniccollege|madhya pradesh",
+      "ids": [
+        "CORE-MANTHAN-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641341417"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "departmentofmasterofcomputerapplicationsinstituteofengineeringandtechnologybhaddal|punjab",
+      "ids": [
+        "CORE-DEPARTMENT-OF-MASTER-OF-COMPUTER-APPLICATIONS-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-BHADDAL",
+        "aicte:1-44641778388"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "meenashahinstituteoftechnologyandmanagement|uttar pradesh",
+      "ids": [
+        "CORE-MEENA-SHAH-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44644406981"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "csiwesleyinstituteoftechnologyandsciences|telangana",
+      "ids": [
+        "CORE-CSI-WESLEY-INSTITUTE-OF-TECHNOLOGY-AND-SCIENCES",
+        "aicte:1-44640498908"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shantiinstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-SHANTI-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44645003165"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteoffashiontechnologykerala|kerala",
+      "ids": [
+        "CORE-INSTITUTE-OF-FASHION-TECHNOLOGY-KERALA",
+        "aicte:1-44638503729"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "providencecollegeofengineering|kerala",
+      "ids": [
+        "CORE-PROVIDENCE-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44641133761"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "globalinstituteofinformationtechnology|madhya pradesh",
+      "ids": [
+        "CORE-GLOBAL-INSTITUTE-OF-INFORMATION-TECHNOLOGY",
+        "aicte:1-44642918168"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chitrakootinstituteofcomputerscienceandtechnology|madhya pradesh",
+      "ids": [
+        "CORE-CHITRAKOOT-INSTITUTE-OF-COMPUTER-SCIENCE-AND-TECHNOLOGY",
+        "aicte:1-44644375193"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "globalinstituteoftechnology|madhya pradesh",
+      "ids": [
+        "CORE-GLOBAL-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44643045957"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chaibasaengineeringcollegeestdbygovtofjharkhandrunbytechnoindiaunderppp|jharkhand",
+      "ids": [
+        "CORE-CHAIBASA-ENGINEERING-COLLEGE-ESTD-BY-GOVT-OF-JHARKHAND-RUN-BY-TECHNO-INDIA-UNDER-PPP",
+        "aicte:1-44640902764"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "suninstituteofhotelmanagementandcateringtechnology|andhra pradesh",
+      "ids": [
+        "CORE-SUN-INSTITUTE-OF-HOTEL-MANAGEMENT-AND-CATERING-TECHNOLOGY",
+        "aicte:1-44645057448"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "netesinstituteoftechnologyandscience|assam",
+      "ids": [
+        "CORE-NETES-INSTITUTE-OF-TECHNOLOGY-AND-SCIENCE",
+        "aicte:1-44755069293"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kccinstituteoftechnologyandmanagement|uttar pradesh",
+      "ids": [
+        "CORE-KCC-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44643391227"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechniccollegepawai|madhya pradesh",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-COLLEGE-PAWAI",
+        "aicte:1-44640632145"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "schoolofengineeringsrisatyasaiuniversityoftechnologyandmedicalsciencessssutms|madhya pradesh",
+      "ids": [
+        "CORE-SCHOOL-OF-ENGINEERING-SRI-SATYA-SAI-UNIVERSITY-OF-TECHNOLOGY-AND-MEDICAL-SCIENCES-SSSUTMS",
+        "aicte:1-44642876571"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "schoolofhotelmanagementsrisatyasaiuniversityoftechnologyandmedicalsciencessssutms|madhya pradesh",
+      "ids": [
+        "CORE-SCHOOL-OF-HOTEL-MANAGEMENT-SRI-SATYA-SAI-UNIVERSITY-OF-TECHNOLOGY-AND-MEDICAL-SCIENCES-SSSUTMS",
+        "aicte:1-44641956351"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "schoolofcomputerapplicationsrisatyasaiuniversityoftechnologyandmedicalsciencessssutms|madhya pradesh",
+      "ids": [
+        "CORE-SCHOOL-OF-COMPUTER-APPLICATION-SRI-SATYA-SAI-UNIVERSITY-OF-TECHNOLOGY-AND-MEDICAL-SCIENCES-SSSUTMS",
+        "aicte:1-44641940568"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "schoolofmanagementstudiessrisatyasaiuniversityoftechnologyandmedicalsciencessssutms|madhya pradesh",
+      "ids": [
+        "CORE-SCHOOL-OF-MANAGEMENT-STUDIES-SRI-SATYA-SAI-UNIVERSITY-OF-TECHNOLOGY-AND-MEDICAL-SCIENCES-SSSUTMS",
+        "aicte:1-44642270300"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "collegeofengineeringmuttathara|kerala",
+      "ids": [
+        "CORE-COLLEGE-OF-ENGINEERING-MUTTATHARA",
+        "aicte:1-44638534706"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "smriticollegeoftechnologyandmanagement|bihar",
+      "ids": [
+        "CORE-SMRITI-COLLEGE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44644902299"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shakuntalakrishanainstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-SHAKUNTALA-KRISHANA-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44644030051"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "academyoftechnologymanagementandscience|uttar pradesh",
+      "ids": [
+        "CORE-ACADEMY-OF-TECHNOLOGY-MANAGEMENT-AND-SCIENCE",
+        "aicte:1-44639380960"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "microtekcollegeofmanagementandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-MICROTEK-COLLEGE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44638355105"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "collegeofpolytechnicengineering|madhya pradesh",
+      "ids": [
+        "CORE-COLLEGE-OF-POLYTECHNIC-ENGINEERING",
+        "aicte:1-44640047627"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "webtechcollegeofmanagementandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-WEBTECH-COLLEGE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44645021440"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteofengineeringandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "CORE-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-C-72002"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "engineeringcollegedholpur|rajasthan",
+      "ids": [
+        "CORE-ENGINEERING-COLLEGE-DHOLPUR",
+        "aicte:1-44638448056"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "neilgogteinstituteoftechnology|telangana",
+      "ids": [
+        "CORE-NEIL-GOGTE-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44638605487"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "aarmahaveerengineeringcollege|telangana",
+      "ids": [
+        "CORE-AAR-MAHAVEER-ENGINEERING-COLLEGE",
+        "aicte:1-44638878239"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentcollegeofengineeringyavatmal|maharashtra",
+      "ids": [
+        "CORE-GOVERNMENT-COLLEGE-OF-ENGINEERING-YAVATMAL",
+        "aicte:1-44641155972"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jdinstituteoffashiontechnology|madhya pradesh",
+      "ids": [
+        "CORE-JD-INSTITUTE-OF-FASHION-TECHNOLOGY",
+        "CORE-JD-INSTITUTE-OF-FASHION-TECHNOLOGY-C-65489"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegedaman|the dadra and nagar haveli and daman and diu",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-DAMAN",
+        "aicte:1-44638518271"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegejamui|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-JAMUI",
+        "aicte:1-44638216890"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "schoolofengineering|madhya pradesh",
+      "ids": [
+        "CORE-SCHOOL-OF-ENGINEERING",
+        "aicte:1-44638580531"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "christcollegeofengineering|kerala",
+      "ids": [
+        "CORE-CHRIST-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44641153837"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "pcteinstituteofengineeringandtechnology|punjab",
+      "ids": [
+        "CORE-PCTE-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44638530702"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "collegeoftechnologyandengineering|rajasthan",
+      "ids": [
+        "CORE-COLLEGE-OF-TECHNOLOGY-AND-ENGINEERING",
+        "aicte:1-44640564013"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mkinstituteofmanagementandtechnology|punjab",
+      "ids": [
+        "CORE-MK-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44644495132"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "raakcollegeofengineeringandtechnology|puducherry",
+      "ids": [
+        "CORE-RAAK-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640398383"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shriramakrishnacollegepolytechnicandmanagement|madhya pradesh",
+      "ids": [
+        "CORE-SHRI-RAMA-KRISHNA-COLLEGE-POLYTECHNIC-AND-MANAGEMENT",
+        "aicte:1-44638515810"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "collegeofmanagementandtechnology|odisha",
+      "ids": [
+        "CORE-COLLEGE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44644902870"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mysururoyalinstituteoftechnology|karnataka",
+      "ids": [
+        "CORE-MYSURU-ROYAL-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44641228086"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vidushsomanyinstituteoftechnologyandresearch|gujarat",
+      "ids": [
+        "CORE-VIDUSH-SOMANY-INSTITUTE-OF-TECHNOLOGY-AND-RESEARCH",
+        "aicte:1-44638339730"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "maharajainstituteoftechnologythandavapura|karnataka",
+      "ids": [
+        "CORE-MAHARAJA-INSTITUTE-OF-TECHNOLOGY-THANDAVAPURA",
+        "aicte:1-44638156557"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegesamastipur|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-SAMASTIPUR",
+        "aicte:1-44638807972"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rajkiyaengineeringcollegemainpuri|uttar pradesh",
+      "ids": [
+        "CORE-RAJKIYA-ENGINEERING-COLLEGE-MAINPURI",
+        "aicte:1-44638145569"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegelakhisarai|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-LAKHISARAI",
+        "aicte:1-44638689953"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegemunger|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-MUNGER",
+        "aicte:1-44638376795"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "swamivivekanandcollegeofmanagementandtechnology|punjab",
+      "ids": [
+        "CORE-SWAMI-VIVEKANAND-COLLEGE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44644181730"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "engineeringcollegenowgong|madhya pradesh",
+      "ids": [
+        "CORE-ENGINEERING-COLLEGE-NOWGONG",
+        "aicte:1-44641014149"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "indalacollegeofengineering|maharashtra",
+      "ids": [
+        "CORE-INDALA-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44638789589"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegekhagaria|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-KHAGARIA",
+        "aicte:1-44638790163"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegejehanabad|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-JEHANABAD",
+        "aicte:1-44638172872"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegebuxar|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-BUXAR",
+        "aicte:1-44638459763"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegebhojpur|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-BHOJPUR",
+        "aicte:1-44638137526"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegesiwan|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-SIWAN",
+        "aicte:1-44638506831"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegegopalganj|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-GOPALGANJ",
+        "aicte:1-44638689423"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegeaurangabad|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-AURANGABAD",
+        "aicte:1-44638918997"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegearwal|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-ARWAL",
+        "aicte:1-44638377325"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegekaimur|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-KAIMUR",
+        "aicte:1-44638919526"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gumlapolytechnic|jharkhand",
+      "ids": [
+        "CORE-GUMLA-POLYTECHNIC",
+        "aicte:1-44643797801"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "greaternoidainstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-GREATER-NOIDA-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44638153223"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "golaghatengineeringcollege|assam",
+      "ids": [
+        "CORE-GOLAGHAT-ENGINEERING-COLLEGE",
+        "aicte:1-44638234893"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "newljinstituteofengineeringandtechnology|gujarat",
+      "ids": [
+        "CORE-NEW-L-J-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44638230051"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nirmanainstituteofmanagementandtechnology|odisha",
+      "ids": [
+        "CORE-NIRMANA-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44643809286"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "collegeofbasicscienceandtechnology|odisha",
+      "ids": [
+        "CORE-COLLEGE-OF-BASIC-SCIENCE-AND-TECHNOLOGY",
+        "aicte:1-44644397705"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "awadhinstituteofhotelmanagementandcateringtechnology|jharkhand",
+      "ids": [
+        "CORE-AWADH-INSTITUTE-OF-HOTEL-MANAGEMENT-AND-CATERING-TECHNOLOGY",
+        "aicte:1-44638098186"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "schoolofinformationtechnology|madhya pradesh",
+      "ids": [
+        "CORE-SCHOOL-OF-INFORMATION-TECHNOLOGY",
+        "aicte:1-44638419871"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegejawad|madhya pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-JAWAD",
+        "aicte:1-44641344079"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bhopalinstituteoftechnologyandmanagementmba|madhya pradesh",
+      "ids": [
+        "CORE-BHOPAL-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT-MBA",
+        "aicte:1-44638771274"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "dishacollegeofmanagementandtechnology|odisha",
+      "ids": [
+        "CORE-DISHA-COLLEGE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44638464413"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "dhemajiengineeringcollege|assam",
+      "ids": [
+        "CORE-DHEMAJI-ENGINEERING-COLLEGE",
+        "aicte:1-44638471396"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "msmetechnologycentrebhopal|madhya pradesh",
+      "ids": [
+        "CORE-MSME-TECHNOLOGY-CENTRE-BHOPAL",
+        "aicte:1-44638476667"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegechallakere|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-CHALLAKERE",
+        "aicte:1-44638700431"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kmctcollegeofhotelmanagementandcateringtechnology|kerala",
+      "ids": [
+        "CORE-KMCT-COLLEGE-OF-HOTEL-MANAGEMENT-AND-CATERING-TECHNOLOGY",
+        "aicte:1-44638465336"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "schoolofengineeringandtechnology|madhya pradesh",
+      "ids": [
+        "CORE-SCHOOL-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640140753"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "siddharthainstituteoftechnologyandsciences|telangana",
+      "ids": [
+        "CORE-SIDDHARTHA-INSTITUTE-OF-TECHNOLOGY-AND-SCIENCES",
+        "aicte:1-44642765351"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "dhenkanalacademyofmanagementandtechnology|odisha",
+      "ids": [
+        "CORE-DHENKANAL-ACADEMY-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44644327466"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "schoolofdesignsrisatyasaiuniversityoftechnologyandmedicalscience|madhya pradesh",
+      "ids": [
+        "CORE-SCHOOL-OF-DESIGN-SRI-SATYA-SAI-UNIVERSITY-OF-TECHNOLOGY-AND-MEDICAL-SCIENCE",
+        "aicte:1-44638290986"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ayaninstituteofmanagementandtechnology|odisha",
+      "ids": [
+        "CORE-AYAN-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44644733139"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechniccollegebareli|madhya pradesh",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-COLLEGE-BARELI",
+        "aicte:1-44638755688"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "lakshyainstituteoftechnology|odisha",
+      "ids": [
+        "CORE-LAKSHYA-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44644394871"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnichalol|gujarat",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-HALOL",
+        "aicte:1-44638879989"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "facultyofagricultureengineering|rajasthan",
+      "ids": [
+        "CORE-FACULTY-OF-AGRICULTURE-ENGINEERING",
+        "aicte:1-44638895553"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "pemiyarishikeshinstituteoftechnology|jharkhand",
+      "ids": [
+        "CORE-PEMIYA-RISHIKESH-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44638421313"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "radiantinstituteofengineeringandmanagement|madhya pradesh",
+      "ids": [
+        "CORE-RADIANT-INSTITUTE-OF-ENGINEERING-AND-MANAGEMENT",
+        "aicte:1-44638331684"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jawaharlalinstituteoftechnologyandmanagement|madhya pradesh",
+      "ids": [
+        "CORE-JAWAHARLAL-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44638653376"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rajdhanicollegeofsciencetechnologyandmanagement|odisha",
+      "ids": [
+        "CORE-RAJDHANI-COLLEGE-OF-SCIENCE-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44644635569"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "badriprasadcollegeofcomputertechnology|odisha",
+      "ids": [
+        "CORE-BADRIPRASAD-COLLEGE-OF-COMPUTER-TECHNOLOGY",
+        "aicte:1-44644533714"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gururamdaskhalsainstituteofscienceandtechnology|madhya pradesh",
+      "ids": [
+        "CORE-GURU-RAMDAS-KHALSA-INSTITUTE-OF-SCIENCE-AND-TECHNOLOGY",
+        "aicte:1-44768700643"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "cambridgeinstituteofpolytechnic|jharkhand",
+      "ids": [
+        "CORE-CAMBRIDGE-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44638426992"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "facultyofengineeringandtechnology|gujarat",
+      "ids": [
+        "CORE-FACULTY-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640549517"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bharatinstituteofmanagementandtechnology|odisha",
+      "ids": [
+        "CORE-BHARAT-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44638373773"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegebidar|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-BIDAR",
+        "aicte:1-44638916223"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicsahibganj|jharkhand",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-SAHIBGANJ",
+        "aicte:1-44638272313"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "utkalinstituteoftechnologyandmanagement|odisha",
+      "ids": [
+        "CORE-UTKAL-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44638906587"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "centurionuniversityoftechnologyandmanagement|odisha",
+      "ids": [
+        "CORE-CENTURION-UNIVERSITY-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "CORE-CENTURION-UNIVERSITY-OF-TECHNOLOGY-AND-MANAGEMENT-U-0957"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kmctinstituteofemergingtechnologyandmanagement|kerala",
+      "ids": [
+        "CORE-KMCT-INSTITUTE-OF-EMERGING-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44638635605"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shreeparekhengineeringcollege|gujarat",
+      "ids": [
+        "CORE-SHREE-PAREKH-ENGINEERING-COLLEGE",
+        "aicte:1-44638669874"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nationalinstituteoffashiontechnology|the dadra and nagar haveli and daman and diu",
+      "ids": [
+        "CORE-NATIONAL-INSTITUTE-OF-FASHION-TECHNOLOGY",
+        "CORE-NATIONAL-INSTITUTE-OF-FASHION-TECHNOLOGY-S-20120"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "garhwapolytechnic|jharkhand",
+      "ids": [
+        "CORE-GARHWA-POLYTECHNIC",
+        "aicte:1-44638745820"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ramgovindpolytechnicinstitute|jharkhand",
+      "ids": [
+        "CORE-RAMGOVIND-POLYTECHNIC-INSTITUTE",
+        "aicte:1-44641504819"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "xavierinstituteofpolytechnicandtechnology|jharkhand",
+      "ids": [
+        "CORE-XAVIER-INSTITUTE-OF-POLYTECHNIC-AND-TECHNOLOGY",
+        "aicte:1-44640754885"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "suncollegeofengineeringandtechnology|tamil nadu",
+      "ids": [
+        "CORE-SUN-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44640694176"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "satpudacollegeofengineeringandpolytechnic|madhya pradesh",
+      "ids": [
+        "CORE-SATPUDA-COLLEGE-OF-ENGINEERING-AND-POLYTECHNIC",
+        "aicte:1-44638200483"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "siratmaraminstituteofmanagementandtechnology|madhya pradesh",
+      "ids": [
+        "CORE-SIR-ATMA-RAM-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44638170609"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "donboscoinstituteoftechnology|delhi",
+      "ids": [
+        "CORE-DON-BOSCO-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44643889031"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bgscollegeofengineeringandtechnology|karnataka",
+      "ids": [
+        "CORE-BGS-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44638677510"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "diwalibapolytechnic|gujarat",
+      "ids": [
+        "CORE-DIWALIBA-POLYTECHNIC",
+        "aicte:1-44638125832"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "birlainstituteoftechnologyoffcampusjaipur|rajasthan",
+      "ids": [
+        "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-OFF-CAMPUS-JAIPUR",
+        "aicte:1-44642516593"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentengineeringcollegejaipur|rajasthan",
+      "ids": [
+        "CORE-GOVERNMENT-ENGINEERING-COLLEGE-JAIPUR",
+        "aicte:1-44641610706"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "swarnalatamanagementandinformationtechnology|odisha",
+      "ids": [
+        "CORE-SWARNALATA-MANAGEMENT-AND-INFORMATION-TECHNOLOGY",
+        "aicte:1-44486867234"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "adityacollegeofengineeringandtechnology|karnataka",
+      "ids": [
+        "CORE-ADITYA-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44643194395"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "satyadevinstituteofmanagementandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-SATYADEV-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44644488253"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rajkiyaengineeringcollegegonda|uttar pradesh",
+      "ids": [
+        "CORE-RAJKIYA-ENGINEERING-COLLEGE-GONDA",
+        "aicte:1-44644942944"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rajkiyaengineeringcollegemirzapur|uttar pradesh",
+      "ids": [
+        "CORE-RAJKIYA-ENGINEERING-COLLEGE-MIRZAPUR",
+        "aicte:1-44644934739"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gayatricollegeofengineering|odisha",
+      "ids": [
+        "CORE-GAYATRI-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44643202227"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "akashinstituteofengineeringandtechnology|karnataka",
+      "ids": [
+        "CORE-AKASH-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44642520288"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "robincollegeofeducationandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-ROBIN-COLLEGE-OF-EDUCATION-AND-TECHNOLOGY",
+        "aicte:1-44642517095"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "stsoldierinstituteofbusinessmanagementandtechnology|punjab",
+      "ids": [
+        "CORE-ST-SOLDIER-INSTITUTE-OF-BUSINESS-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44644100070"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "yashwantraobhonsaleinstituteoftechnology|maharashtra",
+      "ids": [
+        "CORE-YASHWANTRAO-BHONSALE-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44641612845"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nationalinstituteofelectronicsandinformationtechnologynielit|punjab",
+      "ids": [
+        "CORE-NATIONAL-INSTITUTE-OF-ELECTRONICS-AND-INFORMATION-TECHNOLOGY-NIELIT",
+        "CORE-NATIONAL-INSTITUTE-OF-ELECTRONICS-AND-INFORMATION-TECHNOLOGY-NIELIT-C-8301"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentcollegeofengineeringkolhapur|maharashtra",
+      "ids": [
+        "CORE-GOVERNMENT-COLLEGE-OF-ENGINEERING-KOLHAPUR",
+        "aicte:1-44637315378"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rajkiyaengineeringcollegepratapgarh|uttar pradesh",
+      "ids": [
+        "CORE-RAJKIYA-ENGINEERING-COLLEGE-PRATAPGARH",
+        "aicte:1-44644941704"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gregorianinstituteoftechnology|kerala",
+      "ids": [
+        "CORE-GREGORIAN-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44638289459"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "arrdektainstituteoftechnology|gujarat",
+      "ids": [
+        "CORE-ARRDEKTA-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44640415205"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chandigarhcollegeofengineering|punjab",
+      "ids": [
+        "CORE-CHANDIGARH-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44642517550"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickharsawan|jharkhand",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KHARSAWAN",
+        "aicte:1-44639724444"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kkpolytechnic|jharkhand",
+      "ids": [
+        "CORE-K-K-POLYTECHNIC",
+        "aicte:1-44641155400"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vidyamemorialinstituteoftechnology|jharkhand",
+      "ids": [
+        "CORE-VIDYA-MEMORIAL-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44639632587"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "pakurpolytechnic|jharkhand",
+      "ids": [
+        "CORE-PAKUR-POLYTECHNIC",
+        "aicte:1-44643816056"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "madhupurpolytechnic|jharkhand",
+      "ids": [
+        "CORE-MADHUPUR-POLYTECHNIC",
+        "aicte:1-44638834556"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "girijainstituteofpolytechnic|jharkhand",
+      "ids": [
+        "CORE-GIRIJA-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44638419317"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sarojiniinstituteoftechnology|jharkhand",
+      "ids": [
+        "CORE-SAROJINI-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44639352416"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shivomcollegeofmanagementandtechnology|haryana",
+      "ids": [
+        "CORE-SHIVOM-COLLEGE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44642521177"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "dhanbadinstituteoftechnology|jharkhand",
+      "ids": [
+        "CORE-DHANBAD-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44643203111"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "cambridgecollegeofmanagementandtechnology|haryana",
+      "ids": [
+        "CORE-CAMBRIDGE-COLLEGE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44643730519"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "indraprasthainstituteofmanagementandtechnology|haryana",
+      "ids": [
+        "CORE-INDRAPRASTHA-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44643194889"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "drmoonjeinstituteofmanagementinformationtechnology|maharashtra",
+      "ids": [
+        "CORE-DR-MOONJE-INSTITUTE-OF-MANAGEMENT-INFORMATION-TECHNOLOGY",
+        "aicte:1-44641786607"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ashokacollegeofhealthsciencesandtechnology|punjab",
+      "ids": [
+        "CORE-ASHOKA-COLLEGE-OF-HEALTH-SCIENCES-AND-TECHNOLOGY",
+        "aicte:1-44644933877"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bhaskarinstituteoftechnologyandscience|andhra pradesh",
+      "ids": [
+        "CORE-BHASKAR-INSTITUTE-OF-TECHNOLOGY-AND-SCIENCE",
+        "aicte:1-44643200890"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "indianinstituteofprintingandpackagingtechnology|uttar pradesh",
+      "ids": [
+        "CORE-INDIAN-INSTITUTE-OF-PRINTING-AND-PACKAGING-TECHNOLOGY",
+        "aicte:1-44645015325"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "asianinstituteofmanagementandinformationtechnologyaimit|bihar",
+      "ids": [
+        "CORE-ASIAN-INSTITUTE-OF-MANAGEMENT-AND-INFORMATION-TECHNOLOGY-AIMIT",
+        "aicte:1-44644167177"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "smtshantiraghavememorialcollegeforeducationandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-SMT-SHANTI-RAGHAVE-MEMORIAL-COLLEGE-FOR-EDUCATION-AND-TECHNOLOGY",
+        "aicte:1-44645020097"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shriswamisamarthinstituteofmanagementandtechnology|maharashtra",
+      "ids": [
+        "CORE-SHRI-SWAMI-SAMARTH-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44643202650"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "prabhukailashengineeringcollege|bihar",
+      "ids": [
+        "CORE-PRABHU-KAILASH-ENGINEERING-COLLEGE",
+        "aicte:1-44643206036"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jkinstituteofmanagementandtechnology|haryana",
+      "ids": [
+        "CORE-JK-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44644673953"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "holygraceacademyofengineering|kerala",
+      "ids": [
+        "CORE-HOLY-GRACE-ACADEMY-OF-ENGINEERING",
+        "aicte:1-44638633492"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sahrdayacollegeofengineeringtechnology|kerala",
+      "ids": [
+        "CORE-SAHRDAYA-COLLEGE-OF-ENGINEERING-TECHNOLOGY",
+        "aicte:1-44640511530"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "khandeshcollegeeducationsocietyscollegeofengineeringandmanagementjalgaon|maharashtra",
+      "ids": [
+        "CORE-KHANDESH-COLLEGE-EDUCATION-SOCIETY-S-COLLEGE-OF-ENGINEERING-AND-MANAGEMENT-JALGAON",
+        "aicte:1-44642870076"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "womenspolytechniccollege|tripura",
+      "ids": [
+        "CORE-WOMEN-S-POLYTECHNIC-COLLEGE",
+        "CORE-WOMEN-S-POLYTECHNIC-COLLEGE-S-1533"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chandigarhengineeringcollegecgclandranmohali|punjab",
+      "ids": [
+        "CORE-CHANDIGARH-ENGINEERING-COLLEGE-CGC-LANDRAN-MOHALI",
+        "aicte:1-44643320194"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "greaternoidainstituteoftechnologyengineeringinstitute|uttar pradesh",
+      "ids": [
+        "CORE-GREATER-NOIDA-INSTITUTE-OF-TECHNOLOGY-ENGINEERING-INSTITUTE",
+        "aicte:1-44641892258"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicdiglipur|andaman and nicobar islands",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-DIGLIPUR",
+        "aicte:1-44638801317"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "beharapolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-BEHARA-POLYTECHNIC",
+        "aicte:1-44638085518"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srivenkateswarapolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-SRI-VENKATESWARA-POLYTECHNIC",
+        "aicte:1-44641416085"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "saiganapathipolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-SAI-GANAPATHI-POLYTECHNIC",
+        "aicte:1-44639861906"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "drbragmrpolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-DR-B-R-A-G-M-R-POLYTECHNIC",
+        "aicte:1-44640857150"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "drsamuelgeorgeinstituteofengineeringtechnology|andhra pradesh",
+      "ids": [
+        "CORE-DR-SAMUEL-GEORGE-INSTITUTE-OF-ENGINEERING-TECHNOLOGY",
+        "aicte:1-44643055957"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bellamkondapolytechniccollege|andhra pradesh",
+      "ids": [
+        "CORE-BELLAMKONDA-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640877172"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "balajeepolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-BALAJEE-POLYTECHNIC",
+        "aicte:1-44639532752"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ariespolytechniccollege|andhra pradesh",
+      "ids": [
+        "CORE-ARIES-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641171012"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srigpullareddygovernmentpolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-SRI-G-PULLA-REDDY-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44639844075"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srichaitanyapolytechniccollege|andhra pradesh",
+      "ids": [
+        "CORE-SRI-CHAITANYA-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641615841"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sreemullapudivenkatarayamemorialpolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-SREE-MULLAPUDI-VENKATARAYA-MEMORIAL-POLYTECHNIC",
+        "aicte:1-44639807456"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicguntakal|andhra pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-GUNTAKAL",
+        "aicte:1-44642522119"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicdraksharamam|andhra pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-DRAKSHARAMAM",
+        "aicte:1-44639581049"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicuravakonda|andhra pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-URAVAKONDA",
+        "aicte:1-44641370811"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sanketikapolytechniccollege|andhra pradesh",
+      "ids": [
+        "CORE-SANKETIKA-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639534766"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "msmetechnologycentre|andhra pradesh",
+      "ids": [
+        "CORE-MSME-TECHNOLOGY-CENTRE",
+        "aicte:1-44638888665"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srijyothipolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-SRI-JYOTHI-POLYTECHNIC",
+        "aicte:1-44640849767"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sairangapolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-SAI-RANGA-POLYTECHNIC",
+        "aicte:1-44638811594"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "beharatechnicalcampusbeharapolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-BEHARA-TECHNICAL-CAMPUS-BEHARA-POLYTECHNIC",
+        "aicte:1-44640596493"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "shiridisaidiplomainengineeringtechnology|andhra pradesh",
+      "ids": [
+        "CORE-SHIRIDI-SAI-DIPLOMA-IN-ENGINEERING-TECHNOLOGY",
+        "aicte:1-44645394819"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicpendurthi|andhra pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-PENDURTHI",
+        "aicte:1-44638856069"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nuzvidpolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-NUZVID-POLYTECHNIC",
+        "aicte:1-44640532504"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "narayanapolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-NARAYANA-POLYTECHNIC",
+        "aicte:1-44641451600"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sriyvssribrmpolytechnic|andhra pradesh",
+      "ids": [
+        "CORE-SRI-YVS-SRI-BRM-POLYTECHNIC",
+        "aicte:1-44641482518"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srivasaviinstituteofengineeringtechnology|andhra pradesh",
+      "ids": [
+        "CORE-SRI-VASAVI-INSTITUTE-OF-ENGINEERING-TECHNOLOGY",
+        "aicte:1-44643145852"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "kakinadainstitueoftechnologicalsciences|andhra pradesh",
+      "ids": [
+        "CORE-KAKINADA-INSTITUE-OF-TECHNOLOGICAL-SCIENCES",
+        "aicte:1-44642458500"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "baksapolytechnic|assam",
+      "ids": [
+        "CORE-BAKSA-POLYTECHNIC",
+        "aicte:1-44638153779"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "morigaonpolytechnic|assam",
+      "ids": [
+        "CORE-MORIGAON-POLYTECHNIC",
+        "aicte:1-44638229566"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "tinsukiapolytechnic|assam",
+      "ids": [
+        "CORE-TINSUKIA-POLYTECHNIC",
+        "aicte:1-44638481824"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "udalguripolytechnic|assam",
+      "ids": [
+        "CORE-UDALGURI-POLYTECHNIC",
+        "aicte:1-44638230514"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sibsagarpolytechnic|assam",
+      "ids": [
+        "CORE-SIBSAGAR-POLYTECHNIC",
+        "aicte:1-44638088911"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "indianinstituteofhandloomtechnologyguwahati|assam",
+      "ids": [
+        "CORE-INDIAN-INSTITUTE-OF-HANDLOOM-TECHNOLOGY-GUWAHATI",
+        "aicte:1-44640418138"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kamruppolytechnic|assam",
+      "ids": [
+        "CORE-KAMRUP-POLYTECHNIC",
+        "aicte:1-44638841532"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chirangpolytechnic|assam",
+      "ids": [
+        "CORE-CHIRANG-POLYTECHNIC",
+        "aicte:1-44638775849"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "hailakandipolytechnic|assam",
+      "ids": [
+        "CORE-HAILAKANDI-POLYTECHNIC",
+        "aicte:1-44638771736"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "golaghatpolytechnic|assam",
+      "ids": [
+        "CORE-GOLAGHAT-POLYTECHNIC",
+        "aicte:1-44638752703"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "barpetapolytechnic|assam",
+      "ids": [
+        "CORE-BARPETA-POLYTECHNIC",
+        "aicte:1-44638745356"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "diphupolytechnic|assam",
+      "ids": [
+        "CORE-DIPHU-POLYTECHNIC",
+        "aicte:1-44638597411"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "karimganjpolytechnic|assam",
+      "ids": [
+        "CORE-KARIMGANJ-POLYTECHNIC",
+        "aicte:1-44638431384"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nalbaripolytechnic|assam",
+      "ids": [
+        "CORE-NALBARI-POLYTECHNIC",
+        "aicte:1-44638191336"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "lakhimpurpolytechnic|assam",
+      "ids": [
+        "CORE-LAKHIMPUR-POLYTECHNIC",
+        "aicte:1-44638198138"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "goalparapolytechnic|assam",
+      "ids": [
+        "CORE-GOALPARA-POLYTECHNIC",
+        "aicte:1-44638425948"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicarwal|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-ARWAL",
+        "aicte:1-44638551196"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicjehanabad|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-JEHANABAD",
+        "aicte:1-44638461953"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbhojpur|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BHOJPUR",
+        "aicte:1-44638459278"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickhagaria|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KHAGARIA",
+        "aicte:1-44638499386"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicmotihari|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-MOTIHARI",
+        "aicte:1-44639713768"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicgaya|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-GAYA",
+        "aicte:1-44639571599"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicgopalganj|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-GOPALGANJ",
+        "aicte:1-44639742038"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "crkpolytechnic|bihar",
+      "ids": [
+        "CORE-C-R-K-POLYTECHNIC",
+        "aicte:1-44640758529"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gemspolytechniccollege|bihar",
+      "ids": [
+        "CORE-GEMS-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639708780"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "hitechpolytechniccollege|bihar",
+      "ids": [
+        "CORE-HI-TECH-POLYTECHNIC-COLLEGE",
+        "aicte:1-44638759039"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicoftextiletechnology|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-OF-TEXTILE-TECHNOLOGY",
+        "aicte:1-44638372869"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicmunger|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-MUNGER",
+        "aicte:1-44638779245"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickatihar|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KATIHAR",
+        "aicte:1-44640323157"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kameshwarnarayansinghgovernmentpolytechnicsamastipur|bihar",
+      "ids": [
+        "CORE-KAMESHWAR-NARAYAN-SINGH-GOVERNMENT-POLYTECHNIC-SAMASTIPUR",
+        "aicte:1-44638494709"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicsiwan|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-SIWAN",
+        "aicte:1-44638796293"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "aryabhattpolytechnic|bihar",
+      "ids": [
+        "CORE-ARYABHATT-POLYTECHNIC",
+        "aicte:1-44638507842"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicnawada|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-NAWADA",
+        "aicte:1-44638516685"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gangamemorialcollegeofpolytechnic|bihar",
+      "ids": [
+        "CORE-GANGA-MEMORIAL-COLLEGE-OF-POLYTECHNIC",
+        "aicte:1-44640904234"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbarh|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BARH",
+        "aicte:1-44638959370"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "exaltcollegeofpolytechnic|bihar",
+      "ids": [
+        "CORE-EXALT-COLLEGE-OF-POLYTECHNIC",
+        "aicte:1-44639376874"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicsitamarhi|bihar",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-SITAMARHI",
+        "aicte:1-44638756698"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chanakyainstituteofpolytechnicandtechnology|bihar",
+      "ids": [
+        "CORE-CHANAKYA-INSTITUTE-OF-POLYTECHNIC-AND-TECHNOLOGY",
+        "aicte:1-44638614927"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "milliapolytechnic|bihar",
+      "ids": [
+        "CORE-MILLIA-POLYTECHNIC",
+        "aicte:1-44640433185"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "subhashinstituteoftechnologyjamui|bihar",
+      "ids": [
+        "CORE-SUBHASH-INSTITUTE-OF-TECHNOLOGY-JAMUI",
+        "aicte:1-44637273900"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jamuiinstituteoftechnology|bihar",
+      "ids": [
+        "CORE-JAMUI-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44637350058"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "centralinstituteofpetrochemicalsengineeringtechnologycipet|bihar",
+      "ids": [
+        "CORE-CENTRAL-INSTITUTE-OF-PETROCHEMICALS-ENGINEERING-TECHNOLOGY-CIPET",
+        "aicte:1-44642338742"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "brajkishornarayansinghgovernmentpolytechnicgopalganj|bihar",
+      "ids": [
+        "CORE-BRAJ-KISHOR-NARAYAN-SINGH-GOVERNMENT-POLYTECHNIC-GOPALGANJ",
+        "aicte:1-44638425424"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "msmetechnologycentredurg|chhattisgarh",
+      "ids": [
+        "CORE-MSME-TECHNOLOGY-CENTRE-DURG",
+        "aicte:1-44638214633"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "newdelhiinstituteofinformationtechnologyandmanagement|delhi",
+      "ids": [
+        "CORE-NEW-DELHI-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44638269457"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "babaharidasscollegeofpharmacytechnology|delhi",
+      "ids": [
+        "CORE-BABA-HARIDASS-COLLEGE-OF-PHARMACY-TECHNOLOGY",
+        "aicte:1-44640740067"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccurchorem|goa",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-CURCHOREM",
+        "aicte:1-44640781242"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteofhotelmanagementcateringtechnologyandappliednutrition|goa",
+      "ids": [
+        "CORE-INSTITUTE-OF-HOTEL-MANAGEMENT-CATERING-TECHNOLOGY-AND-APPLIED-NUTRITION",
+        "aicte:1-44644155020"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gurugobindsinghgovtpolytechniceducationsociety|haryana",
+      "ids": [
+        "CORE-GURU-GOBIND-SINGH-GOVT-POLYTECHNIC-EDUCATION-SOCIETY",
+        "aicte:1-44639877846"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shrisanatandharaminstituteofpharmacymedicaltechnology|haryana",
+      "ids": [
+        "CORE-SHRI-SANATAN-DHARAM-INSTITUTE-OF-PHARMACY-MEDICAL-TECHNOLOGY",
+        "aicte:1-44639444132"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ncpcollegeofpolytechnic|haryana",
+      "ids": [
+        "CORE-NCP-COLLEGE-OF-POLYTECHNIC",
+        "aicte:1-44641612235"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kalpanachawlagovtpolytechnicforwomen|haryana",
+      "ids": [
+        "CORE-KALPANA-CHAWLA-GOVT-POLYTECHNIC-FOR-WOMEN",
+        "aicte:1-44640321655"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniceducationsocietymorni|haryana",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-EDUCATION-SOCIETY-MORNI",
+        "aicte:1-44640472093"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mkmcollegeofpolytechnicforgirls|haryana",
+      "ids": [
+        "CORE-MKM-COLLEGE-OF-POLYTECHNIC-FOR-GIRLS",
+        "aicte:1-44640359148"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "centralinstituteofpetrochemicalsengineeringtechnology|haryana",
+      "ids": [
+        "CORE-CENTRAL-INSTITUTE-OF-PETROCHEMICALS-ENGINEERING-TECHNOLOGY",
+        "CORE-CENTRAL-INSTITUTE-OF-PETROCHEMICALS-ENGINEERING-TECHNOLOGY-S-2295"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bpsmahilapolytechnic|haryana",
+      "ids": [
+        "CORE-BPS-MAHILA-POLYTECHNIC",
+        "aicte:1-44640538835"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chmaturamaryagovtpolytechniceducationsociety|haryana",
+      "ids": [
+        "CORE-CH-MATU-RAM-ARYA-GOVT-POLYTECHNIC-EDUCATION-SOCIETY",
+        "aicte:1-44640463130"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "akashinstituteoftechnology|haryana",
+      "ids": [
+        "CORE-AKASH-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44639950562"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gurudakshgovernmentpolytechnichisar|haryana",
+      "ids": [
+        "CORE-GURU-DAKSH-GOVERNMENT-POLYTECHNIC-HISAR",
+        "aicte:1-44640181290"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sheeladeviinstituteofmanagementandtechnologysdimt|haryana",
+      "ids": [
+        "CORE-SHEELA-DEVI-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY-SDIMT",
+        "aicte:1-44640132378"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechnichamirpur|himachal pradesh",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-HAMIRPUR",
+        "aicte:1-44640838731"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechniccollegedoda|jammu and kashmir",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-COLLEGE-DODA",
+        "aicte:1-44639720788"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kashmirgovernmentpolytechnic|jammu and kashmir",
+      "ids": [
+        "CORE-KASHMIR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44641091769"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nitspolytechnic|jammu and kashmir",
+      "ids": [
+        "CORE-NITS-POLYTECHNIC",
+        "aicte:1-44640465164"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicgunnal|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-GUNNAL",
+        "aicte:1-44638686731"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicsadalga|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-SADALGA",
+        "aicte:1-44638367881"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickadur|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KADUR",
+        "aicte:1-44638371925"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "karnatakahandloomtechnologyinstitute|karnataka",
+      "ids": [
+        "CORE-KARNATAKA-HANDLOOM-TECHNOLOGY-INSTITUTE",
+        "aicte:1-44637292010"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "cvcharantimathruralpolytechnic|karnataka",
+      "ids": [
+        "CORE-C-V-CHARANTIMATH-RURAL-POLYTECHNIC",
+        "aicte:1-44640474150"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "cauverypolytechnicgonikoppal|karnataka",
+      "ids": [
+        "CORE-CAUVERY-POLYTECHNIC-GONIKOPPAL",
+        "aicte:1-44640517259"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbellary|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BELLARY",
+        "aicte:1-44639863051"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicchintamani|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-CHINTAMANI",
+        "aicte:1-44641354955"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicgajendragad|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-GAJENDRAGAD",
+        "aicte:1-44639583749"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicgulbarga|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-GULBARGA",
+        "aicte:1-44640003251"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechnicchannagiri|karnataka",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-CHANNAGIRI",
+        "aicte:1-44638360129"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteofleathertechnology|karnataka",
+      "ids": [
+        "CORE-INSTITUTE-OF-LEATHER-TECHNOLOGY",
+        "aicte:1-44639703110"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "klsshrivasantraopotdarpolytechnic|karnataka",
+      "ids": [
+        "CORE-KLS-SHRI-VASANTRAO-POTDAR-POLYTECHNIC",
+        "aicte:1-44642761672"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shridevipolytechnic|karnataka",
+      "ids": [
+        "CORE-SHRIDEVI-POLYTECHNIC",
+        "aicte:1-44639562845"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sjbgspolytechnic|karnataka",
+      "ids": [
+        "CORE-SJ-BGS-POLYTECHNIC",
+        "aicte:1-44640796305"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbasavanbagewadi|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BASAVAN-BAGEWADI",
+        "aicte:1-44638102975"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "saikrishpolytechnic|karnataka",
+      "ids": [
+        "CORE-SAI-KRISH-POLYTECHNIC",
+        "aicte:1-44639477455"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "btlpolytechnic|karnataka",
+      "ids": [
+        "CORE-BTL-POLYTECHNIC",
+        "aicte:1-44639897195"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "saranginstituteofpolytechnic|karnataka",
+      "ids": [
+        "CORE-SARANG-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44638294320"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickushtagi|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KUSHTAGI",
+        "aicte:1-44639438732"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "hyderabadkarnatakaeducationsocietyspolytechnicgulbarga|karnataka",
+      "ids": [
+        "CORE-HYDERABAD-KARNATAKA-EDUCATION-SOCIETY-S-POLYTECHNIC-GULBARGA",
+        "aicte:1-44640569173"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ballariruralpolytechnic|karnataka",
+      "ids": [
+        "CORE-BALLARI-RURAL-POLYTECHNIC",
+        "aicte:1-44641603990"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickaup|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KAUP",
+        "aicte:1-44638665050"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickoppa|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KOPPA",
+        "aicte:1-44638892653"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicholalkere|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-HOLALKERE",
+        "aicte:1-44638917598"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickollegal|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KOLLEGAL",
+        "aicte:1-44638371498"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicmalavalli|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-MALAVALLI",
+        "aicte:1-44638370506"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shreepratapgoudapatilgovernmentpolytechnicmaski|karnataka",
+      "ids": [
+        "CORE-SHREE-PRATAPGOUDA-PATIL-GOVERNMENT-POLYTECHNIC-MASKI",
+        "aicte:1-44641934763"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicholealur|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-HOLEALUR",
+        "aicte:1-44637349093"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicperiyapatana|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-PERIYAPATANA",
+        "aicte:1-44643201762"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnictiptur|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-TIPTUR",
+        "aicte:1-44643733492"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickamadolli|karnataka",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KAMADOLLI",
+        "aicte:1-44638741231"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "carmelpolytechniccollege|kerala",
+      "ids": [
+        "CORE-CARMEL-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640801793"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mditpolytechniccollege|kerala",
+      "ids": [
+        "CORE-M-DIT-POLYTECHNIC-COLLEGE",
+        "aicte:1-44638258779"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kmctpolytechniccollege|kerala",
+      "ids": [
+        "CORE-KMCT-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639982245"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "seethisahibmemorialpolytechniccollege|kerala",
+      "ids": [
+        "CORE-SEETHI-SAHIB-MEMORIAL-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641465994"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegemeenangadi|kerala",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-MEENANGADI",
+        "aicte:1-44640186173"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegenaduvil|kerala",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-NADUVIL",
+        "aicte:1-44638370058"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "stmaryspolytechniccollege|kerala",
+      "ids": [
+        "CORE-ST-MARY-S-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641550237"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "modelpolytechniccollege|kerala",
+      "ids": [
+        "CORE-MODEL-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640473131"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "malabarpolytechniccampus|kerala",
+      "ids": [
+        "CORE-MALABAR-POLYTECHNIC-CAMPUS",
+        "aicte:1-44641220678"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteofprintingtechnologyandgovernmentpolytechniccollege|kerala",
+      "ids": [
+        "CORE-INSTITUTE-OF-PRINTING-TECHNOLOGY-AND-GOVERNMENT-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640507472"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegekannur|kerala",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-KANNUR",
+        "aicte:1-44640471490"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickargil|ladakh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KARGIL",
+        "aicte:1-44639881976"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jijamatagovtpolytechniccollegeburhanpur|madhya pradesh",
+      "ids": [
+        "CORE-JIJA-MATA-GOVT-POLYTECHNIC-COLLEGE-BURHANPUR",
+        "aicte:1-44641335348"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ramnathsinghinstituteoftechnologyandscience|madhya pradesh",
+      "ids": [
+        "CORE-RAMNATH-SINGH-INSTITUTE-OF-TECHNOLOGY-AND-SCIENCE",
+        "aicte:1-44641045510"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gyanodayathecollegeofexcellencepolytechnic|madhya pradesh",
+      "ids": [
+        "CORE-GYANODAYA-THE-COLLEGE-OF-EXCELLENCE-POLYTECHNIC",
+        "aicte:1-44639367355"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kalaniketanpolytechniccollegejabalpur|madhya pradesh",
+      "ids": [
+        "CORE-KALANIKETAN-POLYTECHNIC-COLLEGE-JABALPUR",
+        "aicte:1-44641337708"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechniccollegekhirsadoh|madhya pradesh",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-COLLEGE-KHIRSADOH",
+        "aicte:1-44641337163"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechniccollegepachore|madhya pradesh",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-COLLEGE-PACHORE",
+        "aicte:1-44640002789"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "indorewomenspolytechniccollege|madhya pradesh",
+      "ids": [
+        "CORE-INDORE-WOMEN-S-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640785808"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "samratashoktechnologicalinstitutepolytechniccollege|madhya pradesh",
+      "ids": [
+        "CORE-SAMRAT-ASHOK-TECHNOLOGICAL-INSTITUTE-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641408443"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vidarbhainstituteoftechnology|maharashtra",
+      "ids": [
+        "CORE-VIDARBHA-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44642842486"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bhsstrustspolytechnic|maharashtra",
+      "ids": [
+        "CORE-B-H-S-S-TRUST-S-POLYTECHNIC",
+        "aicte:1-44641290326"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "eaglewoodpolytechnicinstitute|maharashtra",
+      "ids": [
+        "CORE-EAGLEWOOD-POLYTECHNIC-INSTITUTE",
+        "aicte:1-44643207738"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shriramkrishnaparamhanspolytechnicinstitute|maharashtra",
+      "ids": [
+        "CORE-SHRI-RAMKRISHNA-PARAMHANS-POLYTECHNIC-INSTITUTE",
+        "aicte:1-44643736345"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteofcivilandruralengineering|maharashtra",
+      "ids": [
+        "CORE-INSTITUTE-OF-CIVIL-AND-RURAL-ENGINEERING",
+        "aicte:1-44640432470"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "newinstituteoftechnologykolhapur|maharashtra",
+      "ids": [
+        "CORE-NEW-INSTITUTE-OF-TECHNOLOGY-KOLHAPUR",
+        "aicte:1-44641299762"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jowaipolytechnic|meghalaya",
+      "ids": [
+        "CORE-JOWAI-POLYTECHNIC",
+        "aicte:1-44639525358"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "turapolytechnic|meghalaya",
+      "ids": [
+        "CORE-TURA-POLYTECHNIC",
+        "aicte:1-44640806284"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shillongpolytechnic|meghalaya",
+      "ids": [
+        "CORE-SHILLONG-POLYTECHNIC",
+        "aicte:1-44640866783"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "khelhoshepolytechnicatoizu|nagaland",
+      "ids": [
+        "CORE-KHELHOSHE-POLYTECHNIC-ATOIZU",
+        "aicte:1-44639918314"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "stateinstituteofhotelmanagementcateringtechnologyandappliednutrition|nagaland",
+      "ids": [
+        "CORE-STATE-INSTITUTE-OF-HOTEL-MANAGEMENT-CATERING-TECHNOLOGY-AND-APPLIED-NUTRITION",
+        "aicte:1-44638470018"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicsedem|nagaland",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-SEDEM",
+        "aicte:1-44638798219"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "soroschoolofengineeringdiploma|odisha",
+      "ids": [
+        "CORE-SORO-SCHOOL-OF-ENGINEERING-DIPLOMA",
+        "aicte:1-44638426416"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mahavirengineeringcollege|odisha",
+      "ids": [
+        "CORE-MAHAVIR-ENGINEERING-COLLEGE",
+        "aicte:1-44640694757"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "odishapolytechnic|odisha",
+      "ids": [
+        "CORE-ODISHA-POLYTECHNIC",
+        "aicte:1-44639503044"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ramamaniinstituteofmanagementandtechnology|odisha",
+      "ids": [
+        "CORE-RAMAMANI-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44643816491"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteoftextiletechnology|odisha",
+      "ids": [
+        "CORE-INSTITUTE-OF-TEXTILE-TECHNOLOGY",
+        "aicte:1-44640677542"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "saiinstituteoftechnologicalscience|odisha",
+      "ids": [
+        "CORE-SAI-INSTITUTE-OF-TECHNOLOGICAL-SCIENCE",
+        "aicte:1-44641518029"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "skdavgovernmentpolytechnic|odisha",
+      "ids": [
+        "CORE-SKDAV-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44639920878"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "adarshainstituteoftechnologyandmanagement|odisha",
+      "ids": [
+        "CORE-ADARSHA-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44641012406"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "internationalpolytechnic|odisha",
+      "ids": [
+        "CORE-INTERNATIONAL-POLYTECHNIC",
+        "aicte:1-44641265322"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vijayanjalischoolofengineering|odisha",
+      "ids": [
+        "CORE-VIJAYANJALI-SCHOOL-OF-ENGINEERING",
+        "aicte:1-44638773978"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "saischoolofengineering|odisha",
+      "ids": [
+        "CORE-SAI-SCHOOL-OF-ENGINEERING",
+        "aicte:1-44640491838"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "berhampurschoolofengineeringtechnology|odisha",
+      "ids": [
+        "CORE-BERHAMPUR-SCHOOL-OF-ENGINEERING-TECHNOLOGY",
+        "aicte:1-44639761099"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "zenithinstituteofsciencetechnology|odisha",
+      "ids": [
+        "CORE-ZENITH-INSTITUTE-OF-SCIENCE-TECHNOLOGY",
+        "aicte:1-44639432715"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "samantachandrasekharinstituteoftechnologyandmanagement|odisha",
+      "ids": [
+        "CORE-SAMANTA-CHANDRASEKHAR-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44640203342"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rajakishorechandraacademyoftechnologypolytechnic|odisha",
+      "ids": [
+        "CORE-RAJA-KISHORE-CHANDRA-ACADEMY-OF-TECHNOLOGY-POLYTECHNIC",
+        "aicte:1-44639537152"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rkinstituteofengineeringtechnology|odisha",
+      "ids": [
+        "CORE-R-K-INSTITUTE-OF-ENGINEERING-TECHNOLOGY",
+        "aicte:1-44640734407"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nayagarhinstituteofengineeringtechnologypolytechnic|odisha",
+      "ids": [
+        "CORE-NAYAGARH-INSTITUTE-OF-ENGINEERING-TECHNOLOGY-POLYTECHNIC",
+        "aicte:1-44639534231"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mahalaxmiinstituteoftechnologyengineering|odisha",
+      "ids": [
+        "CORE-MAHALAXMI-INSTITUTE-OF-TECHNOLOGY-ENGINEERING",
+        "aicte:1-44639520191"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jharsugudaengineeringschool|odisha",
+      "ids": [
+        "CORE-JHARSUGUDA-ENGINEERING-SCHOOL",
+        "aicte:1-44639912457"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sophitoriumengineeringschool|odisha",
+      "ids": [
+        "CORE-SOPHITORIUM-ENGINEERING-SCHOOL",
+        "aicte:1-44643200018"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srimanakulavinayagarpolytechniccollege|puducherry",
+      "ids": [
+        "CORE-SRI-MANAKULA-VINAYAGAR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639411026"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "stsoldierinstituteofpharmacypolytechnic|punjab",
+      "ids": [
+        "CORE-ST-SOLDIER-INSTITUTE-OF-PHARMACY-POLYTECHNIC",
+        "aicte:1-44639565731"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegesawaimadhopur|rajasthan",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-SAWAI-MADHOPUR",
+        "aicte:1-44639889333"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegebundi|rajasthan",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-BUNDI",
+        "aicte:1-44641497485"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "laxmidharpolytechniccollege|rajasthan",
+      "ids": [
+        "CORE-LAXMIDHAR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641323468"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegepratapgarh|rajasthan",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-PRATAPGARH",
+        "aicte:1-44641388626"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegedungarpur|rajasthan",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-DUNGARPUR",
+        "aicte:1-44639942855"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegebikaner|rajasthan",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-BIKANER",
+        "aicte:1-44639754261"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegenagaur|rajasthan",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-NAGAUR",
+        "aicte:1-44639566671"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "satyaminstituteoftechnology|rajasthan",
+      "ids": [
+        "CORE-SATYAM-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44755246243"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shrikrishnapolytechniccollege|rajasthan",
+      "ids": [
+        "CORE-SHRI-KRISHNA-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641339400"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegenawa|rajasthan",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-NAWA",
+        "aicte:1-44638897316"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "msmetechnologycentrebhiwadi|rajasthan",
+      "ids": [
+        "CORE-MSME-TECHNOLOGY-CENTRE-BHIWADI",
+        "aicte:1-44638246401"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegemandorejodhpur|rajasthan",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-MANDORE-JODHPUR",
+        "aicte:1-44638653822"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rajasthanpolytechniccollegebikaner|rajasthan",
+      "ids": [
+        "CORE-RAJASTHAN-POLYTECHNIC-COLLEGE-BIKANER",
+        "aicte:1-44639995581"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "indianinstituteofhandloomtechnology|rajasthan",
+      "ids": [
+        "CORE-INDIAN-INSTITUTE-OF-HANDLOOM-TECHNOLOGY",
+        "aicte:1-44640873458"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chgirdhariramdhakapolytechniccollegehanumangarh|rajasthan",
+      "ids": [
+        "CORE-CH-GIRDHARI-RAM-DHAKA-POLYTECHNIC-COLLEGE-HANUMANGARH",
+        "aicte:1-44641622765"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "srspolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-SRS-POLYTECHNIC-COLLEGE",
+        "aicte:1-44642824075"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vasanthamurugupolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-VASANTHA-MURUGU-POLYTECHNIC-COLLEGE",
+        "aicte:1-44637382867"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "perunthalaivarkkamarajarpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-PERUNTHALAIVAR-K-KAMARAJAR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641172049"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "akypolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-AKY-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640522477"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "psvpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-PSV-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640306564"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "arasupolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-ARASU-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639727096"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sriandalnachiyarpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-SRI-ANDAL-NACHIYAR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640675899"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mariapolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-MARIA-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641580425"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kamarajarpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-KAMARAJAR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640140234"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollegejolarpet|tamil nadu",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE-JOLARPET",
+        "aicte:1-44641328972"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vetripolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-VETRI-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639700966"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nelliandavarinstituteofpolytechnic|tamil nadu",
+      "ids": [
+        "CORE-NELLIANDAVAR-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44640588533"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "npacentenarypolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-NPA-CENTENARY-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639967535"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "pgppolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-PGP-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640697885"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-COLLEGE",
+        "aicte:1-44791318873"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shrisitheswararpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-SHRI-SITHESWARAR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640298670"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "swamivivekanandapolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-SWAMI-VIVEKANANDA-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641262125"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "psgponnammalpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-P-S-G-PONNAMMAL-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639695367"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "easwarpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-EASWAR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640695332"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kurinjepolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-KURINJE-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640230696"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mmpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-M-M-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641476652"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jeyapolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-JEYA-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640349020"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sivakasiinstituteofprintingtechnology|tamil nadu",
+      "ids": [
+        "CORE-SIVAKASI-INSTITUTE-OF-PRINTING-TECHNOLOGY",
+        "aicte:1-44639717997"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sbmpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-SBM-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641184883"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ssrpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-SSR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639382854"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "virudhunagarsvellaichamynadarpolytechniccollege|tamil nadu",
+      "ids": [
+        "CORE-VIRUDHUNAGAR-S-VELLAICHAMY-NADAR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640942481"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "annamacharyainstitueoftechnologysciences|telangana",
+      "ids": [
+        "CORE-ANNAMACHARYA-INSTITUE-OF-TECHNOLOGY-SCIENCES",
+        "aicte:1-44640884534"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "apgovernmentinstituteofleathertechnology|telangana",
+      "ids": [
+        "CORE-A-P-GOVERNMENT-INSTITUTE-OF-LEATHER-TECHNOLOGY",
+        "aicte:1-44640002275"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sanjaygandhigovernmentpolytechnic|telangana",
+      "ids": [
+        "CORE-SANJAY-GANDHI-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44640059200"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteofmanagementtechnologyhyderabad|telangana",
+      "ids": [
+        "CORE-INSTITUTE-OF-MANAGEMENT-TECHNOLOGY-HYDERABAD",
+        "aicte:1-44641481459"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "samskruticollegeofengineeringandtechnology|telangana",
+      "ids": [
+        "CORE-SAMSKRUTI-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44643476614"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "engineeringstaffcollegeofindia|telangana",
+      "ids": [
+        "CORE-ENGINEERING-STAFF-COLLEGE-OF-INDIA",
+        "aicte:1-44640557408"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ratnapuriinstituteoftechnologycollegeofpolytechnic|telangana",
+      "ids": [
+        "CORE-RATNAPURI-INSTITUTE-OF-TECHNOLOGY-COLLEGE-OF-POLYTECHNIC",
+        "aicte:1-44639810104"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vivekanandacollegeofpolytechnic|telangana",
+      "ids": [
+        "CORE-VIVEKANANDA-COLLEGE-OF-POLYTECHNIC",
+        "aicte:1-44638203535"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "singarenicollieriespolytechnic|telangana",
+      "ids": [
+        "CORE-SINGARENI-COLLIERIES-POLYTECHNIC",
+        "aicte:1-44639801261"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jyothishmathiinstituteoftechnologyscience|telangana",
+      "ids": [
+        "CORE-JYOTHISHMATHI-INSTITUTE-OF-TECHNOLOGY-SCIENCE",
+        "aicte:1-44643703313"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "devbhoomiinstituteofpolytechnic|uttarakhand",
+      "ids": [
+        "CORE-DEV-BHOOMI-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44640334391"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicpantnagar|uttarakhand",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-PANTNAGAR",
+        "aicte:1-44641305059"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jaswantsinghrawatgovernmentpolytechnicbironkhal|uttarakhand",
+      "ids": [
+        "CORE-JASWANT-SINGH-RAWAT-GOVERNMENT-POLYTECHNIC-BIRONKHAL",
+        "aicte:1-44639716895"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicranipokhari|uttarakhand",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-RANIPOKHARI",
+        "aicte:1-44638886353"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnichindolakhal|uttarakhand",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-HINDOLAKHAL",
+        "aicte:1-44638484685"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbaram|uttarakhand",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BARAM",
+        "aicte:1-44638591388"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicuttarkashi|uttarakhand",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-UTTARKASHI",
+        "aicte:1-44641070412"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicchampawat|uttarakhand",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-CHAMPAWAT",
+        "aicte:1-44638494240"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicauraisantravidasnagarbhadohi|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-AURAI-SANT-RAVIDAS-NAGAR-BHADOHI",
+        "aicte:1-44641096254"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "allahabadcollegeofengineeringandmanagement|uttar pradesh",
+      "ids": [
+        "CORE-ALLAHABAD-COLLEGE-OF-ENGINEERING-AND-MANAGEMENT",
+        "aicte:1-44641048214"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mahamayapolytechnicofinformationtechnology|uttar pradesh",
+      "ids": [
+        "CORE-MAHAMAYA-POLYTECHNIC-OF-INFORMATION-TECHNOLOGY",
+        "aicte:1-44638195256"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "drvijayinstituteofeducationandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-DR-VIJAY-INSTITUTE-OF-EDUCATION-AND-TECHNOLOGY",
+        "aicte:1-44638094336"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "krishnainstituteofpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-KRISHNA-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44638594316"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "adarshpolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-ADARSH-POLYTECHNIC-COLLEGE",
+        "aicte:1-44638688060"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "himalayanpolytechnicinstitute|uttar pradesh",
+      "ids": [
+        "CORE-HIMALAYAN-POLYTECHNIC-INSTITUTE",
+        "aicte:1-44638502003"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickurarahamirpur|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KURARA-HAMIRPUR",
+        "aicte:1-44644994521"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicmirzapur|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-MIRZAPUR",
+        "aicte:1-44640915954"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "adrsinstituteoftechnologymanagement|uttar pradesh",
+      "ids": [
+        "CORE-A-D-R-S-INSTITUTE-OF-TECHNOLOGY-MANAGEMENT",
+        "aicte:1-44641053900"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bababindeshwarisinghinstituteoftechnologyandmanagement|uttar pradesh",
+      "ids": [
+        "CORE-BABA-BINDESHWARI-SINGH-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44641221711"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "babavishwanathinstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-BABA-VISHWANATH-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44640646900"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "banarasinstituteofpolytechnicengineering|uttar pradesh",
+      "ids": [
+        "CORE-BANARAS-INSTITUTEOF-POLYTECHNIC-ENGINEERING",
+        "aicte:1-44639474895"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "beaconinstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-BEACON-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44640577361"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickanpur|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KANPUR",
+        "aicte:1-44641085881"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechniclucknow|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-LUCKNOW",
+        "aicte:1-44640411067"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicmahoba|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-MAHOBA",
+        "aicte:1-44641076458"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicpratapgarh|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-PRATAPGARH",
+        "aicte:1-44640396648"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicrampur|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-RAMPUR",
+        "aicte:1-44639422225"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicsaharanpur|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-SAHARANPUR",
+        "aicte:1-44640155455"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicsonebhadra|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-SONEBHADRA",
+        "aicte:1-44640357226"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicsoron|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-SORON",
+        "aicte:1-44641106614"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicunnao|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-UNNAO",
+        "aicte:1-44641538039"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "hewettpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-HEWETT-POLYTECHNIC",
+        "aicte:1-44641089097"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "imscollegeofpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-IMS-COLLEGE-OF-POLYTECHNIC",
+        "aicte:1-44639391746"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ingrahampolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-INGRAHAM-POLYTECHNIC",
+        "aicte:1-44640759967"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "satyadevinstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-SATYADEV-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44639513425"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shrigirrajmaharajpolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-SHRI-GIRRAJ-MAHARAJ-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639881403"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shrirampolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-SHRI-RAM-POLYTECHNIC",
+        "aicte:1-44641090657"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "svspolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-SVS-POLYTECHNIC",
+        "aicte:1-44641038896"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "swamikalyandevpolytechnicinstituite|uttar pradesh",
+      "ids": [
+        "CORE-SWAMI-KALYAN-DEV-POLYTECHNIC-INSTITUITE",
+        "aicte:1-44639689703"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "swamisahajanandpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-SWAMI-SAHAJANAND-POLYTECHNIC",
+        "aicte:1-44639499252"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "tathagatgautambudhgovernmentpolytechnicshravasti|uttar pradesh",
+      "ids": [
+        "CORE-TATHAGAT-GAUTAM-BUDH-GOVERNMENT-POLYTECHNIC-SHRAVASTI",
+        "aicte:1-44639719347"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "umraotechnologicalinstitute|uttar pradesh",
+      "ids": [
+        "CORE-UMRAO-TECHNOLOGICAL-INSTITUTE",
+        "aicte:1-44640326762"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "indianinstituteofhandloomtechnologyvaranasi|uttar pradesh",
+      "ids": [
+        "CORE-INDIAN-INSTITUTE-OF-HANDLOOM-TECHNOLOGY-VARANASI",
+        "aicte:1-44640869408"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "birlainstituteofmanagementtechnology|uttar pradesh",
+      "ids": [
+        "CORE-BIRLA-INSTITUTE-OF-MANAGEMENT-TECHNOLOGY",
+        "aicte:1-44642424014"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicnikarikarajgarhmirzapur|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-NIKARIKA-RAJGARH-MIRZAPUR",
+        "aicte:1-44638849706"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gandhiinstituteofengineeringandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-GANDHI-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44638270977"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rudrapolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-RUDRA-POLYTECHNIC",
+        "aicte:1-44638083856"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ncpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-NC-POLYTECHNIC",
+        "aicte:1-44638215563"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vikasinstituteofengineeringandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-VIKAS-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44639673348"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vijaypratapinstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-VIJAY-PRATAP-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44640879838"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gajrajsinghpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-GAJRAJ-SINGH-POLYTECHNIC",
+        "aicte:1-44638335665"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nirmaladevipolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-NIRMALA-DEVI-POLYTECHNIC-COLLEGE",
+        "aicte:1-44638436257"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickirthalchapraulibagphat|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KIRTHAL-CHAPRAULI-BAGPHAT",
+        "aicte:1-44638483233"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mgainstituteofpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-MGA-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44638243707"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "buddhapolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-BUDDHA-POLYTECHNIC-COLLEGE",
+        "aicte:1-44638255841"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "shrisahdevpaudhariyapolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-SHRI-SAHDEV-PAUDHARIYA-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639675917"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "snskinstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-SNSK-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44638472348"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechnicshardhanameerut|uttar pradesh",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-SHARDHANA-MEERUT",
+        "aicte:1-44643201340"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "udayrajsinghrampyariinstituteofscienceandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-UDAYRAJ-SINGH-RAMPYARI-INSTITUTE-OF-SCIENCE-AND-TECHNOLOGY",
+        "aicte:1-44638110276"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "devindrawatiinstituteofpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-DEV-INDRAWATI-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44642523794"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "prateeksinghsiddharthpolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-PRATEEK-SINGH-SIDDHARTH-POLYTECHNIC-COLLEGE",
+        "aicte:1-44638908852"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicatrauliaazamgarhrunbyaicceds|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-ATRAULIA-AZAMGARH-RUN-BY-AICCEDS",
+        "aicte:1-44638900782"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "chaudharyinstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-CHAUDHARY-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44638948203"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "unitechinstituteofengineeringandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-UNITECH-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+        "aicte:1-44641537604"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "babaramdalsurajdevpolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-BABA-RAMDAL-SURAJDEV-POLYTECHNIC-COLLEGE",
+        "aicte:1-44638270515"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbara|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BARA",
+        "aicte:1-44644889854"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicgopamauhardoi|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-GOPAMAU-HARDOI",
+        "aicte:1-44644994751"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbilsibudaun|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BILSI-BUDAUN",
+        "aicte:1-44644997845"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rajnarayansinghsammopurpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-RAJ-NARAYAN-SINGH-SAMMOPUR-POLYTECHNIC",
+        "aicte:1-44638774443"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "klpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-K-L-POLYTECHNIC",
+        "aicte:1-44641075533"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "dnpolytechnicmeerut|uttar pradesh",
+      "ids": [
+        "CORE-D-N-POLYTECHNIC-MEERUT",
+        "aicte:1-44641545001"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "drbheemraoambedkarpolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-DR-BHEEM-RAO-AMBEDKAR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44641235015"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "emerald9instituteofmanagementandtechnology|uttar pradesh",
+      "ids": [
+        "CORE-EMERALD-9-INSTITUTE-OF-MANAGEMENT-AND-TECHNOLOGY",
+        "aicte:1-44640239352"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbanda|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BANDA",
+        "aicte:1-44640252239"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbarabanki|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BARABANKI",
+        "aicte:1-44640149102"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbareilly|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BAREILLY",
+        "aicte:1-44639759946"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicetawah|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-ETAWAH",
+        "aicte:1-44640311479"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicfaizabad|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-FAIZABAD",
+        "aicte:1-44639428702"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kamalinstituteoftechnology|uttar pradesh",
+      "ids": [
+        "CORE-KAMAL-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44640343150"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kanchanpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-KANCHAN-POLYTECHNIC",
+        "aicte:1-44640242162"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "littleflowerpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-LITTLE-FLOWER-POLYTECHNIC",
+        "aicte:1-44639398711"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "lucknowpolytechniclucknow|uttar pradesh",
+      "ids": [
+        "CORE-LUCKNOW-POLYTECHNIC-LUCKNOW",
+        "aicte:1-44641066882"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "msdpolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-M-S-D-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639670144"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mahatmajyotibaphulegovernmentpolytechnickaushambi|uttar pradesh",
+      "ids": [
+        "CORE-MAHATMA-JYOTIBA-PHULE-GOVERNMENT-POLYTECHNIC-KAUSHAMBI",
+        "aicte:1-44639700012"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "panchwatiinstituteofpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-PANCHWATI-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44640330755"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "princeinstituteofinnovativetechnologygrnoida|uttar pradesh",
+      "ids": [
+        "CORE-PRINCE-INSTITUTE-OF-INNOVATIVE-TECHNOLOGY-GR-NOIDA",
+        "aicte:1-44641865377"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ptramadharjtiwaricollegeofpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-PT-RAM-ADHAR-J-TIWARI-COLLEGE-OF-POLYTECHNIC",
+        "aicte:1-44639414755"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rkpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-R-K-POLYTECHNIC",
+        "aicte:1-44639413628"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "radhagovindpolytechniccollege|uttar pradesh",
+      "ids": [
+        "CORE-RADHA-GOVIND-POLYTECHNIC-COLLEGE",
+        "aicte:1-44640333824"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicmohammadikheri|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-MOHAMMADI-KHERI",
+        "aicte:1-44638586768"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnickishnimainpuri|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-KISHNI-MAINPURI",
+        "aicte:1-44638786684"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "brgautampolytechnicinstitute|uttar pradesh",
+      "ids": [
+        "CORE-B-R-GAUTAM-POLYTECHNIC-INSTITUTE",
+        "aicte:1-44638377882"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "lutawaninstituteoftechnologyandmanagement|uttar pradesh",
+      "ids": [
+        "CORE-LUTAWAN-INSTITUTE-OF-TECHNOLOGY-AND-MANAGEMENT",
+        "aicte:1-44638511468"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "indramohanchauhanmemorialpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-INDRA-MOHAN-CHAUHAN-MEMORIAL-POLYTECHNIC",
+        "aicte:1-44638316482"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbachhrawan|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BACHHRAWAN",
+        "aicte:1-44638264818"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bkpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-B-K-POLYTECHNIC",
+        "aicte:1-44638581976"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "babasahebambedkarpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-BABA-SAHEB-AMBEDKAR-POLYTECHNIC",
+        "aicte:1-44640747841"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "instituteofenggruraltechnology|uttar pradesh",
+      "ids": [
+        "CORE-INSTITUTE-OF-ENGG-RURAL-TECHNOLOGY",
+        "aicte:1-44640769341"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "accurateinstituteofpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-ACCURATE-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44638424887"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rbgautampolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-R-B-GAUTAM-POLYTECHNIC",
+        "aicte:1-44638489487"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "govtpolytechnicchhabilhakhorsadarbasti|uttar pradesh",
+      "ids": [
+        "CORE-GOVT-POLYTECHNIC-CHHABILHAKHOR-SADAR-BASTI",
+        "aicte:1-44640313650"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicbhaurahichunarmirzapur|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-BHAURAHI-CHUNAR-MIRZAPUR",
+        "aicte:1-44638096230"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicchandausi|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-CHANDAUSI",
+        "aicte:1-44639902125"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "vishveshwaryainstituteofpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-VISHVESHWARYA-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44638424409"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "governmentpolytechnicmankedaagra|uttar pradesh",
+      "ids": [
+        "CORE-GOVERNMENT-POLYTECHNIC-MANKEDA-AGRA",
+        "aicte:1-44639716398"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gcrgcollegeofpolytechnic|uttar pradesh",
+      "ids": [
+        "CORE-GCRG-COLLEGE-OF-POLYTECHNIC",
+        "aicte:1-44640299777"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "technopolytechnicdurgapur|west bengal",
+      "ids": [
+        "CORE-TECHNO-POLYTECHNIC-DURGAPUR",
+        "aicte:1-44638388397"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "sirrajendranathmukherjeegovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-SIR-RAJENDRA-NATH-MUKHERJEE-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638304547"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mathabhangagovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-MATHABHANGA-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638254341"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "siliguriinstituteoftechnologydiplomacollege|west bengal",
+      "ids": [
+        "CORE-SILIGURI-INSTITUTE-OF-TECHNOLOGY-DIPLOMA-COLLEGE",
+        "aicte:1-44638380971"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "raiganjpolytechnic|west bengal",
+      "ids": [
+        "CORE-RAIGANJ-POLYTECHNIC",
+        "aicte:1-44640661237"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "discoveryinstituteofpolytechnic|west bengal",
+      "ids": [
+        "CORE-DISCOVERY-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44640397853"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "rajaranjitkishoregovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-RAJA-RANJIT-KISHORE-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44640624559"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "bankuragovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-BANKURA-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44641027246"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nalhatigovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-NALHATI-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44641179357"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "muraraigovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-MURARAI-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44641492991"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "paradiseinstituteoftechnology|west bengal",
+      "ids": [
+        "CORE-PARADISE-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44640046409"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "medinipursadargovtpolytechnic|west bengal",
+      "ids": [
+        "CORE-MEDINIPUR-SADAR-GOVT-POLYTECHNIC",
+        "aicte:1-44638743430"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "santiniketanpolytechnic|west bengal",
+      "ids": [
+        "CORE-SANTINIKETAN-POLYTECHNIC",
+        "aicte:1-44638415392"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mirmadanmohanlalgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-MIRMADAN-MOHANLAL-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44641034172"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "berhamporepolytechniccollege|west bengal",
+      "ids": [
+        "CORE-BERHAMPORE-POLYTECHNIC-COLLEGE",
+        "aicte:1-44638625808"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "falakatapolytechnic|west bengal",
+      "ids": [
+        "CORE-FALAKATA-POLYTECHNIC",
+        "aicte:1-44639630378"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "raghunathpurgovtpolytechnic|west bengal",
+      "ids": [
+        "CORE-RAGHUNATHPUR-GOVT-POLYTECHNIC",
+        "aicte:1-44638746738"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ratuasatyendranathbosegovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-RATUA-SATYENDRA-NATH-BOSE-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44641027750"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gangarampurgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-GANGARAMPUR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44639350448"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "durgapurinstituteofpolytechnic|west bengal",
+      "ids": [
+        "CORE-DURGAPUR-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44640174046"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "baruipurgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-BARUIPUR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44640886780"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "raipurgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-RAIPUR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638188784"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "alipurduardamanpurgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-ALIPURDUAR-DAMANPUR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638364768"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "durgapurpolytechniccollege|west bengal",
+      "ids": [
+        "CORE-DURGAPUR-POLYTECHNIC-COLLEGE",
+        "aicte:1-44639779281"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "absacademyofpolytechnic|west bengal",
+      "ids": [
+        "CORE-ABS-ACADEMY-OF-POLYTECHNIC",
+        "aicte:1-44640974140"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "southcalcuttapolytechnic|west bengal",
+      "ids": [
+        "CORE-SOUTH-CALCUTTA-POLYTECHNIC",
+        "aicte:1-44641557127"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jakirhossaininstituteofpolytechnic|west bengal",
+      "ids": [
+        "CORE-JAKIR-HOSSAIN-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44639660465"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "islampurgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-ISLAMPUR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44639651240"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "jangipurgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-JANGIPUR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44640224077"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "canninggovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-CANNING-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638131009"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kpsinstituteofpolytechnic|west bengal",
+      "ids": [
+        "CORE-KPS-INSTITUTE-OF-POLYTECHNIC",
+        "aicte:1-44639914093"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "itahargovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-ITAHAR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638823010"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "luthfaapolytechnicinstitute|west bengal",
+      "ids": [
+        "CORE-LUTHFAA-POLYTECHNIC-INSTITUTE",
+        "aicte:1-44639629824"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "behalagovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-BEHALA-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638508781"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "salbaniinstituteoftechnology|west bengal",
+      "ids": [
+        "CORE-SALBANI-INSTITUTE-OF-TECHNOLOGY",
+        "aicte:1-44638089372"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "gaighatagovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-GAIGHATA-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638581426"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "ranaghatgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-RANAGHAT-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638410695"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "babasahebambedkargovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-BABASAHEB-AMBEDKAR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638843050"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "arambaghgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-ARAMBAGH-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638146123"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "kalimponggovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-KALIMPONG-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638263921"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "mirikgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-MIRIK-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638640445"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "baghmundigovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-BAGHMUNDI-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44640458246"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "maynagurigovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-MAYNAGURI-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44641183948"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "uluberiagovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-ULUBERIA-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44638641370"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "diamondharbourgovernmentpolytechnic|west bengal",
+      "ids": [
+        "CORE-DIAMOND-HARBOUR-GOVERNMENT-POLYTECHNIC",
+        "aicte:1-44641015885"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "internationalinstituteofinformationtechnology|chhattisgarh",
+      "ids": [
+        "CORE-INTERNATIONAL-INSTITUTE-OF-INFORMATION-TECHNOLOGY",
+        "aicte:1-44640985684"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "netajisubhasuniversityoftechnology|delhi",
+      "ids": [
+        "CORE-NETAJI-SUBHAS-UNIVERSITY-OF-TECHNOLOGY",
+        "aicte:1-44641321420"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "kletechnologicaluniversity|karnataka",
+      "ids": [
+        "CORE-KLE-TECHNOLOGICAL-UNIVERSITY",
+        "aicte:1-44638523851"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "universityofvisvesvarayacollegeofengineering|karnataka",
+      "ids": [
+        "CORE-UNIVERSITY-OF-VISVESVARAYA-COLLEGE-OF-ENGINEERING",
+        "aicte:1-44643572941"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "keralauniversityofdigitalsciencesinnovationandtechnology|kerala",
+      "ids": [
+        "CORE-KERALA-UNIVERSITY-OF-DIGITAL-SCIENCES-INNOVATION-AND-TECHNOLOGY",
+        "aicte:1-44637293361"
+      ]
+    },
+    {
+      "severity": "MEDIUM",
+      "key": "odishauniversityoftechnologyandresearch|odisha",
+      "ids": [
+        "CORE-ODISHA-UNIVERSITY-OF-TECHNOLOGY-AND-RESEARCH",
+        "aicte:1-44641731592"
+      ]
+    },
+    {
+      "severity": "LOW",
+      "key": "nationalinstituteoffoodtechnologyentrepreneurshipandmanagementthanjavur|tamil nadu",
+      "ids": [
+        "CORE-NATIONAL-INSTITUTE-OF-FOOD-TECHNOLOGY-ENTREPRENEURSHIP-AND-MANAGEMENT-THANJAVUR",
+        "aicte:1-44639806024"
+      ]
+    }
+  ],
+  "unregistered_high_confidence": [],
+  "upgrades_available": [],
+  "confidence_decay": [],
+  "timestamp": "2026-04-25T14:50:21.718Z"
+}

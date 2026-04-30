@@ -4,6 +4,7 @@ import React from 'react';
 import { DoorOpen, Users, BarChart3 } from 'lucide-react';
 import TruthSeatsSection from './college/TruthSeatsSection';
 import TruthCutoffsSection from './college/TruthCutoffsSection';
+import MedicalTruthCutoffsSection from './college/MedicalTruthCutoffsSection';
 import './NarrativeGateway.css';
 
 /**
@@ -30,11 +31,15 @@ const NarrativeGateway = ({ collegeId, collegeName, cutoffSearchName }) => {
                 <h3 className="prestige-heading small">Institutional Cutoffs</h3>
               </div>
               <div className="data-frame">
-                <TruthCutoffsSection 
-                    collegeId={collegeId} 
-                    collegeName={collegeName}
-                    cutoffSearchName={cutoffSearchName}
-                />
+                {String(collegeId).startsWith('MCC-') ? (
+                  <MedicalTruthCutoffsSection entityId={collegeId} />
+                ) : (
+                  <TruthCutoffsSection 
+                      collegeId={collegeId} 
+                      collegeName={collegeName}
+                      cutoffSearchName={cutoffSearchName}
+                  />
+                )}
               </div>
             </div>
           </div>

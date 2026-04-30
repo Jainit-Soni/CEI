@@ -14,17 +14,25 @@ const NarrativeIntel = ({ college }) => {
     ? [...new Set(college.courses.map(c => c.department || c.degreeNameType || 'Academic Module'))].slice(0, 8)
     : [];
 
+  const ceiScore = college.ceiScore || 0; // Strictly reflect database or show 0
+
   return (
     <section className="prestige-section narrative-intel">
       <div className="section-container">
         <div className="glass-card-root score-card">
-          <header className="narrative-header">
-            <span className="prestige-subheading">Institutional Score</span>
-            <h2 className="prestige-heading">CEI Intelligence Analysis</h2>
-            <p className="prestige-body-text">
-              A weighted calculation of institutional rigor, competitive standing, and academic infrastructure.
-            </p>
-          </header>
+          <div className="score-hero">
+            <div className="score-meter">
+               <div className="meter-value" style={{ width: `${ceiScore}%` }}></div>
+               <div className="meter-label">{ceiScore.toFixed(1)}</div>
+            </div>
+            <header className="narrative-header">
+              <span className="prestige-subheading">Institutional Score</span>
+              <h2 className="prestige-heading">CEI Intelligence Analysis</h2>
+              <p className="prestige-body-text">
+                A weighted calculation of institutional rigor, competitive standing, and academic infrastructure.
+              </p>
+            </header>
+          </div>
 
           <div className="intel-grid">
             {/* Rankings Pillar */}

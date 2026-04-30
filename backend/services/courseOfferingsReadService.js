@@ -63,6 +63,38 @@ async function getCollegeTruthCourses({ db, college, limit = DEFAULT_LIMIT }) {
         }
     }
 
+    // 1.5. Attempt Seat Matrix Recovery (For CORE institutions not in AICTE registry)
+    if (items.length === 0 && institutionId) {
+        const seatsCollection = db.collection('seat_matrix');
+        const seatDocs = await seatsCollection.find({ institution_id: institutionId })
+            .project({ program_title: 1, degree_award: 1, program_total_seat_capacity: 1, programme: 1, academic_year: 1 })
+            .toArray();
+
+        if (seatDocs.length > 0) {
+            // Unique programs by title
+            const uniquePrograms = new Map();
+            seatDocs.forEach(d => {
+                const key = d.program_title;
+                if (!uniquePrograms.has(key)) {
+                    uniquePrograms.set(key, {
+                        name: d.program_title,
+                        degree: d.degree_award,
+                        programme: d.programme || 'Engineering',
+                        intake: d.program_total_seat_capacity,
+                        mode: 'Full Time',
+                        university: 'Self',
+                        year: d.academic_year
+                    });
+                }
+            });
+            
+            items = Array.from(uniquePrograms.values()).slice(0, safeLimit);
+            totalCount = uniquePrograms.size;
+            source = `Official Seat Matrix (${seatDocs[0].academic_year || 'Latest'})`;
+            fallbackUsed = false; // This is still considered "Truth" data, just from a different source
+        }
+    }
+
     // 2. Fallback Logic
     if (items.length === 0) {
         fallbackUsed = true;

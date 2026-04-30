@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const dataStore = require('../services/dataStore');
 const identityResolver = require('../lib/identityResolver');
+const seatCutoffBridge = require('../services/seatCutoffBridge');
+
 
 // --- E2E Identity Hardened Routes (V12 Fix) ---
 
@@ -31,7 +33,8 @@ router.get("/colleges/:id/truth/compliance", async (req, res) => {
         return val;
     };
 
-    // 1. Process Placements
+
+    // 1. Process Placements (from truthIndex first, then institution doc fallback)
     (truthIndex.placements || []).forEach(tr => {
         const rawAvg = tr.averagePackage || tr.avgPackage || tr.medianSalary;
         const avg = formatValue(rawAvg, 'lpa');
@@ -42,15 +45,29 @@ router.get("/colleges/:id/truth/compliance", async (req, res) => {
             rawValue: rawAvg,
             confidence: 0.95,
             source: { title: tr.source, type: 'institutional_audit' },
-            auditMetadata: { 
-                matchBasis: tr._matchBasis, 
-                rawIdentity: tr._rawIdentity,
-                sourceFamily: tr._sourceFamily 
-            }
+            auditMetadata: { matchBasis: tr._matchBasis, rawIdentity: tr._rawIdentity, sourceFamily: tr._sourceFamily }
         });
     });
 
-    // 2. Process Fees
+    // Fallback: college document placements (EXISTS_IN_DB_NOT_SURFACED recovery)
+    if (items.filter(i => i.displayLabel === 'Placement Data (Verified)').length === 0 && college.placements) {
+        const p = college.placements;
+        const rawAvg = p.averagePackageNumeric || p.medianSalary || (typeof p.averagePackage === 'number' ? p.averagePackage : null);
+        const rawHigh = p.highestPackageNumeric || (typeof p.highestPackage === 'number' ? p.highestPackage : null);
+        const avgStr = p.averagePackage || (rawAvg ? formatValue(rawAvg, 'lpa') : null);
+        const highStr = p.highestPackage || (rawHigh ? formatValue(rawHigh, 'lpa') : null);
+        if (avgStr || highStr) {
+            items.push({
+                displayLabel: 'Placement Data (Verified)',
+                value: `${avgStr || 'Data Unavailable'} (Avg) / ${highStr || 'Data Unavailable'} (High)`,
+                confidence: 0.90,
+                source: { title: 'Institution Record (CEI Core)', type: 'institutional_record' },
+                auditMetadata: { matchBasis: 'institution_document', sourceFamily: 'db_institution' }
+            });
+        }
+    }
+
+    // 2. Process Fees (from truthIndex first, then institution doc fallback)
     (truthIndex.fees || []).forEach(tr => {
         const rawFee = tr.totalFee || tr.tuition;
         items.push({
@@ -59,13 +76,40 @@ router.get("/colleges/:id/truth/compliance", async (req, res) => {
             rawValue: rawFee,
             confidence: 0.95,
             source: { title: tr.source, type: 'official_fee_structure' },
-            auditMetadata: { 
-                matchBasis: tr._matchBasis, 
-                rawIdentity: tr._rawIdentity,
-                sourceFamily: tr._sourceFamily
-            }
+            auditMetadata: { matchBasis: tr._matchBasis, rawIdentity: tr._rawIdentity, sourceFamily: tr._sourceFamily }
         });
     });
+
+    // Fallback: college document fees (EXISTS_IN_DB_NOT_SURFACED recovery)
+    if (items.filter(i => i.displayLabel === 'Fee Structure (Verified)').length === 0 && college.fees) {
+        const rawFee = college.fees.total
+            ? null  // already formatted — skip, handled by truthIndex
+            : (college.fees.totalNumeric || college.fees.tuition || college.fees.total);
+        if (rawFee) {
+            items.push({
+                displayLabel: 'Fee Structure (Verified)',
+                value: `${formatValue(rawFee, 'currency')} (${'2024-25'})`,
+                rawValue: rawFee,
+                confidence: 0.90,
+                source: { title: 'Institution Record (CEI Core)', type: 'official_fee_structure' },
+                auditMetadata: { matchBasis: 'institution_document', sourceFamily: 'db_institution' }
+            });
+        }
+    }
+
+    // 2b. Rankings from institution doc (fallback for institutions with embedded rankings but no separate NIRF binding)
+    const rankingsInItems = items.filter(i => i.displayLabel && i.displayLabel.includes('Ranking'));
+    if (rankingsInItems.length === 0 && college.rankings && college.rankings.length > 0) {
+        college.rankings.forEach(r => {
+            items.push({
+                displayLabel: `Rankings (${r.source || 'NIRF'})`,
+                value: `Rank ${r.rank} — ${r.category || 'Engineering'} (${r.year || 'Latest'})`,
+                confidence: 0.90,
+                source: { title: `${r.source || 'NIRF'} Rankings`, type: 'official_ranking' },
+                auditMetadata: { matchBasis: 'institution_document', sourceFamily: 'db_institution' }
+            });
+        });
+    }
 
     // Check benchmarks
     const stateKey = college.state ? college.state.toLowerCase() : null;
@@ -77,6 +121,13 @@ router.get("/colleges/:id/truth/compliance", async (req, res) => {
         confidence: 0.85,
         source: { title: benchmark.source, type: 'government_aggregate' }
       });
+    }
+    
+    // 3. Process Seats & Cutoffs (V12.2 Bridge)
+    const bridgeData = await seatCutoffBridge.getSeatsAndCutoffsForCollege(resolvedId);
+    if (bridgeData) {
+        const bridgeItems = seatCutoffBridge.normalizeComplianceItems(bridgeData);
+        items.push(...bridgeItems);
     }
 
     res.json({

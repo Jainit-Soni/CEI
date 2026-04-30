@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-04-26T19:15:18.870Z",
+  "stats": {
+    "total": 4288,
+    "hydrated": 4207,
+    "unlinked": 81,
+    "duplicates": 0,
+    "program_mismatch": 0,
+    "filtered_nursing": 0
+  },
+  "unlinked_summary": {
+    "NO_ENTITY_IN_INDEX": 81
+  }
+}

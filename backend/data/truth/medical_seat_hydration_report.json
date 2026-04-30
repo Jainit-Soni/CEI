@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-04-26T19:06:14.931Z",
+  "metrics": {
+    "total_raw_rows": 779,
+    "linked_rows": 617,
+    "linked_high_confidence": 569,
+    "linked_inferred": 48,
+    "deduplicated_pdf_repeats": 89,
+    "unlinked_rows": 73,
+    "unlinked_null_id": 59,
+    "unlinked_no_entity": 14,
+    "uncertain_program_rows": 0
+  },
+  "linkage_rate": "79.2%",
+  "status": "SUCCESS"
+}

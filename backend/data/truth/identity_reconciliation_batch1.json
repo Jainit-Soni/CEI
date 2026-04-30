@@ -57,18 +57,18 @@
     },
     {
       "canonical_name": "Indian Institute of Technology Bombay",
-      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "legacy_institution_id": "CORE-IIT-BOMBAY",
       "actual_institution_id": "CORE-IIT-BOMBAY",
-      "status": "REMAP_REQUIRED",
+      "status": "EXACT_MATCH",
       "reconciliation_basis": "EXPLICIT_FLAGSHIP_OVERRIDE",
       "approved": true
     },
     {
       "canonical_name": "IIT Bombay",
-      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
-      "actual_institution_id": null,
-      "status": "UNRESOLVED",
-      "approved": false
+      "legacy_institution_id": "CORE-IIT-BOMBAY",
+      "actual_institution_id": "CORE-IIT-BOMBAY",
+      "status": "EXACT_MATCH",
+      "approved": true
     },
     {
       "canonical_name": "Indian Institute of Technology Kanpur",
@@ -1556,49 +1556,49 @@
       "approved": true
     },
     {
-      "canonical_name": "Indian Institute of Technology, Mumbai",
-      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
-      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
-      "status": "EXACT_MATCH",
-      "reconciliation_basis": "SLUG_MATCH",
-      "approved": true
-    },
-    {
-      "canonical_name": "Indian Institute of Technology Mumbai",
-      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
-      "actual_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
-      "status": "EXACT_MATCH",
-      "reconciliation_basis": "SLUG_MATCH",
-      "approved": true
-    },
-    {
-      "canonical_name": "Indian Institute of Technology, Bombay",
-      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
+      "canonical_name": "Indian Institute of Technology Bombay",
+      "legacy_institution_id": "CORE-IIT-BOMBAY",
       "actual_institution_id": "CORE-IIT-BOMBAY",
-      "status": "REMAP_REQUIRED",
+      "status": "EXACT_MATCH",
       "reconciliation_basis": "SLUG_MATCH",
       "approved": true
     },
     {
-      "canonical_name": "IIT, Bombay",
-      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
-      "actual_institution_id": null,
-      "status": "UNRESOLVED",
-      "approved": false
+      "canonical_name": "Indian Institute of Technology Bombay",
+      "legacy_institution_id": "CORE-IIT-BOMBAY",
+      "actual_institution_id": "CORE-IIT-BOMBAY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
     },
     {
-      "canonical_name": "IIT, Mumbai",
-      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
-      "actual_institution_id": null,
-      "status": "UNRESOLVED",
-      "approved": false
+      "canonical_name": "Indian Institute of Technology Bombay",
+      "legacy_institution_id": "CORE-IIT-BOMBAY",
+      "actual_institution_id": "CORE-IIT-BOMBAY",
+      "status": "EXACT_MATCH",
+      "reconciliation_basis": "SLUG_MATCH",
+      "approved": true
     },
     {
-      "canonical_name": "IIT Mumbai",
-      "legacy_institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI",
-      "actual_institution_id": null,
-      "status": "UNRESOLVED",
-      "approved": false
+      "canonical_name": "IIT Bombay",
+      "legacy_institution_id": "CORE-IIT-BOMBAY",
+      "actual_institution_id": "CORE-IIT-BOMBAY",
+      "status": "EXACT_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Bombay",
+      "legacy_institution_id": "CORE-IIT-BOMBAY",
+      "actual_institution_id": "CORE-IIT-BOMBAY",
+      "status": "EXACT_MATCH",
+      "approved": true
+    },
+    {
+      "canonical_name": "IIT Bombay",
+      "legacy_institution_id": "CORE-IIT-BOMBAY",
+      "actual_institution_id": "CORE-IIT-BOMBAY",
+      "status": "EXACT_MATCH",
+      "approved": true
     },
     {
       "canonical_name": "Visvesvaraya National Institute of Technology, Nagpur",

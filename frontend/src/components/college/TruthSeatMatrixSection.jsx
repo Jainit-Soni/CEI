@@ -78,7 +78,7 @@ export default function TruthSeatMatrixSection({ collegeId, collegeName, seatSea
 
     // Effects
     useEffect(() => {
-        if (!collegeName && !seatSearchName) {
+        if (!collegeName && !seatSearchName && !collegeId) {
             if (typeof onStatusChange === 'function') onStatusChange('unavailable');
             return;
         }

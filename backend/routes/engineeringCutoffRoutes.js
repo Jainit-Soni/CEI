@@ -23,7 +23,7 @@ router.get('/engineering', async (req, res, next) => {
     }
 
     const filters = {
-      institutionId: req.query.institutionId,
+      institutionId: req.query.institutionId || req.query.institution_id,
       authority: req.query.authority,
       counsellingVariant: req.query.counsellingVariant,
       academicYear: req.query.academicYear,

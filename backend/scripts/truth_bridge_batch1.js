@@ -2,9 +2,14 @@ const mongoose = require('mongoose');
 require('dotenv').config({ path: 'backend/.env.local' });
 const fs = require('fs');
 const path = require('path');
+const identityEnforcement = require('../lib/identityEnforcement');
 
 const DRY_RUN = process.env.DRY_RUN !== 'false'; // Defaults to true
 const FORCE_RECODE = process.env.FORCE_RECODE === 'true'; // Defaults to false
+const LIMIT_MAPPINGS = parseInt(process.env.LIMIT_MAPPINGS) || 0;
+const ONLY_IIT = process.env.ONLY_IIT === 'true';
+
+const appliedMappings = new Set();
 
 async function bridgeTruth() {
     try {
@@ -24,6 +29,7 @@ async function bridgeTruth() {
         const stats = {
             engineering_cutoffs: { matched: 0, stamped: 0, skipped: 0, conflicts: 0, total: 0 },
             seat_matrix: { matched: 0, stamped: 0, skipped: 0, conflicts: 0, total: 0 },
+            institutions: { matched: 0, stamped: 0, skipped: 0, conflicts: 0, total: 0 },
             medical_seat_matrix: { matched: 0, stamped: 0, skipped: 0, conflicts: 0, total: 0 }
         };
 
@@ -44,12 +50,29 @@ async function bridgeTruth() {
 
                 const targetId = getTargetId(doc);
                 if (!targetId) continue;
+                
+                if (ONLY_IIT && !targetId.includes("CORE-IIT-")) continue;
+
+                const existingId = doc[idField];
+                const isNewMapping = existingId && existingId !== targetId;
+
+                if (isNewMapping && LIMIT_MAPPINGS > 0) {
+                    const mKey = `${existingId}->${targetId}`;
+                    if (!appliedMappings.has(mKey)) {
+                        if (appliedMappings.size >= LIMIT_MAPPINGS) {
+                             stats[name].skipped++;
+                             continue;
+                        }
+                        appliedMappings.add(mKey);
+                        console.log(`\n[STAGING] Mapping enabled: ${mKey}`);
+                    }
+                }
 
                 stats[name].matched++;
 
-                const existingId = doc[idField];
                 if (existingId) {
-                    if (existingId === targetId) {
+                    const needsUpdate = existingId !== targetId || (name === 'institutions' && doc.id !== targetId);
+                    if (!needsUpdate) {
                         stats[name].skipped++;
                         continue;
                     } else if (!FORCE_RECODE) {
@@ -67,9 +90,15 @@ async function bridgeTruth() {
                 }
 
                 if (!DRY_RUN) {
+                    const updateDoc = { [idField]: targetId };
+                    // [CEI] In the institutions collection, we must unify BOTH id and institution_id
+                    if (name === 'institutions') {
+                        updateDoc.id = targetId;
+                    }
+                    
                     await collection.updateOne(
                         { _id: doc._id },
-                        { $set: { [idField]: targetId } }
+                        { $set: updateDoc }
                     );
                 }
             }
@@ -77,28 +106,35 @@ async function bridgeTruth() {
         }
 
         // 2. Bridge Engineering Cutoffs
-        // We match by institute_name_raw exactly against our engineering_map
+        // We now check ALL records for potential canonicalization
         await updateCollection({
             name: 'engineering_cutoffs',
-            findQuery: { institute_name_raw: { $in: Object.keys(engineering_map) } },
-            getTargetId: (doc) => engineering_map[doc.institute_name_raw]
+            findQuery: {}, 
+            getTargetId: (doc) => identityEnforcement.resolveCanonicalId(doc.institute_name_raw || doc.institution_id)
         });
 
         // 3. Bridge Seat Matrix
         await updateCollection({
             name: 'seat_matrix',
-            findQuery: { institute_name_raw: { $in: Object.keys(engineering_map) } },
-            getTargetId: (doc) => engineering_map[doc.institute_name_raw]
+            findQuery: {},
+            getTargetId: (doc) => identityEnforcement.resolveCanonicalId(doc.institute_name_raw || doc.institution_id)
         });
 
-        // 4. Bridge Medical Seat Matrix (The Priority Gap)
+        // 4. Bridge Institutions (The Catalog)
+        await updateCollection({
+            name: 'institutions',
+            findQuery: {},
+            getTargetId: (doc) => identityEnforcement.resolveCanonicalId(doc.name || doc.institution_id)
+        });
+
+        // 5. Bridge Medical Seat Matrix (The Priority Gap)
         await updateCollection({
             name: 'medical_seat_matrix',
             findQuery: { mcc_id: { $in: Object.keys(mcc_map) } },
             getTargetId: (doc) => mcc_map[doc.mcc_id]
         });
 
-        // 5. Final Report
+        // 6. Final Report
         console.log('\n--- Bridge Execution Summary ---');
         console.table(stats);
 

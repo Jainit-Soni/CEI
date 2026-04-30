@@ -1,0 +1,18 @@
+[
+  {
+    "winnerId": "CORE-SAFE-1",
+    "loserId": "CORE-SAFE-2",
+    "reasons": [
+      "Matching aishe_code: S-123"
+    ],
+    "confidence": "high"
+  },
+  {
+    "winnerId": "CORE-NAME-VAR-1",
+    "loserId": "CORE-NAME-VAR-2",
+    "reasons": [
+      "Matching josaa_code: 104"
+    ],
+    "confidence": "high"
+  }
+]

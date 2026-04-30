@@ -218,6 +218,8 @@ function CollegesContent({ initialData }) {
 
     // Load filter options based on active filters (Debounced)
     useEffect(() => {
+        const controller = new AbortController();
+
         const timer = setTimeout(() => {
             const loadFilters = async () => {
                 try {
@@ -229,7 +231,7 @@ function CollegesContent({ initialData }) {
                     if (filters.band !== "All") params.band = filters.band;
                     if (query) params.q = query;
 
-                    const data = await fetchFilters(params);
+                    const data = await fetchFilters(params, { signal: controller.signal });
                     setFilterOptions({
                         states: ["All", ...(data?.states || [])],
                         districts: ["All", ...(data?.districts || [])],
@@ -238,18 +240,34 @@ function CollegesContent({ initialData }) {
                         bands: ["All", ...(data?.bands || [])]
                     });
                 } catch (err) {
-                    console.error("Failed to load filters", err);
+                    if (err.name === 'CanceledError' || err.name === 'AbortError' || (err.message && err.message.includes('cancel'))) {
+                        return; // Ignore canceled requests
+                    }
+                    console.warn("Filters load failed, using defaults. Error:", err.message);
+                    setFilterOptions({
+                        states: ["All"],
+                        districts: ["All"],
+                        courses: ["All"],
+                        tiers: ["All"],
+                        bands: ["All"],
+                        coreOptions: ["All", "Core Only"]
+                    });
                 }
             };
             loadFilters();
         }, 400); // 400ms debounce
 
-        return () => clearTimeout(timer);
+        return () => {
+            clearTimeout(timer);
+            controller.abort();
+        };
     }, [filters.state, filters.district, filters.course, filters.tier, filters.band, query]);
 
     const { user } = useAuth();
 
     useEffect(() => {
+        const controller = new AbortController();
+
         const load = async () => {
             if (!isInitialized) return;
 
@@ -272,7 +290,7 @@ function CollegesContent({ initialData }) {
                 // Force fresh scores by bypassing cache
                 params._t = Date.now();
 
-                const response = await fetchColleges(params);
+                const response = await fetchColleges(params, { signal: controller.signal });
 
                 console.log(`[CEI][UI][catalog] Data received:`, {
                     count: response.data?.length,
@@ -296,24 +314,36 @@ function CollegesContent({ initialData }) {
                 }
                 setSuggestions([]);
             } catch (err) {
+                if (err.name === 'CanceledError' || err.name === 'AbortError' || (err.message && err.message.includes('cancel'))) {
+                    return; // Ignore canceled requests entirely
+                }
                 console.error("Failed to load colleges", err);
                 setError("Failed to load colleges. Please try again.");
 
                 if (query) {
                     try {
-                        const suggs = await suggest({ q: query });
+                        const suggs = await suggest({ q: query }, { signal: controller.signal });
                         setSuggestions(normalizeDidYouMeanSuggestions(suggs));
-                    } catch (e) {}
+                    } catch (e) {
+                        // Ignore suggest failures
+                    }
                 }
             } finally {
-                setIsLoading(false);
+                // Only clear loading state if not aborted
+                if (!controller.signal.aborted) {
+                    setIsLoading(false);
+                }
             }
         };
 
         // Debounce search query changes specifically
         const delay = query ? 500 : 0;
         const timer = setTimeout(load, delay);
-        return () => clearTimeout(timer);
+        
+        return () => {
+            clearTimeout(timer);
+            controller.abort();
+        };
     }, [page, query, sortToken, filters.state, filters.district, filters.course, filters.tier, filters.band, filters.isCore, stateFilter, isInitialized, user?.uid]);
 
     // Map stats removed as per user request

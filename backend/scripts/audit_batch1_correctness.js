@@ -48,7 +48,7 @@ async function auditInstitution(id, label) {
 
 async function runFullAudit() {
     const targets = [
-        { id: 'CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI', label: 'IIT Bombay (Flagship)' },
+        { id: 'CORE-IIT-BOMBAY', label: 'IIT Bombay (Flagship)' },
         { id: 'CORE-INDIAN-INSTITUTE-OF-MANAGEMENT-INDORE', label: 'IIM Indore (Medium)' },
         { id: 'CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA', label: 'IIIT Vadodara (Low)' },
         { id: 'CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-NEW-DELHI', label: 'AIIMS Delhi (Medical Spot-check)' }

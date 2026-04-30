@@ -3,6 +3,7 @@
 import React from 'react';
 import TruthSeatsSection from './college/TruthSeatsSection';
 import TruthSeatMatrixSection from './college/TruthSeatMatrixSection';
+import MedicalTruthSeatsSection from './college/MedicalTruthSeatsSection';
 import './NarrativeCampus.css';
 
 const NarrativeCampus = ({ college }) => {
@@ -42,12 +43,16 @@ const NarrativeCampus = ({ college }) => {
 
           {/* Official Truth-Grade Seat Matrix — Primary if available */}
           <div className={`campus-intel-wrapper secondary-intel ${matrixStatus !== 'available' ? 'hidden-truth' : ''}`}>
-            <TruthSeatMatrixSection 
-              collegeId={college.id} 
-              collegeName={college.name} 
-              seatSearchName={college.raw?.names?.cutoffName || college.name} 
-              onStatusChange={handleMatrixStatus}
-            />
+            {String(college.id).startsWith('MCC-') ? (
+               <MedicalTruthSeatsSection entityId={college.id} onStatusChange={handleMatrixStatus} />
+            ) : (
+              <TruthSeatMatrixSection 
+                collegeId={college.id} 
+                collegeName={college.name} 
+                seatSearchName={college.raw?.names?.cutoffName || college.name} 
+                onStatusChange={handleMatrixStatus}
+              />
+            )}
           </div>
 
           <div className="campus-meta-footer">

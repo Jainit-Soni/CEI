@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-04-26T19:09:38.683Z",
+  "source_file": "medical_seat_truth_final.ndjson",
+  "totals": {
+    "master_index_entities": 508,
+    "seat_truth_rows": 630,
+    "entities_with_seats": 340,
+    "entities_without_seats": 168,
+    "lineage": {
+      "hydrator": 617,
+      "recovery": 13
+    }
+  },
+  "violations": {
+    "C1_invalid_entity_id": 0,
+    "C2_zero_seat_count": 0,
+    "C4_cross_program": 0,
+    "C5_duplicate_fingerprint": 0,
+    "total": 0
+  },
+  "violation_details": {
+    "C1": [],
+    "C2": [],
+    "C4": [],
+    "C5": []
+  },
+  "entities_without_seats_sample": [
+    {
+      "medical_entity_id": "MCC-200201-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_RVNJQyBN-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-200487-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_RGVlbWVk-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_R09WVC4g-BDS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-200360-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_U2VhdCBT-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_TUlIQU4g-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_UmVwb3J0-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-200223-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-200496-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_S2h1ZGly-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-200542-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_TUFTVEVS-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_QXNob2sg-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-200613-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_RElTVCBC-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_RGlzdCBT-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-UNKNOWN_R2FybWls-MBBS",
+      "source_provenance": "mcc_raw"
+    },
+    {
+      "medical_entity_id": "MCC-200191-MBBS",
+      "source_provenance": "mcc_raw"
+    }
+  ],
+  "status": "PASS"
+}

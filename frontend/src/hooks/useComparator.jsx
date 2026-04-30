@@ -60,7 +60,7 @@ export const ComparatorProvider = ({ children }) => {
                 setPinnedColleges(uniqueData);
             } catch (err) {
                 console.error("Comparison fetch failed", err);
-                addToast("Failed to sync arena data.", "error", "Sync Error");
+                addToast("Failed to sync comparison data.", "error", "Sync Error");
             } finally {
                 setIsLoading(false);
             }
@@ -72,15 +72,15 @@ export const ComparatorProvider = ({ children }) => {
     const pinCollege = (rawId, name = "Institution") => {
         const id = String(rawId);
         if (pinnedIds.includes(id)) {
-            addToast("Already in the Battle Arena.", "info", "Comparison");
+            addToast("Already in the comparison list.", "info", "Comparison");
             return;
         }
-        if (pinnedIds.length >= 5) {
-            addToast("The Arena is full (max 5 combatants).", "warning", "Arena Capacity");
+        if (pinnedIds.length >= 3) {
+            addToast("The comparison list is full (max 3 institutions).", "warning", "Capacity Reached");
             return;
         }
         setPinnedIds([...pinnedIds, id]);
-        addToast(`${name} added to comparison.`, "success", "Battle Arena", { label: "Go to Arena ⚔️", href: "/compare" });
+        addToast(`${name} added to comparison.`, "success", "Comparison", { label: "View List ⚖️", href: "/compare" });
     };
 
     const unpinCollege = (rawId) => {

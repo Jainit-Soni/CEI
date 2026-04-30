@@ -183,12 +183,17 @@ async function loadDataFromNDJSON() {
         if (lpaAvg && lpaAvg > 0) {
             const rawHigh = d.highestPackage;
             const lpaHigh = rawHigh ? toLPA(rawHigh) : null;
+            
+            // Phase 22.1 - Highest Package Persistence
+            const currentHigh = obj.placements?.highestPackageNumeric || 0;
+            const newHigh = lpaHigh || currentHigh;
+
             obj.placements = {
                 ...obj.placements,
                 averagePackage: `${lpaAvg} LPA`,
                 averagePackageNumeric: lpaAvg,
-                highestPackage: lpaHigh ? `${lpaHigh} LPA` : obj.placements?.highestPackage,
-                highestPackageNumeric: lpaHigh || obj.placements?.highestPackageNumeric,
+                highestPackage: newHigh > 100 ? `${(newHigh/100).toFixed(2)} Cr` : `${newHigh} LPA`,
+                highestPackageNumeric: newHigh,
                 placedPercentage: d.placedPercentage || obj.placements?.placedPercentage || 90,
                 academicYear: d.academicYear || '2023-24',
                 source: d.source || 'Institutional Report',
@@ -275,7 +280,7 @@ async function loadDataFromNDJSON() {
 
         const normName = obj.name.toLowerCase().trim();
         const rawCid = obj.id || obj._id || obj.stableKey;
-        const cid = identityResolver.resolveId(rawCid);
+        const cid = identityResolver.resolveId(rawCid) || rawCid; // Fallback to raw ID for resilient enrichment
 
         // Core Linkage
         if (global.coreInstitutes.has(normName)) {

@@ -30,6 +30,8 @@ function getSlug(name) {
         .replace(/^-|-$/g, '');
 }
 
+const identityEnforcement = require('../lib/identityEnforcement');
+
 async function runIngest() {
     try {
         console.log('Connecting to MongoDB...');
@@ -39,6 +41,7 @@ async function runIngest() {
 
         const bulkOps = [];
         const processedIds = new Set();
+        const violations = db.collection('identity_violations');
 
         // 1. Process Metadata Truth (High Priority)
         const metadataPath = path.join(__dirname, '..', 'data', 'truth', 'core_metadata_v2.ndjson');
@@ -48,18 +51,46 @@ async function runIngest() {
             for (const line of metadataRaw) {
                 const data = JSON.parse(line);
                 const name = data.name;
-                let identity = CORE_DATA_MATRIX[name] || { id: `CORE-${getSlug(name).toUpperCase()}`, stableKey: getSlug(name) };
                 
-                processedIds.add(identity.id);
+                // --- IDENTITY AUTHORITY HOOK (Quarantine Enabled) ---
+                // Pre-lookup for scoring context
+                const existingViolation = await violations.findOne({ normalized_name: identityEnforcement.normalize(name), state: data.state });
+                const frequency = (existingViolation?.frequency || 0) + 1;
+                
+                const validation = identityEnforcement.validateForIngestion({ 
+                    ...data, 
+                    frequency, 
+                    first_seen: existingViolation?.first_seen || new Date() 
+                });
+                
+                if (!validation.canInsert) {
+                    if (validation.status === 'quarantine') {
+                        console.warn(`[Quarantine] Capturing unregistered CORE asset: ${name} (Score: ${validation.approvalScore})`);
+                        await violations.updateOne(
+                            { normalized_name: validation.metadata.normalized_name, state: validation.metadata.state },
+                            { 
+                                $set: validation.metadata, 
+                                $addToSet: { source_types: data.source || 'unverified' },
+                                $inc: { frequency: 1 } 
+                            },
+                            { upsert: true }
+                        );
+                    } else {
+                        console.error(`[IngestHook] Skipping ${name}: ${validation.reason}`);
+                    }
+                    continue;
+                }
+                const targetId = validation.resolvedId;
+                
+                processedIds.add(targetId);
                 bulkOps.push({
                     updateOne: {
-                        filter: { $or: [{ id: identity.id }, { stableKey: identity.stableKey }, { institution_name: name }] },
+                        filter: { $or: [{ id: targetId }, { institution_name: name }] },
                         update: { $set: { 
                             ...data, 
-                            id: identity.id, 
-                            stableKey: identity.stableKey, 
+                            id: targetId, 
                             institution_name: name,
-                            stable_import_key: `SECURED-${identity.id}`,
+                            stable_import_key: `SECURED-${targetId}`,
                             isCore: true, 
                             isPremium: true, 
                             lastUpdated: new Date() 
@@ -75,35 +106,44 @@ async function runIngest() {
         if (fs.existsSync(collegesPath)) {
             console.log('Scanning colleges_new.ndjson for more flagships...');
             const collegesRaw = fs.readFileSync(collegesPath, 'utf8').split('\n').filter(l => l.trim());
-            const coreRegex = /Indian Institute of Technology|National Institute of Technology|Indian Institute of Information Technology|AIIMS|All India Institute of Medical Sciences|BITS Pilani|IIM /i;
             
             for (const line of collegesRaw) {
                 const c = JSON.parse(line);
                 const name = c.name || "";
-                if (coreRegex.test(name)) {
-                    const slug = getSlug(name);
-                    const coreId = `CORE-${slug.toUpperCase()}`;
-                    
-                    if (processedIds.has(coreId)) continue;
-                    processedIds.add(coreId);
-
-                    bulkOps.push({
-                        updateOne: {
-                            filter: { $or: [{ id: coreId }, { stableKey: slug }, { institution_name: name }] },
-                            update: { $set: { 
-                                ...c, 
-                                id: coreId, 
-                                stableKey: slug, 
-                                institution_name: name,
-                                stable_import_key: `SECURED-${coreId}`,
-                                isCore: true, 
-                                isPremium: true, 
-                                lastUpdated: new Date() 
-                            } },
-                            upsert: true
-                        }
-                    });
+                
+                // --- IDENTITY AUTHORITY HOOK (Quarantine Enabled) ---
+                const validation = identityEnforcement.validateForIngestion(c);
+                if (!validation.canInsert) {
+                    if (validation.status === 'quarantine') {
+                         await violations.updateOne(
+                            { normalized_name: validation.metadata.normalized_name, state: validation.metadata.state },
+                            { $set: validation.metadata, $inc: { frequency: 1 } },
+                            { upsert: true }
+                        );
+                    }
+                    continue;
                 }
+                const coreId = validation.resolvedId;
+                if (!coreId.startsWith('CORE-')) continue;
+                
+                if (processedIds.has(coreId)) continue;
+                processedIds.add(coreId);
+
+                bulkOps.push({
+                    updateOne: {
+                        filter: { $or: [{ id: coreId }, { institution_name: name }] },
+                        update: { $set: { 
+                            ...c, 
+                            id: coreId, 
+                            institution_name: name,
+                            stable_import_key: `SECURED-${coreId}`,
+                            isCore: true, 
+                            isPremium: true, 
+                            lastUpdated: new Date() 
+                        } },
+                        upsert: true
+                    }
+                });
             }
         }
 

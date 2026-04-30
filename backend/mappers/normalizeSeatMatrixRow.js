@@ -148,6 +148,8 @@ function normalizeSeatMatrixRow(doc) {
     },
 
     totalSeats: num(doc.total_includes_female_supernumerary),
+    intake: num(doc.total_includes_female_supernumerary), // Support for Truth API contract
+    seatCapacity: num(doc.total_includes_female_supernumerary), // Support for TruthSeatMatrixSection
     categorySum: num(doc.category_sum_excluding_program_totals),
     totalMismatchFlag: doc.total_mismatch_flag === true,
     programTotalSeatCapacity: num(doc.program_total_seat_capacity),

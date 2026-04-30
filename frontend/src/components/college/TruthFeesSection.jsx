@@ -3,11 +3,11 @@ import { fetchCollegeTruthFees } from '@/lib/api';
 import SectionTrustSummary from '../Truth/SectionTrustSummary';
 import SourcePopover from '../Truth/SourcePopover';
 import GlassPanel from '../GlassPanel';
-import './TruthFeesSection.css';
+import './TruthPlacementsSection.css'; // Reusing placement styles for consistency or create TruthFeesSection.css
 
 /**
- * TruthFeesSection.jsx — Phase 80.6 Implementation
- * ===============================================
+ * TruthFeesSection.jsx
+ * ====================
  * High-fidelity Truth-Grade Fees section.
  */
 export default function TruthFeesSection({ collegeId }) {
@@ -42,7 +42,7 @@ export default function TruthFeesSection({ collegeId }) {
         return (
             <div className="truth-section-loading">
                 <span className="spinner"></span>
-                Loading Evaluated Fee Structure...
+                Loading Evaluated Fee Metrics...
             </div>
         );
     }
@@ -56,23 +56,23 @@ export default function TruthFeesSection({ collegeId }) {
         );
     }
 
-    if (!data || data.sectionStatus === 'official_data_unavailable') {
+    if (!data || data.sectionStatus === 'official_data_unavailable' || !data.items || data.items.length === 0) {
         return (
             <GlassPanel className="truth-empty-state">
                 <div className="te-icon">💰</div>
                 <h3 className="te-title">Official fee data unavailable</h3>
-                <p className="te-desc">No current evaluated official source is linked for institutional fees.</p>
+                <p className="te-desc">No current evaluated official source is linked for institutional fee structures.</p>
             </GlassPanel>
         );
     }
 
-    // Format currency
-    const formatPrice = (amount, currency = 'INR') => {
-        return new Intl.NumberFormat('en-IN', {
-            style: 'currency',
-            currency: currency,
-            maximumFractionDigits: 0
-        }).format(amount);
+    // Helper to get icon for fee type
+    const getFeeIcon = (type) => {
+        if (type.includes('Tuition')) return '🏫';
+        if (type.includes('Hostel')) return '🏠';
+        if (type.includes('Caution')) return '🛡️';
+        if (type.includes('Total')) return '💰';
+        return '📑';
     };
 
     return (
@@ -84,45 +84,36 @@ export default function TruthFeesSection({ collegeId }) {
                 lastEvaluatedAt={data.lastEvaluatedAt}
             />
 
-            <div className="fees-grid">
-                {(data.items || []).map((item, idx) => (
-                    <div key={idx} className="fee-item-card">
-                        <div className="fic-header">
-                            <span className="fic-type">{item.displayLabel || item.feeType}</span>
-                            <span className="fic-period">{item.feePeriod}</span>
+            <div className="metrics-grid">
+                {data.items.map((item, idx) => (
+                    <div key={idx} className={`metric-card fee-card ${item.feeType ? item.feeType.toLowerCase().replace(/\s+/g, '-') : 'general'}`}>
+                        <div className="mc-header">
+                            <span className="mc-icon">{getFeeIcon(item.feeType || item.displayLabel || '')}</span>
+                            <span className="mc-label">{item.displayLabel || item.feeType}</span>
                         </div>
                         
-                        <div className="fic-amount">
-                            {formatPrice(item.amount, item.currency)}
+                        <div className="mc-value-box">
+                            <span className="mc-value">
+                                {typeof item.value === 'number' ? `₹${item.value.toLocaleString('en-IN')}` : item.value}
+                            </span>
+                            {item.academicYear && (
+                                <span className="mc-year">AY {item.academicYear}</span>
+                            )}
                         </div>
 
-                        <div className="fic-footer">
-                            <div className="fic-meta">
-                                {item.applicableCategoryCode !== 'GEN' && (
-                                    <span className="fic-tag">Category: {item.applicableCategoryCode}</span>
-                                )}
-                                {item.applicableQuotaCode && item.applicableQuotaCode !== 'AI' && (
-                                    <span className="fic-tag">Quota: {item.applicableQuotaCode}</span>
+                        <div className="mc-footer">
+                            <div className="mc-canonical">
+                                {item.category && (
+                                    <span className="mc-hint">Category: {item.category}</span>
                                 )}
                             </div>
-                            
                             <SourcePopover source={item.source}>
-                                <span className="fic-info-trigger">ⓘ</span>
+                                <span className="mc-info-trigger">Source Provenance ⓘ</span>
                             </SourcePopover>
                         </div>
-
-                        {item.freshness?.status === 'stale' && (
-                            <div className="item-stale-banner">⚠️ Stale Data</div>
-                        )}
                     </div>
                 ))}
             </div>
-
-            {data.hasConflict && (
-                <div className="truth-section-disclaimer">
-                    ⚠️ Conflicting fee records detected. Displaying deterministic primary source data.
-                </div>
-            )}
         </div>
     );
 }

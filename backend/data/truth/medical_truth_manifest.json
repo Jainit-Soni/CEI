@@ -1,0 +1,15 @@
+{
+  "authority": "MCC",
+  "freshess": "2025-2026",
+  "metrics": {
+    "public_visible_institutions": 102,
+    "internal_linked_institutions": 152,
+    "seat_coverage_percentage": 77.4,
+    "cutoff_coverage_percentage": 62.6,
+    "internal_only_held": 24,
+    "linked_internal_total": 126,
+    "coverage_definition": "Linked MCC IDs / Total MCC IDs in Source Matrix"
+  },
+  "policy": "MEDICAL_PUBLIC_BASELINE_V1",
+  "last_updated": "2026-04-24T18:09:30.315Z"
+}

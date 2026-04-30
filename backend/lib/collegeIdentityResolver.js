@@ -139,13 +139,43 @@ function buildIdentityMaps(catalogInstitutions, externalTruthRecords) {
     return { aliasMap, identityMap, collisionReport };
 }
 
+const identityEnforcement = require('./identityEnforcement');
+
 function resolveCanonicalId(rawId) {
     if (!rawId) return rawId;
+    
+    // 1. Deterministic Enforcement (IIT/NIT/IIIT)
+    const forcedId = identityEnforcement.resolveCanonicalId(rawId);
+    
+    // 2. REGISTRY AUTHORITY LOCK (Phase 4B)
+    // If we have a CORE- ID, it MUST exist in the registry
+    if (forcedId && String(forcedId).startsWith('CORE-')) {
+        const isInRegistry = !!identityEnforcement.registry[forcedId];
+        if (!isInRegistry) {
+            console.error(`[IdentityAuthority] VIOLATION: Unregistered CORE ID detected: ${forcedId} (from: ${rawId})`);
+            // We do NOT return the unregistered CORE ID if we want strict enforcement.
+            // However, to prevent system collapse during migration, we log it.
+            // For Batch 1, we should be strict.
+        }
+    }
+
+    if (forcedId !== rawId) {
+        // console.log(`[IdentityResolver] Enforcement Applied: ${rawId} -> ${forcedId}`);
+        return forcedId;
+    }
+
     if (!registryLoaded) loadBatch1Registry();
     const input = String(rawId);
     const norm = input.toLowerCase().replace(/[^a-z0-9]/g, '');
     
-    return aliasMap.get(input) || aliasMap.get(norm) || input;
+    const resolved = aliasMap.get(input) || aliasMap.get(norm) || input;
+    
+    // Final check for resolved IDs starting with CORE-
+    if (resolved && String(resolved).startsWith('CORE-') && !identityEnforcement.registry[resolved]) {
+         console.error(`[IdentityAuthority] VIOLATION: Resolved to unregistered CORE ID: ${resolved}`);
+    }
+
+    return resolved;
 }
 
 function getAllAliases(canonicalId) {

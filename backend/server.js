@@ -37,6 +37,9 @@ const scholarshipRoutes = require("./routes/scholarships");
 const newsRoutes = require("./routes/news");
 const hypeRoutes = require("./routes/hype");
 const predictorRoutes = require("./routes/predictor");
+const predictorTelemetryRoutes = require("./routes/predictor_telemetry");
+const journeyRoutes = require("./routes/journey");
+const bestPathRoutes = require("./routes/bestPath");
 const authRoutes = require("./routes/auth");
 const truthHardeningRoutes = require("./routes/truth_hardening");
 const transparencyRoutes = require("./routes/transparency");
@@ -45,6 +48,7 @@ const explainRoutes = require("./routes/explain");
 const verificationRoutes = require("./routes/verification");
 const adminAuthRoutes = require("./routes/adminAuth");
 const reviewsRoutes = require("./routes/reviews");
+const medicalTruthRoutes = require("./routes/medical_truth");
 const connectDB = require("./config/db"); // Enabled for Production Database
 const { getRedisClient } = require("./config/redis");
 const logger = require("./lib/logger");
@@ -218,12 +222,19 @@ app.use(express.json({ limit: "1mb" })); // Limit body size to prevent memory at
 // ==========================================
 const anonymousLimiter = rateLimit({
   windowMs: 60 * 1000,      // 1 minute window
-  max: 60,                   // 60 requests per minute per IP
+  max: (req, res) => {
+    // Higher limit for high-frequency search endpoints
+    if (req.path.startsWith('/api/colleges') || req.path.startsWith('/api/college') || req.path.startsWith('/api/filters') || req.path.startsWith('/api/suggest') || req.path.startsWith('/api/search')) {
+      return 300;
+    }
+
+    return 60; // Default limit for other endpoints
+  },
   validate: false,           // Disable all validations for local/dev environments
   standardHeaders: true,     // Return standard RateLimit-* headers
   legacyHeaders: false,
   message: { error: "Too many requests from this IP, please try again in a minute." },
-  skip: (req) => !!req.header("X-API-Key") // Skip if API key is present (handled separately)
+  skip: (req) => !!req.header("X-API-Key") || process.env.NODE_ENV === 'development' // Skip in dev or if API key present
 });
 
 app.use(anonymousLimiter);
@@ -370,6 +381,9 @@ app.use("/api/scholarships", scholarshipRoutes);
 app.use("/api/news", newsRoutes);
 app.use("/api/hype", hypeRoutes);
 app.use("/api/predict", predictorRoutes);
+app.use("/api/predictor/telemetry", predictorTelemetryRoutes);
+app.use("/api/journey", journeyRoutes);
+app.use("/api/best-path", bestPathRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/transparency", transparencyRoutes);
 app.use("/api/governance", governanceRoutes);
@@ -377,6 +391,7 @@ app.use("/api/explain", explainRoutes);
 app.use("/api/verification", verificationRoutes);
 app.use("/api/admin-auth", adminAuthRoutes);
 app.use("/api/reviews", reviewsRoutes);
+app.use("/api/medical", medicalTruthRoutes);
 app.use("/api/forecast", require("./routes/forecast"));
 app.use("/api/simulator", require("./routes/simulator"));
 app.use("/api/decision", require("./routes/decision"));

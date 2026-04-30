@@ -1,6 +1,7 @@
 'use strict';
 
 const { normalizeSeatMatrixRows } = require('../mappers/normalizeSeatMatrixRow');
+const { getEngineeringNamesForId } = require('./seatCutoffBridge');
 
 const COLLECTION_NAME = 'seat_matrix';
 const DEFAULT_PAGE = 1;
@@ -66,7 +67,17 @@ function buildSeatMatrixQuery(filters = {}) {
   // --- DETERMINISTIC PRIMARY: Institution ID ---
   const institutionId = strOrNull(filters.institutionId);
   if (institutionId) {
-    andClauses.push({ institution_id: institutionId });
+    const names = getEngineeringNamesForId(institutionId);
+    if (names && names.length > 0) {
+      andClauses.push({
+        $or: [
+          { institution_id: institutionId },
+          { institute_name_normalized: { $in: names } }
+        ]
+      });
+    } else {
+      andClauses.push({ institution_id: institutionId });
+    }
   } else {
     // --- FALLBACK: Name-based fuzzy search ---
     const instRegex = buildRegexContains(filters.instituteName);

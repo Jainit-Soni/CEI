@@ -24,6 +24,8 @@ const mongoose = require("mongoose");
 const College = require("../models/CollegeSchema");
 const normalizeCollege = require("../lib/collegeNormalizer");
 const identityResolver = require("../lib/collegeIdentityResolver");
+const { normalizeSeatMatrixRows } = require('../mappers/normalizeSeatMatrixRow');
+const { normalizeEngineeringCutoffRows } = require('../mappers/normalizeEngineeringCutoffRow');
 const logger = (() => {
   try { return require("../lib/logger"); }
   catch { return console; } // Safe fallback during early boot
@@ -207,8 +209,55 @@ function applyTruthEnrichment(map) {
   try {
     const truthDir = path.join(__dirname, "..", "data", "truth");
     if (!fs.existsSync(truthDir)) return;
+
+    // --- PHASE 107: Load Medical Identity Index ---
+    const medicalIndexPath = path.join(truthDir, 'medical_identity_master_index.json');
+    if (fs.existsSync(medicalIndexPath)) {
+        const medicalIndex = JSON.parse(fs.readFileSync(medicalIndexPath, 'utf8'));
+        medicalIndex.forEach(m => {
+            const mid = m.medical_entity_id;
+            let c = map.get(mid);
+            if (!c) {
+                // Auto-spawn medical entity
+                c = {
+                    id: mid,
+                    institution_id: mid,
+                    name: m.canonical_name,
+                    shortName: m.canonical_name,
+                    location: 'India',
+                    isMedical: true,
+                    isCore: false,
+                    isVisible: true,
+                    meta: { 
+                        ownership: m.quotas?.includes('Deemed/Paid Seats Quota') ? 'Private/Deemed' : 'Government',
+                        programType: m.program_type,
+                        mccCode: m.mcc_institute_code
+                    },
+                    verificationStatus: 'OFFICIAL_SOURCE_ONLY',
+                    isVerified: true
+                };
+                map.set(mid, c);
+            } else {
+                c.isMedical = true;
+                c.isVerified = true;
+            }
+
+            // Link to parent core if exists (e.g. AMU -> AMU Medical)
+            if (m.parent_core_id) {
+                c.parent_core_id = m.parent_core_id;
+                const parent = map.get(m.parent_core_id);
+                if (parent) {
+                    if (!parent.medical_wings) parent.medical_wings = [];
+                    if (!parent.medical_wings.some(w => w.id === mid)) {
+                        parent.medical_wings.push({ id: mid, name: m.canonical_name, program: m.program_type });
+                    }
+                }
+            }
+        });
+    }
     
     const parsedTruth = [];
+
     const files = fs.readdirSync(truthDir).filter(f => f.endsWith('.ndjson'));
     
     files.forEach(file => {
@@ -245,15 +294,23 @@ function applyTruthEnrichment(map) {
                name: d.name || d.collegeId.replace('CORE-', '').split(/(?=[A-Z])/).join(' ').trim(),
                location: 'India',
                isCore: true,
+               isAutoSpawned: true,
+               isVisible: false, // Hidden from main catalog (Phase 104)
                placements: {},
                fees: {},
-               meta: { ownership: 'Central Govt / INI', naacGrade: 'A++' },
-               verificationStatus: 'VERIFIED'
+               meta: { ownership: 'Central Govt / INI', naacGrade: 'A++', sourceProvenance: 'Hydration Bridge' },
+               verificationStatus: 'OFFICIAL_SOURCE_ONLY'
             };
             map.set(d.collegeId, c);
         }
 
         if (!c) return;
+
+        // --- IDENTITY HYDRATION GATE (Phase 106) ---
+        if (c.identity && !c.identity.behavior.allowHydration) {
+            // Only allow hydration for HIGH confidence identities
+            return;
+        }
         
         // Flag top-level verification
         c.isVerified = true;
@@ -268,12 +325,14 @@ function applyTruthEnrichment(map) {
         if (d.entityType === 'placement') {
             const lpaAvg = toLPA(d.averagePackage || d.avgPackage || d.medianSalary);
             const lpaHigh = toLPA(d.highestPackage);
+            const currentHigh = c.placements.highestPackageNumeric || 0;
+            const newHigh = lpaHigh || currentHigh;
             c.placements = { 
                 ...c.placements, 
                 averagePackage: lpaAvg ? `${lpaAvg} LPA` : (c.placements.averagePackage || 'Data Unavailable'),
-                highestPackage: lpaHigh ? `${lpaHigh} LPA` : (c.placements.highestPackage || 'Data Unavailable'),
+                highestPackage: newHigh > 100 ? `${(newHigh/100).toFixed(2)} Cr` : (newHigh ? `${newHigh} LPA` : 'Data Unavailable'),
                 averagePackageNumeric: lpaAvg,
-                highestPackageNumeric: lpaHigh,
+                highestPackageNumeric: newHigh,
                 medianSalary: lpaAvg, 
                 placedPercentage: d.placedPercentage || 90 
             };
@@ -301,8 +360,39 @@ function applyTruthEnrichment(map) {
             }
         } else if (d.entityType === 'counsellingCutoff') {
             c.cutoffs.push(d);
-        } else if (d.entityType === 'counsellingSeatMatrix') {
+            // Hydrate Courses from Cutoff truth (Phase 103)
+            const courseName = d.programName || d.courseName;
+            if (courseName && !c.courses.some(pc => pc.name === courseName)) {
+                c.courses.push({ 
+                    name: courseName, 
+                    specialization: d.category, 
+                    exams: [d.rankBasis || 'JEE'],
+                    observedInCounselling: true,
+                    observedIn: d.sourceFamily || 'Official Counseling'
+                });
+            }
+        } else if (d.entityType === 'counsellingSeat' || d.entityType === 'counsellingSeatMatrix') {
             c.seats.push(d);
+            // Hydrate Courses from Seat Matrix truth (Phase 103)
+            const courseName = d.programName || d.courseName;
+            if (courseName && !c.courses.some(pc => pc.name === courseName)) {
+                c.courses.push({ 
+                    name: courseName, 
+                    intake: d.intake,
+                    observedInCounselling: true,
+                    observedIn: d.sourceFamily || 'Official Seat Matrix'
+                });
+            }
+        } else if (d.entityType === 'joinedInstitutionProgramTruth') {
+            // Strategic merge: this entity type contains both seats and cutoffs
+            if (d.closingRank || d.cutoff) {
+                c.cutoffs.push(d);
+                const courseName = d.programName || d.courseName;
+                if (courseName && !c.courses.some(pc => pc.name === courseName)) {
+                    c.courses.push({ name: courseName });
+                }
+            }
+            if (d.intake || d.acpcIntake) c.seats.push(d);
         }
     });
     
@@ -394,7 +484,10 @@ async function initializeCache() {
         if (global.colleges && global.colleges.length > 50000) {
             global.colleges.forEach(c => {
                 const cid = String(c.id || c._id || c.stableKey || '');
-                if (cid) masterMap.set(cid, c);
+                if (cid) {
+                    const canonicalId = identityResolver.resolveCanonicalId(cid || c.name);
+                    masterMap.set(String(canonicalId), c);
+                }
             });
             sourceInfo = "Memory (High-Density GZIP)";
             logger.info && logger.info("[dataStore] System of Record (High-Density) locked.", { count: global.colleges.length });
@@ -403,7 +496,10 @@ async function initializeCache() {
             const jsonColleges = loadStateCollegeFiles();
             jsonColleges.forEach(c => {
                 const cid = String(c.id || c._id || c.stableKey || '');
-                if (cid) masterMap.set(cid, c);
+                if (cid) {
+                    const canonicalId = identityResolver.resolveCanonicalId(cid || c.name);
+                    masterMap.set(String(canonicalId), c);
+                }
             });
             sourceInfo = "Disk JSON (Emergency Legacy)";
         }
@@ -522,14 +618,90 @@ async function getCollegeById(id) {
       }).lean();
       if (mongoCol) {
           let norm = normalizeCollege(mongoCol);
+
+          // --- FETCH TRUTH FROM COLLECTIONS (Phase 105) ---
+          if (norm.identity.behavior.allowHydration) {
+              const db = mongoose.connection.db;
+              const [dbCutoffs, dbSeats] = await Promise.all([
+                  db.collection('engineering_cutoffs').find({ institution_id: norm.id }).toArray(),
+                  db.collection('seat_matrix').find({ institution_id: norm.id }).toArray()
+              ]);
+              
+              norm.engineeringCutoffs = normalizeEngineeringCutoffRows(dbCutoffs);
+              norm.seats = normalizeSeatMatrixRows(dbSeats);
+          } else {
+              norm.engineeringCutoffs = [];
+              norm.seats = [];
+          }
+
           // Phase 4A: Merge fully enriched truth from memory cache (handles isVerified, cutoffs, etc.)
           if (global.colleges && global.colleges.length > 0) {
               const enriched = global.colleges.find(c => String(c.id) === String(norm.id) || String(c.stableKey) === String(norm.id));
               if (enriched) {
-                  norm = { ...norm, ...enriched };
+                  // Preserve non-empty MongoDB source fields that applyTruthEnrichment
+                  // initialises to empty defaults (fees:{}, placements:{}, rankings:[]).
+                  const feesSrc    = (enriched.fees      && Object.keys(enriched.fees).length      > 0) ? enriched.fees      : (norm.fees      || enriched.fees);
+                  const placSrc    = (enriched.placements && Object.keys(enriched.placements).length > 0) ? enriched.placements : (norm.placements || enriched.placements);
+                  const rankSrc    = (enriched.rankings   && enriched.rankings.length               > 0) ? enriched.rankings   : (norm.rankings   || enriched.rankings);
+
+                  // Preserve populated truth arrays if enriched has empty ones
+                  const cutoffSrc = (enriched.engineeringCutoffs && enriched.engineeringCutoffs.length > 0) ? enriched.engineeringCutoffs : (norm.engineeringCutoffs || []);
+                  const seatSrc   = (enriched.seats && enriched.seats.length > 0) ? enriched.seats : (norm.seats || []);
+                  
+                  norm = { ...norm, ...enriched, fees: feesSrc, placements: placSrc, rankings: rankSrc, engineeringCutoffs: cutoffSrc, seats: seatSrc };
               }
           }
           return norm;
+      }
+
+      // ── ELITE AUTO-SPAWN FALLBACK (Phase 108) ──────────────────────────────
+      // If the institute is missing from the main 'institutions' collection but 
+      // has a 'CORE-' ID (reserved for elite JoSAA/MCC/Elite institutes), we 
+      // attempt to synthesize a record from the counseling/cutoff collections.
+      if (String(id).startsWith('CORE-')) {
+          const db = mongoose.connection.db;
+          
+          // Try to find any cutoff or seat record that uses this ID
+          const sampleRecord = await db.collection('engineering_cutoffs').findOne({ institution_id: id });
+          
+          if (sampleRecord) {
+              logger.info(`[dataStore] Auto-spawning Elite record for ${id} from counseling data`);
+              
+              const synthesizedName = sampleRecord.institute_name_normalized || sampleRecord.institute_name_raw || id.replace('CORE-', '').split('-').join(' ');
+              
+              const [dbCutoffs, dbSeats] = await Promise.all([
+                  db.collection('engineering_cutoffs').find({ institution_id: id }).toArray(),
+                  db.collection('seat_matrix').find({ institution_id: id }).toArray()
+              ]);
+
+              const norm = {
+                  id: id,
+                  _id: id,
+                  name: synthesizedName,
+                  shortName: synthesizedName,
+                  location: 'India',
+                  state: sampleRecord.state || 'National',
+                  isCore: true,
+                  isVerified: true,
+                  identity: {
+                      type: 'ELITE_AUTO_SPAWN',
+                      confidence: 'HIGH',
+                      behavior: { allowHydration: true }
+                  },
+                  meta: {
+                      ownership: 'Central Govt / INI',
+                      source: 'JoSAA/CSAB Counseling'
+                  },
+                  engineeringCutoffs: normalizeEngineeringCutoffRows(dbCutoffs),
+                  seats: normalizeSeatMatrixRows(dbSeats),
+                  fees: {},
+                  placements: {},
+                  rankings: [],
+                  courses: []
+              };
+
+              return norm;
+          }
       }
     } catch (e) {
       logger.warn('[dataStore] Mongo fetch failed in getCollegeById', { id, error: e.message });

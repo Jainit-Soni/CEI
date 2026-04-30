@@ -150,7 +150,10 @@ export default function TruthCutoffsSection({ collegeId, collegeName, cutoffSear
 
     // FETCH LOGIC
     const loadCutoffsBatch = async (targetPage, isInitial = false) => {
-        if (!collegeName && !cutoffSearchName) return;
+        if (!collegeName && !cutoffSearchName && !collegeId) {
+            if (isInitial) setInitialLoading(false);
+            return;
+        }
         
         try {
             if (isInitial) {

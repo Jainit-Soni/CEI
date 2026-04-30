@@ -1,0 +1,106 @@
+[
+  {
+    "id": "CORE-IIIT-VADODARA",
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY VADODARA INTERNATIONAL CAMPUS DIU",
+    "state": "The Dadra and Nagar Haveli and Daman and Diu",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-IIIT-GUWAHATI",
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, GUWAHATI",
+    "state": "Assam",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-IIIT-BHAGALPUR",
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY BHAGALPUR",
+    "state": "Bihar",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-IIIT-SURAT",
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SURAT",
+    "state": "Gujarat",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-IIIT-VADODARA",
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, VADODARA",
+    "state": "Gujarat",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-IIIT-RANCHI",
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, RANCHI",
+    "state": "Jharkhand",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-IIIT-KOTTAYAM",
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KOTTAYAM",
+    "state": "Kerala",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-IIIT-NAGPUR",
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, NAGPUR",
+    "state": "Maharashtra",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-IIIT-PUNE",
+    "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, PUNE",
+    "state": "Maharashtra",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-NIT-JAIPUR",
+    "name": "Malviya National Institute of Technology, Jaipur",
+    "state": "Rajasthan",
+    "tier": "D",
+    "available": false,
+    "source": null
+  },
+  {
+    "id": "CORE-IIIT-KANCHEEPURAM",
+    "name": "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram",
+    "state": "Tamil Nadu",
+    "tier": "D",
+    "available": true,
+    "source": "TNEA 2024 Official Notification"
+  },
+  {
+    "id": "CORE-NIT-TRICHY",
+    "name": "National Institute of Technology, Tiruchirapalli",
+    "state": "Tamil Nadu",
+    "tier": "D",
+    "available": true,
+    "source": "TNEA 2024 Official Notification"
+  },
+  {
+    "id": "CORE-IIIT-AGARTALA",
+    "name": "Indian Institute of Information Technology Agartala",
+    "state": "Tripura",
+    "tier": "D",
+    "available": false,
+    "source": null
+  }
+]

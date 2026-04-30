@@ -1,0 +1,20 @@
+[
+  {
+    "winnerId": "CORE-IIT-KANPUR",
+    "loserId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+    "reasons": [
+      "Different State and Different City"
+    ],
+    "norm": "indianinstituteofinformationtechnologyalahabad",
+    "confidence": "low"
+  },
+  {
+    "winnerId": "Indian Institute of Engineering Science and Technology, Shibpur",
+    "loserId": "CORE-INDIAN-INSTITUTE-OF-ENGINEERING-SCIENCE-AND-TECHNOLOGY-SHIBPUR",
+    "reasons": [
+      "Different State and Different City"
+    ],
+    "norm": "indianinstituteofengineringscienceandtechnologyshibpur",
+    "confidence": "low"
+  }
+]

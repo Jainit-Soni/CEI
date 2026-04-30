@@ -1,0 +1,902 @@
+[
+  {
+    "displayName": "National Institute of Technology, Rourkela",
+    "stableKey": "U-0357",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA",
+    "aisheCode": "U-0357",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0357"
+  },
+  {
+    "displayName": "National Institute of Technology, Kurukshetra",
+    "stableKey": "U-0172",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA",
+    "aisheCode": "U-0172",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0172"
+  },
+  {
+    "displayName": "National Institute of Technology, Warangal",
+    "stableKey": "U-0025",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL",
+    "aisheCode": "U-0025",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0025"
+  },
+  {
+    "displayName": "National Institute of Technology Patna",
+    "stableKey": "U-0072",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "aisheCode": "U-0072",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0072"
+  },
+  {
+    "displayName": "Sardar Vallabhbhai National Institute of Technology, Surat",
+    "stableKey": "U-0149",
+    "canonicalId": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+    "aisheCode": "U-0149",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0149"
+  },
+  {
+    "displayName": "Dr. B R Ambedkar National Institute of Technology, Jalandhar",
+    "stableKey": "U-0374",
+    "canonicalId": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+    "aisheCode": "U-0374",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0374"
+  },
+  {
+    "displayName": "National Institute of Technology Calicut",
+    "stableKey": "U-0263",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+    "aisheCode": "U-0263",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0263"
+  },
+  {
+    "displayName": "National Institute of Technology Raipur",
+    "stableKey": "U-0092",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+    "aisheCode": "U-0092",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0092"
+  },
+  {
+    "displayName": "Maulana Azad National Institute of Technology Bhopal",
+    "stableKey": "U-0284",
+    "canonicalId": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+    "aisheCode": "U-0284",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0284"
+  },
+  {
+    "displayName": "Indian Institute of Technology Kharagpur",
+    "stableKey": "U-0573",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR",
+    "aisheCode": "U-0573",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0573"
+  },
+  {
+    "displayName": "National Institute of Technology Karnataka, Surathkal",
+    "stableKey": "U-0237",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA",
+    "aisheCode": "U-0237",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0237"
+  },
+  {
+    "displayName": "Indian Institute of Technology Delhi",
+    "stableKey": "U-0100",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI",
+    "aisheCode": "U-0100",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0100"
+  },
+  {
+    "displayName": "National Institute of Technology Hamirpur",
+    "stableKey": "U-0189",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+    "aisheCode": "U-0189",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0189"
+  },
+  {
+    "displayName": "National Institute of Technology, Tiruchirappalli",
+    "stableKey": "U-0467",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+    "aisheCode": "U-0467",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0467"
+  },
+  {
+    "displayName": "Indian Institute of Technology Patna",
+    "stableKey": "U-0064",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "aisheCode": "U-0064",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0064"
+  },
+  {
+    "displayName": "National Institute of Technology Durgapur",
+    "stableKey": "U-0577",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+    "aisheCode": "U-0577",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0577"
+  },
+  {
+    "displayName": "Motilal Nehru National Institute of Technology Allahabad",
+    "stableKey": "U-0530",
+    "canonicalId": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+    "aisheCode": "U-0530",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0530"
+  },
+  {
+    "displayName": "National Institute of Technology Agartala",
+    "stableKey": "U-0493",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+    "aisheCode": "U-0493",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0493"
+  },
+  {
+    "displayName": "Malaviya National Institute of Technology Jaipur",
+    "catalogId": "U-0410",
+    "stableKey": "U-0410",
+    "canonicalId": "Malaviya National Institute of Technology Jaipur",
+    "aisheCode": "U-0410",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Visvesvaraya National Institute of Technology, Nagpur",
+    "stableKey": "U-0334",
+    "canonicalId": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+    "aisheCode": "U-0334",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0334"
+  },
+  {
+    "displayName": "Indian Institute of Engineering Science and Technology, Shibpur",
+    "catalogId": "U-0584",
+    "stableKey": "U-0584",
+    "canonicalId": "Indian Institute of Engineering Science and Technology, Shibpur",
+    "aisheCode": "U-0584",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Technology Roorkee",
+    "stableKey": "U-0560",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE",
+    "aisheCode": "U-0560",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0560"
+  },
+  {
+    "displayName": "Indian Institute of Technology Madras",
+    "stableKey": "U-0456",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MADRAS",
+    "aisheCode": "U-0456",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0456"
+  },
+  {
+    "displayName": "Indian Institute of Technology Bombay",
+    "stableKey": "U-0306",
+    "canonicalId": "CORE-IIT-BOMBAY",
+    "aisheCode": "U-0306",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0306"
+  },
+  {
+    "displayName": "Indian Institute of Technology (ISM) Dhanbad",
+    "catalogId": "U-0205",
+    "stableKey": "U-0205",
+    "canonicalId": "Indian Institute of Technology (ISM) Dhanbad",
+    "aisheCode": "U-0205",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "National Institute of Technology, Srinagar",
+    "stableKey": "U-0197",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR",
+    "aisheCode": "U-0197",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0197"
+  },
+  {
+    "displayName": "Indian Institute of Technology (BHU) Varanasi",
+    "stableKey": "U-0701",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI",
+    "aisheCode": "U-0701",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0701"
+  },
+  {
+    "displayName": "National Institute of Technology, Jamshedpur",
+    "stableKey": "U-0207",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR",
+    "aisheCode": "U-0207",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0207"
+  },
+  {
+    "displayName": "Birla Institute of Technology, Mesra, Ranchi",
+    "catalogId": "U-0202",
+    "stableKey": "Birla Institute of Technology, Mesra, Ranchi",
+    "canonicalId": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-MESRA-RANCHI",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "National Institute of Technology, Andhra Pradesh",
+    "catalogId": "U-0855",
+    "stableKey": "NATIONAL INSTITUTE OF TECHNOLOGY ANDHRA PRADESH",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ANDHRA-PRADESH",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Technology Hyderabad",
+    "stableKey": "U-0013",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD",
+    "aisheCode": "U-0013",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0013"
+  },
+  {
+    "displayName": "Indian Institute of Technology Kanpur",
+    "stableKey": "U-0517",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR",
+    "aisheCode": "U-0517",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0517"
+  },
+  {
+    "displayName": "National Institute of Technology, Silchar",
+    "stableKey": "U-0055",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR",
+    "aisheCode": "U-0055",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0055"
+  },
+  {
+    "displayName": "National Institute of Technology Delhi",
+    "stableKey": "U-0622",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DELHI",
+    "aisheCode": "U-0622",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0622"
+  },
+  {
+    "displayName": "Indian Institute of Technology Guwahati",
+    "stableKey": "U-0053",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI",
+    "aisheCode": "U-0053",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0053"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram",
+    "catalogId": "U-0455",
+    "stableKey": "U-0455",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+    "aisheCode": "U-0455",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Technology Mandi",
+    "stableKey": "U-0184",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+    "aisheCode": "U-0184",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0184"
+  },
+  {
+    "displayName": "Indian Institute of Technology Ropar",
+    "stableKey": "U-0378",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+    "aisheCode": "U-0378",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0378"
+  },
+  {
+    "displayName": "Indian Institute of Technology Jodhpur",
+    "stableKey": "U-0395",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+    "aisheCode": "U-0395",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0395"
+  },
+  {
+    "displayName": "National Institute of Technology Goa",
+    "stableKey": "U-0620",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-GOA",
+    "aisheCode": "U-0620",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0620"
+  },
+  {
+    "displayName": "Punjab Engineering College, Chandigarh",
+    "catalogId": "U-0078",
+    "stableKey": "U-0078",
+    "canonicalId": "CORE-PUNJAB-ENGINEERING-COLLEGE-CHANDIGARH",
+    "aisheCode": "U-0078",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Technology Indore",
+    "stableKey": "U-0273",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+    "aisheCode": "U-0273",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0273"
+  },
+  {
+    "displayName": "National Institute of Technology Puducherry",
+    "stableKey": "U-0621",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PUDUCHERRY",
+    "aisheCode": "U-0621",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0621"
+  },
+  {
+    "displayName": "Indian Institute of Technology Dharwad",
+    "stableKey": "U-0899",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+    "aisheCode": "U-0899",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0899"
+  },
+  {
+    "displayName": "National Institute of Technology, Uttarakhand",
+    "stableKey": "U-0616",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-UTTARAKHAND",
+    "aisheCode": "U-0616",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0616"
+  },
+  {
+    "displayName": "Birla Institute of Technology, Patna Off-Campus",
+    "catalogId": "C-8339",
+    "stableKey": "Birla Institute of Technology, Patna Off-Campus",
+    "canonicalId": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Technology Gandhinagar",
+    "stableKey": "U-0139",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+    "aisheCode": "U-0139",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0139"
+  },
+  {
+    "displayName": "Indian Institute of Technology Bhubaneswar",
+    "stableKey": "U-0355",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR",
+    "aisheCode": "U-0355",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0355"
+  },
+  {
+    "displayName": "Sant Longowal Institute of Engineering and Technology",
+    "catalogId": "U-0384",
+    "stableKey": "Sant Longowal Institute of Engineering and Technology",
+    "canonicalId": "CORE-SANT-LONGOWAL-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology Design & Manufacturing Kurnool, Andhra Pradesh",
+    "catalogId": "U-0863",
+    "stableKey": "U-0863",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL",
+    "aisheCode": "U-0863",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "National Institute of Technology Sikkim",
+    "stableKey": "U-0614",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SIKKIM",
+    "aisheCode": "U-0614",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0614"
+  },
+  {
+    "displayName": "National Institute of Technology Arunachal Pradesh",
+    "stableKey": "U-0615",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ARUNACHAL-PRADESH",
+    "aisheCode": "U-0615",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0615"
+  },
+  {
+    "displayName": "Indian Institute of Technology Jammu",
+    "stableKey": "U-0906",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JAMMU",
+    "aisheCode": "U-0906",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0906"
+  },
+  {
+    "displayName": "National Institute of Technology, Manipur",
+    "stableKey": "U-0613",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MANIPUR",
+    "aisheCode": "U-0613",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0613"
+  },
+  {
+    "displayName": "Indian Institute of Technology Bhilai",
+    "stableKey": "U-0946",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHILAI",
+    "aisheCode": "U-0946",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0946"
+  },
+  {
+    "displayName": "Puducherry Technological University, Puducherry",
+    "catalogId": "U-1245",
+    "stableKey": "Puducherry Technological University, Puducherry",
+    "canonicalId": "CORE-PUDUCHERRY-TECHNOLOGICAL-UNIVERSITY-PUDUCHERRY",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "National Institute of Technology Meghalaya",
+    "stableKey": "U-0619",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MEGHALAYA",
+    "aisheCode": "U-0619",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0619"
+  },
+  {
+    "displayName": "Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior",
+    "catalogId": "U-0267",
+    "stableKey": "U-0267",
+    "canonicalId": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+    "aisheCode": "U-0267",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "National Institute of Technology, Mizoram",
+    "stableKey": "U-0617",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MIZORAM",
+    "aisheCode": "U-0617",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0617"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology Bhopal",
+    "catalogId": "U-1193",
+    "stableKey": "Indian Institute of Information Technology Bhopal",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHOPAL",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Ghani Khan Choudhary Institute of Engineering and Technology, Malda, West Bengal",
+    "catalogId": "S-14559",
+    "stableKey": "Ghani Khan Choudhary Institute of Engineering and Technology, Malda, West Bengal",
+    "canonicalId": "CORE-GHANI-KHAN-CHOUDHARY-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-MALDA-WEST-BENGAL",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR",
+    "catalogId": "U-0770",
+    "stableKey": "U-0770",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SENAPATI-MANIPUR",
+    "aisheCode": "U-0770",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Pt. Dwarka Prasad Mishra Indian Institute of Information Technology, Design & Manufacture Jabalpur",
+    "catalogId": "U-0286",
+    "stableKey": "U-0286",
+    "canonicalId": "CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR",
+    "aisheCode": "U-0286",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Technology Tirupati",
+    "stableKey": "U-0844",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+    "aisheCode": "U-0844",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0844"
+  },
+  {
+    "displayName": "National Institute of Technology Nagaland",
+    "stableKey": "U-0618",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGALAND",
+    "aisheCode": "U-0618",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0618"
+  },
+  {
+    "displayName": "School of Studies of Engineering and Technology, Guru Ghasidas Vishwavidyalaya, Bilaspur",
+    "catalogId": "U-0085",
+    "stableKey": "U-0085",
+    "canonicalId": "CORE-SCHOOL-OF-STUDIES-OF-ENGINEERING-AND-TECHNOLOGY-GURU-GHASIDAS-VISHWAVIDYALAYA-BILASPUR",
+    "aisheCode": "U-0085",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "School of Engineering, Tezpur University, Napaam, Tezpur",
+    "catalogId": "U-0056",
+    "stableKey": "School of Engineering, Tezpur University, Napaam, Tezpur",
+    "canonicalId": "CORE-SCHOOL-OF-ENGINEERING-TEZPUR-UNIVERSITY-NAPAAM-TEZPUR",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Technology Palakkad",
+    "stableKey": "U-0878",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+    "aisheCode": "U-0878",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0878"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology(IIIT) Kottayam",
+    "catalogId": "U-0802",
+    "stableKey": "U-0802",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTTAYAM",
+    "aisheCode": "U-0802",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology(IIIT), Vadodara, Gujrat",
+    "stableKey": "U-0798",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA",
+    "aisheCode": "U-0798",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0798"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology Lucknow",
+    "catalogId": "U-0801",
+    "stableKey": "U-0801",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-LUCKNOW",
+    "aisheCode": "U-0801",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Assam University, Silchar",
+    "catalogId": "U-0005",
+    "stableKey": "U-0005",
+    "canonicalId": "CORE-ASSAM-UNIVERSITY-SILCHAR",
+    "aisheCode": "U-0005",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Shri Mata Vaishno Devi University, Katra, Jammu & Kashmir",
+    "catalogId": "U-0201",
+    "stableKey": "U-0201",
+    "canonicalId": "CORE-SHRI-MATA-VAISHNO-DEVI-UNIVERSITY-KATRA-JAMMU-KASHMIR",
+    "aisheCode": "U-0201",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Gati Shakti Vishwavidyalaya, Vadodara",
+    "catalogId": "U-0968",
+    "stableKey": "Gati Shakti Vishwavidyalaya, Vadodara",
+    "canonicalId": "CORE-GATI-SHAKTI-VISHWAVIDYALAYA-VADODARA",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology (IIIT) Nagpur",
+    "catalogId": "U-0841",
+    "stableKey": "U-0841",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAGPUR",
+    "aisheCode": "U-0841",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Birla Institute of Technology, Deoghar Off-Campus",
+    "catalogId": "C-8344",
+    "stableKey": "Birla Institute of Technology, Deoghar Off-Campus",
+    "canonicalId": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-DEOGHAR",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology Surat",
+    "catalogId": "U-0954",
+    "stableKey": "U-0954",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SURAT",
+    "aisheCode": "U-0954",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology, Allahabad",
+    "catalogId": "U-0516",
+    "stableKey": "U-0517",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+    "aisheCode": "U-0517",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology Bhagalpur",
+    "catalogId": "U-0953",
+    "stableKey": "U-0953",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHAGALPUR",
+    "aisheCode": "U-0953",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "National Institute of Advanced Manufacturing Technology, Ranchi",
+    "catalogId": "S-14324",
+    "stableKey": "S-14324",
+    "canonicalId": "CORE-NATIONAL-INSTITUTE-OF-ADVANCED-MANUFACTURING-TECHNOLOGY-RANCHI",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology (IIIT)Kota, Rajasthan",
+    "catalogId": "U-0799",
+    "stableKey": "U-0799",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTA",
+    "aisheCode": "U-0799",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian institute of information technology, Raichur, Karnataka",
+    "catalogId": "U-1089",
+    "stableKey": "U-1089",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RAICHUR",
+    "aisheCode": "U-1089",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology Tiruchirappalli",
+    "catalogId": "U-0754",
+    "stableKey": "Indian Institute of Information Technology Tiruchirappalli",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-TIRUCHIRAPPALLI",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology (IIIT), Sri City, Chittoor",
+    "catalogId": "U-0760",
+    "stableKey": "U-0760",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRI-CITY",
+    "aisheCode": "U-0760",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Technology Goa",
+    "stableKey": "U-0907",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+    "aisheCode": "U-0907",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024",
+    "catalogId": "U-0907"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology(IIIT) Dharwad",
+    "catalogId": "U-0803",
+    "stableKey": "U-0803",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD",
+    "aisheCode": "U-0803",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology(IIIT) Kalyani, West Bengal",
+    "catalogId": "U-0796",
+    "stableKey": "U-0796",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KALYANI",
+    "aisheCode": "U-0796",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology, Vadodara International Campus Diu (IIITVICD)",
+    "catalogId": "C-63929",
+    "stableKey": "Indian Institute of Information Technology, Vadodara International Campus Diu (IIITVICD)",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA-INTERNATIONAL-CAMPUS-DIU",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology (IIIT) Ranchi",
+    "catalogId": "U-0840",
+    "stableKey": "U-0840",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RANCHI",
+    "aisheCode": "U-0840",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology(IIIT) Una, Himachal Pradesh",
+    "catalogId": "U-0797",
+    "stableKey": "U-0797",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-UNA",
+    "aisheCode": "U-0797",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "International Institute of Information Technology, Bhubaneswar",
+    "catalogId": "U-1032",
+    "stableKey": "International Institute of Information Technology, Bhubaneswar",
+    "canonicalId": "CORE-INTERNATIONAL-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHUBANESWAR",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "International Institute of Information Technology, Naya Raipur",
+    "catalogId": "U-0970",
+    "stableKey": "International Institute of Information Technology, Naya Raipur",
+    "canonicalId": "CORE-INTERNATIONAL-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAYA-RAIPUR",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Institute of Engineering and Technology, Dr. H. S. Gour University. Sagar (A Central University)",
+    "catalogId": "U-0271",
+    "stableKey": "Institute of Engineering and Technology, Dr. H. S. Gour University. Sagar (A Central University)",
+    "canonicalId": "CORE-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-DR-H-S-GOUR-UNIVERSITY-SAGAR",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology (IIIT) Pune",
+    "catalogId": "U-0804",
+    "stableKey": "U-0804",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-PUNE",
+    "aisheCode": "U-0804",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Central University of Jammu",
+    "catalogId": "U-0210",
+    "stableKey": "U-0210",
+    "canonicalId": "CORE-CENTRAL-UNIVERSITY-OF-JAMMU",
+    "aisheCode": "U-0210",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Indian Institute of Information Technology Guwahati",
+    "catalogId": "U-0795",
+    "stableKey": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY GUWAHATI",
+    "canonicalId": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-GUWAHATI",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Mizoram University, Aizawl",
+    "catalogId": "U-0345",
+    "stableKey": "Mizoram University, Aizawl",
+    "canonicalId": "CORE-MIZORAM-UNIVERSITY-AIZAWL",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Gurukula Kangri Vishwavidyalaya, Haridwar",
+    "catalogId": "U-0556",
+    "stableKey": "Gurukula Kangri Vishwavidyalaya, Haridwar",
+    "canonicalId": "CORE-GURUKULA-KANGRI-VISHWAVIDYALAYA-HARIDWAR",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Institute of Infrastructure, Technology, Research and Management-Ahmedabad",
+    "catalogId": "U-0765",
+    "stableKey": "Institute of Infrastructure, Technology, Research and Management-Ahmedabad",
+    "canonicalId": "CORE-INSTITUTE-OF-INFRASTRUCTURE-TECHNOLOGY-RESEARCH-AND-MANAGEMENT-AHMEDABAD",
+    "aisheCode": null,
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  },
+  {
+    "displayName": "Central University of Haryana",
+    "catalogId": "U-0158",
+    "stableKey": "U-0158",
+    "canonicalId": "CORE-CENTRAL-UNIVERSITY-OF-HARYANA",
+    "aisheCode": "U-0158",
+    "backingType": "Catalog-Backed",
+    "linkedSource": "JoSAA/CSAB 2024"
+  }
+]

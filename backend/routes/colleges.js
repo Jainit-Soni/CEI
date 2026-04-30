@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const fs = require("fs");
+const path = require("path");
 const College = require("../models/CollegeSchema");
 const cache = require("../services/cache");
 const rankingCache = require("../services/rankingCacheBuilder");
@@ -11,6 +13,7 @@ const { getRedisClient } = require("../config/redis");
 const { getCollegeTruthCourses } = require("../services/courseOfferingsReadService");
 const normalizeCollege = require("../lib/collegeNormalizer");
 const identityResolver = require("../lib/collegeIdentityResolver");
+const { applyIntentFilter, rankResults } = require("../services/searchService");
 
 const router = express.Router();
 
@@ -18,6 +21,24 @@ router.get('/flush-cache', async (req, res) => {
     try {
         await dataStore.invalidateCache();
         res.json({ success: true, message: 'Global Cache Flushed.' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+router.post('/colleges/batch', async (req, res) => {
+    try {
+        const { ids } = req.body;
+        if (!ids || !Array.isArray(ids)) {
+            return res.status(400).json({ error: 'ids array is required in request body' });
+        }
+        
+        const results = await Promise.all(
+            ids.map(id => dataStore.getCollegeById(id))
+        );
+        
+        // Filter out nulls and return
+        res.json(results.filter(Boolean));
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -84,8 +105,8 @@ const buildCollegeQuery = (reqQuery) => {
   const query = {};
   
   // Preserve 'all' check for future-proofing or specific overrides
-  if (all === 'true') {
-      // already empty, no-op
+  if (all !== 'true') {
+      query.isVisible = { $ne: false };
   }
 
   const andConditions = [];
@@ -95,9 +116,27 @@ const buildCollegeQuery = (reqQuery) => {
     query['coverage.coverageBucket'] = coverage;
   }
 
+  // [CEI] Deterministic Navigation Support - Enforce Canonical Authority Only
+  if (reqQuery.authority) {
+    query.authority_canonical = reqQuery.authority;
+  }
+
+  if (reqQuery.hasCutoffs === 'true') {
+    query.$or = query.$or || [];
+    query.$or.push(
+        { 'engineeringCutoffs.0': { $exists: true } },
+        { 'coverage.cutoffCoverage': { $in: ['Partial', 'Rich'] } }
+    );
+  }
+
+  if (reqQuery.identityConfidence) {
+    query.identityConfidence = reqQuery.identityConfidence;
+  }
+
   if (isPremium) {
     query.isPremium = isPremium === 'true';
   }
+
 
   if (isCore) {
     query.isCore = isCore === 'true';
@@ -171,11 +210,13 @@ const buildCollegeQuery = (reqQuery) => {
 
       andConditions.push({
         $or: [
-          { _id: { $regex: safeQ, $options: 'i' } },
-          { id: { $regex: safeQ, $options: 'i' } },
-          { name: { $regex: safeQ, $options: 'i' } },
-          { shortName: { $regex: safeQ, $options: 'i' } },
-          { name: { $regex: '^' + q.split('').join('.*'), $options: 'i' } } // Initials match
+          { id: { $regex: regex } },
+          { institution_id: { $regex: regex } },
+          { stableKey: { $regex: regex } },
+          { name: { $regex: regex } },
+          { shortName: { $regex: regex } },
+          { institution_name: { $regex: regex } },
+          { name: { $regex: initialRegex } } // Initials match
         ]
       });
     }
@@ -248,7 +289,16 @@ router.get("/colleges", async (req, res) => {
     // For pure ranking queries (no text search, no district filter),
     // attempt to serve from the precomputed Redis ranking cache.
     // Expected response time: 5-15ms (Redis) vs 120-160ms (MongoDB sort).
-    const { page, limit, q, district, sortBy, state, tier, band } = req.query;
+    let { page, limit, district, sortBy, state, tier, band } = req.query;
+    let q = req.query.q;
+
+    // [CEI] Query Expansion: Acronym -> Full Name for better Recall
+    if (q) {
+      const qLower = q.toLowerCase().trim();
+      if (/\bnit\b/.test(qLower)) q = "National Institute of Technology";
+      else if (/\biit\b/.test(qLower)) q = "Indian Institute of Technology";
+      else if (/\biiit\b/.test(qLower)) q = "Indian Institute of Information Technology";
+    }
     const pageNum = Math.max(1, parseInt(page, 10) || 1);
     const limitNum = Math.min(100, Math.max(1, parseInt(limit, 10) || 20));
 
@@ -332,8 +382,8 @@ router.get("/colleges", async (req, res) => {
     // Cursor processing for limitless pagination
     const rawCursor = req.query.cursor;
 
-    const query = buildCollegeQuery(req.query);
-    const sort = buildSortQuery(req.query);
+    const query = buildCollegeQuery({ ...req.query, q });
+    const sort = buildSortQuery({ ...req.query, q });
     const sortKeys = Object.keys(sort);
 
     const primarySortField = sortKeys.find(k => k !== '_id' && k !== 'isPremium');
@@ -369,70 +419,124 @@ router.get("/colleges", async (req, res) => {
     if (sortKeys.length > 0) {
       const sortProject = { _id: 1 };
       sortKeys.forEach(k => { sortProject[k] = 1; });
+      
+      // [CEI] Don't project-away identity fields if we need them for re-ranking!
+      if (q) {
+        sortProject.id = 1;
+        sortProject.institution_id = 1;
+        sortProject.name = 1;
+        sortProject.shortName = 1;
+        sortProject.institution_name = 1;
+        sortProject.isCore = 1;
+        sortProject.ceiScore = 1;
+        sortProject.institutionStrengthScore = 1;
+      }
+
       pipeline.push({ $project: sortProject });
       pipeline.push({ $sort: sort });
     }
 
-    if (skip > 0) pipeline.push({ $skip: skip });
-    pipeline.push({ $limit: limitNum });
+    // [CEI] Pipeline orchestration: 
+    // If search 'q' is present, we fetch a large candidate pool (200) to allow re-ranking Core institutions.
+    // We skip/paginate in memory AFTER filtering and ranking.
+    if (q) {
+      console.log('[CEI][mongo] Final Pipeline:', JSON.stringify(pipeline, null, 2));
+      pipeline.push({ $limit: 200 });
+    } else {
+      if (skip > 0) pipeline.push({ $skip: skip });
+      pipeline.push({ $limit: limitNum });
+    }
 
-    // --- Unified Truth Layer (Memory-First Path) ---
-    const allColleges = await dataStore.getColleges();
-    if (allColleges && allColleges.length > 0 && !req.query.forceMongo) {
+    // --- Unified Truth Layer (Memory/Mongo Orchestration) ---
+    const hasProductionFilters = req.query.coverage || req.query.authority || req.query.hasCutoffs;
+    
+    // If no production filters and not forcing Mongo, try the high-speed memory path
+    if (!req.query.forceMongo && !hasProductionFilters) {
+      const allColleges = await dataStore.getColleges();
+      if (allColleges && allColleges.length > 0) {
+        // [CEI] Final Query Diagnostic (Memory Path)
+        console.log('[CEI][memory] Filtering 67k records...');
+
+
+
+      const qLower = q ? q.toLowerCase() : null;
+
       const filtered = allColleges.filter(c => {
+        // [CEI] Respect visibility: exclude hidden/shell nodes (isVisible: false)
+        if (c.isVisible === false) return false;
+
         if (state && state !== 'All' && c.state !== state) return false;
         if (tier && tier !== 'All' && c.rankingTier !== tier) return false;
         if (band && band !== 'All' && c.competitivenessBand !== band) return false;
-        if (q) {
-          const qLower = q.toLowerCase();
-          return (c.name || "").toLowerCase().includes(qLower) || (c.shortName || "").toLowerCase().includes(qLower);
+        if (qLower) {
+          // [CEI] Search all name-bearing fields: name, shortName, institution_name
+          // This ensures CORE institutions (which may only have institution_name) are found
+          return (
+            (c.name || "").toLowerCase().includes(qLower) ||
+            (c.shortName || "").toLowerCase().includes(qLower) ||
+            (c.institution_name || "").toLowerCase().includes(qLower) ||
+            (c.id || "").toLowerCase().includes(qLower) ||
+            (c.institution_id || "").toLowerCase().includes(qLower) ||
+            (c.stableKey || "").toLowerCase().includes(qLower)
+          );
         }
         return true;
       });
 
-      const totalCount = filtered.length;
-      const sorted = filtered.sort((a, b) => (b.ceiScore || 0) - (a.ceiScore || 0) || String(a.id).localeCompare(String(b.id)));
-      const colleges = sorted.slice(skip, skip + limitNum);
+      // [CEI] If text search returned 0 results from memory, fall through to MongoDB.
+      // This surfaces CORE institutions that exist in MongoDB but are not yet in the
+      // in-memory cache (e.g. when server started without a MongoDB connection).
+      if (qLower && filtered.length === 0) {
+        // Fall through to MongoDB path below
+        console.log(`[CEI][search] Memory miss for q="${q}", falling through to MongoDB.`);
+      } else {
+        // [CEI] Unified Intent & Ranking Pipeline
+        const intentFiltered = q ? applyIntentFilter(filtered, q) : filtered;
+        const totalCount = intentFiltered.length;
+        const sorted = rankResults(intentFiltered, q);
+        const colleges = sorted.slice(skip, skip + limitNum);
 
-      return res.json({
-        data: colleges.map(c => {
-          const cid = String(c.id || c._id || "");
-          const cleanName = c.shortName || c.name || "Unknown";
-          return {
-            id: cid,
-            _id: cid,
-            name: c.name,
-            shortName: c.shortName,
-            location: c.location,
-            rankingTier: c.rankingTier,
-            ceiScore: c.ceiScore,
-            institutionStrengthScore: c.institutionStrengthScore,
-            admissionRealityScore: c.admissionRealityScore,
-            dataConfidenceScore: c.dataConfidenceScore,
-            coverage: c.coverage,
-            isPremium: c.isPremium,
-            isCore: c.isCore,
-            coreMetadata: c.coreMetadata,
-            placements: c.placements,
-            fees: c.fees,
-            website: c.website,
-            slug: `/college/${cid}`
-          };
-        }),
-        pagination: {
-          page: pageNum,
-          limit: limitNum,
-          totalCount,
-          totalPages: Math.ceil(totalCount / limitNum),
-          nextCursor: null,
-          hasNext: skip + limitNum < totalCount,
-          hasPrev: pageNum > 1
-        }
-      });
+        return res.json({
+          data: colleges.map(c => {
+            const cid = String(c.id || c._id || "");
+            return {
+              id: cid,
+              _id: cid,
+              name: c.name,
+              shortName: c.shortName,
+              location: c.location,
+              rankingTier: c.rankingTier,
+              ceiScore: c.ceiScore,
+              institutionStrengthScore: c.institutionStrengthScore,
+              admissionRealityScore: c.admissionRealityScore,
+              dataConfidenceScore: c.dataConfidenceScore,
+              coverage: c.coverage,
+              isPremium: c.isPremium,
+              isCore: c.isCore,
+              identity: c.identity,
+              coreMetadata: c.coreMetadata,
+              placements: c.placements,
+              fees: c.fees,
+              website: c.website,
+              slug: `/college/${cid}`
+            };
+          }),
+          pagination: {
+            page: pageNum,
+            limit: limitNum,
+            totalCount,
+            totalPages: Math.ceil(totalCount / limitNum),
+            nextCursor: null,
+            hasNext: skip + limitNum < totalCount,
+            hasPrev: pageNum > 1
+          }
+        });
+      }
     }
+  }
 
-    // ── LEGACY MONGODB PATH (Only if memory-first is skipped) ────────────────
-    let sortedIdsResult, totalCount;
+
+    // ── PRODUCTION MONGODB PATH (Decision Routing) ────────────────
     try {
       [sortedIdsResult, totalCount] = await Promise.all([
         College.aggregate(pipeline),
@@ -441,6 +545,54 @@ router.get("/colleges", async (req, res) => {
     } catch (mongoErr) {
       return res.status(500).json({ error: "Database failure", message: mongoErr.message });
     }
+
+
+    // ── RUNTIME GUARD: Zero Dead Ends ────────────────────────────────────────
+    if (totalCount === 0 && !req.query.q) {
+      // If precision routing fails, try a high-trust regional or authority fallback
+      const fallbackQuery = { isVisible: { $ne: false }, identityConfidence: 'HIGH' };
+      
+      // Attempt to retain at least the coverage quality or the authority
+      if (query['coverage.coverageBucket']) fallbackQuery['coverage.coverageBucket'] = query['coverage.coverageBucket'];
+      else if (query.authority) fallbackQuery.authority = query.authority;
+
+      const fallbackDocs = await College.find(fallbackQuery).limit(limitNum).lean();
+      if (fallbackDocs.length > 0) {
+        // [CEI] Fallback Visibility Logging
+        try {
+            const logDir = path.join(__dirname, '../logs');
+            if (!fs.existsSync(logDir)) {
+                fs.mkdirSync(logDir, { recursive: true });
+            }
+            const logEntry = JSON.stringify({
+                timestamp: new Date().toISOString(),
+                type: "ZERO_RESULT_FALLBACK",
+                original_query: query,
+                fallback_query: fallbackQuery,
+                reason: "ZERO_RESULT"
+            }) + "\n";
+            fs.appendFileSync(path.join(logDir, 'fallback_events.ndjson'), logEntry);
+        } catch (e) {
+            console.error("Failed to log fallback event:", e);
+        }
+
+        return res.json({
+          data: fallbackDocs.map(c => normalizeCollege(c)),
+          pagination: { 
+            total: fallbackDocs.length, 
+            page: 1, 
+            limit: limitNum,
+            isFallback: true 
+          },
+          meta: { 
+            status: "ZERO_RESULT_FALLBACK",
+            originalQuery: query 
+          }
+        });
+      }
+    }
+
+
 
     const ids = sortedIdsResult.map(c => c._id);
     const fetchedColleges = await College.find({ _id: { $in: ids } }).lean();
@@ -454,10 +606,20 @@ router.get("/colleges", async (req, res) => {
       collegeMap.set(String(rawC._id), c);
     });
 
-    const colleges = ids.map(id => {
+    const collegesRaw = ids.map(id => {
       const sId = id ? String(id) : "";
       return sId ? collegeMap.get(sId) : null;
     }).filter(Boolean);
+    
+    // [CEI] Re-apply Intent Filtering and Deterministic Ranking to MongoDB results
+    const intentFiltered = q ? applyIntentFilter(collegesRaw, q) : collegesRaw;
+    const ranked = rankResults(intentFiltered, q);
+    
+    // [CEI] Correct totalCount for search intents
+    const currentTotalCount = q ? intentFiltered.length : totalCount;
+    
+    // Re-apply pagination after re-ranking (since we fetched 100+ candidates)
+    const colleges = q ? ranked.slice(skip, skip + limitNum) : ranked;
 
 
     let debugCursor = {};
@@ -479,7 +641,7 @@ router.get("/colleges", async (req, res) => {
       }
     }
 
-    const totalPages = Math.ceil(totalCount / limitNum);
+    const totalPages = Math.ceil(currentTotalCount / limitNum);
 
 
     const result = {
@@ -511,11 +673,11 @@ router.get("/colleges", async (req, res) => {
       pagination: {
         page: pageNum,
         limit: limitNum,
-        totalCount,
+        totalCount: currentTotalCount,
         totalPages,
         nextCursor,
         _debug: debugCursor,
-        hasNext: !!nextCursor,
+        hasNext: !!nextCursor || (q && skip + limitNum < currentTotalCount),
         hasPrev: pageNum > 1,
       },
     };
@@ -639,11 +801,17 @@ router.get("/filters", async (req, res) => {
     if (cached) return res.json(cached);
 
     const matchQuery = buildCollegeQuery(req.query);
-    const [states, metaDistricts, topDistricts] = await Promise.all([
-      College.distinct("state", matchQuery),
-      College.distinct("meta.district", matchQuery),
-      College.distinct("district", matchQuery)
-    ]);
+    let states = [], metaDistricts = [], topDistricts = [];
+    
+    try {
+      [states, metaDistricts, topDistricts] = await Promise.all([
+        College.distinct("state", matchQuery),
+        College.distinct("meta.district", matchQuery),
+        College.distinct("district", matchQuery)
+      ]);
+    } catch (dbErr) {
+      console.warn("MongoDB dynamic filters failed to execute distinct query, falling back to defaults:", dbErr.message);
+    }
 
     const commonCourses = ["Engineering", "Management", "Medical", "Design", "Commerce", "Arts", "Law", "Pharmacy", "Science", "Architecture"];
 
@@ -659,7 +827,14 @@ router.get("/filters", async (req, res) => {
     res.json(result);
   } catch (error) {
     console.error("Error in MongoDB dynamic /filters route:", error);
-    res.status(500).json({ error: "Failed to load dynamic filters" });
+    // Don't 500 unless absolutely fatal. At worst return defaults.
+    res.status(200).json({
+      states: [],
+      districts: [],
+      tiers: ["Tier 1", "Tier 2", "Tier 3", "University", "Stand Alone"],
+      courses: ["Engineering", "Management", "Medical", "Design", "Commerce", "Arts", "Law", "Pharmacy", "Science", "Architecture"],
+      bands: ['Elite', 'High', 'Competitive', 'Moderate', 'Emerging']
+    });
   }
 });
 
@@ -723,6 +898,37 @@ router.get("/states/stats", async (req, res) => {
 router.get("/colleges/:id/truth/seats", async (req, res) => {
   try {
     const { id } = req.params;
+    
+    // 1. Fetch college with hydrated truth (NDJSON merged)
+    const collegeDoc = await dataStore.getCollegeById(id);
+    
+    // 2. Check if hydrated seats exist (Phase 30 integration)
+    if (collegeDoc && collegeDoc.seats && collegeDoc.seats.length > 0) {
+      const validItems = collegeDoc.seats.filter(s => s.programName && (s.acpcIntake || s.totalIntake || s.intake));
+      
+      if (validItems.length > 0) {
+        return res.json({
+          sectionStatus: 'available',
+          freshnessStatus: 'up_to_date',
+          primarySource: validItems[0].sourceAuthority || 'Official Authority',
+          lastEvaluatedAt: validItems[0].extractedAt,
+          items: validItems.map(s => ({
+            displayLabel: `Intake: ${s.programName}`,
+            degree: s.courseFamily,
+            specialization: s.programName,
+            value: s.acpcIntake || s.totalIntake || s.intake,
+            source: {
+              title: s.sourceDocumentType || 'Seat Matrix 2025',
+              type: 'primary_authority',
+              url: s.sourceUrl,
+              lastEvaluatedAt: s.extractedAt
+            }
+          }))
+        });
+      }
+    }
+
+    // 3. Fallback to VerifiedField (Legacy System)
     const field = await VerifiedField.findOne({ collegeId: id, fieldName: 'student_intake' }).lean();
 
     if (!field) {
@@ -762,6 +968,36 @@ router.get("/colleges/:id/truth/seats", async (req, res) => {
 router.get("/colleges/:id/truth/cutoffs", async (req, res) => {
   try {
     const { id } = req.params;
+
+    // 1. Fetch college with hydrated truth
+    const collegeDoc = await dataStore.getCollegeById(id);
+
+    // 2. Check if hydrated cutoffs exist
+    if (collegeDoc && collegeDoc.engineeringCutoffs && collegeDoc.engineeringCutoffs.length > 0) {
+      const validItems = collegeDoc.engineeringCutoffs.filter(c => c.programName && c.closingRank);
+
+      if (validItems.length > 0) {
+        return res.json({
+          sectionStatus: 'available',
+          freshnessStatus: 'up_to_date',
+          primarySource: validItems[0].sourceAuthority || 'Admission Authority',
+          lastEvaluatedAt: validItems[0].extractedAt,
+          items: validItems.map(c => ({
+            displayLabel: `${c.programName} (${c.category})`,
+            degree: c.courseFamily,
+            value: c.closingRank,
+            metricType: 'Closing Rank',
+            source: {
+              title: c.sourceDocumentType || 'Cutoff Report 2025',
+              type: 'primary_authority',
+              url: c.sourceUrl,
+              lastEvaluatedAt: c.extractedAt
+            }
+          }))
+        });
+      }
+    }
+
     const field = await VerifiedField.findOne({ collegeId: id, fieldName: 'closingRank' }).lean();
 
     if (!field) {
@@ -804,13 +1040,7 @@ router.get("/colleges/:id/truth/courses", async (req, res) => {
     const db = mongoose.connection.db;
     
     // 1. Resolve college with matching ID (robust lookup)
-    const college = await College.findOne({
-      $or: [
-        { id: String(id) },
-        { _id: mongoose.isValidObjectId(id) ? id : null },
-        { stableKey: String(id) }
-      ]
-    }).select('id institution_id courses').lean();
+    const college = await dataStore.getCollegeById(id);
     
     if (!college) {
       return res.status(404).json({ error: 'College not found' });
@@ -835,20 +1065,29 @@ router.get("/colleges/:id/truth/fees", async (req, res) => {
   try {
     const { id } = req.params;
 
-    // Phase 1.5 - Bridge Elite Fee Source of Truth Layer
-    const collegeDoc = await dataStore.getCollegeById(id);
-    if (collegeDoc && collegeDoc.fees && collegeDoc.fees.isVerified) {
+    // [CEI] Priority: Direct MongoDB read bypasses stale in-memory cache
+    const College = require('../models/CollegeSchema');
+    const mongoDoc = await College.findOne({ institution_id: id }).lean();
+    const collegeDoc = mongoDoc || await dataStore.getCollegeById(id);
+    if (collegeDoc && collegeDoc.fees && (collegeDoc.fees.isVerified || collegeDoc.fees.provenance || collegeDoc.fees.totalFee)) {
+      const prov = collegeDoc.fees.provenance || {};
+      const extractedAt = collegeDoc.fees.extracted_at || (prov.freshness ? new Date(prov.freshness) : new Date());
+      const staleAfter = collegeDoc.fees.stale_after_days || 365;
+      const isStale = (new Date() - new Date(extractedAt)) > (staleAfter * 24 * 60 * 60 * 1000);
+
       return res.json({
         sectionStatus: 'available',
-        freshnessStatus: 'up_to_date',
-        primarySource: 'Official Fee Structure',
-        lastEvaluatedAt: collegeDoc.fees.promotedAt || new Date().toISOString(),
+        freshnessStatus: isStale ? 'stale' : 'up_to_date',
+        isStale,
+        primarySource: prov.sourceDocumentType || 'Official Fee Structure',
+        sourceAuthority: collegeDoc.fees.source_authority || 'primary_authority',
+        lastEvaluatedAt: extractedAt.toISOString(),
         items: [{
           displayLabel: 'Annual Fee (Total)',
           degree: 'All Programs',
-          value: collegeDoc.fees.total || ('₹' + collegeDoc.fees.totalNumeric.toLocaleString()),
+          value: collegeDoc.fees.totalFee ? ('₹' + collegeDoc.fees.totalFee.toLocaleString()) : (collegeDoc.fees.total || (collegeDoc.fees.totalNumeric ? ('₹' + collegeDoc.fees.totalNumeric.toLocaleString()) : 'Official Data Unavailable')),
           source: {
-            title: collegeDoc.fees.source || 'Verified Elite Source',
+            title: prov.sourceName || collegeDoc.fees.source || 'Verified Elite Source',
             type: 'primary_authority'
           }
         }]
@@ -902,8 +1141,10 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
     const rateField = await VerifiedField.findOne({ collegeId: id, fieldName: 'placement_rate' }).lean();
 
     // --- NDJSON Truth Data Integration (Phase 21) ---
-    // Fetch a fresh copy using unified system to maintain ID mappings
-    const collegeDoc = await dataStore.getCollegeById(id);
+    // [CEI] Priority: Direct MongoDB read bypasses stale in-memory cache
+    const College = require('../models/CollegeSchema');
+    const mongoPlacementDoc = await College.findOne({ institution_id: id }).lean();
+    const collegeDoc = mongoPlacementDoc || await dataStore.getCollegeById(id);
     
     const aliases = new Set(identityResolver.getAllAliases(id));
     if (collegeDoc && collegeDoc.stableKey) aliases.add(collegeDoc.stableKey);
@@ -914,7 +1155,7 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
       tr.entityType === 'placement'
     );
 
-    const hasIngestedPlacements = collegeDoc && collegeDoc.placements && collegeDoc.placements.source === 'NIRF 2024';
+    const hasIngestedPlacements = collegeDoc && collegeDoc.placements && (collegeDoc.placements.source === 'NIRF 2024' || collegeDoc.placements.provenance || collegeDoc.placements.averagePackage);
 
     if (!pkgField && !rateField && truthEntries.length === 0 && !hasIngestedPlacements) {
       return res.json({ 
@@ -925,19 +1166,53 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
     }
 
     const items = [];
-    let lastEvaluatedAt = collegeDoc?.sourceMetadata?.promotedAt || null;
+    let lastEvaluatedAt = collegeDoc?.sourceMetadata?.promotedAt || collegeDoc?.placements?.provenance?.freshness || null;
+    let sectionStale = false;
+    let sectionAuthority = 'official_source';
+
+    if (collegeDoc?.placements?.extracted_at) {
+      const p = collegeDoc.placements;
+      const staleAfter = p.stale_after_days || 365;
+      sectionStale = (new Date() - new Date(p.extracted_at)) > (staleAfter * 24 * 60 * 60 * 1000);
+      sectionAuthority = p.source_authority || 'official_source';
+      lastEvaluatedAt = new Date(p.extracted_at).toISOString();
+    }
 
     // 1. Ingested NIRF 2024 Truth (Phase 22 - Bridge)
     if (hasIngestedPlacements) {
       const p = collegeDoc.placements;
-      items.push({
-        displayLabel: 'Median Salary (NIRF)',
-        value: `₹${(p.averagePackageNumeric / 100000).toFixed(2)} LPA`,
-        confidence: 0.98,
-        metricType: 'Median Salary',
-        applicableBatchYear: p.academicYear,
-        source: { title: 'NIRF 2024', type: 'official_source' }
-      });
+      const prov = p.provenance || {};
+      
+      if (p.averagePackage || p.averagePackageNumeric) {
+        items.push({
+          displayLabel: prov.sourceDocumentType?.includes('NIRF') || p.source === 'NIRF 2024' ? 'Median Salary (NIRF)' : 'Average Package',
+          value: p.averagePackage || `₹${(p.averagePackageNumeric / 100000).toFixed(2)} LPA`,
+          confidence: 0.98,
+          metricType: 'Median Salary',
+          applicableBatchYear: p.academicYear || prov.academicYear,
+          source: { title: prov.sourceName || p.source || 'NIRF 2024', type: 'official_source' }
+        });
+      }
+      
+      if (p.highestPackage) {
+        items.push({
+          displayLabel: 'Highest Package',
+          value: p.highestPackage,
+          confidence: 0.98,
+          metricType: 'Highest Package',
+          applicableBatchYear: p.academicYear || prov.academicYear,
+          source: { title: prov.sourceName || p.source || 'Official Source', type: 'official_source' }
+        });
+      }
+      
+      if (p.placedPercentage) {
+        items.push({
+          displayLabel: 'Placement Rate',
+          value: `${p.placedPercentage}%`,
+          confidence: 0.98,
+          source: { title: prov.sourceName || p.source || 'Official Source', type: 'official_source' }
+        });
+      }
     }
 
     // Add NDJSON Truth items first (Higher Priority)
@@ -956,6 +1231,16 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
           value: `${tr.placedPercentage}%`,
           confidence: 0.95,
           source: { title: tr.source || 'Official Report', type: 'official_source' }
+        });
+      }
+      if (tr.highestPackage) {
+        const val = typeof tr.highestPackage === 'number' ? (tr.highestPackage > 100 ? `₹${(tr.highestPackage/100).toFixed(2)} Cr` : `₹${tr.highestPackage} LPA`) : tr.highestPackage;
+        items.push({
+          displayLabel: 'Highest Package',
+          value: val,
+          metricType: 'Highest Package',
+          confidence: 0.99,
+          source: { title: tr.source || 'Institutional Disclosure', type: 'official_source' }
         });
       }
     });
@@ -984,7 +1269,9 @@ router.get("/colleges/:id/truth/placements", async (req, res) => {
 
     res.json({
       sectionStatus: 'available',
-      freshnessStatus: 'verified_audit',
+      freshnessStatus: sectionStale ? 'stale' : 'verified_audit',
+      isStale: sectionStale,
+      sourceAuthority: sectionAuthority,
       lastEvaluatedAt,
       items
     });

@@ -124,6 +124,8 @@ export default function CollegeTabs({ college }) {
         }
     }, [activeTab, college.id]);
 
+    const resolvedCollegeId = college.institution_id || college.id || college._id;
+
     return (
         <div className="college-tabs-container">
             {/* Sticky Tab Navigation */}
@@ -239,7 +241,7 @@ export default function CollegeTabs({ college }) {
                             <p className="overview-text mb-6">
                                 Evaluated intake and program-wise seat availability from official regulatory sources.
                             </p>
-                            <TruthSeatsSection collegeId={college.id} />
+                            <TruthSeatsSection collegeId={resolvedCollegeId} />
                         </div>
                     </div>
                 )}
@@ -251,7 +253,7 @@ export default function CollegeTabs({ college }) {
                             <p className="overview-text mb-6">
                                 Evaluated admission thresholds including opening/closing ranks across all categories, quotas, and rounds.
                             </p>
-                            <TruthCutoffsSection collegeId={college.id} />
+                            <TruthCutoffsSection collegeId={resolvedCollegeId} />
                         </div>
                     </div>
                 )}
@@ -263,7 +265,7 @@ export default function CollegeTabs({ college }) {
                             <p className="overview-text mb-6">
                                 Evaluated institutional placement outcomes including salary packages and employment rates.
                             </p>
-                            <TruthPlacementsSection collegeId={college.id} />
+                            <TruthPlacementsSection collegeId={resolvedCollegeId} />
                         </div>
                     </div>
                 )}
@@ -275,7 +277,7 @@ export default function CollegeTabs({ college }) {
                             <p className="overview-text mb-6">
                                 Official institutional fee breakdown evaluated from regulatory orders and institute disclosures.
                             </p>
-                            <TruthFeesSection collegeId={college.id} />
+                            <TruthFeesSection collegeId={resolvedCollegeId} />
                         </div>
                     </div>
                 )}

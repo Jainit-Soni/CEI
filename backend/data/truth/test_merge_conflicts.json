@@ -1,0 +1,39 @@
+[
+  {
+    "winnerId": "CORE-BLOCK-GEOG-1",
+    "loserId": "CORE-BLOCK-GEOG-2",
+    "reasons": [
+      "Different State and Different City"
+    ],
+    "norm": "blockunivgeog",
+    "confidence": "low"
+  },
+  {
+    "winnerId": "CORE-BLOCK-SQUASH-1",
+    "loserId": "CORE-BLOCK-SQUASH-2",
+    "reasons": [
+      "Geography Partial (State Only), No matching official codes"
+    ],
+    "norm": "squashuni",
+    "confidence": "low"
+  },
+  {
+    "winnerId": "CORE-SAME-CITY-1",
+    "loserId": "CORE-SAME-CITY-2",
+    "reasons": [
+      "Geography Match (City + State)",
+      "STRICT_MODE_BLOCKED: Requires Official Code"
+    ],
+    "norm": "ahmedabaduniversity",
+    "confidence": "medium"
+  },
+  {
+    "winnerId": "CORE-IIT-1",
+    "loserId": "CORE-IIIT-1",
+    "reasons": [
+      "Geography Partial (State Only), No matching official codes"
+    ],
+    "norm": "itdharwad",
+    "confidence": "low"
+  }
+]

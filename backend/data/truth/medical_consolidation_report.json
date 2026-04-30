@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-04-26T19:09:07.084Z",
+  "input": {
+    "hydrator_rows": 617,
+    "recovery_rows": 13
+  },
+  "output": {
+    "final_rows": 630,
+    "entities_covered": 340,
+    "lineage": {
+      "hydrator": 617,
+      "recovery": 13
+    },
+    "confidence": {
+      "HIGH": 570,
+      "INFERRED": 60
+    }
+  },
+  "rejected": {
+    "i1_invalid_entity": 0,
+    "i2_zero_seat": 0,
+    "i3_duplicate": 0
+  },
+  "flags": {
+    "missing_source_url": 0
+  },
+  "output_file": "E:\\CMAT-PROBLEM\\backend\\data\\truth\\medical_seat_truth_final.ndjson",
+  "status": "SUCCESS"
+}

@@ -29,11 +29,11 @@ const NarrativeEdge = ({ college }) => {
               <div className="roi-metrics-cluster">
                 <div className="roi-stat">
                   <span className="roi-label">Avg. Package</span>
-                  <span className="roi-val">₹{college?.placementData?.avgPackage || '12.5'} LPA</span>
+                  <span className="roi-val">{college?.placementData?.avgPackage || (college?.placements?.averagePackage ? college.placements.averagePackage : 'Pending Audit')}</span>
                 </div>
                 <div className="roi-stat">
                   <span className="roi-label">Max. Package</span>
-                  <span className="roi-val">₹{college?.placementData?.maxPackage || '45.0'} LPA</span>
+                  <span className="roi-val">{college?.placementData?.maxPackage || (college?.placements?.highestPackage ? college.placements.highestPackage : 'Evaluation In-Progress')}</span>
                 </div>
               </div>
             </div>

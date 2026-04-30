@@ -1,0 +1,112 @@
+{
+  "generated_at": "2026-04-25T10:43:00.307Z",
+  "total_tier_b": 13,
+  "upgraded_to_a": 0,
+  "remaining_gaps": 13,
+  "gaps": [
+    {
+      "institution_id": "CORE-IIIT-VADODARA",
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY VADODARA INTERNATIONAL CAMPUS DIU",
+      "state": "The Dadra and Nagar Haveli and Daman and Diu",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-GUWAHATI",
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, GUWAHATI",
+      "state": "Assam",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-BHAGALPUR",
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY BHAGALPUR",
+      "state": "Bihar",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-SURAT",
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SURAT",
+      "state": "Gujarat",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-VADODARA",
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, VADODARA",
+      "state": "Gujarat",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-RANCHI",
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, RANCHI",
+      "state": "Jharkhand",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-KOTTAYAM",
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KOTTAYAM",
+      "state": "Kerala",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-NAGPUR",
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, NAGPUR",
+      "state": "Maharashtra",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-PUNE",
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, PUNE",
+      "state": "Maharashtra",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-NIT-JAIPUR",
+      "name": "Malviya National Institute of Technology, Jaipur",
+      "state": "Rajasthan",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-KANCHEEPURAM",
+      "name": "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram",
+      "state": "Tamil Nadu",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-NIT-TRICHY",
+      "name": "National Institute of Technology, Tiruchirapalli",
+      "state": "Tamil Nadu",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    },
+    {
+      "institution_id": "CORE-IIIT-AGARTALA",
+      "name": "Indian Institute of Information Technology Agartala",
+      "state": "Tripura",
+      "missing": "fees",
+      "hasPlac": true,
+      "notes": "Has placements but no fee data. Check TNEA/FRA/state fee circulars."
+    }
+  ]
+}

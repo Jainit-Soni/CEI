@@ -71,7 +71,41 @@ function resolveId(idOrAlias) {
     const normalizedInput = input.replace(/[^a-z0-9]/g, '');
     if (aliasMap.has(normalizedInput)) return aliasMap.get(normalizedInput);
 
+    // Phase 22.3 - Resilient Identity Fallback
+    // If it looks like a canonical ID (e.g. CORE- or S-12345), return it directly
+    if (input.startsWith('core-') || /^[scu]-[0-9]+$/.test(input)) {
+        return idOrAlias;
+    }
+
     return null;
 }
 
-module.exports = { resolveId };
+/**
+ * Returns all known aliases and the canonical ID for a given institution.
+ * Used by truth routes to find all related truth rows.
+ */
+function getAllAliases(idOrAlias) {
+    if (!mapping) loadMapping();
+    const canonicalId = resolveId(idOrAlias);
+    if (!canonicalId) return [idOrAlias];
+
+    const aliases = [canonicalId];
+    
+    // Add all aliases from engineering_map that point to this canonical ID
+    Object.entries(mapping.engineering_map).forEach(([alias, targetId]) => {
+        if (targetId === canonicalId) {
+            aliases.push(alias);
+        }
+    });
+
+    // Add all MCC IDs that point to this canonical ID
+    Object.entries(mapping.mcc_map).forEach(([mccId, targetId]) => {
+        if (targetId === canonicalId) {
+            aliases.push(mccId);
+        }
+    });
+
+    return [...new Set(aliases)];
+}
+
+module.exports = { resolveId, getAllAliases };

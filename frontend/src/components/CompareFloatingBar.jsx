@@ -1,25 +1,18 @@
 "use client";
 
-import { useCompare } from "../lib/CompareContext";
+import { useCompare } from "@/hooks/useComparator";
 import { useRouter, usePathname } from "next/navigation";
 import Button from "./Button";
 import "./CompareFloatingBar.css";
 
 export default function CompareFloatingBar() {
-    const { compareList, removeFromCompare, setCompareList } = useCompare(); // I'll update context to include setCompareList or clearAll
+    const { compareList, removeFromCompare, clearAll } = useCompare();
     const router = useRouter();
     const pathname = usePathname();
 
     if (pathname !== "/colleges" && !pathname?.startsWith("/colleges?")) return null;
     if (compareList.length === 0) return null;
 
-    const clearAll = () => {
-        if (setCompareList) setCompareList([]);
-        else {
-            // Fallback if setCompareList isn't exposed (but I'll add it)
-            compareList.forEach(c => removeFromCompare(c.id));
-        }
-    };
 
     return (
         <div className="compare-bar-container bounceInUp">

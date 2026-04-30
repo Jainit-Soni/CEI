@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const identityResolver = require('../lib/identityResolver');
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const TRUTH_DIR = path.join(DATA_DIR, 'truth');
-const COLLEGES_FILE = path.join(DATA_DIR, 'colleges.ndjson');
+const COLLEGES_FILE = path.join(DATA_DIR, 'colleges_new.ndjson');
 const OUTPUT_FILE = path.join(DATA_DIR, 'colleges_new.ndjson');
 
 const LINKED_DIR = path.join(TRUTH_DIR, 'linked');
@@ -96,11 +97,23 @@ async function unifiedIngest() {
         let college;
         try { college = JSON.parse(line); } catch(e) { updatedLines.push(line); continue; }
 
+        const cid = identityResolver.resolveId(college.stableKey) || 
+                    identityResolver.resolveId(college.id) || 
+                    identityResolver.resolveId(college.name);
+
         const truthByName = truthMap.get(norm(college.name)) || {};
         const truthByKey = truthMap.get(college.stableKey) || {};
         const truthById = truthMap.get(college.id) || {};
         const truthByAishe = truthMap.get(college.aisheCode) || {};
-        const truth = { ...truthByName, ...truthByKey, ...truthById, ...truthByAishe };
+        const truthByCid = cid ? (truthMap.get(cid) || {}) : {};
+
+        const truth = { ...truthByName, ...truthByKey, ...truthById, ...truthByAishe, ...truthByCid };
+
+        // Precedence Check: If CID match exists, it should be the primary source of truth
+        if (cid && truthByCid && Object.keys(truthByCid).length > 0) {
+            // Strategic overwrite: Ensure CORE enrichment wins over stale catalog fallbacks
+            Object.assign(truth, truthByCid);
+        }
 
         if (truth && Object.keys(truth).length > 0) {
             matchedCount++;

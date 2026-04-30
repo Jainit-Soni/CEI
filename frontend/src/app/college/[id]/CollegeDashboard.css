@@ -209,6 +209,12 @@
   border-color: rgba(251, 191, 36, 0.3);
 }
 
+.b-sig.truth-completeness {
+  background: rgba(16, 185, 129, 0.05);
+  color: #059669;
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
 /* BENTO: Score Ring (Spans 4 columns) */
 .bento-score {
   grid-column: span 4;

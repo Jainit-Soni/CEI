@@ -1,0 +1,742 @@
+{
+  "timestamp": "2026-04-25T13:51:14.606Z",
+  "stats": {
+    "total": 128,
+    "resolved": 83,
+    "failed": 42,
+    "conflicts": 3
+  },
+  "resolution_details": [
+    {
+      "rawName": "Indian Institute of Technology Bhubaneswar",
+      "code": "101",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-BHUBANESHWAR"
+    },
+    {
+      "rawName": "Indian Institute of Technology Bombay",
+      "code": "102",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-BOMBAY"
+    },
+    {
+      "rawName": "Indian Institute of Technology Mandi",
+      "code": "103",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-MANDI"
+    },
+    {
+      "rawName": "Indian Institute of Technology Delhi",
+      "code": "104",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-DELHI"
+    },
+    {
+      "rawName": "Indian Institute of Technology Indore",
+      "code": "105",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-INDORE"
+    },
+    {
+      "rawName": "Indian Institute of Technology Kharagpur",
+      "code": "106",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-KHARAGPUR"
+    },
+    {
+      "rawName": "Indian Institute of Technology Hyderabad",
+      "code": "107",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-HYDERABAD"
+    },
+    {
+      "rawName": "Indian Institute of Technology Jodhpur",
+      "code": "108",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-JODHPUR"
+    },
+    {
+      "rawName": "Indian Institute of Technology Kanpur",
+      "code": "109",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-KANPUR"
+    },
+    {
+      "rawName": "Indian Institute of Technology Madras",
+      "code": "110",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-MADRAS"
+    },
+    {
+      "rawName": "Indian Institute of Technology Gandhinagar",
+      "code": "111",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-GANDHINAGAR"
+    },
+    {
+      "rawName": "Indian Institute of Technology Patna",
+      "code": "112",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-PATNA"
+    },
+    {
+      "rawName": "Indian Institute of Technology Roorkee",
+      "code": "113",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-ROORKEE"
+    },
+    {
+      "rawName": "Indian Institute of Technology (ISM) Dhanbad",
+      "code": "114",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-DHANBAD"
+    },
+    {
+      "rawName": "Indian Institute of Technology Ropar",
+      "code": "115",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-ROPAR"
+    },
+    {
+      "rawName": "Indian Institute of Technology (BHU) Varanasi",
+      "code": "116",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-VARANASI"
+    },
+    {
+      "rawName": "Indian Institute of Technology Guwahati",
+      "code": "117",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-GUWAHATI"
+    },
+    {
+      "rawName": "Indian Institute of Technology Bhilai",
+      "code": "118",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-BHILAI"
+    },
+    {
+      "rawName": "Indian Institute of Technology Goa",
+      "code": "119",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-GOA"
+    },
+    {
+      "rawName": "Indian Institute of Technology Palakkad",
+      "code": "120",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-PALAKKAD"
+    },
+    {
+      "rawName": "Indian Institute of Technology Tirupati",
+      "code": "121",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-TIRUPATI"
+    },
+    {
+      "rawName": "Indian Institute of Technology Jammu",
+      "code": "122",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-JAMMU"
+    },
+    {
+      "rawName": "Indian Institute of Technology Dharwad",
+      "code": "123",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIT-DHARWAD"
+    },
+    {
+      "rawName": "Dr. B R Ambedkar National Institute of Technology, Jalandhar",
+      "code": "201",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-JALANDHAR"
+    },
+    {
+      "rawName": "Malaviya National Institute of Technology Jaipur",
+      "code": "202",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-JAIPUR"
+    },
+    {
+      "rawName": "Maulana Azad National Institute of Technology Bhopal",
+      "code": "203",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-BHOPAL"
+    },
+    {
+      "rawName": "Motilal Nehru National Institute of Technology Allahabad",
+      "code": "204",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-ALLAHABAD"
+    },
+    {
+      "rawName": "National Institute of Technology Agartala",
+      "code": "205",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-AGARTALA"
+    },
+    {
+      "rawName": "National Institute of Technology Calicut",
+      "code": "206",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-CALICUT"
+    },
+    {
+      "rawName": "National Institute of Technology Delhi",
+      "code": "207",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-DELHI"
+    },
+    {
+      "rawName": "National Institute of Technology Durgapur",
+      "code": "208",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-DURGAPUR"
+    },
+    {
+      "rawName": "National Institute of Technology Goa",
+      "code": "209",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-GOA"
+    },
+    {
+      "rawName": "National Institute of Technology Hamirpur",
+      "code": "210",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-HAMIRPUR"
+    },
+    {
+      "rawName": "National Institute of Technology Karnataka, Surathkal",
+      "code": "211",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-SURATHKAL"
+    },
+    {
+      "rawName": "National Institute of Technology Meghalaya",
+      "code": "212",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-MEGHALAYA"
+    },
+    {
+      "rawName": "National Institute of Technology Nagaland",
+      "code": "213",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-NAGALAND"
+    },
+    {
+      "rawName": "National Institute of Technology Patna",
+      "code": "214",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-PATNA"
+    },
+    {
+      "rawName": "National Institute of Technology Puducherry",
+      "code": "215",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-PUDUCHERRY"
+    },
+    {
+      "rawName": "National Institute of Technology Raipur",
+      "code": "216",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-RAIPUR"
+    },
+    {
+      "rawName": "National Institute of Technology Sikkim",
+      "code": "217",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-SIKKIM"
+    },
+    {
+      "rawName": "National Institute of Technology Arunachal Pradesh",
+      "code": "218",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-ARUNACHAL-PRADESH"
+    },
+    {
+      "rawName": "National Institute of Technology, Jamshedpur",
+      "code": "219",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-JAMSHEDPUR"
+    },
+    {
+      "rawName": "National Institute of Technology, Kurukshetra",
+      "code": "220",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-KURUKSHETRA"
+    },
+    {
+      "rawName": "National Institute of Technology, Manipur",
+      "code": "221",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-MANIPUR"
+    },
+    {
+      "rawName": "National Institute of Technology, Mizoram",
+      "code": "222",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-MIZORAM"
+    },
+    {
+      "rawName": "National Institute of Technology, Rourkela",
+      "code": "223",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-ROURKELA"
+    },
+    {
+      "rawName": "National Institute of Technology, Silchar",
+      "code": "224",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-SILCHAR"
+    },
+    {
+      "rawName": "National Institute of Technology, Srinagar",
+      "code": "225",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-SRINAGAR"
+    },
+    {
+      "rawName": "National Institute of Technology, Tiruchirappalli",
+      "code": "226",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-TRICHY"
+    },
+    {
+      "rawName": "National Institute of Technology, Uttarakhand",
+      "code": "227",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-UTTARAKHAND"
+    },
+    {
+      "rawName": "National Institute of Technology, Warangal",
+      "code": "228",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-WARANGAL"
+    },
+    {
+      "rawName": "Sardar Vallabhbhai National Institute of Technology, Surat",
+      "code": "229",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-SURAT"
+    },
+    {
+      "rawName": "Visvesvaraya National Institute of Technology, Nagpur",
+      "code": "230",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-NAGPUR"
+    },
+    {
+      "rawName": "National Institute of Technology, Andhra Pradesh",
+      "code": "231",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NIT-ANDHRA-PRADESH"
+    },
+    {
+      "rawName": "Indian Institute of Engineering Science and Technology, Shibpur",
+      "code": "232",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-INDIAN-INSTITUTE-OF-ENGINEERING-SCIENCE-AND-TECHNOLOGY-SHIBPUR"
+    },
+    {
+      "rawName": "Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior",
+      "code": "301",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-GWALIOR"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology (IIIT)Kota, Rajasthan",
+      "code": "302",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-RAJASTHAN"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology Guwahati",
+      "code": "303",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-GUWAHATI"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology(IIIT) Kalyani, West Bengal",
+      "code": "304",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-BENGAL"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology(IIIT) Kilohrad, Sonepat, Haryana",
+      "code": "305",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-HARYANA"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology(IIIT) Una, Himachal Pradesh",
+      "code": "306",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-PRADESH"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology (IIIT), Sri City, Chittoor",
+      "code": "307",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-CHITTOOR"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology(IIIT), Vadodara, Gujrat",
+      "code": "308",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-VADODARA"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology, Allahabad",
+      "code": "309",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-ALLAHABAD"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram",
+      "code": "310",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-KANCHEEPURAM"
+    },
+    {
+      "rawName": "Pt. Dwarka Prasad Mishra Indian Institute of Information Technology, Design & Manufacture Jabalpur",
+      "code": "311",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-JABALPUR"
+    },
+    {
+      "rawName": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR",
+      "code": "313",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-MANIPUR"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology Tiruchirappalli",
+      "code": "314",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-TIRUCHIRAPPALLI"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology Lucknow",
+      "code": "315",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-LUCKNOW"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology(IIIT) Dharwad",
+      "code": "316",
+      "status": "CONFLICT",
+      "resolvedId": "CORE-IIT-DHARWAD"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology Design & Manufacturing Kurnool, Andhra Pradesh",
+      "code": "317",
+      "status": "CONFLICT",
+      "resolvedId": "CORE-IIIT-PRADESH"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology(IIIT) Kottayam",
+      "code": "318",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-KOTTAYAM"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology (IIIT) Ranchi",
+      "code": "319",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-RANCHI"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology (IIIT) Nagpur",
+      "code": "320",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-NAGPUR"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology (IIIT) Pune",
+      "code": "321",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-PUNE"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology Bhagalpur",
+      "code": "322",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-BHAGALPUR"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology Bhopal",
+      "code": "323",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-BHOPAL"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology Surat",
+      "code": "324",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-SURAT"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology, Agartala",
+      "code": "325",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-AGARTALA"
+    },
+    {
+      "rawName": "Indian institute of information technology, Raichur, Karnataka",
+      "code": "326",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-IIIT-KARNATAKA"
+    },
+    {
+      "rawName": "Indian Institute of Information Technology, Vadodara International Campus Diu (IIITVICD)",
+      "code": "327",
+      "status": "CONFLICT",
+      "resolvedId": "CORE-IIIT-VADODARA"
+    },
+    {
+      "rawName": "Assam University, Silchar",
+      "code": "401",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Birla Institute of Technology, Mesra, Ranchi",
+      "code": "402",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Gurukula Kangri Vishwavidyalaya, Haridwar",
+      "code": "403",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Indian Institute of Carpet Technology, Bhadohi",
+      "code": "404",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-INDIAN-INSTITUTE-OF-CARPET-TECHNOLOGY-BHADOHI"
+    },
+    {
+      "rawName": "Institute of Infrastructure, Technology, Research and Management-Ahmedabad",
+      "code": "405",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "School of Studies of Engineering and Technology, Guru Ghasidas Vishwavidyalaya, Bilaspur",
+      "code": "406",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "J.K. Institute of Applied Physics & Technology, Department of Electronics & Communication, University of Allahabad- Allahabad",
+      "code": "407",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "National Institute of Electronics and Information Technology, Aurangabad (Maharashtra)",
+      "code": "408",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "National Institute of Advanced Manufacturing Technology, Ranchi",
+      "code": "409",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Sant Longowal Institute of Engineering and Technology",
+      "code": "410",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Mizoram University, Aizawl",
+      "code": "411",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "School of Engineering, Tezpur University, Napaam, Tezpur",
+      "code": "412",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "School of Planning & Architecture, Bhopal",
+      "code": "413",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "School of Planning & Architecture, New Delhi",
+      "code": "414",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "School of Planning & Architecture: Vijayawada",
+      "code": "415",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Shri Mata Vaishno Devi University, Katra, Jammu & Kashmir",
+      "code": "416",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "International Institute of Information Technology, Naya Raipur",
+      "code": "420",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "University of Hyderabad",
+      "code": "421",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Punjab Engineering College, Chandigarh",
+      "code": "422",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-PUNJAB-ENGINEERING-COLLEGE-CHANDIGARH"
+    },
+    {
+      "rawName": "Jawaharlal Nehru University, Delhi",
+      "code": "423",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "International Institute of Information Technology, Bhubaneswar",
+      "code": "424",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Central institute of Technology Kokrajar, Assam",
+      "code": "425",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Puducherry Technological University, Puducherry",
+      "code": "426",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-PUDUCHERRY-TECHNOLOGICAL-UNIVERSITY-PUDUCHERRY"
+    },
+    {
+      "rawName": "Ghani Khan Choudhary Institute of Engineering and Technology, Malda, West Bengal",
+      "code": "427",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Central University of Rajasthan, Rajasthan",
+      "code": "428",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "National Institute of Food Technology Entrepreneurship and Management, Kundli",
+      "code": "430",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "National Institute of Food Technology Entrepreneurship and Management, Thanjavur",
+      "code": "431",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-NATIONAL-INSTITUTE-OF-FOOD-TECHNOLOGY-ENTREPRENEURSHIP-AND-MANAGEMENT-THANJAVUR"
+    },
+    {
+      "rawName": "North Eastern Regional Institute of Science and Technology, Nirjuli-791109 (Itanagar),Arunachal Pradesh",
+      "code": "432",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Indian Institute of Handloom Technology(IIHT), Varanasi",
+      "code": "433",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Chhattisgarh Swami Vivekanada Technical University, Bhilai (CSVTU Bhilai)",
+      "code": "434",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Institute of Chemical Technology, Mumbai: Indian Oil Odisha Campus, Bhubaneswar",
+      "code": "435",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "North-Eastern Hill University, Shillong",
+      "code": "436",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Central University of Jammu",
+      "code": "437",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Institute of Engineering and Technology, Dr. H. S. Gour University. Sagar (A Central University)",
+      "code": "438",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Central University of Haryana",
+      "code": "439",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Birla Institute of Technology, Deoghar Off-Campus",
+      "code": "440",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Birla Institute of Technology, Patna Off-Campus",
+      "code": "441",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Indian Institute of Handloom Technology, Salem",
+      "code": "442",
+      "status": "RESOLVED",
+      "resolvedId": "CORE-INDIAN-INSTITUTE-OF-HANDLOOM-TECHNOLOGY-SALEM"
+    },
+    {
+      "rawName": "Gati Shakti Vishwavidyalaya, Vadodara",
+      "code": "443",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "CU Jharkhand",
+      "code": "444",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "National Institute of Electronics and Information Technology, Ropar (Punjab)",
+      "code": "445",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "National Institute of Electronics and Information Technology, Patna (Bihar)",
+      "code": "446",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "National Institute of Electronics and Information Technology, Ajmer (Rajasthan)",
+      "code": "447",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "National Institute of Electronics and Information Technology, Gorakhpur (UP)",
+      "code": "448",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Rajiv Gandhi National Aviation University, Fursatganj, Amethi (UP)",
+      "code": "449",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Islamic University of Science and Technology Kashmir",
+      "code": "450",
+      "status": "FAILED"
+    },
+    {
+      "rawName": "Shri G. S. Institute of Technology and Science Indore",
+      "code": "451",
+      "status": "FAILED"
+    }
+  ],
+  "db_updates": {
+    "engineering_cutoffs": 50867,
+    "seat_matrix": 1768,
+    "institutions": 54
+  }
+}

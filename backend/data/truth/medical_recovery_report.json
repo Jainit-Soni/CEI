@@ -1,0 +1,308 @@
+{
+  "timestamp": "2026-04-26T19:06:15.018Z",
+  "stats": {
+    "total_null_id": 59,
+    "recovered": 13,
+    "irrecoverable": 37,
+    "non_null_passthrough": 14,
+    "deduplicated": 9
+  },
+  "recovery_rate": "22.0%",
+  "output_file": "E:\\CMAT-PROBLEM\\backend\\data\\truth\\medical_seat_truth_recovered.ndjson",
+  "recovery_log": [
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 25
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 86
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 94
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 118
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 122
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 160
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 189
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 200
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 207
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 214
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 221
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 228
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200687",
+      "entity_id": "MCC-200687-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 235
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 242
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 249
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR B.SC NURSING ROUND 1 UG 2025",
+      "line": 256
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "FINAL SEAT MATRIX FOR ESIC IP ROUND 1 UG 2025 (MBBS & BDS)",
+      "line": 57
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200541",
+      "entity_id": "MCC-200541-BSC_NURSING"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200543",
+      "entity_id": "MCC-200543-MBBS",
+      "confidence": "INFERRED"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "SEAT MATRIX STRAY ROUND UG 2025",
+      "line": 304
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200687",
+      "entity_id": "MCC-200687-BSC_NURSING"
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "SEAT MATRIX STRAY ROUND UG 2025",
+      "line": 1765
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "SEAT MATRIX STRAY ROUND UG 2025",
+      "line": 1766
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_code_in_context",
+      "doc": "SEAT MATRIX STRAY ROUND UG 2025",
+      "line": 1768
+    },
+    {
+      "status": "FAILED",
+      "reason": "no_entity_for_recovered_id",
+      "mcc_id": "200687",
+      "entity_id": "MCC-200687-BSC_NURSING"
+    },
+    {
+      "status": "RECOVERED",
+      "mcc_id": "200215",
+      "entity_id": "MCC-200215-BDS",
+      "confidence": "HIGH"
+    }
+  ]
+}

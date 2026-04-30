@@ -16,7 +16,7 @@ export default function AdmissionTruthSummary({ collegeId, searchName }) {
     });
 
     useEffect(() => {
-        if (!searchName) return;
+        if (!searchName && !collegeId) return;
 
         const checkAvailability = async () => {
             const name = searchName;
@@ -50,7 +50,7 @@ export default function AdmissionTruthSummary({ collegeId, searchName }) {
         };
 
         checkAvailability();
-    }, [searchName]);
+    }, [searchName, collegeId]);
 
     const scrollToSection = (id) => {
         const el = document.getElementById(id);

@@ -1,0 +1,1259 @@
+[
+  {
+    "institution_id": "CORE-IIIT-AGARTALA",
+    "canonical_name": "Indian Institute of Information Technology Agartala",
+    "state": "Tripura",
+    "discovered_aishe_code": "U-1158",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+    "canonical_name": "Indian Institute of Information Technology, Allahabad",
+    "state": "Uttar Pradesh",
+    "discovered_aishe_code": "U-0516",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHAGALPUR",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY BHAGALPUR",
+    "state": "Bihar",
+    "discovered_aishe_code": "U-0953",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-CITY",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SRI CITY",
+    "state": "Andhra Pradesh",
+    "discovered_aishe_code": "U-0760",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-DHARWAD",
+    "canonical_name": "Indian Institute of Information Technology, Dharwad",
+    "state": "Karnataka",
+    "discovered_aishe_code": "U-0803",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-GUWAHATI",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, GUWAHATI",
+    "state": "Assam",
+    "discovered_aishe_code": "U-0795",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-GWALIOR",
+    "canonical_name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management, Gwalior",
+    "state": "Madhya Pradesh",
+    "discovered_aishe_code": "U-0267",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-JABALPUR",
+    "canonical_name": "Pandhi Dwarka Prasad Mishra Indian Institute of Information Technology & Manufacturing , Jabalpur",
+    "state": "Madhya Pradesh",
+    "discovered_aishe_code": "U-0286",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-KALYANI",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KALYANI",
+    "state": "West Bengal",
+    "discovered_aishe_code": "U-0796",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+    "canonical_name": "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram",
+    "state": "Tamil Nadu",
+    "discovered_aishe_code": "U-0455",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-KOTA",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KOTA",
+    "state": "Rajasthan",
+    "discovered_aishe_code": "U-0799",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-KOTTAYAM",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KOTTAYAM",
+    "state": "Kerala",
+    "discovered_aishe_code": "U-0802",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-KURNOOL",
+    "canonical_name": "Indian Institute of Information Technology Design And Manufacturing, Kurnool",
+    "state": "Andhra Pradesh",
+    "discovered_aishe_code": "U-0863",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-LUCKNOW",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, LUCKNOW",
+    "state": "Uttar Pradesh",
+    "discovered_aishe_code": "U-0801",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-NAGPUR",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, NAGPUR",
+    "state": "Maharashtra",
+    "discovered_aishe_code": "U-0841",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-PUNE",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, PUNE",
+    "state": "Maharashtra",
+    "discovered_aishe_code": "U-0804",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-RAICHUR",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY RAICHUR",
+    "state": "Karnataka",
+    "discovered_aishe_code": "U-1089",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-RANCHI",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, RANCHI",
+    "state": "Jharkhand",
+    "discovered_aishe_code": "U-0840",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-SENAPATI",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SENAPATI",
+    "state": "Manipur",
+    "discovered_aishe_code": "U-0770",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-SONIPAT",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SONIPAT",
+    "state": "Haryana",
+    "discovered_aishe_code": "U-0800",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-SRIRANGAM",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SRIRANGAM",
+    "state": "Tamil Nadu",
+    "discovered_aishe_code": "U-0754",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SURAT",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SURAT",
+    "state": "Gujarat",
+    "discovered_aishe_code": "U-0954",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-TECHNOLOGY",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY",
+    "state": "Madhya Pradesh",
+    "discovered_aishe_code": "U-1193",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIIT-VADODARA",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY VADODARA INTERNATIONAL CAMPUS DIU",
+    "state": "The Dadra and Nagar Haveli and Daman and Diu",
+    "discovered_aishe_code": "C-63929",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-BHILAI",
+    "canonical_name": "Indian Institute of Technology Bhilai",
+    "state": "Chhattisgarh",
+    "discovered_aishe_code": "U-0946",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-BHUBANESHWAR",
+    "canonical_name": "Indian Institute of Technology, Bhubaneshwar",
+    "state": "Odisha",
+    "discovered_aishe_code": "U-0355",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-DELHI",
+    "canonical_name": "Indian Institute of Technology Delhi",
+    "discovered_aishe_code": "U-0100",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-DHANBAD",
+    "canonical_name": "Indian Institute of Technology (Indian School of Mines), Dhanbad",
+    "state": "Jharkhand",
+    "discovered_aishe_code": "U-0205",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-DHARWAD",
+    "canonical_name": "Indian Institute of Technology, Dharwad",
+    "state": "Karnataka",
+    "discovered_aishe_code": "U-0899",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-GANDHINAGAR",
+    "canonical_name": "Indian Institute of Technology, Gandhinagar",
+    "state": "Gujarat",
+    "discovered_aishe_code": "U-0139",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-GOA",
+    "canonical_name": "Indian Institute of Technology, Goa",
+    "state": "Goa",
+    "discovered_aishe_code": "U-0907",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-GUWAHATI",
+    "canonical_name": "Indian Institute of Technology Guwahati",
+    "discovered_aishe_code": "U-0053",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-HYDERABAD",
+    "canonical_name": "Indian Institute of Technology Hyderabad",
+    "discovered_aishe_code": "U-0013",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-INDORE",
+    "canonical_name": "Indian Institute of Technology, Indore",
+    "state": "Madhya Pradesh",
+    "discovered_aishe_code": "U-0273",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-JAMMU",
+    "canonical_name": "Indian Institute of Technology Jammu",
+    "state": "Jammu and Kashmir",
+    "discovered_aishe_code": "U-0906",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-JODHPUR",
+    "canonical_name": "Indian Institute of Technology, Jodhpur",
+    "state": "Rajasthan",
+    "discovered_aishe_code": "U-0395",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-KANPUR",
+    "canonical_name": "Indian Institute of Technology Kanpur",
+    "discovered_aishe_code": "U-0517",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-KHARAGPUR",
+    "canonical_name": "Indian Institute of Technology Kharagpur",
+    "discovered_aishe_code": "U-0573",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-MADRAS",
+    "canonical_name": "Indian Institute of Technology Madras",
+    "discovered_aishe_code": "U-0456",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-MANDI",
+    "canonical_name": "Indian Institute of Technology, Mandi",
+    "state": "Himachal Pradesh",
+    "discovered_aishe_code": "U-0184",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-PALAKKAD",
+    "canonical_name": "Indian Institute of Technology, Palakkad",
+    "state": "Kerala",
+    "discovered_aishe_code": "U-0878",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-PATNA",
+    "canonical_name": "Indian Institute of Technology, Patna",
+    "state": "Bihar",
+    "discovered_aishe_code": "U-0064",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-ROORKEE",
+    "canonical_name": "Indian Institute of Technology Roorkee",
+    "discovered_aishe_code": "U-0560",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-ROPAR",
+    "canonical_name": "Indian Institute of Technology, Ropar",
+    "state": "Punjab",
+    "discovered_aishe_code": "U-0378",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-TIRUPATI",
+    "canonical_name": "Indian Institute of Technology, Tirupati",
+    "state": "Andhra Pradesh",
+    "discovered_aishe_code": "U-0844",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-IIT-VARANASI",
+    "canonical_name": "Indian Institute of Technology (Banaras Hindu University), Varanasi",
+    "state": "Uttar Pradesh",
+    "discovered_aishe_code": "U-0701",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-AGARTALA",
+    "canonical_name": "National Institute of Technology, Agartala",
+    "state": "Tripura",
+    "discovered_aishe_code": "U-0493",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+    "canonical_name": "Motilal Nehru National Institute of Technology, Allahabad",
+    "state": "Uttar Pradesh",
+    "discovered_aishe_code": "U-0530",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-ANDHRA-PRADESH",
+    "canonical_name": "NATIONAL INSTITUTE OF TECHNOLOGY, ANDHRA PRADESH",
+    "state": "Andhra Pradesh",
+    "discovered_aishe_code": "U-0855",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-ARUNACHAL-PRADESH",
+    "canonical_name": "National Institute of Technology Arunachal Pradesh",
+    "state": "Arunachal Pradesh",
+    "discovered_aishe_code": "U-0615",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+    "canonical_name": "Maulana Azad National Institute of Technology, Bhopal",
+    "state": "Madhya Pradesh",
+    "discovered_aishe_code": "U-0284",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-CALICUT",
+    "canonical_name": "National Institute of Technology, Calicut",
+    "state": "Kerala",
+    "discovered_aishe_code": "U-0263",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-DELHI",
+    "canonical_name": "National Institute of Technology Delhi",
+    "state": "Delhi",
+    "discovered_aishe_code": "U-0622",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-DURGAPUR",
+    "canonical_name": "National Institute of Technology, Durgapur",
+    "state": "West Bengal",
+    "discovered_aishe_code": "U-0577",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-GOA",
+    "canonical_name": "National Institute of Technology Goa",
+    "state": "Goa",
+    "discovered_aishe_code": "U-0620",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-HAMIRPUR",
+    "canonical_name": "National Institute of Technology, Hamirpur",
+    "state": "Himachal Pradesh",
+    "discovered_aishe_code": "U-0189",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "Sine International Institute of Technology,Jaipur",
+    "canonical_name": "Sine International Institute of Technology,Jaipur",
+    "state": "Rajasthan",
+    "discovered_aishe_code": "C-25191",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-JAIPUR",
+    "canonical_name": "Malviya National Institute of Technology, Jaipur",
+    "state": "Rajasthan",
+    "discovered_aishe_code": "U-0410",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+    "canonical_name": "Dr. B. R. Ambedkar National Institute of Technology, Jalandhar",
+    "state": "Punjab",
+    "discovered_aishe_code": "U-0374",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-JAMSHEDPUR",
+    "canonical_name": "National Institute of Technology, Jamshedpur",
+    "state": "Jharkhand",
+    "discovered_aishe_code": "U-0207",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-KURUKSHETRA",
+    "canonical_name": "National Institute of Technology, Kurukshetra",
+    "state": "Haryana",
+    "discovered_aishe_code": "U-0172",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-MANIPUR",
+    "canonical_name": "National Institute of Technology Manipur",
+    "state": "Manipur",
+    "discovered_aishe_code": "U-0613",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-MEGHALAYA",
+    "canonical_name": "National Institute of Technology Meghalaya",
+    "state": "Meghalaya",
+    "discovered_aishe_code": "U-0619",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-MIZORAM",
+    "canonical_name": "National Institute of Technology Mizoram",
+    "state": "Mizoram",
+    "discovered_aishe_code": "U-0617",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-NAGALAND",
+    "canonical_name": "National Institute of Technology Nagaland",
+    "state": "Nagaland",
+    "discovered_aishe_code": "U-0618",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+    "canonical_name": "Visvesvaraya National Institute of Technology, Nagpur",
+    "state": "Maharashtra",
+    "discovered_aishe_code": "U-0334",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-PATNA",
+    "canonical_name": "National Institute of Technology, Patna",
+    "state": "Bihar",
+    "discovered_aishe_code": "U-0072",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-PUDUCHERRY",
+    "canonical_name": "National Institute of Technology Puducherry",
+    "state": "Puducherry",
+    "discovered_aishe_code": "U-0621",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-RAIPUR",
+    "canonical_name": "National Institute of Technology, Raipur",
+    "state": "Chhattisgarh",
+    "discovered_aishe_code": "U-0092",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-ROURKELA",
+    "canonical_name": "National Institute of Technology, Rourkela",
+    "state": "Odisha",
+    "discovered_aishe_code": "U-0357",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-SIKKIM",
+    "canonical_name": "National Institute of Technology Sikkim",
+    "state": "Sikkim",
+    "discovered_aishe_code": "U-0614",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-SILCHAR",
+    "canonical_name": "National Institute of Technology, Silchar",
+    "state": "Assam",
+    "discovered_aishe_code": "U-0055",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-SRINAGAR",
+    "canonical_name": "National Institute of Technology, Srinagar",
+    "state": "Jammu and Kashmir",
+    "discovered_aishe_code": "U-0197",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+    "canonical_name": "Sardar Vallabhbhai National Institute of Technology, Surat",
+    "state": "Gujarat",
+    "discovered_aishe_code": "U-0149",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-SURATHKAL",
+    "canonical_name": "National Institute of Technology, Karnataka",
+    "state": "Karnataka",
+    "discovered_aishe_code": "U-0237",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-TRICHY",
+    "canonical_name": "National Institute of Technology, Tiruchirapalli",
+    "state": "Tamil Nadu",
+    "discovered_aishe_code": "U-0467",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-UTTARAKHAND",
+    "canonical_name": "National Institute of Technology Uttarakhand",
+    "state": "Uttarakhand",
+    "discovered_aishe_code": "U-0616",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NIT-WARANGAL",
+    "canonical_name": "National Institute of Technology, Warangal",
+    "state": "Telangana",
+    "discovered_aishe_code": "U-0025",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA",
+    "canonical_name": "National Institute of Technology, Rourkela",
+    "state": "",
+    "discovered_aishe_code": "U-0357",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA",
+    "canonical_name": "National Institute of Technology, Kurukshetra",
+    "state": "",
+    "discovered_aishe_code": "U-0172",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL",
+    "canonical_name": "National Institute of Technology, Warangal",
+    "state": "",
+    "discovered_aishe_code": "U-0025",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "canonical_name": "National Institute of Technology Patna",
+    "state": "",
+    "discovered_aishe_code": "U-0072",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+    "canonical_name": "National Institute of Technology Calicut",
+    "state": "",
+    "discovered_aishe_code": "U-0263",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+    "canonical_name": "National Institute of Technology Raipur",
+    "state": "",
+    "discovered_aishe_code": "U-0092",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR",
+    "canonical_name": "Indian Institute of Technology Kharagpur",
+    "state": "",
+    "discovered_aishe_code": "U-0573",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA",
+    "canonical_name": "National Institute of Technology Karnataka, Surathkal",
+    "state": "",
+    "discovered_aishe_code": "U-0237",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI",
+    "canonical_name": "Indian Institute of Technology Delhi",
+    "state": "",
+    "discovered_aishe_code": "U-0100",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+    "canonical_name": "National Institute of Technology Hamirpur",
+    "state": "",
+    "discovered_aishe_code": "U-0189",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+    "canonical_name": "National Institute of Technology, Tiruchirappalli",
+    "state": "",
+    "discovered_aishe_code": "U-0467",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "canonical_name": "Indian Institute of Technology Patna",
+    "state": "",
+    "discovered_aishe_code": "U-0064",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+    "canonical_name": "National Institute of Technology Durgapur",
+    "state": "",
+    "discovered_aishe_code": "U-0577",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+    "canonical_name": "National Institute of Technology Agartala",
+    "state": "",
+    "discovered_aishe_code": "U-0493",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "Malaviya National Institute of Technology Jaipur",
+    "canonical_name": "Malaviya National Institute of Technology Jaipur",
+    "state": "",
+    "discovered_aishe_code": "U-0410",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE",
+    "canonical_name": "Indian Institute of Technology Roorkee",
+    "state": "",
+    "discovered_aishe_code": "U-0560",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MADRAS",
+    "canonical_name": "Indian Institute of Technology Madras",
+    "state": "",
+    "discovered_aishe_code": "U-0456",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "Indian Institute of Technology (ISM) Dhanbad",
+    "canonical_name": "Indian Institute of Technology (ISM) Dhanbad",
+    "state": "",
+    "discovered_aishe_code": "U-0205",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR",
+    "canonical_name": "National Institute of Technology, Srinagar",
+    "state": "",
+    "discovered_aishe_code": "U-0197",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI",
+    "canonical_name": "Indian Institute of Technology (BHU) Varanasi",
+    "state": "",
+    "discovered_aishe_code": "U-0701",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR",
+    "canonical_name": "National Institute of Technology, Jamshedpur",
+    "state": "",
+    "discovered_aishe_code": "U-0207",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ANDHRA-PRADESH",
+    "canonical_name": "National Institute of Technology, Andhra Pradesh",
+    "state": "",
+    "discovered_aishe_code": "U-0855",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD",
+    "canonical_name": "Indian Institute of Technology Hyderabad",
+    "state": "",
+    "discovered_aishe_code": "U-0013",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR",
+    "canonical_name": "Indian Institute of Technology Kanpur",
+    "state": "",
+    "discovered_aishe_code": "U-0517",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR",
+    "canonical_name": "National Institute of Technology, Silchar",
+    "state": "",
+    "discovered_aishe_code": "U-0055",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DELHI",
+    "canonical_name": "National Institute of Technology Delhi",
+    "state": "",
+    "discovered_aishe_code": "U-0622",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI",
+    "canonical_name": "Indian Institute of Technology Guwahati",
+    "state": "",
+    "discovered_aishe_code": "U-0053",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+    "canonical_name": "Indian Institute of Technology Mandi",
+    "state": "",
+    "discovered_aishe_code": "U-0184",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+    "canonical_name": "Indian Institute of Technology Ropar",
+    "state": "",
+    "discovered_aishe_code": "U-0378",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+    "canonical_name": "Indian Institute of Technology Jodhpur",
+    "state": "",
+    "discovered_aishe_code": "U-0395",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-GOA",
+    "canonical_name": "National Institute of Technology Goa",
+    "state": "",
+    "discovered_aishe_code": "U-0620",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+    "canonical_name": "Indian Institute of Technology Indore",
+    "state": "",
+    "discovered_aishe_code": "U-0273",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PUDUCHERRY",
+    "canonical_name": "National Institute of Technology Puducherry",
+    "state": "",
+    "discovered_aishe_code": "U-0621",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+    "canonical_name": "Indian Institute of Technology Dharwad",
+    "state": "",
+    "discovered_aishe_code": "U-0899",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-UTTARAKHAND",
+    "canonical_name": "National Institute of Technology, Uttarakhand",
+    "state": "",
+    "discovered_aishe_code": "U-0616",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "canonical_name": "Birla Institute of Technology, Patna Off-Campus",
+    "state": "",
+    "discovered_aishe_code": "C-8339",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+    "canonical_name": "Indian Institute of Technology Gandhinagar",
+    "state": "",
+    "discovered_aishe_code": "U-0139",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR",
+    "canonical_name": "Indian Institute of Technology Bhubaneswar",
+    "state": "",
+    "discovered_aishe_code": "U-0355",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-SANT-LONGOWAL-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+    "canonical_name": "Sant Longowal Institute of Engineering and Technology",
+    "state": "",
+    "discovered_aishe_code": "U-0384",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL",
+    "canonical_name": "Indian Institute of Information Technology Design & Manufacturing Kurnool, Andhra Pradesh",
+    "state": "",
+    "discovered_aishe_code": "U-0863",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SIKKIM",
+    "canonical_name": "National Institute of Technology Sikkim",
+    "state": "",
+    "discovered_aishe_code": "U-0614",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ARUNACHAL-PRADESH",
+    "canonical_name": "National Institute of Technology Arunachal Pradesh",
+    "state": "",
+    "discovered_aishe_code": "U-0615",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JAMMU",
+    "canonical_name": "Indian Institute of Technology Jammu",
+    "state": "",
+    "discovered_aishe_code": "U-0906",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MANIPUR",
+    "canonical_name": "National Institute of Technology, Manipur",
+    "state": "",
+    "discovered_aishe_code": "U-0613",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHILAI",
+    "canonical_name": "Indian Institute of Technology Bhilai",
+    "state": "",
+    "discovered_aishe_code": "U-0946",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MEGHALAYA",
+    "canonical_name": "National Institute of Technology Meghalaya",
+    "state": "",
+    "discovered_aishe_code": "U-0619",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+    "canonical_name": "Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior",
+    "state": "",
+    "discovered_aishe_code": "U-0267",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MIZORAM",
+    "canonical_name": "National Institute of Technology, Mizoram",
+    "state": "",
+    "discovered_aishe_code": "U-0617",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHOPAL",
+    "canonical_name": "Indian Institute of Information Technology Bhopal",
+    "state": "",
+    "discovered_aishe_code": "U-1193",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SENAPATI-MANIPUR",
+    "canonical_name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY SENAPATI MANIPUR",
+    "state": "",
+    "discovered_aishe_code": "U-0770",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR",
+    "canonical_name": "Pt. Dwarka Prasad Mishra Indian Institute of Information Technology, Design & Manufacture Jabalpur",
+    "state": "",
+    "discovered_aishe_code": "U-0286",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+    "canonical_name": "Indian Institute of Technology Tirupati",
+    "state": "",
+    "discovered_aishe_code": "U-0844",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGALAND",
+    "canonical_name": "National Institute of Technology Nagaland",
+    "state": "",
+    "discovered_aishe_code": "U-0618",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-SCHOOL-OF-STUDIES-OF-ENGINEERING-AND-TECHNOLOGY-GURU-GHASIDAS-VISHWAVIDYALAYA-BILASPUR",
+    "canonical_name": "School of Studies of Engineering and Technology, Guru Ghasidas Vishwavidyalaya, Bilaspur",
+    "state": "",
+    "discovered_aishe_code": "U-0085",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-SCHOOL-OF-ENGINEERING-TEZPUR-UNIVERSITY-NAPAAM-TEZPUR",
+    "canonical_name": "School of Engineering, Tezpur University, Napaam, Tezpur",
+    "state": "",
+    "discovered_aishe_code": "U-0056",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+    "canonical_name": "Indian Institute of Technology Palakkad",
+    "state": "",
+    "discovered_aishe_code": "U-0878",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTTAYAM",
+    "canonical_name": "Indian Institute of Information Technology(IIIT) Kottayam",
+    "state": "",
+    "discovered_aishe_code": "U-0802",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA",
+    "canonical_name": "Indian Institute of Information Technology(IIIT), Vadodara, Gujrat",
+    "state": "",
+    "discovered_aishe_code": "U-0798",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-ASSAM-UNIVERSITY-SILCHAR",
+    "canonical_name": "Assam University, Silchar",
+    "state": "",
+    "discovered_aishe_code": "U-0005",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-SHRI-MATA-VAISHNO-DEVI-UNIVERSITY-KATRA-JAMMU-KASHMIR",
+    "canonical_name": "Shri Mata Vaishno Devi University, Katra, Jammu & Kashmir",
+    "state": "",
+    "discovered_aishe_code": "U-0201",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-GATI-SHAKTI-VISHWAVIDYALAYA-VADODARA",
+    "canonical_name": "Gati Shakti Vishwavidyalaya, Vadodara",
+    "state": "",
+    "discovered_aishe_code": "U-0968",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAGPUR",
+    "canonical_name": "Indian Institute of Information Technology (IIIT) Nagpur",
+    "state": "",
+    "discovered_aishe_code": "U-0841",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-DEOGHAR",
+    "canonical_name": "Birla Institute of Technology, Deoghar Off-Campus",
+    "state": "",
+    "discovered_aishe_code": "C-8344",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-ADVANCED-MANUFACTURING-TECHNOLOGY-RANCHI",
+    "canonical_name": "National Institute of Advanced Manufacturing Technology, Ranchi",
+    "state": "",
+    "discovered_aishe_code": "S-14324",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTA",
+    "canonical_name": "Indian Institute of Information Technology (IIIT)Kota, Rajasthan",
+    "state": "",
+    "discovered_aishe_code": "U-0799",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RAICHUR",
+    "canonical_name": "Indian institute of information technology, Raichur, Karnataka",
+    "state": "",
+    "discovered_aishe_code": "U-1089",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-TIRUCHIRAPPALLI",
+    "canonical_name": "Indian Institute of Information Technology Tiruchirappalli",
+    "state": "",
+    "discovered_aishe_code": "U-0754",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRI-CITY",
+    "canonical_name": "Indian Institute of Information Technology (IIIT), Sri City, Chittoor",
+    "state": "",
+    "discovered_aishe_code": "U-0760",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+    "canonical_name": "Indian Institute of Technology Goa",
+    "state": "",
+    "discovered_aishe_code": "U-0907",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD",
+    "canonical_name": "Indian Institute of Information Technology(IIIT) Dharwad",
+    "state": "",
+    "discovered_aishe_code": "U-0803",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KALYANI",
+    "canonical_name": "Indian Institute of Information Technology(IIIT) Kalyani, West Bengal",
+    "state": "",
+    "discovered_aishe_code": "U-0796",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA-INTERNATIONAL-CAMPUS-DIU",
+    "canonical_name": "Indian Institute of Information Technology, Vadodara International Campus Diu (IIITVICD)",
+    "state": "",
+    "discovered_aishe_code": "C-63929",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RANCHI",
+    "canonical_name": "Indian Institute of Information Technology (IIIT) Ranchi",
+    "state": "",
+    "discovered_aishe_code": "U-0840",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-UNA",
+    "canonical_name": "Indian Institute of Information Technology(IIIT) Una, Himachal Pradesh",
+    "state": "",
+    "discovered_aishe_code": "U-0797",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-DR-H-S-GOUR-UNIVERSITY-SAGAR",
+    "canonical_name": "Institute of Engineering and Technology, Dr. H. S. Gour University. Sagar (A Central University)",
+    "state": "",
+    "discovered_aishe_code": "U-0271",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-PUNE",
+    "canonical_name": "Indian Institute of Information Technology (IIIT) Pune",
+    "state": "",
+    "discovered_aishe_code": "U-0804",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-CENTRAL-UNIVERSITY-OF-JAMMU",
+    "canonical_name": "Central University of Jammu",
+    "state": "",
+    "discovered_aishe_code": "U-0210",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-MIZORAM-UNIVERSITY-AIZAWL",
+    "canonical_name": "Mizoram University, Aizawl",
+    "state": "",
+    "discovered_aishe_code": "U-0345",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-GURUKULA-KANGRI-VISHWAVIDYALAYA-HARIDWAR",
+    "canonical_name": "Gurukula Kangri Vishwavidyalaya, Haridwar",
+    "state": "",
+    "discovered_aishe_code": "U-0556",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  },
+  {
+    "institution_id": "CORE-CENTRAL-UNIVERSITY-OF-HARYANA",
+    "canonical_name": "Central University of Haryana",
+    "state": "",
+    "discovered_aishe_code": "U-0158",
+    "confidence": "MEDIUM",
+    "source": "aishe_name_unique_match"
+  }
+]

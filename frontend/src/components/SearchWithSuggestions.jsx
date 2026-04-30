@@ -31,12 +31,19 @@ export default function SearchWithSuggestions({
     }
   }, [initialValue]);
 
+  const abortControllerRef = useRef(null);
+
   const fetchSuggestions = useCallback(async (searchQuery) => {
     if (!searchQuery.trim()) {
       setSuggestions([]);
       setIsOpen(false);
       return;
     }
+
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+    abortControllerRef.current = new AbortController();
 
     setIsLoading(true);
     try {
@@ -50,14 +57,19 @@ export default function SearchWithSuggestions({
       const data = await suggest({
         q: searchQuery,
         type: typeMap[scope] || "all"
-      });
+      }, { signal: abortControllerRef.current.signal });
       setSuggestions(Array.isArray(data) ? data : []);
       setIsOpen((data || []).length > 0);
     } catch (err) {
+      if (err.name === 'CanceledError' || err.name === 'AbortError' || (err.message && err.message.includes('cancel'))) {
+        return; // Ignore canceled requests
+      }
       console.error("Failed to fetch suggestions:", err);
       setSuggestions([]);
     } finally {
-      setIsLoading(false);
+      if (abortControllerRef.current && !abortControllerRef.current.signal.aborted) {
+        setIsLoading(false);
+      }
     }
   }, [scope]);
 
@@ -75,7 +87,7 @@ export default function SearchWithSuggestions({
       if (onChange) {
         onChange(value);
       }
-    }, 300);
+    }, 400);
   };
 
   const handleScopeChange = (newScope) => {
@@ -129,6 +141,7 @@ export default function SearchWithSuggestions({
   };
 
   const highlightMatch = (text, q) => {
+    if (!text) return text ?? '';
     if (!q.trim()) return text;
     const regex = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
     const parts = text.split(regex);
@@ -259,6 +272,17 @@ export default function SearchWithSuggestions({
               );
             }
 
+            // [CEI] Resolve display name through priority chain — never show a blank title
+            const displayName =
+              item.name ||
+              item.fullName ||
+              item.institution_name ||
+              item.label ||
+              'Unnamed institution';
+
+            // [CEI] Subtitle: prefer real location data; do NOT fall back to raw type string
+            const displayMeta = item.subtitle || item.location || null;
+
             return (
               <li key={`${item.type}-${item.id}`} role="option" aria-selected={index === activeIndex}>
                 <Link
@@ -268,11 +292,11 @@ export default function SearchWithSuggestions({
                 >
                   <div className="suggestion-content">
                     <span className="suggestion-title">
-                      {highlightMatch(item.name, query)}
+                      {highlightMatch(displayName, query)}
                     </span>
-                    <span className="suggestion-meta">
-                      {item.subtitle || item.location || item.type}
-                    </span>
+                    {displayMeta && (
+                      <span className="suggestion-meta">{displayMeta}</span>
+                    )}
                   </div>
                   <span className={`suggestion-badge suggestion-badge--${item.type}`}>
                     {item.type === "college" ? "College" : "Exam"}

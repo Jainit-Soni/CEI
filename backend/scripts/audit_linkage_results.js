@@ -9,7 +9,7 @@ async function runAudit() {
         const db = mongoose.connection.db;
 
         const targets = [
-            { id: 'CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI', type: 'Engineering' },
+            { id: 'CORE-IIT-BOMBAY', type: 'Engineering' },
             { id: 'CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-CHENNAI', type: 'Engineering' },
             { id: 'CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI', type: 'Engineering' },
             { id: 'CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD', type: 'Engineering' },

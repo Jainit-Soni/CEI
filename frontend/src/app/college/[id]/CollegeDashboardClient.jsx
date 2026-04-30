@@ -142,6 +142,7 @@ export default function CollegeDashboardClient({ id, initialData }) {
 
     // Derive best location string
     const locationString = college.location || [college.address?.city || college.city || college.district, college.state].filter(Boolean).join(", ") || null;
+    const resolvedCollegeId = college.institution_id || college.id || college._id;
 
     return (
         <div className="dashboard-root" style={{ paddingTop: '120px' }}>
@@ -198,6 +199,38 @@ export default function CollegeDashboardClient({ id, initialData }) {
                             {college.competitivenessBand && (
                                 <span className="b-sig band"><Award size={14} /> {college.competitivenessBand} Tier</span>
                             )}
+                            {college.meta?.truthTier && (
+                                <span className="b-sig truth-completeness">
+                                    <ShieldCheck size={14} className={college.meta.truthTier === 'A' ? "text-emerald-400" : college.meta.truthTier === 'B' ? "text-blue-400" : "text-amber-400"} /> 
+                                    Truth Level: Tier {college.meta.truthTier} 
+                                </span>
+                            )}
+                            {college.medical_wings && college.medical_wings.length > 0 && (
+                                <div className="mt-4 flex flex-col gap-2">
+                                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Medical Faculty Available</div>
+                                    {college.medical_wings.map(wing => (
+                                        <Link key={wing.id} href={`/college/${wing.id}`} className="flex items-center gap-2 p-2 bg-indigo-50/50 border border-indigo-100 rounded-lg text-indigo-700 hover:bg-indigo-100 transition-colors">
+                                            <div className="p-1 bg-white rounded border border-indigo-200">🩺</div>
+                                            <div className="flex flex-col">
+                                                <span className="text-[10px] font-bold leading-tight">{wing.name}</span>
+                                                <span className="text-[9px] opacity-70 leading-none">{wing.program} Admission Truth</span>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                            {college.parent_core_id && (
+                                <div className="mt-4 flex flex-col gap-2">
+                                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Affiliated University</div>
+                                    <Link href={`/college/${college.parent_core_id}`} className="flex items-center gap-2 p-2 bg-slate-50/50 border border-slate-100 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors">
+                                        <div className="p-1 bg-white rounded border border-slate-200">🎓</div>
+                                        <div className="flex flex-col">
+                                            <span className="text-[10px] font-bold leading-tight">View Parent Institution</span>
+                                            <span className="text-[9px] opacity-70 leading-none">Engineering & General Admissions</span>
+                                        </div>
+                                    </Link>
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -249,18 +282,18 @@ export default function CollegeDashboardClient({ id, initialData }) {
                     )}
                     {activeTab === "cutoffs" && (
                         <div className="animate-fade-in">
-                            <NarrativeGateway collegeId={college.id} />
+                            <NarrativeGateway collegeId={resolvedCollegeId} />
                         </div>
                     )}
                     {activeTab === "placements" && (
                         <div className="animate-fade-in space-y-12">
-                            <TruthPlacementsSection collegeId={college.id} />
+                            <TruthPlacementsSection collegeId={resolvedCollegeId} />
                             <NarrativeEdge college={college} />
                         </div>
                     )}
                     {activeTab === "fees" && (
                         <div className="animate-fade-in space-y-12">
-                            <NarrativeVault collegeId={college.id} />
+                            <NarrativeVault collegeId={resolvedCollegeId} />
                             <ROICalculator 
                                 title={`ROI Simulation: ${college.shortName || college.name}`}
                                 initialData={{

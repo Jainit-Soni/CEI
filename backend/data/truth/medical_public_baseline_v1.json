@@ -1,0 +1,987 @@
+[
+  {
+    "institution_id": "CORE-AIIMS-DELHI",
+    "displayName": "ALL India Institute OF Medical Sciences Delhi",
+    "type": "core_linked",
+    "mccId": "200502",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200124",
+    "displayName": "LT. B R K Government Medical College, Jagdalpur",
+    "type": "mcc_auto_provisioned",
+    "state": "CHHATTISGARH",
+    "mccId": "200124",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200487",
+    "displayName": "Shri Atal Bihari Vajpayee Government Medical College, Chhainsa",
+    "type": "mcc_auto_provisioned",
+    "state": "BIHAR",
+    "mccId": "200487",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200169",
+    "displayName": "Government. D.c. And Research Institute, Bangalore",
+    "type": "mcc_auto_provisioned",
+    "state": "KARNATAKA",
+    "mccId": "200169",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200242",
+    "displayName": "M.g.d.c. And Hospital",
+    "type": "mcc_auto_provisioned",
+    "state": "PUDUCHERRY",
+    "mccId": "200242",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200473",
+    "displayName": "Government Medical College Firozabad",
+    "type": "mcc_auto_provisioned",
+    "state": "UTTAR",
+    "mccId": "200473",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200564",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "TAMIL",
+    "mccId": "200564",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200267",
+    "displayName": "Government. Pudukkottai Medical College Hopt.",
+    "type": "mcc_auto_provisioned",
+    "state": "TAMIL",
+    "mccId": "200267",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200442",
+    "displayName": "Siddartha Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "ANDHRA",
+    "mccId": "200442",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200191",
+    "displayName": "Government. Dental College, Trivandrum",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200191",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200155",
+    "displayName": "PT. Jawahar LAL Nehru Government. Medical. College",
+    "type": "mcc_auto_provisioned",
+    "state": "HIMACHAL",
+    "mccId": "200155",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200190",
+    "displayName": "Government. Medical College, Kozhikode",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200190",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200205",
+    "displayName": "B.j. Government Medical College, Pune",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "200205",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200193",
+    "displayName": "Government. Medical College, Kottayam",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200193",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200263",
+    "displayName": "Government. Kilpauk Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "TAMIL",
+    "mccId": "200263",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200195",
+    "displayName": "Governmentmedical College, Thrissur",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200195",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200246",
+    "displayName": "Governmentmedical College, Amritsar",
+    "type": "mcc_auto_provisioned",
+    "state": "PUNJAB",
+    "mccId": "200246",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200494",
+    "displayName": "Government Dental College Kannur, Pariyaram Medical College P O",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200494",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200305",
+    "displayName": "Government Doon Medcial College, Dehradun",
+    "type": "mcc_auto_provisioned",
+    "state": "UTTAR",
+    "mccId": "200305",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200184",
+    "displayName": "Government Dental College, Alappuzha",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200184",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200269",
+    "displayName": "Government. Vellore Medical College, Vellore",
+    "type": "mcc_auto_provisioned",
+    "state": "TAMIL",
+    "mccId": "200269",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200187",
+    "displayName": "Seat Surrendered - - - - Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200187",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200183",
+    "displayName": "GMC",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200183",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200151",
+    "displayName": "DR. YS Parmar Government. Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "HIMACHAL",
+    "mccId": "200151",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200264",
+    "displayName": "Government Medical College And Esic Hospital, Coimbatore",
+    "type": "mcc_auto_provisioned",
+    "state": "TAMIL",
+    "mccId": "200264",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200624",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200624",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200220",
+    "displayName": "Indira Gandhi Governmentmedical College., Nagpur",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "200220",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200593",
+    "displayName": "Government Medical College, Idukki",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200593",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200188",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "KERALA",
+    "mccId": "200188",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200560",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "TAMIL",
+    "mccId": "200560",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200483",
+    "displayName": "Atal Bihari Vajpayee Government Medical College, Vidisha",
+    "type": "mcc_auto_provisioned",
+    "state": "BIHAR",
+    "mccId": "200483",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200497",
+    "displayName": "Government Medical College Baramati, Plot NO P107 Midc Area Opposite Women Hospital Baramati Taluka Baramati District Pune",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "200497",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200461",
+    "displayName": "Dr.radhakrishnan Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "HIMACHAL",
+    "mccId": "200461",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-902865",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "RAJASTHAN",
+    "mccId": "902865",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200657",
+    "displayName": "Government Medical College Satna , Near Kendriya Vidyalaya NO. 2",
+    "type": "mcc_auto_provisioned",
+    "state": "MADHYA",
+    "mccId": "200657",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200212",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "200212",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-902820",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "RAJASTHAN",
+    "mccId": "902820",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200290",
+    "displayName": "GMC",
+    "type": "mcc_auto_provisioned",
+    "state": "UTTAR",
+    "mccId": "200290",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200478",
+    "displayName": "Government Medical College Barmer Rajasthan, Nh-15",
+    "type": "mcc_auto_provisioned",
+    "state": "RAJASTHAN",
+    "mccId": "200478",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-902866",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "RAJASTHAN",
+    "mccId": "902866",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-902825",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "MADHYA",
+    "mccId": "902825",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200481",
+    "displayName": "Government Medical College Suryapet",
+    "type": "mcc_auto_provisioned",
+    "state": "TELANGANA",
+    "mccId": "200481",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200489",
+    "displayName": "Government Medical College Faizabad , Ganja Pargana- Haveli Awadh",
+    "type": "mcc_auto_provisioned",
+    "state": "UTTAR",
+    "mccId": "200489",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200665",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "RAJASTHAN",
+    "mccId": "200665",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200613",
+    "displayName": "Barasat Government Medical College And Hospital",
+    "type": "mcc_auto_provisioned",
+    "state": "WEST BENGAL",
+    "mccId": "200613",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200437",
+    "displayName": "Government OF Medical College And Hospital",
+    "type": "mcc_auto_provisioned",
+    "state": "ODISHA",
+    "mccId": "200437",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200686",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "RAJASTHAN",
+    "mccId": "200686",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200474",
+    "displayName": "Diamond Harbour Government Medical College, NEW Town",
+    "type": "mcc_auto_provisioned",
+    "state": "WEST BENGAL",
+    "mccId": "200474",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-903357",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "903357",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200208",
+    "displayName": "Dr.s.c.government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "200208",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200490",
+    "displayName": "Government Medical College Basti, Rampur Tahsil Sadar Basti Basti",
+    "type": "mcc_auto_provisioned",
+    "state": "UTTAR",
+    "mccId": "200490",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC 2025 official registry",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200488",
+    "displayName": "Government Medical College Shivpuri",
+    "type": "mcc_auto_provisioned",
+    "state": "MADHYA",
+    "mccId": "200488",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-903349",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "RAJASTHAN",
+    "mccId": "903349",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200285",
+    "displayName": "Agartala Government. Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "TRIPURA",
+    "mccId": "200285",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-902827",
+    "displayName": "Virendra Kumar Sakhlecha Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "MADHYA",
+    "mccId": "902827",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200672",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "ANDHRA",
+    "mccId": "200672",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200592",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "MANIPUR",
+    "mccId": "200592",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200471",
+    "displayName": "Government Medical College Shahdol",
+    "type": "mcc_auto_provisioned",
+    "state": "MADHYA",
+    "mccId": "200471",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200638",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "200638",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200209",
+    "displayName": "Government Medcial College",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "200209",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200605",
+    "displayName": "Government Medical College And Hospital",
+    "type": "mcc_auto_provisioned",
+    "state": "WEST BENGAL",
+    "mccId": "200605",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-902817",
+    "displayName": "Government Medical College Narsampet",
+    "type": "mcc_auto_provisioned",
+    "state": "TELANGANA",
+    "mccId": "902817",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-903356",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "903356",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200662",
+    "displayName": "GMC",
+    "type": "mcc_auto_provisioned",
+    "state": "ANDHRA",
+    "mccId": "200662",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200620",
+    "displayName": "Sarat Chandra Chattopadhyay Government. Medical College And Hospital",
+    "type": "mcc_auto_provisioned",
+    "state": "WEST BENGAL",
+    "mccId": "200620",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200597",
+    "displayName": "Government Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "TELANGANA",
+    "mccId": "200597",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-903363",
+    "displayName": "Goverment Medical College",
+    "type": "mcc_auto_provisioned",
+    "state": "MAHARASHTRA",
+    "mccId": "903363",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "MCC-GMC-200648",
+    "displayName": "Government Medical College Vikarabad",
+    "type": "mcc_auto_provisioned",
+    "state": "TELANGANA",
+    "mccId": "200648",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-57443",
+    "displayName": "Gadag Institute OF Medical Sciences, Gadag",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200168",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-13844",
+    "displayName": "Armed Forces Medical College, Pune",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200215",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-32987",
+    "displayName": "Government. Dental College ,behind OF Rajbandha Ground,in Front OF Marhi Mata Temple",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200123",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-45402",
+    "displayName": "Madras Medical College, Chennai",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200277",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-GORAKHPUR",
+    "displayName": "ALL India Institute OF Medical Sciences (AIIMS), Gorakhpur",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200513",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-PATNA",
+    "displayName": "ALL India Institute OF Medical Sciences (AIIMS), Patna",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200508",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "CORE-ALL-INDIA-INSTITUTE-OF-MEDICAL-SCIENCES-JODHPUR",
+    "displayName": "ALL India Institute OF Medical Sciences (AIIMS), Jodhpur",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200505",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-6816",
+    "displayName": "B.j. Medical College, Ahmedabad",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200137",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-47118",
+    "displayName": "S M S Medical College, Jaipur",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-39664",
+    "displayName": "S.c.b. Medical College, Cuttack",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200237",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-71558",
+    "displayName": "Government. Medical College, Bundi(raj.)",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-13853",
+    "displayName": "Grant Medical College, Mumbai",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200219",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-29193",
+    "displayName": "Government. Medical College, Majitha Road, Amritsar",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200245",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-13881",
+    "displayName": "Topiwala National Medical College, Mumbai Central, Mumbai",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200223",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-766",
+    "displayName": "M.p. Shah Medical College, Jamnagar",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200139",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-13885",
+    "displayName": "Government. Medical College, Nagpur",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-29463",
+    "displayName": "Indira Gandhi Institute OF Medical Sciences, Medical College Patna",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-32980",
+    "displayName": "PT. J.n.m. Medical College, Raipur",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200126",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-52455",
+    "displayName": "Government Medical College, Chandrapur",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200214",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-51531",
+    "displayName": "Gulbarga Institute OF Medical Sciences, Gulbarga",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-43299",
+    "displayName": "Government Medical College, Thrissur",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-60920",
+    "displayName": "Government Medical College, Dungarpur",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200435",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-13875",
+    "displayName": "Rajiv Gandhi Medical College, Kalwa, Thane",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200224",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-60243",
+    "displayName": "Government Medical College, Siddipet",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-60852",
+    "displayName": "Bhima Bhoi Medical College AND Hospital, Balangir",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-46593",
+    "displayName": "Gmers Medical College, Valsad",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200637",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-63482",
+    "displayName": "Sheikh Bhikhari Medical College AND Hospital, Hazaribag",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-13787",
+    "displayName": "Seth G.s. Medical College, Mumbai",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200216",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-69450",
+    "displayName": "Government Medical College, Korba",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200577",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-68637",
+    "displayName": "Government Medical College, Keonjhar",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200591",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "S-3530",
+    "displayName": "King George's Medical University, Lucknow",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200318",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-53973",
+    "displayName": "Government. Medical College, Nizamabad",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-70987",
+    "displayName": "Dhubri Medical College, Dhubri",
+    "type": "mcc_catalog_recovery",
+    "mccId": "200642",
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Identity verified via MCC type-specific rules",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  },
+  {
+    "institution_id": "C-47085",
+    "displayName": "Government Dental College, Jaipur",
+    "type": "mcc_catalog_recovery",
+    "mccId": null,
+    "linkStatus": "LINKED",
+    "publicEligibilityReason": "Passed strict identity and clarity audit",
+    "source_provenance": "MCC Official Seat Matrix & Allotment Data"
+  }
+]

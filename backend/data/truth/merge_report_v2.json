@@ -1,0 +1,3845 @@
+[
+  {
+    "canonical": "Vellore Institute of Technology",
+    "merged": [
+      "aicte:1-44639321669"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "Manipal Institute of Technology",
+    "merged": [
+      "aicte:1-44643348372"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "Jadavpur University",
+    "merged": [
+      "aicte:1-44643142475"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "Delhi Technological University",
+    "merged": [
+      "aicte:1-44640144514"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "C-43299",
+    "merged": [
+      "MCC-GMC-200195"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "MCC-GMC-200183",
+    "merged": [
+      "MCC-GMC-200290",
+      "MCC-GMC-200662"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-45030284985",
+    "merged": [
+      "aicte:1-44645022729"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638645691",
+    "merged": [
+      "aicte:1-44641993565",
+      "aicte:1-44644745943"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638611875",
+    "merged": [
+      "aicte:1-44642984792"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638769253",
+    "merged": [
+      "aicte:1-44641927396",
+      "aicte:1-44642880880"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640024383",
+    "merged": [
+      "aicte:1-44643499656"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639451876",
+    "merged": [
+      "aicte:1-44639806999",
+      "aicte:1-44639587501",
+      "aicte:1-44640888996",
+      "aicte:1-44637279387"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44639833294",
+    "merged": [
+      "aicte:1-44640479835"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640069027",
+    "merged": [
+      "aicte:1-44640533516"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640701807",
+    "merged": [
+      "aicte:1-44645088555"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640499368",
+    "merged": [
+      "aicte:1-44640886258",
+      "aicte:1-44640892186",
+      "aicte:1-44640900486",
+      "aicte:1-44639734199",
+      "aicte:1-44641473840",
+      "aicte:1-44638817858",
+      "aicte:1-44641205327",
+      "aicte:1-44641529751",
+      "aicte:1-44639330966"
+    ],
+    "nodes_deleted": 9
+  },
+  {
+    "canonical": "aicte:1-44640830976",
+    "merged": [
+      "aicte:1-44640487111",
+      "aicte:1-44640166173"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640833549",
+    "merged": [
+      "aicte:1-44645066652"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640469054",
+    "merged": [
+      "aicte:1-44643080942"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640771021",
+    "merged": [
+      "aicte:1-44643810266"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640440662",
+    "merged": [
+      "aicte:1-44641197072"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641171012",
+    "merged": [
+      "aicte:1-44640841195",
+      "aicte:1-44639901566"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640867977",
+    "merged": [
+      "aicte:1-44641752146"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641842256",
+    "merged": [
+      "aicte:1-44924513322"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642117488",
+    "merged": [
+      "aicte:1-44640802786"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641745006",
+    "merged": [
+      "aicte:1-44642698200"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642328871",
+    "merged": [
+      "aicte:1-44642312009"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642364672",
+    "merged": [
+      "aicte:1-44643013278"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642121668",
+    "merged": [
+      "aicte:1-44644401617",
+      "aicte:1-44645073941",
+      "aicte:1-44645044592",
+      "aicte:1-44645055578"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44642126006",
+    "merged": [
+      "aicte:1-44643371133"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641772754",
+    "merged": [
+      "aicte:1-44642676188"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642343958",
+    "merged": [
+      "aicte:1-44644328245"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642345586",
+    "merged": [
+      "aicte:1-44644141919"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641729016",
+    "merged": [
+      "aicte:1-44643338463"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643624068",
+    "merged": [
+      "aicte:1-44642748790"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643542320",
+    "merged": [
+      "aicte:1-44645008731",
+      "aicte:1-44644040455"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44643150200",
+    "merged": [
+      "aicte:1-44643696856"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643372966",
+    "merged": [
+      "aicte:1-44642573193"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643515309",
+    "merged": [
+      "aicte:1-44644499624"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642999544",
+    "merged": [
+      "aicte:1-44645027169"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642451105",
+    "merged": [
+      "aicte:1-44641605560"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642924735",
+    "merged": [
+      "aicte:1-44640666934",
+      "aicte:1-44645381587"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44642939823",
+    "merged": [
+      "aicte:1-44645052580"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642907379",
+    "merged": [
+      "aicte:1-44643816592"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642486395",
+    "merged": [
+      "aicte:1-44642068537"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642951438",
+    "merged": [
+      "aicte:1-44642747310"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642707383",
+    "merged": [
+      "aicte:1-44643824636"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644470527",
+    "merged": [
+      "aicte:1-44645050028",
+      "aicte:1-44753850973",
+      "aicte:1-44763253138"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44644355409",
+    "merged": [
+      "aicte:1-44644840402",
+      "aicte:1-44644049102",
+      "aicte:1-44786460293"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44644382852",
+    "merged": [
+      "aicte:1-44644183123",
+      "aicte:1-44644185652",
+      "aicte:1-44644186658",
+      "aicte:1-44644203617",
+      "aicte:1-44644191956",
+      "aicte:1-44644299606",
+      "aicte:1-44644324520",
+      "aicte:1-44644195900",
+      "aicte:1-44645045667"
+    ],
+    "nodes_deleted": 9
+  },
+  {
+    "canonical": "aicte:1-44643814809",
+    "merged": [
+      "aicte:1-44645049582",
+      "aicte:1-44760342393",
+      "aicte:1-44644934539"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44644319928",
+    "merged": [
+      "aicte:1-44644442975",
+      "aicte:1-44753663343"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644207467",
+    "merged": [
+      "aicte:1-44644192167"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644191652",
+    "merged": [
+      "aicte:1-44785914444"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643806756",
+    "merged": [
+      "aicte:1-44645067184"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643860371",
+    "merged": [
+      "aicte:1-44644603209"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645049830",
+    "merged": [
+      "aicte:1-44671793082"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645050113",
+    "merged": [
+      "aicte:1-44645050838",
+      "aicte:1-44645057845",
+      "aicte:1-44645051938",
+      "aicte:1-44644921559"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44645050457",
+    "merged": [
+      "aicte:1-44645062355"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645050565",
+    "merged": [
+      "aicte:1-44645055846"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645072687",
+    "merged": [
+      "aicte:1-44645091844"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645052205",
+    "merged": [
+      "aicte:1-44645049378",
+      "aicte:1-44645056457"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44645074703",
+    "merged": [
+      "aicte:1-44644364791",
+      "aicte:1-44644334320"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44645053277",
+    "merged": [
+      "aicte:1-44645055941"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645053350",
+    "merged": [
+      "aicte:1-44644974145"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645054167",
+    "merged": [
+      "aicte:1-44645055640",
+      "aicte:1-44645066809"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44645065277",
+    "merged": [
+      "aicte:1-44644847001"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645035932",
+    "merged": [
+      "aicte:1-44753889253",
+      "aicte:1-44644476488"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44645045189",
+    "merged": [
+      "aicte:1-44644363956"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645047088",
+    "merged": [
+      "aicte:1-44273184624"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644931000",
+    "merged": [
+      "aicte:1-44644039666",
+      "aicte:1-44644215189"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644934117",
+    "merged": [
+      "aicte:1-44644470280"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638580531",
+    "merged": [
+      "aicte:1-44641664082"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639638831",
+    "merged": [
+      "aicte:1-44671085278"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640807918",
+    "merged": [
+      "aicte:1-44641830948",
+      "aicte:1-44638497726",
+      "aicte:1-44637287051",
+      "aicte:1-44638629196",
+      "aicte:1-44643006987",
+      "aicte:1-44639717345",
+      "aicte:1-44640853713",
+      "aicte:1-44643541728",
+      "aicte:1-44640939729"
+    ],
+    "nodes_deleted": 9
+  },
+  {
+    "canonical": "aicte:1-44644212493",
+    "merged": [
+      "aicte:1-44644999645"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44753576798",
+    "merged": [
+      "aicte:1-44641700287",
+      "aicte:1-44641436488",
+      "aicte:1-44643221567",
+      "aicte:1-44642499568"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44793907757",
+    "merged": [
+      "aicte:1-44793762923"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638487669",
+    "merged": [
+      "aicte:1-44639706788"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638171980",
+    "merged": [
+      "aicte:1-44644584673"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638173385",
+    "merged": [
+      "aicte:1-44640804002"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638233936",
+    "merged": [
+      "aicte:1-44644411985",
+      "aicte:1-44642889356",
+      "aicte:1-44644424464",
+      "aicte:1-44638470914"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44638759039",
+    "merged": [
+      "aicte:1-44639856182"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638660322",
+    "merged": [
+      "aicte:1-44644630401"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638763817",
+    "merged": [
+      "aicte:1-44645074164",
+      "aicte:1-44644970147",
+      "aicte:1-44644975851",
+      "aicte:1-44924588507"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44638937727",
+    "merged": [
+      "aicte:1-44643919057"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638941584",
+    "merged": [
+      "aicte:1-44643829864"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639397006",
+    "merged": [
+      "aicte:1-44641687073"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639490188",
+    "merged": [
+      "aicte:1-44639630910"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639672839",
+    "merged": [
+      "aicte:1-44641380010",
+      "aicte:1-44640515562"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44923862133",
+    "merged": [
+      "aicte:1-44754830773",
+      "aicte:1-44912936339"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640637205",
+    "merged": [
+      "aicte:1-44641267955",
+      "aicte:1-44642730244"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640602616",
+    "merged": [
+      "aicte:1-44641405034"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640433185",
+    "merged": [
+      "aicte:1-44640265236"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641155400",
+    "merged": [
+      "aicte:1-44641312659"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642338742",
+    "merged": [
+      "aicte:1-44638749669",
+      "aicte:1-44642993480",
+      "aicte:1-44640678137",
+      "aicte:1-44640604691",
+      "aicte:1-44640328161",
+      "aicte:1-44641221240",
+      "aicte:1-44640790872",
+      "aicte:1-44638288981"
+    ],
+    "nodes_deleted": 8
+  },
+  {
+    "canonical": "aicte:1-44641972864",
+    "merged": [
+      "aicte:1-44644599048"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641981150",
+    "merged": [
+      "aicte:1-44642615543"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643207278",
+    "merged": [
+      "aicte:1-44644480725",
+      "aicte:1-44643825081"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44643208196",
+    "merged": [
+      "aicte:1-44643801421"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643394793",
+    "merged": [
+      "aicte:1-44644195425"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643015584",
+    "merged": [
+      "aicte:1-44642783393",
+      "aicte:1-44643794647"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44642522973",
+    "merged": [
+      "aicte:1-44644745369"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642525114",
+    "merged": [
+      "aicte:1-44644441582",
+      "aicte:1-44643834141"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644541377",
+    "merged": [
+      "aicte:1-44923927127"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644501037",
+    "merged": [
+      "aicte:1-44671773596",
+      "aicte:1-44671777738"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644364729",
+    "merged": [
+      "aicte:1-44643858320"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643837886",
+    "merged": [
+      "aicte:1-44643830194"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644085477",
+    "merged": [
+      "aicte:1-44640757536",
+      "aicte:1-44642539223"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644134645",
+    "merged": [
+      "aicte:1-44645009626"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644157583",
+    "merged": [
+      "aicte:1-44754511223",
+      "aicte:1-44797831487"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644070502",
+    "merged": [
+      "aicte:1-44644752208"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643809643",
+    "merged": [
+      "aicte:1-44643834669"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643853763",
+    "merged": [
+      "aicte:1-44645080086"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644941231",
+    "merged": [
+      "aicte:1-44644941885"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644902870",
+    "merged": [
+      "aicte:1-44644389246"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644966616",
+    "merged": [
+      "aicte:1-44753817843"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44753822013",
+    "merged": [
+      "aicte:1-44782591364"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44753536273",
+    "merged": [
+      "aicte:1-44643303697"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44753839623",
+    "merged": [
+      "aicte:1-44641172544"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44755585323",
+    "merged": [
+      "aicte:1-44772123993"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44756008294",
+    "merged": [
+      "aicte:1-44755606138"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44754886003",
+    "merged": [
+      "aicte:1-44797737757"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44754877003",
+    "merged": [
+      "aicte:1-44771961763"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44791041469",
+    "merged": [
+      "aicte:1-44644896835"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641328441",
+    "merged": [
+      "aicte:1-44641032060",
+      "aicte:1-44640816136"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44642104461",
+    "merged": [
+      "aicte:1-44638629695",
+      "aicte:1-44638949651"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44645035722",
+    "merged": [
+      "aicte:1-44645026280"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638416428",
+    "merged": [
+      "aicte:1-44643351220",
+      "aicte:1-44638105995",
+      "aicte:1-44638763348",
+      "aicte:1-44639531183"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44637295222",
+    "merged": [
+      "aicte:1-44637272548",
+      "aicte:1-44644772214"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640873458",
+    "merged": [
+      "aicte:1-44641271184",
+      "aicte:1-44639799407",
+      "aicte:1-44639341666",
+      "aicte:1-44639736841"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44643601597",
+    "merged": [
+      "aicte:1-44641697309"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643011066",
+    "merged": [
+      "aicte:1-44642269770"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643016498",
+    "merged": [
+      "aicte:1-44644616483",
+      "aicte:1-44638439762"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644353031",
+    "merged": [
+      "aicte:1-44644379428",
+      "aicte:1-44644300532"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644188156",
+    "merged": [
+      "aicte:1-44644299707",
+      "aicte:1-44644044774",
+      "aicte:1-44644553462"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44644329432",
+    "merged": [
+      "aicte:1-44644090974"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644212050",
+    "merged": [
+      "aicte:1-44644706291"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638353736",
+    "merged": [
+      "aicte:1-44643453540",
+      "aicte:1-44643533513"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638498929",
+    "merged": [
+      "aicte:1-44638959800"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44636971034",
+    "merged": [
+      "aicte:1-44644926562"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638940673",
+    "merged": [
+      "aicte:1-44753521487",
+      "aicte:1-44643786861"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639892925",
+    "merged": [
+      "aicte:1-44782256854"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640421263",
+    "merged": [
+      "aicte:1-44639355103"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642215912",
+    "merged": [
+      "aicte:1-44643759828"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641662658",
+    "merged": [
+      "aicte:1-44643849159"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641879420",
+    "merged": [
+      "aicte:1-44640307737"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643473948",
+    "merged": [
+      "aicte:1-44644343279"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643053725",
+    "merged": [
+      "aicte:1-44643815411"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643889031",
+    "merged": [
+      "aicte:1-44642192311",
+      "aicte:1-44639895511"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644033523",
+    "merged": [
+      "aicte:1-44642821361"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644966021",
+    "merged": [
+      "aicte:1-44638453837",
+      "aicte:1-44643735933"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638658089",
+    "merged": [
+      "aicte:1-44644414953"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639396469",
+    "merged": [
+      "aicte:1-44641584141"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638905303",
+    "merged": [
+      "aicte:1-44644039551"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640148515",
+    "merged": [
+      "aicte:1-44639550540"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639496378",
+    "merged": [
+      "aicte:1-44641279837"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640290488",
+    "merged": [
+      "aicte:1-44640637702"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640734900",
+    "merged": [
+      "aicte:1-44641034727"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640982425",
+    "merged": [
+      "aicte:1-44642297700"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643234517",
+    "merged": [
+      "aicte:1-44638117799",
+      "aicte:1-44640873866",
+      "aicte:1-44641733609",
+      "aicte:1-44643816248"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44643523923",
+    "merged": [
+      "aicte:1-44638455107",
+      "aicte:1-44638292338"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44642558138",
+    "merged": [
+      "aicte:1-44644845446"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644377984",
+    "merged": [
+      "aicte:1-44644379612"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644500609",
+    "merged": [
+      "aicte:1-44643815936"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645089017",
+    "merged": [
+      "aicte:1-44645065481"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645061693",
+    "merged": [
+      "aicte:1-44645021028"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645071662",
+    "merged": [
+      "aicte:1-44798586883"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638369257",
+    "merged": [
+      "aicte:1-44644133381"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638528514",
+    "merged": [
+      "aicte:1-44641318887"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638213746",
+    "merged": [
+      "aicte:1-44641752591"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638278237",
+    "merged": [
+      "aicte:1-44641519032"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638592921",
+    "merged": [
+      "aicte:1-44643860581"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638787167",
+    "merged": [
+      "aicte:1-44644076029"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638912840",
+    "merged": [
+      "aicte:1-44644134406"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639559092",
+    "merged": [
+      "aicte:1-44644158010"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640409700",
+    "merged": [
+      "aicte:1-44642814541",
+      "aicte:1-44643043828",
+      "aicte:1-44642717660"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44640564750",
+    "merged": [
+      "aicte:1-44641167384"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641350216",
+    "merged": [
+      "aicte:1-44642780767"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640948511",
+    "merged": [
+      "aicte:1-44644919310"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643194889",
+    "merged": [
+      "aicte:1-44644153880"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643250564",
+    "merged": [
+      "aicte:1-44645015592"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643390081",
+    "merged": [
+      "aicte:1-44643794444"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643265133",
+    "merged": [
+      "aicte:1-44638167220"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644496859",
+    "merged": [
+      "aicte:1-44644705694"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644341642",
+    "merged": [
+      "aicte:1-44644415039"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644531472",
+    "merged": [
+      "aicte:1-44644423640"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644537880",
+    "merged": [
+      "aicte:1-44645049455"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644187440",
+    "merged": [
+      "aicte:1-44644042441",
+      "aicte:1-44645055075",
+      "aicte:1-44644901857"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44644099633",
+    "merged": [
+      "aicte:1-44799612056"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644668395",
+    "merged": [
+      "aicte:1-44673275086"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639567635",
+    "merged": [
+      "aicte:1-44644611697"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638108861",
+    "merged": [
+      "aicte:1-44638922289"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641188037",
+    "merged": [
+      "aicte:1-44641322405"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641189358",
+    "merged": [
+      "aicte:1-44644964393"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641730970",
+    "merged": [
+      "aicte:1-44641866466"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643420715",
+    "merged": [
+      "aicte:1-44638368771",
+      "aicte:1-44641653100"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638834556",
+    "merged": [
+      "aicte:1-44644542783"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640663163",
+    "merged": [
+      "aicte:1-44641531659"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640203877",
+    "merged": [
+      "aicte:1-44644030454"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640378024",
+    "merged": [
+      "aicte:1-44640260714"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640656340",
+    "merged": [
+      "aicte:1-44638221620",
+      "aicte:1-44638665503",
+      "aicte:1-44638899375",
+      "aicte:1-44639970744",
+      "aicte:1-44639855646",
+      "aicte:1-44785402803"
+    ],
+    "nodes_deleted": 6
+  },
+  {
+    "canonical": "aicte:1-44643058066",
+    "merged": [
+      "aicte:1-44640900930"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642630151",
+    "merged": [
+      "aicte:1-44640558485"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642767860",
+    "merged": [
+      "aicte:1-44642578856"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644416527",
+    "merged": [
+      "aicte:1-44644964954",
+      "aicte:1-44753120503",
+      "aicte:1-44801180464",
+      "aicte:1-44643271695"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44638407236",
+    "merged": [
+      "aicte:1-44644846641"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638534249",
+    "merged": [
+      "aicte:1-44644533259"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638362078",
+    "merged": [
+      "aicte:1-44638670324"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638469071",
+    "merged": [
+      "aicte:1-44638170211",
+      "aicte:1-44639961234",
+      "aicte:1-44641657047",
+      "aicte:1-44643791177"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44638475338",
+    "merged": [
+      "aicte:1-44644834025"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638527593",
+    "merged": [
+      "aicte:1-44644503623"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638599747",
+    "merged": [
+      "aicte:1-44638268546"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638636148",
+    "merged": [
+      "aicte:1-44753546223"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638776411",
+    "merged": [
+      "aicte:1-44673341370",
+      "aicte:1-44643862817"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638643217",
+    "merged": [
+      "aicte:1-44638358694",
+      "aicte:1-44638644602",
+      "aicte:1-44638898782",
+      "aicte:1-44638359201"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44638897877",
+    "merged": [
+      "aicte:1-44644277413"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639831643",
+    "merged": [
+      "aicte:1-44639524136",
+      "aicte:1-44639526939"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640141903",
+    "merged": [
+      "aicte:1-44641377855"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639551043",
+    "merged": [
+      "aicte:1-44640528168"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639834750",
+    "merged": [
+      "aicte:1-44638486727"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639468535",
+    "merged": [
+      "aicte:1-44640870380",
+      "aicte:1-44643008647"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639862501",
+    "merged": [
+      "aicte:1-44640990075"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639480784",
+    "merged": [
+      "aicte:1-44643536012",
+      "aicte:1-44644380450"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639966442",
+    "merged": [
+      "aicte:1-44642762977"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640844601",
+    "merged": [
+      "aicte:1-44644334183"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640585086",
+    "merged": [
+      "aicte:1-44644775213",
+      "aicte:1-44671760793"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640477192",
+    "merged": [
+      "aicte:1-44643071921"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640232431",
+    "merged": [
+      "aicte:1-44644204118"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641130352",
+    "merged": [
+      "aicte:1-44643490503"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641463540",
+    "merged": [
+      "aicte:1-44642982316"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640921896",
+    "merged": [
+      "aicte:1-44641435867"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641206339",
+    "merged": [
+      "aicte:1-44642362109"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641550790",
+    "merged": [
+      "aicte:1-44644965739"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642125401",
+    "merged": [
+      "aicte:1-44643650262",
+      "aicte:1-44642971501"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44641760946",
+    "merged": [
+      "aicte:1-44644212998"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642131729",
+    "merged": [
+      "aicte:1-44638887752",
+      "aicte:1-44642820340"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44642387411",
+    "merged": [
+      "aicte:1-44642254705"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642352881",
+    "merged": [
+      "aicte:1-44641797295",
+      "aicte:1-44643673869"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44641837794",
+    "merged": [
+      "aicte:1-44644358215"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643360628",
+    "merged": [
+      "aicte:1-44643483295",
+      "aicte:1-44642446889",
+      "aicte:1-44643141602"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44643094611",
+    "merged": [
+      "aicte:1-44643093078"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643406786",
+    "merged": [
+      "aicte:1-44643460933",
+      "aicte:1-44642988428"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44643376264",
+    "merged": [
+      "aicte:1-44642076490"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643509301",
+    "merged": [
+      "aicte:1-44639811408"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643734262",
+    "merged": [
+      "aicte:1-44644381834"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643789836",
+    "merged": [
+      "aicte:1-44644914574"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643791080",
+    "merged": [
+      "aicte:1-44644204462"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642498605",
+    "merged": [
+      "aicte:1-44642742354",
+      "aicte:1-44644336780"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44642950975",
+    "merged": [
+      "aicte:1-44643730926"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644349866",
+    "merged": [
+      "aicte:1-44638396589"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644359767",
+    "merged": [
+      "aicte:1-44644405746"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644510541",
+    "merged": [
+      "aicte:1-44753544873"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644419329",
+    "merged": [
+      "aicte:1-44644070812"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644406075",
+    "merged": [
+      "aicte:1-44644472741",
+      "aicte:1-44644451460",
+      "aicte:1-44753568203"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44644459360",
+    "merged": [
+      "aicte:1-44644843009"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644363773",
+    "merged": [
+      "aicte:1-44644668452"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644379893",
+    "merged": [
+      "aicte:1-44644925827",
+      "aicte:1-44791216396"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644472144",
+    "merged": [
+      "aicte:1-44643797549"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644411600",
+    "merged": [
+      "aicte:1-44644186149"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644487919",
+    "merged": [
+      "aicte:1-44641396454",
+      "aicte:1-44644452389",
+      "aicte:1-44644888168"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44644503720",
+    "merged": [
+      "aicte:1-44644217637"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644570498",
+    "merged": [
+      "aicte:1-44644412174"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644394739",
+    "merged": [
+      "aicte:1-44645071595"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644334587",
+    "merged": [
+      "aicte:1-44644463235",
+      "aicte:1-44643824877"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644335157",
+    "merged": [
+      "aicte:1-44644214532",
+      "aicte:1-44644300680"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644476581",
+    "merged": [
+      "aicte:1-44643799006"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644463476",
+    "merged": [
+      "aicte:1-44638263467"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644477175",
+    "merged": [
+      "aicte:1-44644277635"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644535125",
+    "merged": [
+      "aicte:1-44645081092"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644538313",
+    "merged": [
+      "aicte:1-44644764496",
+      "aicte:1-44777412733"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44644388131",
+    "merged": [
+      "aicte:1-44644195749"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644113268",
+    "merged": [
+      "aicte:1-44638523381"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644164790",
+    "merged": [
+      "aicte:1-44644207546"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644319750",
+    "merged": [
+      "aicte:1-44644329978",
+      "aicte:1-44644324157",
+      "aicte:1-44644331645",
+      "aicte:1-44644331737",
+      "aicte:1-44644195654"
+    ],
+    "nodes_deleted": 5
+  },
+  {
+    "canonical": "aicte:1-44644157837",
+    "merged": [
+      "aicte:1-44644300368"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644299843",
+    "merged": [
+      "aicte:1-44644731671"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644181498",
+    "merged": [
+      "aicte:1-44786518018"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645074606",
+    "merged": [
+      "aicte:1-44645020722"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644942105",
+    "merged": [
+      "aicte:1-44644890839"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644685691",
+    "merged": [
+      "aicte:1-44640705069"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644752103",
+    "merged": [
+      "aicte:1-44645009336"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644616774",
+    "merged": [
+      "aicte:1-44642525966"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644763605",
+    "merged": [
+      "aicte:1-44753106013"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44753912236",
+    "merged": [
+      "aicte:1-44783185434"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44758284433",
+    "merged": [
+      "aicte:1-44797467788"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44776185158",
+    "merged": [
+      "aicte:1-44644415874"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638491375",
+    "merged": [
+      "aicte:1-44640456631",
+      "aicte:1-44642291239"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640153837",
+    "merged": [
+      "aicte:1-44638466681",
+      "aicte:1-44638788641",
+      "aicte:1-44639806496",
+      "aicte:1-44640955337"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44639852869",
+    "merged": [
+      "aicte:1-44638960757"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640145632",
+    "merged": [
+      "aicte:1-44639713318",
+      "aicte:1-44640828574"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639838647",
+    "merged": [
+      "aicte:1-44640723097"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639568078",
+    "merged": [
+      "aicte:1-44640417623",
+      "aicte:1-44640753903",
+      "aicte:1-44639545387"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44639946835",
+    "merged": [
+      "aicte:1-44640593030"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640197102",
+    "merged": [
+      "aicte:1-44644449958"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640502338",
+    "merged": [
+      "aicte:1-44644921284"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641255895",
+    "merged": [
+      "aicte:1-44641862632",
+      "aicte:1-44641099933"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44641525833",
+    "merged": [
+      "aicte:1-44642317475"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641365410",
+    "merged": [
+      "aicte:1-44640128023",
+      "aicte:1-44639445660",
+      "aicte:1-44641343494",
+      "aicte:1-44640898492"
+    ],
+    "nodes_deleted": 4
+  },
+  {
+    "canonical": "aicte:1-44642363729",
+    "merged": [
+      "aicte:1-44643849077"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642969206",
+    "merged": [
+      "aicte:1-44671798751"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644456021",
+    "merged": [
+      "aicte:1-44644402815"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644377850",
+    "merged": [
+      "aicte:1-44644403074"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644510952",
+    "merged": [
+      "aicte:1-44762378624"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644355531",
+    "merged": [
+      "aicte:1-44671768183"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644449417",
+    "merged": [
+      "aicte:1-44645022508"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644387583",
+    "merged": [
+      "aicte:1-44894122963"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644099357",
+    "merged": [
+      "aicte:1-44644040383"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644309576",
+    "merged": [
+      "aicte:1-44644910283"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644182447",
+    "merged": [
+      "aicte:1-44644706357"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644889318",
+    "merged": [
+      "aicte:1-44644884775"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638550751",
+    "merged": [
+      "aicte:1-44642549082",
+      "aicte:1-44644584139"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638465791",
+    "merged": [
+      "aicte:1-44638885043"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638469576",
+    "merged": [
+      "aicte:1-44638462452",
+      "aicte:1-44638753166"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638351901",
+    "merged": [
+      "aicte:1-44645010009"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638253324",
+    "merged": [
+      "aicte:1-44644518171"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638138510",
+    "merged": [
+      "aicte:1-44645409250"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638144644",
+    "merged": [
+      "aicte:1-44644048478"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638247889",
+    "merged": [
+      "aicte:1-44644332225",
+      "aicte:1-44644048085"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638668955",
+    "merged": [
+      "aicte:1-44644999782"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638651109",
+    "merged": [
+      "aicte:1-44640824801"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638671601",
+    "merged": [
+      "aicte:1-44644397374"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638703364",
+    "merged": [
+      "aicte:1-44645021282"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638678457",
+    "merged": [
+      "aicte:1-44908087294"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638640925",
+    "merged": [
+      "aicte:1-44644776857"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44637280724",
+    "merged": [
+      "aicte:1-44644810181"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638664135",
+    "merged": [
+      "aicte:1-44644398264"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638647599",
+    "merged": [
+      "aicte:1-44644776212"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44924553883",
+    "merged": [
+      "aicte:1-44924543197"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638858143",
+    "merged": [
+      "aicte:1-44642450540"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640140753",
+    "merged": [
+      "aicte:1-44640676958",
+      "aicte:1-44638782923",
+      "aicte:1-44641022997"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44639661531",
+    "merged": [
+      "aicte:1-44643689465"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639942400",
+    "merged": [
+      "aicte:1-44640728004"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640549517",
+    "merged": [
+      "aicte:1-44638871477",
+      "aicte:1-44642824627"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44641620532",
+    "merged": [
+      "aicte:1-44638393909"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641936140",
+    "merged": [
+      "aicte:1-44644674470"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643229968",
+    "merged": [
+      "aicte:1-44640460483",
+      "aicte:1-44642556137"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44643152488",
+    "merged": [
+      "aicte:1-44642453927"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643220909",
+    "merged": [
+      "aicte:1-44644181626"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642794425",
+    "merged": [
+      "aicte:1-44643003326",
+      "aicte:1-44643046825"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44642507194",
+    "merged": [
+      "aicte:1-44640415867",
+      "aicte:1-44642838162"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44908111283",
+    "merged": [
+      "aicte:1-44644879546"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644926018",
+    "merged": [
+      "aicte:1-44644977047"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44753090094",
+    "merged": [
+      "aicte:1-44645011068"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638370957",
+    "merged": [
+      "aicte:1-44639608159",
+      "aicte:1-44643797362"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638079322",
+    "merged": [
+      "aicte:1-45166140244"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638287410",
+    "merged": [
+      "aicte:1-44643520475",
+      "aicte:1-44639802373"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638826236",
+    "merged": [
+      "aicte:1-44782635063"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639426986",
+    "merged": [
+      "aicte:1-44643344495"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638904853",
+    "merged": [
+      "aicte:1-44643859667"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639503539",
+    "merged": [
+      "aicte:1-44641047072"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639931622",
+    "merged": [
+      "aicte:1-44641078114"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640201793",
+    "merged": [
+      "aicte:1-44640640774",
+      "aicte:1-44641177319"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640390265",
+    "merged": [
+      "aicte:1-44641685564",
+      "aicte:1-44645016995"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44642334617",
+    "merged": [
+      "aicte:1-44753007214"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641820686",
+    "merged": [
+      "aicte:1-44645032836"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642277206",
+    "merged": [
+      "aicte:1-44638211326"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642164070",
+    "merged": [
+      "aicte:1-44644188705"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641933779",
+    "merged": [
+      "aicte:1-44644529141"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641733143",
+    "merged": [
+      "aicte:1-44643419596"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641840830",
+    "merged": [
+      "aicte:1-44644860026"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643747880",
+    "merged": [
+      "aicte:1-44642501291"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642965684",
+    "merged": [
+      "aicte:1-44644035087"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642495938",
+    "merged": [
+      "aicte:1-44643137038"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644434013",
+    "merged": [
+      "aicte:1-44645021841"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644016724",
+    "merged": [
+      "aicte:1-44644616970"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643863159",
+    "merged": [
+      "aicte:1-44644872604"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644920893",
+    "merged": [
+      "aicte:1-44644979914"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644834661",
+    "merged": [
+      "aicte:1-44644839580"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644856997",
+    "merged": [
+      "aicte:1-44644810078"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644846482",
+    "merged": [
+      "aicte:1-44644855659"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44753530993",
+    "merged": [
+      "aicte:1-44643216545"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638579502",
+    "merged": [
+      "aicte:1-44644517383"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638464413",
+    "merged": [
+      "aicte:1-44644674244"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638471889",
+    "merged": [
+      "aicte:1-44643856575"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638146645",
+    "merged": [
+      "aicte:1-44644598120"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638658973",
+    "merged": [
+      "aicte:1-45061515081"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638663658",
+    "merged": [
+      "aicte:1-44644845792"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639626025",
+    "merged": [
+      "aicte:1-44644635487"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640174543",
+    "merged": [
+      "aicte:1-44643100707"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640081377",
+    "merged": [
+      "aicte:1-44639620357"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640677542",
+    "merged": [
+      "aicte:1-44639953123"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641134522",
+    "merged": [
+      "aicte:1-44640346918",
+      "aicte:1-44638362470"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44642294943",
+    "merged": [
+      "aicte:1-44644450742"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642106601",
+    "merged": [
+      "aicte:1-44644975225"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643193972",
+    "merged": [
+      "aicte:1-44644553352"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643260769",
+    "merged": [
+      "aicte:1-44644970597"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643179846",
+    "merged": [
+      "aicte:1-44644531643"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643708038",
+    "merged": [
+      "aicte:1-44639393820"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644406439",
+    "merged": [
+      "aicte:1-44645094670"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644393803",
+    "merged": [
+      "aicte:1-44644884941"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644917238",
+    "merged": [
+      "aicte:1-44638243267"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638616406",
+    "merged": [
+      "aicte:1-44642608949"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638813815",
+    "merged": [
+      "aicte:1-44644494937"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639565731",
+    "merged": [
+      "aicte:1-44639683510"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643537177",
+    "merged": [
+      "aicte:1-44643469617"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642988894",
+    "merged": [
+      "aicte:1-44644926856"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644333192",
+    "merged": [
+      "aicte:1-44644090027"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644048904",
+    "merged": [
+      "aicte:1-44645035867"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640709525",
+    "merged": [
+      "aicte:1-44643566132"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641339400",
+    "merged": [
+      "aicte:1-44639993971"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642376310",
+    "merged": [
+      "aicte:1-44642718433"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642060628",
+    "merged": [
+      "aicte:1-44642903501"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643789059",
+    "merged": [
+      "aicte:1-44644329092"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643269731",
+    "merged": [
+      "aicte:1-44644528643"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642710641",
+    "merged": [
+      "aicte:1-44644085846"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644388823",
+    "merged": [
+      "aicte:1-44644393243"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644363475",
+    "merged": [
+      "aicte:1-44644164145"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643802392",
+    "merged": [
+      "aicte:1-44645092580"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645093118",
+    "merged": [
+      "aicte:1-44753085384"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44673274170",
+    "merged": [
+      "aicte:1-44643267178",
+      "aicte:1-44642953674"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638496752",
+    "merged": [
+      "aicte:1-44642825168",
+      "aicte:1-44644509749"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638337253",
+    "merged": [
+      "aicte:1-44638751111",
+      "aicte:1-44638673993"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638278733",
+    "merged": [
+      "aicte:1-44637338139",
+      "aicte:1-44637338576"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639395450",
+    "merged": [
+      "aicte:1-44639516376",
+      "aicte:1-44640726025"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639403189",
+    "merged": [
+      "aicte:1-44641360386"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639401371",
+    "merged": [
+      "aicte:1-44640258621"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639410433",
+    "merged": [
+      "aicte:1-44641272988"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639328864",
+    "merged": [
+      "aicte:1-44640709970",
+      "aicte:1-44641516504"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639732593",
+    "merged": [
+      "aicte:1-44640410570",
+      "aicte:1-44640712947"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639734654",
+    "merged": [
+      "aicte:1-44641979015",
+      "aicte:1-44644920392"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639543665",
+    "merged": [
+      "aicte:1-44639937241",
+      "aicte:1-44640730548",
+      "aicte:1-44642545660"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44639699388",
+    "merged": [
+      "aicte:1-44641091260"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639739770",
+    "merged": [
+      "aicte:1-44639700485",
+      "aicte:1-44640720160"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639676969",
+    "merged": [
+      "aicte:1-44640697353",
+      "aicte:1-44641074323"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640364810",
+    "merged": [
+      "aicte:1-44783929353"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640703346",
+    "merged": [
+      "aicte:1-44641436930"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640330279",
+    "merged": [
+      "aicte:1-44642099249"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640291410",
+    "merged": [
+      "aicte:1-44640345929",
+      "aicte:1-44641079149"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640340743",
+    "merged": [
+      "aicte:1-44643390657"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640347443",
+    "merged": [
+      "aicte:1-44640817332"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640431862",
+    "merged": [
+      "aicte:1-44641078603"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640266814",
+    "merged": [
+      "aicte:1-44642572719"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640880817",
+    "merged": [
+      "aicte:1-44643267699"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641354476",
+    "merged": [
+      "aicte:1-44642578373"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641332759",
+    "merged": [
+      "aicte:1-44644419457"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641853654",
+    "merged": [
+      "aicte:1-44644922150"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642289381",
+    "merged": [
+      "aicte:1-44643450006"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641922094",
+    "merged": [
+      "aicte:1-44642096102"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642250377",
+    "merged": [
+      "aicte:1-44642587754"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643284162",
+    "merged": [
+      "aicte:1-44642437289"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643253261",
+    "merged": [
+      "aicte:1-44643566586"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643257208",
+    "merged": [
+      "aicte:1-44642873041"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643618457",
+    "merged": [
+      "aicte:1-44642726718"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642541072",
+    "merged": [
+      "aicte:1-44753024404"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642891226",
+    "merged": [
+      "aicte:1-44644558340"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644917960",
+    "merged": [
+      "aicte:1-44794061744"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640932807",
+    "merged": [
+      "aicte:1-44640944640"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640889390",
+    "merged": [
+      "aicte:1-44641865964",
+      "aicte:1-44642504722"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640851303",
+    "merged": [
+      "aicte:1-44671730614"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642365121",
+    "merged": [
+      "aicte:1-44644042692"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641838232",
+    "merged": [
+      "aicte:1-44643484196"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643640556",
+    "merged": [
+      "aicte:1-44643798659"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643355118",
+    "merged": [
+      "aicte:1-44643802939"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642404979",
+    "merged": [
+      "aicte:1-44643060825"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642779537",
+    "merged": [
+      "aicte:1-44643888185"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644363324",
+    "merged": [
+      "aicte:1-44644461739"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644420306",
+    "merged": [
+      "aicte:1-44644451685"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644364512",
+    "merged": [
+      "aicte:1-44644320856"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644555196",
+    "merged": [
+      "aicte:1-44644387332",
+      "aicte:1-44644076313",
+      "aicte:1-44644070068"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44644335263",
+    "merged": [
+      "aicte:1-44671792717"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644451847",
+    "merged": [
+      "aicte:1-44644509070"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644086996",
+    "merged": [
+      "aicte:1-44643833244"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644100395",
+    "merged": [
+      "aicte:1-44644598227"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644631171",
+    "merged": [
+      "aicte:1-44755657103"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44768979109",
+    "merged": [
+      "aicte:1-44787181527"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638405243",
+    "merged": [
+      "aicte:1-44638186655"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638569766",
+    "merged": [
+      "aicte:1-44644470364"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641180387",
+    "merged": [
+      "aicte:1-44640042780"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638355105",
+    "merged": [
+      "aicte:1-44644450123",
+      "aicte:1-44644464021"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44638405686",
+    "merged": [
+      "aicte:1-44644202653"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638435803",
+    "merged": [
+      "aicte:1-44643856280"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638150348",
+    "merged": [
+      "aicte:1-44638595789"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638195256",
+    "merged": [
+      "aicte:1-44639400857",
+      "aicte:1-44641265814",
+      "aicte:1-44641609174"
+    ],
+    "nodes_deleted": 3
+  },
+  {
+    "canonical": "aicte:1-44639336683",
+    "merged": [
+      "aicte:1-44640312597"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639380960",
+    "merged": [
+      "aicte:1-44644775513",
+      "aicte:1-44754098183"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639731642",
+    "merged": [
+      "aicte:1-44642689478"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639456753",
+    "merged": [
+      "aicte:1-44641690596",
+      "aicte:1-44790513393"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44639810651",
+    "merged": [
+      "aicte:1-44642148586"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639535389",
+    "merged": [
+      "aicte:1-44643792206"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640577361",
+    "merged": [
+      "aicte:1-44644367317"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640286235",
+    "merged": [
+      "aicte:1-44642395980"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640334391",
+    "merged": [
+      "aicte:1-44640570816"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641298784",
+    "merged": [
+      "aicte:1-44644451333"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641184439",
+    "merged": [
+      "aicte:1-44645039567"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641062423",
+    "merged": [
+      "aicte:1-44643406159"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641075533",
+    "merged": [
+      "aicte:1-44640242714"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641885787",
+    "merged": [
+      "aicte:1-44643247200"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641693891",
+    "merged": [
+      "aicte:1-44642855985"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642227535",
+    "merged": [
+      "aicte:1-44643887516"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642344448",
+    "merged": [
+      "aicte:1-44642860568"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642347179",
+    "merged": [
+      "aicte:1-44643434497"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643192235",
+    "merged": [
+      "aicte:1-44643844761"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643240860",
+    "merged": [
+      "aicte:1-44644349234",
+      "aicte:1-44644993322"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44643722690",
+    "merged": [
+      "aicte:1-44644500422"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643740296",
+    "merged": [
+      "aicte:1-44642561444"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643354465",
+    "merged": [
+      "aicte:1-44642569188"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642540176",
+    "merged": [
+      "aicte:1-44644336286"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642559119",
+    "merged": [
+      "aicte:1-44645002197"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642609922",
+    "merged": [
+      "aicte:1-44644207698"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644390064",
+    "merged": [
+      "aicte:1-44766081916"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644513459",
+    "merged": [
+      "aicte:1-44645254339"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644538588",
+    "merged": [
+      "aicte:1-44644987550"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644202817",
+    "merged": [
+      "aicte:1-44644017096"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644158708",
+    "merged": [
+      "aicte:1-44644612062"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643862460",
+    "merged": [
+      "aicte:1-44645021917"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644040914",
+    "merged": [
+      "aicte:1-44645026103"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645032389",
+    "merged": [
+      "aicte:1-44645001843"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44644834766",
+    "merged": [
+      "aicte:1-44756701344"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44645004326",
+    "merged": [
+      "aicte:1-44644100164"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44637283849",
+    "merged": [
+      "aicte:1-44925434725"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639631506",
+    "merged": [
+      "aicte:1-44641939826"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44639619822",
+    "merged": [
+      "aicte:1-44671751501"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640406787",
+    "merged": [
+      "aicte:1-44644158354"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641692386",
+    "merged": [
+      "aicte:1-44671788831"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642124299",
+    "merged": [
+      "aicte:1-44645062709"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44643729326",
+    "merged": [
+      "aicte:1-44788769584"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44638567672",
+    "merged": [
+      "aicte:1-44638085981",
+      "aicte:1-44638147908"
+    ],
+    "nodes_deleted": 2
+  },
+  {
+    "canonical": "aicte:1-44640175076",
+    "merged": [
+      "aicte:1-44641885155"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44640907856",
+    "merged": [
+      "aicte:1-44642532143"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44641713339",
+    "merged": [
+      "aicte:1-44643792569"
+    ],
+    "nodes_deleted": 1
+  },
+  {
+    "canonical": "aicte:1-44642432060",
+    "merged": [
+      "aicte:1-44671739757"
+    ],
+    "nodes_deleted": 1
+  }
+]

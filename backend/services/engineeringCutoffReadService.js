@@ -1,6 +1,7 @@
 'use strict';
 
 const { normalizeEngineeringCutoffRows } = require('../mappers/normalizeEngineeringCutoffRow');
+const { getEngineeringNamesForId } = require('./seatCutoffBridge');
 
 const COLLECTION_NAME = 'engineering_cutoffs';
 const DEFAULT_PAGE = 1;
@@ -261,9 +262,6 @@ function buildEngineeringCutoffQuery(filters = {}) {
 
   const roundFilter = buildRoundFilter(filters);
   if (roundFilter) andClauses.push(roundFilter);
-
-  const instituteFilter = buildInstituteFilter(filters);
-  if (instituteFilter) andClauses.push(instituteFilter);
 
   const programFilter = buildProgramFilter(filters);
   if (programFilter) andClauses.push(programFilter);

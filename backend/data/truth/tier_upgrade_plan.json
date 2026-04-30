@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "total_institutions": 13345,
+    "priority1_count": 0,
+    "priority1_actionable": 0,
+    "priority2_count": 0,
+    "priority2_actionable": 0,
+    "total_actionable_upgrades": 13
+  },
+  "priority1": [],
+  "priority2": [],
+  "all_upgrades": [
+    {
+      "name": "Indian Institute of Information Technology, Dharwad",
+      "id": "CORE-IIIT-DHARWAD",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, PATNA",
+      "id": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, PATNA",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RAIPUR",
+      "id": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RAIPUR",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY RAICHUR",
+      "id": "CORE-IIIT-RAICHUR",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, BHOPAL",
+      "id": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, BHOPAL",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES NAGPUR",
+      "id": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES NAGPUR",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, BHUBANESWAR",
+      "id": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, BHUBANESWAR",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, JODHPUR",
+      "id": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, JODHPUR",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram",
+      "id": "CORE-IIIT-KANCHEEPURAM",
+      "currentScore": 3,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "Indian Institute of Technology, Chennai",
+      "id": "Indian Institute of Technology, Chennai",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "National Institute of Technology, Tiruchirapalli",
+      "id": "CORE-NIT-TRICHY",
+      "currentScore": 3,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, SRIRANGAM",
+      "id": "CORE-IIIT-SRIRANGAM",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    },
+    {
+      "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RISHIKESH",
+      "id": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RISHIKESH",
+      "currentScore": 1,
+      "canGetFees": true,
+      "canGetPlac": false
+    }
+  ]
+}

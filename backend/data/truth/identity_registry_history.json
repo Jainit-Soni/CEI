@@ -1,0 +1,2266 @@
+[
+  {
+    "institution_id": "CORE-IIITMEDUCATIONINDIA",
+    "canonical_name": "IIITM EDUCATION INDIA",
+    "action": "AUTO_PROMOTION",
+    "reason": "Approval Score: 85",
+    "sources": [
+      "josaa"
+    ],
+    "evidence": {
+      "frequency": 12,
+      "confidence": 20
+    },
+    "timestamp": "2026-04-25T13:31:02.204Z",
+    "operator": "REGISTRY_EVOLUTION_ENGINE"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Mandi",
+    "reason": "JoSAA Approved Alias (Code: 103)",
+    "timestamp": "2026-04-25T14:05:12.484Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Indore",
+    "reason": "JoSAA Approved Alias (Code: 105)",
+    "timestamp": "2026-04-25T14:05:12.486Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Jodhpur",
+    "reason": "JoSAA Approved Alias (Code: 108)",
+    "timestamp": "2026-04-25T14:05:12.487Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Gandhinagar",
+    "reason": "JoSAA Approved Alias (Code: 111)",
+    "timestamp": "2026-04-25T14:05:12.488Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Patna",
+    "reason": "JoSAA Approved Alias (Code: 112)",
+    "timestamp": "2026-04-25T14:05:12.489Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Ropar",
+    "reason": "JoSAA Approved Alias (Code: 115)",
+    "timestamp": "2026-04-25T14:05:12.490Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Goa",
+    "reason": "JoSAA Approved Alias (Code: 119)",
+    "timestamp": "2026-04-25T14:05:12.491Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Palakkad",
+    "reason": "JoSAA Approved Alias (Code: 120)",
+    "timestamp": "2026-04-25T14:05:12.492Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Tirupati",
+    "reason": "JoSAA Approved Alias (Code: 121)",
+    "timestamp": "2026-04-25T14:05:12.493Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Technology Dharwad",
+    "reason": "JoSAA Approved Alias (Code: 123)",
+    "timestamp": "2026-04-25T14:05:12.494Z"
+  },
+  {
+    "institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+    "action": "ADD_ALIAS",
+    "value": "Dr. B R Ambedkar National Institute of Technology, Jalandhar",
+    "reason": "JoSAA Approved Alias (Code: 201)",
+    "timestamp": "2026-04-25T14:05:12.495Z"
+  },
+  {
+    "institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+    "action": "ADD_ALIAS",
+    "value": "Maulana Azad National Institute of Technology Bhopal",
+    "reason": "JoSAA Approved Alias (Code: 203)",
+    "timestamp": "2026-04-25T14:05:12.496Z"
+  },
+  {
+    "institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+    "action": "ADD_ALIAS",
+    "value": "Motilal Nehru National Institute of Technology Allahabad",
+    "reason": "JoSAA Approved Alias (Code: 204)",
+    "timestamp": "2026-04-25T14:05:12.497Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology Agartala",
+    "reason": "JoSAA Approved Alias (Code: 205)",
+    "timestamp": "2026-04-25T14:05:12.497Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology Calicut",
+    "reason": "JoSAA Approved Alias (Code: 206)",
+    "timestamp": "2026-04-25T14:05:12.498Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology Durgapur",
+    "reason": "JoSAA Approved Alias (Code: 208)",
+    "timestamp": "2026-04-25T14:05:12.498Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology Hamirpur",
+    "reason": "JoSAA Approved Alias (Code: 210)",
+    "timestamp": "2026-04-25T14:05:12.499Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology Patna",
+    "reason": "JoSAA Approved Alias (Code: 214)",
+    "timestamp": "2026-04-25T14:05:12.499Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology Raipur",
+    "reason": "JoSAA Approved Alias (Code: 216)",
+    "timestamp": "2026-04-25T14:05:12.500Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MANIPUR",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology, Manipur",
+    "reason": "JoSAA Approved Alias (Code: 221)",
+    "timestamp": "2026-04-25T14:05:12.501Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MIZORAM",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology, Mizoram",
+    "reason": "JoSAA Approved Alias (Code: 222)",
+    "timestamp": "2026-04-25T14:05:12.502Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology, Tiruchirappalli",
+    "reason": "JoSAA Approved Alias (Code: 226)",
+    "timestamp": "2026-04-25T14:05:12.502Z"
+  },
+  {
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-UTTARAKHAND",
+    "action": "ADD_ALIAS",
+    "value": "National Institute of Technology, Uttarakhand",
+    "reason": "JoSAA Approved Alias (Code: 227)",
+    "timestamp": "2026-04-25T14:05:12.503Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-GUWAHATI",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Information Technology Guwahati",
+    "reason": "JoSAA Approved Alias (Code: 303)",
+    "timestamp": "2026-04-25T14:05:12.503Z"
+  },
+  {
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-LUCKNOW",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Information Technology Lucknow",
+    "reason": "JoSAA Approved Alias (Code: 315)",
+    "timestamp": "2026-04-25T14:05:12.504Z"
+  },
+  {
+    "institution_id": "CORE-IIIT-AGARTALA",
+    "action": "ADD_ALIAS",
+    "value": "Indian Institute of Information Technology, Agartala",
+    "reason": "JoSAA Approved Alias (Code: 325)",
+    "timestamp": "2026-04-25T14:05:12.504Z"
+  },
+  {
+    "institution_id": "CORE-DEWAN-V-S-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-MEERUT",
+    "action": "MERGE_DUPLICATE",
+    "loser_id": "CORE-DEEWAN-V-S-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-MEERUT",
+    "reason": "Duplicate identity collision (canonical/alias)",
+    "timestamp": "2026-04-25T14:11:21.685Z"
+  },
+  {
+    "institution_id": "CORE-NIT-TRICHY",
+    "action": "MERGE_DUPLICATE",
+    "loser_id": "CORE-NIT-TIRUCHIRAPALLI",
+    "reason": "Duplicate identity collision (canonical/alias)",
+    "timestamp": "2026-04-25T14:11:21.685Z"
+  },
+  {
+    "institution_id": "CORE-SHRI-KRISHNA-POLYTECHNIC-COLLEGE",
+    "action": "MERGE_DUPLICATE",
+    "loser_id": "CORE-SHRI-KRISHNAA-POLYTECHNIC-COLLEGE",
+    "reason": "Duplicate identity collision (canonical/alias)",
+    "timestamp": "2026-04-25T14:11:21.686Z"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.565Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0357)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0172)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0025)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0072)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0263)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0092)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0573)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0237)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0100)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0189)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0467)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0064)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0577)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0493)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "Malaviya National Institute of Technology Jaipur",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0410)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "Indian Institute of Engineering Science and Technology, Shibpur",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0584)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0560)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MADRAS",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0456)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "Indian Institute of Technology (ISM) Dhanbad",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0205)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0197)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0701)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0207)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-MESRA-RANCHI",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ANDHRA-PRADESH",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0013)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0517)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0055)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DELHI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0622)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0053)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0184)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0378)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0395)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-GOA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0620)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0273)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PUDUCHERRY",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0621)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0899)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-UTTARAKHAND",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0616)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0139)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0355)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-SANT-LONGOWAL-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0863)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SIKKIM",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0614)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ARUNACHAL-PRADESH",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0615)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JAMMU",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0906)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MANIPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0613)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHILAI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0946)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MEGHALAYA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0619)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0267)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MIZORAM",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0617)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHOPAL",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-GHANI-KHAN-CHOUDHARY-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-MALDA-WEST-BENGAL",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SENAPATI-MANIPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0770)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0286)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0844)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGALAND",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0618)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-SCHOOL-OF-STUDIES-OF-ENGINEERING-AND-TECHNOLOGY-GURU-GHASIDAS-VISHWAVIDYALAYA-BILASPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0085)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-SCHOOL-OF-ENGINEERING-TEZPUR-UNIVERSITY-NAPAAM-TEZPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0878)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTTAYAM",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0802)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0798)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-ASSAM-UNIVERSITY-SILCHAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0005)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-SHRI-MATA-VAISHNO-DEVI-UNIVERSITY-KATRA-JAMMU-KASHMIR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0201)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-GATI-SHAKTI-VISHWAVIDYALAYA-VADODARA",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAGPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0841)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-DEOGHAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-ADVANCED-MANUFACTURING-TECHNOLOGY-RANCHI",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0799)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RAICHUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-1089)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-TIRUCHIRAPPALLI",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRI-CITY",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0760)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0907)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0803)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KALYANI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0796)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA-INTERNATIONAL-CAMPUS-DIU",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RANCHI",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0840)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-UNA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0797)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INTERNATIONAL-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHUBANESWAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INTERNATIONAL-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAYA-RAIPUR",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-DR-H-S-GOUR-UNIVERSITY-SAGAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-PUNE",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0804)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-CENTRAL-UNIVERSITY-OF-JAMMU",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0210)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-MIZORAM-UNIVERSITY-AIZAWL",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-GURUKULA-KANGRI-VISHWAVIDYALAYA-HARIDWAR",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-INSTITUTE-OF-INFRASTRUCTURE-TECHNOLOGY-RESEARCH-AND-MANAGEMENT-AHMEDABAD",
+    "details": "Imported from elite_identity_registry.json (AISHE: null)"
+  },
+  {
+    "timestamp": "2026-04-25T14:56:51.566Z",
+    "action": "MERGE_ELITE",
+    "institution_id": "CORE-CENTRAL-UNIVERSITY-OF-HARYANA",
+    "details": "Imported from elite_identity_registry.json (AISHE: U-0158)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-AGARTALA",
+    "details": "Discovered AISHE code U-1158 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+    "details": "Discovered AISHE code U-0516 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHAGALPUR",
+    "details": "Discovered AISHE code U-0953 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-CITY",
+    "details": "Discovered AISHE code U-0760 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-DHARWAD",
+    "details": "Discovered AISHE code U-0803 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-GUWAHATI",
+    "details": "Discovered AISHE code U-0795 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-GWALIOR",
+    "details": "Discovered AISHE code U-0267 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-JABALPUR",
+    "details": "Discovered AISHE code U-0286 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-KALYANI",
+    "details": "Discovered AISHE code U-0796 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+    "details": "Discovered AISHE code U-0455 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-KOTA",
+    "details": "Discovered AISHE code U-0799 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-KOTTAYAM",
+    "details": "Discovered AISHE code U-0802 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-KURNOOL",
+    "details": "Discovered AISHE code U-0863 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-LUCKNOW",
+    "details": "Discovered AISHE code U-0801 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-NAGPUR",
+    "details": "Discovered AISHE code U-0841 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-PUNE",
+    "details": "Discovered AISHE code U-0804 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-RAICHUR",
+    "details": "Discovered AISHE code U-1089 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-RANCHI",
+    "details": "Discovered AISHE code U-0840 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-SENAPATI",
+    "details": "Discovered AISHE code U-0770 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-SONIPAT",
+    "details": "Discovered AISHE code U-0800 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-SRIRANGAM",
+    "details": "Discovered AISHE code U-0754 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.643Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SURAT",
+    "details": "Discovered AISHE code U-0954 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-TECHNOLOGY",
+    "details": "Discovered AISHE code U-1193 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-VADODARA",
+    "details": "Discovered AISHE code C-63929 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-BHILAI",
+    "details": "Discovered AISHE code U-0946 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-BHUBANESHWAR",
+    "details": "Discovered AISHE code U-0355 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-DELHI",
+    "details": "Discovered AISHE code U-0100 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-DHANBAD",
+    "details": "Discovered AISHE code U-0205 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-DHARWAD",
+    "details": "Discovered AISHE code U-0899 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-GANDHINAGAR",
+    "details": "Discovered AISHE code U-0139 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-GOA",
+    "details": "Discovered AISHE code U-0907 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-GUWAHATI",
+    "details": "Discovered AISHE code U-0053 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-HYDERABAD",
+    "details": "Discovered AISHE code U-0013 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-INDORE",
+    "details": "Discovered AISHE code U-0273 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-JAMMU",
+    "details": "Discovered AISHE code U-0906 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-JODHPUR",
+    "details": "Discovered AISHE code U-0395 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-KANPUR",
+    "details": "Discovered AISHE code U-0517 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-KHARAGPUR",
+    "details": "Discovered AISHE code U-0573 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-MADRAS",
+    "details": "Discovered AISHE code U-0456 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-MANDI",
+    "details": "Discovered AISHE code U-0184 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-PALAKKAD",
+    "details": "Discovered AISHE code U-0878 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-PATNA",
+    "details": "Discovered AISHE code U-0064 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-ROORKEE",
+    "details": "Discovered AISHE code U-0560 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-ROPAR",
+    "details": "Discovered AISHE code U-0378 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-TIRUPATI",
+    "details": "Discovered AISHE code U-0844 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-VARANASI",
+    "details": "Discovered AISHE code U-0701 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-AGARTALA",
+    "details": "Discovered AISHE code U-0493 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+    "details": "Discovered AISHE code U-0530 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-ANDHRA-PRADESH",
+    "details": "Discovered AISHE code U-0855 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-ARUNACHAL-PRADESH",
+    "details": "Discovered AISHE code U-0615 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+    "details": "Discovered AISHE code U-0284 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-CALICUT",
+    "details": "Discovered AISHE code U-0263 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-DELHI",
+    "details": "Discovered AISHE code U-0622 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-DURGAPUR",
+    "details": "Discovered AISHE code U-0577 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-GOA",
+    "details": "Discovered AISHE code U-0620 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-HAMIRPUR",
+    "details": "Discovered AISHE code U-0189 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "Sine International Institute of Technology,Jaipur",
+    "details": "Discovered AISHE code C-25191 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-JAIPUR",
+    "details": "Discovered AISHE code U-0410 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+    "details": "Discovered AISHE code U-0374 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-JAMSHEDPUR",
+    "details": "Discovered AISHE code U-0207 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-KURUKSHETRA",
+    "details": "Discovered AISHE code U-0172 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-MANIPUR",
+    "details": "Discovered AISHE code U-0613 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-MEGHALAYA",
+    "details": "Discovered AISHE code U-0619 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-MIZORAM",
+    "details": "Discovered AISHE code U-0617 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-NAGALAND",
+    "details": "Discovered AISHE code U-0618 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+    "details": "Discovered AISHE code U-0334 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-PATNA",
+    "details": "Discovered AISHE code U-0072 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-PUDUCHERRY",
+    "details": "Discovered AISHE code U-0621 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-RAIPUR",
+    "details": "Discovered AISHE code U-0092 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-ROURKELA",
+    "details": "Discovered AISHE code U-0357 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-SIKKIM",
+    "details": "Discovered AISHE code U-0614 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-SILCHAR",
+    "details": "Discovered AISHE code U-0055 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-SRINAGAR",
+    "details": "Discovered AISHE code U-0197 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+    "details": "Discovered AISHE code U-0149 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-SURATHKAL",
+    "details": "Discovered AISHE code U-0237 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-TRICHY",
+    "details": "Discovered AISHE code U-0467 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-UTTARAKHAND",
+    "details": "Discovered AISHE code U-0616 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-WARANGAL",
+    "details": "Discovered AISHE code U-0025 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "details": "Discovered AISHE code C-8339 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SANT-LONGOWAL-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+    "details": "Discovered AISHE code U-0384 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SCHOOL-OF-STUDIES-OF-ENGINEERING-AND-TECHNOLOGY-GURU-GHASIDAS-VISHWAVIDYALAYA-BILASPUR",
+    "details": "Discovered AISHE code U-0085 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SCHOOL-OF-ENGINEERING-TEZPUR-UNIVERSITY-NAPAAM-TEZPUR",
+    "details": "Discovered AISHE code U-0056 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA",
+    "details": "Discovered AISHE code U-0798 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-ASSAM-UNIVERSITY-SILCHAR",
+    "details": "Discovered AISHE code U-0005 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SHRI-MATA-VAISHNO-DEVI-UNIVERSITY-KATRA-JAMMU-KASHMIR",
+    "details": "Discovered AISHE code U-0201 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-GATI-SHAKTI-VISHWAVIDYALAYA-VADODARA",
+    "details": "Discovered AISHE code U-0968 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-DEOGHAR",
+    "details": "Discovered AISHE code C-8344 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-ADVANCED-MANUFACTURING-TECHNOLOGY-RANCHI",
+    "details": "Discovered AISHE code S-14324 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-UNA",
+    "details": "Discovered AISHE code U-0797 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-DR-H-S-GOUR-UNIVERSITY-SAGAR",
+    "details": "Discovered AISHE code U-0271 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-CENTRAL-UNIVERSITY-OF-JAMMU",
+    "details": "Discovered AISHE code U-0210 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-MIZORAM-UNIVERSITY-AIZAWL",
+    "details": "Discovered AISHE code U-0345 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-GURUKULA-KANGRI-VISHWAVIDYALAYA-HARIDWAR",
+    "details": "Discovered AISHE code U-0556 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:57:33.644Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-CENTRAL-UNIVERSITY-OF-HARYANA",
+    "details": "Discovered AISHE code U-0158 via aishe_name_unique_match (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.168Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-6270-SHRI-BALASAHEB-MANE-SHIKSHAN-PRASARAK-MANDAL-ASHOKRAO-MANE-POLYTECHNIC-AMBAP-TAL-HATKANANGLE-DIST-KOLHAPUR",
+    "details": "Merged duplicate CORE-6720-SHRI-BALASAHEB-MANE-SHIKSHAN-PRASARAK-MANDAL-ASHOKRAO-MANE-POLYTECHNIC-AMBAP-TAL-HATKANANGLE-DIST-KOLHAPUR (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.169Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-FABTECH-TECHNICAL-CAMPUS-COLLEGE-OF-ENGINEERING-AND-RESEARCH-SANGOLA",
+    "details": "Merged duplicate CORE-6756-FABTECH-TECHNICAL-CAMPUS-COLLEGE-OF-ENGINEERING-AND-RESEARCH-SANGOLA (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.170Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-IIT-BOMBAY",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MUMBAI (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.170Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-IIT-DELHI",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DELHI (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.170Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-IIT-GUWAHATI",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GUWAHATI (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.170Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-IIT-HYDERABAD",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-HYDERABAD (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.170Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-IIT-KANPUR",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KANPUR (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.170Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-IIT-KHARAGPUR",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-KHARAGPUR (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.170Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-IIT-MADRAS",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MADRAS (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:58:52.170Z",
+    "action": "NAME_DEDUPE",
+    "institution_id": "CORE-IIT-ROORKEE",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROORKEE (Name collision in same state)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.747Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-AGARTALA",
+    "details": "Discovered AISHE code U-1158 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-ALLAHABAD",
+    "details": "Discovered AISHE code U-0516 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHAGALPUR",
+    "details": "Discovered AISHE code U-0953 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-CITY",
+    "details": "Discovered AISHE code U-0760 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-DHARWAD",
+    "details": "Discovered AISHE code U-0803 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-GUWAHATI",
+    "details": "Discovered AISHE code U-0795 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-GWALIOR",
+    "details": "Discovered AISHE code U-0267 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-JABALPUR",
+    "details": "Discovered AISHE code U-0286 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-KALYANI",
+    "details": "Discovered AISHE code U-0796 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-MANUFACTURING-KANCHEEPURAM",
+    "details": "Discovered AISHE code U-0455 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-KOTA",
+    "details": "Discovered AISHE code U-0799 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-KOTTAYAM",
+    "details": "Discovered AISHE code U-0802 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-KURNOOL",
+    "details": "Discovered AISHE code U-0863 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-LUCKNOW",
+    "details": "Discovered AISHE code U-0801 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-NAGPUR",
+    "details": "Discovered AISHE code U-0841 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-PUNE",
+    "details": "Discovered AISHE code U-0804 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-RAICHUR",
+    "details": "Discovered AISHE code U-1089 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-RANCHI",
+    "details": "Discovered AISHE code U-0840 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-SENAPATI",
+    "details": "Discovered AISHE code U-0770 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-SONIPAT",
+    "details": "Discovered AISHE code U-0800 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-SRIRANGAM",
+    "details": "Discovered AISHE code U-0754 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SURAT",
+    "details": "Discovered AISHE code U-0954 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-TECHNOLOGY",
+    "details": "Discovered AISHE code U-1193 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIIT-VADODARA",
+    "details": "Discovered AISHE code C-63929 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-BHILAI",
+    "details": "Discovered AISHE code U-0946 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-BHUBANESHWAR",
+    "details": "Discovered AISHE code U-0355 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-DELHI",
+    "details": "Discovered AISHE code U-0100 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-DHANBAD",
+    "details": "Discovered AISHE code U-0205 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-DHARWAD",
+    "details": "Discovered AISHE code U-0899 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-GANDHINAGAR",
+    "details": "Discovered AISHE code U-0139 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-GOA",
+    "details": "Discovered AISHE code U-0907 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-GUWAHATI",
+    "details": "Discovered AISHE code U-0053 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-HYDERABAD",
+    "details": "Discovered AISHE code U-0013 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-INDORE",
+    "details": "Discovered AISHE code U-0273 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-JAMMU",
+    "details": "Discovered AISHE code U-0906 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-JODHPUR",
+    "details": "Discovered AISHE code U-0395 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-KANPUR",
+    "details": "Discovered AISHE code U-0517 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-KHARAGPUR",
+    "details": "Discovered AISHE code U-0573 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-MADRAS",
+    "details": "Discovered AISHE code U-0456 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-MANDI",
+    "details": "Discovered AISHE code U-0184 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-PALAKKAD",
+    "details": "Discovered AISHE code U-0878 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-PATNA",
+    "details": "Discovered AISHE code U-0064 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-ROORKEE",
+    "details": "Discovered AISHE code U-0560 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-ROPAR",
+    "details": "Discovered AISHE code U-0378 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-TIRUPATI",
+    "details": "Discovered AISHE code U-0844 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-IIT-VARANASI",
+    "details": "Discovered AISHE code U-0701 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-AGARTALA",
+    "details": "Discovered AISHE code U-0493 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-MOTILAL-NEHRU-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ALLAHABAD",
+    "details": "Discovered AISHE code U-0530 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-ANDHRA-PRADESH",
+    "details": "Discovered AISHE code U-0855 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-ARUNACHAL-PRADESH",
+    "details": "Discovered AISHE code U-0615 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-MAULANA-AZAD-NATIONAL-INSTITUTE-OF-TECHNOLOGY-BHOPAL",
+    "details": "Discovered AISHE code U-0284 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-CALICUT",
+    "details": "Discovered AISHE code U-0263 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-DELHI",
+    "details": "Discovered AISHE code U-0622 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-DURGAPUR",
+    "details": "Discovered AISHE code U-0577 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-GOA",
+    "details": "Discovered AISHE code U-0620 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-HAMIRPUR",
+    "details": "Discovered AISHE code U-0189 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "Sine International Institute of Technology,Jaipur",
+    "details": "Discovered AISHE code C-25191 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-JAIPUR",
+    "details": "Discovered AISHE code U-0410 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-DR-B-R-AMBEDKAR-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JALANDHAR",
+    "details": "Discovered AISHE code U-0374 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-JAMSHEDPUR",
+    "details": "Discovered AISHE code U-0207 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-KURUKSHETRA",
+    "details": "Discovered AISHE code U-0172 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-MANIPUR",
+    "details": "Discovered AISHE code U-0613 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-MEGHALAYA",
+    "details": "Discovered AISHE code U-0619 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-MIZORAM",
+    "details": "Discovered AISHE code U-0617 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-NAGALAND",
+    "details": "Discovered AISHE code U-0618 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-VISVESVARAYA-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGPUR",
+    "details": "Discovered AISHE code U-0334 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-PATNA",
+    "details": "Discovered AISHE code U-0072 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-PUDUCHERRY",
+    "details": "Discovered AISHE code U-0621 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-RAIPUR",
+    "details": "Discovered AISHE code U-0092 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-ROURKELA",
+    "details": "Discovered AISHE code U-0357 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-SIKKIM",
+    "details": "Discovered AISHE code U-0614 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-SILCHAR",
+    "details": "Discovered AISHE code U-0055 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-SRINAGAR",
+    "details": "Discovered AISHE code U-0197 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SARDAR-VALLABHBHAI-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SURAT",
+    "details": "Discovered AISHE code U-0149 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-SURATHKAL",
+    "details": "Discovered AISHE code U-0237 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-TRICHY",
+    "details": "Discovered AISHE code U-0467 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-UTTARAKHAND",
+    "details": "Discovered AISHE code U-0616 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NIT-WARANGAL",
+    "details": "Discovered AISHE code U-0025 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-ROURKELA",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ROURKELA discovered during code ingestion (AISHE: U-0357)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-KURUKSHETRA",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KURUKSHETRA discovered during code ingestion (AISHE: U-0172)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-WARANGAL",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-WARANGAL discovered during code ingestion (AISHE: U-0025)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-PATNA",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PATNA discovered during code ingestion (AISHE: U-0072)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-CALICUT",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-CALICUT discovered during code ingestion (AISHE: U-0263)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.748Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-RAIPUR",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-RAIPUR discovered during code ingestion (AISHE: U-0092)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-SURATHKAL",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-KARNATAKA discovered during code ingestion (AISHE: U-0237)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-HAMIRPUR",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-HAMIRPUR discovered during code ingestion (AISHE: U-0189)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-TRICHY",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-TIRUCHIRAPALLI discovered during code ingestion (AISHE: U-0467)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-PATNA",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PATNA discovered during code ingestion (AISHE: U-0064)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-DURGAPUR",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DURGAPUR discovered during code ingestion (AISHE: U-0577)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-AGARTALA",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-AGARTALA discovered during code ingestion (AISHE: U-0493)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-JAIPUR",
+    "details": "Merged duplicate Malaviya National Institute of Technology Jaipur discovered during code ingestion (AISHE: U-0410)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-DHANBAD",
+    "details": "Merged duplicate Indian Institute of Technology (ISM) Dhanbad discovered during code ingestion (AISHE: U-0205)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-SRINAGAR",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SRINAGAR discovered during code ingestion (AISHE: U-0197)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-VARANASI",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BANARAS-HINDU-UNIVERSITY-VARANASI discovered during code ingestion (AISHE: U-0701)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-JAMSHEDPUR",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-JAMSHEDPUR discovered during code ingestion (AISHE: U-0207)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-ANDHRA-PRADESH",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ANDHRA-PRADESH discovered during code ingestion (AISHE: U-0855)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-SILCHAR",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SILCHAR discovered during code ingestion (AISHE: U-0055)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-DELHI",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-DELHI discovered during code ingestion (AISHE: U-0622)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-MANDI",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-MANDI discovered during code ingestion (AISHE: U-0184)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-ROPAR",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-ROPAR discovered during code ingestion (AISHE: U-0378)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-JODHPUR",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JODHPUR discovered during code ingestion (AISHE: U-0395)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-GOA",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-GOA discovered during code ingestion (AISHE: U-0620)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-INDORE",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-INDORE discovered during code ingestion (AISHE: U-0273)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-PUDUCHERRY",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-PUDUCHERRY discovered during code ingestion (AISHE: U-0621)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-DHARWAD",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-DHARWAD discovered during code ingestion (AISHE: U-0899)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-UTTARAKHAND",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-UTTARAKHAND discovered during code ingestion (AISHE: U-0616)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-PATNA",
+    "details": "Discovered AISHE code C-8339 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-GANDHINAGAR",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GANDHINAGAR discovered during code ingestion (AISHE: U-0139)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-BHUBANESHWAR",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHUBANESHWAR discovered during code ingestion (AISHE: U-0355)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SANT-LONGOWAL-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY",
+    "details": "Discovered AISHE code U-0384 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-KURNOOL",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DESIGN-AND-MANUFACTURING-KURNOOL discovered during code ingestion (AISHE: U-0863)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-SIKKIM",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-SIKKIM discovered during code ingestion (AISHE: U-0614)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-ARUNACHAL-PRADESH",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-ARUNACHAL-PRADESH discovered during code ingestion (AISHE: U-0615)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-JAMMU",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-JAMMU discovered during code ingestion (AISHE: U-0906)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-MANIPUR",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MANIPUR discovered during code ingestion (AISHE: U-0613)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-BHILAI",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-BHILAI discovered during code ingestion (AISHE: U-0946)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-MEGHALAYA",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MEGHALAYA discovered during code ingestion (AISHE: U-0619)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-GWALIOR",
+    "details": "Merged duplicate CORE-ATAL-BIHARI-VAJPAYEE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-AND-MANAGEMENT-GWALIOR discovered during code ingestion (AISHE: U-0267)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-MIZORAM",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-MIZORAM discovered during code ingestion (AISHE: U-0617)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-TECHNOLOGY",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-BHOPAL discovered during code ingestion (AISHE: U-1193)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-SENAPATI",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SENAPATI-MANIPUR discovered during code ingestion (AISHE: U-0770)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-JABALPUR",
+    "details": "Merged duplicate CORE-PANDHI-DWARKA-PRASAD-MISHRA-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-MANUFACTURING-JABALPUR discovered during code ingestion (AISHE: U-0286)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-TIRUPATI",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-TIRUPATI discovered during code ingestion (AISHE: U-0844)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-NIT-NAGALAND",
+    "details": "Merged duplicate CORE-NATIONAL-INSTITUTE-OF-TECHNOLOGY-NAGALAND discovered during code ingestion (AISHE: U-0618)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SCHOOL-OF-STUDIES-OF-ENGINEERING-AND-TECHNOLOGY-GURU-GHASIDAS-VISHWAVIDYALAYA-BILASPUR",
+    "details": "Discovered AISHE code U-0085 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SCHOOL-OF-ENGINEERING-TEZPUR-UNIVERSITY-NAPAAM-TEZPUR",
+    "details": "Discovered AISHE code U-0056 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-PALAKKAD",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-PALAKKAD discovered during code ingestion (AISHE: U-0878)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.749Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-KOTTAYAM",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTTAYAM discovered during code ingestion (AISHE: U-0802)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA",
+    "details": "Discovered AISHE code U-0798 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-ASSAM-UNIVERSITY-SILCHAR",
+    "details": "Discovered AISHE code U-0005 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-SHRI-MATA-VAISHNO-DEVI-UNIVERSITY-KATRA-JAMMU-KASHMIR",
+    "details": "Discovered AISHE code U-0201 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-GATI-SHAKTI-VISHWAVIDYALAYA-VADODARA",
+    "details": "Discovered AISHE code U-0968 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-NAGPUR",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-NAGPUR discovered during code ingestion (AISHE: U-0841)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-BIRLA-INSTITUTE-OF-TECHNOLOGY-DEOGHAR",
+    "details": "Discovered AISHE code C-8344 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-NATIONAL-INSTITUTE-OF-ADVANCED-MANUFACTURING-TECHNOLOGY-RANCHI",
+    "details": "Discovered AISHE code S-14324 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-KOTA",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KOTA discovered during code ingestion (AISHE: U-0799)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-RAICHUR",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RAICHUR discovered during code ingestion (AISHE: U-1089)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-SRIRANGAM",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-TIRUCHIRAPPALLI discovered during code ingestion (AISHE: U-0754)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-CITY",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-SRI-CITY discovered during code ingestion (AISHE: U-0760)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIT-GOA",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-TECHNOLOGY-GOA discovered during code ingestion (AISHE: U-0907)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-DHARWAD",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-DHARWAD discovered during code ingestion (AISHE: U-0803)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-KALYANI",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-KALYANI discovered during code ingestion (AISHE: U-0796)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-VADODARA",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-VADODARA-INTERNATIONAL-CAMPUS-DIU discovered during code ingestion (AISHE: C-63929)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-RANCHI",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-RANCHI discovered during code ingestion (AISHE: U-0840)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-UNA",
+    "details": "Discovered AISHE code U-0797 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-INSTITUTE-OF-ENGINEERING-AND-TECHNOLOGY-DR-H-S-GOUR-UNIVERSITY-SAGAR",
+    "details": "Discovered AISHE code U-0271 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "CODE_DEDUPE_INGEST",
+    "institution_id": "CORE-IIIT-PUNE",
+    "details": "Merged duplicate CORE-INDIAN-INSTITUTE-OF-INFORMATION-TECHNOLOGY-PUNE discovered during code ingestion (AISHE: U-0804)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-CENTRAL-UNIVERSITY-OF-JAMMU",
+    "details": "Discovered AISHE code U-0210 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-MIZORAM-UNIVERSITY-AIZAWL",
+    "details": "Discovered AISHE code U-0345 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-GURUKULA-KANGRI-VISHWAVIDYALAYA-HARIDWAR",
+    "details": "Discovered AISHE code U-0556 (Confidence: MEDIUM)"
+  },
+  {
+    "timestamp": "2026-04-25T14:59:12.750Z",
+    "action": "DISCOVERY_INGEST",
+    "institution_id": "CORE-CENTRAL-UNIVERSITY-OF-HARYANA",
+    "details": "Discovered AISHE code U-0158 (Confidence: MEDIUM)"
+  }
+]
