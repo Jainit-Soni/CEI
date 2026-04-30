@@ -1,0 +1,56 @@
+[
+  {
+    "Page": "/college/CORE-IIT-BOMBAY",
+    "Label": "Academic Legacy",
+    "UIValue": "0 Years",
+    "APIPath": "established",
+    "APIValue": null,
+    "MatchStatus": "VALUE_MISMATCH",
+    "Severity": "MEDIUM"
+  },
+  {
+    "Page": "/college/CORE-IIT-BOMBAY",
+    "Label": "CEI Score",
+    "UIValue": "-",
+    "APIPath": "ceiScore",
+    "APIValue": 88,
+    "MatchStatus": "API_AVAILABLE_NOT_RENDERED",
+    "Severity": "CRITICAL"
+  },
+  {
+    "Page": "/compare",
+    "Label": "Comparator State",
+    "UIValue": "Empty",
+    "APIPath": "local/state",
+    "APIValue": "IIT Roorkee",
+    "MatchStatus": "UI_RENDERED_NOT_IN_API",
+    "Severity": "HIGH"
+  },
+  {
+    "Page": "/colleges",
+    "Label": "Catalog Total",
+    "UIValue": "20,269",
+    "APIPath": "pagination.totalCount",
+    "APIValue": 20269,
+    "MatchStatus": "MATCH",
+    "Severity": "LOW"
+  },
+  {
+    "Page": "/",
+    "Label": "Hero Institutions",
+    "UIValue": "20,277+",
+    "APIPath": "metadata.total",
+    "APIValue": 20269,
+    "MatchStatus": "VALUE_MISMATCH",
+    "Severity": "HIGH"
+  },
+  {
+    "Page": "/college/MCC-200505-MBBS",
+    "Label": "AIIMS Delhi",
+    "UIValue": "404",
+    "APIPath": "id",
+    "APIValue": "MCC-200505-MBBS",
+    "MatchStatus": "VALUE_MISMATCH",
+    "Severity": "CRITICAL"
+  }
+]

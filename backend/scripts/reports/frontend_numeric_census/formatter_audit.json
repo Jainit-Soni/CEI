@@ -1,0 +1,314 @@
+[
+  {
+    "function": "toLocaleString",
+    "file": "app/admin/tabs/DashboardTab.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatter",
+    "file": "app/admin/tabs/DashboardTab.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "app/admin/tabs/SystemTab.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formation",
+    "file": "app/college/[id]/page.js",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatPremiumText",
+    "file": "app/colleges/CollegesClient.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "app/colleges/CollegesClient.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formation",
+    "file": "app/compare/CompareClient.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatCleanNumber",
+    "file": "app/compare/CompareClient.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatPlacementPackage",
+    "file": "app/compare/CompareClient.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatCurrency",
+    "file": "app/compare/CompareClient.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formation",
+    "file": "app/decision/page.js",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatBudget",
+    "file": "app/decision/page.js",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "app/decision/page.js",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formattedAmt",
+    "file": "app/scholarships/page.js",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "app/scholarships/page.js",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatExams",
+    "file": "app/share/[id]/page.js",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formation",
+    "file": "app/terms/page.js",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formation",
+    "file": "app/terms-and-conditions/page.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formattedCount",
+    "file": "components/AnimatedCounter.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "components/college/MedicalPredictorWidget.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "components/college/MedicalTruthCutoffsSection.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "components/college/TruthFeesSection.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatMetricValue",
+    "file": "components/college/TruthPlacementsSection.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formation",
+    "file": "components/CorePaths.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formation",
+    "file": "components/ExamTabs.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formats",
+    "file": "components/IndiaMap.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formattedDate",
+    "file": "components/NewsCard.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "components/predictor/UnifiedPredictorDashboard.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "components/PremiumHome.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatDistanceToNow",
+    "file": "components/PremiumReviews.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formattedDate",
+    "file": "components/PriorityUpdate.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "components/ProfileTab.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formation",
+    "file": "components/ProfileTab.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formation",
+    "file": "components/ReportDataModal.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "formatMoney",
+    "file": "components/ROICalculator.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "components/ROICalculator.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "components/tools/AdmissionCalculator.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "components/TransparencyPulse.jsx",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  },
+  {
+    "function": "toLocaleString",
+    "file": "utils/dateParser.js",
+    "used_for": "Static Source mapping",
+    "unit_assumptions": "Unknown",
+    "sample_inputs": [],
+    "risk": "STATIC_POSSIBLE"
+  }
+]

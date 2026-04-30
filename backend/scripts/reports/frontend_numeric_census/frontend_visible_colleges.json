@@ -1,0 +1,10 @@
+{
+  "api_total_reported": null,
+  "actually_collected": 0,
+  "page_size": 50,
+  "page_count": 1,
+  "duplicate_ids": [],
+  "missing_ids": "Unknown",
+  "difference": 0,
+  "sample_colleges": []
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "type": "CONFIG_LIMIT",
+    "value": "limit: 18",
+    "file": "app/colleges/page.js"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g., ₹15",
+    "file": "app/compare/CompareClient.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g. 5000",
+    "file": "app/decision/page.js"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g. 98",
+    "file": "components/AdmissionProbability.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g. 5000",
+    "file": "components/AdmissionProbability.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g. 8",
+    "file": "components/BattleArena.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g. 25",
+    "file": "components/BattleArena.jsx"
+  },
+  {
+    "type": "CONFIG_LIMIT",
+    "value": "limit: 1",
+    "file": "components/college/AdmissionTruthSummary.jsx"
+  },
+  {
+    "type": "CONFIG_LIMIT",
+    "value": "limit: 1",
+    "file": "components/college/AdmissionTruthSummary.jsx"
+  },
+  {
+    "type": "CONFIG_LIMIT",
+    "value": "limit: 1",
+    "file": "components/college/AdmissionTruthSummary.jsx"
+  },
+  {
+    "type": "PRODUCT_METRIC_HARDCODED",
+    "value": "12.5L",
+    "file": "components/college/ComparisonDrawer.jsx"
+  },
+  {
+    "type": "CONFIG_LIMIT",
+    "value": "limit: 200",
+    "file": "components/college/TruthCutoffsSection.jsx"
+  },
+  {
+    "type": "CONFIG_LIMIT",
+    "value": "limit: 500",
+    "file": "components/college/TruthSeatMatrixSection.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g. 98",
+    "file": "components/DecisionEngine.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g. 5000",
+    "file": "components/DecisionEngine.jsx"
+  },
+  {
+    "type": "PRODUCT_METRIC_HARDCODED",
+    "value": "1",
+    "file": "components/Pagination.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g. 45000",
+    "file": "components/predictor/UnifiedPredictorDashboard.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g. 18",
+    "file": "components/ReportDataModal.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g., 10",
+    "file": "components/ROICalculator.jsx"
+  },
+  {
+    "type": "EXAMPLE_VALUE",
+    "value": "e.g., 25",
+    "file": "components/ROICalculator.jsx"
+  }
+]

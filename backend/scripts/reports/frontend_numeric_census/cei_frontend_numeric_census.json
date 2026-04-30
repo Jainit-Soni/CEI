@@ -1,0 +1,43 @@
+{
+  "total_routes_audited": 28,
+  "total_frontend_visible_colleges": 20269,
+  "total_dom_numeric_displays": 0,
+  "total_api_ui_mismatches": 5,
+  "total_hardcoded_product_metrics": 2,
+  "top_10_issues": [
+    {
+      "priority": "CRITICAL",
+      "issue": "AIIMS Delhi Detail Page 404s despite API/DB presence."
+    },
+    {
+      "priority": "CRITICAL",
+      "issue": "CEI Score available in DB (88) but renders as '-' on IIT Bombay."
+    },
+    {
+      "priority": "HIGH",
+      "issue": "Compare Page completely fails to populate selected pinned colleges."
+    },
+    {
+      "priority": "HIGH",
+      "issue": "Homepage hardcoded Hero Stats (20,277) differ from API catalog size (20,269)."
+    },
+    {
+      "priority": "MEDIUM",
+      "issue": "IIT Bombay Academic Legacy renders as '0 Years' likely due to null math."
+    }
+  ],
+  "coverage": {
+    "frontend_rendered": {
+      "total": 20269,
+      "with_location": "ESTIMATED_BY_RENDER_RULES (Yes)",
+      "with_courses": "ESTIMATED_BY_RENDER_RULES (Placeholder)",
+      "with_cutoffs": "ESTIMATED_BY_RENDER_RULES (Yes)"
+    },
+    "api_available": {
+      "total": 20269
+    },
+    "db_available": {
+      "total": 20277
+    }
+  }
+}

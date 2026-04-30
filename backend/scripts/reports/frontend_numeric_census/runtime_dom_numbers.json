@@ -1,0 +1,134 @@
+[
+  {
+    "route": "/",
+    "url": "http://localhost:3030/",
+    "sectionHeading": "Hero Stats",
+    "label": "Institutes Covered",
+    "valueText": "20,277+",
+    "surroundingText": "Join India's largest engineering intelligence platform",
+    "screenshotPath": "screenshots/home.png",
+    "extractionTimestamp": "2026-04-30T06:51:17.992Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/",
+    "url": "http://localhost:3030/",
+    "sectionHeading": "Hero Stats",
+    "label": "Verified Data Points",
+    "valueText": "1.4M+",
+    "surroundingText": "Trust grade admissions data",
+    "screenshotPath": "screenshots/home.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/colleges",
+    "url": "http://localhost:3030/colleges",
+    "sectionHeading": "Catalog",
+    "label": "Total College Count",
+    "valueText": "20,269",
+    "surroundingText": "Showing 20,269 verified institutions",
+    "screenshotPath": "screenshots/colleges.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/college/CORE-IIT-BOMBAY",
+    "url": "http://localhost:3030/college/CORE-IIT-BOMBAY",
+    "sectionHeading": "Overview",
+    "label": "Academic Legacy",
+    "valueText": "0 Years",
+    "surroundingText": "Established in 0",
+    "screenshotPath": "screenshots/iit-bombay.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/college/CORE-IIT-BOMBAY",
+    "url": "http://localhost:3030/college/CORE-IIT-BOMBAY",
+    "sectionHeading": "Rankings",
+    "label": "Official CEI Score",
+    "valueText": "-",
+    "surroundingText": "Pending Audit",
+    "screenshotPath": "screenshots/iit-bombay.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/predictor",
+    "url": "http://localhost:3030/predictor",
+    "sectionHeading": "Engineering Results",
+    "label": "Safe",
+    "valueText": "361",
+    "surroundingText": "Based on Rank 10000, OPEN, AI",
+    "screenshotPath": "screenshots/eng-predictor.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/predictor",
+    "url": "http://localhost:3030/predictor",
+    "sectionHeading": "Engineering Results",
+    "label": "Realistic",
+    "valueText": "26",
+    "surroundingText": "Based on Rank 10000, OPEN, AI",
+    "screenshotPath": "screenshots/eng-predictor.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/predictor",
+    "url": "http://localhost:3030/predictor",
+    "sectionHeading": "Engineering Results",
+    "label": "Risky",
+    "valueText": "206",
+    "surroundingText": "Based on Rank 10000, OPEN, AI",
+    "screenshotPath": "screenshots/eng-predictor.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/predictor",
+    "url": "http://localhost:3030/predictor",
+    "sectionHeading": "Medical Results",
+    "label": "Safe",
+    "valueText": "510",
+    "surroundingText": "Based on Rank 1000, OPEN",
+    "screenshotPath": "screenshots/med-predictor.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/predictor",
+    "url": "http://localhost:3030/predictor",
+    "sectionHeading": "Medical Results",
+    "label": "Realistic",
+    "valueText": "50",
+    "surroundingText": "Based on Rank 1000, OPEN",
+    "screenshotPath": "screenshots/med-predictor.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/compare",
+    "url": "http://localhost:3030/compare",
+    "sectionHeading": "Comparator",
+    "label": "Selected Colleges",
+    "valueText": "0",
+    "surroundingText": "Empty State",
+    "screenshotPath": "screenshots/compare.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  },
+  {
+    "route": "/college/MCC-200505-MBBS",
+    "url": "http://localhost:3030/college/MCC-200505-MBBS",
+    "sectionHeading": "Error",
+    "label": "Status",
+    "valueText": "404",
+    "surroundingText": "Intelligence not found",
+    "screenshotPath": "screenshots/aiims-delhi.png",
+    "extractionTimestamp": "2026-04-30T06:51:18.005Z",
+    "sourceType": "FRONTEND_RENDERED"
+  }
+]

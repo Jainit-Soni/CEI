@@ -1,0 +1,216 @@
+[
+  {
+    "route": "/admin",
+    "page_file": "app/admin/page.js",
+    "main_component": "AdminPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/admission-calculator",
+    "page_file": "app/admission-calculator/page.js",
+    "main_component": "AdmissionCalculatorPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/choice-filling",
+    "page_file": "app/choice-filling/page.js",
+    "main_component": "ChoiceFillingPage",
+    "api_dependencies": [],
+    "has_visible_numbers": false
+  },
+  {
+    "route": "/college/[id]",
+    "page_file": "app/college/[id]/page.js",
+    "main_component": "Unknown",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/colleges",
+    "page_file": "app/colleges/page.js",
+    "main_component": "Unknown",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/compare",
+    "page_file": "app/compare/page.js",
+    "main_component": "ComparePage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/dashboard",
+    "page_file": "app/dashboard/page.js",
+    "main_component": "DashboardPage",
+    "api_dependencies": [
+      "/api/intelligence/dashboard"
+    ],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/decision",
+    "page_file": "app/decision/page.js",
+    "main_component": "DecisionPage",
+    "api_dependencies": [
+      "/api/decision/recommend"
+    ],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/developers",
+    "page_file": "app/developers/page.js",
+    "main_component": "DevelopersPage",
+    "api_dependencies": [
+      "/api/v1/institution/",
+      "/api/v1/institution/iit-bombay",
+      "/api/v1/institution/iit-bombay/vectors",
+      "/api/v1/institution/iit-bombay/integrity",
+      "/api/v1/scoring-version/active",
+      "/api/v1/peer-cluster/",
+      "/api/v1/peer-cluster/iit-bombay",
+      "/api/forecast/branch/",
+      "/api/forecast/branch/Computer",
+      "/api/forecast/trajectory/",
+      "/api/forecast/trajectory/iit-bombay/Computer"
+    ],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/exam/[id]",
+    "page_file": "app/exam/[id]/page.js",
+    "main_component": "Unknown",
+    "api_dependencies": [],
+    "has_visible_numbers": false
+  },
+  {
+    "route": "/exams",
+    "page_file": "app/exams/page.js",
+    "main_component": "ExamsPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/guide",
+    "page_file": "app/guide/page.jsx",
+    "main_component": "GuidePage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/hype",
+    "page_file": "app/hype/page.js",
+    "main_component": "FanWarsTheCrystalArena",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/login",
+    "page_file": "app/login/page.js",
+    "main_component": "LoginPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/map",
+    "page_file": "app/map/page.js",
+    "main_component": "MapPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/methodology",
+    "page_file": "app/methodology/page.js",
+    "main_component": "MethodologyPage",
+    "api_dependencies": [
+      "/api/transparency/methodology"
+    ],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/my-list",
+    "page_file": "app/my-list/page.js",
+    "main_component": "MyListPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/news",
+    "page_file": "app/news/page.js",
+    "main_component": "NewsPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/",
+    "page_file": "app/page.js",
+    "main_component": "Unknown",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/predictor",
+    "page_file": "app/predictor/page.jsx",
+    "main_component": "PredictorPage",
+    "api_dependencies": [],
+    "has_visible_numbers": false
+  },
+  {
+    "route": "/privacy",
+    "page_file": "app/privacy/page.jsx",
+    "main_component": "PrivacyPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/roi-calculator",
+    "page_file": "app/roi-calculator/page.js",
+    "main_component": "ROICalculatorPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/scholarship/[id]",
+    "page_file": "app/scholarship/[id]/page.js",
+    "main_component": "ScholarshipDetail",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/scholarships",
+    "page_file": "app/scholarships/page.js",
+    "main_component": "ScholarshipsPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/share/[id]",
+    "page_file": "app/share/[id]/page.js",
+    "main_component": "SharePage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/signup",
+    "page_file": "app/signup/page.js",
+    "main_component": "SignupPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/terms",
+    "page_file": "app/terms/page.js",
+    "main_component": "TermsPage",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  },
+  {
+    "route": "/terms-and-conditions",
+    "page_file": "app/terms-and-conditions/page.jsx",
+    "main_component": "TermsAndConditions",
+    "api_dependencies": [],
+    "has_visible_numbers": true
+  }
+]
