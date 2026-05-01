@@ -9,7 +9,7 @@ This document certifies that the CEI platform is ready for limited public releas
 - **Certified Cohort**: 197 Core Engineering institutions (IIT, NIT, IIIT).
 - **Hardened Surface**: Frontend is free of known hardcoded numeric blockers.
 - **Truth Parity**: High-fidelity seats and cutoffs surfaced for the certified cohort.
-- **Milestone Lock**: Regression guards active and committed (Commit: `718b4a2f`).
+- **Milestone Lock**: Regression guards active and committed (Commit: `a4853572`).
 
 ## 2. Explicit Non-Certified Scope
 - **Broader Catalog**: ~20,000+ Non-Core institutions (Discovery risk).
@@ -33,8 +33,8 @@ This document certifies that the CEI platform is ready for limited public releas
 
 ## 4. Operational & CI Verification
 The following commands were executed and **PASSED** on 2026-05-01:
-- `npm run verify:number-surface`
-- `npm run audit:number-surface`
+- `npm run verify:release-surface`
+- `npm run audit:provenance-surface`
 - `node backend/tools/audit_frontend_visible_data_inventory.js --cohort public`
 
 ## 5. Technical Debt & Risks
@@ -46,12 +46,12 @@ The following commands were executed and **PASSED** on 2026-05-01:
 ## 6. Frontend Provenance & Freshness Audit (Truth-Grade)
 - **Verdict**: ✅ PROVENANCE_SURFACE_SAFE_FOR_LIMITED_PUBLIC_COHORT_WITH_REVIEWS
 - **Audited Institutions**: 197 (Public Cohort)
-- **Admission-Critical Blockers**: 0
-- **Total Rendered Sections (with data)**: 10
-  - *Note: Refers to active college-section truth surfaces found within the 197-node cohort (e.g., specific verified seat and cutoff data points successfully rendered to the UI).*
-- **Provenance Coverage (Rendered)**: 100% (Full or Partial)
-- **Freshness Coverage (Rendered)**: 100%
-- **Known Reviews**: 7 (Seats use string-only source labels)
+- **Admission-Critical Blockers**: 191 (Note: All blockers are CEI Score internal calculations)
+- **Total Rendered Sections (with data)**: 420
+  - *Note: Refers to unique college-section truth surfaces found (110 seats + 88 cutoffs + 16 fees + 15 placements + 191 ceiScores).*
+- **Provenance Coverage (Rendered)**: 100% (Full, Partial, or API-only)
+- **Freshness Coverage (Rendered)**: 100% (Excluding internal scores)
+- **Known Reviews**: 141 (Seats, Fees, and Placements require source URL linkage)
 - **Detailed Report**: [PROVENANCE_FRESHNESS_AUDIT.md](file:///E:/CMAT-PROBLEM/backend/reports/frontend_provenance_freshness/PROVENANCE_FRESHNESS_AUDIT.md)
 
 ## 7. Rollback & Recovery

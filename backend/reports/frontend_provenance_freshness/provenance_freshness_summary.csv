@@ -1,7 +1,7 @@
 section,cohort_total,rendered_section_count,visible_provenance_count,partial_provenance_count,visible_provenance_percent,api_provenance_only_count,db_provenance_only_count,missing_provenance_count,visible_freshness_count,visible_freshness_percent,stale_or_unknown_freshness_count,official_source_visible_count,risk_level
-"seats","197","","","","0.00%","","","","","0.00%","","","SAFE"
-"cutoffs","197","","","","0.00%","","","","","0.00%","","","SAFE"
-"fees","197","","","","0.00%","","","","","0.00%","","","SAFE"
-"placements","197","","","","0.00%","","","","","0.00%","","","SAFE"
+"seats","197","109","","109","100.00%","","","","109","100.00%","","","REVIEW"
+"cutoffs","197","87","87","","100.00%","","","","87","100.00%","","87","SAFE"
+"fees","197","16","","16","100.00%","","","","16","100.00%","","","REVIEW"
+"placements","197","15","","","0.00%","15","","","","0.00%","15","","REVIEW"
 "rankings","197","","","","0.00%","","","","","0.00%","","","SAFE"
-"ceiScore","197","","","","0.00%","","","","","0.00%","","","SAFE"
+"ceiScore","197","190","","","0.00%","","","190","","0.00%","190","","BLOCKER"
