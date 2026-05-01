@@ -6,7 +6,10 @@
 This document certifies that the CEI platform is ready for limited public release targeting the **Core Engineering public cohort**.
 
 ## 1. Certified Scope
-- **Certified Cohort**: 197 Core Engineering institutions (IIT, NIT, IIIT).
+- **Certified Public Cohort**: 75 CERTIFIED_PUBLIC institutions.
+- **Audited Registry Cohort**: 197 institutions.
+- **Search-Discoverable Registry Cohort**: 196 institutions.
+- **Hidden Until Hydrated**: 1 institution.
 - **Hardened Surface**: Frontend is free of known hardcoded numeric blockers.
 - **Truth Parity**: High-fidelity seats and cutoffs surfaced for the certified cohort.
 - **Milestone Lock**: Regression guards active and committed (Commit: `4da59e1a`).
@@ -19,7 +22,7 @@ This document certifies that the CEI platform is ready for limited public releas
 - **Number Review**: 79 lower-risk factual constants remain for future API linkage.
 - **DB Truth**: Full database provenance audit beyond the 197-node cohort is not certified.
 
-## 3. Core Metrics (Certified Cohort N=197)
+## 3. Certified Surface Metrics (N=75) and Registry Audit Context (N=197)
 
 | Metric | Value |
 | :--- | :--- |
@@ -32,13 +35,14 @@ This document certifies that the CEI platform is ready for limited public releas
 | **Remaining Review Items** | **79** |
 
 ## 4. Operational & CI Verification
-The following commands were executed and **PASSED** on 2026-05-01:
-- `npm run verify:release-surface`
-- `npm run audit:provenance-surface`
-- `node backend/tools/audit_frontend_visible_data_inventory.js --cohort public`
+The following commands were executed on 2026-05-01:
+- `node tools/audit_surface_tier_exposure.js`: PASS
+- `node tools/audit_canonical_collision_hydration.js`: PASS
+- `node tools/audit_frontend_visible_data_inventory.js --cohort public --limit ALL --concurrency 10`: PASS
+- `npm run verify:release-surface`: attempted; local script failed, covered by direct component audits
 
 ## 5. Technical Debt & Risks
-- **Identity Hygiene**: Residual CORE-CORE prefix handling requires migration to canonical IDs.
+- **Identity Hygiene**: 6 deterministic CORE-CORE prefix cases migrated. 1 unresolved manual case remains: CORE-CORE-IIIT-PRADESH.
 - **Fees Density**: Fee recovery is limited to 16 certified nodes.
 - **Marketing Claims**: Platform-scale claims (12k+) have been neutralized but require live API backing for future audits.
 - **Stale Cache**: Cache invalidation is required upon every truth-grade data update.
@@ -58,7 +62,8 @@ The following commands were executed and **PASSED** on 2026-05-01:
 - **Detailed Report**: [PROVENANCE_FRESHNESS_AUDIT.md](file:///E:/CMAT-PROBLEM/backend/reports/frontend_provenance_freshness/PROVENANCE_FRESHNESS_AUDIT.md)
 
 ## 7. Rollback & Recovery
-- **Latest Safe Commit**: `3679f0a9`
+- **Latest Safe Commit**: `3679f0a9` = latest implementation-safe commit
+- **Latest Metadata Commit**: `c747d6d9` = latest release checkpoint metadata commit
 - **Checkpoint History**:
   - `718b4a2f`: Number-surface hardening (Neutralized review constants).
   - `a4853572`: Initial provenance checkpoint (0 admission-critical blockers).
