@@ -2,12 +2,12 @@
 # Identity Migration Plan: CORE-CORE Cleanup
 
 **Date**: 2026-05-01
-**Mode**: DRY-RUN / PREVIEW
-**Status**: PENDING_APPROVAL
+**Mode**: APPLY
+**Status**: EXECUTED
 
 ## 1. Migration Summary
 - **Target Identities**: 6
-- **Total Affected Documents**: Pending Preview
+- **Total Affected Documents**: 6
 - **Excluded Identities**: 1 (CORE-CORE-IIIT-PRADESH)
 
 ## 2. Detailed Impact Matrix

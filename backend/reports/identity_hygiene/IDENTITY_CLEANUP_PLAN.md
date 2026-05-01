@@ -5,23 +5,18 @@
 
 ## 1. Audit Summary
 - **Total Cases Audited**: 197
-- **Safe Records (No Mutation)**: 190
-- **Deterministic Rewrite-Ready**: 6
+- **Safe Records (No Mutation)**: 196
+- **Deterministic Rewrite-Ready**: 0
 - **Manual Canonical Target Required**: 1
 - **Blocker Count**: 0
 
 ## 2. Migration Targets (Deterministic)
-The following 6 IDs are ready for automated migration:
-- `CORE-CORE-IIIT-CHITTOOR` -> `CORE-IIIT-CHITTOOR`
-- `CORE-CORE-IIIT-GUWAHATI` -> `CORE-IIIT-GUWAHATI`
-- `CORE-CORE-IIIT-KARNATAKA` -> `CORE-IIIT-KARNATAKA`
-- `CORE-CORE-IIIT-MANIPUR` -> `CORE-IIIT-MANIPUR`
-- `CORE-CORE-IIIT-RAJASTHAN` -> `CORE-IIIT-RAJASTHAN`
-- `CORE-CORE-IIIT-TIRUCHIRAPPALLI` -> `CORE-IIIT-TIRUCHIRAPPALLI`
+The following 0 IDs are ready for automated migration:
+
 
 ## 3. No-Mutation List
 The following IDs will NOT be modified:
-- All Safe Records (190 items)
+- All Safe Records (196 items)
 - Unresolved Cases:
   - `CORE-CORE-IIIT-PRADESH` (Resolver output: `CORE-CORE-IIIT-PRADESH`)
 

@@ -11,16 +11,16 @@
 
 ## 1. Summary Stats
 - **Total Audited**: 197
-- **SAFE**: 190
-- **REVIEW**: 7
+- **SAFE**: 196
+- **REVIEW**: 1
 - **BLOCKER**: 0
 
 > [!NOTE]
-> **Summary Clarification**: 190 records have no detected identity conflict under current resolver rules. Missing truth records are not counted as identity mismatches.
+> **Summary Clarification**: 196 records have no detected identity conflict under current resolver rules. Missing truth records are not counted as identity mismatches.
 
 ## 2. Identified Risks
-- **CORE-CORE Prefix Cases**: 7
-  - Deterministic Rewrite-Ready: 6
+- **CORE-CORE Prefix Cases**: 1
+  - Deterministic Rewrite-Ready: 0
   - Manual Canonical Target Required: 1
 - **Identity Mismatches**: 0
 
@@ -28,7 +28,7 @@
 None found
 
 ## 4. Double Prefix Analysis (CORE-CORE)
-Found 7 instances of double-prefixed IDs. 
+Found 1 instances of double-prefixed IDs. 
 - **PRADESH Case**: CORE-CORE-IIIT-PRADESH remains unresolved (Manual Target Required).
 
 ## 5. Audit Integrity
