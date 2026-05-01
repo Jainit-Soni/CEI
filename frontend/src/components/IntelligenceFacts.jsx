@@ -12,7 +12,7 @@ const AMAZING_FACTS = [
     { id: 1, value: "1 in 150", label: "SELECTIVITY", description: "Getting into an Indian Institute of Technology is statistically 10x harder than Harvard.", icon: <Trophy />, accent: "blue" },
     { id: 2, value: "2,100", label: "GIGANTIC SCALE", description: "Indian Institute of Technology Kharagpur's campus is larger than the entire country of Monaco.", icon: <Map />, accent: "emerald" },
     { id: 3, value: "PRIVATE", label: "AIRSTRIP", description: "Indian Institute of Technology Kanpur is the only college in India with its own private runway.", icon: <Rocket />, accent: "purple" },
-    { id: 4, value: "WORLD #1", label: "ANCIENT ORIGIN", description: "Takshashila was the world's first university, teaching 10,000 students in 700 BC.", icon: <Globe />, accent: "slate" },
+    { id: 4, value: "WORLD #1", label: "ANCIENT ORIGIN", description: "Takshashila was the world's first university, establishing a global precedent for residential education.", icon: <Globe />, accent: "slate" },
     { id: 5, value: "BEYOND", label: "SPACE TECH", description: "COEP Pune is one of the few colleges globally to build and launch its own satellite.", icon: <Rocket />, accent: "blue" },
     { id: 6, value: "1847", label: "OLDEST CAMPUS", description: "Indian Institute of Technology Roorkee was established years before the Eiffel Tower was built.", icon: <Clock />, accent: "emerald" },
     { id: 7, value: "100%", label: "VALUE RECOVERY", description: "At FMS Delhi, your starting salary can be 50x higher than your total fees.", icon: <TrendingUp />, accent: "purple" },

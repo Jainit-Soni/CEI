@@ -24,9 +24,9 @@ export default function PremiumHome() {
     const [isMobile, setIsMobile] = useState(false);
     const [scrollProgress, setScrollProgress] = useState(0);
     const [stats, setStats] = useState({
-        scannedInstitutes: "12.2k",
-        totalColleges: "12,000+",
-        integrityPoints: "1.4M+"
+        scannedInstitutes: "—",
+        totalColleges: "Loading...",
+        integrityPoints: "—"
     });
 
     useEffect(() => {
@@ -39,15 +39,26 @@ export default function PremiumHome() {
         // Fetch real stats
         fetchAggregateStats()
             .then(data => {
-                if (data.totalColleges) {
+                if (data && data.totalColleges && data.totalColleges > 100) {
                     setStats({
                         scannedInstitutes: `${(data.totalColleges / 1000).toFixed(1)}k`,
-                        totalColleges: data.totalColleges.toLocaleString() + "+",
-                        integrityPoints: data.integrityPoints ? `${(data.integrityPoints / 1000000).toFixed(1)}M+` : "1.4M+"
+                        totalColleges: data.totalColleges.toLocaleString(),
+                        integrityPoints: data.integrityPoints ? `${(data.integrityPoints / 1000000).toFixed(1)}M+` : "Pending..."
                     });
+                } else if (data && data.totalColleges === 0) {
+                    setStats(prev => ({ ...prev, totalColleges: "Syncing..." }));
+                } else {
+                    setStats(prev => ({ ...prev, totalColleges: "Source Unavailable" }));
                 }
             })
-            .catch(err => console.error("Stats fetch failed:", err));
+            .catch(err => {
+                console.error("Stats fetch failed:", err);
+                setStats({
+                    scannedInstitutes: "—",
+                    totalColleges: "Unavailable",
+                    integrityPoints: "Pending Audit"
+                });
+            });
 
         window.addEventListener("resize", checkMobile);
         return () => window.removeEventListener("resize", checkMobile);

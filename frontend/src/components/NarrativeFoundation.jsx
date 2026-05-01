@@ -53,7 +53,11 @@ const NarrativeFoundation = ({ college }) => {
               <Calendar className="fact-icon" size={24} />
               <div className="fact-info">
                 <span className="fact-label">Academic Legacy</span>
-                <span className="fact-val">{new Date().getFullYear() - (college?.establishmentYear || new Date().getFullYear())} Years</span>
+                <span className="fact-val" style={{ fontSize: (Number(college?.establishedYear || college?.establishmentYear) > 1800 && Number(college?.establishedYear || college?.establishmentYear) <= new Date().getFullYear()) ? 'inherit' : '0.85rem' }}>
+                  {(Number(college?.establishedYear || college?.establishmentYear) > 1800 && Number(college?.establishedYear || college?.establishmentYear) <= new Date().getFullYear()) 
+                    ? `${new Date().getFullYear() - Number(college?.establishedYear || college?.establishmentYear)} Years` 
+                    : 'Official data unavailable'}
+                </span>
               </div>
             </div>
 

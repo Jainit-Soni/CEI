@@ -10,6 +10,7 @@ export const ComparatorProvider = ({ children }) => {
     const [pinnedIds, setPinnedIds] = useState([]);
     const [pinnedColleges, setPinnedColleges] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [isHydrated, setIsHydrated] = useState(false);
     const [ghostCollege, setGhostCollege] = useState(null);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const { addToast } = useToast();
@@ -21,29 +22,32 @@ export const ComparatorProvider = ({ children }) => {
             try {
                 const ids = JSON.parse(saved);
                 if (Array.isArray(ids)) {
-                    setPinnedIds(ids.map(id => String(id)));
-                    // If we have IDs but no colleges yet, and it's the first load, 
-                    // the next effect will handle the fetch.
+                    // Normalize to unique strings
+                    const uniqueIds = [...new Set(ids.map(id => String(id)))];
+                    setPinnedIds(uniqueIds);
                 }
             } catch (err) {
                 console.error("Failed to parse pinned colleges", err);
             }
         }
+        setIsHydrated(true);
     }, []);
 
-    // Persistence Effect
+    // Persistence Effect - ONLY runs after hydration
     useEffect(() => {
+        if (!isHydrated) return;
+
         if (pinnedIds.length > 0) {
             localStorage.setItem("cei_pinned_ids", JSON.stringify(pinnedIds));
         } else {
             localStorage.removeItem("cei_pinned_ids");
         }
-    }, [pinnedIds]);
+    }, [pinnedIds, isHydrated]);
 
     // Fetch details when IDs change
     useEffect(() => {
         const updateDetails = async () => {
-            if (pinnedIds.length === 0) {
+            if (!isHydrated || pinnedIds.length === 0) {
                 setPinnedColleges([]);
                 return;
             }
@@ -56,7 +60,15 @@ export const ComparatorProvider = ({ children }) => {
             setIsLoading(true);
             try {
                 const data = await fetchCollegesBatch(pinnedIds);
-                const uniqueData = Array.from(new Map(data.map(item => [item.id || item._id, item])).values());
+                
+                // Robust batch response unwrapping: { college }, { data }, or direct object
+                const unwrappedData = (data || []).map(item => {
+                    if (item.college) return { ...item.college, truthContract: item.truthContract };
+                    if (item.data) return item.data;
+                    return item;
+                });
+                
+                const uniqueData = Array.from(new Map(unwrappedData.map(item => [String(item.id || item._id), item])).values());
                 setPinnedColleges(uniqueData);
             } catch (err) {
                 console.error("Comparison fetch failed", err);
@@ -67,7 +79,7 @@ export const ComparatorProvider = ({ children }) => {
         };
 
         updateDetails();
-    }, [pinnedIds]);
+    }, [pinnedIds, isHydrated]);
 
     const pinCollege = (rawId, name = "Institution") => {
         const id = String(rawId);

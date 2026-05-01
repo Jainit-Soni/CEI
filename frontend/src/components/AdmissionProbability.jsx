@@ -227,12 +227,9 @@ export default function AdmissionProbability() {
                             // Exam-specific weights (Approximate candidate counts)
                             const getExamWeight = (examId) => {
                                 const id = examId?.toLowerCase() || "";
-                                if (id.includes("jee")) return 1200000;
-                                if (id.includes("cat")) return 250000;
-                                if (id.includes("cmat")) return 75000;
-                                if (id.includes("gate")) return 700000;
-                                if (id.includes("neet")) return 2000000;
-                                return 100000; // Default fallback
+                                // [CEI] Hardcoded candidate estimates removed for truth hardening.
+                                // These must be replaced by live aggregate stats from /api/stats/aggregate
+                                return 0;
                             };
 
                             if (scoreType === "percentile") {

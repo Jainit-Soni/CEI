@@ -34,9 +34,15 @@ export default function BattleArena({ college1, college2 }) {
         // 2. Legacy Score (0-100)
         // Older = better
         const getLegacy = (col) => {
-            const est = parseInt(col.meta?.establishedYear || "2000");
-            const age = new Date().getFullYear() - est;
-            return Math.min(Math.max(age, 10), 100);
+            const currentYear = new Date().getFullYear();
+            const est = parseInt(col.meta?.establishedYear);
+            
+            // Strictly validate year range (1800 - current)
+            if (!isNaN(est) && est >= 1800 && est <= currentYear) {
+                const age = currentYear - est;
+                return Math.min(Math.max(age, 10), 100);
+            }
+            return 25; // Neutral baseline for missing data
         };
 
         // 3. Popularity (0-100)

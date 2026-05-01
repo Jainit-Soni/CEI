@@ -259,8 +259,8 @@ export default function CollegeDetailClient({ id, initialData }) {
                                 <ROICalculator 
                                     title={`Financial ROI Simulation: ${college.name}`}
                                     initialData={{
-                                        tuition: college.fees?.[0]?.amount || 800000,
-                                        avgPackage: (college.placements?.[0]?.value * 100000) || 1200000
+                                        tuition: college.fees?.[0]?.amount || 0,
+                                        avgPackage: (college.placements?.[0]?.value * 100000) || 0
                                     }}
                                 />
                             </Container>

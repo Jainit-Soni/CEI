@@ -105,7 +105,7 @@ const NarrativeSentiment = ({ college, benchmarks }) => {
               <div className="p-4 rounded-xl bg-blue-500/5 border border-blue-500/10 flex items-center gap-3">
                 <Info size={16} className="text-blue-400 flex-shrink-0" />
                 <p className="text-[10px] text-slate-500 italic leading-snug">
-                  The final CEI Score is a 70/30 algorithmic synthesis of the Base Strength ({college.institutionStrengthScore ? Number(college.institutionStrengthScore).toFixed(2) : '0.00'}) and Data Confidence Index ({college.dataConfidenceScore ? Number(college.dataConfidenceScore).toFixed(2) : '0.00'}). This ensures UI simplicity while maintaining underlying evidence-based precision.
+                  The final CEI Score is a 70/30 algorithmic synthesis (CEI Internal Methodology) of the Base Strength ({college.institutionStrengthScore ? Number(college.institutionStrengthScore).toFixed(2) : '0.00'}) and Data Confidence Index ({college.dataConfidenceScore ? Number(college.dataConfidenceScore).toFixed(2) : '0.00'}). This ensures UI simplicity while maintaining underlying evidence-based precision.
                 </p>
               </div>
             </div>

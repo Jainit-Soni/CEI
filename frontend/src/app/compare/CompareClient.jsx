@@ -228,7 +228,7 @@ function computeWinners(colleges, rows) {
 
 // ─── ROWS CONFIG ────────────────────────────────────────────────────────────
 const ROWS = [
-    { id: "ceiScore",       section: "performance", name: "CEI Score",     meta: "Synthetic ranking index · 2026",         winnerKey: "ceiScore",       compare: "max", stripe: false, size: "lg", winClass: "csw-indigo", tagClass: "tc-indigo", tagLabel: "Top Tier",     grad: "linear-gradient(135deg,#4338ca,#9333ea)" },
+    { id: "ceiScore",       section: "performance", name: "CEI Score",     meta: "Active scoring cycle · 2026",         winnerKey: "ceiScore",       compare: "max", stripe: false, size: "lg", winClass: "csw-indigo", tagClass: "tc-indigo", tagLabel: "Top Tier",     grad: "linear-gradient(135deg,#4338ca,#9333ea)" },
     { id: "rank",           section: "performance", name: "NIRF / Band",   meta: "Official national standing",              winnerKey: null,                             stripe: true,  size: "md" },
     
     { id: "medianPackage",  section: "career",      name: "Median CTC",    meta: "Middle-most placement salary",            winnerKey: "medianPackage",  compare: "max", stripe: false, size: "lg", winClass: "csw-emerald", tagClass: "tc-emerald", tagLabel: "Strongest Displayed", solidColor: "#059669" },

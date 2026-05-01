@@ -29,11 +29,11 @@ const NarrativeEdge = ({ college }) => {
               <div className="roi-metrics-cluster">
                 <div className="roi-stat">
                   <span className="roi-label">Avg. Package</span>
-                  <span className="roi-val">{college?.placementData?.avgPackage || (college?.placements?.averagePackage ? college.placements.averagePackage : 'Pending Audit')}</span>
+                  <span className="roi-val">{college?.placementData?.avgPackage || (college?.placements?.averagePackage ? college.placements.averagePackage : '—')}</span>
                 </div>
                 <div className="roi-stat">
                   <span className="roi-label">Max. Package</span>
-                  <span className="roi-val">{college?.placementData?.maxPackage || (college?.placements?.highestPackage ? college.placements.highestPackage : 'Evaluation In-Progress')}</span>
+                  <span className="roi-val">{college?.placementData?.maxPackage || (college?.placements?.highestPackage ? college.placements.highestPackage : '—')}</span>
                 </div>
               </div>
             </div>
@@ -44,14 +44,18 @@ const NarrativeEdge = ({ college }) => {
                 <Zap size={18} color="var(--color-accent)" />
                 <div className="mosaic-info">
                   <span className="mosaic-label">Placement Velocity</span>
-                  <span className="mosaic-val">{college?.placementData?.percentage || '94'}%</span>
+                  <span className="mosaic-val">
+                    {college?.placementData?.percentage ? `${college.placementData.percentage}%` : 'Pending Verification'}
+                  </span>
                 </div>
               </div>
               <div className="mosaic-item">
                 <Users size={18} color="var(--color-accent)" />
                 <div className="mosaic-info">
                   <span className="mosaic-label">Recruiter Density</span>
-                  <span className="mosaic-val">{college?.placementData?.topRecruitersCount || '150'}+ Partners</span>
+                  <span className="mosaic-val">
+                    {college?.placementData?.topRecruitersCount ? `${college.placementData.topRecruitersCount}+ Partners` : 'Source Unavailable'}
+                  </span>
                 </div>
               </div>
             </div>

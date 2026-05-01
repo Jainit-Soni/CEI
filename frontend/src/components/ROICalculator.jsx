@@ -13,9 +13,9 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
     const [projectionYears, setProjectionYears] = useState(10); // Default to 10 for better chart
 
     // Active Inputs
-    const [tuitionPerYear, setTuitionPerYear] = useState(initialData.tuition || 800000);
-    const [livingPerMonth, setLivingPerMonth] = useState(15000);
-    const [avgPackage, setAvgPackage] = useState(initialData.avgPackage || 1200000);
+    const [tuitionPerYear, setTuitionPerYear] = useState(initialData.tuition || 0);
+    const [livingPerMonth, setLivingPerMonth] = useState(0);
+    const [avgPackage, setAvgPackage] = useState(initialData.avgPackage || 0);
 
     const [stats, setStats] = useState(null);
     const [chartData, setChartData] = useState([]);
@@ -114,7 +114,7 @@ export default function ROICalculator({ initialData = DEFAULT_INITIAL_DATA, titl
 
     // Scenarios
     const setScenario = (type) => {
-        const basePkg = initialData.avgPackage || 1200000;
+        const basePkg = initialData.avgPackage || 0;
         if (type === 'opt') setAvgPackage(basePkg * 1.3);
         else if (type === 'pes') setAvgPackage(basePkg * 0.8);
         else setAvgPackage(basePkg);

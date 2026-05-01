@@ -14,7 +14,7 @@ const NarrativeIntel = ({ college }) => {
     ? [...new Set(college.courses.map(c => c.department || c.degreeNameType || 'Academic Module'))].slice(0, 8)
     : [];
 
-  const ceiScore = college.ceiScore || 0; // Strictly reflect database or show 0
+  const ceiScore = college.ceiScore != null && Number.isFinite(Number(college.ceiScore)) ? Number(college.ceiScore) : null;
 
   return (
     <section className="prestige-section narrative-intel">
@@ -22,8 +22,10 @@ const NarrativeIntel = ({ college }) => {
         <div className="glass-card-root score-card">
           <div className="score-hero">
             <div className="score-meter">
-               <div className="meter-value" style={{ width: `${ceiScore}%` }}></div>
-               <div className="meter-label">{ceiScore.toFixed(1)}</div>
+               <div className="meter-value" style={{ width: `${ceiScore || 0}%` }}></div>
+               <div className="meter-label" style={{ fontSize: ceiScore === null ? '1.2rem' : 'inherit', textAlign: 'center' }}>
+                   {ceiScore !== null ? ceiScore.toFixed(1) : 'Score pending verification'}
+               </div>
             </div>
             <header className="narrative-header">
               <span className="prestige-subheading">Institutional Score</span>

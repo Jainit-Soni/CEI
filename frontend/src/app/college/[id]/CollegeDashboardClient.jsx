@@ -237,9 +237,13 @@ export default function CollegeDashboardClient({ id, initialData }) {
                     {/* CEI Score Tile */}
                     <div className="bento-tile bento-score">
                         <div className="sb-ring">
-                            <div className="sb-val">{college.ceiScore ? Number(college.ceiScore).toFixed(2) : '-'}</div>
+                            <div className="sb-val" style={{ fontSize: college.ceiScore != null && Number.isFinite(Number(college.ceiScore)) ? 'inherit' : '1.2rem' }}>
+                                {college.ceiScore != null && Number.isFinite(Number(college.ceiScore)) ? Number(college.ceiScore).toFixed(2) : 'TBA'}
+                            </div>
                         </div>
-                        <div className="sb-label">Official CEI Score</div>
+                        <div className="sb-label">
+                            {college.ceiScore != null && Number.isFinite(Number(college.ceiScore)) ? 'Official CEI Score' : 'Score pending verification'}
+                        </div>
                         <p className="text-xs opacity-90 mt-2 font-medium px-4 leading-relaxed">Calculated via indexed institutional parameters & outcomes.</p>
                     </div>
                 </div>
@@ -297,8 +301,8 @@ export default function CollegeDashboardClient({ id, initialData }) {
                             <ROICalculator 
                                 title={`ROI Simulation: ${college.shortName || college.name}`}
                                 initialData={{
-                                    tuition: Number(String(college.fees?.tuitionNumeric || college.fees?.totalNumeric || 800000)),
-                                    avgPackage: Number(String(college.placements?.averagePackageNumeric || 1200000))
+                                    tuition: Number(String(college.fees?.tuitionNumeric || college.fees?.totalNumeric || 0)),
+                                    avgPackage: Number(String(college.placements?.averagePackageNumeric || 0))
                                 }}
                             />
                         </div>

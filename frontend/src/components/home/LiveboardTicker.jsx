@@ -24,8 +24,8 @@ const LiveboardTicker = () => {
     { 
       id: 2, 
       type: "warning", 
-      text: "CEI Truth-Grade Audit: 42 top-tier institutes flagged for placement inflation.", 
-      tag: "AUDIT ALERT",
+      text: "CEI Truth-Grade Audit: Active verification in progress for reported placement inflation.", 
+      tag: "AUDIT ACTIVE",
       link: "/news"
     },
     { 
@@ -38,8 +38,8 @@ const LiveboardTicker = () => {
     { 
       id: 4, 
       type: "critical", 
-      text: "IIT Madras CS Cutoff predicted to drop by 4% in 2026 session.", 
-      tag: "PREDICTION",
+      text: "Institute Cutoff volatility detected in 2026 session: Monitor official seat allotments.", 
+      tag: "MARKET ADVISORY",
       link: "/admission-calculator"
     },
     { 

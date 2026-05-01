@@ -20,7 +20,9 @@
     "zod": "^4.3.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "verify:number-surface": "node backend/scripts/verify_no_numeric_truth_blockers.js",
+    "audit:number-surface": "node backend/tools/audit_frontend_number_inventory.js --static-only"
   },
   "repository": {
     "type": "git",

@@ -27,7 +27,7 @@ const NarrativeOverview = ({ college }) => {
 
           <div className="overview-stats-ring">
             <div className="score-grade-pill">
-              <span className="grade-val">{college.ceiScore ? Number(college.ceiScore).toFixed(2) : '---'}</span>
+              <span className="grade-val">{college.ceiScore != null && Number.isFinite(Number(college.ceiScore)) ? Number(college.ceiScore).toFixed(2) : '---'}</span>
               <span className="grade-label">CEI SCORE</span>
             </div>
           </div>
