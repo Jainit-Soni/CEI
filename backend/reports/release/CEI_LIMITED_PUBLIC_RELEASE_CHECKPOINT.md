@@ -58,11 +58,21 @@ The following commands were executed and **PASSED** on 2026-05-01:
 - **Detailed Report**: [PROVENANCE_FRESHNESS_AUDIT.md](file:///E:/CMAT-PROBLEM/backend/reports/frontend_provenance_freshness/PROVENANCE_FRESHNESS_AUDIT.md)
 
 ## 7. Rollback & Recovery
-- **Latest Safe Commit**: `4da59e1a`
+- **Latest Safe Commit**: `3679f0a9`
 - **Checkpoint History**:
   - `718b4a2f`: Number-surface hardening (Neutralized review constants).
   - `a4853572`: Initial provenance checkpoint (0 admission-critical blockers).
   - `4da59e1a`: Final provenance classification (Corrected CEI Score as internal methodology).
+  - `4d2b6625`: applied CORE-CORE prefix cleanup
+  - `3679f0a9`: hardened surface-tier hydration against canonical identity collisions
+
+## 8. Surface Tier Collision Hardening
+- **canonical collisions detected**: 4
+- **certified API count**: 75
+- **missing certified IDs**: 0
+- **hidden exposed**: 0
+- **badge violations**: 0
+- **IIT Bombay restored**
 - **Reversion Target**: [walkthrough.md](file:///C:/Users/Jainit%20Soni/.gemini/antigravity/brain/e0c7ce2c-36d1-4858-8493-3f02d819d607/walkthrough.md)
 - **Guards**: Rerun `verify_no_numeric_truth_blockers.js` to ensure no regression in truth surface.
 
