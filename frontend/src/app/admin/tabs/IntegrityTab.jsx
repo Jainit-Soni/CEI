@@ -11,6 +11,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { RefreshCw, ChevronDown, ChevronRight, Zap, AlertTriangle, CheckCircle2, Info } from "lucide-react";
+import { CEI_SYSTEM_CONFIG } from "@/lib/ceiNumberConfig";
 
 const SEV = {
     high: { bg: '#fee2e2', color: '#be123c', label: 'High', dot: '#ef4444' },
@@ -19,8 +20,9 @@ const SEV = {
 };
 
 function getSeverity(score) {
-    if (score >= 70) return 'high';
-    if (score >= 35) return 'medium';
+    const { HIGH, MEDIUM } = CEI_SYSTEM_CONFIG.INTEGRITY_SCORE_THRESHOLDS;
+    if (score >= HIGH) return 'high';
+    if (score >= MEDIUM) return 'medium';
     return 'low';
 }
 

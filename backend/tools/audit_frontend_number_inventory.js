@@ -137,6 +137,7 @@ function audit() {
                         counts.safe_count++;
                     }
 
+                    L2_FILTERED.push(item);
                     L3_FACTUAL.push(item);
                     counts.factual_user_visible_numbers_count++;
                     if (isHardcoded) counts.hardcoded_factual_claim_count++;
@@ -146,6 +147,7 @@ function audit() {
                     item.truth_status = 'INTERNAL_TECHNICAL_OR_SAFE_UI';
                     item.risk_level = 'SAFE';
                     counts.safe_count++;
+                    L2_FILTERED.push(item);
                 }
             }
         }

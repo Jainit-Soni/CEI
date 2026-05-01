@@ -9,6 +9,7 @@ import { DetailSkeleton } from "@/components/Skeleton";
 import GlassPanel from "@/components/GlassPanel";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { CEI_SYSTEM_CONFIG } from "@/lib/ceiNumberConfig";
 import PrestigeDetailLayout from "@/components/PrestigeDetailLayout";
 import TacticalHUD from "@/components/TacticalHUD";
 import PrestigeHero from "@/components/PrestigeHero";
@@ -161,7 +162,7 @@ export default function CollegeDetailClient({ id, initialData }) {
                                             <div>
                                                 <h4 className="text-slate-100 font-bold text-base mb-1">Official Admission Data Pending</h4>
                                                 <p className="text-slate-400 text-sm max-w-xl">
-                                                    Official 2024 truth tables for this institute have not yet been released. Use the actions below to view similar colleges with verified admission data.
+                                                    Official {CEI_SYSTEM_CONFIG.TRUTH_TABLE_YEAR} truth tables for this institute have not yet been released. Use the actions below to view similar colleges with verified admission data.
                                                 </p>
                                             </div>
                                         </div>

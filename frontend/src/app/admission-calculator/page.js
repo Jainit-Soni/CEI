@@ -15,7 +15,7 @@ export default function AdmissionCalculatorPage() {
         </div>
         <h1>AI Admission <span>Strategist</span></h1>
         <p>
-          Powered by the CEI "Truth-Grade" Engine. Get precise probabilities based on verified national admission registries for 12,000+ colleges.
+          Powered by the CEI "Truth-Grade" Engine. Get precise probabilities based on verified national admission registries for the entire Indian collegiate catalog.
         </p>
       </div>
       
