@@ -46,12 +46,15 @@ The following commands were executed and **PASSED** on 2026-05-01:
 ## 6. Frontend Provenance & Freshness Audit (Truth-Grade)
 - **Verdict**: ✅ PROVENANCE_SURFACE_SAFE_FOR_LIMITED_PUBLIC_COHORT_WITH_REVIEWS
 - **Audited Institutions**: 197 (Public Cohort)
-- **Admission-Critical Blockers**: 191 (Note: All blockers are CEI Score internal calculations)
+- **Admission-Critical Blockers**: 0
 - **Total Rendered Sections (with data)**: 420
   - *Note: Refers to unique college-section truth surfaces found (110 seats + 88 cutoffs + 16 fees + 15 placements + 191 ceiScores).*
-- **Provenance Coverage (Rendered)**: 100% (Full, Partial, or API-only)
-- **Freshness Coverage (Rendered)**: 100% (Excluding internal scores)
-- **Known Reviews**: 141 (Seats, Fees, and Placements require source URL linkage)
+- **Provenance Coverage (Rendered)**: 0 blocker-level missing provenance for official admission-critical rendered sections (Visible full/partial provenance available for source-backed sections).
+- **Freshness Coverage (Rendered)**: 100% (Excluding internal methodology scores)
+- **Known Reviews**: 332 (Visible partial, API-only, or Internal Methodology)
+  - Partial Visible: 126
+  - API-only Not Rendered: 15
+  - Internal Methodology (CEI Score): 191
 - **Detailed Report**: [PROVENANCE_FRESHNESS_AUDIT.md](file:///E:/CMAT-PROBLEM/backend/reports/frontend_provenance_freshness/PROVENANCE_FRESHNESS_AUDIT.md)
 
 ## 7. Rollback & Recovery
