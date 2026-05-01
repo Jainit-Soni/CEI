@@ -9,7 +9,7 @@ This document certifies that the CEI platform is ready for limited public releas
 - **Certified Cohort**: 197 Core Engineering institutions (IIT, NIT, IIIT).
 - **Hardened Surface**: Frontend is free of known hardcoded numeric blockers.
 - **Truth Parity**: High-fidelity seats and cutoffs surfaced for the certified cohort.
-- **Milestone Lock**: Regression guards active and committed (Commit: `a4853572`).
+- **Milestone Lock**: Regression guards active and committed (Commit: `4da59e1a`).
 
 ## 2. Explicit Non-Certified Scope
 - **Broader Catalog**: ~20,000+ Non-Core institutions (Discovery risk).
@@ -58,7 +58,11 @@ The following commands were executed and **PASSED** on 2026-05-01:
 - **Detailed Report**: [PROVENANCE_FRESHNESS_AUDIT.md](file:///E:/CMAT-PROBLEM/backend/reports/frontend_provenance_freshness/PROVENANCE_FRESHNESS_AUDIT.md)
 
 ## 7. Rollback & Recovery
-- **Latest Safe Commit**: `718b4a2f`
+- **Latest Safe Commit**: `4da59e1a`
+- **Checkpoint History**:
+  - `718b4a2f`: Number-surface hardening (Neutralized review constants).
+  - `a4853572`: Initial provenance checkpoint (0 admission-critical blockers).
+  - `4da59e1a`: Final provenance classification (Corrected CEI Score as internal methodology).
 - **Reversion Target**: [walkthrough.md](file:///C:/Users/Jainit%20Soni/.gemini/antigravity/brain/e0c7ce2c-36d1-4858-8493-3f02d819d607/walkthrough.md)
 - **Guards**: Rerun `verify_no_numeric_truth_blockers.js` to ensure no regression in truth surface.
 
