@@ -12,7 +12,9 @@ This document certifies that the CEI platform is ready for limited public releas
 - **Hidden Until Hydrated**: 1 institution.
 - **Hardened Surface**: Frontend is free of known hardcoded numeric blockers.
 - **Truth Parity**: High-fidelity seats and cutoffs surfaced for the certified cohort.
-- **Milestone Lock**: Regression guards active and committed (Commit: `4da59e1a`).
+- **Milestone Lock**: Regression guards active and committed.
+  - Latest implementation-safe commit: `3679f0a9`
+  - Latest metadata commit: `c747d6d9`
 
 ## 2. Explicit Non-Certified Scope
 - **Broader Catalog**: ~20,000+ Non-Core institutions (Discovery risk).
@@ -22,7 +24,13 @@ This document certifies that the CEI platform is ready for limited public releas
 - **Number Review**: 79 lower-risk factual constants remain for future API linkage.
 - **DB Truth**: Full database provenance audit beyond the 197-node cohort is not certified.
 
-## 3. Certified Surface Metrics (N=75) and Registry Audit Context (N=197)
+## 3. Certified Surface Metrics (N=75)
+
+| Metric | Value |
+| :--- | :--- |
+| **Number Blocker Count** | **0** |
+
+## 3.1 Registry Audit Context (N=197)
 
 | Metric | Value |
 | :--- | :--- |
@@ -31,7 +39,6 @@ This document certifies that the CEI platform is ready for limited public releas
 | **Seats Coverage** | ~56% |
 | **Cutoffs Coverage** | ~44% |
 | **CEI Score Coverage** | ~97% |
-| **Number Blocker Count** | **0** |
 | **Remaining Review Items** | **79** |
 
 ## 4. Operational & CI Verification
@@ -84,4 +91,5 @@ The following commands were executed on 2026-05-01:
 ---
 
 > [!WARNING]
-> **FINAL RELEASE WARNING**: This checkpoint certifies ONLY the limited public frontend surface for the 197-node Core cohort. It does NOT certify the full CEI database, full catalog, or all source provenance.
+> **FINAL RELEASE WARNING**: This checkpoint certifies ONLY the limited frontend release surface: 75 certified public institutions within the 197-record audited registry cohort. It does not certify the full CEI database, full catalog, medical/MCC completeness, or all source provenance.
+
