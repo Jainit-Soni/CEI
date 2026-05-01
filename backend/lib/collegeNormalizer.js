@@ -10,6 +10,8 @@
 
 const fs = require('fs');
 const path = require('path');
+const surfaceTierRegistry = require('./surfaceTierRegistry');
+const identityResolver = require('./identityResolver');
 
 let officialCodes = null;
 try {
@@ -25,7 +27,7 @@ function normalizeCollege(raw) {
     if (!raw) return null;
 
     // 1. Resolve Canonical Identity
-    const id = String(
+    const rawId = String(
         raw.institution_id || 
         raw.id || 
         raw._id || 
@@ -33,6 +35,9 @@ function normalizeCollege(raw) {
         raw.source_stable_key || 
         ""
     );
+    
+    // Phase 22.3 - Resolve canonical ID for surface tier mapping
+    const id = identityResolver.resolveId(rawId) || rawId;
     
     const stableKey = String(
         raw.source_stable_key || 
@@ -120,7 +125,10 @@ function normalizeCollege(raw) {
         placements: raw.placements || {},
         rankings: raw.rankings || [],
         courses: raw.courses || [],
-        engineeringCutoffs: raw.engineeringCutoffs || []
+        engineeringCutoffs: raw.engineeringCutoffs || [],
+        
+        // --- CEI SURFACE TIER ENRICHMENT ---
+        ...surfaceTierRegistry.getTierMetadata(id)
     };
 }
 

@@ -26,6 +26,7 @@ const normalizeCollege = require("../lib/collegeNormalizer");
 const identityResolver = require("../lib/collegeIdentityResolver");
 const { normalizeSeatMatrixRows } = require('../mappers/normalizeSeatMatrixRow');
 const { normalizeEngineeringCutoffRows } = require('../mappers/normalizeEngineeringCutoffRow');
+const seatCutoffBridge = require('./seatCutoffBridge');
 const logger = (() => {
   try { return require("../lib/logger"); }
   catch { return console; } // Safe fallback during early boot
@@ -208,25 +209,39 @@ function toLPA(val) {
 function applyTruthEnrichment(map) {
   try {
     const truthDir = path.join(__dirname, "..", "data", "truth");
-    if (!fs.existsSync(truthDir)) return;
+    console.log(`[DataStore] truthDir: ${truthDir}`);
+    if (!fs.existsSync(truthDir)) {
+        console.log(`[DataStore] truthDir NOT FOUND: ${truthDir}`);
+        return;
+    }
 
     // --- PHASE 107: Load Medical Identity Index ---
     const medicalIndexPath = path.join(truthDir, 'medical_identity_master_index.json');
     if (fs.existsSync(medicalIndexPath)) {
         const medicalIndex = JSON.parse(fs.readFileSync(medicalIndexPath, 'utf8'));
+        console.log(`[DataStore] Loading medical index: ${medicalIndex.length} entries`);
         medicalIndex.forEach(m => {
             const mid = m.medical_entity_id;
             let c = map.get(mid);
             if (!c) {
+                // [GUARDRAIL 4] Clean name for AIIMS Delhi artifact
+                let cleanName = m.canonical_name;
+                if (mid === 'CORE-AIIMS-DELHI' || m.parent_core_id === 'CORE-AIIMS-DELHI' || m.canonical_name?.includes('Seat Surrendered')) {
+                    if (m.raw_names?.[0]?.includes('New Delhi') || m.parent_core_id === 'CORE-AIIMS-DELHI') {
+                        cleanName = "All India Institute of Medical Sciences (AIIMS), New Delhi";
+                    }
+                }
+
                 // Auto-spawn medical entity
                 c = {
                     id: mid,
                     institution_id: mid,
-                    name: m.canonical_name,
-                    shortName: m.canonical_name,
+                    name: cleanName,
+                    shortName: cleanName,
                     location: 'India',
                     isMedical: true,
                     isCore: false,
+                    isVirtual: true, // [GUARDRAIL 1] Flag for virtual node tracking
                     isVisible: true,
                     meta: { 
                         ownership: m.quotas?.includes('Deemed/Paid Seats Quota') ? 'Private/Deemed' : 'Government',
@@ -278,7 +293,9 @@ function applyTruthEnrichment(map) {
 
     parsedTruth.forEach((d, idx) => {
         // Resolve Identity (Phase 4A Synchronized)
-        const canonicalId = identityResolver.resolveCanonicalId(d.collegeId || d.name);
+        // [CEI] Hardened Support for Medical Entity IDs in Truth Ingestion
+        const lookupId = d.collegeId || d.medical_entity_id || d.name;
+        const canonicalId = identityResolver.resolveCanonicalId(lookupId);
         if (d.name && (d.name.includes('Bombay') || d.name.includes('Tiruchirappalli'))) {
             logger.info(`[TruthSync] Found row for ${d.name} -> Resolved ID: ${canonicalId}`);
         }
@@ -291,7 +308,7 @@ function applyTruthEnrichment(map) {
             c = { 
                id: d.collegeId, 
                _id: d.collegeId, 
-               name: d.name || d.collegeId.replace('CORE-', '').split(/(?=[A-Z])/).join(' ').trim(),
+               name: d.name || (d.collegeId === 'CORE-AIIMS-DELHI' ? "All India Institute of Medical Sciences (AIIMS), New Delhi" : d.collegeId.replace('CORE-', '').split(/[-_]+/).join(' ')),
                location: 'India',
                isCore: true,
                isAutoSpawned: true,
@@ -338,8 +355,10 @@ function applyTruthEnrichment(map) {
             };
         } else if (d.entityType === 'fees' || d.entityType === 'fee') {
             const total = d.totalFee || d.tuitionFee || d.tuition;
-            c.fees = { ...c.fees, total: `₹${total.toLocaleString('en-IN')}`, totalNumeric: total };
-            c.tuition = `₹${total.toLocaleString('en-IN')}`;
+            if (total !== undefined && total !== null) {
+                c.fees = { ...c.fees, total: `₹${total.toLocaleString('en-IN')}`, totalNumeric: total };
+                c.tuition = `₹${total.toLocaleString('en-IN')}`;
+            }
         } else if (d.entityType === 'ranking') {
             c.rankings.push({ 
                 source: d.source, 
@@ -461,17 +480,44 @@ async function initializeCache() {
             });
         }
 
+        // Helper to merge records safely with deterministic precedence
+        const mergeIntoMasterMap = (cid, norm) => {
+            const existing = masterMap.get(String(cid));
+            if (existing) {
+                const normScore = (norm.surface_tier === 'CERTIFIED_PUBLIC' ? 100 : 0) + 
+                                  (norm.certified_badge_allowed ? 50 : 0) + 
+                                  (norm.id === cid ? 25 : 0) + 
+                                  (norm.isCore ? 10 : 0) + 
+                                  ((norm.seats && norm.seats.length) || 0) + 
+                                  ((norm.cutoffs && norm.cutoffs.length) || 0);
+
+                const existScore = (existing.surface_tier === 'CERTIFIED_PUBLIC' ? 100 : 0) + 
+                                   (existing.certified_badge_allowed ? 50 : 0) + 
+                                   (existing.id === cid ? 25 : 0) + 
+                                   (existing.isCore ? 10 : 0) + 
+                                   ((existing.seats && existing.seats.length) || 0) + 
+                                   ((existing.cutoffs && existing.cutoffs.length) || 0);
+
+                const winner = normScore > existScore ? norm : existing;
+                const loser = normScore > existScore ? existing : norm;
+
+                masterMap.set(String(cid), { 
+                    ...loser, 
+                    ...winner, 
+                    aliases: [...(winner.aliases || []), ...(loser.aliases || []), loser.id].filter(Boolean)
+                });
+            } else {
+                masterMap.set(String(cid), norm);
+            }
+        };
+
         const mongoColleges = await College.find({}).lean();
         
         if (mongoColleges && mongoColleges.length > 0) {
           mongoColleges.forEach(c => {
              const norm = normalizeCollege(c);
-             // Phase 4A: Canonical ID Resolution for Truth Binding
              const cid = identityResolver.resolveCanonicalId(norm.id || norm.name);
-             if (norm.name && (norm.name.includes('Bombay') || norm.name.includes('Tiruchirappalli'))) {
-                 logger.info(`[HydrateSync] Catalog Institution: ${norm.name} -> Core ID: ${cid}`);
-             }
-             masterMap.set(String(cid), norm);
+             mergeIntoMasterMap(cid, norm);
           });
           sourceInfo = "MongoDB";
           logger.info && logger.info("[dataStore] System of Record (MongoDB) loaded.", { count: mongoColleges.length });
@@ -486,7 +532,8 @@ async function initializeCache() {
                 const cid = String(c.id || c._id || c.stableKey || '');
                 if (cid) {
                     const canonicalId = identityResolver.resolveCanonicalId(cid || c.name);
-                    masterMap.set(String(canonicalId), c);
+                    const norm = normalizeCollege({ ...c, id: String(canonicalId) });
+                    mergeIntoMasterMap(canonicalId, norm);
                 }
             });
             sourceInfo = "Memory (High-Density GZIP)";
@@ -498,7 +545,8 @@ async function initializeCache() {
                 const cid = String(c.id || c._id || c.stableKey || '');
                 if (cid) {
                     const canonicalId = identityResolver.resolveCanonicalId(cid || c.name);
-                    masterMap.set(String(canonicalId), c);
+                    const norm = normalizeCollege({ ...c, id: String(canonicalId) });
+                    mergeIntoMasterMap(canonicalId, norm);
                 }
             });
             sourceInfo = "Disk JSON (Emergency Legacy)";
@@ -508,6 +556,50 @@ async function initializeCache() {
       // ── STAGE 2: Truth Enrichment & Merging ────────────────────────────────
       if (sourceInfo !== "Memory (NDJSON)") {
         applyTruthEnrichment(masterMap);
+      }
+
+      // ── STAGE 2.5: Public Cohort Hydration Force (JoSAA/Elite Guard) ──────
+      try {
+        const surfaceTiersPath = path.join(__dirname, '../data/truth/surface_tiers.json');
+        if (fs.existsSync(surfaceTiersPath)) {
+            const surfaceTiers = JSON.parse(fs.readFileSync(surfaceTiersPath, 'utf8'));
+            const publicCohortIds = [];
+            
+            // Flatten all registry IDs (CP, PR, SO) to ensure visibility parity
+            Object.values(surfaceTiers.tiers).forEach(tierList => {
+                if (Array.isArray(tierList)) {
+                    tierList.forEach(item => {
+                        if (item.id) publicCohortIds.push(item.id);
+                    });
+                }
+            });
+
+            const missingFromMap = publicCohortIds.filter(id => !masterMap.has(id));
+            
+            if (missingFromMap.length > 0) {
+                const debugLog = [`[dataStore] Force-hydrating ${missingFromMap.length} missing IDs.`, `Sample: ${missingFromMap.slice(0, 5).join(', ')}`].join('\n') + '\n';
+                fs.appendFileSync('hydration_debug.log', debugLog);
+                
+                const missingColleges = await College.find({ 
+                    $or: [ 
+                        { id: { $in: missingFromMap } }, 
+                        { institution_id: { $in: missingFromMap } } 
+                    ] 
+                }).lean();
+                
+                fs.appendFileSync('hydration_debug.log', `Found ${missingColleges.length} matches in MongoDB.\n`);
+                
+                missingColleges.forEach(c => {
+                    const normalized = normalizeCollege(c);
+                    masterMap.set(normalized.id, normalized);
+                    fs.appendFileSync('hydration_debug.log', `✅ Hydrated ${normalized.id}\n`);
+                });
+            } else {
+                fs.appendFileSync('hydration_debug.log', `Public cohort fully warm (MasterMap has all ${publicCohortIds.length} IDs).\n`);
+            }
+        }
+      } catch (err) {
+        logger.warn(`[dataStore] Public cohort force-hydration failed: ${err.message}`);
       }
 
       const updates = loadAdminUpdates();
@@ -619,19 +711,49 @@ async function getCollegeById(id) {
       if (mongoCol) {
           let norm = normalizeCollege(mongoCol);
 
+          // Phase 30: Apply Runtime Scoring for Live Fetch
+          try {
+              const coverage = computeCoverageIndex(norm, [], 5, [], []);
+              const scores = computeInstitutionalCeiScore(norm, coverage);
+              Object.assign(norm, scores);
+          } catch (e) {
+              logger.warn(`[dataStore] Scoring failed for live fetch: ${id}`);
+          }
+
           // --- FETCH TRUTH FROM COLLECTIONS (Phase 105) ---
           if (norm.identity.behavior.allowHydration) {
               const db = mongoose.connection.db;
               const [dbCutoffs, dbSeats] = await Promise.all([
-                  db.collection('engineering_cutoffs').find({ institution_id: norm.id }).toArray(),
-                  db.collection('seat_matrix').find({ institution_id: norm.id }).toArray()
+                  db.collection('engineering_cutoffs').find({ 
+                      $or: [
+                          { institution_id: norm.id },
+                          { canonical_id: norm.id },
+                          { institute_name_normalized: { $in: seatCutoffBridge.getEngineeringNamesForId(norm.id) } }
+                      ]
+                  }).toArray(),
+                  db.collection('seat_matrix').find({ 
+                      $or: [
+                          { institution_id: norm.id },
+                          { canonical_id: norm.id },
+                          { institute_name_normalized: { $in: seatCutoffBridge.getEngineeringNamesForId(norm.id) } }
+                      ]
+                  }).toArray()
               ]);
               
-              norm.engineeringCutoffs = normalizeEngineeringCutoffRows(dbCutoffs);
-              norm.seats = normalizeSeatMatrixRows(dbSeats);
-          } else {
-              norm.engineeringCutoffs = [];
-              norm.seats = [];
+              const newCutoffs = normalizeEngineeringCutoffRows(dbCutoffs);
+              const newSeats = normalizeSeatMatrixRows(dbSeats);
+
+              // [GUARD] Safe Merge: Never erase embedded truth if external lookup is empty
+              if (newCutoffs.length > 0) norm.engineeringCutoffs = newCutoffs;
+              else if (!norm.engineeringCutoffs) norm.engineeringCutoffs = [];
+
+              if (newSeats.length > 0) norm.seats = newSeats;
+              else if (!norm.seats) norm.seats = [];
+          }
+
+          // [CEI] Normalization Adapter: Ensure seats field is populated from seatMatrix if missing
+          if ((!norm.seats || norm.seats.length === 0) && norm.seatMatrix && norm.seatMatrix.length > 0) {
+              norm.seats = norm.seatMatrix;
           }
 
           // Phase 4A: Merge fully enriched truth from memory cache (handles isVerified, cutoffs, etc.)
@@ -716,6 +838,8 @@ async function getCollegeById(id) {
       String(c.stableKey) === String(id)
     );
     if (col) return col;
+  } else {
+    console.log(`[dataStore] L0 MISS: global.colleges is ${global.colleges ? 'empty' : 'null'}`);
   }
 
   // L1: Local memory

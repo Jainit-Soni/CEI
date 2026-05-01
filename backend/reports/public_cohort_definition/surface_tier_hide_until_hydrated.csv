@@ -1,0 +1,2 @@
+id,name,source_family,has_seats,has_cutoffs,has_fees,has_placements,truth_density_score,surface_tier,public_listing_visible,search_visible,detail_accessible,certified_badge_allowed,release_metrics_included,reason
+"CORE-CORE-IIIT-PRADESH","CORE IIIT PRADESH","IIIT","","","true","","25","HIDE_UNTIL_HYDRATED","FALSE","FALSE","FALSE","FALSE","FALSE","Identity anomaly / Redundant double-prefix"

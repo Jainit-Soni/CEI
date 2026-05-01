@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
+const surfaceTierRegistry = require("../lib/surfaceTierRegistry");
 const College = require("../models/CollegeSchema");
 const cache = require("../services/cache");
 const rankingCache = require("../services/rankingCacheBuilder");
@@ -104,6 +105,29 @@ const buildCollegeQuery = (reqQuery) => {
   // Default to allowing all colleges (Phase 2 Wiring)
   const query = {};
   
+  // --- CEI SURFACE TIER ENFORCEMENT ---
+  const hiddenIds = surfaceTierRegistry.getHiddenIds();
+  if (hiddenIds.length > 0) {
+      query.$and = query.$and || [];
+      query.$and.push({ 
+          $or: [
+              { id: { $nin: hiddenIds } },
+              { institution_id: { $nin: hiddenIds } }
+          ]
+      });
+  }
+
+  if (reqQuery.certifiedOnly === 'true') {
+      const certifiedIds = surfaceTierRegistry.getTierIds("CERTIFIED_PUBLIC");
+      query.$and = query.$and || [];
+      query.$and.push({
+          $or: [
+              { id: { $in: certifiedIds } },
+              { institution_id: { $in: certifiedIds } }
+          ]
+      });
+  }
+
   // Preserve 'all' check for future-proofing or specific overrides
   if (all !== 'true') {
       query.isVisible = { $ne: false };
@@ -465,6 +489,10 @@ router.get("/colleges", async (req, res) => {
         // [CEI] Respect visibility: exclude hidden/shell nodes (isVisible: false)
         if (c.isVisible === false) return false;
 
+        // [CEI] SURFACE TIER ENFORCEMENT
+        if (c.surface_tier === "HIDE_UNTIL_HYDRATED") return false;
+        if (req.query.certifiedOnly === 'true' && c.surface_tier !== "CERTIFIED_PUBLIC") return false;
+
         if (state && state !== 'All' && c.state !== state) return false;
         if (tier && tier !== 'All' && c.rankingTier !== tier) return false;
         if (band && band !== 'All' && c.competitivenessBand !== band) return false;
@@ -518,7 +546,14 @@ router.get("/colleges", async (req, res) => {
               placements: c.placements,
               fees: c.fees,
               website: c.website,
-              slug: `/college/${cid}`
+              slug: `/college/${cid}`,
+              // [CEI] Surface Tier Metadata (for badge & visibility enforcement)
+              surface_tier: c.surface_tier,
+              certified_badge_allowed: c.certified_badge_allowed,
+              public_listing_visible: c.public_listing_visible,
+              search_visible: c.search_visible,
+              detail_accessible: c.detail_accessible,
+              release_metrics_included: c.release_metrics_included
             };
           }),
           pagination: {
@@ -699,11 +734,40 @@ router.get("/college/:id", async (req, res) => {
       return res.status(400).json({ error: "Invalid college ID provided" });
     }
 
+    // [CEI] Deterministic Identity Resolution (MCC medical IDs -> CORE IDs)
+    let resolvedId = identityResolver.resolveCanonicalId(id) || id;
+    let initialResolvedId = resolvedId;
+
     // ── COLLEGE PAGE AGGREGATION CACHE ────────────────────────────────────────
-    // Returns precomputed payload: college + anomalies + integrity + verifications.
-    // Cache hit: 5-15ms | Cache miss: assembles from Mongo, writes through.
-    const page = await pageCache.getCollegePage(id);
+    let page = await pageCache.getCollegePage(resolvedId);
+    let parentFound = 'none';
+    
+    const hasPage = !!page;
+    const hasCollege = !!(page && page.college);
+    const hasParentId = !!(page && page.college && page.college.parent_core_id);
+    const startsWithMCC = String(resolvedId).startsWith('MCC-');
+
+    if (hasPage && hasCollege && hasParentId && startsWithMCC) {
+        parentFound = page.college.parent_core_id;
+        resolvedId = page.college.parent_core_id;
+        page = await pageCache.getCollegePage(resolvedId);
+    }
+
+    const isResolved = resolvedId !== id;
+
     if (page) {
+      const college = page.college;
+      if (college && college.surface_tier === "HIDE_UNTIL_HYDRATED" && !req.query.debug) {
+          return res.status(403).json({ error: "College hydrated surface not public" });
+      }
+
+      if (isResolved) {
+          page.resolution = {
+              requested_id: id,
+              resolved_id: resolvedId,
+              resolution_method: "deterministic_mapping"
+          };
+      }
       res.set('X-Cache', 'PAGE-HIT');
       return res.json(page);
     }
@@ -899,12 +963,13 @@ router.get("/colleges/:id/truth/seats", async (req, res) => {
   try {
     const { id } = req.params;
     
-    // 1. Fetch college with hydrated truth (NDJSON merged)
+    // 1. Fetch college with hydrated truth
     const collegeDoc = await dataStore.getCollegeById(id);
     
     // 2. Check if hydrated seats exist (Phase 30 integration)
-    if (collegeDoc && collegeDoc.seats && collegeDoc.seats.length > 0) {
-      const validItems = collegeDoc.seats.filter(s => s.programName && (s.acpcIntake || s.totalIntake || s.intake));
+    const seatsData = collegeDoc.seats || collegeDoc.seatMatrix;
+    if (collegeDoc && seatsData && seatsData.length > 0) {
+      const validItems = seatsData.filter(s => s.programName && (s.acpcIntake || s.totalIntake || s.intake));
       
       if (validItems.length > 0) {
         return res.json({
@@ -971,27 +1036,46 @@ router.get("/colleges/:id/truth/cutoffs", async (req, res) => {
 
     // 1. Fetch college with hydrated truth
     const collegeDoc = await dataStore.getCollegeById(id);
+    const engNames = seatCutoffBridge.getEngineeringNamesForId(id);
+    
+    // 2. Query Truth Collection (Fallback enrichment for summary)
+    const results = await getEngineeringCutoffs({
+      db: mongoose.connection.db,
+      filters: { 
+        institutionId: id,
+        $or: [
+          { institution_id: id },
+          { canonical_id: id },
+          { institute_name_normalized: { $in: engNames } }
+        ]
+      },
+      limit: 100
+    });
 
-    // 2. Check if hydrated cutoffs exist
-    if (collegeDoc && collegeDoc.engineeringCutoffs && collegeDoc.engineeringCutoffs.length > 0) {
-      const validItems = collegeDoc.engineeringCutoffs.filter(c => c.programName && c.closingRank);
+    const cutoffData = (collegeDoc && collegeDoc.engineeringCutoffs && collegeDoc.engineeringCutoffs.length > 0) 
+      ? collegeDoc.engineeringCutoffs 
+      : results.items;
+
+    // 3. Check if hydrated cutoffs exist
+    if (cutoffData && cutoffData.length > 0) {
+      const validItems = cutoffData.filter(c => (c.programName || c.programTitle) && (c.closingRank || c.closing_rank));
 
       if (validItems.length > 0) {
         return res.json({
           sectionStatus: 'available',
           freshnessStatus: 'up_to_date',
-          primarySource: validItems[0].sourceAuthority || 'Admission Authority',
-          lastEvaluatedAt: validItems[0].extractedAt,
+          primarySource: validItems[0].sourceAuthority || validItems[0].authority || 'Admission Authority',
+          lastEvaluatedAt: validItems[0].extractedAt || validItems[0].extracted_at,
           items: validItems.map(c => ({
-            displayLabel: `${c.programName} (${c.category})`,
-            degree: c.courseFamily,
-            value: c.closingRank,
+            displayLabel: `${c.programName || c.programTitle} (${c.category || c.category_canonical})`,
+            degree: c.courseFamily || c.degreeAward,
+            value: c.closingRank || c.closing_rank,
             metricType: 'Closing Rank',
             source: {
-              title: c.sourceDocumentType || 'Cutoff Report 2025',
+              title: c.sourceDocumentType || c.sourceLabel || 'Cutoff Report 2025',
               type: 'primary_authority',
-              url: c.sourceUrl,
-              lastEvaluatedAt: c.extractedAt
+              url: c.sourceUrl || c.source_url,
+              lastEvaluatedAt: c.extractedAt || c.extracted_at
             }
           }))
         });
