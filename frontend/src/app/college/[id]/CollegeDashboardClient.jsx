@@ -48,7 +48,8 @@ export default function CollegeDashboardClient({ id, initialData }) {
     const [benchmarks, setBenchmarks] = useState(null);
     const [compliance, setCompliance] = useState(null);
 
-    const tabs = [
+    const canShowAdmissionTruth = college?.surface_tier === 'CERTIFIED_PUBLIC' || college?.surface_tier === 'LIMITED_PUBLIC';
+    const allTabs = [
         { id: "overview", label: "Overview" },
         { id: "courses", label: "Courses Offered" },
         { id: "seats", label: "Seats/Intake" },
@@ -58,6 +59,8 @@ export default function CollegeDashboardClient({ id, initialData }) {
         { id: "audit", label: "Truth Audit" },
         { id: "report", label: "Report Data" }
     ];
+
+    const tabs = allTabs.filter(t => canShowAdmissionTruth || !['cutoffs', 'seats', 'placements', 'fees'].includes(t.id));
 
     useEffect(() => {
         const load = async () => {

@@ -2,6 +2,8 @@
 
 const { normalizeSeatMatrixRows } = require('../mappers/normalizeSeatMatrixRow');
 const { getEngineeringNamesForId } = require('./seatCutoffBridge');
+const identityResolver = require('../lib/identityResolver');
+const surfaceTierRegistry = require('../lib/surfaceTierRegistry');
 
 const COLLECTION_NAME = 'seat_matrix';
 const DEFAULT_PAGE = 1;
@@ -67,14 +69,9 @@ function buildSeatMatrixQuery(filters = {}) {
   // --- DETERMINISTIC PRIMARY: Institution ID ---
   const institutionId = strOrNull(filters.institutionId);
   if (institutionId) {
-    const names = getEngineeringNamesForId(institutionId);
-    if (names && names.length > 0) {
-      andClauses.push({
-        $or: [
-          { institution_id: institutionId },
-          { institute_name_normalized: { $in: names } }
-        ]
-      });
+    const dataKeys = identityResolver.getInstitutionDataKeys(institutionId);
+    if (dataKeys && dataKeys.length > 0) {
+      andClauses.push({ institution_id: { $in: dataKeys } });
     } else {
       andClauses.push({ institution_id: institutionId });
     }
@@ -88,6 +85,12 @@ function buildSeatMatrixQuery(filters = {}) {
           { institute_name_raw: instRegex }
         ]
       });
+    }
+
+    // Global filter: only allow rows belonging to CERTIFIED/LIMITED institutions
+    const allowedKeys = identityResolver.getAllAllowedDataKeys();
+    if (allowedKeys && allowedKeys.length > 0) {
+      andClauses.push({ institution_id: { $in: allowedKeys } });
     }
   }
 
@@ -157,6 +160,18 @@ async function getEngineeringSeatMatrix({
 }) {
   if (!db) {
     throw new Error('getEngineeringSeatMatrix requires a Mongo db instance');
+  }
+
+  const institutionId = strOrNull(filters.institutionId);
+  if (institutionId) {
+    const canonicalId = identityResolver.resolveId(institutionId) || institutionId;
+    const tier = surfaceTierRegistry.getTierMetadata(canonicalId)?.surface_tier;
+    if (tier === 'SEARCH_ONLY' || tier === 'HIDE_UNTIL_HYDRATED') {
+      return {
+        items: [],
+        meta: { total: 0, page: 1, limit: clampLimit(limit), totalPages: 0, hasNextPage: false, hasPrevPage: false, sortBy, sortOrder: directionToString(sortOrder), filtersApplied: filters, normalizedContract: 'seat_matrix_v1' }
+      };
+    }
   }
 
   const collection = db.collection(COLLECTION_NAME);

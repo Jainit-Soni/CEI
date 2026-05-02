@@ -249,7 +249,8 @@ function applyTruthEnrichment(map) {
                         mccCode: m.mcc_institute_code
                     },
                     verificationStatus: 'OFFICIAL_SOURCE_ONLY',
-                    isVerified: true
+                    isVerified: true,
+                    ...require('../lib/surfaceTierRegistry').getTierMetadata(mid)
                 };
                 map.set(mid, c);
             } else {

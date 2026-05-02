@@ -15,6 +15,7 @@ const { getCollegeTruthCourses } = require("../services/courseOfferingsReadServi
 const normalizeCollege = require("../lib/collegeNormalizer");
 const identityResolver = require("../lib/collegeIdentityResolver");
 const { applyIntentFilter, rankResults } = require("../services/searchService");
+const { redactCollegePage, redactCollegeTruth } = require("../lib/truthRedactor");
 
 const router = express.Router();
 
@@ -39,7 +40,8 @@ router.post('/colleges/batch', async (req, res) => {
         );
         
         // Filter out nulls and return
-        res.json(results.filter(Boolean));
+        const validResults = results.filter(Boolean).map(c => redactCollegeTruth(c));
+        res.json(validResults);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -738,6 +740,20 @@ router.get("/college/:id", async (req, res) => {
     let resolvedId = identityResolver.resolveCanonicalId(id) || id;
     let initialResolvedId = resolvedId;
 
+    // ── EARLY TIER GUARD — must run before any page assembly or cache call ─────
+    // F3 fix: HIDE_UNTIL_HYDRATED institutions must return 403 immediately.
+    // Do not call pageCache.getCollegePage / dataStore for hidden tiers.
+    const _earlyTierMeta = surfaceTierRegistry.getTierMetadata(resolvedId);
+    if (_earlyTierMeta && _earlyTierMeta.surface_tier === 'HIDE_UNTIL_HYDRATED') {
+        return res.status(403).json({
+            error: 'College hydrated surface not public',
+            id,
+            canonicalId: resolvedId,
+            surface_tier: _earlyTierMeta.surface_tier,
+            message: 'This institution is not yet available for public access.'
+        });
+    }
+
     // ── COLLEGE PAGE AGGREGATION CACHE ────────────────────────────────────────
     let page = await pageCache.getCollegePage(resolvedId);
     let parentFound = 'none';
@@ -769,7 +785,8 @@ router.get("/college/:id", async (req, res) => {
           };
       }
       res.set('X-Cache', 'PAGE-HIT');
-      return res.json(page);
+      const safePage = redactCollegePage(page);
+      return res.json(safePage);
     }
 
     // Hard fallback: pageCache.getCollegePage already handles Mongo misses,
@@ -820,8 +837,9 @@ router.get("/colleges/batch", async (req, res) => {
 
     // Filter out nulls and preserve exact ordering
     const orderedColleges = fetchedColleges.filter(Boolean);
+    const safeColleges = orderedColleges.map(page => redactCollegePage(page));
 
-    res.json(orderedColleges);
+    res.json(safeColleges);
   } catch (error) {
     console.error("Error in MongoDB batch fetch:", error);
     res.status(500).json({ error: "Failed to fetch colleges batch" });

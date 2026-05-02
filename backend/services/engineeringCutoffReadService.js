@@ -1,7 +1,9 @@
 'use strict';
 
 const { normalizeEngineeringCutoffRows } = require('../mappers/normalizeEngineeringCutoffRow');
-const { getEngineeringNamesForId } = require('./seatCutoffBridge');
+const { getEngineeringNamesForId, getMccIdsForId } = require('./seatCutoffBridge');
+const identityResolver = require('../lib/identityResolver');
+const surfaceTierRegistry = require('../lib/surfaceTierRegistry');
 
 const COLLECTION_NAME = 'engineering_cutoffs';
 const DEFAULT_PAGE = 1;
@@ -237,11 +239,23 @@ function buildEngineeringCutoffQuery(filters = {}) {
   // --- DETERMINISTIC PRIMARY: Institution ID ---
   const institutionId = strOrNull(filters.institutionId);
   if (institutionId) {
-    andClauses.push({ institution_id: institutionId });
+    const dataKeys = identityResolver.getInstitutionDataKeys(institutionId);
+    if (dataKeys && dataKeys.length > 0) {
+      andClauses.push({ institution_id: { $in: dataKeys } });
+    } else {
+      // Fallback if no deterministic keys found
+      andClauses.push({ institution_id: institutionId });
+    }
   } else {
     // --- FALLBACK: Name-based fuzzy search ---
     const instFilter = buildInstituteFilter(filters);
     if (instFilter) andClauses.push(instFilter);
+    
+    // Global filter: only allow rows belonging to CERTIFIED/LIMITED institutions
+    const allowedKeys = identityResolver.getAllAllowedDataKeys();
+    if (allowedKeys && allowedKeys.length > 0) {
+      andClauses.push({ institution_id: { $in: allowedKeys } });
+    }
   }
 
   const authority = buildAuthorityFilter(filters);
@@ -310,6 +324,18 @@ async function getEngineeringCutoffs({
 }) {
   if (!db) {
     throw new Error('getEngineeringCutoffs requires a Mongo db instance');
+  }
+
+  const institutionId = strOrNull(filters.institutionId);
+  if (institutionId) {
+    const canonicalId = identityResolver.resolveId(institutionId) || institutionId;
+    const tier = surfaceTierRegistry.getTierMetadata(canonicalId)?.surface_tier;
+    if (tier === 'SEARCH_ONLY' || tier === 'HIDE_UNTIL_HYDRATED') {
+      return {
+        items: [],
+        meta: { total: 0, page: 1, limit: clampLimit(limit), totalPages: 0, hasNextPage: false, hasPrevPage: false, sortBy, sortOrder, filtersApplied: filters, normalizedContract: 'engineering_cutoffs_v1' }
+      };
+    }
   }
 
   const collection = db.collection(COLLECTION_NAME);

@@ -107,5 +107,29 @@ function getAllAliases(idOrAlias) {
 
     return [...new Set(aliases)];
 }
+/**
+ * Returns strictly the deterministic data keys (U-codes, MCC-codes, S-codes, C-codes, CORE- prefixes).
+ */
+function getInstitutionDataKeys(idOrAlias) {
+    if (!mapping) loadMapping();
+    const allAliases = getAllAliases(idOrAlias);
+    return allAliases.filter(a => /^[UCM]-?[0-9]+$/i.test(a) || /^[S]-?[0-9]+$/i.test(a) || String(a).startsWith('CORE-'));
+}
 
-module.exports = { resolveId, getAllAliases };
+/**
+ * Returns a complete set of data keys for all CERTIFIED_PUBLIC and LIMITED_PUBLIC institutions.
+ * Used for filtering global cutoff/seat API endpoints.
+ */
+function getAllAllowedDataKeys() {
+    const surfaceTierRegistry = require('./surfaceTierRegistry');
+    const certified = surfaceTierRegistry.getTierIds('CERTIFIED_PUBLIC') || [];
+    const limited = surfaceTierRegistry.getTierIds('LIMITED_PUBLIC') || [];
+    
+    const allKeys = new Set();
+    [...certified, ...limited].forEach(id => {
+        getInstitutionDataKeys(id).forEach(k => allKeys.add(k));
+    });
+    return Array.from(allKeys);
+}
+
+module.exports = { resolveId, getAllAliases, getInstitutionDataKeys, getAllAllowedDataKeys };
